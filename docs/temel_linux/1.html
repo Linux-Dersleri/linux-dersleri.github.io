@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Linux Dersleri</title>
+	<link rel="icon" href="../../img/menu/icon.png" type="image/icon type">
+	<link rel="stylesheet" href="../../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../css/font-awesome.min.css">
+	<link rel="stylesheet" href="../../css/style.css">
+
+</head>
+
+	
+<body id="body" style="font-size: 18px;">
+<div class="bs-canvas-overlay bs-canvas-anim bg-dark position-fixed w-100 h-100"></div>
+	<nav class="navbar y-navbar sticky-top navbar-expand-lg navbar-light bg-light">
+  
+  <a style="color: black" class="btn"  data-toggle="canvas" data-target="#bs-canvas-left" aria-expanded="false" aria-controls="bs-canvas-left"><i class="fa fa-align-justify fa-lg"></i></a>
+  <center>
+	<a href="../../index.html" style="color: black" class="btn navbar-toggler " > <i class="fa fa-angle-double-left fa-lg"></i></a>
+    <a href="../../index.html" style="color: black" class="btn navbar-toggler " ><i class="fa fa-book fa-lg"></i></a>
+    <a href="./2.html" style="color: black" class="btn navbar-toggler " ><i class="fa fa-angle-double-right fa-lg"></i> </a>	
+  </center>
+  <a style="color: black" class="btn navbar-toggler"  onclick="changeColor()" ><i class="fa fa-eye fa-lg"></i></a>  
+		
+</nav>
+<nav class="navbar x-navbar sticky-top navbar-expand-lg navbar-light bg-light border-bottom">
+	
+	<div class="container ">
+            <div align="left"><button class="btn"  data-toggle="canvas" data-target="#bs-canvas-left" aria-expanded="false" aria-controls="bs-canvas-left"><i class="fa fa-align-justify fa-lg"></i></button>
+		<a href="../../menu.html" class="btn"  ><i class="fa fa-home fa-lg"></i></a>     </div>
+	<center>
+		<div id="sizecontroldiv" class="controlstyle">
+        <a href="../../index.html" class="btn">Önceki <i class="fa fa-angle-double-left fa-lg"></i></a>
+        <a href="../../index.html" class="btn" ><i class="fa fa-book fa-lg"></i></a>
+        <a href="./2.html" class="btn" ><i class="fa fa-angle-double-right fa-lg"></i> Sonraki</a>
+        </div>
+    </center>
+			<div align="right">
+				<a href="../../bildirim.html" class="btn" ><i class="fa fa-paper-plane"></i></a>    
+             <button class="btn" onclick="changeColor()" ><i class="fa fa-eye fa-lg"></i></button>  
+		</div>              
+	</div>
+     
+</nav>
+	
+<div id="bs-canvas-left" class="bs-canvas bs-canvas-anim bs-canvas-left position-fixed bg-light h-100" >
+	<header class="bs-canvas-header p-3 bg-dark">
+		
+    	<h4 align="center" class="text-light">İçerik Menüsü<button type="button" class="bs-canvas-close close" aria-label="Close" aria-expanded="true"><span aria-hidden="true" class="text-light">×</span></button></h4>
+        
+    </header>
+    <div class="bs-canvas-content px-3">
+    	
+    	<div align="center" class="list-group my-2 ">
+
+			<a href="#" class="list-group-item list-group-item-action" >Giriş</a>
+          	<a href="#linux" class="list-group-item list-group-item-action" >Linux Nedir ?</a>
+          	<a href="#unix" class="list-group-item list-group-item-action" >UNIX</a>
+			<a href="#linus" class="list-group-item list-group-item-action" >Linus Torvalds</a>
+          	<a href="#gpl" class="list-group-item list-group-item-action" >GPL</a>
+          	<a href="#gnu" class="list-group-item list-group-item-action" >GNU</a>
+			<a href="#sonuc" class="list-group-item list-group-item-action" >Sonuç</a>
+			<a href="#bildirim" class="list-group-item list-group-item-action active bg-danger" >Geri Bildirim</a>
+			
+          	
+        </div>
+		
+		
+    </div>    
+</div>
+    
+  <div class="container">    
+        <p></p>
+	  <div align="center" class="col">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm position-relative">
+        <div class="col d-flex flex-column position-static">
+          <strong class="d-inline-block text-primary">1.Doküman</strong>
+          <h3 class="mb-0">Linux Nedir ? </h3>
+          <div class="mb-1 text-muted">Konu Etiketleri</div>
+          <p class="card-text mb-auto">Linux , çekirdek , kernel , linus torvalds , gnu , açık kaynak , unix </p>
+        </div>
+        
+      </div>
+    </div>
+	          <article id="makale" style="font-size:1em;" class="markdown-body entry-content" itemprop="text">
+
+	<h1 id="linux">Linux Nedir ?</h1>
+<p>Başlamadan.. Şunu bilin ki <strong>Linux</strong> tek başına işletim sistemi değil <strong>çekirdektir</strong>!</p>
+<h2 id="unix">UNIX</h2>
+<p>Bu kısımda, çok tarihi veya çok teknik olmayan bir üslupla, Linux hakkında genel bilgi sahibi olmanızı sağlayacak şekilde Linux'un ortaya çıkış hikayesini ele alacağız. </p>
+
+<p>Zamanında <strong>Bell Laboratuvarı</strong>'nda geliştirilen <strong>UNIX</strong> adında bir işletim sistemi vardı. Bu sistem kendi bünyesinde bulundurduğu araçları sayesinde çeşitli üniversiteler ve diğer ihtiyaç duyulan kurumlarda kullanılıyordu. Buraya kadar her şey gayet güzel ancak <strong>Unix</strong> lisans ücreti istiyordu ve tabii ki bu durum sistemi kullanabilecek kişilerin sayısını da oldukça azaltıyordu. Yani insanlar ihtiyaç duysalar dahi lisans ücretinden dolayı bu sistemi kullanamıyorlardı. Bunun sonucunda <em>"para ödemek yerine bende kendi işletim sistemimi yazarım"</em> diye düşünenler ortaya çıktı ve bu da <strong>UNIX</strong>'e mecbur olunmadığı, eğer istenirse yeni bir sistemin yazılabileceği düşüncesini ortaya koydu.  Bunun sonucunda birçok işletim sistemi geliştirme girişimleri oldu ancak sonuçta geliştirilen sistemler stabil şekilde çalışmıyorlardı. Tabi bu durum sonsuza kadar böyle kalmayacaktı..</p>
+<h2 id="linus">Linus Torvalds</h2>
+<p>Bir efsanenin doğuşu..</p>
+<p>Buraları her ne kadar istemesem de kısaca geçmek durumundayım ama eğer <em>"Linux kullanıyorum"</em> demek istiyorsanız kesinlikle bu konuları araştırın ve ayrıca <a target="_blank"  href="https://www.youtube.com/watch?v=cEhnQN1ZmDI" >Revolution OS</a> belgeselini de mutlaka izleyin derim.</p>
+<p>İnsanların lisans ücretinden kaçmak için kendi işletim sistemini yazma akımı devam ediyorken bu durum <a target="_blank"  href="http://www.wikizeroo.net/index.php?q=aHR0cHM6Ly90ci53aWtpcGVkaWEub3JnL3dpa2kvTGludXNfVG9ydmFsZHM" rel="nofollow">Linus Torvalds</a>'ı da etkilemiş olacak ki Linus, <a target="_blank"  href="http://www.wikizeroo.net/index.php?q=aHR0cHM6Ly90ci53aWtpcGVkaWEub3JnL3dpa2kvVW5peA" rel="nofollow">UNIX</a>'ten esinlenerek <strong>Helsinki Üniversitesi</strong>'ndeyken kendi <strong>işletim sistemi çekirdeğini</strong> yazdı. <strong>UNIX</strong>'ten esinlendi ancak bunu hiçbir kod alıntısı yapmadan sıfırdan yazarak başardı. Daha sonra Linus, bu geliştirdiği çekirdeğin çeşitli insanlara ve gruplara(geliştirici topluluklar vb..) ulaşmasını sağlayarak, insanların verdiği dönütlerle düzenlemeler yaptı. Böylelikle Linus, çekirdeğin daha da kullanışlı hale gelmesini sağlamış oldu. Ve en nihayetinde Linus, bu geliştirdiği <strong>çekirdeğe</strong>(<strong>kernel</strong>) "<a target="_blank"  href="http://www.wikizeroo.net/index.php?q=aHR0cHM6Ly90ci53aWtpcGVkaWEub3JnL3dpa2kvTGludXg" rel="nofollow">Linux</a>" adını verdi. Ancak <strong>Linux</strong> bir <strong>çekirdekti</strong> ve içerisinde <strong>UNIX</strong> gibi kullanışlı araçları bulundurmuyordu.</p>
+<p>Linux cephesinde bunlar yaşanıyorken <a target="_blank"  href="http://www.wikizeroo.net/index.php?q=aHR0cHM6Ly90ci53aWtpcGVkaWEub3JnL3dpa2kvUmljaGFyZF9TdGFsbG1hbg" rel="nofollow">Richard Stallman</a>'da , <a target="_blank"  href="http://www.wikizeroo.net/index.php?q=aHR0cHM6Ly90ci53aWtpcGVkaWEub3JnL3dpa2kvR05VX0dlbmVsX0thbXVfTGlzYW5zJUM0JUIx" rel="nofollow">GNU genel kamu lisansı</a>nı ortaya atarak  <a target="_blank"  href="http://www.wikizeroo.net/index.php?q=aHR0cHM6Ly90ci53aWtpcGVkaWEub3JnL3dpa2kvJUMzJTk2emclQzMlQkNyX3lheiVDNCVCMWwlQzQlQjFt" rel="nofollow">özgür yazılım</a>ı savunuyordu. Nedir bu <strong>genel kamu lisansı</strong> ve <strong>özgür yazılım</strong> diyecek olursanız lütfen okumaya devam edin.</p>
+<h2 id="gpl">GPL</h2>
+<p>GNU GPL (General Public License - Genel Kamu Lisansı) açık kaynağı destekleyici bir lisans türü olup, ilk defa açık kaynak kodlu yazılımların kapalı kaynak kodlu hale getirilerek satılmasından rahatsız olunması sonucu öneri olarak geliştirilmiştir.</p>
+<p>GPL 4 temel özgürlük üzerine kurulmuştur bunlar:</p>
+<ul>
+<li><strong>Özgürlük 1:</strong> Programı sınırsız kullanma özgürlüğü.</li>
+<li><strong>Özgürlük 2:</strong> Programın nasıl çalıştığını inceleme ve amaçlara uygun değiştirme özgürlüğü.</li>
+<li><strong>Özgürlük 3:</strong> Programın kopyalarını sınırsız dağıtma özgürlüğü.</li>
+<li><strong>Özgürlük 4:</strong> Programın değiştirilmiş halini dağıtma özgürlüğü.</li>
+</ul>
+<p>GPL, <strong>Richard Stallman</strong> tarafından geliştirilmiş çok akıllıca detaylarla bağlayıcılığı bulunan lisans türüdür. Burda herkes kazançlıdır. <a target="_blank"  href="http://www.wikizeroo.net/index.php?q=aHR0cHM6Ly90ci53aWtpcGVkaWEub3JnL3dpa2kvQSVDMyVBNyVDNCVCMWtfa2F5bmFr" rel="nofollow">Kaynak kodları</a> paylaşılmak zorunda olduğu için her şey şeffaf ve dolayısıyla oldukça berraktır . Burada insani bir hizmet vardır. Yani savunulan şey daha fazla rant değil, insanların gönül rahatlığı ile sınır olmadan ihtiyaçlarını karşılamasıdır. Bu konu hakkında ayrıca avantajları ve dezavantajları sıralayabiliriz ancak konuyu çok genişletmemek ve sizlere <strong>araştırma, kendi kendine bulup öğrenme alışkanlığı</strong> kazandırmak adına bu konuyu burada kesiyorum. Ben yazmaktan üşenmiyorum ancak benim burada yazıyı genişletmem, sizin araştırıp kendi kendinize öğrenmenizden ve bu araştırma alışkanlığını kazanmanızdan daha yararınıza olmayacaktır.  Bir de benim konu içinde veya dışında belirtmiş olduğum kaynaklarla sakın ola sınırlı kalmayın. Ben sadece bir başlangıç noktası ve referans olması adına sizlerle bunları paylaşıyorum.
+Bu durumdan hiç hoşlanmamış olabilirsiniz, ancak araştırma ve kendi kendine öğrenme ateşi sizi sardığında bana bu konuda hak vereceğinizi umuyorum. Bu noktada söylediklerimin daha net anlaşılması için sözümü Konfüçyüs'ün en bilindik sözü ile noktalamak istiyorum.</p>
+<blockquote>
+<p><strong>"Bir kişiye iyilik yapmak istiyorsan ona balık verme, balık tutmayı öğret." <em>Konfüçyüs</em></strong></p>
+</blockquote>
+<h2 id="gnu">GNU</h2>
+<p><strong>GNU</strong> (<strong>G</strong>nu is <strong>N</strong>ot <strong>U</strong>nix/<strong>GNU Unix Değildir</strong>), açık kaynak hareketinin doğrultusunda geliştirilen araçların içinde bulunduğu <strong>ücretsiz ve herkes için ulaşılabilir bir işletim sistemidir</strong>. Ancak GNU için her şey her daim güllük gülistanlık değildi. GNU, içerisinde kendine ait güçlü araçları bulundurmasının yanı sıra kararlı bir çekirdeğe sahip değildi. Çekirdek için denemeler yapılmış ancak kararlı bir çekirdek oluşturulamamıştı.</p>
+<p>Tam da bu noktada <strong>Linus Torvalds</strong>'ın geliştirip topluluğa sunduğu ve topluluk doğrultusunda geliştirdiği çekirdek yazılımı, <strong>GNU</strong> ile tencere kapak uyumu olacak şekilde bir araya geldi. Böylelikle ortaya bir <strong>GNU/Linux</strong> efsanesi çıktı. İşte <strong>GNU/Linux</strong> devrimi kısaca bu şekilde oldu. Hem <strong>GNU</strong>'nun hem de <strong>Linux</strong>'un topluluğa bağlı dönütlerle geliştirilmesi doğrultusunda <strong>herkese açık, ücretsiz ve sınırsız geliştirilme potansiyeline sahip, gerçek anlamda insana hizmet eden  özgür bir işletim sistemi</strong> ortaya çıkmış oldu.</p>
+<h2 id="sonuc">Sonuç Olarak</h2>
+<p><strong>Linux</strong> bir işletim sistemi değil, <strong>çekirdektir(kernel).</strong> <strong>GNU/Linux</strong> bütünü bir <strong>işletim sistemidir</strong>. Ancak genellikle söylenmesi uzun veya zor geldiği için, zamanla sadece <strong>Linux</strong> olarak geçmeye başlamıştır. Ben de yazılarımda <strong>GNU/Linux</strong> yerine <strong>Linux</strong> kullanıyor olacağım. Ancak emin olun <strong>çekirdekten</strong>(<strong>kernel</strong>) yani <strong>Linux</strong>'tan bahsettiğimde ve <strong>GNU/Linux</strong>(<strong>işletim sistemi</strong>)'tan bahsettiğimde hangisini kastettiğimi anlıyor olacaksınız.</p>
+	<h1></h1>
+<center>
+	<h1 id="bildirim">Geri Bildirimde Bulunun</h1>
+<p>Sizlere daha verimli bir kaynak sunabilmemiz için, uygulamada veya dokümantasyonlarda yer alan tüm hata ve eksiklerimizi bize bildirebilirsiniz.	</p>
+	<div class="checkbox mb-3">
+                          
+			<a href="../../bildirim.html" class="btn btn-danger">Geri Bildirimde Bulunun</a>
+
+      </div></center>
+	
+</article>
+        
+    </div>
+
+    
+<script src="../../js/jquery-3.3.1.slim.min.js"></script>
+<script src="../../js/main.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
+<script src="../../js/script.js"></script>		
+
+
+
+
+</body>
+</html>
