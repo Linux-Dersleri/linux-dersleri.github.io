@@ -5,6 +5,12 @@ Bu web platformu, Türkçe Temel Linux Dokümantasyon içeriğini takip edebilme
 **Platform Adresi:** https://linux-dersleri.github.io/
 ![](https://raw.githubusercontent.com/Linux-Dersleri/linux-dersleri.github.io/master/img/menu/app.png)
 
+Platform Kullanım Rehberi
+-
+Kısa video rehberi izleyerek platform hakkında bilgi edinmek için aşağıdaki bağlantıyı kullanabilirsiniz. 
+
+**Video Rehber:** https://www.youtube.com/watch?v=RyDpMx6NLnI
+
 Çevrimdışı(Offline) Çalışma Yapısı 
 -
 Çevrimdışı olarak ulaşmak istediğiniz içeriği çevrimiçiyken ziyaret etmeniz yeterlidir. Örneğin 1. doküman sayfasına çevrimiçiyken göz attıysanız, bu sayfa sizin için çevrimdışı ulaşabileceğiniz şekilde otomatik olarak kaydolur. Böylelikle çevrimiçi olarak ziyaret ettiğiniz tüm sayfalar, çevrimdışı olduğunuzda da aynen ulaşılabilir olur.
