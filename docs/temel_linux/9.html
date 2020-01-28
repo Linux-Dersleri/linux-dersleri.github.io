@@ -81,7 +81,9 @@
 			
 			
 			
-   			<a href="#bildirim" class="list-group-item list-group-item-action active bg-danger">Geri Bildirim</a>
+   			<hr>
+<a href="#alistirma" class="list-group-item list-group-item-action">Alıştırmalar</a>
+<a href="#bildirim" class="list-group-item list-group-item-action">Geri Bildirim</a>
 			
           	
         </div>
@@ -275,14 +277,14 @@ Pipe nedir diyecek olursanız kabaca iki işlemi(process) birbirine bağlayan <s
 <p><img src="../../img/6-%20Dosya%20%C4%B0%C5%9Flemleri/46-min.png" class="responsive"></p>
 <p>Çıktıda <strong><mark>etc</mark></strong> konumda yer alan içerisinde "<strong>local</strong>" ifadesi geçen dosyalar komutumuz sayesinde listelenmiş oldu. Ancak aradığımız şeyi bulmak adına değiştirilme tarihi, boyut, dosya-dizin gibi ayrıntıları belirterek çıktıları daha spesifik şekilde sınırlandırabiliriz. Bazı özel arama parametreleri açıklayalım hemen.</p>
 <ul>
-<li><strong>type f :</strong> Yalnızca dosyalar.</li>
+	<li><strong>type f :</strong> Yalnızca dosyalar.</li>
 <li><strong>type d :</strong> Yalnızca dizinler.</li>
 <li><strong>size +500k :</strong> 500 KB'tan büyük olan dosyalar.</li>
 <li><strong>size -500k :</strong> 500 KB'tan küçük olan dosyalar.</li>
 <li><strong>ctime 10 :</strong> Tam olarak 10 gün önce değişikliğe uğramış dosya/dizinler.</li>
 <li><strong>ctime -10 :</strong> 10 günden daha kısa bir süre önce değişikliğe uğramış dosya/dizinler.</li>
 <li><strong>ctime +10 :</strong> 10 günden daha uzun bir süre önce değişikliğe uğramış dosya/dizinler.</li>
-<li><strong>perm 755 :</strong> Yalnızca erişim izni 755 olan dosya/dizinler.
+<li><strong>perm 755 :</strong> Yalnızca erişim izni 755 olan dosya/dizinler.</li>
 Örnek olması açısından yukarıdaki arama parametrelerinin ilk ikisinin çıktılarını aşağıya ekliyorum.</li>
 </ul>
 <p><img src="../../img/6-%20Dosya%20%C4%B0%C5%9Flemleri/47-min.png" class="responsive"></p>
@@ -335,7 +337,304 @@ Pipe nedir diyecek olursanız kabaca iki işlemi(process) birbirine bağlayan <s
 <p>Bu komut sayesinde dosyalarımızı daha güvenli şekilde silebiliriz. <strong><code>shred</code></strong> komutu dosyanın içerisine rastgele bitler yazarak dosyanın okunmaz hale gelmesini sağlıyor. Parametresiz kullanımda dosyaya 3 kez rastgele bit eklerken <strong><code>n</code></strong> parametresini kullanarak bu eklenecek olan rastgele bit sayısını istediğimiz doğrultuda düzenleyebiliyoruz. Eğer yapılan işlemi komut satırından takip etmek istersek <strong><code>v</code></strong> parametresini de kullanabiliriz. Ayrıca <strong><code>u</code></strong> parametresini kullanmamız halinde dosya işlem sonrasında silinir.</p>
 <p><img src="../../img/6-%20Dosya%20%C4%B0%C5%9Flemleri/57-min.png" class="responsive"></p>
 <p><img src="../../img/6-%20Dosya%20%C4%B0%C5%9Flemleri/58-min.png" class="responsive"></p>
-	<h1></h1>
+		<h1></h1>
+<div align="center" class="container">
+<div class="card mb-4 ">
+    <div class="row no-gutters">
+        <div class="col-md-3">
+            <img src="../../img/menu/pc-logo.png" class="card-img-top img1">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+		<strong class="d-inline-block mb-0 text-primary"><h3 id="alistirma">Alıştırmalar Hakkında</h3></strong>
+                <p class="card-text text-dark">Öğrendiğiniz bilgilerin kalıcı olması için mutlaka bolca alıştırma yapmalısınız.Burada belirtilen alıştırmalar dışında da kendi kendinize özellikle de zorlandığınız konularda bol bol alıştırmalar yapın.  Aksi halde öğrendiğiniz bilgiler kısa sürede unutulup gidecektir. Yani gerçekten öğrenmek istiyorsanız lütfen öğrendiğinizi hissede kadar alıştırmalar yapın.</p>
+                
+            </div>
+        </div>
+    </div>
+</div>		
+<div class="row mb-2">
+    <div class="col">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          
+		  <p></p>
+<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto">&nbsp;"<strong>a</strong>", "<strong>b</strong>", "<strong>c</strong>","<strong>d</strong>" adlarında&nbsp;4 klasörü tek seferde oluşturun ve<strong>&nbsp;</strong><strong><strong>4 kl</strong>asörü tek seferde&nbsp;<strong>kontrollü yani tek tek onay isteyecek şekilde</strong></strong>&nbsp;<strong>silin</strong>.
+        </p></div>        
+      </div>
+    </div>
+	<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto"><code>cat</code>&nbsp; komutu ile dosya oluşturup içerisine "<em><strong>deneme metni</strong></em>" şeklinde bir ifade yazın.
+        </p></div>        
+      </div>
+    </div>
+	<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto"><code>cat</code>&nbsp; komutu yardımıyla içerisinde&nbsp;ifadelerin yer aldığı dosyayı silerek yeni ifadeler ekleyin.
+        </p></div>        
+      </div>
+    </div>
+	<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto">İçerisinde ifadelerin yer aldığı dosyaya <code>cat</code>&nbsp; komutu ile ekleme yapın.
+        </p></div>        
+      </div>
+    </div>
+	<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto">Bulunduğun konumdaki dosya ve dizinlerin bilgilerini "<strong>bilgiler</strong>" isimli bir dosyaya kaydet.
+        </p></div>        
+      </div>
+    </div>
+	<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto">Mevcut bir dosya içeriğini "<strong>kopya</strong>" isimli bir dosya oluşturarak aktar.
+        </p></div>        
+      </div>
+    </div>
+	<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto">Oluşturmuş olduğun kopya isimli dosyayı <code>cat</code>&nbsp; komutu ile konsoldan oku.
+        </p></div>        
+      </div>
+    </div>
+	<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto">Herhangi bir dosya içeriğini <strong>ters</strong> şekilde konsola bastır.
+        </p></div>        
+      </div>
+    </div>
+	<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto">Herhangi bir dosya içeriğini&nbsp;<strong>dizeleri sondan başa doğru çevirerek ters&nbsp;</strong>şekilde konsola bastır.
+        </p></div>        
+      </div>
+    </div>
+	<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto">Konsola "<strong>Selamlar</strong>" ifadesini bastır.&nbsp;
+        </p></div>        
+      </div>
+    </div>
+	<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto"><code>echo</code>&nbsp; komutu yardımıyla "<em><strong>örnek</strong></em>" isminde&nbsp;bir dosya oluştur ve aynı zamanda dosyaya "<em><strong>örnek metin</strong></em>" şeklinde bir ifade ekle.&nbsp;
+        </p></div>        
+      </div>
+    </div>
+	<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto"><code>more</code>&nbsp; komutu ile <em><strong><code>/etc</code>&nbsp;</strong></em>&nbsp;dizini içerisindeki <em><strong><code>profile</code>&nbsp;&nbsp;</strong></em>isimli dosyayı okuyun.
+        </p></div>        
+      </div>
+    </div>
+	<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto"><em><strong><code>/etc</code>&nbsp;</strong></em>&nbsp;dizini içerisindeki&nbsp;<em><strong><code>profile</code>&nbsp;&nbsp;</strong></em>isimli dosyanın <strong>ilk 10</strong> satırını ekrana bastırın.
+        </p></div>        
+      </div>
+    </div>
+	<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto"><em><strong><code>/etc</code>&nbsp;</strong></em>&nbsp;dizini içerisindeki&nbsp;<em><strong><code>profile</code>&nbsp;&nbsp;</strong></em>isimli dosyanın <strong>son 10 </strong>satırını ekrana bastırın.
+        </p></div>        
+      </div>
+    </div>
+	<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto"><em><strong><code>/etc</code>&nbsp;</strong></em>&nbsp;dizini içerisindeki&nbsp;<em><strong><code>profile</code>&nbsp;&nbsp;</strong></em>isimli dosyanın <strong>ilk 8</strong> satırını ekrana bastırın.
+        </p></div>        
+      </div>
+    </div>
+	<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto"><em><strong><code>/etc</code>&nbsp;</strong></em>&nbsp;dizini içerisindeki&nbsp;<em><strong><code>profile</code>&nbsp;&nbsp;</strong></em>isimli dosyanın&nbsp;<strong>son&nbsp;5</strong> satırını ekrana bastırın.
+        </p></div>        
+      </div>
+    </div>
+			<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto"><em><strong><code>/etc</code>&nbsp;</strong></em>&nbsp;dizini içerisindeki&nbsp;<em><strong><code>profile</code>&nbsp;&nbsp;</strong></em>isimli dosyanın içeriğini <strong>satır numaraları ile </strong>birlikte görüntüleyin.
+        </p></div>        
+      </div>
+    </div>
+	<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto">Herhangi bir dosya içeriğini <strong>a'&nbsp;dan z'&nbsp;ye</strong> <strong>alfabetik</strong> sıralanmış şekilde konsola bastırın.
+        </p></div>        
+      </div>
+    </div>
+			<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto">Herhangi bir dosya içeriğini&nbsp;<strong>z'&nbsp;den a'&nbsp;ya</strong>&nbsp;<strong>ters alfabetik</strong> sıralanmış şekilde konsola bastırın.
+        </p></div>        
+      </div>
+    </div>
+			<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto">Herhangi iki dosyayı<strong> aynı anda yan yana olacak şekilde</strong> konsola bastırın.
+        </p></div>        
+      </div>
+    </div>
+			<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto"><code>cmp</code>&nbsp; komutunu kullanarak <strong>benzer iki dosya arasındaki farkları</strong> sorgulayın.
+        </p></div>        
+      </div>
+    </div>
+			<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto"><code>grep</code>&nbsp; komutu ile&nbsp;<em><strong><code>/etc</code>&nbsp;</strong></em>&nbsp;dizini içerisindeki&nbsp;<em><strong><code>profile</code>&nbsp;&nbsp;</strong></em>isimli dosyada "<em><strong>if</strong></em>" ifadesinin geçip geçmediğini sorgulayın.
+        </p></div>        
+      </div>
+    </div>
+			<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto"><code>grep</code>&nbsp; komutunu kullanarak elde ettiğiniz arama sonuçlarının<strong>&nbsp;sonrasındaki yer alan&nbsp;2 satırın </strong>daha basılmasını sağlayın.
+        </p></div>        
+      </div>
+    </div>
+			<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto"><code>grep</code>&nbsp; komutunu kullanarak elde ettiğiniz arama sonuçlarının&nbsp;<strong>öncesindeki yer alan&nbsp;3 satırın&nbsp;</strong>daha basılmasını sağlayın.
+        </p></div>        
+      </div>
+    </div>
+			<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto"><code>grep</code>&nbsp; komutunu kullanarak elde ettiğiniz arama sonuçlarının<strong>&nbsp;öncesinde ve sonrasında yer alan&nbsp;1 satırın&nbsp;</strong>daha basılmasını sağlayın.
+        </p></div>        
+      </div>
+    </div>
+			<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto"><strong><em><code>/root</code>&nbsp;</em></strong> konumundayken bulunduğunuz dizindeki içerikleri&nbsp;listeleyip <code>grep</code>&nbsp; komutu yardımıyla "<strong>D</strong>" ifadesi ile başlayanları filtreleyerek konsola bastırın
+        </p></div>        
+      </div>
+    </div>
+			<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto"><code>find</code>&nbsp; komutunu kullanarak <em><strong><code>/etc</code>&nbsp;</strong></em> dizini içerisindeki "<em><strong>doc</strong></em>" ifadesiyle başlayan <strong>tüm klasör ve dosyaları</strong> bularak listeleyin.
+        </p></div>        
+      </div>
+    </div>
+			<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto"><code>find</code>&nbsp; komutunu kullanarak&nbsp;<em><strong><code>/etc</code>&nbsp;</strong></em>&nbsp;dizini içerisindeki "<em><strong>doc</strong></em>" ifadesiyle başlayan<strong> tüm&nbsp;dosyaları</strong>(<strong>yani yalnızca dosyaları</strong>)&nbsp;bularak listeleyin.
+        </p></div>        
+      </div>
+    </div>
+			<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto"><code>find</code>&nbsp; komutunu kullanarak&nbsp;<em><strong><code>/etc</code>&nbsp;</strong></em>&nbsp;dizini içerisindeki "<em><strong>doc</strong></em>" ifadesiyle başlayan <strong>tüm klasörleri</strong>(<strong>yani yalnızca klasörleri</strong>) bularak listeleyin.
+        </p></div>        
+      </div>
+    </div>
+			<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto"><code>find</code>&nbsp; komutunu kullanarak&nbsp;<em><strong><code>/etc</code>&nbsp;</strong></em>&nbsp;dizini içerisindeki <strong>tam olarak 5 gün önce</strong> değişikliğe uğramış tüm dosya ve dizinleri bularak listeleyin.
+        </p></div>        
+      </div>
+    </div>
+			<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto"><code>find</code>&nbsp; komutunu kullanarak&nbsp;<em><strong><code>/etc</code>&nbsp;</strong></em>&nbsp;dizini içerisindeki&nbsp;<strong>5 günden daha kısa bir süre önce </strong>değişikliğe uğramış&nbsp;tüm dosya ve dizinleri bularak listeleyin.
+        </p></div>        
+      </div>
+    </div>
+			<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto"><code>find</code>&nbsp; komutunu kullanarak&nbsp;<em><strong><code>/etc</code>&nbsp;</strong></em>&nbsp;dizini içerisindeki&nbsp;<strong>5 günden daha uzun bir süre önce</strong> değişikliğe uğramış&nbsp;tüm dosya ve dizinleri bularak listeleyin.
+        </p></div>        
+      </div>
+    </div>
+			<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto"><code>find</code>&nbsp; komutunu kullanarak&nbsp;<em><strong><code>/etc</code>&nbsp;</strong></em>&nbsp;dizini içerisindeki&nbsp;<strong>50 günden daha kısa bir süre önce&nbsp;</strong>değişikliğe uğramış olan <strong>tüm&nbsp;dosyaları</strong>(<strong>yani yalnızca dosyaları</strong>)&nbsp; bularak listeleyin.
+        </p></div>        
+      </div>
+    </div>
+			<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto"><strong><em><code>root</code>&nbsp;</em></strong> dizini içerisinde sonu <strong><em>.png</em></strong> ile biten tüm resim dosyalarını bulup <code>xargs</code>&nbsp; komutu yardımıyla bu dosyaların bulundukları konum&nbsp;bilgilerini bir dosyaya aktarın.
+        </p></div>        
+      </div>
+    </div>
+			<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto">Masaüstü konumuna bir dosya oluşturun ve daha sonra&nbsp;bu dosyayı <strong><em><code>Documents</code>(Dokümanlar)</em></strong> dizinine <strong>kopyalayın</strong>.
+        </p></div>        
+      </div>
+    </div>
+			<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto"><strong><em><code>Documents</code><strong>(Dokümanlar)</strong></em></strong>&nbsp;dizinine kopyalamış olduğunuz dosyayı <strong><em><code>Downloads</code>(İndirilenler)&nbsp;</em></strong>dizinine <strong>taşıyın</strong>.
+        </p></div>        
+      </div>
+    </div>
+			<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto"><strong><em><code>Downloads</code>(İndirilenler)&nbsp;</em></strong>dizinine taşımış olduğunuz dosyayı <strong>silin</strong>.
+        </p></div>        
+      </div>
+    </div>
+			<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto">Bir dosya oluşturun ve içerisine birkaç ifade ekleyip kaydedin. Daha sonra dosya içeriğini <code>shred</code>&nbsp; komutu yardımıyla <strong>7&nbsp;kez rastgele bit eklemek </strong>suretiyle <strong>okunamaz hale getirip silin</strong>. Bu işlemleri de <strong>konsoldan takip edebilecek şekilde</strong> yerine getirin.(hepsini tek seferde bir komut ile yapın)
+        </p></div>        
+      </div>
+    </div>
+				
+        </div>
+        
+      </div>
+    </div>
+
+	</div>
+	
+    </div>
+	
 <center>
 	<h1 id="bildirim">Geri Bildirimde Bulunun</h1>
 <p>Sizlere daha verimli bir kaynak sunabilmemiz için, uygulamada veya dokümantasyonlarda yer alan tüm hata ve eksiklerimizi bize bildirebilirsiniz.	</p>
@@ -343,7 +642,8 @@ Pipe nedir diyecek olursanız kabaca iki işlemi(process) birbirine bağlayan <s
                           
 			<a href="../../bildirim.html" class="btn btn-danger">Geri Bildirimde Bulunun</a>
 
-      </div></center>
+      </div>
+	  </center>
 	
 </article>
     </div>

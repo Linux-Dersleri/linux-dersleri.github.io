@@ -60,7 +60,9 @@
           	<a href="#erisim" class="list-group-item list-group-item-action">Erişim Yetkileri</a>
           	<a href="#chmod" class="list-group-item list-group-item-action">chmod</a>
 			<a href="#chattr" class="list-group-item list-group-item-action">chattr</a>
-			<a href="#bildirim" class="list-group-item list-group-item-action active bg-danger">Geri Bildirim</a>
+			<hr>
+<a href="#alistirma" class="list-group-item list-group-item-action">Alıştırmalar</a>
+<a href="#bildirim" class="list-group-item list-group-item-action">Geri Bildirim</a>
 			
           	
         </div>
@@ -165,7 +167,124 @@ Bu tür dosyaları listelemek için <strong><code>lsattr</code></strong> komutu 
 <p>Eğer bu işlemi geri almak ve dosyamızı üzerinde değişiklikler yapılabilir hale getirmek istersek <strong><code>chattr -i test.txt</code></strong> komutumuzu kullanmamız yeterli olacaktır. Örneği aşağıda inceleyebilirsiniz.</p>
 <p><img src="../../img/8-%20Eri%C5%9Fim%20Yetkileri/14-min.png" class="responsive"></p>
 <p>Çıktıda da görüldüğü gibi hedef dosyamızın solundaki <strong><code>-i</code></strong> işareti yok olmuş. Dolayısıyla <strong><mark>test.txt</mark></strong> isimli dosyamızın artık eski halinde dönerek, düzenlenebilir forma girmiş olduğunu gördük. Ve dosyamızı silerek bu durumu teyit ettik.</p>
-	<h1></h1>
+		<h1></h1>
+<div align="center" class="container">
+<div class="card mb-4 ">
+    <div class="row no-gutters">
+        <div class="col-md-3">
+            <img src="../../img/menu/pc-logo.png" class="card-img-top img1">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+		<strong class="d-inline-block mb-0 text-primary"><h3 id="alistirma">Alıştırmalar Hakkında</h3></strong>
+                <p class="card-text text-dark">Öğrendiğiniz bilgilerin kalıcı olması için mutlaka bolca alıştırma yapmalısınız.Burada belirtilen alıştırmalar dışında da kendi kendinize özellikle de zorlandığınız konularda bol bol alıştırmalar yapın.  Aksi halde öğrendiğiniz bilgiler kısa sürede unutulup gidecektir. Yani gerçekten öğrenmek istiyorsanız lütfen öğrendiğinizi hissede kadar alıştırmalar yapın.</p>
+                
+            </div>
+        </div>
+    </div>
+</div>		
+<div class="row mb-2">
+    <div class="col">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          
+		  <p></p>
+<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto">"<em><strong>resimler</strong></em>" isimli bir klasör oluşturun ve bu klasörün yetkilerini;&nbsp;<strong>dosya sahibi için</strong> <em>okuma, yazma</em> ve<em> çalıştırma</em>,&nbsp;<strong>dosya sahibi ile aynı gruptaki kullanıcılar için</strong> <em>yalnızca çalıştırma</em> ve <strong>diğer kullanıcılar için</strong> de<em> yalnızca okuma</em> yetkisini verin.	
+        </p></div>        
+      </div>
+    </div>
+	<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto"><code>resimler</code>&nbsp; klasörüne <strong>tüm kullanıcılar için</strong> <em>yalnızca okuma</em> izni verin.
+        </p></div>        
+      </div>
+    </div>
+	<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto"><code>resimler</code>&nbsp; klasörünün yetkilerini tek seferde&nbsp;<strong>tüm kullanıcılara için</strong> <em>yalnızca çalıştırma</em> yetkisi olarak değiştirin.(Ekleme çıkarma yaparak değil tek seferde istenilen yetkiyi verecek şekilde yapın.)&nbsp;
+        </p></div>        
+      </div>
+    </div>
+	<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto"><code>resimler</code>&nbsp; klasörünün <strong>sahibinin</strong> <em>çalıştırma</em> yetkisini kaldırın.
+        </p></div>        
+      </div>
+    </div>
+	<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto"><strong>rakamları kullanarak</strong> <code>resimler</code>&nbsp; klasörü için <strong>sadece diğer kullanıcılara</strong> <em>okuma</em> ve<em> yazma</em> yetkisi verin.
+        </p></div>        
+      </div>
+    </div>
+	<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto"><strong>rakamları kullanarak</strong>&nbsp;<code>resimler</code>&nbsp; klasörü için <strong>sahibine ve sahibi ile aynı gruptaki kullanıcılara</strong> <em>yazma ve çalıştırma</em> yetkisi verin.
+        </p></div>        
+      </div>
+    </div>
+	<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto"><strong>rakamları kullanarak</strong>&nbsp;<code>resimler</code>&nbsp; klasörü için <strong>tüm kullanıcıların</strong> <em>yetkilerini kaldırın</em>.
+        </p></div>        
+      </div>
+    </div>
+	<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto"><strong>Farklı izinlere sahip 2 klasörün</strong> <em>yetkilerini birbiri ile aynı</em> hale getirin.
+        </p></div>        
+      </div>
+    </div>
+	<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto"><strong>Klasörün içerisinde yer alan tüm dosya ve klasörler de dahil olacak şekilde</strong> tek seferde tüm içeriklerin yetkilerini değiştirin.(<strong>Yani yaptığınız değişiklik klasörün alt dizinlerinde yer alan tüm dosya ve klasörleri etkileyecek şekilde olsun.</strong>&nbsp;)
+        </p></div>        
+      </div>
+    </div>
+	<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto">Herhangi bir dosyayı silinmeye karşı korumak için ilgili komutu kullanarak <strong>koruma altına alın</strong>. Ve test etmek için dosyanın izinlerini değiştirip dosyayı silmeye çalışın.
+        </p></div>        
+      </div>
+    </div>
+	<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto">Koruma altına aldığınız <strong>dosyanın korunup korunmadığını</strong> ilgili komutu kullanarak <strong>teyit edin</strong>.
+        </p></div>        
+      </div>
+    </div>
+	<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto">Silinmeye karşı koruma altına aldığınız <strong>dosyanın korumasını</strong> ilgili komutu kullanarak <strong>kaldırın</strong>.&nbsp;Ve test etmek için dosyanın izinlerini değiştirip dosyayı silmeye çalışın.
+        </p></div>        
+      </div>
+    </div>
+	
+    </div>
+	
+	
+        </div>
+        
+      </div>
+    </div>
+
+	</div>
+
+	
 <center>
 	<h1 id="bildirim">Geri Bildirimde Bulunun</h1>
 <p>Sizlere daha verimli bir kaynak sunabilmemiz için, uygulamada veya dokümantasyonlarda yer alan tüm hata ve eksiklerimizi bize bildirebilirsiniz.	</p>
@@ -173,7 +292,8 @@ Bu tür dosyaları listelemek için <strong><code>lsattr</code></strong> komutu 
                           
 			<a href="../../bildirim.html" class="btn btn-danger">Geri Bildirimde Bulunun</a>
 
-      </div></center>
+      </div>
+	  </center>
 	
 </article>
     </div>

@@ -78,5 +78,10 @@
 	.span-demos {
 		width: 96px;
 	}
+	.img1 {
+    -webkit-filter: drop-shadow(0px 0px 0px #222222);
+    filter: drop-shadow(0px 0px 0px #222222);
+	}
+	
 
 		
