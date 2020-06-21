@@ -29,8 +29,8 @@
 	    <div align="center">
 		
 		<div class="alert alert-danger">
-  <strong>Kaldırılan Geri Bildirim Formu Hakkında</strong><br>
-		Form alanı kötüye kullanım nedeniyle web platformu için bir süreliğine devre dışı bırakılmıştır. Geri bildirimlerinizi doğrudan mail yolu ile iletebilirsiniz.
+  <strong>Uyarı !</strong><br>
+		İletiyi gönderirken internet bağlantınız olduğundan ve formu eksiksiz doldurduğunuzdan emin olun. <br> Aksi takdirde, geri bildirimleriniz bana ulaşamayacaktır.
 </div>
 <div align="center" class="container">
 
@@ -38,9 +38,23 @@
             
 		<strong class="d-inline-block text-danger"><h3>Geri Bildirim</h3></strong>
                 <p class="card-text text-dark">Farketmiş olduğunuz; eksiklik, yazım yanlışı, hata ve türevi her şey için bizlere <strong>geri bildirimde</strong> bulunabilirsiniz.</p>
-				<p> Geri bildirim için mail adresimiz aşağdıdaki şekildedir.</p>
-                <p>derslinux [at] gmail [nokta] com </p>
-		<p>Geri bildirimleriniz için şimdiden çok teşekkür ederim. </p>
+                <form id="gform" method="POST" class="pure-form pure-form-stacked" data-email="example@email.net" action="https://script.google.com/macros/s/AKfycbzZW4V8_sjue32g4SPPy7GcweabGeU6FKX3eNCYKg/exec" enctype="text/plain"> 
+<p> <input  class="form-control" type="text" name="ad" placeholder="Adınız" value="" id="author" required> <input class="form-control" type="email" name="email" placeholder="E-mail adresiniz" value="" id="email" required> 
+<textarea name="mesaj" rows="3" wrap="soft" class="form-control" id="comment" placeholder="Mesajınız" required></textarea></p> <p class="form-submit">  <input type="submit" id="submit" class="btn btn-lg btn-outline-danger" href="./menu.html" value="Gönder"> </p>
+
+</form>      
+    
+</div>
+<div style="display:none;" id="thankyou_message"> 
+	<h2>Geri bildiriminiz için teşekkürler.</h2>
+	
+</div> 
+</div>
+
+
+<script data-cfasync="false" type="text/javascript" src="./js/form-submission-handler.js"></script> 	
+<script src="./js/main.js"></script>
+	
 	</body>
 
 </html>

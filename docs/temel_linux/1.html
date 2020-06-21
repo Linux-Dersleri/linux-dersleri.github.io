@@ -11,33 +11,39 @@
 	<link rel="stylesheet" href="../../css/style.css">
 
 </head>
-<style>
 
-</style>	
-	
-<body id="body" style="font-size: 18px;">
+<body id="body" style="font-size: 18px;">	
 <div class="bs-canvas-overlay bs-canvas-anim bg-dark position-fixed w-100 h-100"></div>
-	<nav class="navbar y-navbar sticky-top navbar-expand-lg navbar-light bg-light">
+	
+<nav class="navbar y-navbar sticky-top navbar-expand-lg navbar-light bg-light">
   
   <a style="color: black" class="btn"  data-toggle="canvas" data-target="#bs-canvas-left" aria-expanded="false" aria-controls="bs-canvas-left"><i class="fa fa-align-justify fa-lg"></i></a>
-  <center>
+  <center >
+	<div id="sizecontroldiv1" class="controlstyle">
 	<a href="../../index.html" style="color: black" class="btn navbar-toggler " > <i class="fa fa-angle-double-left fa-lg"></i></a>
+	<a href="#smaller" style="color: black "  class="navbar-toggler btn" > <i class="fa fa-lg fa-minus "></i></a>
     <a href="../../index.html" style="color: black" class="btn navbar-toggler " ><i class="fa fa-book fa-lg"></i></a>
-    <a href="./2.html" style="color: black" class="btn navbar-toggler " ><i class="fa fa-angle-double-right fa-lg"></i> </a>	
+	<a href="#bigger" style="color: black"  class="navbar-toggler btn" ><i class="fa fa-lg fa-plus "></i></a>
+    <a href="./2.html" style="color: black" class="btn navbar-toggler " ><i class="fa fa-angle-double-right fa-lg"></i> </a>
+	</div>
   </center>
   <a style="color: black" class="btn navbar-toggler"  onclick="changeColor()" ><i class="fa fa-eye fa-lg"></i></a>  
 		
 </nav>
+
 <nav class="navbar x-navbar sticky-top navbar-expand-lg navbar-light bg-light border-bottom">
 	
 	<div class="container ">
             <div align="left"><button class="btn"  data-toggle="canvas" data-target="#bs-canvas-left" aria-expanded="false" aria-controls="bs-canvas-left"><i class="fa fa-align-justify fa-lg"></i></button>
 		<a href="../../menu.html" class="btn"  ><i class="fa fa-home fa-lg"></i></a>     </div>
-	<center>
+	<center >
 		<div id="sizecontroldiv" class="controlstyle">
         <a href="../../index.html" class="btn">Önceki <i class="fa fa-angle-double-left fa-lg"></i></a>
+		<a href="#smaller" style="color: black"  class=" btn" ><i class="fa fa-lg fa-minus "></i></a>
         <a href="../../index.html" class="btn" ><i class="fa fa-book fa-lg"></i></a>
+		<a href="#bigger" style="color: black"  class=" btn" ><i class="fa fa-lg fa-plus "></i></a>
         <a href="./2.html" class="btn" ><i class="fa fa-angle-double-right fa-lg"></i> Sonraki</a>
+		
         </div>
     </center>
 			<div align="right">
@@ -48,6 +54,7 @@
      
 </nav>
 	
+
 <div id="bs-canvas-left" class="bs-canvas bs-canvas-anim bs-canvas-left position-fixed bg-light h-100" >
 	<header class="bs-canvas-header p-3 bg-dark">
 		
@@ -142,7 +149,34 @@ Bu durumdan hiç hoşlanmamış olabilirsiniz, ancak araştırma ve kendi kendin
 <script src="../../js/bootstrap.min.js"></script>
 <script src="../../js/script.js"></script>		
 
+<script type="text/javascript" src="../../js/jquery1.min.js"></script>
 
+<script type="text/javascript" src="../../js/fluidtextresizer.js">
+
+</script>
+
+<script type="text/javascript">
+
+var mytextsizer=new fluidtextresizer({
+	controlsdiv: "sizecontroldiv",
+	targets: ["body"], 
+	levels: 2, 
+	persist: "session", 
+	animate: 0 
+})
+
+</script>
+<script type="text/javascript">
+
+var mytextsizer=new fluidtextresizer({
+	controlsdiv: "sizecontroldiv1",
+	targets: ["body"], 
+	levels: 2, 
+	persist: "session", 
+	animate: 0 
+})
+
+</script>
 
 
 </body>

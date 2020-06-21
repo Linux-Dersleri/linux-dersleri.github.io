@@ -18,24 +18,32 @@
 	<nav class="navbar y-navbar sticky-top navbar-expand-lg navbar-light bg-light">
   
   <a style="color: black" class="btn"  data-toggle="canvas" data-target="#bs-canvas-left" aria-expanded="false" aria-controls="bs-canvas-left"><i class="fa fa-align-justify fa-lg"></i></a>
-  <center>
+  <center >
+	<div id="sizecontroldiv1" class="controlstyle">
 	<a href="./6.html" style="color: black" class="btn navbar-toggler " > <i class="fa fa-angle-double-left fa-lg"></i></a>
+	<a href="#smaller" style="color: black "  class="navbar-toggler btn" > <i class="fa fa-lg fa-minus "></i></a>
     <a href="../../index.html" style="color: black" class="btn navbar-toggler " ><i class="fa fa-book fa-lg"></i></a>
-    <a href="./8.html" style="color: black" class="btn navbar-toggler " ><i class="fa fa-angle-double-right fa-lg"></i> </a>	
+	<a href="#bigger" style="color: black"  class="navbar-toggler btn" ><i class="fa fa-lg fa-plus "></i></a>
+    <a href="./8.html" style="color: black" class="btn navbar-toggler " ><i class="fa fa-angle-double-right fa-lg"></i> </a>
+	</div>
   </center>
   <a style="color: black" class="btn navbar-toggler"  onclick="changeColor()" ><i class="fa fa-eye fa-lg"></i></a>  
 		
 </nav>
+
 <nav class="navbar x-navbar sticky-top navbar-expand-lg navbar-light bg-light border-bottom">
 	
 	<div class="container ">
             <div align="left"><button class="btn"  data-toggle="canvas" data-target="#bs-canvas-left" aria-expanded="false" aria-controls="bs-canvas-left"><i class="fa fa-align-justify fa-lg"></i></button>
 		<a href="../../menu.html" class="btn"  ><i class="fa fa-home fa-lg"></i></a>     </div>
-	<center>
+	<center >
 		<div id="sizecontroldiv" class="controlstyle">
         <a href="./6.html" class="btn">Önceki <i class="fa fa-angle-double-left fa-lg"></i></a>
+		<a href="#smaller" style="color: black"  class=" btn" ><i class="fa fa-lg fa-minus "></i></a>
         <a href="../../index.html" class="btn" ><i class="fa fa-book fa-lg"></i></a>
+		<a href="#bigger" style="color: black"  class=" btn" ><i class="fa fa-lg fa-plus "></i></a>
         <a href="./8.html" class="btn" ><i class="fa fa-angle-double-right fa-lg"></i> Sonraki</a>
+		
         </div>
     </center>
 			<div align="right">
@@ -153,7 +161,7 @@ Bu duruma örnek olması için çok basit bir test yapalım.
 <h2 id="etc">/etc</h2>
 <p>İşletim sistemini bir vücuda benzetirsek, <strong><code>/etc</code></strong> klasörünü, sinir sisteminin merkezi olarak görebiliriz. Sisteme dair bütün ayarları ve bilgisayara özel birçok yapılandırma bilgisini içerir.</p>
 <h2 id="home">/home</h2>
-<p><strong><code>home</code></strong> klasörü kullanıcıların kalesi olarak tabir edilir. <strong><code>home</code></strong> klasörü içerisinde her kullanıcının kendi adında bir alt klasörü bulunur. (örneğin <strong>/home/ahmet</strong> , <strong>/home/ayşe</strong> gibi). Kullanıcıların kişisel verileri, kullandığı programlarda yaptığı ayar değişiklikleri, yapılandırmaları burada tutulmaktadır. Ayrıca kullanıcılar <strong><code>/home</code></strong> dizinini elbette belge, müzik, resim vb. dosyaları düzenli, tertipli bir şekilde depolamak amacıyla da kullanabilirler.</p>
+<p><strong><code>home</code></strong> klasörü kullanıcıların kalesi olarak tabir edilir. <strong><code>home</code></strong> klasörü içerisinde her kullanıcının kendi adında bir alt klasörü bulunur. (örneğin <strong>/home/ahmet</strong> , <strong>/home/ayşe</strong> gibi). Kullanıcıların kişisel verileri, kullandığı programlarda yaptığı ayar değişiklikleri, yapılandırmaları burada tutulmaktadır. Ayrıca kullanıcılar <strong><code>/home</code></strong> dizinini elbette belge, müzik, resim vb. dosyaları düzenli, tertipli bir şekilde depolamak amacıyla da kullanabilirler. <strong><code>/home</code></strong> dizini Windows'taki kullanıcı dizinlerine göre çok daha güvenli bir yapıya sahiptir. Çünkü Linux'ta bir başkasının ev klasörüne müdahale edemezken, Windows'ta çok zorlanmadan istediğinizi yapabilirsiniz.</p>
 <h2 id="initrd">/initrd</h2>
 <p><strong>initrd</strong>, "<strong>initial ramdisk</strong>" kısaltmasıdır. Anlamı, yaklaşık olarak "<strong>Başlangıç Bellek Diski</strong>" şeklinde ifade edilebilir. Boot aşamasında ilk önce çekirdek (kernel) yüklenir. Bundan sonra bilgisayarınızın belleğinde bir Bellek Diski oluşturulur. Oluşturulan Bellek Disk üzerinde <strong><code>/</code></strong> (root) yansısı açılır ve kök dizin olarak monte edilir. <strong><code>/initrd</code></strong> bu işlemlerin yapılması ve Linux'un yüklenmesi için gereklidir.</p>
 <h2 id="lib">/lib</h2>
@@ -216,8 +224,36 @@ Bu duruma örnek olması için çok basit bir test yapalım.
 <script src="../../js/bootstrap.min.js"></script>
 <script src="../../js/script.js"></script>		
 
+<script type="text/javascript" src="../../js/jquery1.min.js"></script>
 
+<script type="text/javascript" src="../../js/fluidtextresizer.js">
+
+</script>
+
+<script type="text/javascript">
+
+var mytextsizer=new fluidtextresizer({
+	controlsdiv: "sizecontroldiv",
+	targets: ["body"], 
+	levels: 2, 
+	persist: "session", 
+	animate: 0 
+})
+
+</script>
+<script type="text/javascript">
+
+var mytextsizer=new fluidtextresizer({
+	controlsdiv: "sizecontroldiv1",
+	targets: ["body"], 
+	levels: 2, 
+	persist: "session", 
+	animate: 0 
+})
+
+</script>
 
 
 </body>
 </html>
+
