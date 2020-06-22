@@ -1,3 +1,19 @@
+$('#body').toggleClass(localStorage.toggled);
+
+function darkLight() {
+  /*DARK CLASS*/
+  if (localStorage.toggled != 'dark') {
+    $('#body, p, #bs-canvas-right').toggleClass('dark', true);
+    localStorage.toggled = "dark";
+     
+  } else {
+    $('#body, p, #bs-canvas-right').toggleClass('dark', false);
+    localStorage.toggled = "";
+  }
+}
+
+/*Gömlülü Panel Hareketi*/
+
 jQuery(document).ready(function($){
 	var bsDefaults = {
 			offset: false,
@@ -45,18 +61,35 @@ jQuery(document).ready(function($){
 			bsOverlay.removeClass('show');		
 		return false;
 	});
+	
 });
-    var colors = ["#212529","#ffffff"];
-	var colors1 = ["#cbd0d0","#050505"];
-    var colorIndex = 0;
-    function changeColor() {
-        var col = document.getElementById("body");
-        if( colorIndex >= colors.length ) {
-            colorIndex = 0;
-        }
-        col.style.backgroundColor = colors[colorIndex];
-		col.style.color = colors1[colorIndex];
-        colorIndex++;
 
+/*Yazı Boyut Seçimi*/
 
-    }
+var selectedSize = '';
+
+function fontSize(selectTag) {
+  var listValue = selectTag.options[selectTag.selectedIndex].text;
+  selectedSize = listValue;
+  setFontSize(listValue);
+}
+
+function setFontSize(value) {
+  document.querySelector("#makale").style.fontSize = value;
+}
+
+function saveFont(){
+  localStorage.setItem('fontSize', selectedSize);
+}
+
+var button = document.querySelector('#save');
+button.addEventListener('click', function(evt) {
+  evt.preventDefault();
+  saveFont();
+}, false);
+
+if(localStorage.getItem('fontSize')) {
+  var storedSize = localStorage.getItem('fontSize');
+  setFontSize(storedSize);
+}
+    

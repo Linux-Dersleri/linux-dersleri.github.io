@@ -6,6 +6,7 @@
     width: 100%;
     height: auto;
 	}
+
 	mark{
     padding: 2px 4px;
     font-size: 90%;
@@ -74,6 +75,17 @@
     -webkit-filter: drop-shadow(0px 0px 0px #222222);
     filter: drop-shadow(0px 0px 0px #222222);
 	}
+	
+	/*Karanlık Mod*/
+	.dark {
+	background: #212529;
+	color: #efefef;
+	}
+p 	{
+	background: none !important;
+	}
+	 
+	
 	
 
 		

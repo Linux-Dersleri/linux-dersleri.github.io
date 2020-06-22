@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Linux Dersleri</title>
+	<title>Linux Dersleri | 4. Ders</title>
 	<link rel="icon" href="../../img/menu/icon.png" type="image/icon type">
 	<link rel="stylesheet" href="../../css/bootstrap.min.css">
 	<link rel="stylesheet" href="../../css/font-awesome.min.css">
@@ -12,22 +12,22 @@
 
 </head>
 
-	
-<body id="body" style="font-size: 18px;">
+<body id="body" >	
 <div class="bs-canvas-overlay bs-canvas-anim bg-dark position-fixed w-100 h-100"></div>
-	<nav class="navbar y-navbar sticky-top navbar-expand-lg navbar-light bg-light">
+	
+<nav class="navbar y-navbar sticky-top navbar-expand-lg navbar-light bg-light">
   
   <a style="color: black" class="btn"  data-toggle="canvas" data-target="#bs-canvas-left" aria-expanded="false" aria-controls="bs-canvas-left"><i class="fa fa-align-justify fa-lg"></i></a>
   <center >
-	<div id="sizecontroldiv1" class="controlstyle">
+	<div>
 	<a href="./3.html" style="color: black" class="btn navbar-toggler " > <i class="fa fa-angle-double-left fa-lg"></i></a>
-	<a href="#smaller" style="color: black "  class="navbar-toggler btn" > <i class="fa fa-lg fa-minus "></i></a>
+	
     <a href="../../index.html" style="color: black" class="btn navbar-toggler " ><i class="fa fa-book fa-lg"></i></a>
-	<a href="#bigger" style="color: black"  class="navbar-toggler btn" ><i class="fa fa-lg fa-plus "></i></a>
+	
     <a href="./5.html" style="color: black" class="btn navbar-toggler " ><i class="fa fa-angle-double-right fa-lg"></i> </a>
 	</div>
   </center>
-  <a style="color: black" class="btn navbar-toggler"  onclick="changeColor()" ><i class="fa fa-eye fa-lg"></i></a>  
+  <a style="color: black" class="btn"  data-toggle="canvas" data-target="#bs-canvas-right" aria-expanded="false" aria-controls="bs-canvas-right" ><i class="fa fa-gear fa-lg"></i></a>  
 		
 </nav>
 
@@ -37,23 +37,53 @@
             <div align="left"><button class="btn"  data-toggle="canvas" data-target="#bs-canvas-left" aria-expanded="false" aria-controls="bs-canvas-left"><i class="fa fa-align-justify fa-lg"></i></button>
 		<a href="../../menu.html" class="btn"  ><i class="fa fa-home fa-lg"></i></a>     </div>
 	<center >
-		<div id="sizecontroldiv" class="controlstyle">
+		
         <a href="./3.html" class="btn">Önceki <i class="fa fa-angle-double-left fa-lg"></i></a>
-		<a href="#smaller" style="color: black"  class=" btn" ><i class="fa fa-lg fa-minus "></i></a>
+		
         <a href="../../index.html" class="btn" ><i class="fa fa-book fa-lg"></i></a>
-		<a href="#bigger" style="color: black"  class=" btn" ><i class="fa fa-lg fa-plus "></i></a>
+		
         <a href="./5.html" class="btn" ><i class="fa fa-angle-double-right fa-lg"></i> Sonraki</a>
 		
-        </div>
+        
     </center>
 			<div align="right">
 				<a href="../../bildirim.html" class="btn" ><i class="fa fa-paper-plane"></i></a>    
-             <button class="btn" onclick="changeColor()" ><i class="fa fa-eye fa-lg"></i></button>  
+             <a style="color: black" class="btn"  data-toggle="canvas" data-target="#bs-canvas-right" aria-expanded="false" aria-controls="bs-canvas-right" ><i class="fa fa-gear fa-lg"></i></a>  
 		</div>              
 	</div>
      
 </nav>
-	
+<div id="bs-canvas-right" class="bs-canvas bs-canvas-anim bs-canvas-right position-fixed bg-light h-100" >
+	<header class="bs-canvas-header p-3 bg-dark">
+		
+    	<h4 align="center" class="text-light">Ayar Menüsü<button type="button" class="bs-canvas-close close" aria-label="Close" aria-expanded="true"><span aria-hidden="true" class="text-light">×</span></button></h4>
+        
+    </header>
+    <div class="bs-canvas-content px-3">
+    	
+    	<div align="center" class="list-group my-2 ">
+			<button class="btn">Yazı Boyutunu Seçip Kaydedin</button>
+  <!-- This is how they choose their font size -->
+  <select onchange="fontSize(this);">
+    <option>12px</option>
+	<option>14px</option>
+    <option>16px</option>
+	<option>18px</option>
+	<option>20px</option>
+	<option>22px</option>
+	<option>24px</option>
+	<option>26px</option>
+
+  </select>
+  <br>
+
+  <input type="button" id="save" value="Seçili Boyutu Kaydet">
+<button class="btn">Okuma Modunu Değiştirin</button>
+		<button class="btn btn-outline-dark" onclick="darkLight()" ><i class="fa fa-eye fa-lg"></i></button>
+		
+        </div>
+    </div>    
+</div>
 <div id="bs-canvas-left" class="bs-canvas bs-canvas-anim bs-canvas-left position-fixed bg-light h-100" >
 	<header class="bs-canvas-header p-3 bg-dark">
 		
@@ -164,7 +194,7 @@ Koruma katmanı ne kadar hayat kurtarıcı olsa da sürekli olması bazen rahats
         <div class="col-md-8">
             <div class="card-body">
 		<strong class="d-inline-block mb-0 text-primary"><h3 id="alistirma">Alıştırmalar Hakkında</h3></strong>
-                <p class="card-text text-dark">Öğrendiğiniz bilgilerin kalıcı olması için mutlaka bolca alıştırma yapmalısınız.<br>Burada belirtilen alıştırmalar dışında da kendi kendinize özellikle de zorlandığınız konularda bol bol alıştırmalar yapın.  Aksi halde öğrendiğiniz bilgiler kısa sürede unutulup gidecektir. Yani gerçekten öğrenmek istiyorsanız lütfen öğrendiğinizi hissede kadar alıştırmalar yapın.</p>
+                <p class="card-text text-dark">Öğrendiğiniz bilgilerin kalıcı olması için bolca alıştırma yapmalısınız. Burada yer alan alıştırma faaliyetleri dışında, konuyu öğrendiğinizi hissede kadar kendiniz de bolca pratik yapın lütfen.  Aksi halde öğrendiğiniz bilgiler kısa sürede unutulup gidecektir. </p>
                 
             </div>
         </div>
@@ -237,50 +267,17 @@ Koruma katmanı ne kadar hayat kurtarıcı olsa da sürekli olması bazen rahats
 <center>
 	<h1 id="bildirim">Geri Bildirimde Bulunun</h1>
 <p>Sizlere daha verimli bir kaynak sunabilmemiz için, uygulamada veya dokümantasyonlarda yer alan tüm hata ve eksiklerimizi bize bildirebilirsiniz.	</p>
-	<div class="checkbox mb-3">
-                          
+	<div class="checkbox mb-3">                         
 			<a href="../../bildirim.html" class="btn btn-danger">Geri Bildirimde Bulunun</a>
-
       </div>
-	  </center>
-	
-</article> 
+	  </center>	
+</article>       
     </div>
 
     
 <script src="../../js/jquery-3.3.1.slim.min.js"></script>
-<script src="../../js/main.js"></script>
-<script src="../../js/bootstrap.min.js"></script>
 <script src="../../js/script.js"></script>		
-
-<script type="text/javascript" src="../../js/jquery1.min.js"></script>
-
-<script type="text/javascript" src="../../js/fluidtextresizer.js">
-
-</script>
-
-<script type="text/javascript">
-
-var mytextsizer=new fluidtextresizer({
-	controlsdiv: "sizecontroldiv",
-	targets: ["body"], 
-	levels: 2, 
-	persist: "session", 
-	animate: 0 
-})
-
-</script>
-<script type="text/javascript">
-
-var mytextsizer=new fluidtextresizer({
-	controlsdiv: "sizecontroldiv1",
-	targets: ["body"], 
-	levels: 2, 
-	persist: "session", 
-	animate: 0 
-})
-
-</script>
+<script src="./script.js"></script>	
 
 
 </body>
