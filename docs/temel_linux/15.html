@@ -1,0 +1,243 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Linux Dersleri | 15. Ders</title>
+	<link rel="icon" href="../../img/menu/icon.png" type="image/icon type">
+	<link rel="stylesheet" href="../../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../css/font-awesome.min.css">
+	<link rel="stylesheet" href="../../css/style.css">
+<link rel="stylesheet" href="../../css/prism.css">
+
+</head>
+
+<body>	
+<div class="bs-canvas-overlay bs-canvas-anim bg-dark position-fixed w-100 h-100"></div>
+	
+<nav class="navbar y-navbar sticky-top navbar-expand-lg navbar-light bg-light">
+  
+  <div align="left">
+		<a class="btn" data-toggle="canvas" data-target="#bs-canvas-left" aria-expanded="false" aria-controls="bs-canvas-left"><i class="fa fa-align-justify fa-lg"></i></a></div>
+  <center >
+	<div>
+	<a href="./14.html" style="color: black" class="btn navbar-toggler " > <i class="fa fa-angle-double-left fa-lg"></i></a>
+	
+    <a href="../../index.html" style="color: black" class="btn navbar-toggler " ><i class="fa fa-book fa-lg"></i></a>
+	
+    <a href="./16.html" style="color: black" class="btn navbar-toggler " ><i class="fa fa-angle-double-right fa-lg"></i> </a>
+	</div>
+  </center>
+  <div align="right">
+			<div class="togg-wrap">
+			
+			<button onclick="tema()" class="btn" ><i class="fa fa-adjust fa-lg"></i></button>  
+    
+		</div> 
+		
+</nav>
+
+<nav class="navbar x-navbar sticky-top navbar-expand-lg navbar-light bg-light border-bottom">
+	
+	<div class="container ">
+            <div align="left">
+		<a class="btn" data-toggle="canvas" data-target="#bs-canvas-left" aria-expanded="false" aria-controls="bs-canvas-left"><i class="fa fa-align-justify fa-lg"></i></a><a href="../../menu.html" class="btn"  ><i class="fa fa-home fa-lg"></i></a></div>
+	<center >
+		
+        <a href="./14.html" class="btn">Önceki <i class="fa fa-angle-double-left fa-lg"></i></a>
+		
+        <a href="../../index.html" class="btn" ><i class="fa fa-book fa-lg"></i></a>
+		
+        <a href="./16.html" class="btn" ><i class="fa fa-angle-double-right fa-lg"></i> Sonraki</a>
+		
+        
+    </center>
+			<div align="right">
+			<div class="togg-wrap">
+			
+			<button onclick="tema()" class="btn" ><i class="fa fa-adjust fa-lg"></i></button>  
+				<a href="../../bildirim.html" class="btn" ><i class="fa fa-paper-plane"></i></a>    
+		</div>              
+	</div>              
+	</div>
+     
+</nav>
+
+	
+<div id="bs-canvas-left" class="bs-canvas bs-canvas-anim bs-canvas-left position-fixed bg-kanvas h-100" >
+	<header class="bs-canvas-header p-3 bg-baslık">
+		
+    	<h4 align="center" >İçerik Menüsü<button type="button" class="bs-canvas-close close" aria-label="Close" aria-expanded="true"><span aria-hidden="true" >×</span></button></h4>
+        
+    </header>
+    <div class="bs-canvas-content px-3">
+    	
+    	<div align="center" class="list-group my-2 ">
+
+			<a href="#" class="list-group-item list-group-item-action">Giriş</a>
+          	<a href="#runlevels" class="list-group-item list-group-item-action">Runlevels</a>
+			<a href="#service" class="list-group-item list-group-item-action">service</a>
+			<hr>
+<a href="#alistirma" class="list-group-item list-group-item-action">Alıştırmalar</a>
+<a href="#bildirim" class="list-group-item list-group-item-action">Geri Bildirim</a>
+			
+          	
+        </div>
+		
+		
+    </div>    
+</div>
+    
+  <div class="container">    
+        <p></p>
+	  <div align="center" class="col">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm position-relative">
+        <div class="col d-flex flex-column position-static">
+          <strong class="d-inline-block text-primary">15.Doküman</strong>
+          <h3 class="mb-0">Çalışma Seviyeleri </h3>
+          <div class="mb-1 text-muted">Konu Etiketleri</div>
+          <p class="card-text mb-auto">runlevels , halt , shutdown , service  </p>
+        </div>
+        
+      </div>
+    </div>
+ <article id="makale" style="font-size:1.2em;" class="markdown-body entry-content" itemprop="text">
+	 
+	 <h1 id="runlevels">Çalışma Seviyeleri (Runlevels)</h1>
+  <p>Sistem açıldığında hangi çalışma seviyesindeyse o seviyeye göre belirlenmiş olan hizmetler başlatılır. İşte bu olaya da <strong>Runlevels(çalışma seviyeleri)</strong> deniyor. Linux sisteminde <strong>7 farklı seviye</strong> bulunuyor.</p>
+<p>Seviyeler ve ifade ettikleri aşağıdaki tabloda verilmiştir.</p>
+    <p><img src="../../img/12-%20%C3%87al%C4%B1%C5%9Fma%20Seviyeleri(Runlevels)/runlevel.png" class="responsive"></p>
+<p>O anda hangi seviyede çalıştığımızı öğrenmek istersek komut satırına <strong><code class="language-bash">runlevel</code></strong> komutunu vermemiz yeterli.</p>
+<p><img src="../../img/12-%20%C3%87al%C4%B1%C5%9Fma%20Seviyeleri(Runlevels)/1-min.png" class="responsive"></p>
+<p>Çıktıda çalışma seviyem 5 olarak çıktı. Bunun sebebi de, daha önce de söylediğimiz gibi Linux, sistemi varsayılan olarak 5. seviyede başlatıyor. Eğer çalışma seviyesi değiştirmek istersek bunu <strong><code class="language-bash">init çalışma_seviyesi</code></strong> şeklinde yapabiliriz.</p>
+<p>Bu şekilde sistemi yeniden başlatana kadar seçtiğimiz çalışma seviyesinde devam edebiliriz. Ancak dediğim gibi sistemi yeniden başlattığınızda sistem varsayılan olarak 5. seviyede başlayacaktır.</p>
+<p>Ayrıca yeri gelmişken sistemi kapatmak istersek bunu hiç bir hizmetin çalışmadığını <strong>0. runlevel</strong> ile yani <strong><code class="language-bash">init 0</code></strong> komutunu vererek yapabiliriz.</p>
+<p>Ayrıca kapatma işlemi için;</p>
+<p><strong><code class="language-bash">shutdown -h now</code></strong> beklemeden direk sistemi kapatacaktır.</p>
+<p><strong><code class="language-bash">shutdown -h now+5</code></strong> 5 dakika sonra sistemi kapatacaktır.</p>
+<p><strong><code class="language-bash">halt</code></strong> sisteminizi doğrudan kapatacaktır(halt kavramının 0.seviyede hiç bir servisin çalışmadığı durumu temsil ettiğini söylemiştik).</p>
+<p>Eğer sistemi yeniden başlatmak istersek <strong><code class="language-bash">init 6</code></strong> veya <strong><code class="language-bash">reboot</code></strong> komutunu kullanabiliriz.</p>
+<h2 id="service">service</h2>
+<p>Şimdi ise sistemdeki servisleri açıp-kapatmayı ve bu servislerin durumunu sorgulamayı görelim. Komutumuzun işlevlerinin kullanım kalıpları aşağıdakiler gibidir.</p>
+<p>Örnek kullanımları <strong>ssh servisi</strong> üzerinden gösterelim.</p>
+<p>Servisimizin durumunu sorgulamak için komut satırımıza <strong><code class="language-bash">service ssh status</code></strong> yazıyoruz.</p>
+<p><img src="../../img/12-%20%C3%87al%C4%B1%C5%9Fma%20Seviyeleri(Runlevels)/2-min.png" class="responsive"></p>
+<p>Komut satırı çıktı olarak bize <em><strong>ssh</strong></em> servisinin kapalı olduğunu bildirdi.</p>
+<p>Şimdi <strong>servisimizi başlatmak</strong> üzere komut satırına <strong><code class="language-bash">service ssh start</code></strong> komutumuzu veriyoruz.</p>
+<p><img src="../../img/12-%20%C3%87al%C4%B1%C5%9Fma%20Seviyeleri(Runlevels)/3-min.png" class="responsive"></p>
+<p><strong>Servisimizi başlattıktan sonra durumu kontrol etmek</strong> için tekrar <strong><code class="language-bash">service ssh status</code></strong> komutumuzu verdik ve görüldüğü gibi <em><strong>ssh</strong></em> servisimiz artık çalışır durumda.</p>
+<p>Şimdi ise çalışan <strong>servisimizi kapatmak</strong> için komut satırına <strong><code class="language-bash">service ssh stop</code></strong> komutumuzu veriyoruz.</p>
+<p><img src="../../img/12-%20%C3%87al%C4%B1%C5%9Fma%20Seviyeleri(Runlevels)/4-min.png" class="responsive"></p>
+<p>Çıktıda da görüldüğü gibi <em><strong>ssh</strong></em> servisimiz kapatılmış oldu. Bunu da <strong><code class="language-bash">service ssh status</code></strong> komutu ile teyit etmiş olduk.</p>
+<p>Komutumuzun diğer bir kullanım şeklide de <strong>servisi yeniden başlatmak</strong>. Bunun için <strong><code class="language-bash">service ssh restart</code></strong> komutumuzu kullanıyoruz.</p>
+<p><img src="../../img/12-%20%C3%87al%C4%B1%C5%9Fma%20Seviyeleri(Runlevels)/5-min.png" class="responsive"></p>
+<p>Servisimizin durumunu <strong><code class="language-bash">service ssh status</code></strong> komutu ile kontrol ettik ve servisimizin yeniden başladığını görmüş olduk.</p>
+<p>Son olarak ise sistemde bulunan tüm servislerin sıralanmasını sağlayan <strong><code class="language-bash">service --status-all</code></strong> komutunu görelim.</p>
+<p><img src="../../img/12-%20%C3%87al%C4%B1%C5%9Fma%20Seviyeleri(Runlevels)/6-min.gif" class="responsive"></p>
+<p>Çıktıdaki servislerin sol tarafında yer alan <strong><mark>[ - ]</mark></strong> işareti servisin <strong>çalışmadığını</strong>, <strong><mark>[ + ]</mark></strong> işareti servisin <strong>çalıştığını</strong> ve <strong><mark>[ ? ]</mark></strong> işareti ise <strong>servisin durumunun belirsiz olduğunu</strong> ifade ediyor.</p>
+		<h1></h1>
+<div align="center" class="container">
+<div class="card mb-4 border">
+    <div class="row no-gutters">
+        <div class="col-md-3">
+            <img src="../../img/menu/pc-logo.png" class="card-img-top img1">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+		<strong class="d-inline-block mb-0 text-primary"><h3 id="alistirma">Alıştırmalar Hakkında</h3></strong>
+                <p class="card-text">Öğrendiğiniz bilgilerin kalıcı olması için bolca alıştırma yapmalısınız. Burada yer alan alıştırma faaliyetleri dışında, konuyu öğrendiğinizi hissede kadar kendiniz de bolca pratik yapın lütfen.  Aksi halde öğrendiğiniz bilgiler kısa sürede unutulup gidecektir. </p>
+                
+            </div>
+        </div>
+    </div>
+</div>		
+<div class="row mb-2">
+    <div class="col">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          
+		  <p></p>
+<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto">O anda <strong>hangi seviyede çalıştığınızı</strong> konsoldan sorgulayın.
+        </p></div>        
+      </div>
+    </div>
+	<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto">Çalışma seviyelerini kullanarak <strong>hiç bir hizmetin çalışmadığı seviyeye geçiş yaparak sistemin kapanmasını sağlayın</strong>.
+        </p></div>        
+      </div>
+    </div>
+	<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto"><strong>Sistemin yeniden başlatıldığı seviyeye geçiş yaparak sistemin yeniden başlatılmasını sağlayın</strong>.
+        </p></div>        
+      </div>
+    </div>
+	<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto">Konsol üzerinden ssh servisinin çalışıp çalışmadığın <strong>kontrol edin</strong>.
+        </p></div>        
+      </div>
+    </div>
+	<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto">Durumunu öğrendiğiniz ssh servisini konsol üzerinden&nbsp;<strong>yeniden başlatın</strong>.
+        </p></div>        
+      </div>
+    </div>
+	<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto">Yeniden başlattığınız ssh servisini konsoldan <strong>kapatın</strong>.
+        </p></div>        
+      </div>
+    </div>
+	<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto">Kapattığını ssh servisini konsoldan <strong>açın</strong>.
+        </p></div>        
+      </div>
+    </div>
+	<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto">Sistemde yer alan <strong>tüm servisleri konsoldan listeleyin</strong>.
+        </p></div>        
+      </div>
+    </div>
+	</div>
+        
+      </div>
+    </div>
+
+	</div>
+	
+    </div>
+	
+<center>
+	<h1 id="bildirim">Geri Bildirimde Bulunun</h1>
+<p>Sizlere daha verimli bir kaynak sunabilmemiz için, uygulamada veya dokümantasyonlarda yer alan tüm hata ve eksiklerimizi bize bildirebilirsiniz.	</p>
+	<a href="../../bildirim.html" class="btn btn-danger">Geri Bildirimde Bulunun</a>
+	  </center>	
+</article>       
+    </div>
+
+    
+<script src="../../js/jquery-3.3.1.slim.min.js"></script>
+<script src="../../js/script.js"></script>	
+<script src="../../js/prism.js"></script>		
+ 
+
+
+</body>
+</html>
+

@@ -1,0 +1,695 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Linux Dersleri | 6. Ders</title>
+	<link rel="icon" href="../../img/menu/icon.png" type="image/icon type">
+	<link rel="stylesheet" href="../../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../css/font-awesome.min.css">
+	<link rel="stylesheet" href="../../css/style.css">
+<link rel="stylesheet" href="../../css/prism.css">
+
+</head>
+
+<body>	
+<div class="bs-canvas-overlay bs-canvas-anim bg-dark position-fixed w-100 h-100"></div>
+	
+<nav class="navbar y-navbar sticky-top navbar-expand-lg navbar-light bg-light">
+  
+  <div align="left">
+		<a class="btn" data-toggle="canvas" data-target="#bs-canvas-left" aria-expanded="false" aria-controls="bs-canvas-left"><i class="fa fa-align-justify fa-lg"></i></a></div>
+  <center >
+	<div>
+	<a href="./5.html" style="color: black" class="btn navbar-toggler " > <i class="fa fa-angle-double-left fa-lg"></i></a>
+	
+    <a href="../../index.html" style="color: black" class="btn navbar-toggler " ><i class="fa fa-book fa-lg"></i></a>
+	
+    <a href="./7.html" style="color: black" class="btn navbar-toggler " ><i class="fa fa-angle-double-right fa-lg"></i> </a>
+	</div>
+  </center>
+  <div align="right">
+			<div class="togg-wrap">
+			
+			<button onclick="tema()" class="btn" ><i class="fa fa-adjust fa-lg"></i></button>  
+    
+		</div> 
+		
+</nav>
+
+<nav class="navbar x-navbar sticky-top navbar-expand-lg navbar-light bg-light border-bottom">
+	
+	<div class="container ">
+            <div align="left">
+		<a class="btn" data-toggle="canvas" data-target="#bs-canvas-left" aria-expanded="false" aria-controls="bs-canvas-left"><i class="fa fa-align-justify fa-lg"></i></a><a href="../../menu.html" class="btn"  ><i class="fa fa-home fa-lg"></i></a></div>
+	<center >
+		
+        <a href="./5.html" class="btn">Önceki <i class="fa fa-angle-double-left fa-lg"></i></a>
+		
+        <a href="../../index.html" class="btn" ><i class="fa fa-book fa-lg"></i></a>
+		
+        <a href="./7.html" class="btn" ><i class="fa fa-angle-double-right fa-lg"></i> Sonraki</a>
+		
+        
+    </center>
+			<div align="right">
+			<div class="togg-wrap">
+			
+			<button onclick="tema()" class="btn" ><i class="fa fa-adjust fa-lg"></i></button>  
+				<a href="../../bildirim.html" class="btn" ><i class="fa fa-paper-plane"></i></a>    
+		</div>              
+	</div>              
+	</div>
+     
+</nav>
+
+	
+<div id="bs-canvas-left" class="bs-canvas bs-canvas-anim bs-canvas-left position-fixed bg-kanvas h-100" >
+	<header class="bs-canvas-header p-3 bg-baslık">
+		
+    	<h4 align="center" >İçerik Menüsü<button type="button" class="bs-canvas-close close" aria-label="Close" aria-expanded="true"><span aria-hidden="true" >×</span></button></h4>
+        
+    </header>
+    <div class="bs-canvas-content px-3">
+    	
+    	<div align="center" class="list-group my-2 ">
+
+			<a href="#" class="list-group-item list-group-item-action">Giriş</a>
+          	<a href="#bilgi" class="list-group-item list-group-item-action">Bilgi Almak</a>
+          	<a href="#uname" class="list-group-item list-group-item-action">uname</a>
+			<a href="#hostname" class="list-group-item list-group-item-action">hostname</a>
+          	<a href="#lsb" class="list-group-item list-group-item-action">lsb_release</a>
+			<a href="#whoami" class="list-group-item list-group-item-action">whoami</a>
+			<a href="#uptime" class="list-group-item list-group-item-action">uptime</a>
+			<a href="#date" class="list-group-item list-group-item-action">date</a>
+			<a href="#cal" class="list-group-item list-group-item-action">cal</a>
+			<a href="#which" class="list-group-item list-group-item-action">which</a>
+			<a href="#whereis" class="list-group-item list-group-item-action">whereis</a>
+			<a href="#locate" class="list-group-item list-group-item-action">locate</a>
+			<a href="#dmidecode" class="list-group-item list-group-item-action">dmidecode</a>
+			<a href="#fdisk" class="list-group-item list-group-item-action">fdisk-l</a>
+			<a href="#df" class="list-group-item list-group-item-action">df</a>
+			<a href="#du" class="list-group-item list-group-item-action">du</a>
+			<a href="#free" class="list-group-item list-group-item-action">free</a>
+			<a href="#modinfo" class="list-group-item list-group-item-action">modinfo</a>
+			<a href="#stat" class="list-group-item list-group-item-action">stat</a>
+			<a href="#vmstat" class="list-group-item list-group-item-action">vmstat</a>
+			<a href="#history" class="list-group-item list-group-item-action">history</a>
+   			<hr>
+<a href="#alistirma" class="list-group-item list-group-item-action">Alıştırmalar</a>
+<a href="#bildirim" class="list-group-item list-group-item-action">Geri Bildirim</a>
+			
+          	
+        </div>
+		
+		
+    </div>    
+</div>
+    
+  <div class="container">    
+        <p></p>
+	  <div align="center" class="col">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm position-relative">
+        <div class="col d-flex flex-column position-static">
+          <strong class="d-inline-block text-primary">6.Doküman</strong>
+          <h3 class="mb-0">Bilgi Alma Komutları </h3>
+          <div class="mb-1 text-muted">Konu Etiketleri</div>
+          <p class="card-text mb-auto">bilgi alma , uname , hostname , lsb_release , whoami , who , w , uptime , date , cal , which , whereis , locate , dmidecode , fdisk , df , du , free , modinfo , stat , vmstat , history </p>
+        </div>
+        
+      </div>
+    </div>
+<article id="makale" style="font-size:1.2em;" class="markdown-body entry-content" itemprop="text">
+	
+	 
+	
+	 <h1 id="bilgi">Bilgi Almak</h1>
+<p>Bilgi alma komutları sistemimizde bulunan herhangi bir şey hakkında(programlar, dosyalar, kayıtlar, ayarlar vb..) bilgi almamızı sağlayan komutlara verilen genel isimdir ve bu komutlara gerekli durumlarda çok sık başvururuz. Şimdi bilgi alma komutlarının neler olduğuna ve kullanım şekillerine bakalım.</p>
+<h2 id="uname">uname</h2>
+<p>Tek başına çekirdek adını verse de aldığı parametreler ile farklı bilgiler de sunabilir. Kısaca bilmemiz gereken; <strong>bu komut genel olarak sistemde kullanılan çekirdek hakkında bilgiler verir</strong>. Hangi parametrenin ne iş yaptığını <strong><code class="language-bash">man uname</code></strong> komutu ile öğrenebileceğinizi biliyorsunuz. Bizde kullanım şekillerini <strong>man</strong> kılavuz sayfası üzerinden açıklayalım.</p>
+<pre><code class="language-bash">└─$ uname
+Linux</code></pre>
+<p>Eğer parametresiz kullanıldıysa <strong><code class="language-bash">-s</code></strong> parametresi gibi <strong>yalnızca çekirdek ismini</strong> gösterir. Yani <strong><code class="language-bash">uname</code></strong> komutu ile <strong><code class="language-bash">uname -s</code></strong> komutu aynıdır.
+Parametreler ve ifade ettikleri;</p>
+<pre><strong><code class="language-bash"> -a, --all
+        Bu parametre ile bütün bilgileri aşağıdaki seçenek sırasıyla gösterilir; -p ve -i bilinmiyorsa atlanır.
+</code></strong></pre>
+<pre><code class="language-bash">└─$ uname -a
+Linux taylan 5.9.0-kali1-amd64 #1 SMP Debian 5.9.1-1kali2 (2020-10-29) x86_64 GNU/Linux</code></pre>
+<pre><strong><code class="language-bash"> -s, --
+        çekirdek ismini gösterir.
+</code></strong></pre>
+<pre><code class="language-bash">└─$ uname -s
+Linux</code></pre>
+<pre><strong><code class="language-bash"> -n, --nodename
+        ağ düğümü konak ismini diğer bir değişle hostname(host adını) gösterir.
+</code></strong></pre>
+<pre><code class="language-bash">└─$ uname -n
+taylan</code></pre>
+<pre><strong><code class="language-bash"> -r, --kernel-release
+        çekirdeğin derleniş sürümünü gösterir.
+</code></strong></pre>
+<pre><code class="language-bash">└─$ uname -r
+5.9.0-kali1-amd64</code></pre>
+<pre><strong><code class="language-bash"> -v, --kernel-version
+        çekirdeğin sürümünü gösterir.
+</code></strong></pre>
+<pre><code class="language-bash">└─$ uname -v
+#1 SMP Debian 5.9.1-1kali2 (2020-10-29) </code></pre>
+<pre><strong><code class="language-bash"> -m, --machine
+        makine donanım ismini gösterir.
+</code></strong></pre>
+<pre><code class="language-bash">└─$ uname -m
+x86_64 </code></pre>
+<pre><strong><code class="language-bash"> -p, --processor
+        işlemci türünü veya "unknown" gösterir.
+</code></strong></pre>
+<pre><code class="language-bash">└─$ uname -p
+unknown </code></pre>
+<pre><strong><code class="language-bash"> -i, --hardware-platform
+        donanım platformunu veya "unknown" gösterir.
+</code></strong></pre>
+<pre><code class="language-bash">└─$ uname -i
+unknown </code></pre>
+<pre><strong><code class="language-bash"> -o, --operating-system
+        işletim sistemini gösterir.
+</code></strong></pre>
+<pre><code class="language-bash">└─$ uname -o
+GNU/Linux </code></pre>
+<pre><strong><code class="language-bash"> --help 
+        Bu yardım iletisini gösterir ve çıkar.
+
+ --version
+        Sürüm bilgilerini gösterir ve çıkar.
+</code></strong></pre>
+<pre><code class="language-bash">└─# uname --help
+Kullanım: uname [SEÇENEK]...
+Belirli sistem bilgilerini yaz.  SEÇENEK olmadan -s ile aynı.
+
+  -a, --all                sıralamaya uyarak tüm bilgileri yaz,
+                             eğer bilinmiyorsa -p ve -i atlama hariç:
+  -s, --kernel-name        çekirdek adını yaz
+  -n, --nodename           ana ağ bilgisayarının adını yaz
+  -r, --kernel-release     çekirdek sürümünü yaz
+  -v, --kernel-version     print the kernel version
+  -m, --machine            print the machine hardware name
+  -p, --processor          print the processor type (non-portable)
+  -i, --hardware-platform  print the hardware platform (non-portable)
+  -o, --operating-system   print the operating system
+      --help     bu yardımı gösterir ve çıkar
+      --version  sürüm bilgisini gösterir ve çıkar
+
+GNU coreutils online help: <https://www.gnu.org/software/coreutils/>
+Report any translation bugs to <https://translationproject.org/team/>
+Full documentation <https://www.gnu.org/software/coreutils/uname>
+or available locally via: info '(coreutils) uname invocation'
+</code></pre>
+<h2 id="hostname">hostname</h2>
+<p>Bilgisayarımızın adını, diğer bir deyişle bilgisayarımızın ağ üzerindeki adını verir. Eğer isterseniz bu adı değiştirebilirsiniz. Örneğin; komut satırına <strong><code class="language-bash">hostname burak</code></strong> yazarsanız <strong>hostname</strong> yani <strong>bilgisayarınızın adı</strong> <em>burak</em> olarak değişmiş olacaktır.</p>
+<p><img src="../../img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/10-min.png" class=" responsive"></p>
+<p>Ancak bu ayar kalıcı değildir. Oturumu kapatıp tekrar açtığınızda değiştirmiş olduğunuz adın tekrar eski haline döndüğünü görebilirsiniz. Kalıcı olmasını ayarlardan kolaylıkla sağlayabiliriz. Sürümden sürüme değişiklik gösterse de sırasıyla; **Ayarlar &gt;Sistem &gt;Ayrıntılar &gt;Genel aygıt adı: ** kutusuna istediğiniz ismi yazabilirsiniz. Eğer dediğim yoldan ulaşamadıysanız ayarları biraz kurcalayarak bulabilirsiniz.</p>
+<p><img src="../../img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/11-min.gif" class="responsive"></p>
+<p>Ayrıca tamamen komut satırından da <strong>kalıcı bir hostname değişikliği</strong> yapmak mümkün. Bunun için <strong><mark> /etc/hostname</mark></strong> konumunda yer alan <strong><mark>hostname</mark></strong> dosyasını açmamız gerek. Dosyamızı açmak için konsola <strong><code class="language-bash"> nano -w /etc/hostname</code></strong> komutunu veriyoruz.
+Komutun ardından açılan dosyada ismimizin yerine istediğimiz ismi yazıyoruz. Ve <strong><mark>Ctrl + X</mark></strong> tuş kombinasyonu ile dosyamızdaki değişiklikleri kaydederek çıkıyoruz.</p>
+<p><img src="../../img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/12-min.png" class=" responsive"></p>
+<p>Değişikliğin geçerli olması için oturumun kapatılıp tekrar açılması gerek daha sonra <strong>hostname</strong> yani <strong>bilgisayarınızın ismi</strong> değişmiş olacaktır.</p>
+<h2 id="lsb">lsb_release</h2>
+<p>Bu komut kullandığımız dağıtım hakkında farklı bilgiler sunan parametrelere sahiptir. Detaylı bilgi için <strong>man</strong> kılavuz sayfasını kontrol edebilirsiniz. Ben örnek olması açısından <strong><code class="language-bash">lsb_release -a </code></strong> komutunun çıktısını veriyorum.</p>
+<pre><code class="language-bash">└─$ lsb_release -a
+No LSB modules are available.
+Distributor ID: Kali
+Description:    Kali GNU/Linux Rolling
+Release:        2020.4
+Codename:       kali-rolling
+</code></pre>
+<h2 id="whoami">whoami</h2>
+<p>Sinemayı takip eden arkadaşların aklına ilk ne geldi biliyorum :)</p>
+<p><strong>Bu komut kimlik sorgu işlevi görüyor.</strong> Komut satırımıza komutumuzu vererek sonucuna bakalım.</p>
+<pre><code class="language-bash">└─$ whoami
+root
+</code></pre>
+<p>Komut çıktısı bize mevcut kullanıcının <strong><code class="language-bash">root</code></strong> kimliği ile çalıştığını göstermiş oldu.</p>
+<p>Yine <strong><code class="language-bash">whoami</code></strong> komutuna benzer ancak çok ufak farkların olduğu birkaç komutu daha peş peşe komut satırına girerek çıkan sonuçlar üzerinden anlatıma devam edelim.</p>
+<p><img src="../../img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/15-min.png" class=" responsive"></p>
+<p>Sıra sıra bakalım:</p>
+<p><strong>whoami:</strong> mevcut kullanıcının hangi kimlikle çalıştığını gösteriyor.</p>
+<p><strong>who:</strong> sistemde hangi kullanıcının çalıştığını gösteriyor.</p>
+<p><strong>w:</strong> hangi kullanıcı hangi uygulamayı çalıştırıyor bunun bilgisini gösteriyor.</p>
+<p>Bunun dışında bu komutlar da parametre alabiliyorlar. Hangi parametreleri aldıklarını nasıl öğrenebileceğinizi zaten biliyorsunuz.</p>
+<h2 id="uptime">uptime</h2>
+<p><strong><code class="language-bash">uptime</code></strong> komutu <strong>sistemimizin ne kadar zamandır açık olduğu bilgisini</strong> verir.</p>
+<pre><code class="language-bash">└─$ uptime
+13:31:32 up 15 min,  1 user,  load average: 0,00, 0,04, 0,08
+</code></pre>
+<h2 id="date">date</h2>
+<p>İsminden de anlaşılacağı gibi bu komut bize <strong>sistemin o anki tarih ve saat bilgisini</strong> veriyor.</p>
+<pre><code class="language-bash">└─$ date
+Sal 02 Şub 2021 13:32:58 EST
+</code></pre>
+<h2 id="cal">cal</h2>
+<p>Komutumuz Türkçe olarak takvim anlamına gelen İngilizce "<strong>Calendar</strong>" ifadesinin kısaltmasıdır. Komutumuz tek başına kullanıldığında bize konsol ekranı üzerinden, bulunduğumuz <strong>tarihin takvim bilgisini</strong> verir.</p>
+<pre><code class="language-bash">└─$ cal
+     Şubat 2021       
+Pa Pz Sa Çr Pr Cu Ct  
+    1  2  3  4  5  6  
+ 7  8  9 10 11 12 13  
+14 15 16 17 18 19 20  
+21 22 23 24 25 26 27  
+28 
+</code></pre>
+<p>Ancak daha önceki veya sonraki tarihlerde yer alan takvim bilgilerine komutumuzu <strong><code class="language-bash">cal ay yıl</code></strong> şeklinde kullanarak ulaşabiliyoruz.</p>
+<p>Örnek üzerinden açıklayalım.</p>
+<p>Eğer 2002 yılının Ocak ayına gitmek istiyorsam komutumu <strong><code class="language-bash">cal 1 2002</code></strong> şeklinde kullanırım.</p>
+<pre><code class="language-bash">└─$ cal 1 2002
+     Ocak 2002        
+Pa Pz Sa Çr Pr Cu Ct  
+       1  2  3  4  5  
+ 6  7  8  9 10 11 12  
+13 14 15 16 17 18 19  
+20 21 22 23 24 25 26  
+27 28 29 30 31 
+</code></pre>
+<p>Eğer ileri bir tarihe yani 3003 yılının Haziran ayına gitmek istersem de komutumu <strong><code class="language-bash">cal 6 3003</code></strong> şeklinde kullanırım.</p>
+<pre><code class="language-bash">└─$ cal 6 3003
+    Haziran 3003      
+Pa Pz Sa Çr Pr Cu Ct  
+          1  2  3  4  
+ 5  6  7  8  9 10 11  
+12 13 14 15 16 17 18  
+19 20 21 22 23 24 25  
+26 27 28 29 30
+</code></pre>
+<p>Gördüğünüz gibi ileri geri herhangi bir tarih hakkında takvim bilgisi almak istesek <strong><code class="language-bash">cal</code></strong> komutunu kullanabiliyoruz.</p>
+<h2 id="which">which</h2>
+<p>Herhangi bir komutun tam yol bilgisini öğrenmek için kullanılır.</p>
+<pre><code class="language-bash">└─$ which date
+/usr/bin/date
+</code></pre>
+<h2 id="whereis">whereis</h2>
+<p>Bu komutunda özel parametreleri vardır man sayfasından kontrol edin lütfen. Bunun dışında parametresiz hali <strong><code class="language-bash">apropos</code></strong> komutuna benzer şekilde bir çıktı verir. Ancak <strong><code class="language-bash">apropos</code></strong> komutundan farklı olarak <strong>ilgili komutun man sayfası konumunun tam dizin adresini belirtir.</strong></p>
+<pre><code class="language-bash">└─$ whereis date
+date: /usr/bin/date /usr/share/man/man1/date.1.gz
+</code></pre>
+<p>Ayrıca diğer parametrelerini de kesinlikle man sayfasından inceleyin.</p>
+<h2 id="locate">locate</h2>
+<p><strong>Bu komut ile aradığımız bir dosyanın nerede olduğunu öğrenebiliriz.</strong> Komutun çıktısı bize dosyanın bulunduğu dizin veya dizinleri veriyor. Örneğin daha önce <strong>PATH</strong> yoluna eklediğim <strong><mark>komut.sh</mark></strong> dosyasını <strong><code class="language-bash">locate</code></strong> komutu ile aratıyorum. Sonuç aşağıdaki şekilde:</p>
+<pre><code class="language-bash">└─$ locate komu.sh
+/root/Desktop/yeni_dizin/yeni/en_yeni/komut.sh
+</code></pre>
+<p>Bu komutun ne kadar kıymetli olduğunu işiniz düştükçe ve kullandıkça anlayacaksınız. Genelde bir dosyayı arama çubuğu yardımı ile aramak sonuç vermez ve bu arama işlemi oldukça hantal çalışır. Örneğin  dosya konumunu bilmediniz ancak sistem var olan bir dosyaya ulaşmak istiyorsunuz diyelim.. İşte tam bu noktada <strong><code class="language-bash">locate</code></strong> komutu çıkageliyor ve bize saniyeler içerisinde sonucu veriyor. Komutu denemek amacıyla Kali Linux içerisinde yer alan bir araç olan <em><strong>armitage</strong></em> aracını aratıyorum. Bunun için komut satırına <strong><code class="language-bash">locate armitage</code></strong> yazmalıyım.</p>
+<pre><code class="language-bash">└─$ locate armitage
+/usr/share/icons/Flat-Remix-Blue-Dark/apps/scalable/armitage.svg
+/usr/share/icons/Flat-Remix-Blue-Dark/apps/scalable/kali-armitage.svg
+/usr/share/icons/hicolor/16x16/apps/kali-armitage.png
+/usr/share/icons/hicolor/22x22/apps/kali-armitage.png
+/usr/share/icons/hicolor/24x24/apps/kali-armitage.png
+/usr/share/icons/hicolor/256x256/apps/kali-armitage.png
+/usr/share/icons/hicolor/32x32/apps/kali-armitage.png
+/usr/share/icons/hicolor/48x48/apps/kali-armitage.png
+/usr/share/icons/hicolor/scalable/apps/kali-armitage.svg
+/usr/share/kali-menu/applications/kali-armitage.desktop
+</code></pre>
+<p>Çıktıda da görüldüğü gibi aradığımız ifadeyi içeren tüm dosyaların nerede olduğunu bir çırpıda buluverdik. Sanırım bu komut sayesinde yavaş yavaş da olsa komut satırının gücünü fark etmeye başlıyoruz :)</p>
+<h2 id="dmidecode">dmidecode</h2>
+<p>Eğer daha önce de Linux işletim sistemini deneyimleyip sorunlar ile karşılaştıysanız, forumlardan destek istediğinizde; muhtemelen insanlar sizden bu komutun çıktıları istemiş olabilirler. <strong>Bu komutun işlevi sistemin donanım ve BIOS bilgilerini göstermektir.</strong> Bu komut sayesinde sistem donanımı ve işleyişi hakkında çok fazla bilgiye ulaşabiliriz. Ayrıca bu komutumuz da parametre alarak çalışmaktadır.</p>
+<p>Bu komutun sunduğu bilgiler çok fazla olduğu için, bilgilerin daha net anlaşılması adına; bu bilgilere belirli bir düzene sahip olan <strong>DMI(Desktop Management Interface)</strong> ile, yani <strong>Masaüstü Yönetim Arayüzü</strong> tabloları ile ulaşıyoruz. Tabloda yer alan sıralamayı ve hangi bilgileri alabileceğinizi direk olarak görmek isterseniz, komut satırına <strong><code class="language-bash">dmidecode</code></strong> yazın ve sonuçların kategorize şekilde karşınıza geldiğine kendiniz tanık olun.</p>
+<p>Bahsi geçen tablo sıralı şekilde ve Numara-Türkçe karşılığı olacak şekilde aşağıdaki gibidir.</p>
+<div> <table class="table table-bordered"> <thead> <tr> <th>Numara </th> <th>Açıklama</th> </tr></thead> <tbody><tr> <td>0</td><td>Bios</td></tr><tr> <td>1</td><td>Sistem</td></tr><tr> <td>2</td><td>Baz kurulu</td></tr><tr> <td>3</td><td>Şasi</td></tr><tr> <td>4</td><td>İşlemci</td></tr><tr> <td>5</td><td>Bellek denetleyicisi </td></tr><tr> <td>6</td><td>Bellek modülü</td></tr><tr> <td>7</td><td>Önbellek</td></tr><tr> <td>8</td><td>Port bağlantısı</td></tr><tr> <td>9</td><td>Sistem yuvaları</td></tr><tr> <td>10</td><td>On Board Cihazları</td></tr><tr> <td>11</td><td>OEM Dizeleri</td></tr><tr> <td>12</td><td>Sistem Yapılandırma Seçenekleri</td></tr><tr> <td>13</td><td>BIOS Dili</td></tr><tr> <td>14</td><td>Grup Dernekler</td></tr><tr> <td>15</td><td>Sistem Event Log</td></tr><tr> <td>16</td><td>Fiziksel Bellek Array</td></tr><tr> <td>17</td><td>Bellek Cihazı</td></tr><tr> <td>18</td><td>32-bit bellek hatası</td></tr><tr> <td>19</td><td>Bellek Dizisi Haritalı Adres</td></tr><tr> <td>20</td><td>Bellek Cihazo Haritalı Adres</td></tr><tr> <td>21</td><td>Dahili İşaret Aygıtı</td></tr><tr> <td>22</td><td>Taşınabilir Pil</td></tr><tr> <td>23</td><td>Sistem Sıfırlama</td></tr><tr> <td>24</td><td>Dananım Güvenlik</td></tr><tr> <td>25</td><td>Sistem Güç Denetimleri</td></tr><tr> <td>26</td><td>Gerilim Probu</td></tr><tr> <td>27</td><td>Soğutma Cihazı</td></tr><tr> <td>28</td><td>Sıcaklık Probu</td></tr><tr> <td>29</td><td>Elektrik Akımı Probu</td></tr><tr> <td>30</td><td>Uzaktan Erişim</td></tr><tr> <td>31</td><td>Boot Bütünlüğü Hizmetleri</td></tr><tr> <td>32</td><td>Sistem Önyükleme</td></tr><tr> <td>33</td><td>64-bit Bellek Hatası</td></tr><tr> <td>34</td><td>Yönetim Cihazı</td></tr><tr> <td>35</td><td>Yönetimi Cihaz Bileşeni</td></tr><tr> <td>36</td><td>Yönetimi Cihaz Eşik Verileri</td></tr><tr> <td>37</td><td>Bellek Kanal</td></tr><tr> <td>38</td><td>IPMI Cihazı</td></tr><tr> <td>39</td><td>Güç Kaynağı</td></tr></tbody></table> </div>
+<p>Başta belirttiğim gibi <strong><code class="language-bash">dmidecode</code></strong> kendi içinde parametre alan bir komut olduğu için istediğimiz spesifik bilgiye doğrudan da ulaşmamız mümkün. Detaylı bilgi için man kılavuz sayfasına bakın lütfen. Ancak küçük bir örnek vermem gerekirse bios hakkında bilgi edinmek istediğimizde konsola <strong><code class="language-bash">dmidecode -t bios</code></strong> komutunu girmemiz yeterli.</p>
+
+<pre><code class="language-bash">└─$ dmidecode -t bios
+# dmidecode 3.3
+Getting SMBIOS data from sysfs.
+SMBIOS 2.5 present.
+
+Handle 0x0000, DMI type 0, 20 bytes
+BIOS Information
+        Vendor: innotek GmbH
+        Version: VirtualBox
+        Release Date: 12/01/2006
+        Address: 0xE0000
+        Runtime Size: 128 kB
+        ROM Size: 128 kB
+        Characteristics:
+                ISA is supported
+                PCI is supported
+                Boot from CD is supported
+                Selectable boot is supported
+                8042 keyboard services are supported (int 9h)
+                CGA/mono video services are supported (int 10h)
+                ACPI is supported
+</code></pre>
+<p>Burada ayrıca <strong><code class="language-bash">dmidecode -t bios</code></strong> komutu yerine, bios'un sıralamada bulunan numarasını yani <strong><code class="language-bash">dmidecode -t 0</code></strong> yazarak da aynı işlemi gerçekleştirebilirdik.</p>
+<pre><code class="language-bash">└─$ dmidecode -t 0 
+# dmidecode 3.3
+Getting SMBIOS data from sysfs.
+SMBIOS 2.5 present.
+
+Handle 0x0000, DMI type 0, 20 bytes
+BIOS Information
+        Vendor: innotek GmbH
+        Version: VirtualBox
+        Release Date: 12/01/2006
+        Address: 0xE0000
+        Runtime Size: 128 kB
+        ROM Size: 128 kB
+        Characteristics:
+                ISA is supported
+                PCI is supported
+                Boot from CD is supported
+                Selectable boot is supported
+                8042 keyboard services are supported (int 9h)
+                CGA/mono video services are supported (int 10h)
+                ACPI is supported
+</code></pre>
+<h2 id="fdisk">fdisk-l</h2>
+<p>Başlıkta da yer aldığı gibi bu bölümde <strong><code class="language-bash">fdisk</code></strong> komutunun yalnızca <strong><code class="language-bash">l</code></strong> parametresinin işlevini göreceğiz. Bu komutu burada vermemin sebebi sistem hakkında bilgi alırken diskin de sistem dahilinde olmasıdır. Zaten ileride tekrar ele alacağımızdan şimdilik bu kadarı da yeterli olacaktır. Bu komutu diskler üzerinde işlem gerçekleştirirken kullanıyoruz. Eğer komut satırımıza <strong><code class="language-bash">fdisk -l</code></strong> şeklinde komut verirsek karşımıza sistemimizdeki disk bölümleri sıralı ve düzenli şekilde listelenecektir.</p>
+<pre><code class="language-bash">└─$ fdisk -l
+Disk /dev/sda: 80 GiB, 85899345920 bytes, 167772160 sectors
+Disk model: VBOX HARDDISK   
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0xe7875fa7
+
+Device     Boot     Start       End   Sectors  Size Id Type
+/dev/sda1  *         2048 165771263 165769216   79G 83 Linux
+/dev/sda2       165773310 167770111   1996802  975M  5 Extended
+/dev/sda5       165773312 167770111   1996800  975M 82 Linux swap / Solaris</code></pre>
+<h2 id="df">df</h2>
+<p>Bu komut ile disk kullanımı hakkında ayrıntılı bilgiye ulaşabiliyoruz.</p>
+<pre><code class="language-bash">└─$ df
+Dosyasistemi    1K-blok    Dolu      Boş Kull% Bağlanılan yer
+udev             985152       0   985152    0% /dev
+tmpfs            203764     900   202864    1% /run
+/dev/sda1      81058256 9767292 67130352   13% /
+tmpfs           1018804       0  1018804    0% /dev/shm
+tmpfs              5120       0     5120    0% /run/lock
+tmpfs              4096       0     4096    0% /sys/fs/cgroup
+tmpfs            203760      52   203708    1% /run/user/1000
+
+</code></pre>
+<p>Bu komutumuz da parametre alabiliyor, yani dileyen arkadaşlar konsolda <strong><code class="language-bash">man df</code></strong> şeklinde komut girerek gerekli bilgilere ulaşabilirler.</p>
+<h2 id="du">du</h2>
+<p>Bir dizinin, içerdiği tüm dosyalar ile birlikte diskte kapladığı toplam alanı verir. Ayrıca boyutla ilgili düzgün bir çıktı almak istersek <strong><code class="language-bash">h</code></strong>  parametresini de kullanabiliriz.</p>
+<pre><code class="language-bash">└─$ du /root/Desktop
+8		/root/Desktop/yeni_dizin/yeni/en_yeni
+12		/root/Desktop/yeni_dizin/yeni
+16		/root/Desktop/yeni_dizin
+20		/root/Desktop
+└─$ du -h /root/Desktop
+8,0K	/root/Desktop/yeni_dizin/yeni/en_yeni
+12K		/root/Desktop/yeni_dizin/yeni
+16K		/root/Desktop/yeni_dizin
+20K		/root/Desktop</code></pre>
+<h2 id="free">free</h2>
+<p>Bu komut ile kullanılan bellek miktarını <strong>KB</strong> cinsinden öğrenebiliriz. Ancak çıktımızın <strong>MB</strong> cinsinden olmasını istersek <strong><code class="language-bash">-m</code></strong> parametresini <strong><code class="language-bash">free</code></strong> komutumuza ekleyerek kullanmamız yeterli olacaktır.</p>
+<pre><code class="language-bash">└─$ free              total        used        free      shared  buff/cache   available
+Mem:        2037612      463412     1139700       18000      434500     1411828
+Swap:        998396           0      998396
+└─$ free -m
+              total        used        free      shared  buff/cache   available
+Mem:           1989         452        1112          17         424        1378
+Swap:           974           0         974</code></pre>
+<h2 id="modinfo">modinfo</h2>
+<p>Bu komut sayesinde Linux Kernel(çekirdek) modüllerinin bilgisi alınabilir. Bu modülleri ekran bastırmak isterseniz komut satırına <strong><code class="language-bash">lsmod</code></strong> yazarak modülleri listeleyebilirsiniz.</p>
+<pre><code class="language-bash">└─$ lsmod
+Module                  Size  Used by
+fuse                  143360  3
+rfkill                 28672  2
+vboxsf                 40960  0
+intel_rapl_msr         20480  0
+intel_rapl_common      32768  1 intel_rapl_msr
+intel_pmc_core_pltdrv    16384  0
+intel_pmc_core         45056  0
+rapl                   16384  0
+..
+.</code></pre>
+<p>Örneğin modüller içinden <strong>battery</strong> modülü hakkında bilgi almak istersek komut satırına <strong><code class="language-bash">modinfo battery</code></strong> şeklinde yazmamız yeterli olacaktır.</p>
+
+<pre><code class="language-bash">└─$ modinfo battery
+filename:       /lib/modules/5.9.0-kali1-amd64/kernel/drivers/acpi/battery.ko
+license:        GPL
+description:    ACPI Battery Driver
+author:         Alexey Starikovskiy <astarikovskiy@suse.de>
+author:         Paul Diefenbaugh
+alias:          acpi*:PNP0C0A:*
+depends:        
+retpoline:      Y
+intree:         Y
+name:           battery
+vermagic:       5.9.0-kali1-amd64 SMP mod_unload modversions 
+parm:           cache_time:cache time in milliseconds (uint)
+</code></pre>
+<h2 id="stat">stat</h2>
+<p>Bu komut dosyalar veya dizinler hakkındaki bilgileri almamıza olanak sağlar. Kullanımı <strong><code class="language-bash">stat dizin</code></strong> şeklindedir. Örneğin <strong>root</strong> dizinine bakalım. Bunun için komut satırımıza <strong><code class="language-bash">stat /root</code></strong> komutunu veriyoruz.</p>
+<pre><code class="language-bash">└─$ vmstat
+File: /root
+  Size: 4096            Blocks: 8          IO Block: 4096   dizin
+Device: 801h/2049d      Inode: 4194305     Links: 4
+Access: (0700/drwx------)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2020-11-04 15:24:12.000000000 -0500
+Modify: 2021-02-02 13:16:43.915999646 -0500
+Change: 2021-02-02 13:16:43.915999646 -0500
+ Birth: 2020-11-17 07:32:57.373541909 -0500
+</code></pre>	
+<p>Gördüğünüz gibi <strong>root</strong> dizini hakkında bilgiler basılmış oldu.</p>
+<h2 id="vmstat">vmstat</h2>
+<p>Bu komut sayesinde sistemimizin o anlık genel durumunu görebiliriz. Ancak komutu verdikten sonra sistem durumu listelenip sonlanacaktır. Eğer sistemin durumunu bir süre izlemek istersek <strong><code class="language-bash">vmstat gecikme_hızı yenilenme_sayısı</code></strong> şeklinde komut vermeliyiz. Ben <strong>her 2 saniyede bir yenilenmesini ve bunu 3 defa</strong> yapmasını istiyorum. Bunun için komut satırına <strong><code class="language-bash">vmstat 2 3 </code></strong> komutunu veriyorum.</p>
+<pre><code class="language-bash">└─$ vmstat
+procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu-----
+ r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa st
+ 1  0      0 1138816  40848 394112    0    0    63     4  309  109  0  0 99  1  0
+└─$ vmstat 2 3
+procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu-----
+ r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa st
+ 0  0      0 1138816  40856 394152    0    0    63     4  309  109  0  0 99  1  0
+ 0  0      0 1138816  40856 394152    0    0     0     0  641  157  0  0 100  0  0
+ 0  0      0 1138816  40856 394152    0    0     0     0  576  183  0  0 99  0  0
+</code></pre>
+
+<h2 id="history">history</h2>
+<p>Bu kısıma gelene kadar konsola bir çok komut yazdık. Peki o yazılan komutların daha sonra kullanılmak üzere saklandığını biliyor muydunuz ?</p>
+<p>Evet girilen her komut <strong><mark>.bash_history </mark></strong> dosyasında tutuluyor. Biz bu dosyanın içeriğini yani daha önceki yazdığımız kodları görmek istersek komut satırına <strong><code class="language-bash">history</code></strong> yazmalıyız. Çıktı çok uzun olacağından çıktının tamamını aşağıda vermedim.</p>
+
+<pre><code class="language-bash">└─$ history
+    1  dmidecode -t bios
+    2  dmidecode -t 0
+    3  fdisk -l
+    4  df
+    5  free
+    6  free -m
+    7  lsmod
+    8  modinfo battery
+    9  stat /root
+   10  vmstat
+   11  vmstat 2 3
+   12  history
+</code></pre>
+<p>Hazır liste uzun demişken eğer bu listenin limitini öğrenmek istersek komut satırına <strong><code class="language-bash">echo $HISTSIZE</code></strong> yazarak bu değeri tutan ortam değişkeninin, ne kadar komutu <strong><mark>history</mark></strong> dosyasında tutulabileceğini görebiliriz.</p>
+<pre><code class="language-bash">└─$ echo $HISTSIZE
+1000
+</code></pre>
+<p>Bu çıktı bize komutların tutulduğu dosyada en son <strong>1000 komuta kadar</strong> kayıt yapıldığını belirtiyor. Eğer tutulan komutların 1000 'den daha fazla olmasını isterseniz <strong><mark>.bashrc</mark></strong> dosyasında <strong><code class="language-bash">HISTSIZE=1000</code></strong> yazan değeri istediğiniz doğrultuda düzenleyebilirsiniz.</p>
+<p>Komutun kullanımına geçmeden önce bu komutu sadece basit ve kısa komutların tekrar kullanılması olarak değerlendirmeyin. Örneğin sürekli kullandığınız çok uzun ve karmaşık bir komut düşünün. Bu komutun her defasında yazılması eziyet, bir yere kopyalanıp oradan tekrar tekrar kopyala-yapıştır şeklinde kullanılması ise hantallık olacaktır.</p>
+<p>Komutun kullanımına gelecek olursak örnek üzerinden açıklayalım. Benim kayıt dosyamın bir kısmı aşağıdaki şekilde, ben burada yer alan <strong>600. komutu</strong> yani <strong><code class="language-bash"> vmstat</code></strong> komutunu kullanmak istiyorum. Bunun için komut satırına <strong><code class="language-bash">!600</code></strong> yazmam yeterli olacaktır. Komutun kullanımı <strong><code class="language-bash">!komut_numarası</code></strong> şeklinde. Örnek için çıktıyı inceleyebilirsiniz.</p>
+<p><img src="../../img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/37-min.png" class=" responsive"></p>
+<p>Daha önceden kullandığımız bir komutu aynı şekilde tekrar kullanmak için ise komut satırına <strong><code class="language-bash">!komut</code></strong> şeklinde komut girmeliyiz. Örnek vermek gerekirse daha önceki kısımlarda <strong><code class="language-bash">stat</code></strong> komutu ile <strong><mark>root</mark></strong> dizini hakkında bilgi edinmiştik. Ve bu bilgiye ulaşmak için <strong><code class="language-bash">stat /root</code></strong> komutunu kullanmıştık. Ben şimdi tekrar aynı komuta ulaşmak için komut satırına <strong><code class="language-bash">!stat</code></strong> yazıyorum ve çıktısı tıpkı <strong><code class="language-bash">stat /root</code></strong> yazdığımda olduğu gibi oluyor. Yani bu sayede komutun geri kalanını uzun uzun yazmak gibi bir dert kalmıyor.</p>
+<pre><code class="language-bash">└─$ !stat
+stat /root
+  File: /root
+  Size: 4096            Blocks: 8          IO Block: 4096   dizin
+Device: 801h/2049d      Inode: 4194305     Links: 4
+Access: (0700/drwx------)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2020-11-04 15:24:12.000000000 -0500
+Modify: 2021-02-02 13:16:43.915999646 -0500
+Change: 2021-02-02 13:16:43.915999646 -0500
+ Birth: 2020-11-17 07:32:57.373541909 -0500
+</code></pre>
+<p>Eğer son kullandığımız komutu tekrar kullanmak istersek komut satırına <strong><code class="language-bash">!!</code></strong> yazmamız yeterli olacaktır.</p>
+<pre><code class="language-bash">└─$ !!
+stat /root
+  File: /root
+  Size: 4096            Blocks: 8          IO Block: 4096   dizin
+Device: 801h/2049d      Inode: 4194305     Links: 4
+Access: (0700/drwx------)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2020-11-04 15:24:12.000000000 -0500
+Modify: 2021-02-02 13:16:43.915999646 -0500
+Change: 2021-02-02 13:16:43.915999646 -0500
+ Birth: 2020-11-17 07:32:57.373541909 -0500
+</code></pre>
+<p>Bunlar dışında da çok farklı kullanım şekilleri de mevcut. Bu bilgilere <strong><code class="language-bash">man</code></strong> komutu yardımı ile nasıl ulaşacağınızı zaten biliyorsunuz.</p>
+<p>Ayrıca son yazılan komutlara ulaşmak için klavyede yer alan yön tuşlarından <strong><mark>↑</mark></strong>(yukarı) ve <strong><mark>↓</mark></strong>(aşağı) tuşlarını kullanarak önceki ve sonraki komutlarınıza ulaşabilirsiniz. Genellikle yön tuşlarını kullanmak bize anlık işlemlerimizde hız katmaktadır. Sizler de bu pratiklikleri mutlaka yeri geldikçe sıklıkla kullanacaksınız.</p>
+<p><img src="../../img/3-%20Bilgi%20Alma%20Komutlar%C4%B1/40-min.gif" class="responsive"></p>
+	<h1></h1>
+<div align="center" class="container">
+<div class="card mb-4 border">
+    <div class="row no-gutters">
+        <div class="col-md-3">
+            <img src="../../img/menu/pc-logo.png" class="card-img-top img1">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+		<strong class="d-inline-block mb-0 text-primary"><h3 id="alistirma">Alıştırmalar Hakkında</h3></strong>
+                <p class="card-text">Öğrendiğiniz bilgilerin kalıcı olması için bolca alıştırma yapmalısınız. Burada yer alan alıştırma faaliyetleri dışında, konuyu öğrendiğinizi hissede kadar kendiniz de bolca pratik yapın lütfen.  Aksi halde öğrendiğiniz bilgiler kısa sürede unutulup gidecektir. </p>
+                
+            </div>
+        </div>
+    </div>
+</div>		
+<div class="row mb-2">
+    <div class="col">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          
+		  <p></p>
+<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto">Kullanmakta olduğunuz <strong>sistem çekirdeği hakkında</strong> bilgi alın.	
+        </p></div>        
+      </div>
+    </div>
+	<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto">Bilgisayarınızın&nbsp;<strong>ağ üzerindeki adını</strong>(<strong>hostname</strong>) değiştirin.
+        </p></div>        
+      </div>
+    </div>
+	<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto">Kullanmakta olduğunuz <strong>dağıtım hakkında genel bilgi</strong> almak için ilgili komutu kullanın.
+        </p></div>        
+      </div>
+    </div>
+	<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto">Mevcut oturumda yani çalışmakta olduğunuz oturumdaki <strong>kullanıcı kimliğini</strong> konsol üzerinden ilgili komut yardımıyla sorgulayın.
+        </p></div>        
+      </div>
+    </div>
+	<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto">"Sisteminizin<strong> ne kadar süredir açık olduğunu</strong> sorgulayın.
+        </p></div>        
+      </div>
+    </div>
+	<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto">Konsoldan&nbsp;sistemin o anki <strong>tarih ve saat bilgisini</strong>&nbsp;sorgulayın.
+        </p></div>        
+      </div>
+    </div>
+	<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto">Konsoldan <strong>takvim bilgisini</strong> sorgulayın.
+        </p></div>        
+      </div>
+    </div>
+	<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto">Konsol üzerinden<strong> 2020 yılının mart ayı takvimini</strong> görüntüleyin.
+        </p></div>        
+      </div>
+    </div>
+	<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto"><code class="language-bash">echo</code>&nbsp; komutunun çalışmasını sağlayan dosyaların hangi dizinde tutulduğunu konsol üzerinden sorgulayın.
+        </p></div>        
+      </div>
+    </div>
+	<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto"><code class="language-bash">echo</code>&nbsp; komutunun man kılavuz sayfalarında yer alan bilgilerinin hangi dosyada tutulduğunu<strong> tam dizin adresi </strong>şeklinde öğrenin.
+        </p></div>        
+      </div>
+    </div>
+	<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto">"<em><strong>armitage</strong></em>"&nbsp;ifadesinin geçtiği dosyaları listeleyin.
+        </p></div>        
+      </div>
+    </div>
+	<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto">Konsol üzerinden&nbsp;kullanılan <strong>bellek</strong>(<strong>ram</strong>) <strong>miktarını</strong> <strong>MB</strong>(megabayt) cinsinden öğrenin.
+        </p></div>        
+      </div>
+    </div>
+	<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto"><code class="language-bash"><em><strong>/root</strong></em></code>&nbsp; <strong>dizini hakkında genel bilgiler&nbsp;almak</strong> için ilgili komutu kullanın.
+        </p></div>        
+      </div>
+    </div>
+	<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto">İlgili komut yardımıyla&nbsp;sisteminizin o anlık genel durumunu sorgulayın.
+        </p></div>        
+      </div>
+    </div>
+	<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto">Son kullanmış olduğunuz komutu tekrar kullanmak için öğrendiğiniz şekilde pratik yöntemi uygulayın.
+        </p></div>        
+      </div>
+    </div>
+	<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto">Konsola girmiş olduğunuz önceki komutları listeleyin.(komut geçmişinizi ilgili komut ile listeleyin). Listelenen çıktılardan <strong>10. satırdaki&nbsp;</strong>komutu tekrar kullanmak üzere öğrendiğiniz şekilde <strong>pratik yöntemi uygulayın</strong>.
+        </p></div>        
+      </div>
+    </div>
+	<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto">Aşağı yukarı yön tuşlarıyla önceki ve sonraki komutlar arasında geçiş yapın.
+        </p></div>        
+      </div>
+    </div>
+	
+	
+        </div>
+        
+      </div>
+    </div>
+
+	</div>
+	
+    </div>
+	
+<center>
+	<h1 id="bildirim">Geri Bildirimde Bulunun</h1>
+<p>Sizlere daha verimli bir kaynak sunabilmemiz için, uygulamada veya dokümantasyonlarda yer alan tüm hata ve eksiklerimizi bize bildirebilirsiniz.	</p>
+	<a href="../../bildirim.html" class="btn btn-danger">Geri Bildirimde Bulunun</a>
+	  </center>	
+</article>       
+    </div>
+
+    
+<script src="../../js/jquery-3.3.1.slim.min.js"></script>
+<script src="../../js/script.js"></script>	
+<script src="../../js/prism.js"></script>		
+ 
+
+
+</body>
+</html>
+

@@ -1,0 +1,269 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Linux Dersleri | 21. Ders</title>
+	<link rel="icon" href="../../img/menu/icon.png" type="image/icon type">
+	<link rel="stylesheet" href="../../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../css/font-awesome.min.css">
+	<link rel="stylesheet" href="../../css/style.css">
+<link rel="stylesheet" href="../../css/prism.css">
+
+</head>
+
+<body>	
+<div class="bs-canvas-overlay bs-canvas-anim bg-dark position-fixed w-100 h-100"></div>
+	
+<nav class="navbar y-navbar sticky-top navbar-expand-lg navbar-light bg-light">
+  
+  <div align="left">
+		<a class="btn" data-toggle="canvas" data-target="#bs-canvas-left" aria-expanded="false" aria-controls="bs-canvas-left"><i class="fa fa-align-justify fa-lg"></i></a></div>
+  <center >
+	<div>
+	<a href="./20.html" style="color: black" class="btn navbar-toggler " > <i class="fa fa-angle-double-left fa-lg"></i></a>
+	
+    <a href="../../index.html" style="color: black" class="btn navbar-toggler " ><i class="fa fa-book fa-lg"></i></a>
+	
+    <a href="./22.html" style="color: black" class="btn navbar-toggler " ><i class="fa fa-angle-double-right fa-lg"></i> </a>
+	</div>
+  </center>
+  <div align="right">
+			<div class="togg-wrap">
+			
+			<button onclick="tema()" class="btn" ><i class="fa fa-adjust fa-lg"></i></button>  
+    
+		</div> 
+		
+</nav>
+
+<nav class="navbar x-navbar sticky-top navbar-expand-lg navbar-light bg-light border-bottom">
+	
+	<div class="container ">
+            <div align="left">
+		<a class="btn" data-toggle="canvas" data-target="#bs-canvas-left" aria-expanded="false" aria-controls="bs-canvas-left"><i class="fa fa-align-justify fa-lg"></i></a><a href="../../menu.html" class="btn"  ><i class="fa fa-home fa-lg"></i></a></div>
+	<center >
+		
+        <a href="./20.html" class="btn">Önceki <i class="fa fa-angle-double-left fa-lg"></i></a>
+		
+        <a href="../../index.html" class="btn" ><i class="fa fa-book fa-lg"></i></a>
+		
+        <a href="./22.html" class="btn" ><i class="fa fa-angle-double-right fa-lg"></i> Sonraki</a>
+		
+        
+    </center>
+			<div align="right">
+			<div class="togg-wrap">
+			
+			<button onclick="tema()" class="btn" ><i class="fa fa-adjust fa-lg"></i></button>  
+				<a href="../../bildirim.html" class="btn" ><i class="fa fa-paper-plane"></i></a>    
+		</div>              
+	</div>              
+	</div>
+     
+</nav>
+
+	
+<div id="bs-canvas-left" class="bs-canvas bs-canvas-anim bs-canvas-left position-fixed bg-kanvas h-100" >
+	<header class="bs-canvas-header p-3 bg-baslık">
+		
+    	<h4 align="center" >İçerik Menüsü<button type="button" class="bs-canvas-close close" aria-label="Close" aria-expanded="true"><span aria-hidden="true" >×</span></button></h4>
+        
+    </header>
+    <div class="bs-canvas-content px-3">
+    	
+    	<div align="center" class="list-group my-2 ">
+
+			<a href="#" class="list-group-item list-group-item-action">Giriş</a>
+          	<a href="#dosya" class="list-group-item list-group-item-action">Dosya İndirmek</a>
+			<a href="#wget" class="list-group-item list-group-item-action">wget</a>
+			<a href="#tekil" class="list-group-item list-group-item-action">tekil indirme</a>
+			<a href="#toplu" class="list-group-item list-group-item-action">toplu indirme</a>
+			<a href="#konum" class="list-group-item list-group-item-action">konum belirtme</a>
+			<a href="#isim" class="list-group-item list-group-item-action">konum-isim belirtme</a>
+			<a href="#devam" class="list-group-item list-group-item-action">devam ettirme</a>
+			<a href="#hiz" class="list-group-item list-group-item-action">hızını belirleme</a>
+			<a href="#arkaplan" class="list-group-item list-group-item-action">arkaplanda indirme</a>
+			<hr>
+<a href="#alistirma" class="list-group-item list-group-item-action">Alıştırmalar</a>
+<a href="#bildirim" class="list-group-item list-group-item-action">Geri Bildirim</a>
+			
+          	
+        </div>
+		
+		
+    </div>    
+</div>
+    
+  <div class="container">    
+        <p></p>
+	  <div align="center" class="col">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm position-relative">
+        <div class="col d-flex flex-column position-static">
+          <strong class="d-inline-block text-primary">21.Doküman</strong>
+          <h3 class="mb-0">Dosya İndirme İşlemleri </h3>
+          <div class="mb-1 text-muted">Konu Etiketleri</div>
+          <p class="card-text mb-auto">wget , konsoldan dosya indirmek , tekli ve çoklu indirme işlemleri </p>
+        </div>
+        
+      </div>
+    </div>
+ <article id="makale" style="font-size:1.2em;" class="markdown-body entry-content" itemprop="text">
+	
+	 
+	
+	 <h1 id="dosya">Konsol Üzerinden Dosya İndirmek</h1>
+<p>İndirmek istediğimiz dosyanın direk indirme linkini biliyorsak bu dosyamızı herhangi bir ekstra program kullanmadan veya tarayıcıya ihtiyaç duymadan konsol üzerinden <strong><code class="language-bash">wget</code></strong> komutu yardımı ile indirmemiz mümkün. Gelin anlatıma <strong><code class="language-bash">wget</code></strong> komutunu ve kullanım şekillerini açıklayarak devam edelim.</p>
+<h2 id="wget">wget</h2>
+<p>Eğer daha önce linux ile ilgili yönergeler okuduysanız veya videolar izlediyseniz <strong><code class="language-bash">wget</code></strong> komutuna mutlaka denk gelmişsinizdir. Kullanımı oldukça kolaydır ve parametreler alarak çalışır. Birkaç kullanım şekline değinecek olursak:</p>
+<p id="tekil"><strong>Tekil Dosya İndirmek :</strong></p>
+<p><strong><code class="language-bash">wget</code></strong> komutunun en temel kullanım şeklidir. Hedef link aracılığı ile tekil dosya indirme işlevinde kullanılır.</p>
+<p>Kullanımı: <strong><code class="language-bash">wget indirilecek_dosya_linki</code></strong></p>
+<p>Örnek olarak aircrack-ng aracını indirdim. Ve indirme işlemini <strong><code class="language-bash">ls -l</code></strong>
+komutu ile teyit ettim.</p>
+<p><img src="../../img/18-%20Konsol%20%C3%9Czerinden%20Dosya%20%C4%B0ndirmek/1-min.gif" class="responsive"></p>
+<p>Ve.. bulunduğum dizin içerisine istediğim dosya(aircrack-ng) indirilmiş oldu.</p>
+<p id="toplu"><strong>Toplu Dosya İndirmek :</strong></p>
+<p>Bir metin belgesinin içerisine kayıt ettiğimiz linklerde yer alan dosyaları tek seferde <strong><code class="language-bash">wget</code></strong> komutu ile beraber <strong><code class="language-bash">-i</code></strong> parametresi kullanarak indirmemiz mümkün. Hemen örnek üzerinden bu durumu görelim.</p>
+<p>Örneğin ben T.C Resmi Gazetesi pdflerinden 5 tanesini aynı anda indirmek istiyorum diyelim. Bunun için bu pdflerin indirme linklerini bir metin belgesine kaydetmem gerekiyor. Ben bu işlemi <strong><code class="language-bash">leafpad resmi_gazeteler</code></strong> komutu ile "resmi_gazeteler" isimli bir dosya oluşturarak ve içerisine gerekli linkleri ekleyerek gerçekleştiriyorum.</p>
+<p><img src="../../img/18-%20Konsol%20%C3%9Czerinden%20Dosya%20%C4%B0ndirmek/2-min.png" class="responsive"></p>
+<p>Artık sıra geldi toplu indirmelere. Bu işlem için konsola <strong><code class="language-bash">wget -i resmi_gazeteler</code></strong> komutumu giriyorum.</p>
+<p><img src="../../img/18-%20Konsol%20%C3%9Czerinden%20Dosya%20%C4%B0ndirmek/3-min.gif" class="responsive"></p>
+<p>PDF belgelerimiz toplu şekilde indirilmiş oldu şimdi de bu dosyaların varlığını teyit etmek için konsola <strong><code class="language-bash">ls -l</code></strong> komutunu verdim.</p>
+<p id="konum"><strong>Özel Konum Belirterek İndirmek :</strong>
+Eğer dosyanın konsolun üzerinde çalıştığı konuma değil de bizim istediğimiz özel bir konuma indirilmesini istersek bunun için <strong><code class="language-bash">wget -P kaydedilecek_dizin_yolu dosya_linki</code></strong> şeklinde komut vermemiz gerekiyor.</p>
+<p><img src="../../img/18-%20Konsol%20%C3%9Czerinden%20Dosya%20%C4%B0ndirmek/4-min.gif" class="responsive"></p>
+<p>Dosyamızı istediğimiz konuma indirmek için indireceğimiz dizin adresinin tam yolunu belirtmemiz gerekiyordu bu nedenle buradaki <strong><code class="language-bash">~/Desktop</code></strong> kullanımı sizi şaşırtmasın <strong><mark>~</mark></strong> işareti ana dizini temsil ediyor.</p>
+<p>Ve sonuç olarak indirdiğimiz konuma gelerek dosyanın varlığını teyit etmiş olduk.</p>
+<p id="isim"><strong>Özel Konum Ve İsim Belirterek İndirmek :</strong> İndirilecek dosyanın adını değiştirerek istediğimiz konuma indirmesini istersek <strong><code class="language-bash">wget</code></strong> komutumuzu <strong><code class="language-bash">-O</code></strong> parametresi ile birlikte <strong><code class="language-bash">wget -O kaydedilecek_dizin_yolu /dosyanın_yeni_adı indirme_linki</code></strong> şeklinde kullanıyoruz.</p>
+<p><img src="../../img/18-%20Konsol%20%C3%9Czerinden%20Dosya%20%C4%B0ndirmek/5-min.gif" class="responsive"></p>
+<p>Dosyamızı "aircrack" ismi ile indirip <strong><mark>/Desktop</mark></strong> dizinine kaydettik bu durumu da <strong><code class="language-bash">ls -l</code></strong> komutu ile teyit ettik.</p>
+<p>Ayrıca indirilen dosyanın konumunu değiştirmeden yalnızca ismini değiştirmek isterseniz de herhangi bir konum belirtmeden yalnızca yeni dosya ismini belirtmeniz yeterli olacaktır. Örneğin <strong><code class="language-bash">wget yeni_isim dosya_link</code></strong> şeklinde bir kullanım indirilen dosyanın isminde değişiklik yapılarak indirilmesini sağlar.</p>
+<p id="devam"><strong>Kesintiye Uğrayan İndirmenin Devam Ettirilmesi :</strong>
+Bir şekilde dosyanın indirme süreci kesilirse yani dosya tam olarak indirilemez ise dosyanın geri kalanının daha sonra indirilmesi mümkündür. Kesintiye uğrayan dosyayı tekrar indirmek için <strong><code class="language-bash">wget</code></strong> komutuna ek olarak <strong><code class="language-bash">-c</code></strong> parametresi eklenmelidir. Böylelikle <strong><code class="language-bash">wget -c indirme_linki</code></strong> şeklinde bir kullanım sonucunda eğer dosya tam olarak indirilemezse sonradan dosyayı tekrar baştan indirmek yerine kaldığı yerden devam ettirme şansımız olur. Bu durum özellikle de büyük dosyalar için gerçekten çok büyük kolaylık sağlıyor.
+Adım adım yaptığım işlemleri inceleyelim.</p>
+<p>İlk olarak içi tamamen boş olan <strong><mark>/Documents</mark></strong> dizinine <strong><code class="language-bash">cd /Documents</code></strong> komutu ile ulaştım. Bu dizinin içerisinin boş olduğunu <strong><code class="language-bash">ls -l</code></strong> komutu ile teyit ettim.</p>
+<p><img src="../../img/18-%20Konsol%20%C3%9Czerinden%20Dosya%20%C4%B0ndirmek/6-min.png" class="responsive"></p>
+<p><strong><mark>/Documents</mark></strong> dizini içerisinde iken <strong><code class="language-bash">wget</code></strong> komutu ile dosyamı indirmeye başladım. Daha sonra indirme işlemini <strong><mark>Ctrl + Z</mark></strong> tuş kombinasyonu ile durdurdum. Durdurmamdaki amaç daha sonra devam ettirebilme özelliğini test etmekti.</p>
+<p><img src="../../img/18-%20Konsol%20%C3%9Czerinden%20Dosya%20%C4%B0ndirmek/7-min.gif" class="responsive"></p>
+<p>İndirme işlemi durdurduktan sonra <strong><mark>/Documents</mark></strong> dizinini kontrol etmek için <strong><code class="language-bash">ls -l</code></strong> komutunu kullandım. Ve dosyamın <strong>638681</strong> bayt kadarının inmiş olduğunu gördüm.</p>
+<p><img src="../../img/18-%20Konsol%20%C3%9Czerinden%20Dosya%20%C4%B0ndirmek/8-min.png" class="responsive"></p>
+<p>Durdurmuş olduğum indirme işlemine devam etmek üzere <strong><code class="language-bash">wget</code></strong> komutu ile beraber <strong><code class="language-bash">-c</code></strong> parametresini de kullanarak dosya indirme işlemini kaldığı yerden devam ettirdim.</p>
+<p><img src="../../img/18-%20Konsol%20%C3%9Czerinden%20Dosya%20%C4%B0ndirmek/9-min.gif" class="responsive"></p>
+<p>Ve son olarak dosyamın başarılı ve tam bir şekilde indirildiğini <strong><code class="language-bash">ls -l</code></strong> komutu ile teyit ettim.</p>
+<p>Çıktıları karşılaştıracak olursanız başta <strong>638681</strong> bayt'ta kalan indirme sonuç itibari ile <strong>4379880</strong> bayt yani dosyanın tamamı şeklinde indirilmiş oldu. Yani dosya indirme işlemi yarıda dahi kesilse en baştan indirmemize gerek kalmadan <strong><code class="language-bash">wget</code></strong> komutunun <strong><code class="language-bash">-c</code></strong> parametresi sayesinde kaldığı yerden indirme işlemini devam ettirebiliyoruz.</p>
+<p id="hiz"><strong>İndirme Hızını Belirlemek :</strong>
+Eğer istersek indireceğimiz dosyanın ne kadarlık internet hızında ineceğini belirleyebiliriz. Bu limitleme işlemi için komutumuzu <strong><code class="language-bash">wget --limit-rate=indirme_limitiK indirme_linki</code></strong> şeklinde kullanıyoruz.</p>
+<p>Örnek olması açısından ben dosyayı indirirken 300KB/s hızında indirme limiti koyuyorum.</p>
+<p><img src="../../img/18-%20Konsol%20%C3%9Czerinden%20Dosya%20%C4%B0ndirmek/10-min.gif" class="responsive"></p>
+<p>Zaten üst kısımda yer alan çıktının sonucunda da bu hız sınırlamasının sonucu olarak ortalama indirme hızı (300 KB/s) olarak gözüküyor.</p>
+<p id="arkaplan"><strong>Arka Planda İndirmek :</strong>
+İndirmek istediğimiz dosyanın arka planda inmesini <strong><code class="language-bash">-b</code></strong> parametresi ile sağlarız. İndirme işleminin sonuçlarını öğrenmek istersek indirilen dosya ile aynı konumda yer alan <strong><mark>wget-log</mark></strong> dosyasını incelememiz yeterli olacaktır.</p>
+<p><img src="../../img/18-%20Konsol%20%C3%9Czerinden%20Dosya%20%C4%B0ndirmek/11-min.gif" class="responsive"></p>
+<p>Dosyamızı arka planda indiriyoruz ve konsol çıktıda bize indirme detaylarının <strong><mark>wget-log</mark></strong> dosyasında olduğunu bildiriyor. Bu indirme kayıtlarına göz atmak istersek <strong><code class="language-bash">cat wget-log</code></strong> komutu ile kayıt dosyasına bakabiliriz.</p>
+		<h1></h1>
+<div align="center" class="container">
+<div class="card mb-4 border">
+    <div class="row no-gutters">
+        <div class="col-md-3">
+            <img src="../../img/menu/pc-logo.png" class="card-img-top img1">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+		<strong class="d-inline-block mb-0 text-primary"><h3 id="alistirma">Alıştırmalar Hakkında</h3></strong>
+                <p class="card-text">Öğrendiğiniz bilgilerin kalıcı olması için bolca alıştırma yapmalısınız. Burada yer alan alıştırma faaliyetleri dışında, konuyu öğrendiğinizi hissede kadar kendiniz de bolca pratik yapın lütfen.  Aksi halde öğrendiğiniz bilgiler kısa sürede unutulup gidecektir. </p>
+                
+            </div>
+        </div>
+    </div>
+</div>		
+<div class="row mb-2">
+    <div class="col">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          
+		  <p></p>
+<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto">İndirme linkini bildiğiniz bir dosyayı <strong>konsol üzerinden ilgili komut yardımıyla indirin</strong>.
+        </p></div>        
+      </div>
+    </div>
+	<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto">Bir metin belgesinin içerisine kaydettiğiniz&nbsp;linklerde yer alan <strong>dosyaları tek seferde konsol üzerinden ilgili komut bütününü kullanarak indirin</strong>.
+        </p></div>        
+      </div>
+    </div>
+	<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto"><strong>İndirdiğiniz dosyanın</strong>, konsolun üzerinde çalıştığı konuma değil de<strong> istediğiniz özel bir konuma indirilmesini </strong>sağlayın.
+        </p></div>        
+      </div>
+    </div>
+	<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto">İndireceğiniz dosyanın hem <strong>sizin belirttiğiniz konuma</strong> hem de<strong> sizin vereceğiniz isimle kaydedilmesini sağlayın</strong>.
+        </p></div>        
+      </div>
+    </div>
+	<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto">Devam eden bir indirmeyi kesintiye uğratın ve daha sonra<strong> indirme işleminin kaldığı yerden devam etmesini sağlayın</strong>.
+        </p></div>        
+      </div>
+    </div>
+	<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto">İndirme işlemi yaparken ilgili dosyanın <strong>indirme hızını 300KB/s olarak belirtin</strong>. (Bu hız limitini istediğiniz gibi değiştirebilirsiniz.)
+        </p></div>        
+      </div>
+    </div>
+	<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto">Konsol üzerinden indirme işlemi yaparken konsolun meşgul olmaması için <strong>indirme işlemini arka plana alarak devam ettirin</strong>. Ve indirme işlemi sonrası<strong> indirme işlemi ilgili bilgileri kontrol edin</strong>.(Zaten konsol çıktıda indirme ile ilgili detayların hangi dosyada olduğunu bildiriyor.)
+        </p></div>        
+      </div>
+    </div>
+	<div class="col-md-14">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+		<p class="card-text mb-auto">Konsol üzerinden<strong> 2020 yılının mart ayı takvimini</strong> görüntüleyin.
+        </p></div>        
+      </div>
+    </div>
+	</div>
+        
+      </div>
+    </div>
+
+	</div>
+	
+    </div>
+	
+<center>
+	<h1 id="bildirim">Geri Bildirimde Bulunun</h1>
+<p>Sizlere daha verimli bir kaynak sunabilmemiz için, uygulamada veya dokümantasyonlarda yer alan tüm hata ve eksiklerimizi bize bildirebilirsiniz.	</p>
+	<a href="../../bildirim.html" class="btn btn-danger">Geri Bildirimde Bulunun</a>
+	  </center>	
+</article>       
+    </div>
+
+    
+<script src="../../js/jquery-3.3.1.slim.min.js"></script>
+<script src="../../js/script.js"></script>	
+<script src="../../js/prism.js"></script>		
+ 
+
+
+</body>
+</html>
+
