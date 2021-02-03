@@ -3,7 +3,7 @@ Platform Hakkında
 Bu web platformu, Türkçe Temel Linux Dokümantasyon içeriğini takip edebilmeniz için çevrimdışı çalışma yeteneğine sahip web uygulaması olarak geliştirilmiştir.
 
 **Platform Adresi:** https://linux-dersleri.github.io/
-![](https://raw.githubusercontent.com/Linux-Dersleri/linux-dersleri.github.io/master/img/menu/app.gif)
+![](https://raw.githubusercontent.com/Linux-Dersleri/linux-dersleri.github.io/master/img/menu/app.png)
 
 Platform Kullanım Rehberi
 -
