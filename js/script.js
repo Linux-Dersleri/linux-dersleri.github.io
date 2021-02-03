@@ -1,18 +1,30 @@
-$('#body').toggleClass(localStorage.toggled);
+/*Koyu Tema*/
+let darkMode = localStorage.getItem('darkMode');
 
-function darkLight() {
-  /*DARK CLASS*/
-  if (localStorage.toggled != 'dark') {
-    $('#body, p, #bs-canvas-right').toggleClass('dark', true);
-    localStorage.toggled = "dark";
-     
-  } else {
-    $('#body, p, #bs-canvas-right').toggleClass('dark', false);
-    localStorage.toggled = "";
-  }
+const enableDarkMode = () => {
+	document.body.classList.add('dark-mode');
+	localStorage.setItem('darkMode','enable');
 }
 
-/*Gömlülü Panel Hareketi*/
+const disableDarkMode = () => {
+	document.body.classList.remove('dark-mode');
+	localStorage.setItem('darkMode',null);
+}
+
+if(darkMode === 'enable'){
+	enableDarkMode();
+	darkMode.checked = true;
+	
+}
+
+function tema() {
+	darkMode = localStorage.getItem('darkMode');
+	if(darkMode !== 'enable') enableDarkMode();
+	else disableDarkMode();
+}
+
+
+/*Gömülü Panel Hareketi*/
 
 jQuery(document).ready(function($){
 	var bsDefaults = {
@@ -64,32 +76,4 @@ jQuery(document).ready(function($){
 	
 });
 
-/*Yazı Boyut Seçimi*/
-
-var selectedSize = '';
-
-function fontSize(selectTag) {
-  var listValue = selectTag.options[selectTag.selectedIndex].text;
-  selectedSize = listValue;
-  setFontSize(listValue);
-}
-
-function setFontSize(value) {
-  document.querySelector("#makale").style.fontSize = value;
-}
-
-function saveFont(){
-  localStorage.setItem('fontSize', selectedSize);
-}
-
-var button = document.querySelector('#save');
-button.addEventListener('click', function(evt) {
-  evt.preventDefault();
-  saveFont();
-}, false);
-
-if(localStorage.getItem('fontSize')) {
-  var storedSize = localStorage.getItem('fontSize');
-  setFontSize(storedSize);
-}
     

@@ -9,15 +9,17 @@
 	<link rel="stylesheet" href="../../css/bootstrap.min.css">
 	<link rel="stylesheet" href="../../css/font-awesome.min.css">
 	<link rel="stylesheet" href="../../css/style.css">
+<link rel="stylesheet" href="../../css/prism.css">
 
 </head>
 
-<body id="body" >	
+<body>	
 <div class="bs-canvas-overlay bs-canvas-anim bg-dark position-fixed w-100 h-100"></div>
 	
 <nav class="navbar y-navbar sticky-top navbar-expand-lg navbar-light bg-light">
   
-  <a style="color: black" class="btn"  data-toggle="canvas" data-target="#bs-canvas-left" aria-expanded="false" aria-controls="bs-canvas-left"><i class="fa fa-align-justify fa-lg"></i></a>
+  <div align="left">
+		<a class="btn" data-toggle="canvas" data-target="#bs-canvas-left" aria-expanded="false" aria-controls="bs-canvas-left"><i class="fa fa-align-justify fa-lg"></i></a></div>
   <center >
 	<div>
 	<a href="./17.html" style="color: black" class="btn navbar-toggler " > <i class="fa fa-angle-double-left fa-lg"></i></a>
@@ -27,15 +29,20 @@
     <a href="./19.html" style="color: black" class="btn navbar-toggler " ><i class="fa fa-angle-double-right fa-lg"></i> </a>
 	</div>
   </center>
-  <a style="color: black" class="btn"  data-toggle="canvas" data-target="#bs-canvas-right" aria-expanded="false" aria-controls="bs-canvas-right" ><i class="fa fa-gear fa-lg"></i></a>  
+  <div align="right">
+			<div class="togg-wrap">
+			
+			<button onclick="tema()" class="btn" ><i class="fa fa-adjust fa-lg"></i></button>  
+    
+		</div> 
 		
 </nav>
 
 <nav class="navbar x-navbar sticky-top navbar-expand-lg navbar-light bg-light border-bottom">
 	
 	<div class="container ">
-            <div align="left"><button class="btn"  data-toggle="canvas" data-target="#bs-canvas-left" aria-expanded="false" aria-controls="bs-canvas-left"><i class="fa fa-align-justify fa-lg"></i></button>
-		<a href="../../menu.html" class="btn"  ><i class="fa fa-home fa-lg"></i></a>     </div>
+            <div align="left">
+		<a class="btn" data-toggle="canvas" data-target="#bs-canvas-left" aria-expanded="false" aria-controls="bs-canvas-left"><i class="fa fa-align-justify fa-lg"></i></a><a href="../../menu.html" class="btn"  ><i class="fa fa-home fa-lg"></i></a></div>
 	<center >
 		
         <a href="./17.html" class="btn">Önceki <i class="fa fa-angle-double-left fa-lg"></i></a>
@@ -47,46 +54,21 @@
         
     </center>
 			<div align="right">
+			<div class="togg-wrap">
+			
+			<button onclick="tema()" class="btn" ><i class="fa fa-adjust fa-lg"></i></button>  
 				<a href="../../bildirim.html" class="btn" ><i class="fa fa-paper-plane"></i></a>    
-             <a style="color: black" class="btn"  data-toggle="canvas" data-target="#bs-canvas-right" aria-expanded="false" aria-controls="bs-canvas-right" ><i class="fa fa-gear fa-lg"></i></a>  
 		</div>              
+	</div>              
 	</div>
      
 </nav>
-<div id="bs-canvas-right" class="bs-canvas bs-canvas-anim bs-canvas-right position-fixed bg-light h-100" >
-	<header class="bs-canvas-header p-3 bg-dark">
-		
-    	<h4 align="center" class="text-light">Ayar Menüsü<button type="button" class="bs-canvas-close close" aria-label="Close" aria-expanded="true"><span aria-hidden="true" class="text-light">×</span></button></h4>
-        
-    </header>
-    <div class="bs-canvas-content px-3">
-    	
-    	<div align="center" class="list-group my-2 ">
-			<button class="btn">Yazı Boyutunu Seçip Kaydedin</button>
-  <!-- This is how they choose their font size -->
-  <select onchange="fontSize(this);">
-    
-	<option>18px</option>
-	<option>20px</option>
-	<option>22px</option>
-	<option>24px</option>
-	<option>26px</option>
 
-  </select>
-  <br>
-
-  <input type="button" id="save" value="Seçili Boyutu Kaydet">
-<button class="btn">Okuma Modunu Değiştirin</button>
-		<button class="btn btn-outline-dark" onclick="darkLight()" ><i class="fa fa-eye fa-lg"></i></button>
-		
-        </div>
-    </div>    
-</div>
 	
-<div id="bs-canvas-left" class="bs-canvas bs-canvas-anim bs-canvas-left position-fixed bg-light h-100" >
-	<header class="bs-canvas-header p-3 bg-dark">
+<div id="bs-canvas-left" class="bs-canvas bs-canvas-anim bs-canvas-left position-fixed bg-kanvas h-100" >
+	<header class="bs-canvas-header p-3 bg-baslık">
 		
-    	<h4 align="center" class="text-light">İçerik Menüsü<button type="button" class="bs-canvas-close close" aria-label="Close" aria-expanded="true"><span aria-hidden="true" class="text-light">×</span></button></h4>
+    	<h4 align="center" >İçerik Menüsü<button type="button" class="bs-canvas-close close" aria-label="Close" aria-expanded="true"><span aria-hidden="true" >×</span></button></h4>
         
     </header>
     <div class="bs-canvas-content px-3">
@@ -120,7 +102,7 @@
         
       </div>
     </div>
- <article id="makale" style="font-size:1em;" class="markdown-body entry-content" itemprop="text">
+ <article id="makale" style="font-size:1.2em;" class="markdown-body entry-content" itemprop="text">
 	 
 	 <h1 id="joker-kar">Joker Karakterler (wildcards)</h1>
   <p>Bu kavram sizlere kesinlikle yabancı değil, daha önceki kısımlarda defaatle kullanmış ve <strong>joker(wildcard) karakterlerinin</strong> az da olsa işlevini görmüştük. Bu kısımda da bu konu hakkında bilgi sahibi olacağız.</p>
@@ -129,21 +111,21 @@
 <p><img src="../../img/15-%20Joker%20Karakterler/1-min.png" class="responsive "></p>
 <p>Yukarıdaki kullanımın yerine joker karakter(wildcard) desteğini kullanmak bizlere çok fazla avantaj sağlar. Ayrıca gördüğünüzde şaşırmayın, kimi kaynaklarda <strong>joker karakterler(wildcards)</strong> "<strong>globbing</strong>" olarak da adlandırılmaktadır.</p>
 <p>Bahsi geçen joker karakterler ve kullanım alanları aşağıdaki gibidir;</p>
-<p><strong><strong><code>*</code></strong></strong> : Anlamı <strong><code>*</code></strong> olan yere herhangi bir şey gelebileceğidir.</p>
-<p>Örneğin "<strong>dosya</strong>" ismiyle başlayan tüm belgeleri tek seferde silmek için komutu <strong><code>rm  dosya*</code></strong> şeklinde kullanabilirim.</p>
+<p><strong><strong><code class="language-bash">*</code></strong></strong> : Anlamı <strong><code class="language-bash">*</code></strong> olan yere herhangi bir şey gelebileceğidir.</p>
+<p>Örneğin "<strong>dosya</strong>" ismiyle başlayan tüm belgeleri tek seferde silmek için komutu <strong><code class="language-bash">rm  dosya*</code></strong> şeklinde kullanabilirim.</p>
 <p><img src="../../img/15-%20Joker%20Karakterler/2-min.png" class="responsive "></p>
 <p>Ayrıca bu yıldız (asterix)<strong><mark>*</mark></strong> işaretinin farklı kullanım şekilleri de var. Farklı kullanımların açıklaması ile devam edelim.</p>
-<p>Herhangi bir komutu, örneğin listeleme işlevinde olan <strong><code>ls</code></strong> komutunu <strong><code>ls dosya*</code></strong> şeklinde kullanırsak komut yıldız (asterix) <strong><code>*</code></strong> işaretinden önce yazmış olduğumuz "<strong>dosya</strong>" ismi ile başlayan tüm her şeyi kapsar.</p>
+<p>Herhangi bir komutu, örneğin listeleme işlevinde olan <strong><code class="language-bash">ls</code></strong> komutunu <strong><code class="language-bash">ls dosya*</code></strong> şeklinde kullanırsak komut yıldız (asterix) <strong><code class="language-bash">*</code></strong> işaretinden önce yazmış olduğumuz "<strong>dosya</strong>" ismi ile başlayan tüm her şeyi kapsar.</p>
 <p><img src="../../img/15-%20Joker%20Karakterler/3-min.png" class="responsive "></p>
 <p>Aynı şekilde yıldız (asterix) <strong><mark>*</mark></strong> işaretinden sonra bir ifade belirtirsek de komut o ifade ile bitenleri kapsayacak şekilde çalışır.</p>
 <p><img src="../../img/15-%20Joker%20Karakterler/4-min.png" class="responsive "></p>
 <p><strong>? :</strong> Herhangi bir tek karakterle eşleşir.</p>
 <p>Karakterin kullanımına örnek olarak. Diyelim ki dizin içerisinde hem "<strong>index_page</strong>" hem de "<strong>index-page</strong>" şeklinde birbirine yakın yazılışlara sahip iki dosyamız var. Yani başlangıç ve bitiş isimleri aynı ancak aradaki işaretler farklı. İşte böyle bir durumda hem <strong><mark> _ </mark></strong> işaretini hem de <strong><mark> - </mark></strong> işaretini karşılayacak olan soru işareti <strong><mark>?</mark></strong> joker karakterini kullanabiliriz.</p>
 <p><img src="../../img/15-%20Joker%20Karakterler/5-min.png" class="responsive "></p>
-<p>Çıktılarda da görüldüğü gibi <strong><mark>?</mark></strong> karakteri dosya isimlerinin arasında yer alan <strong><mark>-</mark></strong> ve <strong><mark>_</mark></strong> işaretini de karşılayarak <strong><code>ls -l index?page</code></strong> şeklindeki komut ile çıktıya her ikisini de basmış oldu.</p>
+<p>Çıktılarda da görüldüğü gibi <strong><mark>?</mark></strong> karakteri dosya isimlerinin arasında yer alan <strong><mark>-</mark></strong> ve <strong><mark>_</mark></strong> işaretini de karşılayarak <strong><code class="language-bash">ls -l index?page</code></strong> şeklindeki komut ile çıktıya her ikisini de basmış oldu.</p>
 <p><strong>[] :</strong> <strong><mark>?</mark></strong> karakterine benzer olmakla birlikte daha çok hedefe odaklı çalışır.</p>
 <p><strong><mark>[]</mark></strong> karakterinin kullanımı, iki köşeli parantez arasına ulaşmak istediğiniz hedefteki ayırt edici karakterli yazmak üzerinedir.</p>
-<p>Örnek olması açısında "<strong>dosya</strong>" isimli belgelerden sadece sonunda <strong>2,3,4</strong> olanları kapsayacak bir komut olması için konsola <strong><code>ls -l [234]</code></strong> komutunu verdim.</p>
+<p>Örnek olması açısında "<strong>dosya</strong>" isimli belgelerden sadece sonunda <strong>2,3,4</strong> olanları kapsayacak bir komut olması için konsola <strong><code class="language-bash">ls -l [234]</code></strong> komutunu verdim.</p>
 <p><img src="../../img/15-%20Joker%20Karakterler/6-min.png" class="responsive "></p>
 <p>Bir örnek daha verelim.</p>
 <p><strong>[Dd]osya[Aa]dı</strong> şeklinde bir belirtme; <strong>DosyaAdı, Dosyaadı, dosyaAdı, dosyaadı</strong> şeklindeki bütün isimleri kapsayacaktır. Bu sayede ilgili dosyalar için tüm küçük büyük harf kombinasyonu kolaylıkla sağlanmış olur.</p>
@@ -165,7 +147,7 @@
 <p>Temel ve en çok başvurulan joker karakterler bu şekildedir. Sizler de joker karakterler sayesinde konsoldan çalışırken oldukça pratik şekilde işlemlerinizi yerine getirebilirsiniz. Konuyu daha iyi anlamak adına mutlaka ama mutlaka kendiniz de örnek denemeler yapın.</p>
 		<h1></h1>
 <div align="center" class="container">
-<div class="card mb-4 ">
+<div class="card mb-4 border">
     <div class="row no-gutters">
         <div class="col-md-3">
             <img src="../../img/menu/pc-logo.png" class="card-img-top img1">
@@ -173,7 +155,7 @@
         <div class="col-md-8">
             <div class="card-body">
 		<strong class="d-inline-block mb-0 text-primary"><h3 id="alistirma">Alıştırmalar Hakkında</h3></strong>
-                <p class="card-text text-dark">Öğrendiğiniz bilgilerin kalıcı olması için bolca alıştırma yapmalısınız. Burada yer alan alıştırma faaliyetleri dışında, konuyu öğrendiğinizi hissede kadar kendiniz de bolca pratik yapın lütfen.  Aksi halde öğrendiğiniz bilgiler kısa sürede unutulup gidecektir. </p>
+                <p class="card-text">Öğrendiğiniz bilgilerin kalıcı olması için bolca alıştırma yapmalısınız. Burada yer alan alıştırma faaliyetleri dışında, konuyu öğrendiğinizi hissede kadar kendiniz de bolca pratik yapın lütfen.  Aksi halde öğrendiğiniz bilgiler kısa sürede unutulup gidecektir. </p>
                 
             </div>
         </div>
@@ -195,14 +177,14 @@
 	<div class="col-md-14">
       <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
-		<p class="card-text mb-auto"><em><strong><code>/etc</code>&nbsp;</strong></em> dizini içerisindeki "<em><strong>a</strong></em>" ifadesi <strong>ile başlayan tüm her şeyi </strong>konsoldan listeleyin.
+		<p class="card-text mb-auto"><em><strong><code class="language-bash">/etc</code>&nbsp;</strong></em> dizini içerisindeki "<em><strong>a</strong></em>" ifadesi <strong>ile başlayan tüm her şeyi </strong>konsoldan listeleyin.
         </p></div>        
       </div>
     </div>
 	<div class="col-md-14">
       <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
-		<p class="card-text mb-auto"><em><strong><code>/etc </code>&nbsp;</strong></em>dizini içerisindeki "<em><strong>a</strong></em>" ifadesi <strong>ile biten tüm her şeyi </strong>konsoldan listeleyin.
+		<p class="card-text mb-auto"><em><strong><code class="language-bash">/etc </code>&nbsp;</strong></em>dizini içerisindeki "<em><strong>a</strong></em>" ifadesi <strong>ile biten tüm her şeyi </strong>konsoldan listeleyin.
         </p></div>        
       </div>
     </div>
@@ -253,16 +235,15 @@
 <center>
 	<h1 id="bildirim">Geri Bildirimde Bulunun</h1>
 <p>Sizlere daha verimli bir kaynak sunabilmemiz için, uygulamada veya dokümantasyonlarda yer alan tüm hata ve eksiklerimizi bize bildirebilirsiniz.	</p>
-	<div class="checkbox mb-3">                         
-			<a href="../../bildirim.html" class="btn btn-danger">Geri Bildirimde Bulunun</a>
-      </div>
+	<a href="../../bildirim.html" class="btn btn-danger">Geri Bildirimde Bulunun</a>
 	  </center>	
 </article>       
     </div>
 
     
 <script src="../../js/jquery-3.3.1.slim.min.js"></script>
-<script src="../../js/script.js"></script>		
+<script src="../../js/script.js"></script>	
+<script src="../../js/prism.js"></script>		
  
 
 

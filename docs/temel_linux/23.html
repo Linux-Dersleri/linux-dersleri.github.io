@@ -9,15 +9,17 @@
 	<link rel="stylesheet" href="../../css/bootstrap.min.css">
 	<link rel="stylesheet" href="../../css/font-awesome.min.css">
 	<link rel="stylesheet" href="../../css/style.css">
+<link rel="stylesheet" href="../../css/prism.css">
 
 </head>
 
-<body id="body" >	
+<body>	
 <div class="bs-canvas-overlay bs-canvas-anim bg-dark position-fixed w-100 h-100"></div>
 	
 <nav class="navbar y-navbar sticky-top navbar-expand-lg navbar-light bg-light">
   
-  <a style="color: black" class="btn"  data-toggle="canvas" data-target="#bs-canvas-left" aria-expanded="false" aria-controls="bs-canvas-left"><i class="fa fa-align-justify fa-lg"></i></a>
+  <div align="left">
+		<a class="btn" data-toggle="canvas" data-target="#bs-canvas-left" aria-expanded="false" aria-controls="bs-canvas-left"><i class="fa fa-align-justify fa-lg"></i></a></div>
   <center >
 	<div>
 	<a href="./22.html" style="color: black" class="btn navbar-toggler " > <i class="fa fa-angle-double-left fa-lg"></i></a>
@@ -27,15 +29,20 @@
     <a href="./24.html" style="color: black" class="btn navbar-toggler " ><i class="fa fa-angle-double-right fa-lg"></i> </a>
 	</div>
   </center>
-  <a style="color: black" class="btn"  data-toggle="canvas" data-target="#bs-canvas-right" aria-expanded="false" aria-controls="bs-canvas-right" ><i class="fa fa-gear fa-lg"></i></a>  
+  <div align="right">
+			<div class="togg-wrap">
+			
+			<button onclick="tema()" class="btn" ><i class="fa fa-adjust fa-lg"></i></button>  
+    
+		</div> 
 		
 </nav>
 
 <nav class="navbar x-navbar sticky-top navbar-expand-lg navbar-light bg-light border-bottom">
 	
 	<div class="container ">
-            <div align="left"><button class="btn"  data-toggle="canvas" data-target="#bs-canvas-left" aria-expanded="false" aria-controls="bs-canvas-left"><i class="fa fa-align-justify fa-lg"></i></button>
-		<a href="../../menu.html" class="btn"  ><i class="fa fa-home fa-lg"></i></a>     </div>
+            <div align="left">
+		<a class="btn" data-toggle="canvas" data-target="#bs-canvas-left" aria-expanded="false" aria-controls="bs-canvas-left"><i class="fa fa-align-justify fa-lg"></i></a><a href="../../menu.html" class="btn"  ><i class="fa fa-home fa-lg"></i></a></div>
 	<center >
 		
         <a href="./22.html" class="btn">Önceki <i class="fa fa-angle-double-left fa-lg"></i></a>
@@ -47,46 +54,21 @@
         
     </center>
 			<div align="right">
+			<div class="togg-wrap">
+			
+			<button onclick="tema()" class="btn" ><i class="fa fa-adjust fa-lg"></i></button>  
 				<a href="../../bildirim.html" class="btn" ><i class="fa fa-paper-plane"></i></a>    
-             <a style="color: black" class="btn"  data-toggle="canvas" data-target="#bs-canvas-right" aria-expanded="false" aria-controls="bs-canvas-right" ><i class="fa fa-gear fa-lg"></i></a>  
 		</div>              
+	</div>              
 	</div>
      
 </nav>
-<div id="bs-canvas-right" class="bs-canvas bs-canvas-anim bs-canvas-right position-fixed bg-light h-100" >
-	<header class="bs-canvas-header p-3 bg-dark">
-		
-    	<h4 align="center" class="text-light">Ayar Menüsü<button type="button" class="bs-canvas-close close" aria-label="Close" aria-expanded="true"><span aria-hidden="true" class="text-light">×</span></button></h4>
-        
-    </header>
-    <div class="bs-canvas-content px-3">
-    	
-    	<div align="center" class="list-group my-2 ">
-			<button class="btn">Yazı Boyutunu Seçip Kaydedin</button>
-  <!-- This is how they choose their font size -->
-  <select onchange="fontSize(this);">
-    
-	<option>18px</option>
-	<option>20px</option>
-	<option>22px</option>
-	<option>24px</option>
-	<option>26px</option>
 
-  </select>
-  <br>
-
-  <input type="button" id="save" value="Seçili Boyutu Kaydet">
-<button class="btn">Okuma Modunu Değiştirin</button>
-		<button class="btn btn-outline-dark" onclick="darkLight()" ><i class="fa fa-eye fa-lg"></i></button>
-		
-        </div>
-    </div>    
-</div>
 	
-<div id="bs-canvas-left" class="bs-canvas bs-canvas-anim bs-canvas-left position-fixed bg-light h-100" >
-	<header class="bs-canvas-header p-3 bg-dark">
+<div id="bs-canvas-left" class="bs-canvas bs-canvas-anim bs-canvas-left position-fixed bg-kanvas h-100" >
+	<header class="bs-canvas-header p-3 bg-baslık">
 		
-    	<h4 align="center" class="text-light">İçerik Menüsü<button type="button" class="bs-canvas-close close" aria-label="Close" aria-expanded="true"><span aria-hidden="true" class="text-light">×</span></button></h4>
+    	<h4 align="center" >İçerik Menüsü<button type="button" class="bs-canvas-close close" aria-label="Close" aria-expanded="true"><span aria-hidden="true" >×</span></button></h4>
         
     </header>
     <div class="bs-canvas-content px-3">
@@ -121,43 +103,43 @@
         
       </div>
     </div>
-<article id="makale" style="font-size:1em;" class="markdown-body entry-content" itemprop="text">
+<article id="makale" style="font-size:1.2em;" class="markdown-body entry-content" itemprop="text">
 	
 	 
 <p>Sistemde meydana gelen hatalar, sorunlar, işlemler, değişiklikler ve neredeyse her şey kayıt altına alınarak saklanır. Bu kayıt altına alınan bilgilere <strong>log</strong> deniyor. Neden <strong>log</strong>(<strong>kayıt</strong>) tutulmak zorunda diye soracak olursanız; kısaca sistemin olumsuz bir durumla karşılaşması halinde sorunun yaşanma nedeninin belirlenmesi, sistem güvenliğini sağlama, gerektiğinde veri kurtarma ve adli bilişim gibi alanlarda başvurmamız gereken yegane kaynaklardır <strong>log</strong> dosyaları. Anlayacağınız <strong>log</strong>(kayıt) dosyaları sistem bütünü için çok önemli yer tutmaktadır.</p>
 <h2 id="dosya">Log Dosyaları</h2>
-<p>Linux sisteminde <strong>log</strong> dosyalarının çok büyük kısmı <strong><mark>/var</mark></strong> dizini altında <strong><mark>log</mark></strong> klasörü içerisinde tutuluyor. Ayrıca <strong><mark>log</mark></strong> dizini içerisinde de belli başlı programlara ve servislere ait logları bulunduran başka alt dizinler bulunuyor. Bu durumu gözlemlemek için komut satırına <strong><code>cd /var/log</code></strong> yazarak <strong>log</strong> dosyalarının tutulduğu dizine gidip dizin içerisinde iken <strong><code>ls</code></strong> komutu ile dizin içeriğini listeleyelim.</p>
+<p>Linux sisteminde <strong>log</strong> dosyalarının çok büyük kısmı <strong><mark>/var</mark></strong> dizini altında <strong><mark>log</mark></strong> klasörü içerisinde tutuluyor. Ayrıca <strong><mark>log</mark></strong> dizini içerisinde de belli başlı programlara ve servislere ait logları bulunduran başka alt dizinler bulunuyor. Bu durumu gözlemlemek için komut satırına <strong><code class="language-bash">cd /var/log</code></strong> yazarak <strong>log</strong> dosyalarının tutulduğu dizine gidip dizin içerisinde iken <strong><code class="language-bash">ls</code></strong> komutu ile dizin içeriğini listeleyelim.</p>
 <p><img src="../../img/20-%20Log%20Dosyalar%C4%B1/1-min.png" class="responsive"></p>
 <p>Bir çok kayıt dosyası listelenmiş oldu.
 Örneğin ben buradan, oturum açma işlemlerini ve detaylarını tutan <strong><mark>auth.log</mark></strong> dosyasını açarak sistemde yapılmış olan oturum açma işlemlerini ve detaylarını inceleyebilirim. Ancak bu noktada bir kısa bilgi Linux sistemi <strong>log</strong> dosyalarının çok fazla yer kaplamasını önlemek için üzerine yazma metodunu kullanıyor. Bu noktada <strong>cron</strong> servisi ile <strong>log</strong> kayıtları her hafta eklenerek maksimum 1 ay kadar eskiyi yani 4 haftayı kayıt altında tutuyor. Bu tutulan kayıtlar 4 hafta sonunda; "<em>log_dosyası.1.gz</em>", "<em>log_dosyası.2.gz</em>", "<em>log_dosyası.3.gz</em>" şeklinde arşivlenerek saklanıyor. Yani örneğin siz eğer <strong><mark>auth.log</mark></strong> dosyasının bu ay değil de geçmişteki aylardaki kayıtlarına bakmak isterseniz. Arşivlenmiş olan "<em>auth.log.1.gz</em>", "<em>auth.log.2.gz</em>", "<em>auth.log.3.gz"</em> şeklindeki dosyalara bakmanız gerekir.</p>
-<p><strong>Log</strong> dosyalarını incelerken kolaylık olması açısından daha önce de kullanmış olduğumuz ve dosyanın alt(tail/kuyruk) kısımlarını listeleyen <strong><code>tail</code></strong> komutundan yararlanacağız. Bu sayede uzun uzadıya dosyanın tamamına bakmak yerine son eklenen bilgileri inceleyebileceğiz.</p>
-<p>Hemen örnek olması açısından oturum açma işlemlerini ve detaylarını tutan <strong><mark>auth.log</mark></strong> kayıt dosyasını açalım. Bu açma işlemini de yalnızca dosyada en son yapılmış 5 değişikliği gösterecek şekilde yapalım. Bunun için konsola <strong><code>tail -n 5 auth.log</code></strong> komutumuzu giriyoruz.</p>
+<p><strong>Log</strong> dosyalarını incelerken kolaylık olması açısından daha önce de kullanmış olduğumuz ve dosyanın alt(tail/kuyruk) kısımlarını listeleyen <strong><code class="language-bash">tail</code></strong> komutundan yararlanacağız. Bu sayede uzun uzadıya dosyanın tamamına bakmak yerine son eklenen bilgileri inceleyebileceğiz.</p>
+<p>Hemen örnek olması açısından oturum açma işlemlerini ve detaylarını tutan <strong><mark>auth.log</mark></strong> kayıt dosyasını açalım. Bu açma işlemini de yalnızca dosyada en son yapılmış 5 değişikliği gösterecek şekilde yapalım. Bunun için konsola <strong><code class="language-bash">tail -n 5 auth.log</code></strong> komutumuzu giriyoruz.</p>
 <p><img src="../../img/20-%20Log%20Dosyalar%C4%B1/2-min.png" class="responsive"></p>
 <p>Komutumuzu girmemizle birlikte konsol bize son 5 oturum açma işlemlerini ve detaylarını listelemiş oldu.</p>
-<p>Hazır yeri gelmişken <strong><code>tail</code></strong> komutuyla sistemdeki olayların anlık olarak takibini yapalım. Bunun için sistemdeki olayların kaydını tutan <strong><mark>messages</mark></strong> dosyasını okumalıyız. Bu okuma işlemini sistemdeki anlık hareketleri takip etmek için yaptığımızdan, okuduğumuz dosyaya yeni eklenen her veriyi anlık görmek için <strong><code>tail -f messages</code></strong> komutunu kullanıyoruz. Buradaki <strong><code>tail -f</code></strong> komutunu açıklayacak olursam; biliyorsunuz <strong><code>tail</code></strong> komutu dosyanın alt satırlarını görüntülememize olanak tanıyan bir komut. Ve bu komutun <strong><code>-f </code></strong> parametresi de bu görüntülenecek kısım için dosyayı sürekli yeniden tarayarak dosyaya en son eklenen verileri bize göstermekle mükellef. Yani <strong><code>tail</code></strong> komutunun <strong><code>f</code></strong> parametresi bize yalnızca dosyaya en son eklenen ifadeleri güncel şekilde listeliyor.</p>
+<p>Hazır yeri gelmişken <strong><code class="language-bash">tail</code></strong> komutuyla sistemdeki olayların anlık olarak takibini yapalım. Bunun için sistemdeki olayların kaydını tutan <strong><mark>messages</mark></strong> dosyasını okumalıyız. Bu okuma işlemini sistemdeki anlık hareketleri takip etmek için yaptığımızdan, okuduğumuz dosyaya yeni eklenen her veriyi anlık görmek için <strong><code class="language-bash">tail -f messages</code></strong> komutunu kullanıyoruz. Buradaki <strong><code class="language-bash">tail -f</code></strong> komutunu açıklayacak olursam; biliyorsunuz <strong><code class="language-bash">tail</code></strong> komutu dosyanın alt satırlarını görüntülememize olanak tanıyan bir komut. Ve bu komutun <strong><code class="language-bash">-f </code></strong> parametresi de bu görüntülenecek kısım için dosyayı sürekli yeniden tarayarak dosyaya en son eklenen verileri bize göstermekle mükellef. Yani <strong><code class="language-bash">tail</code></strong> komutunun <strong><code class="language-bash">f</code></strong> parametresi bize yalnızca dosyaya en son eklenen ifadeleri güncel şekilde listeliyor.</p>
 <p><img src="../../img/20-%20Log%20Dosyalar%C4%B1/3-min.png" class="responsive"></p> 
 <h2 id="dmesg">dmesg</h2>
-<p>Sistem açılışından itibaren çekirdek tarafından üretilen tüm iletiler ve kernel hakkındaki kayıtlar <strong><mark>/proc/kmsg</mark></strong> dizininde tutuluyor. Ancak biz bütün kernel kayıtları yerine, sistem açılışında yazan açılış notlarını <strong><code>dmesg</code></strong> komutu ile görüntüleyebiliriz. Yani <strong><code>dmesg</code></strong> komutu sadece tampondaki son iletileri gösterir. Bu komutun kullanımına genelde sistem açılışında bildirilen problemlerin tespiti ve diğer sistem uyarılarını saptamak için başvurulur.</p>
+<p>Sistem açılışından itibaren çekirdek tarafından üretilen tüm iletiler ve kernel hakkındaki kayıtlar <strong><mark>/proc/kmsg</mark></strong> dizininde tutuluyor. Ancak biz bütün kernel kayıtları yerine, sistem açılışında yazan açılış notlarını <strong><code class="language-bash">dmesg</code></strong> komutu ile görüntüleyebiliriz. Yani <strong><code class="language-bash">dmesg</code></strong> komutu sadece tampondaki son iletileri gösterir. Bu komutun kullanımına genelde sistem açılışında bildirilen problemlerin tespiti ve diğer sistem uyarılarını saptamak için başvurulur.</p>
 <p><img src="../../img/20-%20Log%20Dosyalar%C4%B1/4-min.png" class="responsive"></p>
-<p>Elbetteki çıktı çok daha uzun ancak ben örnek olması açısından çıktıları kısaca verdim. Eğer siz bu çıktıları filtrelemek isterseniz <strong><code>grep</code></strong> komutunu kullanarak ilgili çıktılara rahatlıkla ulaşabileceğinizi biliyorsunuz. Örneğin yalnızca hataları görüntülemek istersek konsola <strong><code>dmesg | grep "fail" </code></strong> şeklinde yazdığımızda, konsol bize yalnızca sistem açılışında belirtilen hataları basacaktır.</p>
+<p>Elbetteki çıktı çok daha uzun ancak ben örnek olması açısından çıktıları kısaca verdim. Eğer siz bu çıktıları filtrelemek isterseniz <strong><code class="language-bash">grep</code></strong> komutunu kullanarak ilgili çıktılara rahatlıkla ulaşabileceğinizi biliyorsunuz. Örneğin yalnızca hataları görüntülemek istersek konsola <strong><code class="language-bash">dmesg | grep "fail" </code></strong> şeklinde yazdığımızda, konsol bize yalnızca sistem açılışında belirtilen hataları basacaktır.</p>
 <p><img src="../../img/20-%20Log%20Dosyalar%C4%B1/5-min.png" class="responsive"></p>
 <p>Gördüğünüz gibi "<strong>fail</strong>" ifadesinin geçtiği, yani <strong>hataların</strong> belirtildiği tüm iletiler karşımıza gelmiş oldu.</p>
 <h2 id="last">last</h2>
-<p>Komutumuzun isminden de az çok anlaşılacağı gibi; en son oturum açan kullanıcıları listelemek için <strong><code>last</code></strong> komutunu kullanabiliriz.</p>
+<p>Komutumuzun isminden de az çok anlaşılacağı gibi; en son oturum açan kullanıcıları listelemek için <strong><code class="language-bash">last</code></strong> komutunu kullanabiliriz.</p>
 <p><img src="../../img/20-%20Log%20Dosyalar%C4%B1/6-min.png" class="responsive"></p>
-<p><strong><code>last</code></strong> komutuyla en son oturum açan kullanıcılar uzunca listelenmiş oldu.</p>
-<p>Eğer uzunca liste almak istemezsek komutumuzu en son listelemek istediğimiz satır sayısını belirterek <strong><code>last -satır_sayısı</code></strong> şeklinde belirterek istediğimiz uzunlukta çıktı elde edebiliriz.</p>
-<p>Örneğin ben sadece son 2 oturum hareketini görüntülemek istersem komutumu <strong><code>last -2</code></strong> şeklinde belirtmem yeterli.</p>
+<p><strong><code class="language-bash">last</code></strong> komutuyla en son oturum açan kullanıcılar uzunca listelenmiş oldu.</p>
+<p>Eğer uzunca liste almak istemezsek komutumuzu en son listelemek istediğimiz satır sayısını belirterek <strong><code class="language-bash">last -satır_sayısı</code></strong> şeklinde belirterek istediğimiz uzunlukta çıktı elde edebiliriz.</p>
+<p>Örneğin ben sadece son 2 oturum hareketini görüntülemek istersem komutumu <strong><code class="language-bash">last -2</code></strong> şeklinde belirtmem yeterli.</p>
 <p><img src="../../img/20-%20Log%20Dosyalar%C4%B1/7-min.png" class="responsive"></p>
-<p>Veya sondan 4 oturuma bakmak istersem komutumuzu <strong><code>last -4</code></strong> şeklinde kullanırım.</p>
+<p>Veya sondan 4 oturuma bakmak istersem komutumuzu <strong><code class="language-bash">last -4</code></strong> şeklinde kullanırım.</p>
 <p><img src="../../img/20-%20Log%20Dosyalar%C4%B1/8-min.png" class="responsive"></p>
-<p>Ayrıca kullanıcı adına göre oturum açma bilgisi sorgulayabiliriz. Örneğin ben yalnızca "<strong>burak</strong>" isimli kullanıcı hesabının oturum hareketlerini görmek istersem, konsola <strong><code>last burak</code></strong> şeklinde yazdığımda karşıma yalnızca "<strong>burak</strong>" kullanıcı hesabının oturum hareketleri gelir.</p>
+<p>Ayrıca kullanıcı adına göre oturum açma bilgisi sorgulayabiliriz. Örneğin ben yalnızca "<strong>burak</strong>" isimli kullanıcı hesabının oturum hareketlerini görmek istersem, konsola <strong><code class="language-bash">last burak</code></strong> şeklinde yazdığımda karşıma yalnızca "<strong>burak</strong>" kullanıcı hesabının oturum hareketleri gelir.</p>
 <p><img src="../../img/20-%20Log%20Dosyalar%C4%B1/9-min.png" class="responsive"></p>
-<p>Gördüğünüz gibi yalnızca "<strong>burak</strong>" kullanıcı hesabının oturum açma bilgileri listelenmiş oldu. Yani kullanıcıya göre oturum bilgilerini öğrenmek için, komutu <strong><code>last kullanıcı_adı</code></strong> şeklinde kullanabilirsiniz.</p>
+<p>Gördüğünüz gibi yalnızca "<strong>burak</strong>" kullanıcı hesabının oturum açma bilgileri listelenmiş oldu. Yani kullanıcıya göre oturum bilgilerini öğrenmek için, komutu <strong><code class="language-bash">last kullanıcı_adı</code></strong> şeklinde kullanabilirsiniz.</p>
 <p><img src="../../img/20-%20Log%20Dosyalar%C4%B1/10-min.png" class="responsive"></p>
 		<h1></h1>
 <div align="center" class="container">
-<div class="card mb-4 ">
+<div class="card mb-4 border">
     <div class="row no-gutters">
         <div class="col-md-3">
             <img src="../../img/menu/pc-logo.png" class="card-img-top img1">
@@ -165,7 +147,7 @@
         <div class="col-md-8">
             <div class="card-body">
 		<strong class="d-inline-block mb-0 text-primary"><h3 id="alistirma">Alıştırmalar Hakkında</h3></strong>
-                <p class="card-text text-dark">Öğrendiğiniz bilgilerin kalıcı olması için bolca alıştırma yapmalısınız. Burada yer alan alıştırma faaliyetleri dışında, konuyu öğrendiğinizi hissede kadar kendiniz de bolca pratik yapın lütfen.  Aksi halde öğrendiğiniz bilgiler kısa sürede unutulup gidecektir. </p>
+                <p class="card-text">Öğrendiğiniz bilgilerin kalıcı olması için bolca alıştırma yapmalısınız. Burada yer alan alıştırma faaliyetleri dışında, konuyu öğrendiğinizi hissede kadar kendiniz de bolca pratik yapın lütfen.  Aksi halde öğrendiğiniz bilgiler kısa sürede unutulup gidecektir. </p>
                 
             </div>
         </div>
@@ -224,16 +206,15 @@
 <center>
 	<h1 id="bildirim">Geri Bildirimde Bulunun</h1>
 <p>Sizlere daha verimli bir kaynak sunabilmemiz için, uygulamada veya dokümantasyonlarda yer alan tüm hata ve eksiklerimizi bize bildirebilirsiniz.	</p>
-	<div class="checkbox mb-3">                         
-			<a href="../../bildirim.html" class="btn btn-danger">Geri Bildirimde Bulunun</a>
-      </div>
+	<a href="../../bildirim.html" class="btn btn-danger">Geri Bildirimde Bulunun</a>
 	  </center>	
 </article>       
     </div>
 
     
 <script src="../../js/jquery-3.3.1.slim.min.js"></script>
-<script src="../../js/script.js"></script>		
+<script src="../../js/script.js"></script>	
+<script src="../../js/prism.js"></script>		
  
 
 

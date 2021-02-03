@@ -9,15 +9,17 @@
 	<link rel="stylesheet" href="../../css/bootstrap.min.css">
 	<link rel="stylesheet" href="../../css/font-awesome.min.css">
 	<link rel="stylesheet" href="../../css/style.css">
+<link rel="stylesheet" href="../../css/prism.css">
 
 </head>
 
-<body id="body" >	
+<body>	
 <div class="bs-canvas-overlay bs-canvas-anim bg-dark position-fixed w-100 h-100"></div>
 	
 <nav class="navbar y-navbar sticky-top navbar-expand-lg navbar-light bg-light">
   
-  <a style="color: black" class="btn"  data-toggle="canvas" data-target="#bs-canvas-left" aria-expanded="false" aria-controls="bs-canvas-left"><i class="fa fa-align-justify fa-lg"></i></a>
+  <div align="left">
+		<a class="btn" data-toggle="canvas" data-target="#bs-canvas-left" aria-expanded="false" aria-controls="bs-canvas-left"><i class="fa fa-align-justify fa-lg"></i></a></div>
   <center >
 	<div>
 	<a href="./14.html" style="color: black" class="btn navbar-toggler " > <i class="fa fa-angle-double-left fa-lg"></i></a>
@@ -27,15 +29,20 @@
     <a href="./16.html" style="color: black" class="btn navbar-toggler " ><i class="fa fa-angle-double-right fa-lg"></i> </a>
 	</div>
   </center>
-  <a style="color: black" class="btn"  data-toggle="canvas" data-target="#bs-canvas-right" aria-expanded="false" aria-controls="bs-canvas-right" ><i class="fa fa-gear fa-lg"></i></a>  
+  <div align="right">
+			<div class="togg-wrap">
+			
+			<button onclick="tema()" class="btn" ><i class="fa fa-adjust fa-lg"></i></button>  
+    
+		</div> 
 		
 </nav>
 
 <nav class="navbar x-navbar sticky-top navbar-expand-lg navbar-light bg-light border-bottom">
 	
 	<div class="container ">
-            <div align="left"><button class="btn"  data-toggle="canvas" data-target="#bs-canvas-left" aria-expanded="false" aria-controls="bs-canvas-left"><i class="fa fa-align-justify fa-lg"></i></button>
-		<a href="../../menu.html" class="btn"  ><i class="fa fa-home fa-lg"></i></a>     </div>
+            <div align="left">
+		<a class="btn" data-toggle="canvas" data-target="#bs-canvas-left" aria-expanded="false" aria-controls="bs-canvas-left"><i class="fa fa-align-justify fa-lg"></i></a><a href="../../menu.html" class="btn"  ><i class="fa fa-home fa-lg"></i></a></div>
 	<center >
 		
         <a href="./14.html" class="btn">Önceki <i class="fa fa-angle-double-left fa-lg"></i></a>
@@ -47,46 +54,21 @@
         
     </center>
 			<div align="right">
+			<div class="togg-wrap">
+			
+			<button onclick="tema()" class="btn" ><i class="fa fa-adjust fa-lg"></i></button>  
 				<a href="../../bildirim.html" class="btn" ><i class="fa fa-paper-plane"></i></a>    
-             <a style="color: black" class="btn"  data-toggle="canvas" data-target="#bs-canvas-right" aria-expanded="false" aria-controls="bs-canvas-right" ><i class="fa fa-gear fa-lg"></i></a>  
 		</div>              
+	</div>              
 	</div>
      
 </nav>
-<div id="bs-canvas-right" class="bs-canvas bs-canvas-anim bs-canvas-right position-fixed bg-light h-100" >
-	<header class="bs-canvas-header p-3 bg-dark">
-		
-    	<h4 align="center" class="text-light">Ayar Menüsü<button type="button" class="bs-canvas-close close" aria-label="Close" aria-expanded="true"><span aria-hidden="true" class="text-light">×</span></button></h4>
-        
-    </header>
-    <div class="bs-canvas-content px-3">
-    	
-    	<div align="center" class="list-group my-2 ">
-			<button class="btn">Yazı Boyutunu Seçip Kaydedin</button>
-  <!-- This is how they choose their font size -->
-  <select onchange="fontSize(this);">
-    
-	<option>18px</option>
-	<option>20px</option>
-	<option>22px</option>
-	<option>24px</option>
-	<option>26px</option>
 
-  </select>
-  <br>
-
-  <input type="button" id="save" value="Seçili Boyutu Kaydet">
-<button class="btn">Okuma Modunu Değiştirin</button>
-		<button class="btn btn-outline-dark" onclick="darkLight()" ><i class="fa fa-eye fa-lg"></i></button>
-		
-        </div>
-    </div>    
-</div>
 	
-<div id="bs-canvas-left" class="bs-canvas bs-canvas-anim bs-canvas-left position-fixed bg-light h-100" >
-	<header class="bs-canvas-header p-3 bg-dark">
+<div id="bs-canvas-left" class="bs-canvas bs-canvas-anim bs-canvas-left position-fixed bg-kanvas h-100" >
+	<header class="bs-canvas-header p-3 bg-baslık">
 		
-    	<h4 align="center" class="text-light">İçerik Menüsü<button type="button" class="bs-canvas-close close" aria-label="Close" aria-expanded="true"><span aria-hidden="true" class="text-light">×</span></button></h4>
+    	<h4 align="center" >İçerik Menüsü<button type="button" class="bs-canvas-close close" aria-label="Close" aria-expanded="true"><span aria-hidden="true" >×</span></button></h4>
         
     </header>
     <div class="bs-canvas-content px-3">
@@ -120,43 +102,43 @@
         
       </div>
     </div>
- <article id="makale" style="font-size:1em;" class="markdown-body entry-content" itemprop="text">
+ <article id="makale" style="font-size:1.2em;" class="markdown-body entry-content" itemprop="text">
 	 
 	 <h1 id="runlevels">Çalışma Seviyeleri (Runlevels)</h1>
   <p>Sistem açıldığında hangi çalışma seviyesindeyse o seviyeye göre belirlenmiş olan hizmetler başlatılır. İşte bu olaya da <strong>Runlevels(çalışma seviyeleri)</strong> deniyor. Linux sisteminde <strong>7 farklı seviye</strong> bulunuyor.</p>
 <p>Seviyeler ve ifade ettikleri aşağıdaki tabloda verilmiştir.</p>
     <p><img src="../../img/12-%20%C3%87al%C4%B1%C5%9Fma%20Seviyeleri(Runlevels)/runlevel.png" class="responsive"></p>
-<p>O anda hangi seviyede çalıştığımızı öğrenmek istersek komut satırına <strong><code>runlevel</code></strong> komutunu vermemiz yeterli.</p>
+<p>O anda hangi seviyede çalıştığımızı öğrenmek istersek komut satırına <strong><code class="language-bash">runlevel</code></strong> komutunu vermemiz yeterli.</p>
 <p><img src="../../img/12-%20%C3%87al%C4%B1%C5%9Fma%20Seviyeleri(Runlevels)/1-min.png" class="responsive"></p>
-<p>Çıktıda çalışma seviyem 5 olarak çıktı. Bunun sebebi de, daha önce de söylediğimiz gibi Linux, sistemi varsayılan olarak 5. seviyede başlatıyor. Eğer çalışma seviyesi değiştirmek istersek bunu <strong><code>init çalışma_seviyesi</code></strong> şeklinde yapabiliriz.</p>
+<p>Çıktıda çalışma seviyem 5 olarak çıktı. Bunun sebebi de, daha önce de söylediğimiz gibi Linux, sistemi varsayılan olarak 5. seviyede başlatıyor. Eğer çalışma seviyesi değiştirmek istersek bunu <strong><code class="language-bash">init çalışma_seviyesi</code></strong> şeklinde yapabiliriz.</p>
 <p>Bu şekilde sistemi yeniden başlatana kadar seçtiğimiz çalışma seviyesinde devam edebiliriz. Ancak dediğim gibi sistemi yeniden başlattığınızda sistem varsayılan olarak 5. seviyede başlayacaktır.</p>
-<p>Ayrıca yeri gelmişken sistemi kapatmak istersek bunu hiç bir hizmetin çalışmadığını <strong>0. runlevel</strong> ile yani <strong><code>init 0</code></strong> komutunu vererek yapabiliriz.</p>
+<p>Ayrıca yeri gelmişken sistemi kapatmak istersek bunu hiç bir hizmetin çalışmadığını <strong>0. runlevel</strong> ile yani <strong><code class="language-bash">init 0</code></strong> komutunu vererek yapabiliriz.</p>
 <p>Ayrıca kapatma işlemi için;</p>
-<p><strong><code>shutdown -h now</code></strong> beklemeden direk sistemi kapatacaktır.</p>
-<p><strong><code>shutdown -h now+5</code></strong> 5 dakika sonra sistemi kapatacaktır.</p>
-<p><strong><code>halt</code></strong> sisteminizi doğrudan kapatacaktır(halt kavramının 0.seviyede hiç bir servisin çalışmadığı durumu temsil ettiğini söylemiştik).</p>
-<p>Eğer sistemi yeniden başlatmak istersek <strong><code>init 6</code></strong> veya <strong><code>reboot</code></strong> komutunu kullanabiliriz.</p>
+<p><strong><code class="language-bash">shutdown -h now</code></strong> beklemeden direk sistemi kapatacaktır.</p>
+<p><strong><code class="language-bash">shutdown -h now+5</code></strong> 5 dakika sonra sistemi kapatacaktır.</p>
+<p><strong><code class="language-bash">halt</code></strong> sisteminizi doğrudan kapatacaktır(halt kavramının 0.seviyede hiç bir servisin çalışmadığı durumu temsil ettiğini söylemiştik).</p>
+<p>Eğer sistemi yeniden başlatmak istersek <strong><code class="language-bash">init 6</code></strong> veya <strong><code class="language-bash">reboot</code></strong> komutunu kullanabiliriz.</p>
 <h2 id="service">service</h2>
 <p>Şimdi ise sistemdeki servisleri açıp-kapatmayı ve bu servislerin durumunu sorgulamayı görelim. Komutumuzun işlevlerinin kullanım kalıpları aşağıdakiler gibidir.</p>
 <p>Örnek kullanımları <strong>ssh servisi</strong> üzerinden gösterelim.</p>
-<p>Servisimizin durumunu sorgulamak için komut satırımıza <strong><code>service ssh status</code></strong> yazıyoruz.</p>
+<p>Servisimizin durumunu sorgulamak için komut satırımıza <strong><code class="language-bash">service ssh status</code></strong> yazıyoruz.</p>
 <p><img src="../../img/12-%20%C3%87al%C4%B1%C5%9Fma%20Seviyeleri(Runlevels)/2-min.png" class="responsive"></p>
 <p>Komut satırı çıktı olarak bize <em><strong>ssh</strong></em> servisinin kapalı olduğunu bildirdi.</p>
-<p>Şimdi <strong>servisimizi başlatmak</strong> üzere komut satırına <strong><code>service ssh start</code></strong> komutumuzu veriyoruz.</p>
+<p>Şimdi <strong>servisimizi başlatmak</strong> üzere komut satırına <strong><code class="language-bash">service ssh start</code></strong> komutumuzu veriyoruz.</p>
 <p><img src="../../img/12-%20%C3%87al%C4%B1%C5%9Fma%20Seviyeleri(Runlevels)/3-min.png" class="responsive"></p>
-<p><strong>Servisimizi başlattıktan sonra durumu kontrol etmek</strong> için tekrar <strong><code>service ssh status</code></strong> komutumuzu verdik ve görüldüğü gibi <em><strong>ssh</strong></em> servisimiz artık çalışır durumda.</p>
-<p>Şimdi ise çalışan <strong>servisimizi kapatmak</strong> için komut satırına <strong><code>service ssh stop</code></strong> komutumuzu veriyoruz.</p>
+<p><strong>Servisimizi başlattıktan sonra durumu kontrol etmek</strong> için tekrar <strong><code class="language-bash">service ssh status</code></strong> komutumuzu verdik ve görüldüğü gibi <em><strong>ssh</strong></em> servisimiz artık çalışır durumda.</p>
+<p>Şimdi ise çalışan <strong>servisimizi kapatmak</strong> için komut satırına <strong><code class="language-bash">service ssh stop</code></strong> komutumuzu veriyoruz.</p>
 <p><img src="../../img/12-%20%C3%87al%C4%B1%C5%9Fma%20Seviyeleri(Runlevels)/4-min.png" class="responsive"></p>
-<p>Çıktıda da görüldüğü gibi <em><strong>ssh</strong></em> servisimiz kapatılmış oldu. Bunu da <strong><code>service ssh status</code></strong> komutu ile teyit etmiş olduk.</p>
-<p>Komutumuzun diğer bir kullanım şeklide de <strong>servisi yeniden başlatmak</strong>. Bunun için <strong><code>service ssh restart</code></strong> komutumuzu kullanıyoruz.</p>
+<p>Çıktıda da görüldüğü gibi <em><strong>ssh</strong></em> servisimiz kapatılmış oldu. Bunu da <strong><code class="language-bash">service ssh status</code></strong> komutu ile teyit etmiş olduk.</p>
+<p>Komutumuzun diğer bir kullanım şeklide de <strong>servisi yeniden başlatmak</strong>. Bunun için <strong><code class="language-bash">service ssh restart</code></strong> komutumuzu kullanıyoruz.</p>
 <p><img src="../../img/12-%20%C3%87al%C4%B1%C5%9Fma%20Seviyeleri(Runlevels)/5-min.png" class="responsive"></p>
-<p>Servisimizin durumunu <strong><code>service ssh status</code></strong> komutu ile kontrol ettik ve servisimizin yeniden başladığını görmüş olduk.</p>
-<p>Son olarak ise sistemde bulunan tüm servislerin sıralanmasını sağlayan <strong><code>service --status-all</code></strong> komutunu görelim.</p>
+<p>Servisimizin durumunu <strong><code class="language-bash">service ssh status</code></strong> komutu ile kontrol ettik ve servisimizin yeniden başladığını görmüş olduk.</p>
+<p>Son olarak ise sistemde bulunan tüm servislerin sıralanmasını sağlayan <strong><code class="language-bash">service --status-all</code></strong> komutunu görelim.</p>
 <p><img src="../../img/12-%20%C3%87al%C4%B1%C5%9Fma%20Seviyeleri(Runlevels)/6-min.gif" class="responsive"></p>
 <p>Çıktıdaki servislerin sol tarafında yer alan <strong><mark>[ - ]</mark></strong> işareti servisin <strong>çalışmadığını</strong>, <strong><mark>[ + ]</mark></strong> işareti servisin <strong>çalıştığını</strong> ve <strong><mark>[ ? ]</mark></strong> işareti ise <strong>servisin durumunun belirsiz olduğunu</strong> ifade ediyor.</p>
 		<h1></h1>
 <div align="center" class="container">
-<div class="card mb-4 ">
+<div class="card mb-4 border">
     <div class="row no-gutters">
         <div class="col-md-3">
             <img src="../../img/menu/pc-logo.png" class="card-img-top img1">
@@ -164,7 +146,7 @@
         <div class="col-md-8">
             <div class="card-body">
 		<strong class="d-inline-block mb-0 text-primary"><h3 id="alistirma">Alıştırmalar Hakkında</h3></strong>
-                <p class="card-text text-dark">Öğrendiğiniz bilgilerin kalıcı olması için bolca alıştırma yapmalısınız. Burada yer alan alıştırma faaliyetleri dışında, konuyu öğrendiğinizi hissede kadar kendiniz de bolca pratik yapın lütfen.  Aksi halde öğrendiğiniz bilgiler kısa sürede unutulup gidecektir. </p>
+                <p class="card-text">Öğrendiğiniz bilgilerin kalıcı olması için bolca alıştırma yapmalısınız. Burada yer alan alıştırma faaliyetleri dışında, konuyu öğrendiğinizi hissede kadar kendiniz de bolca pratik yapın lütfen.  Aksi halde öğrendiğiniz bilgiler kısa sürede unutulup gidecektir. </p>
                 
             </div>
         </div>
@@ -244,16 +226,15 @@
 <center>
 	<h1 id="bildirim">Geri Bildirimde Bulunun</h1>
 <p>Sizlere daha verimli bir kaynak sunabilmemiz için, uygulamada veya dokümantasyonlarda yer alan tüm hata ve eksiklerimizi bize bildirebilirsiniz.	</p>
-	<div class="checkbox mb-3">                         
-			<a href="../../bildirim.html" class="btn btn-danger">Geri Bildirimde Bulunun</a>
-      </div>
+	<a href="../../bildirim.html" class="btn btn-danger">Geri Bildirimde Bulunun</a>
 	  </center>	
 </article>       
     </div>
 
     
 <script src="../../js/jquery-3.3.1.slim.min.js"></script>
-<script src="../../js/script.js"></script>		
+<script src="../../js/script.js"></script>	
+<script src="../../js/prism.js"></script>		
  
 
 

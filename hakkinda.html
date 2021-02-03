@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="tr" >
 <head>
     <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Linux Dersleri</title>
+    <title>Linux Dersleri: Hakkında</title>
 	<link rel="icon" href="./img/menu/icon.png" type="image/icon type">
     <link rel="stylesheet" href="./css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
@@ -12,7 +12,7 @@
 
 </head>
 
-<body>
+<body id="body">
 	
 <ul class="nav nav-tabs nav-justified navbar-expand-lg md-tabs bg-light indigo" id="myTabmobile" role="tablist">
 	<a href="./menu.html" class="btn navbar-toggler" ><i class="fa fa-home fa-lg"></i></a>
@@ -63,6 +63,7 @@
       </div>
     </div>
   </div>
+  
   <div class="row mb-2">
     <div class="col">
       <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
@@ -79,9 +80,8 @@
     <div class="col">
       <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-0 text-primary"><h3>Destek Olmak İsterseniz</h3></strong>
-          <p class="card-text mb-auto"><p>Dokümantasyonu daha verimli kullanabilmeniz adına bu uygulamada <strong>hiçbir zaman reklam bulunmayacak</strong>.</p>
-				<strong> Ancak, projenin zamanla herkes için daha faydalı olacak biçimde geliştirilebilmesi adına birkaç farklı şekilde destekte bulunabilirsiniz;  </strong>
+          <strong class="d-inline-block mb-0 text-primary"><h3>Destek Olmak İsterseniz</h3></strong>          
+				<strong> Projenin zamanla herkes için daha faydalı olacak biçimde geliştirilebilmesi adına birkaç farklı şekilde destekte bulunabilirsiniz;  </strong>
 				<li>Topluluğumuza güç katmak adına çevrenizdekilere bu projeden ve dokümantasyondan bahsedebilirsiniz.</li>
 				<li>Linkedin, Twitter gibi sosyal medya araçları üzerinden dokümantasyonu paylaşabilirsiniz.</li>
 				
@@ -140,7 +140,7 @@
   <div class="tab-pane fade" id="contact-just" role="tabpanel" aria-labelledby="contact-tab-just">
     <div class="container">
 		<div align="center" class="container">
-<p align="center">Mevcut Sürüm<br><span class="badge badge-warning badge-pill"> 0.5.0-beta </span></p>
+<p align="center">Mevcut Sürüm<br><span class="badge badge-warning badge-pill"> 0.7.0-beta </span></p>
 			
 			<div class="row mb-2">
 				
@@ -149,7 +149,7 @@
         <div class="col p-4 d-flex flex-column position-static">
           <strong class="d-inline-block mb-2 text-primary">Github Kaynağı</strong>
           <p class="card-text mb-auto">Dokümantasyon içeriğinin ana github deposuna ulaşmak için aşağıdaki bağlantıyı kullanabilirsiniz. </p>
-          <a target="_blank" href="https://github.com/taylanbildik/Linux_Dersleri#s%C4%B1ral%C4%B1-%C5%9Fekilde-konu-konu-linux-komut-sat%C4%B1r%C4%B1-dok%C3%BCmantasyon-m%C3%BCfredat%C4%B1" >Kaynağa Git</a>
+          <a target="_blank" href="https://github.com/taylanbildik/Linux_Dersleri#s%C4%B1ral%C4%B1-%C5%9Fekilde-konu-konu-linux-komut-sat%C4%B1r%C4%B1-dok%C3%BCmantasyon-m%C3%BCfredat%C4%B1" class="stretched-link"></a>
 			
         </div>
         
@@ -160,7 +160,7 @@
         <div class="col p-4 d-flex flex-column position-static">
           <strong class="d-inline-block mb-2 text-primary">Android Uygulaması</strong>
           <p class="card-text mb-auto">Dokümantasyonun çevrimdışı çalışabilen android uygulaması için bağlantıyı kullanabilirsiniz.</p>
-          <a target="_blank" href="https://play.google.com/store/apps/details?id=com.bildik.linuxdersleri">Kaynağa Git</a>
+          <a target="_blank" href="https://play.google.com/store/apps/details?id=com.bildik.linuxdersleri" class="stretched-link"></a>
 			
         </div>
         
@@ -173,6 +173,16 @@
     <a href="#" class="list-group-item list-group-item-action active">
         <i class="fa fa-codepen"></i> Platform
     <span class=" pull-right">Sürüm Numarası</span></a>
+	<a class="list-group-item list-group-item-action" data-toggle="collapse" href="#collapse16" role="button" aria-expanded="false" aria-controls="collapse16">
+        <i class="fa fa-signal"></i> Web Platformu <span class="badge badge-pill badge-primary pull-right">0.7.0-beta</span>
+    </a>
+	<div class="collapse" id="collapse16">
+  <div class="card card-body">
+   <li>Arayüz sadeleştirmesi yapıldı.</li>
+   <li>Mümkün olan bölümlerde resimler yerine yazılı komut çıktıları eklendi.</li>
+   <li>Doküman içeriğinde hata düzeltmeleri ve güncellemeler yapıldı.</li>
+	  </div>
+  </div>
 	<a class="list-group-item list-group-item-action" data-toggle="collapse" href="#collapse15" role="button" aria-expanded="false" aria-controls="collapse15">
         <i class="fa fa-signal"></i> Web Platformu <span class="badge badge-pill badge-primary pull-right">0.5.0-beta</span>
     </a>
@@ -308,7 +318,9 @@
 
 <script src="./js/main.js"></script>	
 <script src="./js/jquery-3.3.1.slim.min.js"></script>
+<script src="./js/script.js"></script>		
 <script src="./js/bootstrap.min.js"></script>
+
 
 </body>
 </html>

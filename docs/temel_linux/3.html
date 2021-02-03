@@ -9,15 +9,17 @@
 	<link rel="stylesheet" href="../../css/bootstrap.min.css">
 	<link rel="stylesheet" href="../../css/font-awesome.min.css">
 	<link rel="stylesheet" href="../../css/style.css">
+<link rel="stylesheet" href="../../css/prism.css">
 
 </head>
 
-<body id="body" >	
+<body>	
 <div class="bs-canvas-overlay bs-canvas-anim bg-dark position-fixed w-100 h-100"></div>
 	
 <nav class="navbar y-navbar sticky-top navbar-expand-lg navbar-light bg-light">
   
-  <a style="color: black" class="btn"  data-toggle="canvas" data-target="#bs-canvas-left" aria-expanded="false" aria-controls="bs-canvas-left"><i class="fa fa-align-justify fa-lg"></i></a>
+  <div align="left">
+		<a class="btn" data-toggle="canvas" data-target="#bs-canvas-left" aria-expanded="false" aria-controls="bs-canvas-left"><i class="fa fa-align-justify fa-lg"></i></a></div>
   <center >
 	<div>
 	<a href="./2.html" style="color: black" class="btn navbar-toggler " > <i class="fa fa-angle-double-left fa-lg"></i></a>
@@ -27,15 +29,20 @@
     <a href="./4.html" style="color: black" class="btn navbar-toggler " ><i class="fa fa-angle-double-right fa-lg"></i> </a>
 	</div>
   </center>
-  <a style="color: black" class="btn"  data-toggle="canvas" data-target="#bs-canvas-right" aria-expanded="false" aria-controls="bs-canvas-right" ><i class="fa fa-gear fa-lg"></i></a>  
+  <div align="right">
+			<div class="togg-wrap">
+			
+			<button onclick="tema()" class="btn" ><i class="fa fa-adjust fa-lg"></i></button>  
+    
+		</div> 
 		
 </nav>
 
 <nav class="navbar x-navbar sticky-top navbar-expand-lg navbar-light bg-light border-bottom">
 	
 	<div class="container ">
-            <div align="left"><button class="btn"  data-toggle="canvas" data-target="#bs-canvas-left" aria-expanded="false" aria-controls="bs-canvas-left"><i class="fa fa-align-justify fa-lg"></i></button>
-		<a href="../../menu.html" class="btn"  ><i class="fa fa-home fa-lg"></i></a>     </div>
+            <div align="left">
+		<a class="btn" data-toggle="canvas" data-target="#bs-canvas-left" aria-expanded="false" aria-controls="bs-canvas-left"><i class="fa fa-align-justify fa-lg"></i></a><a href="../../menu.html" class="btn"  ><i class="fa fa-home fa-lg"></i></a></div>
 	<center >
 		
         <a href="./2.html" class="btn">Önceki <i class="fa fa-angle-double-left fa-lg"></i></a>
@@ -47,46 +54,21 @@
         
     </center>
 			<div align="right">
+			<div class="togg-wrap">
+			
+			<button onclick="tema()" class="btn" ><i class="fa fa-adjust fa-lg"></i></button>  
 				<a href="../../bildirim.html" class="btn" ><i class="fa fa-paper-plane"></i></a>    
-             <a style="color: black" class="btn"  data-toggle="canvas" data-target="#bs-canvas-right" aria-expanded="false" aria-controls="bs-canvas-right" ><i class="fa fa-gear fa-lg"></i></a>  
 		</div>              
+	</div>              
 	</div>
      
 </nav>
-<div id="bs-canvas-right" class="bs-canvas bs-canvas-anim bs-canvas-right position-fixed bg-light h-100" >
-	<header class="bs-canvas-header p-3 bg-dark">
-		
-    	<h4 align="center" class="text-light">Ayar Menüsü<button type="button" class="bs-canvas-close close" aria-label="Close" aria-expanded="true"><span aria-hidden="true" class="text-light">×</span></button></h4>
-        
-    </header>
-    <div class="bs-canvas-content px-3">
-    	
-    	<div align="center" class="list-group my-2 ">
-			<button class="btn">Yazı Boyutunu Seçip Kaydedin</button>
-  <!-- This is how they choose their font size -->
-  <select onchange="fontSize(this);">
-    
-	<option>18px</option>
-	<option>20px</option>
-	<option>22px</option>
-	<option>24px</option>
-	<option>26px</option>
 
-  </select>
-  <br>
-
-  <input type="button" id="save" value="Seçili Boyutu Kaydet">
-<button class="btn">Okuma Modunu Değiştirin</button>
-		<button class="btn btn-outline-dark" onclick="darkLight()" ><i class="fa fa-eye fa-lg"></i></button>
-		
-        </div>
-    </div>    
-</div>
 	
-<div id="bs-canvas-left" class="bs-canvas bs-canvas-anim bs-canvas-left position-fixed bg-light h-100" >
-	<header class="bs-canvas-header p-3 bg-dark">
+<div id="bs-canvas-left" class="bs-canvas bs-canvas-anim bs-canvas-left position-fixed bg-kanvas h-100" >
+	<header class="bs-canvas-header p-3 bg-baslık">
 		
-    	<h4 align="center" class="text-light">İçerik Menüsü<button type="button" class="bs-canvas-close close" aria-label="Close" aria-expanded="true"><span aria-hidden="true" class="text-light">×</span></button></h4>
+    	<h4 align="center" >İçerik Menüsü<button type="button" class="bs-canvas-close close" aria-label="Close" aria-expanded="true"><span aria-hidden="true" >×</span></button></h4>
         
     </header>
     <div class="bs-canvas-content px-3">
@@ -129,14 +111,14 @@
         
       </div>
     </div>
-	          <article id="makale" style="font-size:1em;" class="markdown-body entry-content" itemprop="text">
+	          <article id="makale" style="font-size:1.2em;" class="markdown-body entry-content" itemprop="text">
 	 
 	 <h1 id="komut">Komut Satırı</h1>
 <p>Esaslı bir giriş yapabilmemiz için öğrenmemiz gereken ilk kavram <strong>Linux Komut Satırı</strong> diğer bir adıyla <strong>Linux Terminali</strong> (<strong>konsol</strong>) olacaktır. Ancak bundan önce Linux işletim sisteminin(GNU/<strong>Linux</strong>) <strong>çekirdeğini</strong> ele almalıyız. Linux çekirdeği  Linux'un kalbi kabul edilir. En önemli ana görevinin tanımı kısaca; <strong>yazılımla donanımın haberleşmesini sağlamaktır</strong>. Ayrıca Linux'un yani çekirdeğin ingilizce karşılığı "<strong>kernel</strong>"dir. Yabancı terimleri sizlere aktarıyor olma nedenim; eninde sonunda bu terimlere alışmamız gerektiği ve bu durumun ne kadar erken olursa bizim için o kadar iyi olacağıdır.
 Kernel, yani çekirdeği biraz daha açıklayacak olursak:</p>
 <h2 id="kernel">Kernel</h2>
 <p>Biz ister grafiksel arayüzü kullanalım, istersek de yalnızca komut satırını kullanacak olalım; örneğin bir dosyayı bir yerden başka bir yere taşırken; ister sürükle bırak yöntemiyle(grafiksel arayüz kullanarak) taşıyalım, istersek de bu işi komut satırından komutlar yardımı ile gerçekleştirelim; neticede yapılan işlem aslında arka tarafta komutların yorumlanarak çalıştırılması ile gerçekleşmektedir.
-<img src="../../img/1-%20Komut%20Sat%C4%B1r%C4%B1/0-min.png" class="responsive">
+<img style="background-color: rgba(255, 255, 255, 0.20);" src="../../img/1-%20Komut%20Sat%C4%B1r%C4%B1/0-min.png" class="responsive">
 İşte tüm bu işlemleri gerçekleştirmekle görevli bazı yapılar vardır. <strong>Çekirdek(kernel) de kullanıcıdan gelen girdilerle birlikte sistemin işleyebilmesi (process) için donanıma iş yaptırmakla görevlidir</strong>. Ancak direk olarak kullanıcıdan alınan komutlar <strong>Kernel</strong>'e geçmez. Bundan önce <strong>komut satırı</strong> dediğimiz bir <strong>kabuk(shell)</strong> programını temel alarak çalışan yapı, kullanıcı ile çekirdek arasında aracı bir katman görevi görür.</p>
 <p><strong>Shell</strong>(<strong>kabuk</strong>) programını açıklayacak olursak:</p>
 <h2 id="shell">Shell</h2>
@@ -167,13 +149,14 @@ Grafik arayüzden <strong>Terminal</strong>(<strong>konsol</strong>) ile çalı�
 <p>Bu işlemeler için kısayolların da kullanılabildiğinden bahsetmiştim, örneğin bazı dağıtımlarda
   <strong><mark>Ctrl + Alt + T</mark></strong>
   tuş kombinasyonu direk olarak terminal ekranını açıyor. Ancak sistemdeki kısayollar; ayarlar aracılığı ile ve ayrıca da dağıtımdan dağıtıma farklılık gösterdiği için bu kısayolları sizin kendi kullandığınız dağıtıma göre araştırarak bulmanız gerekiyor. Korkmayın inanılmaz kolay bir işlem, hem böylelikle yavaş yavaş Linux öğrenmenin aslında araştırmak ve kendi kendine öğrenmek olduğunu kavrıyoruz. Zaten ileride Kali Linux için <a target="_blank" href="./4.html">kısayollar</a> konularına ayrıca değineceğim. Yani ileride kısayollar konusunu teferruatlıca işleyeceğiz merak etmeyin.
-  Şimdilik konumuza dönecek olursak Shell'in ne olduğunu açıklamıştık ve en çok tercih edilen kabuk programının <strong>BASH kabuk programı</strong> olduğunu söylemiştik. Bunu teyit etmek için komut satırına <strong><code>echo $SHELL</code></strong> komutumuzu giriyoruz.
+  Şimdilik konumuza dönecek olursak Shell'in ne olduğunu açıklamıştık ve en çok tercih edilen kabuk programının <strong>BASH kabuk programı</strong> olduğunu söylemiştik. Bunu teyit etmek için komut satırına <strong><code class="language-bash">echo $SHELL</code></strong> komutumuzu giriyoruz.
   Girdiğimiz komutu açıklayacak olursak '
   <strong><mark>echo</mark></strong>
-  ' komut satırında ekrana yazdırma işlevini görür örneğin ben komut satırına <strong><code>echo "Merhabalar"</code></strong> yazarsam komut satırı ' <em><strong>Merhabalar</strong></em> ' çıktısını verecektir.
+  ' komut satırında ekrana yazdırma işlevini görür örneğin ben komut satırına <strong><code class="language-bash">echo "Merhabalar"</code></strong> yazarsam komut satırı ' <em><strong>Merhabalar</strong></em> ' çıktısını verecektir.
   <strong><mark>$</mark></strong>
   işareti ise bir parametre ve tanımlanan değişkene normal bir kullanıcı olarak erişebilmeyi sağlıyor. Şimdilik bu komut bütünü hakkında bu kadar bilgi yeterli. Eğer komutun açıklamasını anlamadıysanız hiç bir sorun yok. Okumaya devam ettikçe parçalar yerine oturmaya başlayacak. Zaten ileride bu konuların her birine sırasıyla tek tek değineceğiz ve sizler de anlamış olacaksınız. Şimdi devam edecek olursak:</p>
-<p><img src="../../img/1-%20Komut%20Sat%C4%B1r%C4%B1/4-min.png" class="responsive"></p>
+  <pre><code class="language-bash">└─$ echo $SHELL
+/bin/bash</code></pre>
 <p>Konsola girmiş olduğumuz <strong>komut yorumlandı</strong> ve neticesinde bize <strong><mark>/bin/bash</mark></strong> şeklinde bir çıktı verdi. Bu çıktı bize mevcut sistemde kullanılan ana kabuk programının <strong>BASH</strong>  olduğunu bildirmiş oldu. Burada komut yorumlandı dedik ancak neye göre oldu bu iş ? İşte bu noktada devreye <strong>ortam değişkenleri</strong>(<strong>çevre değişkenleri</strong>) giriyor..</p>
 <p>Bu kısımları fazlaca incelediğimi, gereksiz detaylara girdiğimi düşünenler olabilir ancak emin olun öğrendiğiniz her şey birbiri ile bağlı ve bütünü anlamak için bilinmesi gerekli olan kavramlardır. İleride yeri geldikçe bunları daha net kavrayacağız zaten.
 Anlatımları mümkün oldukça <strong>teknik dilden uzak sade anlaşılır ve sizlerin de sürekli etkileşimde olacağı şekilde</strong> aktarmaya çalışıyorum. Yani sizler burada yazanları yalnızca kuru kuruya okumayacak, ilerleyiş sırasında konu içerisinde gösterilen uygulamalar ile konuları ve kavramları tam olarak özümsemiş olacaksınız.
@@ -183,48 +166,50 @@ Tam da bu noktada uygulama yaparak öğrenmenin önemini belirten <strong>Konfü
 </blockquote>
 <p>İlerleyişimize gelin ortam değişkenlerini tanıyarak devam edelim.</p>
 <h2 id="ortam">Ortam Değişkenleri (Çevre Değişkenleri)</h2>
-<p>Ortam değişkenlerini anlamak için bir örnek üzerinden gidelim. Örneğin grafiksel arayüzde komut satırına <strong><code>leafpad</code></strong> yazdığımızda karşımıza leafpad(metin editörü) programı gelir. (<em><strong>Özellikle grafiksel arayüz diye belirttim çünkü leafpad uygulaması grafiksel arayüz ile çalışmaktadır yani tek başına komut satırının olduğu durumda çalışmayacaktır.</strong></em> )</p>
-<p>Fark ettiyseniz bu komutu yazarken programın bulunduğu konumu belirtmeme gerek kalmadı. Yalnızca programın ismini Terminale girmemiz sonucu <strong>leafpad</strong> programı açılmış oldu. Bunun nedeni programın dosya dizinlerinin <strong>PATH(yol)</strong> ortam değişkeni üzerinde ekli olmasıdır. Sonuç olarak konsoldan girilen <strong><code>leafpad</code></strong> komutu bu yol üzerinde arandı ve yol üzerinde var olan <strong>leafpad</strong> uygulaması çalıştırıldı.
-Daha iyi anlayabilmek adına, bize <strong>PATH(yol)</strong> bilgisini veren komutumuzu kullanalım ve terminalin bize vereceği tepkiye göre açıklamaya devam edelim. Komut satırımıza <strong><code>echo $PATH</code></strong> komutunu verelim:</p>
-<p><img src="../../img/1-%20Komut%20Sat%C4%B1r%C4%B1/5-min.png" class="responsive"></p>
+<p>Ortam değişkenlerini anlamak için bir örnek üzerinden gidelim. Örneğin grafiksel arayüzde komut satırına <strong><code class="language-bash">leafpad</code></strong> yazdığımızda karşımıza leafpad(metin editörü) programı gelir. (<em><strong>Özellikle grafiksel arayüz diye belirttim çünkü leafpad uygulaması grafiksel arayüz ile çalışmaktadır yani tek başına komut satırının olduğu durumda çalışmayacaktır.</strong></em> )</p>
+<p>Fark ettiyseniz bu komutu yazarken programın bulunduğu konumu belirtmeme gerek kalmadı. Yalnızca programın ismini Terminale girmemiz sonucu <strong>leafpad</strong> programı açılmış oldu. Bunun nedeni programın dosya dizinlerinin <strong>PATH(yol)</strong> ortam değişkeni üzerinde ekli olmasıdır. Sonuç olarak konsoldan girilen <strong><code class="language-bash">leafpad</code></strong> komutu bu yol üzerinde arandı ve yol üzerinde var olan <strong>leafpad</strong> uygulaması çalıştırıldı.
+Daha iyi anlayabilmek adına, bize <strong>PATH(yol)</strong> bilgisini veren komutumuzu kullanalım ve terminalin bize vereceği tepkiye göre açıklamaya devam edelim. Komut satırımıza <strong><code class="language-bash">echo $PATH</code></strong> komutunu verelim:</p>
+<pre><code class="language-bash">└─$ echo $PATH
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/games:/usr/games</code></pre>
 <p>Çıktının bize gösterdiği yani konsolun demek istediği şu:
 <strong>Konsoldan girilen herhangi bir komutu çalıştırabilmem için sırasıyla bu <strong><mark>/usr/local/sbin: /usr/local/bin: /usr/sbin: /usr/bin: /sbin: /bin</mark></strong> dizinlere bakmam gerek. Eğer verilen komutun çalıştırılabilir dosyası bu dizinlerin içerisinde ise çalıştırırım, yoksa çalıştıramam.</strong>
 Çıktıda görülen iki nokta üst üste (<strong><mark>:</mark></strong>) işareti ile ayrılmış dizinlere <strong>PATH(yol)</strong> ortam değişkeni deniyor. Ben yine de emin olamadım diyenler için gelin <strong>PATH</strong> yoluna ekli olmayan bir progamı kendimiz ekleyelim ve konsoldan vereceğimiz bir komutla direk olarak çalışmasını sağlayalım. Adım adım ilerleyelim.</p>
 <p>Ben masaüstünde "<strong>yeni_dizin</strong>" adında bir klasör oluşturdum daha sonra içerisine "<strong>yeni</strong>" diye başka bir klasör daha oluşturdum son olarak bu klasörün de içerisine "<strong>en_yeni</strong>" şeklinde bir klasör daha oluşturdum. Yani oluşturduğum dizinin tam adresi <strong><strong><mark>yeni_dizin /yeni /en_yeni</mark></strong></strong> şeklinde oluşmuş oldu.
-Şimdi oluşturduğum dizinin en alt klasörünün(<strong>en_yeni</strong>) içine girerek leafpad programı aracılığı ile metin belgesi oluşturuyorum ve belgenin içine  <strong><strong><code>echo "Program Çalıştı"</code></strong></strong> yazarak, oluşturmuş olduğum klasör dizininin en altındaki klasöre yani "<strong>en_yeni</strong>" ismindeki klasöre dosyamı "<em><strong>komut.sh</strong></em>" ismiyle kaydediyorum.
+Şimdi oluşturduğum dizinin en alt klasörünün(<strong>en_yeni</strong>) içine girerek leafpad programı aracılığı ile metin belgesi oluşturuyorum ve belgenin içine  <strong><strong><code class="language-bash">echo "Program Çalıştı"</code></strong></strong> yazarak, oluşturmuş olduğum klasör dizininin en altındaki klasöre yani "<strong>en_yeni</strong>" ismindeki klasöre dosyamı "<em><strong>komut.sh</strong></em>" ismiyle kaydediyorum.
 Dosya sonuna eklediğimiz <strong><mark>.sh</mark></strong> eki ile dosyamız bir <strong>betik dosyası</strong> halini almış oldu. Burada bahsi geçen betik dosyasının genel tanımı; içerisine yazılmış olan konsol komutlarını tek seferde bir bütün halinde düzenli şekilde çalıştırabilen dosya formatı şeklinde yapılabilir. Yani bizler böylelikle betik dosyası programlayıp konsola yapması gereken bir çok işlemi tek bir dosya ile yaptırabiliriz. Anlayacağınız bu betik dosyası sıradan bir dosya değil, program yerine geçen bir formattır. Konsol programıdır yani..
-Zaten fark ettiyseniz dosyamızın içerisine daha önce de konsolda verdiğimiz komutlardan birini olan <strong><code>echo</code></strong> komutunu ekledik. Yani bu oluşturmuş olduğumuz betik dosyası Terminal üzerinden çalıştığında komut satırına "<strong>Program Çalıştı</strong>" şeklinde bir çıktı verecek.
+Zaten fark ettiyseniz dosyamızın içerisine daha önce de konsolda verdiğimiz komutlardan birini olan <strong><code class="language-bash">echo</code></strong> komutunu ekledik. Yani bu oluşturmuş olduğumuz betik dosyası Terminal üzerinden çalıştığında komut satırına "<strong>Program Çalıştı</strong>" şeklinde bir çıktı verecek.
 Oluşturmuş olduğum betik dosyasının dizin içerisindeki tam konumu aşağıdaki şekildedir.</p>
 <p><img src="../../img/1-%20Komut%20Sat%C4%B1r%C4%B1/6-min.png" class="responsive"></p>
 <p>Programımızın dizin adresi belli olduğuna göre artık bu dizini <strong>PATH ortam değişkenine</strong> ekleyip istediğimiz zaman, istediğimiz yerden <strong>programımızı</strong>(<strong>komut.sh</strong>) çalıştırabiliriz.</p>
 <h2 id="path">PATH(yola)Dizin Adresi Ekleme</h2>
-<p>PATH yolu üzerine ekleyeceğimiz yeni dizini, her oturum başlangıcında sistem tarafından otomatik olarak okunan bir dosya içerisinde belirtmeliyiz ki yaptığımız değişiklik biz silene kadar geçerli olsun. Ekleme işlemi için kullanacağımız dosya, oturum başlangıcında okunan herhangi bir dosya olabilir. Biz örnek olması açısından <strong>/etc</strong> dizini altında yer alan <strong>bash.bashrc</strong> dosyası üzerinden çalışalım. <strong>bash.bashrc</strong>  dosyasında değişiklik yapmak için komut satırına dosyamızın bulunduğu tam konumu belirtmek üzere  <code>nano /etc/bash.bashrc</code>  komutunu giriyoruz.</p>
+<p>PATH yolu üzerine ekleyeceğimiz yeni dizini, her oturum başlangıcında sistem tarafından otomatik olarak okunan bir dosya içerisinde belirtmeliyiz ki yaptığımız değişiklik biz silene kadar geçerli olsun. Ekleme işlemi için kullanacağımız dosya, oturum başlangıcında okunan herhangi bir dosya olabilir. Biz örnek olması açısından <strong>/etc</strong> dizini altında yer alan <strong>bash.bashrc</strong> dosyası üzerinden çalışalım. <strong>bash.bashrc</strong>  dosyasında değişiklik yapmak için komut satırına dosyamızın bulunduğu tam konumu belirtmek üzere  <code class="language-bash">nano /etc/bash.bashrc</code>  komutunu giriyoruz.</p>
 <p><img src="../../img/1-%20Komut%20Sat%C4%B1r%C4%B1/7.1-min.png" class="responsive"></p>
 <p>Ve komut satırında karşımıza yukarıdaki gibi  <strong>bash.bashrc</strong>  dosyasının içeriği geliyor. Şimdi yapmamız gereken; programımızın (komut.sh) bulunduğu tam dizin konumunu bu dosyaya uygun şekilde eklemek.</p>
 <p>Bunun için dosyanın en alt satıra inerek, eklemek istediğim dosyanın tam dizin adresini aşağıdaki şeklinde dosyaya ekliyorum.</p>
-<pre><code>PATH="/root/Desktop/yeni_dizin/yeni/en_yeni":$PATH
+<pre><code class="language-bash">PATH="/root/Desktop/yeni_dizin/yeni/en_yeni":$PATH
 </code></pre>
 <p><img src="../../img/1-%20Komut%20Sat%C4%B1r%C4%B1/7.2-min.png" class="responsive"></p>
 <p>Yazma işlemi bittikten sonra dosyada yaptığımız değişiklikleri kaydedip dosyayı kapatmak için  Ctrl + X  tuş kombinasyonu uyguluyoruz. Bana, "<em><strong>Değiştirilen tampon kaydedilsin mi? ("Hayır" demek değişiklikleri SİLECEK.)</strong></em>  " şeklinde bir uyarı veriyor. Dosyada yaptığım değişikliği kaydetmek için  <strong>e</strong>  tuşuna basarak devam ediyorum.</p>
 <p><img src="../../img/1-%20Komut%20Sat%C4%B1r%C4%B1/7.3-min.png" class="responsive"></p>
 <p>Son olarak bana, "<em><strong>Yazılacak Dosya Adı: /etc/bash.bashrc</strong></em>" diye belirtiyor,  <strong>buradaki ismi değiştirmeden kaydediyoruz</strong>. Eğer ismi değiştirirsek sistem bu dosyayı okuyamayacağı için problem çıkacaktır.</p>
 <p><img src="../../img/1-%20Komut%20Sat%C4%B1r%C4%B1/7.4-min.png" class="responsive"></p>
-<p>Bu adımları geçtikten sonra istediğimiz dizin  <strong>PATH(yol) ortam değişkenine</strong>  eklenmiş oldu. Ancak yaptığımız değişikliklerin geçerli olabilmesi için, oturumun kapatılıp tekrar açılması ya da <code>source</code> komutu ile değiştirmiş olduğumuz dosyanın tekrar konfigüre edilmesi gerekiyor.</p>
-<pre><code>source /etc/bash.bashrc
+<p>Bu adımları geçtikten sonra istediğimiz dizin  <strong>PATH(yol) ortam değişkenine</strong>  eklenmiş oldu. Ancak yaptığımız değişikliklerin geçerli olabilmesi için, oturumun kapatılıp tekrar açılması ya da <code class="language-bash">source</code> komutu ile değiştirmiş olduğumuz dosyanın tekrar konfigüre edilmesi gerekiyor.</p>
+<pre><code class="language-bash">└─$ source /etc/bash.bashrc
 </code></pre>
-<p><img src="../../img/1-%20Komut%20Sat%C4%B1r%C4%B1/7.5-min.png" class="responsive"></p>
-<p>Neticede yeni dizini PATH yolu üzerine ekleyip, yapılan bu değişikliğin sistem tarafından algınlanmasını sağladık. Şimdi de bu değişikliği teyit etmek üzere konsola <code>echo $PATH</code> komutunu girelim.</p>
-<p><img src="../../img/1-%20Komut%20Sat%C4%B1r%C4%B1/7.6-min.png" class="responsive"></p>
+<p>Neticede yeni dizini PATH yolu üzerine ekleyip, yapılan bu değişikliğin sistem tarafından algınlanmasını sağladık. Şimdi de bu değişikliği teyit etmek üzere konsola <code class="language-bash">echo $PATH</code> komutunu girelim.</p>
+<pre><code class="language-bash">└─$ echo $PATH
+/root/Desktop/yeni_dizin/yeni/en_yeni:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/games:/usr/games</code></pre>
 <p>Gördüğünüz gibi dizin, yola(PATH) eklenmiş bulunuyor. Artık dosyayı çalıştırmadan önce son bir ayar daha yapmamız gerek. Daha sonra "<strong>komut.sh</strong>" dosyamızı aynı leafpad programında olduğu gibi istediğimiz zaman komut satırından ismi ile çalıştırabiliyor olacağız.</p>
-<p>Son işlemimiz yetkilendirme işlemi. Bu neden gerekli diyecek olursanız işlemin gerekliliğini kendi gözlerinizle görmek için bu kısmı atlayarak dosyayı çalıştırmaya çalışın. Bunun için komut satırına  <code>komut.sh</code>  yazalım.</p>
-<p><img src="../../img/1-%20Komut%20Sat%C4%B1r%C4%B1/12-min.png" class="responsive"></p>
-<p>Gördüğünüz gibi konsol bize "<strong>Erişim engellendi</strong>" diye bildirdi ve dosyayı bulmasına rağmen çalıştıramadı. İşte bu durumu yaşamamak için "<strong>komut.sh</strong>" dosyamızın bulunduğu konuma giderek (<code>cd Desktop/yeni_dizin/yeni/en_yeni/</code>)  <code>chmod +rwx komut.sh</code>  komutunu vermemiz gerekiyor. Böylelikle dosyayı çalıştırma izni de elde etmiş olacağız.</p>
-<p>Yani artık konsola  <code>komut.sh</code>  yazdığımız anda bizim oluşturmuş olduğumuz "<strong>komut.sh</strong>" betik dosyası çalışarak "<strong>Program Çalıştı</strong>" yazısını konsola basacak.</p>
+<p>Son işlemimiz yetkilendirme işlemi. Bu neden gerekli diyecek olursanız işlemin gerekliliğini kendi gözlerinizle görmek için bu kısmı atlayarak dosyayı çalıştırmaya çalışın. Bunun için komut satırına  <code class="language-bash">komut.sh</code>  yazalım.</p>
+<pre><code class="language-bash">└─$ /Desktopecho $PATH
+/root/Desktop/yeni_dizin/yeni/en_yeni:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/games:/usr/games</code></pre>
+<p>Gördüğünüz gibi konsol bize "<strong>Erişim engellendi</strong>" diye bildirdi ve dosyayı bulmasına rağmen çalıştıramadı. İşte bu durumu yaşamamak için "<strong>komut.sh</strong>" dosyamızın bulunduğu konuma giderek (<code class="language-bash">cd Desktop/yeni_dizin/yeni/en_yeni/</code>)  <code class="language-bash">chmod +rwx komut.sh</code>  komutunu vermemiz gerekiyor. Böylelikle dosyayı çalıştırma izni de elde etmiş olacağız.</p>
+<p>Yani artık konsola  <code class="language-bash">komut.sh</code>  yazdığımız anda bizim oluşturmuş olduğumuz "<strong>komut.sh</strong>" betik dosyası çalışarak "<strong>Program Çalıştı</strong>" yazısını konsola basacak.</p>
 <p><img src="../../img/1-%20Komut%20Sat%C4%B1r%C4%B1/13-min.png" class="responsive"></p>
 <p>Sizler de bu yolla sıklıkla kullandığınız dosyaları kolay erişilebilir kılabilirsiniz. Burada kullanımış olduğumuz komutları ve komutlar ile bağlantılı konuları ileriki bölümlerde zaten tek tek ele alacağız. Sizler şimdilik konunun temelinde ne var ve hangi işlemi neden yaptık ona hakim olsanız yeter. Ancak kafalarda soru işareti ile devam etmemek adına ben yinede tek tek izah edeyim hangi komutu neden kullandık.</p>
-<p><code>nano /etc/bash.bashrc</code>  bu komutta;  <code>nano</code>  komutu, konsol üzerinden dosya içeriğini okumamıza olanak sağlayan bir araçtır. Geri kalan  <code>/etc/bash.bashrc</code>  kısmı ise  <strong>bash.bashrc</strong>  dosyasının bulunduğu konumu belirtiyor. Bu sayede nano aracı ile <code>/etc</code> dizininde bulunan <strong>bash.bashrc</strong>  dosyasını komut satırı üzerinden görebiliyor ve değişiklik yapabiliyoruz.</p>
-<p><code>PATH="/root/Desktop/yeni_dizin/yeni/en_yeni:$PATH"</code>  ifadesi ise mevcut  <strong>PATH yoluna yeni dizin ekleme</strong>mize olanak sağlayan bir bütündür. Burada yazdığımız ifade, PATH yolunda yer alan eski dizin adreslerine zarar vermeden yeni dizin ekleme işlemi için gereken ifade bütünüdür.</p>
-<p><code>echo $PATH</code>  komutunu daha önce de görmüştük buradaki  <code>echo</code>  komutu PATH değişken değerini konsola bastırarak  <strong>PATH ortam değişkeni</strong>nde bulunan dizinleri görmemizi sağlıyor.  <code>chmod +rwx komut.sh</code>  komutunda,  <code>chmod</code>  yetkilendirme ayarlamaları yapmamıza olanak sağlıyor.  <code>+rwx</code>  parametrelerinden "<strong>+</strong>" işareti  <strong>ekleme</strong>, "<strong>r</strong>  " işareti  <strong>okuma</strong>, "  <strong>w</strong>  "işareti  <strong>yazma</strong>, "<strong>x</strong>" işareti ise  <strong>çalıştırma</strong>  yetkisi olmak üzere bizlere  <strong>bir bütün olarak dosyayı çalıştırabilmemiz için gereken yetkilendirmeyi</strong>  sağlıyor. Geri kalan  <code>komut.sh</code>  kısım ise zaten yetkilendirme vermek istediğimiz dosyanın adı.</p>
+<p><code class="language-bash">nano /etc/bash.bashrc</code>  bu komutta;  <code class="language-bash">nano</code>  komutu, konsol üzerinden dosya içeriğini okumamıza olanak sağlayan bir araçtır. Geri kalan  <code class="language-bash">/etc/bash.bashrc</code>  kısmı ise  <strong>bash.bashrc</strong>  dosyasının bulunduğu konumu belirtiyor. Bu sayede nano aracı ile <code class="language-bash">/etc</code> dizininde bulunan <strong>bash.bashrc</strong>  dosyasını komut satırı üzerinden görebiliyor ve değişiklik yapabiliyoruz.</p>
+<p><code class="language-bash">PATH="/root/Desktop/yeni_dizin/yeni/en_yeni:$PATH"</code>  ifadesi ise mevcut  <strong>PATH yoluna yeni dizin ekleme</strong>mize olanak sağlayan bir bütündür. Burada yazdığımız ifade, PATH yolunda yer alan eski dizin adreslerine zarar vermeden yeni dizin ekleme işlemi için gereken ifade bütünüdür.</p>
+<p><code class="language-bash">echo $PATH</code>  komutunu daha önce de görmüştük buradaki  <code class="language-bash">echo</code>  komutu PATH değişken değerini konsola bastırarak  <strong>PATH ortam değişkeni</strong>nde bulunan dizinleri görmemizi sağlıyor.  <code class="language-bash">chmod +rwx komut.sh</code>  komutunda,  <code class="language-bash">chmod</code>  yetkilendirme ayarlamaları yapmamıza olanak sağlıyor.  <code class="language-bash">+rwx</code>  parametrelerinden "<strong>+</strong>" işareti  <strong>ekleme</strong>, "<strong>r</strong>  " işareti  <strong>okuma</strong>, "  <strong>w</strong>  "işareti  <strong>yazma</strong>, "<strong>x</strong>" işareti ise  <strong>çalıştırma</strong>  yetkisi olmak üzere bizlere  <strong>bir bütün olarak dosyayı çalıştırabilmemiz için gereken yetkilendirmeyi</strong>  sağlıyor. Geri kalan  <code class="language-bash">komut.sh</code>  kısım ise zaten yetkilendirme vermek istediğimiz dosyanın adı.</p>
 <h2 id="path-2">PATH Yoluna Dosya Ekleme</h2>
 <p>PATH yoluna yeni dizin adresi tanımlamadan, komut dosyamızı PATH üzerinde var olan bir konuma taşıyarak da dosyamızın çalıştırılmak üzere bulunabilmesini sağlayabiliriz.</p>
 <p>Üstelik bu ikinci yöntem yani var olan PATH yolu üzerine komut dosyamızı taşıma işlemi, ilk işleme oranla çok daha güvenli bir yoldur. Özellikle sunucu yönetiminde erişim yetkilerinin kısıtlanması ve sunucu güvenliğinin sağlanması açısından istisnai durumlar hariç ikinci yöntem tercih edilir. Benim önerim de, yeni bir PATH yolu belirtmek yerine var olan yolları kullanmanızdır. Hemen söylediklerimizi teyit etmek için PATH yolu üzerinde yer alan bir dizine komut dosyamızı taşıyalım ve dosyamızı konsoldan çalıştırmayı deneyelim. Ben örnek olması açısından <strong>/usr/local/sbin</strong> konumuna dosyamı taşıyorum.</p>
@@ -235,11 +220,11 @@ Oluşturmuş olduğum betik dosyasının dizin içerisindeki tam konumu aşağı
 				  
 <p>Şimdi bu kısımlar sizlere çok fazla detaya girilmiş belki de gereksiz yere eklenmiş gibi gelebilir ancak bu dokümanı bir bütün olarak kabul etmelisiniz. Dokümantasyon, bir sefer okudum bitti değil ihtiyacınız oldukça tekrar tekrar bakasınız diye oluşturuldu. Yani buraları okuyup uygulayıp kavradıktan sonra böyle bir ihtiyacınız olduğunda bu konunun burada olduğunu bilin. Burada yer alan anlatımlar temeli oluşturma üzerine sıralı ve bağlantılı şekilde ilerliyor. Burada bunları ezberlemenize gerek yok zaten öğrenmenin temelinde de ezber yok. O yüzden rahat olun her şey kullandıkça gelişecek ancak dediğim gibi artık böyle bir şeyin varlığından haberdarsınız yeri geldiğinde ihtiyacınız olan bilgiler burada olacak.</p>
 <h2 id="ortam-deg">Ortam Değişkenlerini Görüntülemek</h2>
-<p>Ortam değişkenleri dedik ancak şu ana kadar sadece <strong>PATH</strong> değişkeninden bahsettik. Tabii ki sistemde sadece PATH değişkeni bulunmuyor bu değişken dışında da pek çok ortam değişkeni mevcut. Bunları görmek istersek komut satırına <strong><code>set</code></strong> , <strong><code>env</code></strong> ya da <strong><code>printenv</code></strong> komutlarından birini ihtiyacımıza göre kullanabiliriz. Bu üç komut arasındaki farklar aşağıdaki şekildedir.</p>
+<p>Ortam değişkenleri dedik ancak şu ana kadar sadece <strong>PATH</strong> değişkeninden bahsettik. Tabii ki sistemde sadece PATH değişkeni bulunmuyor bu değişken dışında da pek çok ortam değişkeni mevcut. Bunları görmek istersek komut satırına <strong><code class="language-bash">set</code></strong> , <strong><code class="language-bash">env</code></strong> ya da <strong><code class="language-bash">printenv</code></strong> komutlarından birini ihtiyacımıza göre kullanabiliriz. Bu üç komut arasındaki farklar aşağıdaki şekildedir.</p>
 <p><strong>set :</strong> Shell'e ait olan değişkenlerin adını ve değerlerini verir.</p>
 <p><strong>printenv :</strong> Sistemde bulunan bütün çevresel değişkenleri verir.</p>
 <p><strong>env :</strong> Sistemde bulunan bütün "export" edilmiş yani değiştirilmiş değişkenlerle beraber değişkenleri gösterir.</p>
-<p>Ben aşağıda sadece <strong><code>printenv</code></strong> komutunun çıktısını veriyorum. Sizler diğer komutları da mutlaka uygulayarak aralarındaki farkları kendi gözlerinizle görün.</p>
+<p>Ben aşağıda sadece <strong><code class="language-bash">printenv</code></strong> komutunun çıktısını veriyorum. Sizler diğer komutları da mutlaka uygulayarak aralarındaki farkları kendi gözlerinizle görün.</p>
 <p><img src="../../img/1-%20Komut%20Sat%C4%B1r%C4%B1/14-min.png" class="responsive"></p>
 <p>Evet bize burada pek çok ortam değişkeni sıralandı. Ben her birini açıklamayacağım. Neden diye soracak olursanız; mevcut dökümantasyonda temel anlatım içerisinde olduğumuz için, sizlere mümkün olduğunca ilk adım için gerekli olan bilgileri vermeye çalışıyorum. Yani benim burada anlattığım her bilgi sizlere konuyu açıklamak ve konuyu daha iyi şekilde kavratmak için var. İlk aşama için gereksiz, yorucu bilgilere ihtiyacımız yok. Ancak buradan açıkladıklarım haricindekiler gereksiz gibi bir anlam çıkmasın lütfen. Zaten temeli yani asıl işlevlerini kavradıktan sonra yeri geldikçe diğer değişkenleri de biliyor ve kullanıyor olacaksınız. Ancak ben yinede şimdi diğer bir değişken olan <strong>HOME</strong> değişkenini de kısaca açıklayarak örneklendirmiş olacağım. Merak eden arkadaşlar şimdiden diğer ortam değişkenlerini de araştırıp kurcalayabilir.</p>
 <p><strong>HOME</strong> değişkenini örnekleyerek açıklayacak olursak:</p>
@@ -248,23 +233,23 @@ Oluşturmuş olduğum betik dosyasının dizin içerisindeki tam konumu aşağı
   <strong><mark>/home/taylan/Desktop</mark></strong>
   olan masaüstü dizini sizde
   <strong><mark> /home/burak/Desktop </mark></strong>
-  şeklinde olabilir. Hatta işletim sisteminin dilinin Türkçe veya İngilizce (diğer tüm diller de dahil..) olmasına göre de masaüstünün yolu farklı olabilir. Yani demem o ki bu kadar basit bir işlem için bile tahmin edilemez bu yolun bilinmesi veya bulunması gerek. Ama masaüstüne kısayol oluşturma çok olağan bir durum.. bir imkansız değil. İşte tam bu noktada neden ortam değişkenlerinin var olduğunu biraz daha net kavrıyoruz. Ortam değişkenleri, kullandığımız işletim sisteminde belli değerlere daha sonra kolaylıkla ve kararlılıkla ulaşabilmemiz ve işleyebilmemiz için oluşturulan ifadelerdir. Bahsettiğimiz konuda, örneğin masaüstüne herhangi bir yerden ulaşmak istersek, komut satırına <strong>ev dizininin yol bilgisini tutan değişken</strong> olan <strong>HOME</strong> değişkenini <strong><code>cd $HOME</code></strong> şeklide girmemiz yeterli oluyor. Yani bizler bu değişken sayede, hiç aramamıza gerek kalmadan ev dizini içerisinde yer alan Desktop konumuna da ulaşabiliyor olacağız.</p>
+  şeklinde olabilir. Hatta işletim sisteminin dilinin Türkçe veya İngilizce (diğer tüm diller de dahil..) olmasına göre de masaüstünün yolu farklı olabilir. Yani demem o ki bu kadar basit bir işlem için bile tahmin edilemez bu yolun bilinmesi veya bulunması gerek. Ama masaüstüne kısayol oluşturma çok olağan bir durum.. bir imkansız değil. İşte tam bu noktada neden ortam değişkenlerinin var olduğunu biraz daha net kavrıyoruz. Ortam değişkenleri, kullandığımız işletim sisteminde belli değerlere daha sonra kolaylıkla ve kararlılıkla ulaşabilmemiz ve işleyebilmemiz için oluşturulan ifadelerdir. Bahsettiğimiz konuda, örneğin masaüstüne herhangi bir yerden ulaşmak istersek, komut satırına <strong>ev dizininin yol bilgisini tutan değişken</strong> olan <strong>HOME</strong> değişkenini <strong><code class="language-bash">cd $HOME</code></strong> şeklide girmemiz yeterli oluyor. Yani bizler bu değişken sayede, hiç aramamıza gerek kalmadan ev dizini içerisinde yer alan Desktop konumuna da ulaşabiliyor olacağız.</p>
 <p><img src="../../img/1-%20Komut%20Sat%C4%B1r%C4%B1/15-min.png" class="responsive"></p>
-<p>Ayrıca burada ekstra bir bilgi olsun diye belirtmek isterim ki ev dizinine gitmek için iki farklı yol daha bulunmaktadır. Bunlardan ilki yalnızca <strong><code>cd</code></strong> komutunu kullanmak diğeri ise <strong><code>cd ~</code></strong> komutunu kullanmaktır. ( Burada yer alan <strong><mark> ~</mark></strong> işareti Türkçe klavyede <strong><mark>Alt Gr + Ü</mark></strong> tuş kombinaysonu ile oluşturuluyor. )</p>
+<p>Ayrıca burada ekstra bir bilgi olsun diye belirtmek isterim ki ev dizinine gitmek için iki farklı yol daha bulunmaktadır. Bunlardan ilki yalnızca <strong><code class="language-bash">cd</code></strong> komutunu kullanmak diğeri ise <strong><code class="language-bash">cd ~</code></strong> komutunu kullanmaktır. ( Burada yer alan <strong><mark> ~</mark></strong> işareti Türkçe klavyede <strong><mark>Alt Gr + Ü</mark></strong> tuş kombinaysonu ile oluşturuluyor. )</p>
 <p><img src="../../img/1-%20Komut%20Sat%C4%B1r%C4%B1/16-min.png" class="responsive"></p>
 <p><img src="../../img/1-%20Komut%20Sat%C4%B1r%C4%B1/17-min.png" class="responsive"></p>
-<p>Komutumuzu girdikten sonra ulaştığımız konumda hangi dosyaların olduğunu görmek için konsola <strong><code>ls</code></strong> komutunu verdik. Konsol bize Desktop(masaüstü) ve ev dizininde bulunan diğer dosyalarında çıktılarını verdi. Yani bu demek oluyor ki ev dizinine, kullanıcı ismini bilmemize gerek olmadan kolayca ulaştık. Yani gördüğünüz gibi örnek durumda açıkladığımız program kısayolu oluşturma işlemi <strong>ana dizini</strong> tutan <strong>HOME</strong> ortam değişkeni sayesinde kolayca gerçekleştirilebilir oluyor.</p>
-<p>Komutu biraz açıklayacak olursak <strong><code>cd</code></strong>  dizinler arası geçiş yapmamızı sağlayan bir komut.
-<strong><code>$</code></strong>  (dolar işareti) tanımlanmış olan değişkene erişme işlemini yapan parametremiz, <strong>HOME</strong> ise <strong>ev dizini</strong>ni tutan ortam değişkeni.
-Son olarak <strong><code>ls</code></strong>  komutu bulunduğumuz konumdaki dosyaları <strong>listeliyor</strong>. Burada bahsi geçen tüm komutları ileride ele alacağız şimdilik bu açıklama yeterli.</p>
+<p>Komutumuzu girdikten sonra ulaştığımız konumda hangi dosyaların olduğunu görmek için konsola <strong><code class="language-bash">ls</code></strong> komutunu verdik. Konsol bize Desktop(masaüstü) ve ev dizininde bulunan diğer dosyalarında çıktılarını verdi. Yani bu demek oluyor ki ev dizinine, kullanıcı ismini bilmemize gerek olmadan kolayca ulaştık. Yani gördüğünüz gibi örnek durumda açıkladığımız program kısayolu oluşturma işlemi <strong>ana dizini</strong> tutan <strong>HOME</strong> ortam değişkeni sayesinde kolayca gerçekleştirilebilir oluyor.</p>
+<p>Komutu biraz açıklayacak olursak <strong><code class="language-bash">cd</code></strong>  dizinler arası geçiş yapmamızı sağlayan bir komut.
+<strong><code class="language-bash">$</code></strong>  (dolar işareti) tanımlanmış olan değişkene erişme işlemini yapan parametremiz, <strong>HOME</strong> ise <strong>ev dizini</strong>ni tutan ortam değişkeni.
+Son olarak <strong><code class="language-bash">ls</code></strong>  komutu bulunduğumuz konumdaki dosyaları <strong>listeliyor</strong>. Burada bahsi geçen tüm komutları ileride ele alacağız şimdilik bu açıklama yeterli.</p>
 <p>Temel ve sık kullanılan değişkenlerden birkaçını da kısaca açıklayacak olursak:</p>
 <p><strong>SHELL:</strong> Çalışmakta olan kabuk programının adını ve yerini verir.</p>
 <p><strong>PATH:</strong> Konsola komut girildiğinde, komut için gereken ilgili dosyaların aranacağı dizinler diğer bir adıyla yol.</p>
 <p><strong>HOME:</strong> Kullanıncının ev dizinini içeren değişken.</p>
 <p><strong>TERM:</strong> Komut satırı uygulamalarının hangi terminalde çalışacağını belirtir. Birçok çeşidi vardır ancak xterm yaygın şekilde karşımıza çıkmaktadır.</p>
-<p>Ortam değişkenlerinin değerlerini tek tek kontrol etmek istersek, konsola <strong><code>echo $ORTAM_DEĞİŞKENİ</code></strong> şeklinde komut vererek ilgili bilgilere ulaşabiliriz. Örneğin <strong>TERM</strong> değişkenine bir bakalım.</p>
+<p>Ortam değişkenlerinin değerlerini tek tek kontrol etmek istersek, konsola <strong><code class="language-bash">echo $ORTAM_DEĞİŞKENİ</code></strong> şeklinde komut vererek ilgili bilgilere ulaşabiliriz. Örneğin <strong>TERM</strong> değişkenine bir bakalım.</p>
 <p><img src="../../img/1-%20Komut%20Sat%C4%B1r%C4%B1/18-min.png" class="responsive"></p>
-<p>Gördüğünüz üzere konsol <strong>TERM</strong> değişkeninin değerini <strong>xterm</strong> olduğunu göstermiş oldu. Zaten daha önce yaygın olarak kullanıldığından söz ettiğimiz için bu çıktı bizi şaşırtmadı. Eğer bu çıktıyı teyit etmek istersek konsola <strong><code>xterm</code></strong> komutunu verdiğimizde *<em>xterm</em> açılacak ve çıktı teyit edilmiş olacaktır.</p>
+<p>Gördüğünüz üzere konsol <strong>TERM</strong> değişkeninin değerini <strong>xterm</strong> olduğunu göstermiş oldu. Zaten daha önce yaygın olarak kullanıldığından söz ettiğimiz için bu çıktı bizi şaşırtmadı. Eğer bu çıktıyı teyit etmek istersek konsola <strong><code class="language-bash">xterm</code></strong> komutunu verdiğimizde *<em>xterm</em> açılacak ve çıktı teyit edilmiş olacaktır.</p>
 <p><img src="../../img/1-%20Komut%20Sat%C4%B1r%C4%B1/19-min.png" class="responsive"></p>
 <p>İstersek diğer ortam değişkenleri için de aynı şekilde tek tek bilgi alabiliriz. Ancak ortam değişkenleri sabit ve sınırlı değildir. Sistemde var olanların haricinde bizde kendimiz ortam değişkenleri tanımlayabiliriz. Tanımlamaları üç farklı kategoriye ayırabiliriz;</p>
 <ul>
@@ -275,53 +260,52 @@ Son olarak <strong><code>ls</code></strong>  komutu bulunduğumuz konumdaki dosy
 <p>Gelin şimdi teker teker kullanımlarına değinelim.</p>
 <h3 id="konsola-ozel">Mevcut Konsola Özel</h3>
 <p><strong>Sadece o an kullanmakta olduğumuz terminale(konsol) özel olan ve terminali kapattıktan sonra sıfırlanan ortam değişkenidir.</strong> Aşağıdaki örnek ile adım adım açıklayalım bu durumu:</p>
-<p>Terminali açtım ve komut satırına "<strong><code>asdf</code></strong> "(anlamsız karşılığı olmayan bir ifade/komut) yazdım. Konsol yanıt olarak " <strong><code>bash: asdf: komut yok</code></strong> " yazısını ekrana bastı.</p>
+<p>Terminali açtım ve komut satırına "<strong><code class="language-bash">asdf</code></strong> "(anlamsız karşılığı olmayan bir ifade/komut) yazdım. Konsol yanıt olarak " <strong><code class="language-bash">bash: asdf: komut yok</code></strong> " yazısını ekrana bastı.</p>
 <p><img src="../../img/1-%20Komut%20Sat%C4%B1r%C4%B1/20-min.png" class="responsive"></p>
-<p>Görüldüğü gibi konsol çıktısı Türkçe oldu ancak ben bu çıktıları İngilizceye çevirmek istiyorum diyelim. Bunun için konsola <strong><code> export LANG=C </code></strong> komutunu veriyorum. Ve sonrasında tekrar komut satırına <strong><code>asdf</code></strong> yazıp dilin değişip değişmediğini kontrol ediyorum.</p>
+<p>Görüldüğü gibi konsol çıktısı Türkçe oldu ancak ben bu çıktıları İngilizceye çevirmek istiyorum diyelim. Bunun için konsola <strong><code class="language-bash"> export LANG=C </code></strong> komutunu veriyorum. Ve sonrasında tekrar komut satırına <strong><code class="language-bash">asdf</code></strong> yazıp dilin değişip değişmediğini kontrol ediyorum.</p>
 <p><img src="../../img/1-%20Komut%20Sat%C4%B1r%C4%B1/21-min.png" class="responsive"></p>
-<p>Çıktıda da görüldüğü gibi dil değişmiş ve yazdığımız <strong><code>asdf</code></strong> komutunun neticesinde konsol, ekrana <strong><code>bash: asdf: command not found</code></strong> yazısını basmış oldu. Sonuç olarak geçerli terminal için dil ingilizceye çevrilmiş oldu.</p>
+<p>Çıktıda da görüldüğü gibi dil değişmiş ve yazdığımız <strong><code class="language-bash">asdf</code></strong> komutunun neticesinde konsol, ekrana <strong><code class="language-bash">bash: asdf: command not found</code></strong> yazısını basmış oldu. Sonuç olarak geçerli terminal için dil ingilizceye çevrilmiş oldu.</p>
 <p>Bütün bu işlemler sadece bu komut penceresi için sınırlı. Yani açmış olduğumuz terminal ekranını(konsol/komut penceresi) kapatırsak yeni bir tane açtığımızda başlangıçta olduğu gibi konsol bize Türkçe yanıt verecektir. <strong>Yani bu şekilde yapılan tüm değişiklikler sadece yapıldığı konsol için geçerli.</strong> Bunu kendiniz de deneyerek görebilirsiniz.</p>
 <h3 id="kullanıcı-ozel">Kullanıcıya (Oturuma) Özel</h3>
 <p>Daha önce BASH kabuğundan bahsetmiştik ve mevcut sistemimizde bulunup bulunmadığını da kontrol etmiştik. BASH her oturum açtığımızda tüm ayarlarını ve davranışlarını " <strong><mark>.bashrc</mark></strong> " isimli gizli bir dosyadan okur. <strong>Ufak bir bilgi daha; başında <strong><mark>.</mark></strong> (nokta) olan dosyalar gizli dosya görevindedir.</strong> Konuya dönecek olursak bizim mevcut oturumumuzda ortam değişkenlerinde kalıcı değişiklik yapabilmemiz için yapmak istediğimiz değişiklikleri " <strong><mark>.bashrc</mark></strong> " isimli dosyaya eklememiz gerekiyor ki oturum açtığımızda sistem burada yaptığımız değişiklikleri her seferinde görebilsin.</p>
-<p>Bulunduğumuz oturumda kalıcı değişiklik yapmak için birisi grafiksel diğeri ise sadece komut satırı arayüzü olmak üzere iki farklı yoldan nasıl değişiklik yaparız onu görelim. İsterseniz ilk olarak grafiksel arayüz ile başlayalım. Öncelikle <strong><mark>.bashrc</mark></strong> dosyasını açmalıyız. Dosyayı açmak için konsola <strong><code>leafpad ~/.bashrc</code></strong> komutunu veriyoruz.</p>
-<p>Kodu kısaca açıklayacak olursak <strong><code>leafpad</code></strong> sistemde mevcut bulunan basit metin düzenleyicisinin adıdır, <strong><code>~</code></strong>(<strong><mark>Alt Gr + ü</mark></strong> kombinasyonu ile oluşturulan "<strong>tilde</strong>" karakteri) karakteri ev dizinini temsil ediyor <strong><code>/.bashrc</code></strong> ise düzenleme yapacağımız dosyanın adıdır. Bu kısa açıklama sonrası komutları tam olarak anlamamış olabilirsiniz. Ancak yakında her birine değineceğiz ve bu kısımlar da tam anlamıyla oturmuş olacak. Yani şimdilik bu kodlara çok takılmadan asıl anlatılmak istenilene odaklanın lütfen.</p>
-<p><strong><code>leafpad ~/.bashrc</code></strong> komutunu verdikten sonra karşınıza <strong><mark>.bashrc</mark></strong> dosyasının açılmış olması gerek.</p>
+<p>Bulunduğumuz oturumda kalıcı değişiklik yapmak için birisi grafiksel diğeri ise sadece komut satırı arayüzü olmak üzere iki farklı yoldan nasıl değişiklik yaparız onu görelim. İsterseniz ilk olarak grafiksel arayüz ile başlayalım. Öncelikle <strong><mark>.bashrc</mark></strong> dosyasını açmalıyız. Dosyayı açmak için konsola <strong><code class="language-bash">leafpad ~/.bashrc</code></strong> komutunu veriyoruz.</p>
+<p>Kodu kısaca açıklayacak olursak <strong><code class="language-bash">leafpad</code></strong> sistemde mevcut bulunan basit metin düzenleyicisinin adıdır, <strong><code class="language-bash">~</code></strong>(<strong><mark>Alt Gr + ü</mark></strong> kombinasyonu ile oluşturulan "<strong>tilde</strong>" karakteri) karakteri ev dizinini temsil ediyor <strong><code class="language-bash">/.bashrc</code></strong> ise düzenleme yapacağımız dosyanın adıdır. Bu kısa açıklama sonrası komutları tam olarak anlamamış olabilirsiniz. Ancak yakında her birine değineceğiz ve bu kısımlar da tam anlamıyla oturmuş olacak. Yani şimdilik bu kodlara çok takılmadan asıl anlatılmak istenilene odaklanın lütfen.</p>
+<p><strong><code class="language-bash">leafpad ~/.bashrc</code></strong> komutunu verdikten sonra karşınıza <strong><mark>.bashrc</mark></strong> dosyasının açılmış olması gerek.</p>
 <p><img src="../../img/1-%20Komut%20Sat%C4%B1r%C4%B1/22-min.png" class="responsive"></p>
-<p>Şimdi yapmak istediğimiz değişikliği dosyanın en alt satırına yani dosyanın sonuna eklemeliyiz. Bu eklemeyi <strong><code>export DEĞİŞKEN_ADI=değeri</code></strong> şeklinde yapıyoruz. Ben örnek olması açısından dil değişikliğini ele aldım. Bu sebepten dil değişimi(Türkçe olan dili ingilizceye çevirmek) için gerekli olan yazı dizisini <strong><code>export LANG=C</code></strong> şeklinde dosyanın sonuna ekledim ve dosyayı kaydederek kapattım.</p>
+<p>Şimdi yapmak istediğimiz değişikliği dosyanın en alt satırına yani dosyanın sonuna eklemeliyiz. Bu eklemeyi <strong><code class="language-bash">export DEĞİŞKEN_ADI=değeri</code></strong> şeklinde yapıyoruz. Ben örnek olması açısından dil değişikliğini ele aldım. Bu sebepten dil değişimi(Türkçe olan dili ingilizceye çevirmek) için gerekli olan yazı dizisini <strong><code class="language-bash">export LANG=C</code></strong> şeklinde dosyanın sonuna ekledim ve dosyayı kaydederek kapattım.</p>
 <p>Geldik diğer yöntem olan yalnızca konsol ekranını kullanarak değişiklik yapmaya.</p>
-<p>Bunun için konsola <strong><code>nano -w ~/.bashrc</code></strong> komutumuzu veriyoruz.
-Komutumuzu girdikten sonra karşımıza konsol ekranı içerisinde <strong><mark>.bashrc</mark></strong> dosyasının içeriği geliyor. Klavyedeki yön tuşlarını kullanarak en alt satıra iniyoruz ve oraya yapmak istediğimiz değişkliği giriyoruz. Ben dilde değişiklik yapacağım için satırın sonuna <strong><code>export LANG=C</code></strong> şeklinde ekleme yaptım .</p>
+<p>Bunun için konsola <strong><code class="language-bash">nano -w ~/.bashrc</code></strong> komutumuzu veriyoruz.
+Komutumuzu girdikten sonra karşımıza konsol ekranı içerisinde <strong><mark>.bashrc</mark></strong> dosyasının içeriği geliyor. Klavyedeki yön tuşlarını kullanarak en alt satıra iniyoruz ve oraya yapmak istediğimiz değişkliği giriyoruz. Ben dilde değişiklik yapacağım için satırın sonuna <strong><code class="language-bash">export LANG=C</code></strong> şeklinde ekleme yaptım .</p>
 <p><img src="../../img/1-%20Komut%20Sat%C4%B1r%C4%B1/23-min.png" class="responsive"></p>
 <p>Ve <strong><mark>Ctrl + X</mark></strong> tuş kombinasyonunu uyguladım. Daha sonra konsol bana çıkmadan önce dosyada yaptığım değişikliği kaydetmek isteyip istemediğimi sordu bende "<strong>e</strong>" diyerek <strong>dosyanın adını herhangi bir değişime uğratmadan kaydettim</strong> ve işte bu kadar işlem tamamdır.</p>
 <p><img src="../../img/1-%20Komut%20Sat%C4%B1r%C4%B1/7.3-min.png" class="responsive"></p>
 <img src="../../img/1-%20Komut%20Sat%C4%B1r%C4%B1/25-min.png" class="responsive"></p>
 <p>Yalnızca komut satırından işlem yapmak sanki daha uzun ve zor gibi gelmiş olabilir ancak kesinlikle grafiksel olarak yapmaktan bir farkı yok sadece belki izahı biraz uzun sürmüş olabilir.</p>
-<p>Artık böylelikle değişiklik yaptığımız bu kullanıcı oturumunu ne zaman açarsak, yaptığımız dil değişikliği geçerli olacak. Ancak değişikliği yaptığımız anda etki etmiyor. Bunun nedeni <strong><mark>.bashrc</mark></strong> dosyasının oturum açılırken okunmasıdır. Yani yaptığımız değişikliklerin geçerli olabilmesi için oturumun kapatılıp tekrar açılması gerekmektedir. Ya da konsoldan vereceğimiz <strong><code>source ~/.bashrc</code></strong> komutu da dosyanın tıpkı oturum yeniden açılıyormuşçasına <strong><mark> .bashrc</mark></strong> dosyasının tekrar okunup yapılan değişikliklerin geçerli olmasını sağlar. Ancak benim önerim oturumu kapatıp tekrar açmanız yönündedir.</p>
+<p>Artık böylelikle değişiklik yaptığımız bu kullanıcı oturumunu ne zaman açarsak, yaptığımız dil değişikliği geçerli olacak. Ancak değişikliği yaptığımız anda etki etmiyor. Bunun nedeni <strong><mark>.bashrc</mark></strong> dosyasının oturum açılırken okunmasıdır. Yani yaptığımız değişikliklerin geçerli olabilmesi için oturumun kapatılıp tekrar açılması gerekmektedir. Ya da konsoldan vereceğimiz <strong><code class="language-bash">source ~/.bashrc</code></strong> komutu da dosyanın tıpkı oturum yeniden açılıyormuşçasına <strong><mark> .bashrc</mark></strong> dosyasının tekrar okunup yapılan değişikliklerin geçerli olmasını sağlar. Ancak benim önerim oturumu kapatıp tekrar açmanız yönündedir.</p>
 <h3 id="sistem-geneli">Sistem Genelinde</h3>
-<p>Eğer yaptığımız değişiklik bütün kullanıcı oturumlarında aynı şekilde geçerli olsun istiyorsak değişkenin sistemde her oturum açıldığında okunan bir dosyada bulunması gerekmektedir. İşte bizim de yapacağımız değişiklikler tüm kullanıcılar için geçerli olsun istiyorsak, yapacağımız değişikliği <strong><mark> bash.bashrc</mark></strong> dosyasına eklemeliyiz. Dosyamızın tam konumu <strong><mark>/etc/bash.bashrc </mark></strong> dizininde yer alıyor. Bu dosyada ilgili değişikliği nano aracı ile yapmak için konsola <strong><code>nano -w /etc/bash.bashrc</code></strong> komutunu veriyoruz.</p>
+<p>Eğer yaptığımız değişiklik bütün kullanıcı oturumlarında aynı şekilde geçerli olsun istiyorsak değişkenin sistemde her oturum açıldığında okunan bir dosyada bulunması gerekmektedir. İşte bizim de yapacağımız değişiklikler tüm kullanıcılar için geçerli olsun istiyorsak, yapacağımız değişikliği <strong><mark> bash.bashrc</mark></strong> dosyasına eklemeliyiz. Dosyamızın tam konumu <strong><mark>/etc/bash.bashrc </mark></strong> dizininde yer alıyor. Bu dosyada ilgili değişikliği nano aracı ile yapmak için konsola <strong><code class="language-bash">nano -w /etc/bash.bashrc</code></strong> komutunu veriyoruz.</p>
 <p><img src="../../img/1-%20Komut%20Sat%C4%B1r%C4%B1/26-min.png" class="responsive"></p>
-<p>Örnek olması açısından dosyamızın en son satırına dil değişikliği işlevindeki "<strong><code>export LANG=C</code></strong>" ifadesini ekliyorum. Bu sayede terminal dili bütün sistemdeki kullanıcılar için ingilizce olacaktır.</p>
+<p>Örnek olması açısından dosyamızın en son satırına dil değişikliği işlevindeki "<strong><code class="language-bash">export LANG=C</code></strong>" ifadesini ekliyorum. Bu sayede terminal dili bütün sistemdeki kullanıcılar için ingilizce olacaktır.</p>
 <p>İlgili ifadeyi <strong><mark>bash.bashrc</mark></strong> dosyamıza ekleyip dosyamızı kaydediyoruz .</p>
 <p><img src="../../img/1-%20Komut%20Sat%C4%B1r%C4%B1/7.3-min.png" class="responsive"></p>
 <img src="../../img/1-%20Komut%20Sat%C4%B1r%C4%B1/28-min.png" class="responsive"></p>
-<p>Sıra geldi değişikliklerin sistem tarafından tanınmasına. Yapılan değişikliğin sistem bütününde geçerli olabilmesi için daha önce de bahsi geçen <strong><code>source</code></strong> komutunu <strong><mark>bash.bashrc</mark></strong> dosyası için <strong><code>source /etc/bash.bashrc</code></strong> şeklinde kullanıyoruz. Ve değişikliklerin geçerli olup olmadığını denemek için konsola olmayan geçersiz bir komut verelim, örneğin konsola <strong><code>asdf</code></strong> yazalım bakalım konsolun tepkisi hangi dilde olacak.</p>
+<p>Sıra geldi değişikliklerin sistem tarafından tanınmasına. Yapılan değişikliğin sistem bütününde geçerli olabilmesi için daha önce de bahsi geçen <strong><code class="language-bash">source</code></strong> komutunu <strong><mark>bash.bashrc</mark></strong> dosyası için <strong><code class="language-bash">source /etc/bash.bashrc</code></strong> şeklinde kullanıyoruz. Ve değişikliklerin geçerli olup olmadığını denemek için konsola olmayan geçersiz bir komut verelim, örneğin konsola <strong><code class="language-bash">asdf</code></strong> yazalım bakalım konsolun tepkisi hangi dilde olacak.</p>
 <p><img src="../../img/1-%20Komut%20Sat%C4%B1r%C4%B1/29-min.png" class="responsive"></p>
 <p>Çıktımız ingilizce olduğuna göre başarmışız demektir. Yaptığımız bu değişiklik bütün kullanıcılar için yani sistem geneli için geçerlidir. Bu durumu başka bir hesap oluşturarak kendiniz de gözlemleyebilirsiniz.</p>
-<p>Ayrıca değişiklikleri geri almak isterseniz eklediğiniz ifadeyi ilgili dosyadan silin ve sistemi <strong><code>source ilgili_dosya_adı</code></strong> şeklindeki komut bütünü ile yeniden konfigüre edin, bütün değişimler düzelmiş olacaktır.(<strong><code>source</code></strong> komutunu kullanmak zorunda değilsiniz, hatta bu komut yerine sistemi yeniden başlatmanız daha iyi olacaktır.)</p>
+<p>Ayrıca değişiklikleri geri almak isterseniz eklediğiniz ifadeyi ilgili dosyadan silin ve sistemi <strong><code class="language-bash">source ilgili_dosya_adı</code></strong> şeklindeki komut bütünü ile yeniden konfigüre edin, bütün değişimler düzelmiş olacaktır.(<strong><code class="language-bash">source</code></strong> komutunu kullanmak zorunda değilsiniz, hatta bu komut yerine sistemi yeniden başlatmanız daha iyi olacaktır.)</p>
 	<h1></h1>
 <center>
 	<h1 id="bildirim">Geri Bildirimde Bulunun</h1>
 <p>Sizlere daha verimli bir kaynak sunabilmemiz için, uygulamada veya dokümantasyonlarda yer alan tüm hata ve eksiklerimizi bize bildirebilirsiniz.	</p>
-	<div class="checkbox mb-3">                         
-			<a href="../../bildirim.html" class="btn btn-danger">Geri Bildirimde Bulunun</a>
-      </div>
+	<a href="../../bildirim.html" class="btn btn-danger">Geri Bildirimde Bulunun</a>
 	  </center>	
 </article>       
     </div>
 
     
 <script src="../../js/jquery-3.3.1.slim.min.js"></script>
-<script src="../../js/script.js"></script>		
+<script src="../../js/script.js"></script>	
+<script src="../../js/prism.js"></script>		
  
 
 

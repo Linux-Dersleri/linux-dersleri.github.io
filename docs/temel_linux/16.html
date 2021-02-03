@@ -9,15 +9,17 @@
 	<link rel="stylesheet" href="../../css/bootstrap.min.css">
 	<link rel="stylesheet" href="../../css/font-awesome.min.css">
 	<link rel="stylesheet" href="../../css/style.css">
+<link rel="stylesheet" href="../../css/prism.css">
 
 </head>
 
-<body id="body" >	
+<body>	
 <div class="bs-canvas-overlay bs-canvas-anim bg-dark position-fixed w-100 h-100"></div>
 	
 <nav class="navbar y-navbar sticky-top navbar-expand-lg navbar-light bg-light">
   
-  <a style="color: black" class="btn"  data-toggle="canvas" data-target="#bs-canvas-left" aria-expanded="false" aria-controls="bs-canvas-left"><i class="fa fa-align-justify fa-lg"></i></a>
+  <div align="left">
+		<a class="btn" data-toggle="canvas" data-target="#bs-canvas-left" aria-expanded="false" aria-controls="bs-canvas-left"><i class="fa fa-align-justify fa-lg"></i></a></div>
   <center >
 	<div>
 	<a href="./15.html" style="color: black" class="btn navbar-toggler " > <i class="fa fa-angle-double-left fa-lg"></i></a>
@@ -27,15 +29,20 @@
     <a href="./17.html" style="color: black" class="btn navbar-toggler " ><i class="fa fa-angle-double-right fa-lg"></i> </a>
 	</div>
   </center>
-  <a style="color: black" class="btn"  data-toggle="canvas" data-target="#bs-canvas-right" aria-expanded="false" aria-controls="bs-canvas-right" ><i class="fa fa-gear fa-lg"></i></a>  
+  <div align="right">
+			<div class="togg-wrap">
+			
+			<button onclick="tema()" class="btn" ><i class="fa fa-adjust fa-lg"></i></button>  
+    
+		</div> 
 		
 </nav>
 
 <nav class="navbar x-navbar sticky-top navbar-expand-lg navbar-light bg-light border-bottom">
 	
 	<div class="container ">
-            <div align="left"><button class="btn"  data-toggle="canvas" data-target="#bs-canvas-left" aria-expanded="false" aria-controls="bs-canvas-left"><i class="fa fa-align-justify fa-lg"></i></button>
-		<a href="../../menu.html" class="btn"  ><i class="fa fa-home fa-lg"></i></a>     </div>
+            <div align="left">
+		<a class="btn" data-toggle="canvas" data-target="#bs-canvas-left" aria-expanded="false" aria-controls="bs-canvas-left"><i class="fa fa-align-justify fa-lg"></i></a><a href="../../menu.html" class="btn"  ><i class="fa fa-home fa-lg"></i></a></div>
 	<center >
 		
         <a href="./15.html" class="btn">Önceki <i class="fa fa-angle-double-left fa-lg"></i></a>
@@ -47,46 +54,21 @@
         
     </center>
 			<div align="right">
+			<div class="togg-wrap">
+			
+			<button onclick="tema()" class="btn" ><i class="fa fa-adjust fa-lg"></i></button>  
 				<a href="../../bildirim.html" class="btn" ><i class="fa fa-paper-plane"></i></a>    
-             <a style="color: black" class="btn"  data-toggle="canvas" data-target="#bs-canvas-right" aria-expanded="false" aria-controls="bs-canvas-right" ><i class="fa fa-gear fa-lg"></i></a>  
 		</div>              
+	</div>              
 	</div>
      
 </nav>
-<div id="bs-canvas-right" class="bs-canvas bs-canvas-anim bs-canvas-right position-fixed bg-light h-100" >
-	<header class="bs-canvas-header p-3 bg-dark">
-		
-    	<h4 align="center" class="text-light">Ayar Menüsü<button type="button" class="bs-canvas-close close" aria-label="Close" aria-expanded="true"><span aria-hidden="true" class="text-light">×</span></button></h4>
-        
-    </header>
-    <div class="bs-canvas-content px-3">
-    	
-    	<div align="center" class="list-group my-2 ">
-			<button class="btn">Yazı Boyutunu Seçip Kaydedin</button>
-  <!-- This is how they choose their font size -->
-  <select onchange="fontSize(this);">
-    
-	<option>18px</option>
-	<option>20px</option>
-	<option>22px</option>
-	<option>24px</option>
-	<option>26px</option>
 
-  </select>
-  <br>
-
-  <input type="button" id="save" value="Seçili Boyutu Kaydet">
-<button class="btn">Okuma Modunu Değiştirin</button>
-		<button class="btn btn-outline-dark" onclick="darkLight()" ><i class="fa fa-eye fa-lg"></i></button>
-		
-        </div>
-    </div>    
-</div>
 	
-<div id="bs-canvas-left" class="bs-canvas bs-canvas-anim bs-canvas-left position-fixed bg-light h-100" >
-	<header class="bs-canvas-header p-3 bg-dark">
+<div id="bs-canvas-left" class="bs-canvas bs-canvas-anim bs-canvas-left position-fixed bg-kanvas h-100" >
+	<header class="bs-canvas-header p-3 bg-baslık">
 		
-    	<h4 align="center" class="text-light">İçerik Menüsü<button type="button" class="bs-canvas-close close" aria-label="Close" aria-expanded="true"><span aria-hidden="true" class="text-light">×</span></button></h4>
+    	<h4 align="center" >İçerik Menüsü<button type="button" class="bs-canvas-close close" aria-label="Close" aria-expanded="true"><span aria-hidden="true" >×</span></button></h4>
         
     </header>
     <div class="bs-canvas-content px-3">
@@ -121,7 +103,7 @@
         
       </div>
     </div>
- <article id="makale" style="font-size:1em;" class="markdown-body entry-content" itemprop="text">
+ <article id="makale" style="font-size:1.2em;" class="markdown-body entry-content" itemprop="text">
 	
 	 
 	
@@ -131,25 +113,25 @@
 <p><strong>Katı link</strong> ile oluşturulmuş bağlantılar ise dosyanın kopyasıdır. Orijinal dosya silinse bile katı link içeriği korumaya devam eder.</p>
 <p>Bağlantı türlerinin kullanımlarına geçmeden önce ufak bir bilgi daha öğrenmeliyiz o da <strong>inode</strong> kavramı.</p>
 <h2 id="inode">inode(düğüm)</h2>
-<p><strong>Inode(düğüm)</strong>, dosyanın sahibi, oluşturulma tarihi, boyutu, tipi, erişim hakları, en son erişim tarihi ve en son değişikliklerin yapıldığı tarih gibi birçok meta verileri içeren yapıdır. Yani biz herhangi bir dosya oluşturduğumuzda disk üzerinde <strong>1 inode</strong> yer kaplamaktadır. Bununla ilgili olarak <strong>inode</strong> tablosunu görmek için konsola <strong><code>df -i</code></strong> komutumuzu verelim.</p>
+<p><strong>Inode(düğüm)</strong>, dosyanın sahibi, oluşturulma tarihi, boyutu, tipi, erişim hakları, en son erişim tarihi ve en son değişikliklerin yapıldığı tarih gibi birçok meta verileri içeren yapıdır. Yani biz herhangi bir dosya oluşturduğumuzda disk üzerinde <strong>1 inode</strong> yer kaplamaktadır. Bununla ilgili olarak <strong>inode</strong> tablosunu görmek için konsola <strong><code class="language-bash">df -i</code></strong> komutumuzu verelim.</p>
 <p><img src="../../img/13-%20Sembolik%20Link%20Ve%20Kat%C4%B1%20Link/1-min.png" class="responsive"></p>
 <p>Hemen çıktıları ele alarak açıklamamıza devam edelim.</p>
 <p>Örneğin <strong><mark>/dev/sda1</mark></strong> disk alanını ele alırsak toplam <strong>6348800 adet inode numarası</strong> alabilir <strong>yani sınırı bu kadar</strong>.</p>
 <p>Kullanılan <strong>391980 inode</strong> numarasından toplam kullanılabilir olanı çıkarırsak <strong>(6348800-391980=5956820)</strong> geriye kullanılabilir <strong>5956820 inode</strong> numarası kalmış oluyor.</p>
 <p>Bunun anlamı <strong>her bir dosya 1 inode yer kapladığı için</strong><strong><mark>/dev/sda1</mark></strong> dosya sisteminde <strong>5956820 adet daha dosya oluşturulabilecek alan mevcut</strong>.</p>
-<p>Her bir <strong>inode(düğüm)</strong> numarasının benzersiz olduğunu söylemiştik. Bu durumu teyit etmek için bulunduğumuz konumdaki dosyaların <strong>inode</strong> numaralarını görebilmek adına komut satırımıza <strong><code>ls -li</code></strong> komutumuzu veriyoruz.</p>
+<p>Her bir <strong>inode(düğüm)</strong> numarasının benzersiz olduğunu söylemiştik. Bu durumu teyit etmek için bulunduğumuz konumdaki dosyaların <strong>inode</strong> numaralarını görebilmek adına komut satırımıza <strong><code class="language-bash">ls -li</code></strong> komutumuzu veriyoruz.</p>
 <p><img src="../../img/13-%20Sembolik%20Link%20Ve%20Kat%C4%B1%20Link/2-min.png" class="responsive"></p>
 <p>Çıktıda yer alan soldaki numaralar, ilgili dosyanın <strong>inode</strong> numarasını temsil ediyor.</p>
 <p>Konumuza sembolik link oluşturma ile devam edelim.</p>
 <h2 id="sembolik">Sembolik Link</h2>
-<p>Sembolik link oluşturmak için <strong><code>ln -s</code></strong> komutu kullanılır. Komutun kullanım örneği ile devam edelim.</p>
+<p>Sembolik link oluşturmak için <strong><code class="language-bash">ln -s</code></strong> komutu kullanılır. Komutun kullanım örneği ile devam edelim.</p>
 <p>Örnek bir dosya oluşturarak, sembolik link komutu yardımı ile dosyamıza kısayol oluşturalım.</p>
-<p><strong><mark>Music</mark></strong>  dosya konumundayken <strong><code>touch</code></strong> komutu yardımı ile "<strong>klasik</strong>" isimli bir dosya oluşturduk.</p>
+<p><strong><mark>Music</mark></strong>  dosya konumundayken <strong><code class="language-bash">touch</code></strong> komutu yardımı ile "<strong>klasik</strong>" isimli bir dosya oluşturduk.</p>
 <p><img src="../../img/13-%20Sembolik%20Link%20Ve%20Kat%C4%B1%20Link/3-min.png" class="responsive"></p>
-<p>Oluşturduğumuz "<strong>klasik</strong>" isimli dosyanın kısayolunu, komutumuzu <strong><code>ln -s dosya_adı kısayol_adı</code></strong> şeklinde kullanarak oluşturduk.</p>
+<p>Oluşturduğumuz "<strong>klasik</strong>" isimli dosyanın kısayolunu, komutumuzu <strong><code class="language-bash">ln -s dosya_adı kısayol_adı</code></strong> şeklinde kullanarak oluşturduk.</p>
 <p><img src="../../img/13-%20Sembolik%20Link%20Ve%20Kat%C4%B1%20Link/4-min.png" class="responsive"></p>
-<p>Son olarak <strong><code>ls -i</code></strong> komutunu vererek orijinal dosyanın ve sembolik link yardımı ile oluşturulan kısayol dosyasının <strong>inode</strong> değerlerini karşılaştırdık. Çıktıda da görüldüğü üzere değerler farklı olarak karşımıza çıkmış oldu.</p>
-<p>Ayrıca dosyaları <strong><code>file</code></strong> isimli bir komut yardımı ile inceleyerek de bilgi alabiliriz.</p>
+<p>Son olarak <strong><code class="language-bash">ls -i</code></strong> komutunu vererek orijinal dosyanın ve sembolik link yardımı ile oluşturulan kısayol dosyasının <strong>inode</strong> değerlerini karşılaştırdık. Çıktıda da görüldüğü üzere değerler farklı olarak karşımıza çıkmış oldu.</p>
+<p>Ayrıca dosyaları <strong><code class="language-bash">file</code></strong> isimli bir komut yardımı ile inceleyerek de bilgi alabiliriz.</p>
 <p><img src="../../img/13-%20Sembolik%20Link%20Ve%20Kat%C4%B1%20Link/5-min.png" class="responsive"></p>
 <p><strong>Sembolik link</strong> komutu ile oluşturduğumuz dosyanın <strong>kısayol</strong> olduğunu çıktıda görebiliyoruz. Ancak son olarak kısayol dosyamızın çalışma durumunu da test edelim.</p>
 <p>Bunun için ilk başta dosyamızın içeriğini okuyalım daha sonra orijinal dosyamıza yazı ekleyelim ve kısayoldaki değişimleri gözlemleyelim.</p>
@@ -158,22 +140,22 @@
 <p>Eğer orijinal dosyayı silersek kısayol dosyası da açılmayacak ve bizlere hata mesajı bildirilecektir.</p>
 <p><img src="../../img/13-%20Sembolik%20Link%20Ve%20Kat%C4%B1%20Link/7-min.png" class="responsive"></p>
 <p>Görüldüğü gibi kısayol dosyası orijinal kaynağı silindiği için okunamadı.</p>
-<p>Ayrıca ilk <strong><code>ls -li</code></strong> çıktısında kısayol dosyasının sol tarafında yer alan <strong><mark>lrwxrwxrwx</mark></strong> ifadesindeki <strong><code>l</code></strong> harfi, dosyanın kısayol olduğunu ve <strong><code>-&gt;</code></strong> işareti ise hangi dosyanın kısayolu olduğunu işaret ediyor.</p>
+<p>Ayrıca ilk <strong><code class="language-bash">ls -li</code></strong> çıktısında kısayol dosyasının sol tarafında yer alan <strong><mark>lrwxrwxrwx</mark></strong> ifadesindeki <strong><code class="language-bash">l</code></strong> harfi, dosyanın kısayol olduğunu ve <strong><code class="language-bash">-&gt;</code></strong> işareti ise hangi dosyanın kısayolu olduğunu işaret ediyor.</p>
 <h2 id="kati">Katı Link</h2>
-<p>Sıra geldi katı link bağlantısının kullanımına. Katı link bağlantısı için <strong><code>ln</code></strong> komutu kullanılıyor. Örnek üzerinden ilerleyelim.</p>
-<p>Örnek olması açısından <strong><mark>Music</mark></strong> klasörü altında "<strong>caz</strong>" adında bir dosya oluşturuyorum. Daha sonra oluşturduğum "<strong>caz</strong>" isimli klasörün katı linkini <strong><code>ln caz caz_kati</code></strong> komutu ile oluşturuyorum.</p>
+<p>Sıra geldi katı link bağlantısının kullanımına. Katı link bağlantısı için <strong><code class="language-bash">ln</code></strong> komutu kullanılıyor. Örnek üzerinden ilerleyelim.</p>
+<p>Örnek olması açısından <strong><mark>Music</mark></strong> klasörü altında "<strong>caz</strong>" adında bir dosya oluşturuyorum. Daha sonra oluşturduğum "<strong>caz</strong>" isimli klasörün katı linkini <strong><code class="language-bash">ln caz caz_kati</code></strong> komutu ile oluşturuyorum.</p>
 <p><img src="../../img/13-%20Sembolik%20Link%20Ve%20Kat%C4%B1%20Link/8-min.png" class="responsive"></p>
 <p>Çıktıda dikkat edilmesi gereken nokta orijinal "<strong>caz</strong>" dosyası ile katı bağlantı "<strong>caz</strong>" dosyasının inode değerlerinin aynı olmasıdır. Bu da demek oluyor ki; <strong>her iki dosya da her yönüyle birbirlerinin aynı</strong> durumda.</p>
 <p>Ayrıca orijinal ya da katı link ile oluşturulmuş dosyaların birinde yapacağımız değişiklik tıpkı sembolik linkte olduğu gibi diğer dosyada da geçerli olacaktır. Yani bu orijinal dosya ile katı link dosyası halihazırda bağlantılı dosyalar.</p>
 <p><img src="../../img/13-%20Sembolik%20Link%20Ve%20Kat%C4%B1%20Link/9-min.png" class="responsive"></p>
-<p>Hemen daha önce yaptığımız gibi <strong><code>file</code></strong> komutu ile orijinal dosya ve link ile oluşturulmuş dosyalarımızı karşılaştıralım.</p>
+<p>Hemen daha önce yaptığımız gibi <strong><code class="language-bash">file</code></strong> komutu ile orijinal dosya ve link ile oluşturulmuş dosyalarımızı karşılaştıralım.</p>
 <p><img src="../../img/13-%20Sembolik%20Link%20Ve%20Kat%C4%B1%20Link/10-min.png" class="responsive"></p>
 <p>Komutun sonucunda her ikisininde ayrı ayrı dosyalar olduğunu görmüş olduk. Bu da demek oluyor ki biz eğer orijinal dosyayı silersek sembolik linkte olduğu gibi katı link ile oluşturulmuş dosya kullanılmaz hale gelmeyecektir. Bunu da hemen test edelim.</p>
 <p><img src="../../img/13-%20Sembolik%20Link%20Ve%20Kat%C4%B1%20Link/11-min.png" class="responsive"></p>
 <p>Gördüğünüz gibi orijinal dosyayı silmeme rağmen katı link ile oluşturmuş olduğum dosya hala okunabilir durumda.</p>
 		<h1></h1>
 <div align="center" class="container">
-<div class="card mb-4 ">
+<div class="card mb-4 border">
     <div class="row no-gutters">
         <div class="col-md-3">
             <img src="../../img/menu/pc-logo.png" class="card-img-top img1">
@@ -181,7 +163,7 @@
         <div class="col-md-8">
             <div class="card-body">
 		<strong class="d-inline-block mb-0 text-primary"><h3 id="alistirma">Alıştırmalar Hakkında</h3></strong>
-                <p class="card-text text-dark">Öğrendiğiniz bilgilerin kalıcı olması için bolca alıştırma yapmalısınız. Burada yer alan alıştırma faaliyetleri dışında, konuyu öğrendiğinizi hissede kadar kendiniz de bolca pratik yapın lütfen.  Aksi halde öğrendiğiniz bilgiler kısa sürede unutulup gidecektir. </p>
+                <p class="card-text">Öğrendiğiniz bilgilerin kalıcı olması için bolca alıştırma yapmalısınız. Burada yer alan alıştırma faaliyetleri dışında, konuyu öğrendiğinizi hissede kadar kendiniz de bolca pratik yapın lütfen.  Aksi halde öğrendiğiniz bilgiler kısa sürede unutulup gidecektir. </p>
                 
             </div>
         </div>
@@ -196,7 +178,7 @@
 <div class="col-md-14">
       <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
-		<p class="card-text mb-auto">Konsol üzerinden bulunduğunuz konumdaki dosyaların <strong>inode değerlerini listeleyin</strong>.(<code>ls</code>&nbsp; komutuna ek olarak ekleyeceğiniz bir parametre ile yapabilirsiniz.)
+		<p class="card-text mb-auto">Konsol üzerinden bulunduğunuz konumdaki dosyaların <strong>inode değerlerini listeleyin</strong>.(<code class="language-bash">ls</code>&nbsp; komutuna ek olarak ekleyeceğiniz bir parametre ile yapabilirsiniz.)
         </p></div>        
       </div>
     </div>
@@ -226,16 +208,15 @@
 <center>
 	<h1 id="bildirim">Geri Bildirimde Bulunun</h1>
 <p>Sizlere daha verimli bir kaynak sunabilmemiz için, uygulamada veya dokümantasyonlarda yer alan tüm hata ve eksiklerimizi bize bildirebilirsiniz.	</p>
-	<div class="checkbox mb-3">                         
-			<a href="../../bildirim.html" class="btn btn-danger">Geri Bildirimde Bulunun</a>
-      </div>
+	<a href="../../bildirim.html" class="btn btn-danger">Geri Bildirimde Bulunun</a>
 	  </center>	
 </article>       
     </div>
 
     
 <script src="../../js/jquery-3.3.1.slim.min.js"></script>
-<script src="../../js/script.js"></script>		
+<script src="../../js/script.js"></script>	
+<script src="../../js/prism.js"></script>		
  
 
 

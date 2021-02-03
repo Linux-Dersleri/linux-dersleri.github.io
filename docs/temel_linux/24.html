@@ -9,15 +9,17 @@
 	<link rel="stylesheet" href="../../css/bootstrap.min.css">
 	<link rel="stylesheet" href="../../css/font-awesome.min.css">
 	<link rel="stylesheet" href="../../css/style.css">
+<link rel="stylesheet" href="../../css/prism.css">
 
 </head>
 
-<body id="body" >	
+<body>	
 <div class="bs-canvas-overlay bs-canvas-anim bg-dark position-fixed w-100 h-100"></div>
 	
 <nav class="navbar y-navbar sticky-top navbar-expand-lg navbar-light bg-light">
   
-  <a style="color: black" class="btn"  data-toggle="canvas" data-target="#bs-canvas-left" aria-expanded="false" aria-controls="bs-canvas-left"><i class="fa fa-align-justify fa-lg"></i></a>
+  <div align="left">
+		<a class="btn" data-toggle="canvas" data-target="#bs-canvas-left" aria-expanded="false" aria-controls="bs-canvas-left"><i class="fa fa-align-justify fa-lg"></i></a></div>
   <center >
 	<div>
 	<a href="./23.html" style="color: black" class="btn navbar-toggler " > <i class="fa fa-angle-double-left fa-lg"></i></a>
@@ -27,15 +29,20 @@
     <a href="../../index.html" style="color: black" class="btn navbar-toggler " ><i class="fa fa-angle-double-right fa-lg"></i> </a>
 	</div>
   </center>
-  <a style="color: black" class="btn"  data-toggle="canvas" data-target="#bs-canvas-right" aria-expanded="false" aria-controls="bs-canvas-right" ><i class="fa fa-gear fa-lg"></i></a>  
+  <div align="right">
+			<div class="togg-wrap">
+			
+			<button onclick="tema()" class="btn" ><i class="fa fa-adjust fa-lg"></i></button>  
+    
+		</div> 
 		
 </nav>
 
 <nav class="navbar x-navbar sticky-top navbar-expand-lg navbar-light bg-light border-bottom">
 	
 	<div class="container ">
-            <div align="left"><button class="btn"  data-toggle="canvas" data-target="#bs-canvas-left" aria-expanded="false" aria-controls="bs-canvas-left"><i class="fa fa-align-justify fa-lg"></i></button>
-		<a href="../../menu.html" class="btn"  ><i class="fa fa-home fa-lg"></i></a>     </div>
+            <div align="left">
+		<a class="btn" data-toggle="canvas" data-target="#bs-canvas-left" aria-expanded="false" aria-controls="bs-canvas-left"><i class="fa fa-align-justify fa-lg"></i></a><a href="../../menu.html" class="btn"  ><i class="fa fa-home fa-lg"></i></a></div>
 	<center >
 		
         <a href="./23.html" class="btn">Önceki <i class="fa fa-angle-double-left fa-lg"></i></a>
@@ -47,46 +54,21 @@
         
     </center>
 			<div align="right">
+			<div class="togg-wrap">
+			
+			<button onclick="tema()" class="btn" ><i class="fa fa-adjust fa-lg"></i></button>  
 				<a href="../../bildirim.html" class="btn" ><i class="fa fa-paper-plane"></i></a>    
-             <a style="color: black" class="btn"  data-toggle="canvas" data-target="#bs-canvas-right" aria-expanded="false" aria-controls="bs-canvas-right" ><i class="fa fa-gear fa-lg"></i></a>  
 		</div>              
+	</div>              
 	</div>
      
 </nav>
-<div id="bs-canvas-right" class="bs-canvas bs-canvas-anim bs-canvas-right position-fixed bg-light h-100" >
-	<header class="bs-canvas-header p-3 bg-dark">
-		
-    	<h4 align="center" class="text-light">Ayar Menüsü<button type="button" class="bs-canvas-close close" aria-label="Close" aria-expanded="true"><span aria-hidden="true" class="text-light">×</span></button></h4>
-        
-    </header>
-    <div class="bs-canvas-content px-3">
-    	
-    	<div align="center" class="list-group my-2 ">
-			<button class="btn">Yazı Boyutunu Seçip Kaydedin</button>
-  <!-- This is how they choose their font size -->
-  <select onchange="fontSize(this);">
-    
-	<option>18px</option>
-	<option>20px</option>
-	<option>22px</option>
-	<option>24px</option>
-	<option>26px</option>
 
-  </select>
-  <br>
-
-  <input type="button" id="save" value="Seçili Boyutu Kaydet">
-<button class="btn">Okuma Modunu Değiştirin</button>
-		<button class="btn btn-outline-dark" onclick="darkLight()" ><i class="fa fa-eye fa-lg"></i></button>
-		
-        </div>
-    </div>    
-</div>
 	
-<div id="bs-canvas-left" class="bs-canvas bs-canvas-anim bs-canvas-left position-fixed bg-light h-100" >
-	<header class="bs-canvas-header p-3 bg-dark">
+<div id="bs-canvas-left" class="bs-canvas bs-canvas-anim bs-canvas-left position-fixed bg-kanvas h-100" >
+	<header class="bs-canvas-header p-3 bg-baslık">
 		
-    	<h4 align="center" class="text-light">İçerik Menüsü<button type="button" class="bs-canvas-close close" aria-label="Close" aria-expanded="true"><span aria-hidden="true" class="text-light">×</span></button></h4>
+    	<h4 align="center" >İçerik Menüsü<button type="button" class="bs-canvas-close close" aria-label="Close" aria-expanded="true"><span aria-hidden="true" >×</span></button></h4>
         
     </header>
     <div class="bs-canvas-content px-3">
@@ -135,7 +117,7 @@
         
       </div>
     </div>
- <article id="makale" style="font-size:1em;" class="markdown-body entry-content" itemprop="text">
+ <article id="makale" style="font-size:1.2em;" class="markdown-body entry-content" itemprop="text">
 
 	
 	 
@@ -248,48 +230,48 @@ Güçlüdür, aynı zamanda gayet de şıktır. Hani olağanüstü görsel bir a
 </blockquote>
 <h2><strong>XFCE Masaüstü Ortamı</strong></h2>
 <p><strong>XFCE Masaüstü Ortamını Kali Linux'a Kurmak İçin:</strong></p>
-<code>apt-get install kali-defaults kali-root-login desktop-base xfce4 xfce4-places-plugin xfce4-goodies
+<code class="language-bash">apt-get install kali-defaults kali-root-login desktop-base xfce4 xfce4-places-plugin xfce4-goodies
 </code>
 <p><strong>Kurulu Olan XFCE Masaüstü Ortamını Kali Linux'tan Kaldırmak İçin</strong></p>
-<code>apt-get remove xfce4 xfce4-places-plugin xfce4-goodies
+<code class="language-bash">apt-get remove xfce4 xfce4-places-plugin xfce4-goodies
 </code>
 <h2><strong>KDE Masaüstü Ortamı</strong></h2>
 <p><strong>Debian için Standart KDE Masaüstü Ortamını Kali Linux'a Kurmak İçin:</strong></p>
-<code>apt-get install kali-defaults kali-root-login desktop-base kde-standard
+<code class="language-bash">apt-get install kali-defaults kali-root-login desktop-base kde-standard
 </code>
 <p><strong>KDE Full Masaüstü Ortamını Kali Linux'a Kurmak İçin:</strong></p>
-<code>apt-get install kali-defaults kali-root-login desktop-base kde-full
+<code class="language-bash">apt-get install kali-defaults kali-root-login desktop-base kde-full
 </code>
 <p><strong>Kurulu Olan KDE Masaüstü Ortamını Kali Linux'tan Kaldırmak İçin</strong></p>
-<code>apt-get remove kde-plasma-desktop kde-plasma-netbook kde-standard
+<code class="language-bash">apt-get remove kde-plasma-desktop kde-plasma-netbook kde-standard
 </code>
 <h2><strong>LXDE Masaüstü Ortamı</strong></h2>
 <p><strong>LXDE Masaüstü Ortamını Kali Linux'a Kurmak İçin:</strong></p>
-<code>apt-get install lxde-core lxde kali-defaults kali-root-login desktop-base
+<code class="language-bash">apt-get install lxde-core lxde kali-defaults kali-root-login desktop-base
 </code>
 <p><strong>Kurulu Olan LXDE Masaüstü Ortamını Kali Linux'tan Kaldırmak İçin</strong></p>
-<code>apt-get remove lxde-core lxde
+<code class="language-bash">apt-get remove lxde-core lxde
 </code>
 <h2><strong>Cinnamon Masaüstü Ortamı</strong></h2>
 <p><strong>Cinnamon Masaüstü Ortamını Kali Linux'a Kurmak İçin:</strong></p>
-<code>apt-get install kali-defaults kali-root-login desktop-base cinnamon
+<code class="language-bash">apt-get install kali-defaults kali-root-login desktop-base cinnamon
 </code>
 <p><strong>Kurulu Olan Cinnamon Masaüstü Ortamını Kali Linux'tan Kaldırmak İçin</strong></p>
-<code>apt-get remove cinnamon
+<code class="language-bash">apt-get remove cinnamon
 </code>
 <h2><strong>Mate Masaüstü Ortamı</strong></h2>
 <p><strong>Mate Masaüstü Ortamını Kali Linux'a Kurmak İçin:</strong></p>
-<code>apt-get install kali-defaults kali-root-login desktop-base mate-desktop-environment-extra
+<code class="language-bash">apt-get install kali-defaults kali-root-login desktop-base mate-desktop-environment-extra
 </code>
 <p><strong>Kurulu Olan Mate Masaüstü Ortamını Kali Linux'tan Kaldırmak İçin</strong></p>
-<code>apt-get remove mate-core
+<code class="language-bash">apt-get remove mate-core
 </code>
 <h2><strong>e17(Enlightenment) Masaüstü Ortamı</strong></h2>
 <p><strong>e17 Masaüstü Ortamını Kali Linux'a Kurmak İçin:</strong></p>
-<code>apt-get install e17
+<code class="language-bash">apt-get install e17
 </code>
 <p><strong>Kurulu Olan e17 Masaüstü Ortamını Kali Linux'tan Kaldırmak İçin</strong></p>
-<code>apt-get remove e17
+<code class="language-bash">apt-get remove e17
 </code>
 <h1 id="aktif">Masaüstü Ortamını Aktif Hale Getirmek</h1>
 <p>İlgili masaüstü ortamını kurduktan sonra kullanabilmeniz için ilgili ortamı seçip aktif hale getirmemiz gerekiyor. Öncelikle kurduğumuz masaüstü ortamının sistem tarafından tanınması için <strong>kurulum işlemi bittikten sonra bilgisayarımızı yeniden başlatıyoruz</strong>. Sistem yeniden başlatıldıktan sonra karşımıza aşağıdaki gibi giriş(login) ekranı geliyor. Bu ekrana kullanıcı adımızı giriyoruz. Ve daha sonra dişli-çark simgesine tıklayarak buradan dilediğimiz masaüstü ortamını seçiyoruz. Ve parolamızı girerek sistemi açıyoruz.
@@ -310,10 +292,10 @@ Güçlüdür, aynı zamanda gayet de şıktır. Hani olağanüstü görsel bir a
 <p><img src="../../img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/i3-min.png?raw=true" class="responsive">
 	</p><p></p>
 <strong>i3 Pencere Yöneticisini Kali Linux'a Kurmak İçin:</strong><p></p>
-<code>apt-get install i3-wm
+<code class="language-bash">apt-get install i3-wm
 </code>
 <p><strong>Kurulu Olan i3 Pencere Yöneticisini Kali Linux'tan Kaldırmak İçin</strong></p>
-<code>apt-get remove i3-wm
+<code class="language-bash">apt-get remove i3-wm
 </code>
 <blockquote>
 <p><strong>i3 Pencere Yöneticisi Temel Kullanım Kılavuzu İçin <a target="_blank" href="https://i3wm.org/docs/userguide.html" rel="nofollow">Bu Kaynağa</a> Bakabilirsiniz:</strong></p>
@@ -322,10 +304,10 @@ Güçlüdür, aynı zamanda gayet de şıktır. Hani olağanüstü görsel bir a
 <p><img src="../../img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/awesome-min.png?raw=true" class="responsive">
 	</p><p></p>
 <strong>awesome WM  Pencere Yöneticisini Kali Linux'a Kurmak İçin:</strong><p></p>
-<code>apt-get install awesome
+<code class="language-bash">apt-get install awesome
 </code>
 <p><strong>Kurulu Olan awesome WM  Pencere Yöneticisini Kali Linux'tan Kaldırmak İçin</strong></p>
-<code>apt-get remove awesome
+<code class="language-bash">apt-get remove awesome
 </code>
 <blockquote>
 <p><strong>awesome WM Pencere Yöneticisi Temel Kullanım Kılavuzu İçin <a target="_blank" href="https://awesomewm.org/doc/manpages/awesome.1.html" rel="nofollow">Bu Kaynağa</a> Bakabilirsiniz:</strong></p>
@@ -334,10 +316,10 @@ Güçlüdür, aynı zamanda gayet de şıktır. Hani olağanüstü görsel bir a
 <p><img src="../../img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/xmonad-min.png?raw=true" class="responsive">
 	</p><p></p>
 <strong>Xmonad Pencere Yöneticisini Kali Linux'a Kurmak İçin:</strong><p></p>
-<code>apt-get install xmonad
+<code class="language-bash">apt-get install xmonad
 </code>
 <p><strong>Kurulu Olan Xmonad Pencere Yöneticisini Kali Linux'tan Kaldırmak İçin</strong></p>
-<code>apt-get remove xmonad
+<code class="language-bash">apt-get remove xmonad
 </code>
 <blockquote>
 <p><strong>Xmonad Pencere Yöneticisi Temel Kullanım Kılavuzu İçin <a target="_blank" href="https://xmonad.org/manpage.html" rel="nofollow">Bu Kaynağa</a> Bakabilirsiniz:</strong></p>
@@ -346,19 +328,19 @@ Güçlüdür, aynı zamanda gayet de şıktır. Hani olağanüstü görsel bir a
 <p><img src="../../img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/openbox-1-min.png?raw=true" class="responsive">
 	</p><p></p>
 <strong>Openbox Pencere Yöneticisini Kali Linux'a Kurmak İçin:</strong><p></p>
-<code>apt-get install openbox
+<code class="language-bash">apt-get install openbox
 </code>
 <p><strong>Kurulu Olan Openbox Pencere Yöneticisini Kali Linux'tan Kaldırmak İçin</strong></p>
-<code>apt-get remove openbox
+<code class="language-bash">apt-get remove openbox
 </code>
 <h2 id="dwm"><strong>dwm Pencere Yöneticisi</strong></h2>
 <p><img src="../../img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/dwm-min.png?raw=true" class="responsive">
 	</p><p></p>
 <strong>dwm Pencere Yöneticisini Kali Linux'a Kurmak İçin:</strong><p></p>
-<code>apt-get install dwm
+<code class="language-bash">apt-get install dwm
 </code>
 <p><strong>Kurulu Olan dwm Pencere Yöneticisini Kali Linux'tan Kaldırmak İçin</strong></p>
-<code>apt-get remove dwm
+<code class="language-bash">apt-get remove dwm
 </code>
 <blockquote>
 <p><strong>dwm Pencere Yöneticisi Temel Kullanım Kılavuzu İçin <a target="_blank" href="https://dwm.suckless.org/tutorial/" rel="nofollow">Bu Kaynağa</a> Bakabilirsiniz:</strong></p>
@@ -374,16 +356,15 @@ Tekrar belirteyim verdiğim adreste yer alan linkteki her pencere yöneticisi Ka
 <center>
 	<h1 id="bildirim">Geri Bildirimde Bulunun</h1>
 <p>Sizlere daha verimli bir kaynak sunabilmemiz için, uygulamada veya dokümantasyonlarda yer alan tüm hata ve eksiklerimizi bize bildirebilirsiniz.	</p>
-	<div class="checkbox mb-3">                         
-			<a href="../../bildirim.html" class="btn btn-danger">Geri Bildirimde Bulunun</a>
-      </div>
+	<a href="../../bildirim.html" class="btn btn-danger">Geri Bildirimde Bulunun</a>
 	  </center>	
 </article>       
     </div>
 
     
 <script src="../../js/jquery-3.3.1.slim.min.js"></script>
-<script src="../../js/script.js"></script>		
+<script src="../../js/script.js"></script>	
+<script src="../../js/prism.js"></script>		
  
 
 
