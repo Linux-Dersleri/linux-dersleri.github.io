@@ -1,15 +1,7 @@
 <!doctype html>
 <html>
 <head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-34XLKDXXD3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-34XLKDXXD3');
-</script>
 <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -121,7 +113,7 @@
 	 <h1>Kurma-Kaldırma-Güncelleme İşlemleri</h1>
 <p>Linux işletim sistemini kullanacaksak mutlaka bilmemiz gerekenler arasında; sistemi güncelleme, program kurma ve kurulu programları kaldırma gibi işlemleri yerine getirmek var. Bu işlemleri nasıl yerine getirebileceğimizi bu konunun devamında öğreneceğiz. Anlatıma ilk olarak sistemi güncelleme işlemi ile başlayalım.</p>
 <h2 id="guncelle">Sistemi Güncelleme</h2>
-<p>Linux sistemleri, kullanıcının ihtiyacı olduğunda, programa kolayca ulaşabilmesini sağlayacak program paketlerini içinde bulunduran kendi paket <em><em>depolarına(repository</em>)</em>* sahiptirler. Farklı Linux dağıtımları için bu paketler de farklılık gösterebiliyor. Bu yüzden farklı Linux dağıtımlarının da kendi paketleri üzerinde işlem yapabilmek için farklı komutları vardır.</p>
+<p>Linux sistemleri, kullanıcının ihtiyacı olduğunda, programa kolayca ulaşabilmesini sağlayacak program paketlerini içinde bulunduran kendi paket <em><em>depolarına(repository</em>)</em> sahiptirler. Farklı Linux dağıtımları için bu paketler de farklılık gösterebiliyor. Bu yüzden farklı Linux dağıtımlarının da kendi paketleri üzerinde işlem yapabilmek için farklı komutları vardır.</p>
 <p>Dağıtımlar ve kullanılan paketlere göre komutları aşağıdaki tabloda verilmiştir.</p>
 <table class="table table-bordered"> <thead> <tr> <th>Dağıtım</th> <th>Paketler</th> <th>Komutlar</th> </tr></thead> <tbody> <tr> <th scope="row">Debian</th> <td>.deb</td><td><strong><code class="language-bash">apt</code></strong> , <strong><code class="language-bash">apt-cache</code></strong> , <strong><code class="language-bash">apt-get</code></strong> , <strong><code class="language-bash">dpkg</code></strong></td></tr><tr> <th scope="row">Ubuntu</th> <td>.deb</td><td><strong><code class="language-bash">apt</code></strong> , <strong><code class="language-bash">apt-cache</code></strong> , <strong><code class="language-bash">apt-get</code></strong> , <strong><code class="language-bash">dpkg</code></strong></td></tr><tr> <th scope="row">CentOs</th> <td>.rpm</td><td><strong><code class="language-bash">yum</code></strong></td></tr><tr> <th scope="row">Fedora</th> <td>.rpm</td><td><strong><code class="language-bash">dnf</code></strong></td></tr><tr> <th scope="row">FreeBSD</th> <td>.txz</td><td><strong><code class="language-bash">make</code></strong> , <strong><code class="language-bash">pkg</code></strong></td></tr></tbody> </table>
 <p>Debian paketlerinin <strong><mark>.deb</mark></strong> uzantılı olduğunu yukarıdaki tabloda gördük. Kullandığımız dağıtım olan <strong>Kali'de Debian tabanlı</strong> olduğu için anlatıma bu doğrultuda devam edeceğiz.</p>
@@ -252,13 +244,11 @@ Unutmayın depodan(repository) kurulum yaparken sisteminizin güncel olması ön
 <div align="center" class="container">
 <div class="card mb-4 border">
     <div class="row no-gutters">
-        <div class="col-md-3">
-            <img src="../../img/menu/pc-logo.png" class="card-img-top img1">
-        </div>
-        <div class="col-md-8">
+        
+        <div>
             <div class="card-body">
 		<strong class="d-inline-block mb-0 text-primary"><h3 id="alistirma">Alıştırmalar Hakkında</h3></strong>
-                <p class="card-text">Öğrendiğiniz bilgilerin kalıcı olması için bolca alıştırma yapmalısınız. Burada yer alan alıştırma faaliyetleri dışında, konuyu öğrendiğinizi hissede kadar kendiniz de bolca pratik yapın lütfen.  Aksi halde öğrendiğiniz bilgiler kısa sürede unutulup gidecektir. </p>
+                <p class="card-text">Yalnızca okumak yetmez, öğrendiğiniz bilgilerin kalıcı olabilmesi için bolca alıştırma yapmalısınız. Doküman içerisindeki bilgileri pekiştirmek için aşağıdaki alıştırmalar ile başlayabilirsiniz. Elbette burada yer alan alıştırma faaliyetleri dışında, konuyu öğrendiğinizi hissede kadar kendiniz de bolca pratik yapmayı da ihmal etmeyin lütfen. Aksi halde öğrendiğiniz bilgiler kısa sürede unutulup gidecektir.  </p>
                 
             </div>
         </div>
