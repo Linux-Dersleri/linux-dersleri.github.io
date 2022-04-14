@@ -202,8 +202,7 @@ Oluşturmuş olduğum betik dosyasının dizin içerisindeki tam konumu aşağı
 /root/Desktop/yeni_dizin/yeni/en_yeni:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/games:/usr/games</code></pre>
 <p>Gördüğünüz gibi dizin, yola(PATH) eklenmiş bulunuyor. Artık dosyayı çalıştırmadan önce son bir ayar daha yapmamız gerek. Daha sonra "<strong>komut.sh</strong>" dosyamızı aynı leafpad programında olduğu gibi istediğimiz zaman komut satırından ismi ile çalıştırabiliyor olacağız.</p>
 <p>Son işlemimiz yetkilendirme işlemi. Bu neden gerekli diyecek olursanız işlemin gerekliliğini kendi gözlerinizle görmek için bu kısmı atlayarak dosyayı çalıştırmaya çalışın. Bunun için komut satırına  <code class="language-bash">komut.sh</code>  yazalım.</p>
-<pre><code class="language-bash">└─$ /Desktopecho $PATH
-/root/Desktop/yeni_dizin/yeni/en_yeni:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/games:/usr/games</code></pre>
+<p><img src="../../img/1-%20Komut%20Sat%C4%B1r%C4%B1/12-min.png" class="responsive"></p>
 <p>Gördüğünüz gibi konsol bize "<strong>Erişim engellendi</strong>" diye bildirdi ve dosyayı bulmasına rağmen çalıştıramadı. İşte bu durumu yaşamamak için "<strong>komut.sh</strong>" dosyamızın bulunduğu konuma giderek (<code class="language-bash">cd Desktop/yeni_dizin/yeni/en_yeni/</code>)  <code class="language-bash">chmod +rwx komut.sh</code>  komutunu vermemiz gerekiyor. Böylelikle dosyayı çalıştırma izni de elde etmiş olacağız.</p>
 <p>Yani artık konsola  <code class="language-bash">komut.sh</code>  yazdığımız anda bizim oluşturmuş olduğumuz "<strong>komut.sh</strong>" betik dosyası çalışarak "<strong>Program Çalıştı</strong>" yazısını konsola basacak.</p>
 <p><img src="../../img/1-%20Komut%20Sat%C4%B1r%C4%B1/13-min.png" class="responsive"></p>
