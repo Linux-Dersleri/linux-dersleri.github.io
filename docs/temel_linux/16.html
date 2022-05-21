@@ -117,9 +117,9 @@
 <p><strong>Inode(düğüm)</strong>, dosyanın sahibi, oluşturulma tarihi, boyutu, tipi, erişim hakları, en son erişim tarihi ve en son değişikliklerin yapıldığı tarih gibi birçok meta verileri içeren yapıdır. Yani biz herhangi bir dosya oluşturduğumuzda disk üzerinde <strong>1 inode</strong> yer kaplamaktadır. Bununla ilgili olarak <strong>inode</strong> tablosunu görmek için konsola <strong><code class="language-bash">df -i</code></strong> komutumuzu verelim.</p>
 <p><img src="../../img/13-%20Sembolik%20Link%20Ve%20Kat%C4%B1%20Link/1-min.png" class="responsive"></p>
 <p>Hemen çıktıları ele alarak açıklamamıza devam edelim.</p>
-<p>Örneğin <strong><mark>/dev/sda1</mark></strong> disk alanını ele alırsak toplam <strong>6348800 adet inode numarası</strong> alabilir <strong>yani sınırı bu kadar</strong>.</p>
-<p>Kullanılan <strong>391980 inode</strong> numarasından toplam kullanılabilir olanı çıkarırsak <strong>(6348800-391980=5956820)</strong> geriye kullanılabilir <strong>5956820 inode</strong> numarası kalmış oluyor.</p>
-<p>Bunun anlamı <strong>her bir dosya 1 inode yer kapladığı için</strong><strong><mark>/dev/sda1</mark></strong> dosya sisteminde <strong>5956820 adet daha dosya oluşturulabilecek alan mevcut</strong>.</p>
+<p>Örneğin <strong><mark>/dev/sda1</mark></strong> disk alanını ele alırsak toplam <strong>5111808 adet inode numarası</strong> alabilir <strong>yani sınırı bu kadar</strong>.</p>
+<p>Kullanılan <strong>423003 inode</strong> numarasından toplam kullanılabilir olanı çıkarırsak <strong>(5111808-423003=4688805)</strong> geriye kullanılabilir <strong>4688805 inode</strong> numarası kalmış oluyor.</p>
+<p>Bunun anlamı <strong>her bir dosya 1 inode yer kapladığı için</strong><strong><mark>/dev/sda1</mark></strong> dosya sisteminde <strong>4688805 adet daha dosya oluşturulabilecek alan mevcut</strong>.</p>
 <p>Her bir <strong>inode(düğüm)</strong> numarasının benzersiz olduğunu söylemiştik. Bu durumu teyit etmek için bulunduğumuz konumdaki dosyaların <strong>inode</strong> numaralarını görebilmek adına komut satırımıza <strong><code class="language-bash">ls -li</code></strong> komutumuzu veriyoruz.</p>
 <p><img src="../../img/13-%20Sembolik%20Link%20Ve%20Kat%C4%B1%20Link/2-min.png" class="responsive"></p>
 <p>Çıktıda yer alan soldaki numaralar, ilgili dosyanın <strong>inode</strong> numarasını temsil ediyor.</p>
