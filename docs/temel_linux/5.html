@@ -255,9 +255,9 @@ chmod (1)            - change file mode bits</code></pre>
 <pre><code class="language-bash">└─$ apropos chmod
 chmod (1)            - change file mode bits</code></pre>
 <p>Çıktılar karşılaştırıldığında görülüyor ki; <strong><code class=" language-bash">man -k</code></strong> komutu ile <strong><code class=" language-bash">apropos</code></strong> komutları arasında işlevsel yandan hiç bir fark bulunmuyor.</p>
-<p>Komutun kullanım amacını daha iyi anlamak için; örneğin, bir komutun ismini tam olarak hatırlayamıyorsunuz ancak işlevini hatırlıyorsunuz diyelim. İşte bu noktada <strong><code class=" language-bash">apropos</code></strong> komutu sayesinde <strong>man klavuz sayfaları içinde anahtar kelime araştırması yapılmasıyla</strong> yazdığınız kelime ile ilgili tüm komutlara ulaşabiliyorsunuz. Yani aslında biz <strong><code class=" language-bash">apropos</code></strong> komutuyla sadece <strong>man kılavuz sayfalarında detaylı bir araştırma</strong> yapmış oluyoruz.</p>
+<p>Komutun kullanım amacını daha iyi anlamak için; örneğin, bir komutun ismini tam olarak hatırlayamıyorsunuz ancak işlevini hatırlıyorsunuz diyelim. İşte bu noktada <strong><code class=" language-bash">apropos</code></strong> komutu sayesinde <strong>man kılavuz sayfaları içinde anahtar kelime araştırması yapılmasıyla</strong> yazdığınız kelime ile ilgili tüm komutlara ulaşabiliyorsunuz. Yani aslında biz <strong><code class=" language-bash">apropos</code></strong> komutuyla sadece <strong>man kılavuz sayfalarında detaylı bir araştırma</strong> yapmış oluyoruz.</p>
 <p><strong>Örneğin</strong></p>
-<p>Bir komut vardı.. silme işlevindeydi.. neydi.. neydi diye düşünüyorken; konsola <strong><code class=" language-bash">apropos delete</code></strong> şeklinde yazarsanız, karşınıza man klavuz sayfalarında yer alan, aradığınız "<strong>delete</strong>"anahtar kelimesiyle uyuşan ifadeler listelenir. Yani siz hatırlamadığınız komutun işlevinin silmek olduğunu bildiğimizden "<strong>delete</strong>" ifadesini <strong><code class=" language-bash">apropos</code></strong> komutu ile sorgulayarak <strong>man sayfalarında "delete" ifadesinin geçtiği kısımları</strong> listelemiş oluyorsunuz. Yani man sayfalarında yer alan açıklamalar sayesinde, sistemle ilgili hatırlayamadığınız kavramları kolaylıkla sorgulayabilirsiniz.</p>
+<p>Bir komut vardı.. silme işlevindeydi.. neydi.. neydi diye düşünüyorken; konsola <strong><code class=" language-bash">apropos delete</code></strong> şeklinde yazarsanız, karşınıza man kılavuz sayfalarında yer alan, aradığınız "<strong>delete</strong>"anahtar kelimesiyle uyuşan ifadeler listelenir. Yani siz hatırlamadığınız komutun işlevinin silmek olduğunu bildiğimizden "<strong>delete</strong>" ifadesini <strong><code class=" language-bash">apropos</code></strong> komutu ile sorgulayarak <strong>man sayfalarında "delete" ifadesinin geçtiği kısımları</strong> listelemiş oluyorsunuz. Yani man sayfalarında yer alan açıklamalar sayesinde, sistemle ilgili hatırlayamadığınız kavramları kolaylıkla sorgulayabilirsiniz.</p>
 <pre><code class="language-bash">└─$ apropos delete
 git-branch (1)       - List, create, or delete branches
 git-replace (1)      - Create, list, delete refs to replace objects
@@ -297,7 +297,7 @@ systemd-rfkill.socket (8) - Load and save the RF kill switch state at boot and c
 systemd.kill (5)     - Process killing procedure configuration
 yes (1)              - output a string repeatedly until killed
 </pre>
-<p><strong>Yani <strong><code class=" language-bash">apropos</code></strong> ve <strong><code class=" language-bash">man -k</code></strong> komutları man klavuz sayfaları içerisinde bizim sorguladığımız her türlü ifadeyi arayarak bulup getiriyor.</strong>
+<p><strong>Yani <strong><code class=" language-bash">apropos</code></strong> ve <strong><code class=" language-bash">man -k</code></strong> komutları man kılavuz sayfaları içerisinde bizim sorguladığımız her türlü ifadeyi arayarak bulup getiriyor.</strong>
 Ayrıca kılavuz(man/manuel) sayfa içeriklerinin büyük çoğunluğunun İngilizce olduğunu da ele alarak, belirtmek isterim ki; sorgulamalarınızı mümkün oldukça İngilizce üzerinden yaparsanız sonuca ulaşmanız sizin için çok daha kolay olacaktır.</p>
 <p>Bu konudaki noktayı da <strong>man kılavuz sayfaları güncelleme</strong> işlemi ile yapalım. <em>"Nedir bu işlem ve neden gerekli ?"</em>..diyecek olursanız;  Elbette man sayfalarının sürekli kullanılabilir şekilde verimli olması için, zamanla yeni bilgilerin girişi ve eski bilgilerin düzenlenmesi yani kılavuz sayfalarının güncellenmesi şarttır. Eğer aradığımız yardımı man sayfasında bulamadığınız bir durum olursa man sayfalarını güncelleyerek tekrar sorgulama işlemini yapabilirsiniz. Ara ara güncellemek yeni bilgilere de ulaşmamıza olanak sağlar. Güncelleme için konsola <strong><code class=" language-bash">mandb</code></strong> komutunu girmemiz yeterli olacaktır. Komut satırı, güncelleme işleminden sonra yapılan değişiklikleri de son satırda bizlere bildirir.</p>
 <pre><code class="language-bash">
@@ -376,7 +376,7 @@ Processing manual pages under /usr/local/man...
 	<div class="col-md-14">
       <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
-		<p class="card-text mb-auto">"<strong><em>kullanıcı</em></strong>" anahtar kelimesini kullanarak <strong>man klavuz sayfaları</strong>nda yer alan ilgili komutları listeleyin.	
+		<p class="card-text mb-auto">"<strong><em>kullanıcı</em></strong>" anahtar kelimesini kullanarak <strong>man kılavuz sayfaları</strong>nda yer alan ilgili komutları listeleyin.	
         </p></div>        
       </div>
     </div>
