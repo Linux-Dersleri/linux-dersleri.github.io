@@ -1,0 +1,18 @@
+<p></p>
+<div align="center" class="no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+	  <div class="row no-gutters">
+        
+        <div >
+            <div class="card-body">
+		<h4 class="text-primary">İlişkili Konu ve Komutlar</h4>
+                <div class="row no-gutters">
+        {% for tag in page.iliskili %}<a href="{{ site.url }}/komut/{{ tag }}" class="mavi btn btn-outline-primary btn-sm" title="Pages tagged {{ tag }}">{{ tag }}</a> {% endfor %}  	
+    </div>
+            </div>
+			
+        </div>
+		
+    </div>
+        
+      </div>
+	  

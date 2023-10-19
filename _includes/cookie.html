@@ -1,0 +1,66 @@
+<div class="modal fade" id="cookieModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">👁 ️Çerez Kullanımı Hakkında Bilgilendirme</h5>
+        <a type="button" class="close" data-dismiss="modal" aria-label="Close" id="closeCookie">
+          <span aria-hidden="true">&times;</span>
+        </a>
+      </div>
+      <div class="modal-body">
+        <div class="align-items-center">
+          <p>Bu platform, size daha iyi hizmet verebilmek için çerezler kullanmaktadır. Bu platformu kullanarak Google Analytics üzerinden anonim şekilde ziyaretçi verilerinin toplanmasını kabul etmiş sayılıyorsunuz.</p>
+          <p>Bu bilgilendirme mesajını tekrar görmek istemiyorsanız <strong>"Kabul Et"</strong> butonuna tıklayabilir veya <a href="{{ site.url }}/gizlilik.html">buradan</a> gizlilik politikası hakkında daha fazla bilgi alabilirsiniz.</p>
+          <button type="button" class="mavi btn btn-outline-primary btn-block" id="acceptCookie">Kabul Et</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+// Set cookie function
+function setCookie(name, value, days) {
+  var expires = "";
+  if (days) {
+    var date = new Date();
+    date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+    expires = "; expires=" + date.toUTCString();
+  }
+  document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
+
+// Get cookie function
+function getCookie(name) {
+  var nameEQ = name + "=";
+  var ca = document.cookie.split(";");
+  for (var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == " ") c = c.substring(1, c.length);
+    if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+  }
+  return null;
+}
+
+// Check if cookie exists
+var cookieAccepted = getCookie("cookieAccepted");
+
+if (cookieAccepted !== "true") {
+  // If "cookieAccepted" is not "true", show the modal
+  $('#cookieModal').modal('show');
+
+  // When the user clicks the accept button, set the cookie and hide the modal
+  $('#acceptCookie').click(function() {
+    setCookie("cookieAccepted", "true", 365); // Set cookie to last for 1 year
+    $('#cookieModal').modal('hide');
+  });
+
+  $('#closeCookie').click(function() {
+    setCookie("cookieAccepted", "true", 1); // Set cookie to last for 1 day
+    $('#cookieModal').modal('hide');
+  });
+
+} else {
+  // If "cookieAccepted" is "true", hide the modal
+  $('#cookieModal').modal('hide');
+}
+</script>

@@ -1,0 +1,116 @@
+[
+ {
+      "question": "Tüm konsol(terminal) araçlarının kısayolları ortaktır.",
+      "options": ["Evet", "Hayır"],
+      "answer": "Hayır"
+    },
+    {
+      "question": "Tüm dağıtımlarda ctrl + alt + t tuşlaması, yeni bir konsol ekranı açar.",
+      "options": ["Evet", "Hayır"],
+      "answer": "Evet"
+    },
+    {
+      "question": "İmlecin bulunduğu konumdan, satırın en başına atlamak için hangi kısayolu kullanmanız gerekiyor?",
+      "options": ["Ctrl + a", "Ctrl + e", "Ctrl + f", "Ctrl + b"],
+      "answer": "Ctrl + a"
+    },
+    {
+      "question": "İmlecin bulunduğu konumdan, satırın en sonuna atlamak için hangi kısayolu kullanmanız gerekiyor?",
+      "options": ["Ctrl + a", "Ctrl + e", "Ctrl + f", "Ctrl + b"],
+      "answer": "Ctrl + e"
+    },
+    {
+      "question": "İmlecin bulunduğu konumdan bir karakteri ileri gitmek için hangi kısayolu kullanmanız gerekiyor?",
+      "options": ["Alt + a", "Ctrl + e", "Ctrl + f", "Alt + b"],
+      "answer": "Ctrl + f"
+    },
+    {
+      "question": "Bir kelime ileriye atlamak için hangi kısayolu kullanmanız gerekiyor?",
+      "options": ["Alt + a", "Ctrl + e", "Alt + f", "Ctrl + f"],
+      "answer": "Alt + f"
+    },
+    {
+      "question": "İmlecin bulunduğu konumdan bir karakter geri gitmek için hangi kısayolu kullanmanız gerekiyor?",
+      "options": ["Alt + a", "Ctrl + b", "Alt + b", "Ctrl + f"],
+      "answer": "Ctrl + b"
+    },
+    {
+      "question": "İmlecin, bulunduğu konumdan satırın en başına atlaması ve tekrar kullanıldığında eski imleç konumuna gelmesi için hangi kısayolu kullanmanız gerekiyor?",
+      "options": ["Alt + a", "Ctrl + b", "Alt + xx", "Ctrl + xx"],
+      "answer": "Ctrl + xx"
+    },
+    {
+      "question": "İmlecin bulunduğu konumdan bir kelime geriye atlamak için hangi kısayolu kullanmanız gerekiyor?",
+      "options": ["Alt + a", "Ctrl + b", "Alt + b", "Ctrl + f"],
+      "answer": "Alt + b"
+    },
+    {
+      "question": "İmlecin bulunduğu konumdan sonraki kelimeyi silmek için hangi kısayolu kullanmamız gerekir?",
+      "options": ["Alt + b", "Ctrl + d", "Alt + d", "Ctrl + b"],
+      "answer": "Alt + d"
+    },
+    {
+      "question": "Tek seferde imlecin gerisinde bulunan bir kelimeyi silmek için hangi kısayolu kullanmamız gerekiyor?",
+      "options": ["Ctrl + b", "Alt + Backspace", "Ctrl + Backspace", "Alt + b"],
+      "answer": "Alt + Backspace"
+    },
+    {
+      "question": "Konsola yazdığımız ve enter ile onaylamadan sildiğimiz karakterleri geri getirmek için hangi kısayolu kullanmamız gerekiyor?",
+      "options": ["Alt + X", "Ctrl + Z", "Ctrl + Backspace", "Ctrl + _"],
+      "answer": "Ctrl + _"
+    },
+    {
+      "question": "İmleçten önceki tek bir kelimeyi kesmek için hangi kısayolu kullanmanız gerekiyor?",
+      "options": ["Ctrl + x", "Ctrl + w", "Alt + w", "Alt + x"],
+      "answer": "Ctrl + w"
+    },
+    {
+      "question": "İmleçten önceki tüm satırı kesmek için hangi kısayolu kullanmanız gerekiyor?",
+      "options": ["Ctrl + x", "Ctrl + k", "Ctrl + u", "Ctrl + c"],
+      "answer": "Ctrl + u"
+    },
+    {
+      "question": "Komut satırındaki çıktıları ekrandan temizlemek için hangi kısayolu kullanmamız gerekiyor?",
+      "options": ["Ctrl + T", "Ctrl + D", "Ctrl + L", "Ctrl + c"],
+      "answer": "Ctrl + L"
+    },
+    {
+      "question": "Otomatik tamamlama kısayolunu kullanmak için hangi tuşlamaya ihtiyacımız var?",
+      "options": ["Alt + Shift", "Ctrl + a", "Alt + Tab", "Tab"],
+      "answer": "Tab"
+    },
+    {
+      "question": "Girilmiş olan son 6 komutu konsola nasıl bastırabilirsiniz?",
+      "options": ["ls -6", "history", "history -6", "history 6"],
+      "answer": "history 6"
+    },
+    {
+      "question": "Konsola gireceğimiz !! komutunun sonucunda hangi işlem gerçekleşir?",
+      "options": [
+        "En son girdiğimiz komutlar listelenir.",
+        "Mevcut konsol kapatılır.",
+        "Mevcut kabuk kapatılır.",
+        "En son girilen komut tekrar çağırılıp çalıştırılır."
+      ],
+      "answer": "En son girilen komut tekrar çağırılıp çalıştırılır."
+    },
+    {
+      "question": "Geçmiş listesinde 25. sırada bulunan komutu çağırmak için hangi komutu girebiliriz?",
+      "options": ["history 25", "!!25", "history -25", "!25"],
+      "answer": "!25"
+    },
+    {
+      "question": "Geçmiş listesinde komut eşleşmesi araştırmak için hangi kısayolu kullanabiliyoruz?",
+      "options": ["Alt + Shift + s", "Ctrl + s", "Ctrl + r", "Ctrl + h"],
+      "answer": "Ctrl + r"
+    },
+    {
+      "question": "Takma isim tanımlamak için aşağıdaki komutlardan hangisi doğrudur?",
+      "options": [
+        "export takma-isim=”komut”",
+        "takma-isim=”komut”",
+        "alias takma-isim=”komut”"
+      ],
+      "answer": "alias takma-isim=”komut”"
+    }
+]

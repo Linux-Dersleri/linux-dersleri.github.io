@@ -1,0 +1,18 @@
+
+<script>
+    // Twitter share button functionality
+    var twitterShareButton = document.getElementById("twitterShareButton");
+        twitterShareButton.addEventListener("click", function() {
+          var tweetText = " #Linux Dersleri platformundaki \"{{ page.title }}\" içeriğini faydalı bulduğum için paylaşmak istedim. {{ site.url }}{{ page.url }}";
+          var tweetUrl = "https://twitter.com/intent/tweet?text=" + encodeURIComponent(tweetText);
+          window.open(tweetUrl, "_blank");
+        });
+  
+        // LinkedIn share button functionality
+        var linkedinShareButton = document.getElementById("linkedinShareButton");
+        linkedinShareButton.addEventListener("click", function() {
+          var linkedinText = "{{ site.url }}{{ page.url }}&title={{ page.title }}&summary={{ page.title }} içeriğini faydalı bulduğum için paylaşmak istedim."
+          var postUrl = "https://www.linkedin.com/sharing/share-offsite/?mini=true&url=" + encodeURIComponent(linkedinText);
+          window.open(postUrl, "_blank");
+        });
+        </script>

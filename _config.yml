@@ -1,0 +1,99 @@
+title: "Linux Eğitimi"
+email: info@linuxdersleri.net
+description: "GNU/Linux için Türkçe içerik sağlamak üzere kurulmuş bir platformdur."
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://www.linuxdersleri.net"
+github_username:  taylanbildik
+
+# Build settings
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-toc
+  - kramdown
+
+
+jekyll_timeago:
+  depth: 1
+  threshold: 1
+  translations_path: "/data/tr.yml"
+  default_locale: 'tr'
+  available_locales:
+    - 'tr'
+ 
+toc:
+  min_level: 1
+  max_level: 6
+  ordered_list: false
+  no_toc_section_class: no_toc_section
+  list_id: toc
+  list_class: section-nav
+  sublist_class: ''
+  item_class: toc-entry
+  item_prefix: <h
+  
+# Jekyll config
+markdown: kramdown
+kramdown:
+  input: GFM
+  auto_ids:       true
+  toc_levels:     1..3
+  
+collections:
+  authors:
+    output: true
+  kaynaklar:
+    output: true
+  egitim:
+    output: true
+  komut:
+    output: true
+  pagefind:
+    output: true
+
+defaults:
+- scope:
+    path: ''
+    type: authors
+  values:
+    permalink: "/yazar/:name/"
+    layout: author
+    twitter:
+- scope:
+    path: ''
+    type: kaynaklar
+  values:
+    permalink: "/kaynaklar/:title/"
+    layout: title
+    twitter:
+- scope:
+    path: ''
+    type: egitim
+  values:
+    permalink: "/egitim/:categories/:title/"
+    layout: title
+    twitter:
+- scope:
+    path: ''
+    type: komut
+  values:
+    permalink: "/komut/:title/"
+    layout: title
+    twitter:       
+
+# Turkish Month
+month_names:
+  Jan: Oca
+  Feb: Şub
+  Mar: Mar
+  Apr: Nis
+  May: May
+  Jun: Haz
+  Jul: Tem
+  Aug: Ağu
+  Sep: Eyl
+  Oct: Eki
+  Nov: Kas
+  Dec: Ara

@@ -1,0 +1,47 @@
+[
+  {
+    "question": "Linux nedir ?",
+    "options": [
+      "İşletim sistemidir.",
+      "Çekirdektir(kernel).",
+      "Lisanstır.",
+      "Yazılım geliştirme felsefesidir."
+    ],
+    "answer": "Çekirdektir(kernel)."
+  },
+  {
+    "question": "GNU ile GPL aynı şeyi mi ifade ediyor ?",
+    "options": ["Hayır", "Evet"],
+    "answer": "Hayır"
+  },
+  {
+    "question": "Açık kaynaklı yazılım ücretsiz-bedava yazılım anlamına mı geliyor ?",
+    "options": ["Evet", "Hayır"],
+    "answer": "Hayır"
+  },
+  {
+    "question": "Özgür Yazılım ya da İngilizce adıyla “Free Software”, ücretsiz-bedava yazılım anlamına mı geliyor ?",
+    "options": ["Evet", "Hayır"],
+    "answer": "Hayır"
+  },
+  {
+    "question": "Aşağıdakilerden hangisi GPL lisansının temel özgürlüklerinden biri değildir ?",
+    "options": [
+      "Programı sınırsız kullanma özgürlüğü.",
+      "Programın nasıl çalıştığını inceleme ve amaçlara uygun değiştirme özgürlüğü.",
+      "Programın kopyalarını sınırsız dağıtma özgürlüğü.",
+      "Programın lisansını değiştirip dağıtma özgürlüğü."
+    ],
+    "answer": "Programın lisansını değiştirip dağıtma özgürlüğü."
+  },
+  {
+    "question": "Linux çekirdeğini kim geliştirmiştir ?",
+    "options": [
+      "Andrew S. Tanenbaum",
+      "Richard Stallman",
+      "Linus Torvalds",
+      "Ken Thompson ve Dennis Ritchie"
+    ],
+    "answer": "Linus Torvalds"
+  }
+]

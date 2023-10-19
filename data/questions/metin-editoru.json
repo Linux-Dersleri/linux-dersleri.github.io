@@ -1,0 +1,22 @@
+[
+    {
+      "question": "vi editöründe, yalnızca değişiklikleri kaydetmek için hangi komut girilebilir?",
+      "options": [":q", ":q!", ":w", ":wq"],
+      "answer": ":w"
+    },
+    {
+      "question": "vi editöründe, değişiklikleri kaydetmeden doğrudan çıkmak için hangi komut girilebilir?",
+      "options": [":q", ":q!", ":w", ":wq"],
+      "answer": ":q!"
+    },
+    {
+      "question": "vi editöründe, değişiklikleri kaydedip çıkmak için hangi komut girilebilir?",
+      "options": [":q", ":q!", ":w", ":wq"],
+      "answer": ":wq"
+    },
+    {
+      "question": "vi editöründe, herhangi bir değişiklik gerçekleştirilmediyse, doğrudan araçtan çıkmak için hangi komut kullanılabilir?",
+      "options": [":q", ":q!", ":w", ":wq"],
+      "answer": ":q"
+    }
+  ]

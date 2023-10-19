@@ -1,0 +1,183 @@
+<p></p>
+
+	  
+	  
+      <div class="no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+  <div id="info-text">
+    
+  </div>
+  <div id="quiz" style="display: none;">
+    <div id="question"></div>
+    <p></p>
+    <div id="options" class="list-group"></div>
+    <hr>
+    <div class="progress">
+      <div id="progress-bar" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+    </div>
+  </div>
+
+  <div id="result" style="display: none;">
+  <p >Rastgele 5 soruyu yanıtladınız. Eğer testin tamamına ulaşmak isterseniz <a href="{{ site.url }}/test.html">tıklayın</a>.</p>
+    <h2>Sonuç</h2>
+    <p id="stats"></p>
+    <h3>Hatalar ve Doğru Yanıtları</h3>
+	<p>Test içerisinde sorulan tüm sorular, mevcut platformda bulunan bilgiler dahilinde hazırlanmıştır. Dolayısıyla eksik olduğunuz konular varsa platform üzerinden bilgi edinebilirsiniz. Hatalı yanıtladığınız sorular:</p>
+    <ul id="feedback"></ul>
+	<p class="mavi"><strong>Not:</strong> Testin kendisinde hatalar varsa <a href="{{ site.url }}/bildirim.html">geri bildirim</a> sayfasından iletmekten çekinmeyin lütfen.</p>
+  </div>
+
+
+  <script>
+  var questions = []; // Initialize an empty array for questions
+
+  fetch("{{ site.url }}/data/questions/questions.json")/// Replace "abc.json" with the actual path to your JSON file
+  .then(response => response.json()) // Parse the JSON response
+  .then(data => {
+    // Shuffle the array of questions
+    var shuffledQuestions = shuffle(data);
+    // Select the first 5 questions
+    questions = shuffledQuestions.slice(0, 5);
+    startQuiz(); // Call the function to start the quiz once the questions are loaded
+  })
+  .catch(error => console.error(error));
+
+// Function to shuffle an array using the Fisher-Yates algorithm
+function shuffle(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex;
+
+  // While there remain elements to shuffle
+  while (currentIndex !== 0) {
+    // Pick a remaining element
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // Swap it with the current element
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+}
+
+var currentQuestion = 0;
+var trueCount = 0;
+var falseCount = 0;
+var userAnswers = [];
+
+function startQuiz() {
+  // Show the initial "Teste Başla" message
+  currentQuestion = 0;
+  trueCount = 0;
+  falseCount = 0;
+  userAnswers = [];
+  showQuestion();
+  // Hide the result section
+  document.getElementById("result").style.display = "none";
+  // Show the quiz section
+  document.getElementById("quiz").style.display = "block";
+}
+
+function showQuestion() {
+  var questionElement = document.getElementById("question");
+  var optionsElement = document.getElementById("options");
+  var currentQuestionObj = questions[currentQuestion];
+
+  questionElement.textContent = currentQuestionObj.question;
+  optionsElement.innerHTML = '';
+
+  currentQuestionObj.options.forEach(function(option) {
+    var listItem = document.createElement("a");
+    listItem.textContent = option;
+    listItem.className = "list-group-item list-group-item-action";
+    listItem.addEventListener("click", function() {
+      selectAnswer(option);
+    });
+
+    optionsElement.appendChild(listItem);
+  });
+
+  updateProgressBar();
+  document.getElementById("quiz").style.display = "block";
+  document.getElementById("result").style.display = "none";
+}
+
+function selectAnswer(answer) {
+  userAnswers[currentQuestion] = answer;
+  checkAnswer();
+}
+
+function checkAnswer() {
+  if (userAnswers.length > currentQuestion) {
+    var answer = userAnswers[currentQuestion];
+    if (answer === questions[currentQuestion].answer) {
+      trueCount++;
+    } else {
+      falseCount++;
+    }
+
+    currentQuestion++;
+
+    if (currentQuestion < questions.length) {
+      showQuestion();
+    } else {
+      showResult();
+      document.getElementById("devamButton").style.display = "none";
+    }
+  }
+}
+
+function updateProgressBar() {
+  var progressBar = document.getElementById("progress-bar");
+  var progress = ((currentQuestion + 1) / questions.length) * 100;
+  progressBar.style.width = progress + "%";
+  progressBar.textContent = progress.toFixed(0) + "%";
+}
+
+function showResult() {
+  var statsElement = document.getElementById("stats");
+  var feedbackElement = document.getElementById("feedback");
+
+  statsElement.innerHTML = "Doğru: " + trueCount + "<br>Yanlış: " + falseCount;
+
+  feedbackElement.innerHTML = ''; // Clear previous feedback
+
+  questions.forEach(function(question, index) {
+    if (userAnswers[index] !== question.answer) {
+      var listItem = document.createElement("li");
+      var questionSpan = document.createElement("span");
+      var userAnswerSpan = document.createElement("span");
+      var correctAnswerSpan = document.createElement("span");
+
+      questionSpan.textContent = question.question;
+      userAnswerSpan.textContent = "Sizin yanıtınız: " + userAnswers[index];
+      correctAnswerSpan.textContent = "Doğru yanıt: " + question.answer;
+
+      userAnswerSpan.style.color = "red";
+      correctAnswerSpan.style.color = "green";
+
+      listItem.appendChild(questionSpan);
+      listItem.appendChild(document.createElement("br"));
+      listItem.appendChild(userAnswerSpan);
+      listItem.appendChild(document.createElement("br"));
+      listItem.appendChild(correctAnswerSpan);
+      feedbackElement.appendChild(listItem);
+    }
+  });
+
+  document.getElementById("quiz").style.display = "none";
+  document.getElementById("info-text").style.display = "none";
+
+  // Display the result section
+  var resultSection = document.getElementById("result");
+  resultSection.style.display = "block";
+}
+
+
+</script>
+			
+			
+        </div>
+        </div>
+  

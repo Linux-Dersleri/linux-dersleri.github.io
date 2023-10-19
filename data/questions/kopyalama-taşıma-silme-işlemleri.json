@@ -1,0 +1,52 @@
+[
+    {
+      "question": "Dosya veya klasörleri kopyalamak için hangi aracı kullanırız ?",
+      "options": ["mv", "cp", "ln", "rm", "shred"],
+      "answer": "cp"
+    },
+    {
+      "question": "Dosya veya klasör ismini değiştirmek üzere hangi komutu kullanabiliriz ?",
+      "options": ["mv", "ln", "rm", "shred"],
+      "answer": "mv"
+    },
+    {
+      "question": "İçerisi dolu olan klasörleri kopyalamak için hangi komutu kullanmamız olur ?",
+      "options": ["mv -s klasor hedef-dizin/", "mv -r klasor hedef-dizin/", "cp -r klasor hedef-dizin/", "cp -s klasor hedef-dizin/"],
+      "answer": "cp -r klasor hedef-dizin/"
+    },
+    {
+      "question": "Dosya veya klasörleri taşımak için hangi aracı kullanırız ?",
+      "options": ["mv", "cp", "ln", "rm", "shred"],
+      "answer": "mv"
+    },
+    {
+      "question": "İçerisi dolu olan klasörleri hangi komut ile silebiliriz ?",
+      "options": ["rm", "rm -d", "rm -r", "rmdir"],
+      "answer": "rm -r"
+    },
+    {
+      "question": "Dosyaları geri döndürülemez şekilde silmek için hangi komut kullanılır ?",
+      "options": ["rm", "rmdir", "delete", "shred"],
+      "answer": "shred"
+    },
+    {
+      "question": "Sembolik link oluşturmak için hangi komut kullanılır ?",
+      "options": ["ls -s", "ln -s", "ln -h", "ln"],
+      "answer": "ln -s"
+    },
+    {
+      "question": "Sembolik olarak bağlı olan bir dosyanın orijinal kaynağı silinirse içeriğe erişmeye devam edebilir miyiz ?",
+      "options": ["Evet", "Hayır"],
+      "answer": "Hayır"
+    },
+    {
+      "question": "Katı link olarak bağlı olan bir dosyanın orijinal kaynağı silinirse içeriğe erişmeye devam edebilir miyiz ?",
+      "options": ["Evet", "Hayır"],
+      "answer": "Evet"
+    },
+    {
+      "question": "Katı link oluşturmak için hangi komut kullanılır ?",
+      "options": ["ls -s", "ln -s", "ln -h", "ln"],
+      "answer": "ln"
+    }
+  ]

@@ -1,0 +1,77 @@
+<style>
+    #myUL li {
+      border-bottom: 1px solid #ccc; /* Add a bottom border to the list items */
+      padding-bottom: 10px; /* Add some spacing between items */
+      margin-bottom: 10px; /* Add space below each item */
+    }
+  </style>
+  
+<p></p>
+<div data-pagefind-ignore="all" class="no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+    <div class="row no-gutters">
+        <div class="col p-4 d-flex flex-column position-static">
+            <p>Linux üzerinde kullanılan çeşitli komutların açıklamalarına aşağıdaki listeden ulaşabilirsiniz.</p>
+            <input class="border filter-bar" type="search" id="myInput" onkeyup="myFunction()" placeholder="Komut adı girin..">
+            <p></p>
+            <ul id="myUL" class="list-unstyled ">
+                {% for post in site.komut | sort: 'title'%}
+                    <li ><a href="{{ site.url }}{{ post.url }}"><span class="mavi text-primary small "> {{ post.title }}</span></a></li>
+                    <p></p>
+                {% endfor %}
+            </ul>
+            <button class="btn btn-outline-primary mavi" id="showMoreButton" onclick="showMore()">Tümünü listele..</button>
+        </div>
+    </div>
+</div>
+
+<script>
+var liToShowInitially = 2; // Number of li items to show initially
+var liItems = document.querySelectorAll("#myUL li");
+var showMoreButton = document.getElementById("showMoreButton");
+var currentIndex = liToShowInitially;
+
+function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    
+    if (filter === "") { // Check if input field is empty
+        for (i = 0; i < li.length; i++) {
+            li[i].style.display = ""; // Display all list items
+        }
+        currentIndex = liToShowInitially;
+        showMoreButton.innerText = "Show More";
+    } else {
+        for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("a")[0];
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
+            }
+        }
+    }
+}
+
+function showMore() {
+    for (var i = currentIndex; i < liItems.length; i++) {
+        liItems[i].style.display = "";
+    }
+    
+    currentIndex = liItems.length; // Update currentIndex to the last item index
+    showMoreButton.style.display = "none"; // Hide the "Show More" button
+}
+
+// Initially hide all li items beyond the liToShowInitially value
+for (var i = liToShowInitially; i < liItems.length; i++) {
+    liItems[i].style.display = "none";
+}
+
+// Hide the "Show More" button if all items are already visible
+if (currentIndex >= liItems.length) {
+    showMoreButton.style.display = "none";
+}
+</script>

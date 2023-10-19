@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+{% include head.html %}
+</head>
+<body>
+{% include nav-main.html %}
+
+		  <main>
+          <div class="container">
+		<p></p>
+		<div class="alert alert-primary">
+		ℹ️ Temel dokümanlara çevrimdışı şekilde ulaşabileceğiniz <a href="https://play.google.com/store/apps/details?id=com.bildik.linuxdersleri">andorid uygulamasına</a> da göz atabilirsiniz.</div>
+<div class="row mb-2">
+      <div class="col-md-6">
+      <div class="no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        
+            <a href="{{ site.url }}{{ post.url }}"><img src="{{ site.url }}/assets/img/yazar1.png" class="card-img-top img1"></a>
+        <footer align="center">		
+    </footer>
+		
+        
+            <div class="card-body">
+		<strong class="d-inline-block mb-0 text-primary"><h3 id="alistirma">Aramıza Katılın</h3></strong>
+                <p class="card-text">Aramıza katılıp Türkçe kaynak oluşturmamıza yardım edebilirsiniz. </p>
+                
+            </div>
+        <a href="{{ site.url }}yazar-olmak.html" class=" stretched-link"></a>
+    </div>
+        
+      </div>
+	  <div class="col-md-6">
+      <div class="no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        
+            <a href="{{ site.url }}{{ post.url }}"><img src="{{ site.url }}/assets/img/etiketler.png" class="card-img-top img1"></a>
+			<footer align="center">		
+    </footer>
+        
+        
+            <div class="card-body">
+		<strong class="d-inline-block mb-0 text-primary"><h3 id="alistirma">Etiket Listesi</h3></strong>
+                <p class="card-text">Konu etiketlerine göre kategorize edilmiş paylaşımların listesi.</p>
+                
+            </div>
+			<a href="{{ site.url }}liste.html" class=" stretched-link"></a>
+        
+		
+    </div>
+      </div>
+    </div>
+	<h2>En Yeni İçerikler</h2>
+	<div class="row mb-2">
+    {% for post in site.posts limit:4 %}
+		<div class="col-md-6">
+      <div class="no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          
+		  <p class="text-primary"><i class="fa fa-calendar" aria-hidden="true"></i> {{ post.modified | date: "%d/%m/%Y" }} </p>		  
+          <h3 class="mb-0">{{ post.title }}</h3>
+          <p class="card-text mb-auto">{{ post.excerpt | remove: '\[ ... \]' | remove: '\( ... \)' | markdownify | strip_html | strip_newlines | escape_once }}</p>
+          <a href="{{ site.url }}{{ post.url }}" class=" stretched-link"></a>
+        </div>
+        
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+	
+  
+</div>
+
+        
+  </div>
+
+	{% include footer.html %}
+	{% include cookie.html %}
+	</div>
+</main>
+{% include scripts.html %}	
+
+
+</body>
+
+</html>

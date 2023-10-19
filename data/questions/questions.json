@@ -1,0 +1,1518 @@
+[
+  {
+    "question": "Aşağıdaki komutlardan hangisi 'arşivleme' için kullanılır ?",
+    "options": ["zip", "rar", "tar", "gzip", "bzip2"],
+    "answer": "tar"
+  },
+  {
+    "question": "Arşiv dosyalarını dışarı çıkarmak için hangi komut kullanılabilir ?",
+    "options": ["tar -xf", "tar -f", "tar -R", "tar -x"],
+    "answer": "tar -xf"
+  },
+  {
+    "question": "Arşive yeni dosya eklemek için hangi komut kullanılır ?",
+    "options": ["tar --add -f arsiv.tar eklenecek-dosya", "tar --put -f arsiv.tar eklenecek-dosya", "tar --append -f arsiv.tar eklenecek-dosya"],
+    "answer": "tar --append -f arsiv.tar eklenecek-dosya"
+  },
+  {
+    "question": "Arşivden dosya silmek için hangi komut kullanılır ?",
+    "options": ["tar -f arsiv.tar —remove silinecek-dosya", "tar -f arsiv.tar —delete silinecek-dosya", "tar arsiv.tar —remove silinecek-dosya", "tar arsiv.tar —delete silinecek-dosya"],
+    "answer": "tar -f arsiv.tar —delete silinecek-dosya"
+  },
+  {
+    "question": "gzip veya bzip2 ile sıkıştırılmış dosyaları açarken hangi seçeneği kullanıyoruz ?",
+    "options": ["-a", "-o", "-e", "-d"],
+    "answer": "-d"
+  },
+  {
+    "question": "gzip ile sıkıştırılmış bir dosya içeriğini konsola bastırmak için hangi komutu kullanabiliriz ?",
+    "options": ["bzcat", "zcat", "cat"],
+    "answer": "zcat"
+  },
+  {
+    "question": "Haftanın gün isimleriyle birlikte takvim bilgisi almak için hangi komutu kullanabiliriz?",
+    "options": ["date", "ndate", "cal", "ncal"],
+    "answer": "ncal"
+  },
+  {
+    "question": "Mevcut tarihi ve saati öğrenmek için hangi komutu kullanabiliriz?",
+    "options": ["cal", "ncal", "time", "date"],
+    "answer": "date"
+  },
+  {
+    "question": "which komutunun işlevi nedir?",
+    "options": ["komutun türü hakkında bilgi vermek", "dosya ve klasörlerin özniteliklerini bastırmak", "hangi dizinde olduğumuzu bastırmak", "argüman olarak verilen komutun dosya konumunu bastırmak"],
+    "answer": "argüman olarak verilen komutun dosya konumunu bastırmak"
+  },
+  {
+    "question": "Dosyaların tipi hakkında bilgi almak için hangi komutu kullanabiliriz?",
+    "options": ["type", "what", "which", "file"],
+    "answer": "file"
+  },
+  {
+    "question": "Komutların türleri hakkında bilgi almak için hangi komutu kullanabiliriz?",
+    "options": ["type", "file", "which", "what"],
+    "answer": "type"
+  },
+  {
+    "question": "Dosya ve dizinlerin öznitelikleri(metaverileri) hakkında bilgi almak için hangi komutu kullanabiliriz?",
+    "options": ["free", "what", "stat", "file"],
+    "answer": "stat"
+  },
+  {
+    "question": "Bellek kullanımı hakkında bilgi almak için hangi komutu kullanabiliriz?",
+    "options": ["what", "free", "stat", "file"],
+    "answer": "free"
+  },
+  {
+    "question": "lsb_release -a komutu hangi çıktıyı verir?",
+    "options": ["sistemin çalışma süresini", "sistemin donanım bilgisini", "sistemin sürümü gibi bazı standart bilgileri"],
+    "answer": "sistemin sürümü gibi bazı standart bilgileri"
+  },
+  {
+    "question": "hostname, çekirdek sürümü, donanım mimarisi gibi bilgileri öğrenmek için hangi komutu kullanabiliriz?",
+    "options": ["lsb_release -a", "what -a", "vmstat -a", "uname -a"],
+    "answer": "uname -a"
+  },
+  {
+    "question": "Sistemin ne kadar süredir açık olduğunu öğrenmek için hangi komutu kullanabiliriz?",
+    "options": ["when", "uptime", "while", "time"],
+    "answer": "uptime"
+  },
+  {
+    "question": "Kendi ev dizinimizdeki alt dizinler de dahil tüm dosya ve klasörlerin toplam boyutunu öğrenmek için hangi komutu kullanabiliriz?",
+    "options": ["ls -la ~", "total -a ~", "du ~", "count ~"],
+    "answer": "du ~"
+  },
+  {
+    "question": "lsusb komutunun işlevi nedir?",
+    "options": ["sisteme bağlı bulunan tüm aygıtları listelemek", "sisteme bağlı bulunan tüm tanımlanamayan aygıtları listelemek", "sisteme bağlı bulunan usb aygıtlarını listelemek", "sistemdeki tüm bozuk aygıt dosyalarını listelemek"],
+    "answer": "sisteme bağlı bulunan usb aygıtlarını listelemek"
+  },
+  {
+    "question": "du aracıyla büyüklük birimi bakımından daha okunaklı çıktılar almak için hangi seçeneği kullanmamız gerekir?",
+    "options": ["-a", "-s", "-S", "-h"],
+    "answer": "-h"
+  },
+  {
+    "question": "du aracıyla tüm dosya ve dizinlerin isimlerini listelemek için hangi seçeneği kullanabiliriz?",
+    "options": ["-a", "-s", "-S", "-h"],
+    "answer": "-a"
+  },
+  {
+    "question": "Dosya ve dizin isimleri yerine yalnızca toplam boyut miktarını öğrenmek yani özet bilgi almak için du aracının hangi seçeneğini kullanabiliriz?",
+    "options": ["-a", "-s", "-S", "-h"],
+    "answer": "-s"
+  },
+  {
+    "question": "2TB büyük ve 15 bölümlendirmeden daha fazla bölümlendirme imkanı için hangi bölümlendirme yaklaşımı tercih edilmelidir?",
+    "options": ["MBR", "GPT", "LFS", "GRUB"],
+    "answer": "GPT"
+  },
+  {
+    "question": "Sistem başlangıcında donanım kontrolü gerçekleştirilen yapılardan hangisi daha modern bir yaklaşımdır?",
+    "options": ["GRUB", "UEFI", "BIOS", "MBR", "GRUB2"],
+    "answer": "UEFI"
+  },
+  {
+    "question": "Sistemimize bağlı bulunan disk aygıtlarını(blok aygıtları olarak da bilinir) listelemek için hangi komutu kullanabiliriz?",
+    "options": ["lsusb", "lsblk", "disks", "ls -d"],
+    "answer": "lsblk"
+  },
+  {
+    "question": "fdisk ile mevcut diskleri listelemek için hangi komut kullanılabilir?",
+    "options": ["fdisk -disk", "fdisk -units", "fdisk-b", "fdisk -l"],
+    "answer": "fdisk -l"
+  },
+  {
+    "question": "Diskte bir dosya sistemi olmasa da diske veriler yazılıp okunabilir mi?",
+    "options": ["Evet", "Hayır"],
+    "answer": "Hayır"
+  },
+  {
+    "question": "Disk bölümlemesi yapılacaksa öncelikle bölümleme tablosu belirlenmeli, daha sonra disk bölümlendirilmelidir.",
+    "options": ["Evet", "Hayır"],
+    "answer": "Evet"
+  },
+  {
+    "question": "Disk bölümlemesi yapılacaksa öncelikle dosya sistemi tanımlanmalı, daha sonra disk bölümlendirilmelidir.",
+    "options": ["Evet", "Hayır"],
+    "answer": "Hayır"
+  },
+  {
+    "question": "Bir diskte ext4 dosya sistemini tanımlamak için hangi aracı kullanabiliriz?",
+    "options": ["fsck.ext4", "fsck", "mkfs.ext4", "ext4"],
+    "answer": "mkfs.ext4"
+  },
+  {
+    "question": "Diskleri bağlamak için hangi komutu kullanabiliriz?",
+    "options": ["lsblk", "fdisk", "parted", "mount"],
+    "answer": "mount"
+  },
+  {
+    "question": "Bağlı olan diskleri çıkarmak-ayırmak için hangi aracı kullanabiliriz?",
+    "options": ["lsblk", "fdisk", "umount", "deldisk", "testdisk", "parted"],
+    "answer": "umount"
+  },
+  {
+    "question": "Disklerin sistem başlangıcında kalıcı olarak otomatik şekilde bağlanmasını sağlamak için hangi dosyayı düzenlememiz gerekir?",
+    "options": ["/etc/passwd", "/etc/parted", "/etc/fstab", "/etc/mount"],
+    "answer": "/etc/fstab"
+  },
+  {
+    "question": "Fiziksel disklerimizi, LVM için fiziksel hacime(physical volume) çevirmek üzere hangi aracı kullanabiliriz?",
+    "options": ["lvmcreate", "pvcreate", "volumecreate", "vlcreate"],
+    "answer": "pvcreate"
+  },
+  {
+    "question": "LVM üzerinde Volume Group oluşturmak için hangi komut kullanılabilir?",
+    "options": ["lvcreate disk-grubu /dev/disk-adı", "vgcreate disk-grubu /dev/disk-adı", "pvcreate disk-grubu /dev/disk-adı"],
+    "answer": "vgcreate disk-grubu /dev/disk-adı"
+  },
+  {
+    "question": "LVM üzerinde logical volume oluşturmak için hangi komut kullanılabilir?",
+    "options": ["lvcreate", "pvcreate", "mvcreate", "vgcreate"],
+    "answer": "lvcreate"
+  },
+  {
+    "question": "Sistemdeki mevcut logical volume bilgisini öğrenmek üzere hangi araç kullanılabilir?",
+    "options": ["scan", "fsck", "lvs", "logical", "pvs"],
+    "answer": "lvs"
+  },
+  {
+    "question": "Volume group'a yeni disk eklemek için hangi arac kullanılabilir?",
+    "options": ["vgadd", "vgextend", "vgreduce", "vgattend"],
+    "answer": "vgextend"
+  },
+  {
+    "question": "Volume group'dan disk çıkarmak için hangi komut kullanılabilir?",
+    "options": ["vgdel disk-grubu /dev/disk-adı", "vgreduce disk-grubu /dev/disk-adı", "vgextend disk-grubu /dev/disk-adı", "vgexit disk-grubu /dev/disk-adı", "vgrem disk-grubu /dev/disk-adı"],
+    "answer": "vgreduce disk-grubu /dev/disk-adı"
+  },
+  {
+    "question": "Mevcut Logical Volume alanını genişletmek için hangi araç kullanılabilir?",
+    "options": ["lvadd", "lvextend", "lvreduce", "vgextend", "vgreduce"],
+    "answer": "lvextend"
+  },
+  {
+    "question": "Mevcut Logical Volume alanını küçültmek için hangi araç kullanılabilir?",
+    "options": ["lvremove", "lvextend", "lvreduce", "vgextend", "vgreduce"],
+    "answer": "lvreduce"
+  },
+  {
+    "question": "Mevcut logical volume silme işlemi için hangi aracı kullanabiliriz?",
+    "options": ["vgdel", "vgremove", "lvremove", "lvdel", "lvs"],
+    "answer": "lvremove"
+  },
+  {
+    "question": "Mevcut physical volume silme işlemi için hangi aracı kullanabiliriz?",
+    "options": ["vgdel", "vgremove", "pvremove", "pvdel", "pvs"],
+    "answer": "pvremove"
+  },
+  {
+    "question": "Volume group silme işlemi için hangi aracı kullanabiliriz?",
+    "options": ["vgdel", "vgremove", "pvremove", "pvdel", "pvs"],
+    "answer": "vgremove"
+  },
+  {
+    "question": "Linux sisteminde ana dizini temsil eden gösterim hangisidir?",
+    "options": ["/root", "root", "/", "/main"],
+    "answer": "/"
+  },
+  {
+    "question": "/sbin ve /bin dizinlerinin amacı nedir?",
+    "options": [
+      "Log dosyaları gibi değişken yapıdaki verileri barındırmak.",
+      "Sistemin sunduğu hizmetlere ait verileri barındırmak.",
+      "Çalıştırılabilir ikili (binary) dosyaları barındırmak.",
+      "Araçlara ait kütüphane dosyalarını barındırmak."
+    ],
+    "answer": "Çalıştırılabilir ikili (binary) dosyaları barındırmak."
+  },
+  {
+    "question": "Aşağıdakilerden hangisi /sbin ve /bin dizinleri hakkında  bir tanımlama sayılabilir?",
+    "options": [
+      "Her ikisi de yöneticilere özel olan ikili dosyaları barındırır.",
+      "/bin dizini, sistem yöneticileri tarafından kullanılan ve sistem yönetimi ve bakımıyla ilgili önemli programları barındırır.",
+      "/sbin dizini, sistem yöneticileri tarafından kullanılan ve sistem yönetimi ve bakımıyla ilgili önemli programları barındırır.",
+      "Her ikisi de log kayıtlarının bulunduğu dizinlerdir."
+    ],
+    "answer": "/sbin dizini, sistem yöneticileri tarafından kullanılan ve sistem yönetimi ve bakımıyla ilgili önemli programları barındırır."
+  },
+  {
+    "question": "/boot dizini hangi tür dosyaları barındırır?",
+    "options": [
+      "Sistemin önyüklenebilmesi için gerekli olan dosyalar.",
+      "Sistemin kayıtlarını tutan dosyalar.",
+      "Sistemin ağ bağlantısını sağlayan dosyalar.",
+      "Aygıtlar hakkında bilgi sunan çeşitli dosyalar."
+    ],
+    "answer": "Sistemin önyüklenebilmesi için gerekli olan dosyalar."
+  },
+  {
+    "question": "Sisteme bağlı bulunan genel donanım aygıtları hakkında bilgiler sunulan dizin hangisidir?",
+    "options": ["/boot", "/media", "/mnt", "/dev"],
+    "answer": "/dev"
+  },
+  {
+    "question": "Sistem üzerinde bir konfigürasyon gerçekleştirilecekse, ilgili konfigürasyon dosyasının hangi dizin altında bulunması daha olasıdır?",
+    "options": ["/boot", "/mnt", "/etc", "/lib"],
+    "answer": "/etc"
+  },
+  {
+    "question": "En yetkili kullanıcı olan root kullanıcısının ev dizini hangisidir?",
+    "options": ["/", "/root", "/home/root", "home/root"],
+    "answer": "/root"
+  },
+  {
+    "question": "/home dizini hangi amaçla kullanılır?",
+    "options": [
+      "Kullanıcıların ev dizini olarak.",
+      "Değişken tipteki verilerin tutulduğu dosyalar için.",
+      "Tüm dosya sistemini barındırmak için."
+    ],
+    "answer": "Kullanıcıların ev dizini olarak."
+  },
+  {
+    "question": "/lib dizini hangi amaçla kullanılır?",
+    "options": [
+      "Sistemin önyüklenebilmesi için.",
+      "Sistemin kayıtlarını tutmak için.",
+      "Programların ortak olarak kullandığı kütüphane dosyalarını barındırmak için.",
+      "Harici olarak yüklenene 3. taraf programlarının dosyalarını barındırmak için."
+    ],
+    "answer": "Programların ortak olarak kullandığı kütüphane dosyalarını barındırmak için."
+  },
+  {
+    "question": "/usr dizini hangi amaçla kullanılır?",
+    "options": [
+      "Programların ortak olarak kullandığı kütüphane dosyalarını barındırmak için.",
+      "Harici olarak yüklenene 3. taraf programlarının dosyalarını barındırmak için.",
+      "Çeşitli dokümanlar ile birlikte komut ve kütüphane dosyalarını ortak bir dizin altında barındırmak için.",
+      "Sistemin kayıtlarını tutmak için."
+    ],
+    "answer": "Çeşitli dokümanlar ile birlikte komut ve kütüphane dosyalarını ortak bir dizin altında barındırmak için."
+  },
+  {
+    "question": "/opt dizini hangi amaçla kullanılır?",
+    "options": [
+      "Programların ortak olarak kullandığı kütüphane dosyalarını barındırmak için.",
+      "Harici olarak yüklenene 3. taraf programlarının dosyalarını barındırmak için.",
+      "Çeşitli dokümanlar ile birlikte komut ve kütüphane dosyalarını ortak bir dizin altında barındırmak için.",
+      "Sistemin kayıtlarını tutmak için."
+    ],
+    "answer": "Harici olarak yüklenene 3. taraf programlarının dosyalarını barındırmak için."
+  },
+  {
+    "question": "Mevcut bulunduğumuz dizinde bulunan Desktop isimli klasöre geçiş yapmak için hangi komutu kullanmamız gerekir?",
+    "options": ["cd ../Desktop", "cd /Desktop", "cd .Desktop", "cd Desktop"],
+    "answer": "cd Desktop"
+  },
+  {
+    "question": "Bir üst dizine geçiş yapmak için hangi komutu kullanmalıyız?",
+    "options": ["cd", "cd ..", "cd -", "cd ~", "cd ."],
+    "answer": "cd .."
+  },
+  {
+    "question": "cd ~ komutu yani cd aracına argüman olarak verdiğimiz tilde(~) işareti nasıl bir etki gösterir?",
+    "options": ["kök dizine(/) dönmemizi sağlar.", "bir önceki dizine geçiş yapmamızı sağlar.", "mevcut kullanıcının ev dizinine geçişi sağlar.", "hiçbir etkisi olmaz."],
+    "answer": "mevcut kullanıcının ev dizinine geçişi sağlar."
+  },
+  {
+    "question": "Geçiş yapmak istediğimiz klasör isminde boşluk karakteri bulunuyorsa komutumuzu nasıl girebiliriz?",
+    "options": ["cd yeni klasor", "cd yeni$klasor", "cd 'yeni klasor'"],
+    "answer": "cd 'yeni klasor'"
+  },
+  {
+    "question": "cd komutu ile CD komutu aynı işlevi mi sağlar?",
+    "options": ["Evet cd ve CD komutu aynıdır.", "Hayır cd ve CD komutu aynı işlevde değildir."],
+    "answer": "Hayır cd ve CD komutu aynı işlevde değildir."
+  },
+  {
+    "question": "Mevcut dizinimizdeki içerikleri eskiden yeniye  listelemek için hangi komutu kullanabiliriz?",
+    "options": ["ls", "ls -a", "ls -l", "ls -t"],
+    "answer": "ls -t"
+  },
+  {
+    "question": "ls komutunun çıktılarını büyükten küçüğe  daha okunaklı boyut bilgileri ile bastırmak için komutumuzu nasıl girebiliriz?",
+    "options": ["ls -Sl", "ls -sa", "ls -sh", "ls -Sh"],
+    "answer": "ls -Sh"
+  },
+  {
+    "question": "ls komutunun çıktılarını alfabetik olarak ters bastırmak için hangi seçeneği kullanmamız gerekiyor?",
+    "options": ["r", "R", "t", "T"],
+    "answer": "r"
+  },
+  {
+    "question": "Spesifik bir dizin içerisindeki tüm alt dizinler de dahil bütün (gizliler de dahil) içeriği özyinelemeli olarak bastırmak için komutumuzu nasıl girebiliriz?",
+    "options": ["ls -la dizin/", "ls -Isa dizin/", "ls -ra dizin/", "ls -Ra dizin/"],
+    "answer": "ls -Ra dizin/"
+  },
+  {
+    "question": "Mevcut dizinimizdeki içerikleri alfabetik olarak ters sıralamak için hangi komutu kullanabiliriz?",
+    "options": ["ls -s", "ls -r", "ls -t", "ls -R"],
+    "answer": "ls -r"
+  },
+  {
+    "question": "Yeni bir dizin (klasör) oluşturmak için hangi aracı kullanabiliriz?",
+    "options": ["rmdir", "touch", "echo", "mkfolder", "mkdir"],
+    "answer": "mkdir"
+  },
+  {
+    "question": "mkdir aracı ile iç içe yeni dizinler oluşturmak için komutumuzu nasıl girebiliriz?",
+    "options": ["mkdir ilk/orta/son", "mkdir -d ilk/orta/son", "mkdir -p ilk/orta/son"],
+    "answer": "mkdir -p ilk/orta/son"
+  },
+  {
+    "question": "Alt dizinleri de dahil tamamı boş olan klasörleri nasıl silebiliriz?",
+    "options": ["rmdir -r dizinl/dizin2/dizin3", "rmdir dizinl/dizin2/dizin3", "rmdir -R dizinl/dizin2/dizin3", "rmdir -p dizinl/dizin2/dizin3"],
+    "answer": "rmdir -p dizinl/dizin2/dizin3"
+  },
+  {
+    "question": "İçerisinde dosyalar bulunan bir klasörü nasıl silebiliriz?",
+    "options": ["rmdir klasör", "rmdir -r klasör", "rmdir -p klasör"],
+    "answer": "rmdir -r klasör"
+  },
+  {
+    "question": "Bash kabuğunda bir işlemi arka planda başlatmak için hangi komut doğrudur?",
+    "options": ["komut ?", "komut %", "komut &", "komut |", "komut #"],
+    "answer": "komut &"
+  },
+  {
+    "question": "Bash kabuğundaki arkaplandaki işlemi, ön plana almak için hangi komut girilebilir?",
+    "options": ["bg işlem-numarası", "fg işlem-numarası", "jobs işlem-numarası", "disown işlem-numarası"],
+    "answer": "fg işlem-numarası"
+  },
+  {
+    "question": "Bash kabuğunda ön planda çalışan bir işlemi duraklatmak için hangi kısayolu kullanabiliriz?",
+    "options": ["Ctrl + C", "Ctrl + D", "Ctrl + R", "Ctrl + S", "Ctrl + Z"],
+    "answer": "Ctrl + Z"
+  },
+  {
+    "question": "Bash kabuğunda ön planda çalışan bir işlemi kesintiye uğratmak-durdurmak için hangi kısayolu kullanabiliriz?",
+    "options": ["Ctrl + D", "Ctrl + R", "Ctrl + C", "Ctrl + S", "Ctrl + Z"],
+    "answer": "Ctrl + C"
+  },
+  {
+    "question": "Bash kabuğunda durdurumuş bir işlemi arka plana almak için hangi komutu kullanabiliriz?",
+    "options": ["bg işlem-numarası", "fg işlem-numarası", "jobs işlem-numarası", "disown işlem-numarası"],
+    "answer": "bg işlem-numarası"
+  },
+  {
+    "question": "Mevcut bash kabuğunun yönettiği işleri listelemek için hangi komut kullanılır?",
+    "options": ["ps", "ps aux", "top", "jobs"],
+    "answer": "jobs"
+  },
+  {
+    "question": "Kabuğun başlattığı bir işlemi, kabuğun kontrolünden çıkarmak için hangi komutu kullanabiliriz?",
+    "options": ["jobs", "fg", "bg", "disown"],
+    "answer": "disown"
+  },
+  {
+    "question": "Herhangi bir koşula bağlı olmadan birden fazla komutu sırasıyla çalıştırmak için hangi karakteri kullanabiliriz?",
+    "options": [";", "&", "%", "&&", "||"],
+    "answer": ";"
+  },
+  {
+    "question": "İlk komut başarılı ise ikinci komutu çalıştıracak komut bütünü hangisidir?",
+    "options": ["komut1 & komut2", "komut1 ; komut2", "komut1 && komut2", "komut || komut2"],
+    "answer": "komut1 && komut2"
+  },
+  {
+    "question": "İlk komut başarısız ise ikinci komutu çalıştıracak komut bütünü hangisidir?",
+    "options": ["komut1 & komut2", "komut1 ; komut2", "komut1 && komut2", "komut || komut2"],
+    "answer": "komut || komut2"
+  },
+  {
+    "question": "Komutları gruplamak için hangi yaklaşım doğrudur?",
+    "options": ["[komut1 ; komut2 ; komut3]", "{komut1 ; komut2 ; komut3}", "(komut1 ; komut2 ; komut3)"],
+    "answer": "{komut1 ; komut2 ; komut3}"
+  },
+  {
+    "question": "İşlemleri anlık olarak güncellenecek şekilde takip etmek için hangi aracı kullanabiliriz?",
+    "options": ["ps", "ps aux", "top", "jobs"],
+    "answer": "top"
+  },
+  {
+    "question": "İşlemlere sinyaller göndermek için hangi aracı kullanabiliyoruz?",
+    "options": ["kill", "signal", "jobs", "pgrep"],
+    "answer": "kill"
+  },
+  {
+    "question": "İşlem isimleri üzerinden işlem numaralarını kolayca bulmak için hangi araç kullanılabilir?",
+    "options": ["grep", "egrep", "pgrep", "fgrep"],
+    "answer": "pgrep"
+  },
+  {
+    "question": "İşlem veya komut ismi ile eşleşen tüm işlemlerin sonlandırılması için hangi komut kullanılabilir?",
+    "options": ["kill işlem-adı", "killall işlem-adı", "pgrep işlem-adı", "jobs işlem-adı"],
+    "answer": "killall işlem-adı"
+  },
+  {
+    "question": "2’den 12 ye kadar olan sayıların ikişer aralıklar ile konsola bastırmak için hangi seçenek doğrudur ?",
+    "options": ["[2..12..2]", "(2..12..2)", "(2..12..2) "],
+    "answer": "(2..12..2)"
+  },
+  {
+    "question": "a dan f ye kadar olan karakterleri üretmek için hangi genişletmeyi kullanmamız gerekir ?",
+    "options": ["{a..f} ", "{a-f}", "[a..f]", "[a-f]"],
+    "answer": "{a..f}"
+  },
+  {
+    "question": "a dan z ye kadar olan karakterleri beşer aralıkla üretmek için hangi genişletmeyi kullanmamız gerekir ?",
+    "options": ["{5..a..z}", "{a..5..z}", "{a..z..5} ", "{a..z}5"],
+    "answer": "{a..z..5}"
+  },
+  {
+    "question": "test1 test3 test5 şeklinde devam eden 1 den 9 ye kadar 2 şer aralıklı argümanlar üretmek için hangi genişletmeyi kullanmamız gerekir ?",
+    "options": ["test{1..9}", "test{1..9..2} ", "test {1..9}", "test {1..9..2}"],
+    "answer": "test{1..9..2}"
+  },
+  {
+    "question": "echo {1..3}{a..c}{A..C} komutu hangi çıktıyı üretir ?",
+    "options": [
+      "1 2 3 aA aB aC bA bB bC cA cB cC",
+      "1 2 3 a b c A B C",
+      "1aA 1aB 1aC 1bA 1bB 1bC 1cA 1cB 1cC 2aA 2aB 2aC 2bA 2bB 2bC 2cA 2cB 2cC 3aA 3aB 3aC 3bA 3bB 3bC 3cA 3cB 3cC ",
+      "1a 1b 1c 2a 2b 2c 3a 3b 3c A B C"
+    ],
+    "answer": "1aA 1aB 1aC 1bA 1bB 1bC 1cA 1cB 1cC 2aA 2aB 2aC 2bA 2bB 2bC 2cA 2cB 2cC 3aA 3aB 3aC 3bA 3bB 3bC 3cA 3cB 3cC"
+  },
+  {
+    "question": "Komut ikamesini kullanarak konsola, 'şu anda bulunduğum dizin:' yazdırıp karşısına bulunduğunuz dizinin dosya yolunu veren komutun çıktısını nasıl eklersiniz ?",
+    "options": [
+      "echo 'Şu anda bulunduğum dizin: $(pwd)'",
+      "echo 'Şu anda bulunduğum dizin: $pwd'",
+      "echo 'Şu anda bulunduğum dizin: $`pwd`' "
+    ],
+    "answer": "echo 'Şu anda bulunduğum dizin: $`pwd`'"
+  },
+  {
+    "question": "Dosya ismi genişletmesinde yalnızca tek bir karakteri kapsayan joker karakter hangisidir ?",
+    "options": ["Yıldız *", "Soru İşareti ? ", "Kıvırcık Parantez {}", "Köşeli Parantez []"],
+    "answer": "Soru İşareti ?"
+  },
+  {
+    "question": "Dosya ismi genişletmesinde tüm karakterleri kapsayan joker karakter hangisidir ?",
+    "options": ["Yıldız * ", "Soru İşareti ?", "Kıvırcık Parantez {}", "Köşeli Parantez []"],
+    "answer": "Yıldız *"
+  },
+  {
+    "question": "Dosya ismi genişletmesi için aralık belirtmemize olanak tanıyan joker karakter hangisidir ?",
+    "options": ["Yıldız *", "Soru İşareti ?", "Kıvırcık Parantez {}", "Köşeli Parantez [] "],
+    "answer": "Köşeli Parantez []"
+  },
+  {
+    "question": "Tek tırnak ile çift tırnak arasındaki fark hangi seçenekte  açıklanmıştır ?",
+    "options": [
+      "Çift tırnak içerisinde hiç bir genişletme uygulanmaz. Tek tırnakta ise dolar işareti ($) ve ters slash kaçış karakteri (\\) gibi bazı özel karakterle özel anlamlarına genişletilebilirler.",
+      "Tek tırnak içerisinde hiç bir genişletme uygulanmaz. Çift tırnakta ise dolar işareti ($) ve ters slash kaçış karakteri (\\) gibi bazı özel karakterle özel anlamlarına genişletilebilirler. "
+    ],
+    "answer": "Tek tırnak içerisinde hiç bir genişletme uygulanmaz. Çift tırnakta ise dolar işareti ($) ve ters slash kaçış karakteri (\\) gibi bazı özel karakterle özel anlamlarına genişletilebilirler."
+  },
+  {
+    "question": "Çift tırnak içerisinde dosya ismi genişletmesi( * ? [] ) uygulanır mı ?",
+    "options": ["Evet uygulanır.", "Hayır uygulanmaz. "],
+    "answer": "Hayır uygulanmaz."
+  },
+  {
+    "question": "Aşağıdaki şıklardan hangisinde ls -la /home komutu hakkında yanlış bir ifade vardır?",
+    "options": [
+      "Çalıştırılacak araç ls aracıdır.",
+      "-la olarak yazılmış ifade ls aracının seçeneği olarak girilmiştir.",
+      "/home seçeneği bu ls aracının listelemesi gereken dizin içeriğini belirten parametredir.",
+      "Bash kabuğuna göre bu komutta yalnızca ls ifadesi argümandır."
+    ],
+    "answer": "Bash kabuğuna göre bu komutta yalnızca ls ifadesi argümandır."
+  },
+  {
+    "question": "Kabuk tarafından bir araç çalıştırılacağı zaman, aşağıdaki değişkenlerden hangisinin verdiği dizin adresleri kontrol edilir?",
+    "options": [
+      "HOME",
+      "USER",
+      "PWD",
+      "PATH"
+    ],
+    "answer": "PATH"
+  },
+  {
+    "question": "Bash kabuğu, yalnızca aracın ismi belirtilmiş bir komut gördüğünde bu aracı çalıştırmak için aracı ilk olarak nerede arar?",
+    "options": [
+      "Mevcut dizindeki dosyalara",
+      "Kabuğun yerleşik - dahili araçlarında",
+      "PATH dizinlerinde"
+    ],
+    "answer": "Kabuğun yerleşik - dahili araçlarında"
+  },
+  {
+    "question": "Mevcut dizinimde bulunan ve çalıştırılma yetkisi mevcut olan betik.sh isimli bir betik dosyasını çalıştırmak için aşağıdaki komutlardan hangisini girmem gerekir?",
+    "options": [
+      "betik.sh",
+      "/betik.sh",
+      ".betik.sh",
+      "./betik.sh"
+    ],
+    "answer": "./betik.sh"
+  },
+  {
+    "question": "Yalnızca mevcut kullanıcı hesabımdaki kabuklarda geçerli olacak bir değişiklik için hangi konfigürasyon dosyası kullanmalıyım?",
+    "options": [
+      "/etc/bash.bashrc",
+      "/etc/profile",
+      "~/.bashrc"
+    ],
+    "answer": "~/.bashrc"
+  },
+  {
+    "question": "Tüm kullanıcıların kabuğunda etkili olacak değişiklikleri hangi konfigürasyon dosyasında yaparsınız?",
+    "options": [
+      "~/.bashrc",
+      "/etc/bash.bashrc",
+      "~/.profile"
+    ],
+    "answer": "/etc/bash.bashrc"
+  },
+  {
+    "question": "/etc/bash.bashrc dosyası ~/.bashrc dosyasından daha önce okunur.",
+    "options": [
+      "Yanlış",
+      "Doğru"
+    ],
+    "answer": "Doğru"
+  },
+  {
+    "question": "Tüm alt kabuklara miras bırakılacak yani global olacak yeni bir değişken tanımlamak için aşağıdaki komutlardan hangisi  komuttur?",
+    "options": [
+      "degisken=degeri",
+      "degisken=”değeri”",
+      "export degisken",
+      "export degisken=degeri"
+    ],
+    "answer": "export degisken=degeri"
+  },
+  {
+    "question": "Path yolu '/usr/sbin:/usr/bin:/sbin:/bin:' olan bir sistemde, komutla çalıştırılacak araç ilk olarak hangi PATH dizini üzerinde aranır?",
+    "options": [
+      "/usr/bin",
+      "/sbin",
+      "/usr/sbin",
+"/bin"
+    ],
+    "answer": "/usr/sbin"
+  },
+  {
+    "question": "Eğer PATH yoluna yeni bir dizin adresi eklemek istersek, tüm kabuklar tarafından PATH yolunda ilk olarak bizim eklediğimiz dizine bakılması için tanımlamayı nasıl yapmamız gerekir?",
+    "options": [
+      "export PATH=”$PATH:yeni/dizin”",
+      "PATH=”$PATH:yeni/dizin”",
+      "$PATH=”yeni/dizin:$PATH”",
+      "export PATH=”yeni/dizin:$PATH”"
+    ],
+    "answer": "export PATH=”yeni/dizin:$PATH”"
+  },
+  {
+    "question": "Örneğin ~/.bashrc dosyasındaki değişikliklerin anında mevcut kabuğumuzda geçerli olması için aşağıdaki yöntemlerden hangisi işe yaramaz?",
+    "options": [
+      "source ~/.bashrc",
+      "oturumu kapatıp tekrar açmak.",
+      "export ~/.bashrc"
+    ],
+    "answer": "export ~/.bashrc"
+  },
+  {
+    "question": "Linux üzerinde isminin başında - (kısa çizgi) işareti bulunan dosya ve klasörler gizli statüsünde sayılır.",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "answer": "Doğru"
+  },
+  {
+    "question": "Dosya veya klasörleri kopyalamak için hangi aracı kullanırız ?",
+    "options": ["mv", "cp", "ln", "rm", "shred"],
+    "answer": "cp"
+  },
+  {
+    "question": "Dosya veya klasör ismini değiştirmek üzere hangi komutu kullanabiliriz ?",
+    "options": ["mv", "ln", "rm", "shred"],
+    "answer": "mv"
+  },
+  {
+    "question": "İçerisi dolu olan klasörleri kopyalamak için hangi komutu kullanmamız olur ?",
+    "options": ["mv -s klasor hedef-dizin/", "mv -r klasor hedef-dizin/", "cp -r klasor hedef-dizin/", "cp -s klasor hedef-dizin/"],
+    "answer": "cp -r klasor hedef-dizin/"
+  },
+  {
+    "question": "Dosya veya klasörleri taşımak için hangi aracı kullanırız ?",
+    "options": ["mv", "cp", "ln", "rm", "shred"],
+    "answer": "mv"
+  },
+  {
+    "question": "İçerisi dolu olan klasörleri hangi komut ile silebiliriz ?",
+    "options": ["rm", "rm -d", "rm -r", "rmdir"],
+    "answer": "rm -r"
+  },
+  {
+    "question": "Dosyaları geri döndürülemez şekilde silmek için hangi komut kullanılır ?",
+    "options": ["rm", "rmdir", "delete", "shred"],
+    "answer": "shred"
+  },
+  {
+    "question": "Sembolik link oluşturmak için hangi komut kullanılır ?",
+    "options": ["ls -s", "ln -s", "ln -h", "ln"],
+    "answer": "ln -s"
+  },
+  {
+    "question": "Sembolik olarak bağlı olan bir dosyanın orijinal kaynağı silinirse içeriğe erişmeye devam edebilir miyiz ?",
+    "options": ["Evet", "Hayır"],
+    "answer": "Hayır"
+  },
+  {
+    "question": "Katı link olarak bağlı olan bir dosyanın orijinal kaynağı silinirse içeriğe erişmeye devam edebilir miyiz ?",
+    "options": ["Evet", "Hayır"],
+    "answer": "Evet"
+  },
+  {
+    "question": "Katı link oluşturmak için hangi komut kullanılır ?",
+    "options": ["ls -s", "ln -s", "ln -h", "ln"],
+    "answer": "ln"
+  },
+  {
+    "question": "Yeni bir kullanıcı hesabı oluşturmak için hangi komutu kullanabiliriz?",
+    "options": ["chown kullanıcı", "adduser kullanıcı", "chmod kullanıcı", "chattr kullanıcı"],
+    "answer": "adduser kullanıcı"
+  },
+  {
+    "question": "Mevcut bir kullanıcı hesabına parola tanımlamak için hangi komutu kullanabiliriz?",
+    "options": ["pasword kullanıcı", "chpass kullanıcı", "chown kullanıcı", "passwd kullanıcı"],
+    "answer": "passwd kullanıcı"
+  },
+  {
+    "question": "useradd aracı ile ev dizinine sahip bir kullanıcı hesabı nasıl oluşturulur?",
+    "options": ["usermod kullanıcı", "usermod -h kullanıcı", "usermod -u kullanıcı", "usermod -m kullanıcı"],
+    "answer": "usermod -m kullanıcı"
+  },
+  {
+    "question": "Kullanıcı hesapları ile ilgili bilgiler(kullanıcı adı, ev dizini, varsayılan kabuğu vs..) hangi dosyada tutulur?",
+    "options": ["/etc/group", "/etc/.bashrc", "/etc/passwd", "/etc/bash.bashrc"],
+    "answer": "/etc/passwd"
+  },
+  {
+    "question": "Kullanıcıların parola bilgileri hangi dosyada tutulur?",
+    "options": ["/etc/group", "/etc/shadow", "/etc/passwd", "/etc/bash.bashrc"],
+    "answer": "/etc/shadow"
+  },
+  {
+    "question": "Kullanıcının dahil olduğu grupların bilgisini almak için hangi komutu kullanabiliriz?",
+    "options": ["guid", "uid", "groups", "users"],
+    "answer": "groups"
+  },
+  {
+    "question": "Kullanıcıların grup bilgileri hangi dosyada tutulur?",
+    "options": ["/etc/group", "/etc/shadow", "/etc/passwd", "/etc/bash.bashrc"],
+    "answer": "/etc/group"
+  },
+  {
+    "question": "Yeni bir grup oluşturmak için hangi komut kullanılır?",
+    "options": ["gpasswd grup-adı", "gcreate grup-adı", "groupadd grup-adı"],
+    "answer": "groupadd grup-adı"
+  },
+  {
+    "question": "Var olan bir gruba kullanıcı eklemek için hangi komut kullanılabilir?",
+    "options": ["gpasswd -a kullanıcı grup", "gcreate -a kullanıcı grup", "groupadd -a kullanıcı grup"],
+    "answer": "gpasswd -a kullanıcı grup"
+  },
+  {
+    "question": "Gruptaki bir kullanıcıyı gruptan çıkarmak için hangi komut kullanılır?",
+    "options": ["gpasswd -a kullanıcı grup", "groupadd -a kullanıcı grup", "gpasswd -d kullanıcı grup", "groupadd -d kullanıcı grup"],
+    "answer": "gpasswd -d kullanıcı grup"
+  },
+  {
+    "question": "Var olan bir grubu silmek için hangi komut girilebilir?",
+    "options": ["gpasswd grup-adı", "gdel grup-adı", "groupdel grup-adı"],
+    "answer": "groupdel grup-adı"
+  },
+  {
+    "question": "Bir dosyanın sahibine çalıştırma yetkisi eklemek için hangi komut girilebilir?",
+    "options": ["chmod +x dosya", "chmod u+x dosya", "chmod =x dosya", "chmod u=x dosya"],
+    "answer": "chmod u+x dosya"
+  },
+  {
+    "question": "Bir dosyanın grubuna doğrudan okuma ve çalıştırma yetkisi vermek için hangi komut girilebilir?",
+    "options": ["chmod +rx dosya", "chmod g+rx dosya", "chmod =rx dosya", "chmod g=rx dosya"],
+    "answer": "chmod g+rx dosya"
+  },
+  {
+    "question": "Dosya yetkilerinden 'diğerleri' için tüm yetkili silmek üzere hangi komut kullanılabilir?",
+    "options": ["chmod -rwx dosya", "chmod =rwx dosya", "chmod o-rwx dosya", "chmod o=rwx dosya"],
+    "answer": "chmod o-rwx dosya"
+  },
+  {
+    "question": "Yalnızca dosyanın sahibine okuma ve çalıştırma yetkisi tanımlamak için hangisi doğru komut olurdu?",
+    "options": [
+      "chmod 500 dosya",
+      "chmod 600 dosya",
+      "chmod 700 dosya",
+      "chmod 300 dosya",
+      "chmod 400 dosya",
+      "chmod 100 dosya"
+    ],
+    "answer": "chmod 500 dosya"
+  },
+  {
+    "question": "Dosya sahibine tüm yetkileri vermek, grubu için okuma ve çalıştırma yetkisi vermek, diğer kullanıcılar için de yalnızca okuma yetkisi vermek için hangisi uygundur?",
+    "options": ["chmod 777 dosya", "chmod 742 dosya", "chmod 754 dosya", "chmod 766 dosya", "chmod 754 dosya"],
+    "answer": "chmod 754 dosya"
+  },
+  {
+    "question": "Yetkilendirme işleminde 732 sayısının harf olarak yetki karşılığı hangisidir?",
+    "options": ["rwxrw---x", "rwx-wx-w-", "rwx--x--x", "rwx-w--wx"],
+    "answer": "rwx-wx-w-"
+  },
+  {
+    "question": "r-xrw---x yetki tanımlama karakterlerinin yetkilendirmedeki sayısal karşılığı hangisidir?",
+    "options": ["432", "543", "561", "351", "456"],
+    "answer": "561"
+  },
+  {
+    "question": "Mevcut yetkilere ek olarak yalnızca gruptaki kullanıcılara çalıştırma yetkisi tanımlamak için hangi komut doğru olacaktır?",
+    "options": ["chmod 010 dosya", "chmod +010 dosya", "chmod g+010 dosya", "chmod +1 dosya", "chmod g+1 dosya", "chmod =010 dosya"],
+    "answer": "chmod +010 dosya"
+  },
+  {
+    "question": "sudo yetkilerini konfigüre etmemizi sağlayan dosyalar nerede bulunur?",
+    "options": ["/etc/sudo.conf", "/var/log/sudo.log", "/etc/sudoers", "/usr/bin/sudo"],
+    "answer": "/etc/sudoers"
+  },
+  {
+    "question": "Sudoers dosyasını düzenlerken hangi komut kullanılır ve neden?",
+    "options": ["nano, çünkü daha kolay bir kullanıcı arayüzü sunar.", "visudo, çünkü dosyanın uygun bir şekilde kilitlemesine yardımcı olur ve hata denetimlerini yapar.", "cat, çünkü dosyanın içeriğini hızlıca görüntülemek için kullanılır.", "chmod, çünkü dosyanın izinlerini değiştirmek için kullanılır."],
+    "answer": "visudo, çünkü dosyanın uygun bir şekilde kilitlemesine yardımcı olur ve hata denetimlerini yapar."
+  },
+  {
+    "question": "Buradaki sudo yetki tanımı ne anlama gelir: Ali ALL=(ALL) /usr/bin/vim?",
+    "options": ["Ali kullanıcısına sadece vim komutunu çalıştırma izni verir.", "Ali kullanıcısına tüm komutları çalıştırma izni verir.", "Ali kullanıcısına yalnızca kendi kullanıcı kimlikleri üzerinde vim komutunu çalıştırma izni verir.", "Ali kullanıcısına sadece ls komutunu çalıştırma izni verir."],
+    "answer": "Ali kullanıcısına sadece vim komutunu çalıştırma izni verir."
+  },
+  {
+    "question": "Bir kullanıcıya yalnızca belirli bir komutu belirli bir kullanıcı kimliğiyle çalıştırma izni vermek için hangi sudo yetki tanımı kullanılabilir?",
+    "options": ["Burak ALL=(Ayse) /usr/bin/whoami", "Kullanici ALL=(ALL) /bin/*", "Admin ALL=(ALL=ALL) /sbin/poweroff", "Jale ALL=(root) /usr/bin/*"],
+    "answer": "Burak ALL=(Ayse) /usr/bin/whoami"
+  },
+  {
+    "question": "Burdaki sudo tanımı ne anlama gelir: Kullanicilar ALL=(ALL) NOPASSWD: /usr/bin/apt-get?",
+    "options": ["Kullanicilar kullanıcılarına sadece apt-get komutunu çalıştırma izni verir ve parola girişi gerektirir.", "Kullanicilar kullanıcılarına apt-get komutunu parola girmeden çalıştırma izni verir.", "Her kullanıcıya apt-get komutunu parola girmeden çalıştırma izni verir.", "Sadece belirli bir IP adresinden gelen kullanıcılara apt-get komutunu çalıştırma izni verir."],
+    "answer": "Kullanicilar kullanıcılarına apt-get komutunu parola girmeden çalıştırma izni verir."
+  },
+  {
+    "question": "sudo konfigürasyonlarındaki 'NOPASSWD' seçeneği neden kullanışlıdır?",
+    "options": ["Kullanıcıların parolalarını unutmamaları için.", "Kullanıcıların daha fazla yetki verilmesini sağlar.", "Kullanıcıların parola girmeleri gerektiği için güvenlik seviyesini artırır.", "Kullanıcıların belirli komutları parola girmeden çalıştırmalarına izin verir."],
+    "answer": "Kullanıcıların belirli komutları parola girmeden çalıştırmalarına izin verir."
+  },
+  {
+    "question": "Mevcut bir kullanıcı hesabında oturum açmak için hangi komutu kullanabiliriz?",
+    "options": ["sudo ali", "su ali", "passwd ali", "login ali"],
+    "answer": "su ali"
+  },
+  {
+    "question": "Kullanıcı hesabında oturum açarken, ortam değişkenlerinin aktarılmadan ilgili kullanıcının ev dizinde çalışmaya başlamak için hangi komutu kullanmamız gerek?",
+    "options": ["su kullanıcı", "sudo kullanıcı", "sudo - kullanıcı", "su -c kullanıcı", "pwd kullanıcı", "su - kullanıcı"],
+    "answer": "su - kullanıcı"
+  },
+  {
+    "question": "Mevcut bir kullanıcı hesabını silmek için hangi komut kullanılabilir?",
+    "options": ["userdel -r kullanıcı", "useremove kullanıcı", "removeuser kullanıcı"],
+    "answer": "userdel -r kullanıcı"
+  },
+  {
+    "question": "Tüm konsol(terminal) araçlarının kısayolları ortaktır.",
+    "options": ["Evet", "Hayır"],
+    "answer": "Hayır"
+  },
+  {
+    "question": "Tüm dağıtımlarda ctrl + alt + t tuşlaması, yeni bir konsol ekranı açar.",
+    "options": ["Evet", "Hayır"],
+    "answer": "Evet"
+  },
+  {
+    "question": "İmlecin bulunduğu konumdan, satırın en başına atlamak için hangi kısayolu kullanmanız gerekiyor?",
+    "options": ["Ctrl + a", "Ctrl + e", "Ctrl + f", "Ctrl + b"],
+    "answer": "Ctrl + a"
+  },
+  {
+    "question": "İmlecin bulunduğu konumdan, satırın en sonuna atlamak için hangi kısayolu kullanmanız gerekiyor?",
+    "options": ["Ctrl + a", "Ctrl + e", "Ctrl + f", "Ctrl + b"],
+    "answer": "Ctrl + e"
+  },
+  {
+    "question": "İmlecin bulunduğu konumdan bir karakteri ileri gitmek için hangi kısayolu kullanmanız gerekiyor?",
+    "options": ["Alt + a", "Ctrl + e", "Ctrl + f", "Alt + b"],
+    "answer": "Ctrl + f"
+  },
+  {
+    "question": "Bir kelime ileriye atlamak için hangi kısayolu kullanmanız gerekiyor?",
+    "options": ["Alt + a", "Ctrl + e", "Alt + f", "Ctrl + f"],
+    "answer": "Alt + f"
+  },
+  {
+    "question": "İmlecin bulunduğu konumdan bir karakter geri gitmek için hangi kısayolu kullanmanız gerekiyor?",
+    "options": ["Alt + a", "Ctrl + b", "Alt + b", "Ctrl + f"],
+    "answer": "Ctrl + b"
+  },
+  {
+    "question": "İmlecin, bulunduğu konumdan satırın en başına atlaması ve tekrar kullanıldığında eski imleç konumuna gelmesi için hangi kısayolu kullanmanız gerekiyor?",
+    "options": ["Alt + a", "Ctrl + b", "Alt + xx", "Ctrl + xx"],
+    "answer": "Ctrl + xx"
+  },
+  {
+    "question": "İmlecin bulunduğu konumdan bir kelime geriye atlamak için hangi kısayolu kullanmanız gerekiyor?",
+    "options": ["Alt + a", "Ctrl + b", "Alt + b", "Ctrl + f"],
+    "answer": "Alt + b"
+  },
+  {
+    "question": "İmlecin bulunduğu konumdan sonraki kelimeyi silmek için hangi kısayolu kullanmamız gerekir?",
+    "options": ["Alt + b", "Ctrl + d", "Alt + d", "Ctrl + b"],
+    "answer": "Alt + d"
+  },
+  {
+    "question": "Tek seferde imlecin gerisinde bulunan bir kelimeyi silmek için hangi kısayolu kullanmamız gerekiyor?",
+    "options": ["Ctrl + b", "Alt + Backspace", "Ctrl + Backspace", "Alt + b"],
+    "answer": "Alt + Backspace"
+  },
+  {
+    "question": "Konsola yazdığımız ve enter ile onaylamadan sildiğimiz karakterleri geri getirmek için hangi kısayolu kullanmamız gerekiyor?",
+    "options": ["Alt + X", "Ctrl + Z", "Ctrl + Backspace", "Ctrl + _"],
+    "answer": "Ctrl + _"
+  },
+  {
+    "question": "İmleçten önceki tek bir kelimeyi kesmek için hangi kısayolu kullanmanız gerekiyor?",
+    "options": ["Ctrl + x", "Ctrl + w", "Alt + w", "Alt + x"],
+    "answer": "Ctrl + w"
+  },
+  {
+    "question": "İmleçten önceki tüm satırı kesmek için hangi kısayolu kullanmanız gerekiyor?",
+    "options": ["Ctrl + x", "Ctrl + k", "Ctrl + u", "Ctrl + c"],
+    "answer": "Ctrl + u"
+  },
+  {
+    "question": "Komut satırındaki çıktıları ekrandan temizlemek için hangi kısayolu kullanmamız gerekiyor?",
+    "options": ["Ctrl + T", "Ctrl + D", "Ctrl + L", "Ctrl + c"],
+    "answer": "Ctrl + L"
+  },
+  {
+    "question": "Otomatik tamamlama kısayolunu kullanmak için hangi tuşlamaya ihtiyacımız var?",
+    "options": ["Alt + Shift", "Ctrl + a", "Alt + Tab", "Tab"],
+    "answer": "Tab"
+  },
+  {
+    "question": "Girilmiş olan son 6 komutu konsola nasıl bastırabilirsiniz?",
+    "options": ["ls -6", "history", "history -6", "history 6"],
+    "answer": "history 6"
+  },
+  {
+    "question": "Konsola gireceğimiz !! komutunun sonucunda hangi işlem gerçekleşir?",
+    "options": [
+      "En son girdiğimiz komutlar listelenir.",
+      "Mevcut konsol kapatılır.",
+      "Mevcut kabuk kapatılır.",
+      "En son girilen komut tekrar çağırılıp çalıştırılır."
+    ],
+    "answer": "En son girilen komut tekrar çağırılıp çalıştırılır."
+  },
+  {
+    "question": "Geçmiş listesinde 25. sırada bulunan komutu çağırmak için hangi komutu girebiliriz?",
+    "options": ["history 25", "!!25", "history -25", "!25"],
+    "answer": "!25"
+  },
+  {
+    "question": "Geçmiş listesinde komut eşleşmesi araştırmak için hangi kısayolu kullanabiliyoruz?",
+    "options": ["Alt + Shift + s", "Ctrl + s", "Ctrl + r", "Ctrl + h"],
+    "answer": "Ctrl + r"
+  },
+  {
+    "question": "Takma isim tanımlamak için aşağıdaki komutlardan hangisi doğrudur?",
+    "options": [
+      "export takma-isim=”komut”",
+      "takma-isim=”komut”",
+      "alias takma-isim=”komut”"
+    ],
+    "answer": "alias takma-isim=”komut”"
+  },
+  {
+    "question": "Linux nedir ?",
+    "options": [
+      "İşletim sistemidir.",
+      "Çekirdektir(kernel).",
+      "Lisanstır.",
+      "Yazılım geliştirme felsefesidir."
+    ],
+    "answer": "Çekirdektir(kernel)."
+  },
+  {
+    "question": "GNU ile GPL aynı şeyi mi ifade ediyor ?",
+    "options": ["Hayır", "Evet"],
+    "answer": "Hayır"
+  },
+  {
+    "question": "Açık kaynaklı yazılım ücretsiz-bedava yazılım anlamına mı geliyor ?",
+    "options": ["Evet", "Hayır"],
+    "answer": "Hayır"
+  },
+  {
+    "question": "Özgür Yazılım ya da İngilizce adıyla “Free Software”, ücretsiz-bedava yazılım anlamına mı geliyor ?",
+    "options": ["Evet", "Hayır"],
+    "answer": "Hayır"
+  },
+  {
+    "question": "Aşağıdakilerden hangisi GPL lisansının temel özgürlüklerinden biri değildir ?",
+    "options": [
+      "Programı sınırsız kullanma özgürlüğü.",
+      "Programın nasıl çalıştığını inceleme ve amaçlara uygun değiştirme özgürlüğü.",
+      "Programın kopyalarını sınırsız dağıtma özgürlüğü.",
+      "Programın lisansını değiştirip dağıtma özgürlüğü."
+    ],
+    "answer": "Programın lisansını değiştirip dağıtma özgürlüğü."
+  },
+  {
+    "question": "Linux çekirdeğini kim geliştirmiştir ?",
+    "options": [
+      "Andrew S. Tanenbaum",
+      "Richard Stallman",
+      "Linus Torvalds",
+      "Ken Thompson ve Dennis Ritchie"
+    ],
+    "answer": "Linus Torvalds"
+  },
+  {
+    "question": "Tüm kabuklarda aynı dahili komutlar mı bulunur ?",
+    "options": [
+      "Evet dahili komutların hepsi tüm kabuklarda ortaktır.",
+      "Hayır, dahili komutlar kabuğa özgü olan komutlardır. Dolayısıyla kabuktan kabuğa göre dahili komutlar değişiklik gösterir."
+    ],
+    "answer": "Hayır, dahili komutlar kabuğa özgü olan komutlardır. Dolayısıyla kabuktan kabuğa göre dahili komutlar değişiklik gösterir."
+  },
+  {
+    "question": "echo $SHELL komutu hangi bilgiyi sunar ?",
+    "options": [
+      "Oturum açmış olan mevcut kullanıcının varsayılan kabuğunu",
+      "En sık kullanılan kabuğu",
+      "Sistem hakkında çeşitli bilgileri"
+    ],
+    "answer": "Oturum açmış olan mevcut kullanıcının varsayılan kabuğunu"
+  },
+  {
+    "question": "Komutlarımızı yorumlayan yapı hangisidir ?",
+    "options": [
+      "Konsol",
+      "Kabuk",
+      "Çekirdek"
+    ],
+    "answer": "Kabuk"
+  },
+  {
+    "question": "Komut satırında çalışan araçları grafiksel arayüzdeyken kullanmamız mümkün müdür ?",
+    "options": [
+      "Evet",
+      "Hayır"
+    ],
+    "answer": "Evet"
+  },
+  {
+    "question": "Yalnızca birer tane konsol(terminal) ve kabuk aracı vardır.",
+    "options": [
+      "Yanlış",
+      "Doğru"
+    ],
+    "answer": "Doğru"
+  },
+  {
+    "question": "Kabukta dahili-yerleşik(builtin) olan komutları, aynı kabuğu kullandığımız sürece tüm sistemlerde ortak olarak kullanabiliriz.",
+    "options": [
+      "Hayır",
+      "Evet"
+    ],
+    "answer": "Evet"
+  },
+  {
+    "question": "Grafiksel arayüzden komut satırı arayüzüne geçiş yapıp TTY konsolları üzerinde çalışmak için hangi tuşlamayı yapmamız gerekir ?",
+    "options": [
+      "Ctrl + Shift+ F1,F2,F3..F8",
+      "Ctrl + Alt + F1,F2,F3..F8",
+      "Alt+ Shift + F1,F2,F3..F8"
+    ],
+    "answer": "Ctrl + Alt + F1,F2,F3..F8"
+  },
+  {
+    "question": "Log dosyaları genellikle hangi dizin altında tutulur?",
+    "options": ["/etc/log", "/opt/log", "/home/log", "/var/log"],
+    "answer": "/var/log"
+  },
+  {
+    "question": "Debian tabanlı dağıtımlarda, araçların ürettiği bilgi ve hata mesajlarını kontrol etmek için hangi log dosyası kontrol edilebilir?",
+    "options": ["/var/log/messages", "/var/log/syslog", "/var/log/boot.log", "/var/log/kern.log"],
+    "answer": "/var/log/syslog"
+  },
+  {
+    "question": "Redhat tabanlı dağıtımlarda, araçların ürettiği bilgi ve hata mesajlarını kontrol etmek için hangi log dosyası kontrol edilebilir?",
+    "options": ["/var/log/messages", "/var/log/syslog", "/var/log/boot.log", "/var/log/kern.log"],
+    "answer": "/var/log/messages"
+  },
+  {
+    "question": "Sistem başlangıcında gerçekleştirilen 'önyükleme' yani 'boot' aşamasının kayıtlarına ulaşmak için hangi kayıt dosyasını inceleyebiliriz?",
+    "options": ["/var/log/messages", "/var/log/syslog", "/var/log/boot.log", "/var/log/kern.log"],
+    "answer": "/var/log/boot.log"
+  },
+  {
+    "question": "Başarılı oturum açma kayıtlarını incelemek için hangi araç kullanılır?",
+    "options": ["login", "wtmp", "btmp", "last", "lastb"],
+    "answer": "last"
+  },
+  {
+    "question": "Başarısız oturum açma kayıtlarını incelemek için hangi komut kullanılır?",
+    "options": ["login", "logins", "last", "lastb"],
+    "answer": "lastb"
+  },
+  {
+    "question": "Çekirdeğin aygıtlarla ilgili ürettiği çıktıları görmek için hangi komutu kullanabiliriz?",
+    "options": ["kern", "last", "dmesg", "boot"],
+    "answer": "dmesg"
+  },
+  {
+    "question": "journald kontrolündeki kayıtlara ulaşmak için hangi aracı kullanabiliriz?",
+    "options": ["dmesg", "last", "journalctl", "lastb", "journald"],
+    "answer": "journalctl"
+  },
+  {
+    "question": "vi editöründe, yalnızca değişiklikleri kaydetmek için hangi komut girilebilir?",
+    "options": [":q", ":q!", ":w", ":wq"],
+    "answer": ":w"
+  },
+  {
+    "question": "vi editöründe, değişiklikleri kaydetmeden doğrudan çıkmak için hangi komut girilebilir?",
+    "options": [":q", ":q!", ":w", ":wq"],
+    "answer": ":q!"
+  },
+  {
+    "question": "vi editöründe, değişiklikleri kaydedip çıkmak için hangi komut girilebilir?",
+    "options": [":q", ":q!", ":w", ":wq"],
+    "answer": ":wq"
+  },
+  {
+    "question": "vi editöründe, herhangi bir değişiklik gerçekleştirilmediyse, doğrudan araçtan çıkmak için hangi komut kullanılabilir?",
+    "options": [":q", ":q!", ":w", ":wq"],
+    "answer": ":q"
+  },
+  {
+    "question": "xargs komutunun işlevi nedir ?",
+    "options": ["birden fazla komutu çalıştırmak", "filtreleme yapmak", "argümanları komutlara iletmek", "çıktıları dosyaya ve standart çıktıya yönlendirmek"],
+    "answer": "argümanları komutlara iletmek"
+  },
+  {
+    "question": "Verilerin hem bir dosyaya hem de standart çıktıya yönlendirilmesi için hangi komutu kullanabiliriz ?",
+    "options": ["cat", "grep", "xargs", "tee", "find"],
+    "answer": "tee"
+  },
+  {
+    "question": "Verileri filtrelemek için hangi komutu kullanabiliriz ?",
+    "options": ["cat", "grep", "xargs", "tee", "find"],
+    "answer": "grep"
+  },
+  {
+    "question": "grep aracı ile filtreleme yaparken, hariç tutulması gerekenleri belirtemek için hangi seçenek kullanılır ?",
+    "options": ["a", "h", "r", "e", "v"],
+    "answer": "v"
+  },
+  {
+    "question": "grep aracı ile filtreleme yaparken, alt dizinleri de kapsamak için hangi seçenek kullanılır ?",
+    "options": ["a", "h", "r", "e", "v"],
+    "answer": "r"
+  },
+  {
+    "question": "Büyük küçük harf duyarlılığı ile filtreleme yapmak için grep aracının hangi seçeneği kullanılır ?",
+    "options": ["a", "i", "I", "L", "c"],
+    "answer": "i"
+  },
+  {
+    "question": "Dosya veya dizinleri bulmak için hangi aracı kullanırız ?",
+    "options": ["cat", "grep", "xargs", "tee", "find"],
+    "answer": "find"
+  },
+  {
+    "question": "find aracı ile yalnızca 'dosya' tipindeki eşleşmeleri bulmak için hangi seçeneği kullanırız ?",
+    "options": ["--t", "-size", "-type", "-f", "-type f"],
+    "answer": "-type f"
+  },
+  {
+    "question": "find aracı ile boyut bilgisi ile araştırma yapmak için hangi seçeneği kullanmamız gerekir ?",
+    "options": ["-count", "-size", "-byte", "-B"],
+    "answer": "-size"
+  },
+  {
+    "question": "Değişim tarihlerine göre araştırma yapmak için find aracının hangi seçeneği kullanılabilir ?",
+    "options": ["-ctime", "-ftime", "-mtime", "-atime"],
+    "answer": "-ctime"
+  },
+  {
+    "question": "find aracı ile, filtreleme seçeneklerinin tersini yani olumsuzlamayı hangi seçenek ile belirtebiliriz?",
+    "options": ["-not", "-no", "-except", "-v"],
+    "answer": "-not"
+  },
+  {
+    "question": "find aracında birden fazla eşleşmeyi bulmak üzere 'ya da' koşulunu nasıl belirtiriz ?",
+    "options": ["-OR", "-or", "-not", "-NOT", "-and", "-AND"],
+    "answer": "-or"
+  },
+  {
+    "question": "locate komutu hangi amaçla kullanılır ?",
+    "options": ["dili değiştirmek", "dosya ve dizinleri araştırmak", "yeni bir dizine geçiş yapmak"],
+    "answer": "dosya ve dizinleri araştırmak"
+  },
+  {
+    "question": "locate aracının araştımra sırasında kullandığı database bilgisini güncellemek için hangi komut girilmeli ?",
+    "options": ["mandb", "dbupdate", "updatedb", "locatedb"],
+    "answer": "updatedb"
+  },
+  {
+    "question": "Satırların istenilen bölümlerini kesmek için hangi aracı kullanabiliriz ?",
+    "options": ["grep", "cat", "cut", "tr", "xargs"],
+    "answer": "cut"
+  },
+  {
+    "question": "Verilerdeki çeşitli karakterleri değiştirmek üzere hangi aracı kullanabiliriz ?",
+    "options": ["grep", "cat", "cut", "tr", "xargs"],
+    "answer": "tr"
+  },
+  {
+    "question": "Verilerin baştan itibaren belirtili bir satıra kadar olan kısmını filtrelemek için hangi aracı kullanabiliriz ?",
+    "options": ["tail", "tr", "cat", "head"],
+    "answer": "head"
+  },
+  {
+    "question": "Verilerin sondan başa belirtili bir satıra kadar olan kısmını filtrelemek için hangi aracı kullanabiliriz ?",
+    "options": ["tail", "tr", "cat", "head"],
+    "answer": "tail"
+  },
+  {
+    "question": "tail aracı ile, anlık olarak güncellenen verileri görmek adına hangi seçeneği kullanarak okuma yapmamız olacaktır ?",
+    "options": ["-f", "-r", "-t", "-h"],
+    "answer": "-f"
+  },
+  {
+    "question": "Veri girişini temsil eden dosya tanımlayıcısı hangisidir ?",
+    "options": ["0", "1", "2", "255"],
+    "answer": "0"
+  },
+  {
+    "question": "Hatasız çıktıları temsil eden dosya tanımlayıcısı hangisidir ?",
+    "options": ["0", "1", "2", "255"],
+    "answer": "1"
+  },
+  {
+    "question": "Hatalı çıktıları temsil eden dosya tanımlayıcısı hangisidir ?",
+    "options": ["0", "1", "2", "255"],
+    "answer": "2"
+  },
+  {
+    "question": "Hatasız çıktıları yönlendirmek için hangi kullanımdur ?",
+    "options": [
+      "komut < yönlendirilen-dosya",
+      "komut > yönlendirilen-dosya",
+      "komut <2 yönlendirilen-dosya",
+      "komut >2 yönlendirilen-dosya"
+    ],
+    "answer": "komut > yönlendirilen-dosya"
+  },
+  {
+    "question": "Hatalı ve hatasız çıktıları /dev/null adresine nasıl yönlendirebiliriz ?",
+    "options": [
+      "komut &> /dev/null",
+      "/dev/null &> komut",
+      "komut 1&> /dev/null",
+      "komut &1> /dev/null"
+    ],
+    "answer": "komut &> /dev/null"
+  },
+  {
+    "question": "Eski verilere zarar vermeden, dosya içeriğine ekleme yapmak için hangi yaklaşımdur ?",
+    "options": ["veri << hedef-dosya", "veri > hedef-dosya", "veri >> hedef-dosya", "veri < hedef-dosya"],
+    "answer": "veri >> hedef-dosya"
+  },
+  {
+    "question": "Bir dosya içeriğini okumak için hangi araç kullanılabilir ?",
+    "options": ["sort", "rev", "cat", "touch"],
+    "answer": "cat"
+  },
+  {
+    "question": "Satırdaki karakterleri tersine çevirmek istersek hangi aracı kullanabiliriz ?",
+    "options": ["cat", "echo", "rev", "tac"],
+    "answer": "rev"
+  },
+  {
+    "question": "Satırların sıralamasını terse çevirmek için hangi aracı kullanabiliriz ?",
+    "options": ["cat", "echo", "rev", "tac"],
+    "answer": "tac"
+  },
+  {
+    "question": "touch komutu hangi işlevdedir ?",
+    "options": ["boş dosyalar oluşturmak", "boş klasörler oluşturmak", "boş dosyalar oluşturma ve tarih bilgilerini düzenlemek", "dosyaların tarih bilgilerini düzenlemek"],
+    "answer": "boş dosyalar oluşturma ve tarih bilgilerini düzenlemek"
+  },
+  {
+    "question": "echo standart girdiden veri alır mı ?",
+    "options": ["Evet", "Hayır"],
+    "answer": "Hayır"
+  },
+  {
+    "question": "Birden fazla dosyayı yan yana bastırmak için hangi aracı kullanırız ?",
+    "options": ["echo", "cat", "tac", "paste"],
+    "answer": "paste"
+  },
+  {
+    "question": "Metinsel verileri sıralayıp-sınıflandırmak için hangi aracı kullanabiliriz ?",
+    "options": ["echo", "paste", "sort", "rev"],
+    "answer": "sort"
+  },
+  {
+    "question": "Verileri rastgele karıştırmak üzere hangi aracı kullanabiliriz ?",
+    "options": ["echo", "cat", "random", "rev", "shuf"],
+    "answer": "shuf"
+  },
+  {
+    "question": "nl aracının işlevi nedir ?",
+    "options": ["Kelime sayısını vermek.", "Satırları numaralandırmak.", "Karakter sayısını vermek.", "Verileri alfabetik olarak sıralamak."],
+    "answer": "Satırları numaralandırmak."
+  },
+  {
+    "question": "wc aracının işlevi nedir ?",
+    "options": ["Kelime sayısını vermek.", "Satırları numaralandırmak.", "Verileri alfabetik olarak sıralamak.", "Dosya boyutunu vermek."],
+    "answer": "Kelime sayısını vermek."
+  },
+  {
+    "question": "dpkg ile paket kurmak için hangi seçenek kullanılır?",
+    "options": [
+      "dpkg -i paket",
+      "dpkg -r paket",
+      "dpkg -a paket",
+      "dpkg -k paket"
+    ],
+    "answer": "dpkg -i paket"
+  },
+  {
+    "question": "Sistemde kurulu olan bir paketi dpkg ile kaldırmak için hangi komut kullanılabilir?",
+    "options": [
+      "dpkg -i paket",
+      "dpkg -r paket",
+      "dpkg -d paket",
+      "dpkg -k paket"
+    ],
+    "answer": "dpkg -r paket"
+  },
+  {
+    "question": "Konfigürasyon dosyalarıyla birlikte bir aracı kaldırmak için hangi komut kullanılır?",
+    "options": [
+      "dpkg -r paket",
+      "dpkg -P paket",
+      "dpkg -d paket",
+      "dpkg -D paket"
+    ],
+    "answer": "dpkg -P paket"
+  },
+  {
+    "question": "apt ile repo listesini güncellemek için hangi komutu girebiliriz?",
+    "options": [
+      "apt update",
+      "apt upgrade",
+      "apt install",
+      "apt info"
+    ],
+    "answer": "apt update"
+  },
+  {
+    "question": "Repolardaki paketleri araştırmak üzere hangi komut kullanılır?",
+    "options": [
+      "apt update",
+      "apt upgrade",
+      "apt find",
+      "apt search",
+      "apt info"
+    ],
+    "answer": "apt search"
+  },
+  {
+    "question": "apt ile paket kurmak için hangi komut kullanılır?",
+    "options": [
+      "apt install paket",
+      "apt add paket",
+      "apt get paket"
+    ],
+    "answer": "apt install paket"
+  },
+  {
+    "question": "apt ile paket kaldırmak için hangi komut kullanılır?",
+    "options": [
+      "apt delete paket",
+      "apt remove paket",
+      "apt del paket",
+      "apt rmv paket"
+    ],
+    "answer": "apt remove paket"
+  },
+  {
+    "question": "rpm ile paket kurmak için hangi seçenek kullanılır?",
+    "options": [
+      "rpm -i paket",
+      "rpm -r paket",
+      "rpm -a paket",
+      "rpm -k paket"
+    ],
+    "answer": "rpm -i paket"
+  },
+  {
+    "question": "Sistemde kurulu olan bir paketi rpm ile kaldırmak için hangi komut kullanılabilir?",
+    "options": [
+      "rpm -i paket",
+      "rpm -r paket",
+      "rpm -d paket",
+      "rpm -e paket",
+      "rpm -k paket"
+    ],
+    "answer": "rpm -e paket"
+  },
+  {
+    "question": "dnf ile paket kurmak için hangi seçenek kullanılır?",
+    "options": [
+      "dnf -install paket",
+      "dnf -setup paket",
+      "dnf -add paket",
+      "dnf -append paket"
+    ],
+    "answer": "dnf -install paket"
+  },
+  {
+    "question": "dnf ile sistemde kurulu olan güncellenebilir tüm paketleri güncellemek için hangi komutu gireriz?",
+    "options": [
+      "dnf check-update",
+      "dnf install",
+      "dnf update"
+    ],
+    "answer": "dnf update"
+  },
+  {
+    "question": "Sistemde kurulu olan bir paketi dnf ile kaldırmak için hangi komut kullanılabilir?",
+    "options": [
+      "rpm erase paket",
+      "rpm delete paket",
+      "rpm remove paket",
+      "rpm shred paket",
+      "rpm out paket"
+    ],
+    "answer": "rpm remove paket"
+  },
+  {
+    "question": "Systemd üzerinden bir servisi başlatmak için hangi komutu kullanabiliriz?",
+    "options": [
+      "system start servis",
+      "systemd start servis",
+      "systmd load servis",
+      "systemctl start servis",
+      "systemctl load servis"
+    ],
+    "answer": "systemctl start servis"
+  },
+  {
+    "question": "Systemd üzerinden bir servisi durdurmak için hangi komutu kullanabiliriz?",
+    "options": [
+      "system stop servis",
+      "systemd finish servis",
+      "systmd stop servis",
+      "systemctl stop servis",
+      "systemctl term servis"
+    ],
+    "answer": "systemctl stop servis"
+  },
+  {
+    "question": "Servisi sistem başlangıcında otomatik olarak başlatılacak şekilde ayarlamak için hangi komutu kullanabiliriz?",
+    "options": [
+      "systemctl start servis",
+      "systemctl enable servis",
+      "systemctl auto servis",
+      "systemctl open servis"
+    ],
+    "answer": "systemctl enable servis"
+  },
+  {
+    "question": "Sistem başlangıcında otomatik olarak başlatılan bir servisin, otomatik başlatılmasını önlemek için hangi komutu kullanabiliriz?",
+    "options": [
+      "systemctl stop servis",
+      "systemctl disable servis",
+      "systemctl auto servis",
+      "systemctl close servis"
+    ],
+    "answer": "systemctl disable servis"
+  },
+  {
+    "question": "Neredeyse tüm araçlarda kısa yardım bilgisini görüntülemek için komutumuzu nasıl girebiliriz?",
+    "options": ["help komut", "komut help", "komut —help"],
+    "answer": "komut —help"
+  },
+  {
+    "question": "help komut komutuyla hangi tür araçlar için bilgi alabiliyoruz?",
+    "options": [
+      "tüm araçlar hakkında bilgi alabiliriz",
+      "kabuğun tüm dahili komutları hakkında bilgi alabiliriz",
+      "istisnalar hariç tüm araçlar hakkında bilgi alabiliriz",
+      "bazı istisnalar hariç kabuğun dahili komutları hakkında bilgi alabiliriz"
+    ],
+    "answer": "bazı istisnalar hariç kabuğun dahili komutları hakkında bilgi alabiliriz"
+  },
+  {
+    "question": "Sistem üzerindeki tüm araçların manual sayfaları vardır.",
+    "options": ["Doğru", "Yanlış"],
+    "answer": "Yanlış"
+  },
+  {
+    "question": "apropos ve man -k komutlarının işlevleri nedir?",
+    "options": [
+      "Tüm manual sayfaları içeriklerinde filtreleme yapmak",
+      "Manual sayfalarının NAME bölümünde yer alan verilere bakarak filtreleme yapmak.",
+      "Manual sayfalarını güncellemek.",
+      "Argüman olarak verilen manual sayfalarını açmak."
+    ],
+    "answer": "Manual sayfalarının NAME bölümünde yer alan verilere bakarak filtreleme yapmak."
+  },
+  {
+    "question": "Manual sayfalarında mevcut satırdan sonraki eşleşmeleri araştırmak için hangi kısayolu kullanmamız gerekiyor?",
+    "options": ["?aranacak-kelime", ".aranacak-kelime", "!aranacak-kelime", "/aranacak-kelime"],
+    "answer": "?aranacak-kelime"
+  },
+  {
+    "question": "Manual sayfalarında mevcut satırdan önceki eşleşmeleri araştırmak için hangi kısayolu kullanmamız gerekiyor?",
+    "options": ["?aranacak-kelime", ".aranacak-kelime", "!aranacak-kelime", "/aranacak-kelime"],
+    "answer": "?aranacak-kelime"
+  },
+  {
+    "question": "Manual sayfasında araştırma sonrası bulunan eşleşmelere hızlıca geçiş yapmak için hangi kısayol tuşlarını kullanabiliyoruz?",
+    "options": ["m ve shift + n", "m ve shift + m", "n ve shift + n", "j ve shift + j"],
+    "answer": "n ve shift + n"
+  },
+  {
+    "question": "man aracından çıkmak için ne yapmak gerekir?",
+    "options": [
+      "e tuşuna basmak",
+      "ctrl + e tuşuna basmak",
+      "ctrl + q tuşuna basmak",
+      "q tuşuna basmak"
+    ],
+    "answer": "q tuşuna basmak"
+  },
+  {
+    "question": "Tüm araçların yardım sayfaları ve dokümanları mevcut mudur?",
+    "options": ["Hayır", "Evet"],
+    "answer": "Hayır"
+  },
+  {
+    "question": "Manual sayfalarını güncellemek için hangi komutu girmemiz gerekiyor?",
+    "options": ["updatedb", "update man", "manupdate", "mandb"],
+    "answer": "mandb"
+  }
+]

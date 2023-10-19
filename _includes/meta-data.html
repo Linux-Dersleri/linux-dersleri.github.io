@@ -1,0 +1,24 @@
+	<h1 align="center">{{ page.title }}</h1> 
+<div align="center"><i class="fa fa-tags" aria-hidden="true"></i>
+          {% for tag in page.tags %}<a href="{{ site.url }}/etiketler.html#{{ tag }}" class="btn btn-outline-primary btn-sm mb-2" title="{{ tag }} Etiketli Tüm İçerikler">{{ tag }}</a> {% endfor %}  
+		 <p></p> 
+		  <div align="center" class="col-sm-3">
+		<img class="responsive" src="{{ site.url }}/egitim/{{ page.categories }}/{{ page.cover }}" alt="">
+		  </div>	</div>	  
+		  <h6 class="mavi" align="right" id="meta-da">
+			<i class="fa fa-graduation-cap" aria-hidden="true"></i> {{ page.coursetitle }}		  
+		  </h6> 
+		  <hr>	
+		  <h6 align="right" id="meta-da">
+			<i class="fa fa-book" aria-hidden="true"></i> {{ page.tutorial }}. Ders
+			<i class="fa fa-clock-o" aria-hidden="true"></i>{% include read_time.html %}
+
+		   {% assign author = site.authors | where: 'name', page.author | first %}
+{% if author %}
+  <i class="fa fa-user" aria-hidden="true"></i><a href="{{ author.url }}"> {{ author.name }}</a>
+{% endif %}
+
+		  
+		  </h6>  
+		  
+		  

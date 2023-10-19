@@ -1,0 +1,66 @@
+<p></p>
+{% assign current_page_categories = page.categories %}
+{% assign all_posts = site.egitim | sort: 'tutorial' %}
+
+{% for current_category in current_page_categories %}
+  {% assign filtered_posts = all_posts | where: 'categories', current_category %}
+  {% assign sorted_posts = filtered_posts | sort: 'tutorial' %}
+  
+  {% for post in sorted_posts %}
+    {% if post.url == page.url %}
+      {% assign current_index = forloop.index0 %}
+      {% assign previous_index = current_index | minus: 1 %}
+      {% assign next_index = current_index | plus: 1 %}
+      
+      <div data-pagefind-ignore="all" class="row mb-2">
+        {% if previous_index >= 0 %}
+            {% assign previous_post = sorted_posts[previous_index] %}
+          <div class="col-md-6">
+      <div class="no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <div class="row">
+            <div align="left" class="align-self-center col-2">
+              <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512">
+                <!--! Font Awesome icon code -->
+                <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z" fill="currentColor"/>
+              </svg>
+            </div>
+            <div align="right" class="col-10">
+              <div class="mb-1 text-muted"><strong>Önceki</strong></div>
+              <p class="card-text">{{ previous_post.title }}</p>
+            </div>
+          </div>
+          <a href="{{ site.url }}{{ previous_post.url }}" title="{{ previous_post.title }}" class="stretched-link"></a>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+  
+    {% if next_index < sorted_posts.size %}
+        {% assign next_post = sorted_posts[next_index] %}
+      <div class="col-md-6">
+      <div class="no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <div class="row">
+            <div align="left" class="col-10">
+              <div class="mb-1 text-muted"><strong>Sonraki</strong></div>
+              <p class="card-text">{{ next_post.title }}</p>
+            </div>
+            <div align="right" class="align-self-center col-2">
+              <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512">
+                <!--! Font Awesome icon code -->
+                <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" fill="currentColor"/>
+              </svg>
+            </div>
+          </div>
+          <a href="{{ site.url }}{{ next_post.url }}" title="{{ next_post.title }}" class="stretched-link"></a>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+  
+  {% break %}
+{% endif %}
+{% endfor %}
+{% endfor %}

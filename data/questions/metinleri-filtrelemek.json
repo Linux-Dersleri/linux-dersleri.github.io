@@ -1,0 +1,97 @@
+[
+    {
+      "question": "xargs komutunun işlevi nedir ?",
+      "options": ["birden fazla komutu çalıştırmak", "filtreleme yapmak", "argümanları komutlara iletmek", "çıktıları dosyaya ve standart çıktıya yönlendirmek"],
+      "answer": "argümanları komutlara iletmek"
+    },
+    {
+      "question": "Verilerin hem bir dosyaya hem de standart çıktıya yönlendirilmesi için hangi komutu kullanabiliriz ?",
+      "options": ["cat", "grep", "xargs", "tee", "find"],
+      "answer": "tee"
+    },
+    {
+      "question": "Verileri filtrelemek için hangi komutu kullanabiliriz ?",
+      "options": ["cat", "grep", "xargs", "tee", "find"],
+      "answer": "grep"
+    },
+    {
+      "question": "grep aracı ile filtreleme yaparken, hariç tutulması gerekenleri belirtemek için hangi seçenek kullanılır ?",
+      "options": ["a", "h", "r", "e", "v"],
+      "answer": "v"
+    },
+    {
+      "question": "grep aracı ile filtreleme yaparken, alt dizinleri de kapsamak için hangi seçenek kullanılır ?",
+      "options": ["a", "h", "r", "e", "v"],
+      "answer": "r"
+    },
+    {
+      "question": "Büyük küçük harf duyarlılığı ile filtreleme yapmak için grep aracının hangi seçeneği kullanılır ?",
+      "options": ["a", "i", "I", "L", "c"],
+      "answer": "i"
+    },
+    {
+      "question": "Dosya veya dizinleri bulmak için hangi aracı kullanırız ?",
+      "options": ["cat", "grep", "xargs", "tee", "find"],
+      "answer": "find"
+    },
+    {
+      "question": "find aracı ile yalnızca 'dosya' tipindeki eşleşmeleri bulmak için hangi seçeneği kullanırız ?",
+      "options": ["--t", "-size", "-type", "-f", "-type f"],
+      "answer": "-type f"
+    },
+    {
+      "question": "find aracı ile boyut bilgisi ile araştırma yapmak için hangi seçeneği kullanmamız gerekir ?",
+      "options": ["-count", "-size", "-byte", "-B"],
+      "answer": "-size"
+    },
+    {
+      "question": "Değişim tarihlerine göre araştırma yapmak için find aracının hangi seçeneği kullanılabilir ?",
+      "options": ["-ctime", "-ftime", "-mtime", "-atime"],
+      "answer": "-ctime"
+    },
+    {
+      "question": "find aracı ile, filtreleme seçeneklerinin tersini yani olumsuzlamayı hangi seçenek ile belirtebiliriz?",
+      "options": ["-not", "-no", "-except", "-v"],
+      "answer": "-not"
+    },
+    {
+      "question": "find aracında birden fazla eşleşmeyi bulmak üzere 'ya da' koşulunu nasıl belirtiriz ?",
+      "options": ["-OR", "-or", "-not", "-NOT", "-and", "-AND"],
+      "answer": "-or"
+    },
+    {
+      "question": "locate komutu hangi amaçla kullanılır ?",
+      "options": ["dili değiştirmek", "dosya ve dizinleri araştırmak", "yeni bir dizine geçiş yapmak"],
+      "answer": "dosya ve dizinleri araştırmak"
+    },
+    {
+      "question": "locate aracının araştımra sırasında kullandığı database bilgisini güncellemek için hangi komut girilmeli ?",
+      "options": ["mandb", "dbupdate", "updatedb", "locatedb"],
+      "answer": "updatedb"
+    },
+    {
+      "question": "Satırların istenilen bölümlerini kesmek için hangi aracı kullanabiliriz ?",
+      "options": ["grep", "cat", "cut", "tr", "xargs"],
+      "answer": "cut"
+    },
+    {
+      "question": "Verilerdeki çeşitli karakterleri değiştirmek üzere hangi aracı kullanabiliriz ?",
+      "options": ["grep", "cat", "cut", "tr", "xargs"],
+      "answer": "tr"
+    },
+    {
+      "question": "Verilerin baştan itibaren belirtili bir satıra kadar olan kısmını filtrelemek için hangi aracı kullanabiliriz ?",
+      "options": ["tail", "tr", "cat", "head"],
+      "answer": "head"
+    },
+    {
+      "question": "Verilerin sondan başa belirtili bir satıra kadar olan kısmını filtrelemek için hangi aracı kullanabiliriz ?",
+      "options": ["tail", "tr", "cat", "head"],
+      "answer": "tail"
+    },
+    {
+      "question": "tail aracı ile, anlık olarak güncellenen verileri görmek adına hangi seçeneği kullanarak okuma yapmamız olacaktır ?",
+      "options": ["-f", "-r", "-t", "-h"],
+      "answer": "-f"
+    }
+  ]

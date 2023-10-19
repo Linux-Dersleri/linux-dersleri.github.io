@@ -1,0 +1,92 @@
+[
+  {
+      "question": "Veri girişini temsil eden dosya tanımlayıcısı hangisidir ?",
+      "options": ["0", "1", "2", "255"],
+      "answer": "0"
+    },
+    {
+      "question": "Hatasız çıktıları temsil eden dosya tanımlayıcısı hangisidir ?",
+      "options": ["0", "1", "2", "255"],
+      "answer": "1"
+    },
+    {
+      "question": "Hatalı çıktıları temsil eden dosya tanımlayıcısı hangisidir ?",
+      "options": ["0", "1", "2", "255"],
+      "answer": "2"
+    },
+    {
+      "question": "Hatasız çıktıları yönlendirmek için hangi kullanımdur ?",
+      "options": [
+        "komut < yönlendirilen-dosya",
+        "komut > yönlendirilen-dosya",
+        "komut <2 yönlendirilen-dosya",
+        "komut >2 yönlendirilen-dosya"
+      ],
+      "answer": "komut > yönlendirilen-dosya"
+    },
+    {
+      "question": "Hatalı ve hatasız çıktıları /dev/null adresine nasıl yönlendirebiliriz ?",
+      "options": [
+        "komut &> /dev/null",
+        "/dev/null &> komut",
+        "komut 1&> /dev/null",
+        "komut &1> /dev/null"
+      ],
+      "answer": "komut &> /dev/null"
+    },
+    {
+      "question": "Eski verilere zarar vermeden, dosya içeriğine ekleme yapmak için hangi yaklaşımdur ?",
+      "options": ["veri << hedef-dosya", "veri > hedef-dosya", "veri >> hedef-dosya", "veri < hedef-dosya"],
+      "answer": "veri >> hedef-dosya"
+    },
+    {
+      "question": "Bir dosya içeriğini okumak için hangi araç kullanılabilir ?",
+      "options": ["sort", "rev", "cat", "touch"],
+      "answer": "cat"
+    },
+    {
+      "question": "Satırdaki karakterleri tersine çevirmek istersek hangi aracı kullanabiliriz ?",
+      "options": ["cat", "echo", "rev", "tac"],
+      "answer": "rev"
+    },
+    {
+      "question": "Satırların sıralamasını terse çevirmek için hangi aracı kullanabiliriz ?",
+      "options": ["cat", "echo", "rev", "tac"],
+      "answer": "tac"
+    },
+    {
+      "question": "touch komutu hangi işlevdedir ?",
+      "options": ["boş dosyalar oluşturmak", "boş klasörler oluşturmak", "boş dosyalar oluşturma ve tarih bilgilerini düzenlemek", "dosyaların tarih bilgilerini düzenlemek"],
+      "answer": "boş dosyalar oluşturma ve tarih bilgilerini düzenlemek"
+    },
+    {
+      "question": "echo standart girdiden veri alır mı ?",
+      "options": ["Evet", "Hayır"],
+      "answer": "Hayır"
+    },
+    {
+      "question": "Birden fazla dosyayı yan yana bastırmak için hangi aracı kullanırız ?",
+      "options": ["echo", "cat", "tac", "paste"],
+      "answer": "paste"
+    },
+    {
+      "question": "Metinsel verileri sıralayıp-sınıflandırmak için hangi aracı kullanabiliriz ?",
+      "options": ["echo", "paste", "sort", "rev"],
+      "answer": "sort"
+    },
+    {
+      "question": "Verileri rastgele karıştırmak üzere hangi aracı kullanabiliriz ?",
+      "options": ["echo", "cat", "random", "rev", "shuf"],
+      "answer": "shuf"
+    },
+    {
+      "question": "nl aracının işlevi nedir ?",
+      "options": ["Kelime sayısını vermek.", "Satırları numaralandırmak.", "Karakter sayısını vermek.", "Verileri alfabetik olarak sıralamak."],
+      "answer": "Satırları numaralandırmak."
+    },
+    {
+      "question": "wc aracının işlevi nedir ?",
+      "options": ["Kelime sayısını vermek.", "Satırları numaralandırmak.", "Verileri alfabetik olarak sıralamak.", "Dosya boyutunu vermek."],
+      "answer": "Kelime sayısını vermek."
+    }
+]

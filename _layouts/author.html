@@ -1,0 +1,108 @@
+---
+layout: simple
+search_omit: true
+---
+
+{% assign author = page %}
+<p></p>
+		
+	 
+	  
+				<a href="{{ author.link }}"><h4 id="yazar" >{{ author.name }}</h4></a>
+                <p class="card_u-text">{{ author.bio }}</p>
+				{% if author.email %}<a target="_blank" href="{{ author.email }}"><i class="fa fa-envelope fa-lg"></i></a>{% endif %}
+				{% if author.linkedin %}<a target="_blank" href="{{ author.linkedin }}"><i class="fa fa-linkedin fa-lg"></i></a>{% endif %}
+                {% if author.github %}<a target="_blank" href="{{ author.github }}"><i class="fa fa-github fa-lg"></i></a>{% endif %}
+				{% if author.twitter %}<a target="_blank" href="{{ author.twitter }}"><i class="fa fa-twitter fa-lg"></i></a>{% endif %}
+           <hr>
+
+
+           <h2>Eğitim Serileri</h2>
+
+<div id="archives">
+  {% assign filtered_posts = site.pages | where: 'author', page.name | where_exp: 'item', 'item.type contains "egitim-serisi"' %}
+  
+  {% if filtered_posts.size == 0 %}
+    <p class="text-muted">Henüz paylaşılmamış.</p>
+  {% else %}
+    {% for post in filtered_posts %}
+        <ul class="list-unstyled">
+      <li>
+        <div>
+  
+          <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+        </div>
+      </li>
+        </ul>
+        <span class="lead">{{pre_year}}</span>
+        <ul class="list-unstyled">
+
+    {% endfor %}
+  {% endif %}
+</div>
+
+
+
+<h2>Blog Paylaşımları</h2>
+
+
+<div id="archives">
+  {% assign filtered_posts = site.posts | where: 'author', page.name %}
+  {% if filtered_posts.size == 0 %}
+  <p class="text-muted">Henüz paylaşılmamış.</p>
+  {% else %}
+    {% for post in filtered_posts %}
+      {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
+      {% capture pre_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
+      {% if forloop.first %}
+        {% assign last_day = "" %}
+        {% assign last_month = "" %}
+        <span class="lead">{{this_year}}</span>
+        <ul class="list-unstyled">
+      {% endif %}
+      <li>
+        <div>
+          {% capture this_day %}{{ post.date | date: "%d" }}{% endcapture %}
+        {% capture this_month_abbr %}{{ post.date | date: "%b" }}{% endcapture %}
+        {% assign this_month = site.month_names[this_month_abbr] %}
+          <span class="date day">{{ this_day }}</span>
+          <span class="date month small text-muted">{{ this_month }}</span>
+          <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+        </div>
+      </li>
+      {% if forloop.last %}
+        </ul>
+      {% elsif this_year != pre_year %}
+        </ul>
+        <span class="lead">{{pre_year}}</span>
+        <ul class="list-unstyled">
+          {% assign last_day = "" %}
+          {% assign last_month = "" %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+  </div>
+  
+
+    <h2>Komut Açıklamaları</h2>
+
+    
+    <div id="archives">
+      {% assign filtered_posts = site.komut | where: 'author', page.name %}
+      
+      {% if filtered_posts.size == 0 %}
+      <p class="text-muted">Henüz paylaşılmamış.</p>
+      {% else %}
+      {% for post in filtered_posts %}
+          <ul class="list-unstyled">
+        <li>
+          <div>
+    
+            <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+          </div>
+        </li>
+          </ul>
+  
+      {% endfor %}
+    {% endif %}
+  </div>

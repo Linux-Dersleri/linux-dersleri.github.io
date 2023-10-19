@@ -1,0 +1,123 @@
+[
+    {
+      "question": "dpkg ile paket kurmak için hangi seçenek kullanılır?",
+      "options": [
+        "dpkg -i paket",
+        "dpkg -r paket",
+        "dpkg -a paket",
+        "dpkg -k paket"
+      ],
+      "answer": "dpkg -i paket"
+    },
+    {
+      "question": "Sistemde kurulu olan bir paketi dpkg ile kaldırmak için hangi komut kullanılabilir?",
+      "options": [
+        "dpkg -i paket",
+        "dpkg -r paket",
+        "dpkg -d paket",
+        "dpkg -k paket"
+      ],
+      "answer": "dpkg -r paket"
+    },
+    {
+      "question": "Konfigürasyon dosyalarıyla birlikte bir aracı kaldırmak için hangi komut kullanılır?",
+      "options": [
+        "dpkg -r paket",
+        "dpkg -P paket",
+        "dpkg -d paket",
+        "dpkg -D paket"
+      ],
+      "answer": "dpkg -P paket"
+    },
+    {
+      "question": "apt ile repo listesini güncellemek için hangi komutu girebiliriz?",
+      "options": [
+        "apt update",
+        "apt upgrade",
+        "apt install",
+        "apt info"
+      ],
+      "answer": "apt update"
+    },
+    {
+      "question": "Repolardaki paketleri araştırmak üzere hangi komut kullanılır?",
+      "options": [
+        "apt update",
+        "apt upgrade",
+        "apt find",
+        "apt search",
+        "apt info"
+      ],
+      "answer": "apt search"
+    },
+    {
+      "question": "apt ile paket kurmak için hangi komut kullanılır?",
+      "options": [
+        "apt install paket",
+        "apt add paket",
+        "apt get paket"
+      ],
+      "answer": "apt install paket"
+    },
+    {
+      "question": "apt ile paket kaldırmak için hangi komut kullanılır?",
+      "options": [
+        "apt delete paket",
+        "apt remove paket",
+        "apt del paket",
+        "apt rmv paket"
+      ],
+      "answer": "apt remove paket"
+    },
+    {
+      "question": "rpm ile paket kurmak için hangi seçenek kullanılır?",
+      "options": [
+        "rpm -i paket",
+        "rpm -r paket",
+        "rpm -a paket",
+        "rpm -k paket"
+      ],
+      "answer": "rpm -i paket"
+    },
+    {
+      "question": "Sistemde kurulu olan bir paketi rpm ile kaldırmak için hangi komut kullanılabilir?",
+      "options": [
+        "rpm -i paket",
+        "rpm -r paket",
+        "rpm -d paket",
+        "rpm -e paket",
+        "rpm -k paket"
+      ],
+      "answer": "rpm -e paket"
+    },
+    {
+      "question": "dnf ile paket kurmak için hangi seçenek kullanılır?",
+      "options": [
+        "dnf -install paket",
+        "dnf -setup paket",
+        "dnf -add paket",
+        "dnf -append paket"
+      ],
+      "answer": "dnf -install paket"
+    },
+    {
+      "question": "dnf ile sistemde kurulu olan güncellenebilir tüm paketleri güncellemek için hangi komutu gireriz?",
+      "options": [
+        "dnf check-update",
+        "dnf install",
+        "dnf update"
+      ],
+      "answer": "dnf update"
+    },
+    {
+      "question": "Sistemde kurulu olan bir paketi dnf ile kaldırmak için hangi komut kullanılabilir?",
+      "options": [
+        "rpm erase paket",
+        "rpm delete paket",
+        "rpm remove paket",
+        "rpm shred paket",
+        "rpm out paket"
+      ],
+      "answer": "rpm remove paket"
+    }
+  ]

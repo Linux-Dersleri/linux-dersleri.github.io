@@ -1,0 +1,149 @@
+[
+    {
+      "question": "Yeni bir kullanıcı hesabı oluşturmak için hangi komutu kullanabiliriz?",
+      "options": ["chown kullanıcı", "adduser kullanıcı", "chmod kullanıcı", "chattr kullanıcı"],
+      "answer": "adduser kullanıcı"
+    },
+    {
+      "question": "Mevcut bir kullanıcı hesabına parola tanımlamak için hangi komutu kullanabiliriz?",
+      "options": ["pasword kullanıcı", "chpass kullanıcı", "chown kullanıcı", "passwd kullanıcı"],
+      "answer": "passwd kullanıcı"
+    },
+    {
+      "question": "useradd aracı ile ev dizinine sahip bir kullanıcı hesabı nasıl oluşturulur?",
+      "options": ["usermod kullanıcı", "usermod -h kullanıcı", "usermod -u kullanıcı", "usermod -m kullanıcı"],
+      "answer": "usermod -m kullanıcı"
+    },
+    {
+      "question": "Kullanıcı hesapları ile ilgili bilgiler(kullanıcı adı, ev dizini, varsayılan kabuğu vs..) hangi dosyada tutulur?",
+      "options": ["/etc/group", "/etc/.bashrc", "/etc/passwd", "/etc/bash.bashrc"],
+      "answer": "/etc/passwd"
+    },
+    {
+      "question": "Kullanıcıların parola bilgileri hangi dosyada tutulur?",
+      "options": ["/etc/group", "/etc/shadow", "/etc/passwd", "/etc/bash.bashrc"],
+      "answer": "/etc/shadow"
+    },
+    {
+      "question": "Kullanıcının dahil olduğu grupların bilgisini almak için hangi komutu kullanabiliriz?",
+      "options": ["guid", "uid", "groups", "users"],
+      "answer": "groups"
+    },
+    {
+      "question": "Kullanıcıların grup bilgileri hangi dosyada tutulur?",
+      "options": ["/etc/group", "/etc/shadow", "/etc/passwd", "/etc/bash.bashrc"],
+      "answer": "/etc/group"
+    },
+    {
+      "question": "Yeni bir grup oluşturmak için hangi komut kullanılır?",
+      "options": ["gpasswd grup-adı", "gcreate grup-adı", "groupadd grup-adı"],
+      "answer": "groupadd grup-adı"
+    },
+    {
+      "question": "Var olan bir gruba kullanıcı eklemek için hangi komut kullanılabilir?",
+      "options": ["gpasswd -a kullanıcı grup", "gcreate -a kullanıcı grup", "groupadd -a kullanıcı grup"],
+      "answer": "gpasswd -a kullanıcı grup"
+    },
+    {
+      "question": "Gruptaki bir kullanıcıyı gruptan çıkarmak için hangi komut kullanılır?",
+      "options": ["gpasswd -a kullanıcı grup", "groupadd -a kullanıcı grup", "gpasswd -d kullanıcı grup", "groupadd -d kullanıcı grup"],
+      "answer": "gpasswd -d kullanıcı grup"
+    },
+    {
+      "question": "Var olan bir grubu silmek için hangi komut girilebilir?",
+      "options": ["gpasswd grup-adı", "gdel grup-adı", "groupdel grup-adı"],
+      "answer": "groupdel grup-adı"
+    },
+    {
+      "question": "Bir dosyanın sahibine çalıştırma yetkisi eklemek için hangi komut girilebilir?",
+      "options": ["chmod +x dosya", "chmod u+x dosya", "chmod =x dosya", "chmod u=x dosya"],
+      "answer": "chmod u+x dosya"
+    },
+    {
+      "question": "Bir dosyanın grubuna doğrudan okuma ve çalıştırma yetkisi vermek için hangi komut girilebilir?",
+      "options": ["chmod +rx dosya", "chmod g+rx dosya", "chmod =rx dosya", "chmod g=rx dosya"],
+      "answer": "chmod g+rx dosya"
+    },
+    {
+      "question": "Dosya yetkilerinden 'diğerleri' için tüm yetkili silmek üzere hangi komut kullanılabilir?",
+      "options": ["chmod -rwx dosya", "chmod =rwx dosya", "chmod o-rwx dosya", "chmod o=rwx dosya"],
+      "answer": "chmod o-rwx dosya"
+    },
+    {
+      "question": "Yalnızca dosyanın sahibine okuma ve çalıştırma yetkisi tanımlamak için hangisi doğru komut olurdu?",
+      "options": [
+        "chmod 500 dosya",
+        "chmod 600 dosya",
+        "chmod 700 dosya",
+        "chmod 300 dosya",
+        "chmod 400 dosya",
+        "chmod 100 dosya"
+      ],
+      "answer": "chmod 500 dosya"
+    },
+    {
+      "question": "Dosya sahibine tüm yetkileri vermek, grubu için okuma ve çalıştırma yetkisi vermek, diğer kullanıcılar için de yalnızca okuma yetkisi vermek için hangisi uygundur?",
+      "options": ["chmod 777 dosya", "chmod 742 dosya", "chmod 754 dosya", "chmod 766 dosya", "chmod 754 dosya"],
+      "answer": "chmod 754 dosya"
+    },
+    {
+      "question": "Yetkilendirme işleminde 732 sayısının harf olarak yetki karşılığı hangisidir?",
+      "options": ["rwxrw---x", "rwx-wx-w-", "rwx--x--x", "rwx-w--wx"],
+      "answer": "rwx-wx-w-"
+    },
+    {
+      "question": "r-xrw---x yetki tanımlama karakterlerinin yetkilendirmedeki sayısal karşılığı hangisidir?",
+      "options": ["432", "543", "561", "351", "456"],
+      "answer": "561"
+    },
+    {
+      "question": "Mevcut yetkilere ek olarak yalnızca gruptaki kullanıcılara çalıştırma yetkisi tanımlamak için hangi komut doğru olacaktır?",
+      "options": ["chmod 010 dosya", "chmod +010 dosya", "chmod g+010 dosya", "chmod +1 dosya", "chmod g+1 dosya", "chmod =010 dosya"],
+      "answer": "chmod +010 dosya"
+    },
+    {
+      "question": "sudo yetkilerini konfigüre etmemizi sağlayan dosyalar nerede bulunur?",
+      "options": ["/etc/sudo.conf", "/var/log/sudo.log", "/etc/sudoers", "/usr/bin/sudo"],
+      "answer": "/etc/sudoers"
+    },
+    {
+      "question": "Sudoers dosyasını düzenlerken hangi komut kullanılır ve neden?",
+      "options": ["nano, çünkü daha kolay bir kullanıcı arayüzü sunar.", "visudo, çünkü dosyanın uygun bir şekilde kilitlemesine yardımcı olur ve hata denetimlerini yapar.", "cat, çünkü dosyanın içeriğini hızlıca görüntülemek için kullanılır.", "chmod, çünkü dosyanın izinlerini değiştirmek için kullanılır."],
+      "answer": "visudo, çünkü dosyanın uygun bir şekilde kilitlemesine yardımcı olur ve hata denetimlerini yapar."
+    },
+    {
+      "question": "Buradaki sudo yetki tanımı ne anlama gelir: Ali ALL=(ALL) /usr/bin/vim?",
+      "options": ["Ali kullanıcısına sadece vim komutunu çalıştırma izni verir.", "Ali kullanıcısına tüm komutları çalıştırma izni verir.", "Ali kullanıcısına yalnızca kendi kullanıcı kimlikleri üzerinde vim komutunu çalıştırma izni verir.", "Ali kullanıcısına sadece ls komutunu çalıştırma izni verir."],
+      "answer": "Ali kullanıcısına sadece vim komutunu çalıştırma izni verir."
+    },
+    {
+      "question": "Bir kullanıcıya yalnızca belirli bir komutu belirli bir kullanıcı kimliğiyle çalıştırma izni vermek için hangi sudo yetki tanımı kullanılabilir?",
+      "options": ["Burak ALL=(Ayse) /usr/bin/whoami", "Kullanici ALL=(ALL) /bin/*", "Admin ALL=(ALL=ALL) /sbin/poweroff", "Jale ALL=(root) /usr/bin/*"],
+      "answer": "Burak ALL=(Ayse) /usr/bin/whoami"
+    },
+    {
+      "question": "Burdaki sudo tanımı ne anlama gelir: Kullanicilar ALL=(ALL) NOPASSWD: /usr/bin/apt-get?",
+      "options": ["Kullanicilar kullanıcılarına sadece apt-get komutunu çalıştırma izni verir ve parola girişi gerektirir.", "Kullanicilar kullanıcılarına apt-get komutunu parola girmeden çalıştırma izni verir.", "Her kullanıcıya apt-get komutunu parola girmeden çalıştırma izni verir.", "Sadece belirli bir IP adresinden gelen kullanıcılara apt-get komutunu çalıştırma izni verir."],
+      "answer": "Kullanicilar kullanıcılarına apt-get komutunu parola girmeden çalıştırma izni verir."
+    },
+    {
+      "question": "sudo konfigürasyonlarındaki 'NOPASSWD' seçeneği neden kullanışlıdır?",
+      "options": ["Kullanıcıların parolalarını unutmamaları için.", "Kullanıcıların daha fazla yetki verilmesini sağlar.", "Kullanıcıların parola girmeleri gerektiği için güvenlik seviyesini artırır.", "Kullanıcıların belirli komutları parola girmeden çalıştırmalarına izin verir."],
+      "answer": "Kullanıcıların belirli komutları parola girmeden çalıştırmalarına izin verir."
+    },
+    {
+      "question": "Mevcut bir kullanıcı hesabında oturum açmak için hangi komutu kullanabiliriz?",
+      "options": ["sudo ali", "su ali", "passwd ali", "login ali"],
+      "answer": "su ali"
+    },
+    {
+      "question": "Kullanıcı hesabında oturum açarken, ortam değişkenlerinin aktarılmadan ilgili kullanıcının ev dizinde çalışmaya başlamak için hangi komutu kullanmamız gerek?",
+      "options": ["su kullanıcı", "sudo kullanıcı", "sudo - kullanıcı", "su -c kullanıcı", "pwd kullanıcı", "su - kullanıcı"],
+      "answer": "su - kullanıcı"
+    },
+    {
+      "question": "Mevcut bir kullanıcı hesabını silmek için hangi komut kullanılabilir?",
+      "options": ["userdel -r kullanıcı", "useremove kullanıcı", "removeuser kullanıcı"],
+      "answer": "userdel -r kullanıcı"
+    }
+  ]

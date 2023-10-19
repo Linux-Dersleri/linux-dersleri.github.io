@@ -1,0 +1,16 @@
+<p></p>
+ {% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+{% assign tags_list = site_tags | split:',' | sort %}
+
+<div align="center" class="no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+	  <div class="row no-gutters">
+        <ul class="card-columns">
+  {% for item in (0..site.tags.size) %}{% unless forloop.last %}
+    {% capture this_word %}{{ tags_list[item] | strip_newlines }}{% endcapture %}
+    <li><a href="#{{ this_word }}">{{ this_word }}: <span class="badge badge-primary badge-pill">{{ site.tags[this_word].size }}</span></a></li>
+  {% endunless %}{% endfor %}
+</ul>
+    </div>
+        
+      </div>
+	  

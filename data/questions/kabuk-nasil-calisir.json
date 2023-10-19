@@ -1,0 +1,114 @@
+[
+ {
+      "question": "Aşağıdaki şıklardan hangisinde ls -la /home komutu hakkında yanlış bir ifade vardır?",
+      "options": [
+        "Çalıştırılacak araç ls aracıdır.",
+        "-la olarak yazılmış ifade ls aracının seçeneği olarak girilmiştir.",
+        "/home seçeneği bu ls aracının listelemesi gereken dizin içeriğini belirten parametredir.",
+        "Bash kabuğuna göre bu komutta yalnızca ls ifadesi argümandır."
+      ],
+      "answer": "Bash kabuğuna göre bu komutta yalnızca ls ifadesi argümandır."
+    },
+    {
+      "question": "Kabuk tarafından bir araç çalıştırılacağı zaman, aşağıdaki değişkenlerden hangisinin verdiği dizin adresleri kontrol edilir?",
+      "options": [
+        "HOME",
+        "USER",
+        "PWD",
+        "PATH"
+      ],
+      "answer": "PATH"
+    },
+    {
+      "question": "Bash kabuğu, yalnızca aracın ismi belirtilmiş bir komut gördüğünde bu aracı çalıştırmak için aracı ilk olarak nerede arar?",
+      "options": [
+        "Mevcut dizindeki dosyalara",
+        "Kabuğun yerleşik - dahili araçlarında",
+        "PATH dizinlerinde"
+      ],
+      "answer": "Kabuğun yerleşik - dahili araçlarında"
+    },
+    {
+      "question": "Mevcut dizinimde bulunan ve çalıştırılma yetkisi mevcut olan betik.sh isimli bir betik dosyasını çalıştırmak için aşağıdaki komutlardan hangisini girmem gerekir?",
+      "options": [
+        "betik.sh",
+        "/betik.sh",
+        ".betik.sh",
+        "./betik.sh"
+      ],
+      "answer": "./betik.sh"
+    },
+    {
+      "question": "Yalnızca mevcut kullanıcı hesabımdaki kabuklarda geçerli olacak bir değişiklik için hangi konfigürasyon dosyası kullanmalıyım?",
+      "options": [
+        "/etc/bash.bashrc",
+        "/etc/profile",
+        "~/.bashrc"
+      ],
+      "answer": "~/.bashrc"
+    },
+    {
+      "question": "Tüm kullanıcıların kabuğunda etkili olacak değişiklikleri hangi konfigürasyon dosyasında yaparsınız?",
+      "options": [
+        "~/.bashrc",
+        "/etc/bash.bashrc",
+        "~/.profile"
+      ],
+      "answer": "/etc/bash.bashrc"
+    },
+    {
+      "question": "/etc/bash.bashrc dosyası ~/.bashrc dosyasından daha önce okunur.",
+      "options": [
+        "Yanlış",
+        "Doğru"
+      ],
+      "answer": "Doğru"
+    },
+    {
+      "question": "Tüm alt kabuklara miras bırakılacak yani global olacak yeni bir değişken tanımlamak için aşağıdaki komutlardan hangisi  komuttur?",
+      "options": [
+        "degisken=degeri",
+        "degisken=”değeri”",
+        "export degisken",
+        "export degisken=degeri"
+      ],
+      "answer": "export degisken=degeri"
+    },
+    {
+      "question": "Path yolu '/usr/sbin:/usr/bin:/sbin:/bin:' olan bir sistemde, komutla çalıştırılacak araç ilk olarak hangi PATH dizini üzerinde aranır?",
+      "options": [
+        "/usr/bin",
+        "/sbin",
+        "/usr/sbin",
+	"/bin"
+      ],
+      "answer": "/usr/sbin"
+    },
+    {
+      "question": "Eğer PATH yoluna yeni bir dizin adresi eklemek istersek, tüm kabuklar tarafından PATH yolunda ilk olarak bizim eklediğimiz dizine bakılması için tanımlamayı nasıl yapmamız gerekir?",
+      "options": [
+        "export PATH=”$PATH:yeni/dizin”",
+        "PATH=”$PATH:yeni/dizin”",
+        "$PATH=”yeni/dizin:$PATH”",
+        "export PATH=”yeni/dizin:$PATH”"
+      ],
+      "answer": "export PATH=”yeni/dizin:$PATH”"
+    },
+    {
+      "question": "Örneğin ~/.bashrc dosyasındaki değişikliklerin anında mevcut kabuğumuzda geçerli olması için aşağıdaki yöntemlerden hangisi işe yaramaz?",
+      "options": [
+        "source ~/.bashrc",
+        "oturumu kapatıp tekrar açmak.",
+        "export ~/.bashrc"
+      ],
+      "answer": "export ~/.bashrc"
+    },
+    {
+      "question": "Linux üzerinde isminin başında - (kısa çizgi) işareti bulunan dosya ve klasörler gizli statüsünde sayılır.",
+      "options": [
+        "Doğru",
+        "Yanlış"
+      ],
+      "answer": "Doğru"
+    }
+]

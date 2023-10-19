@@ -1,0 +1,29 @@
+{% if page.cover %}
+<div class="container">
+	<div class="row justify-content-center align-items-center">
+	  <div class="col-sm-9">
+		<img class="responsive" src="{{ site.url }}/blog/img/{{ page.cover }}" alt="">
+	  </div>
+	</div>
+  </div>
+		  {% endif %}
+<p></p>
+<div ><i class="fa fa-tags" aria-hidden="true"></i>
+          {% for tag in page.tags %}<a href="{{ site.url }}/etiketler.html#{{ tag }}" class="btn btn-outline-primary btn-sm mb-2" title="{{ tag }} Etiketli Tüm İçerikler">{{ tag }}</a> {% endfor %}  	</div>	  
+		  <hr>
+		  <h1 data-pagefind-meta="title" >{{ page.title }}</h1> 
+		  {% if page.puan %}
+			<span class="badge badge-warning badge-pill"><i class="fa fa-star" aria-hidden="true"></i> {{ page.puan }}/10</span>
+		  {% endif %}
+		  <h6 align="right" id="meta-da">
+			<i class="fa fa-clock-o" aria-hidden="true"></i>{% include read_time.html %}
+
+		   {% assign author = site.authors | where: 'name', page.author | first %}
+{% if author %}
+  <i class="fa fa-user" aria-hidden="true"></i><a href="{{ author.url }}"> {{ author.name }}</a>
+{% endif %}
+
+		  
+		  </h6>  
+		  
+		  

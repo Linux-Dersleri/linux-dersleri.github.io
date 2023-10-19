@@ -1,0 +1,77 @@
+[
+    {
+      "question": "Bash kabuğunda bir işlemi arka planda başlatmak için hangi komut doğrudur?",
+      "options": ["komut ?", "komut %", "komut &", "komut |", "komut #"],
+      "answer": "komut &"
+    },
+    {
+      "question": "Bash kabuğundaki arkaplandaki işlemi, ön plana almak için hangi komut girilebilir?",
+      "options": ["bg işlem-numarası", "fg işlem-numarası", "jobs işlem-numarası", "disown işlem-numarası"],
+      "answer": "fg işlem-numarası"
+    },
+    {
+      "question": "Bash kabuğunda ön planda çalışan bir işlemi duraklatmak için hangi kısayolu kullanabiliriz?",
+      "options": ["Ctrl + C", "Ctrl + D", "Ctrl + R", "Ctrl + S", "Ctrl + Z"],
+      "answer": "Ctrl + Z"
+    },
+    {
+      "question": "Bash kabuğunda ön planda çalışan bir işlemi kesintiye uğratmak-durdurmak için hangi kısayolu kullanabiliriz?",
+      "options": ["Ctrl + D", "Ctrl + R", "Ctrl + C", "Ctrl + S", "Ctrl + Z"],
+      "answer": "Ctrl + C"
+    },
+    {
+      "question": "Bash kabuğunda durdurulmuş bir işlemi arka plana almak için hangi komutu kullanabiliriz?",
+      "options": ["bg işlem-numarası", "fg işlem-numarası", "jobs işlem-numarası", "disown işlem-numarası"],
+      "answer": "bg işlem-numarası"
+    },
+    {
+      "question": "Mevcut bash kabuğunun yönettiği işleri listelemek için hangi komut kullanılır?",
+      "options": ["ps", "ps aux", "top", "jobs"],
+      "answer": "jobs"
+    },
+    {
+      "question": "Kabuğun başlattığı bir işlemi, kabuğun kontrolünden çıkarmak için hangi komutu kullanabiliriz?",
+      "options": ["jobs", "fg", "bg", "disown"],
+      "answer": "disown"
+    },
+    {
+      "question": "Herhangi bir koşula bağlı olmadan birden fazla komutu sırasıyla çalıştırmak için hangi karakteri kullanabiliriz?",
+      "options": [";", "&", "%", "&&", "||"],
+      "answer": ";"
+    },
+    {
+      "question": "İlk komut başarılı ise ikinci komutu çalıştıracak komut bütünü hangisidir?",
+      "options": ["komut1 & komut2", "komut1 ; komut2", "komut1 && komut2", "komut || komut2"],
+      "answer": "komut1 && komut2"
+    },
+    {
+      "question": "İlk komut başarısız ise ikinci komutu çalıştıracak komut bütünü hangisidir?",
+      "options": ["komut1 & komut2", "komut1 ; komut2", "komut1 && komut2", "komut || komut2"],
+      "answer": "komut || komut2"
+    },
+    {
+      "question": "Komutları gruplamak için hangi yaklaşım doğrudur?",
+      "options": ["[komut1 ; komut2 ; komut3]", "{komut1 ; komut2 ; komut3}", "(komut1 ; komut2 ; komut3)"],
+      "answer": "{komut1 ; komut2 ; komut3}"
+    },
+    {
+      "question": "İşlemleri anlık olarak güncellenecek şekilde takip etmek için hangi aracı kullanabiliriz?",
+      "options": ["ps", "ps aux", "top", "jobs"],
+      "answer": "top"
+    },
+    {
+      "question": "İşlemlere sinyaller göndermek için hangi aracı kullanabiliyoruz?",
+      "options": ["kill", "signal", "jobs", "pgrep"],
+      "answer": "kill"
+    },
+    {
+      "question": "İşlem isimleri üzerinden işlem numaralarını kolayca bulmak için hangi araç kullanılabilir?",
+      "options": ["grep", "egrep", "pgrep", "fgrep"],
+      "answer": "pgrep"
+    },
+    {
+      "question": "İşlem veya komut ismi ile eşleşen tüm işlemlerin sonlandırılması için hangi komut kullanılabilir?",
+      "options": ["kill işlem-adı", "killall işlem-adı", "pgrep işlem-adı", "jobs işlem-adı"],
+      "answer": "killall işlem-adı"
+    }
+  ]

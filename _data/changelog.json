@@ -1,0 +1,144 @@
+[
+  {
+    "name": "Web Platformu",
+    "version": "1.0.0",
+    "changes": [
+      "Temel Ağ Eğitimi eklendi.",
+      "Temel Linux Eğitimi dokümantasyon içeriği baştan sonra yenilendi.",
+      "Site içi arama yapılabilmesi için arama fonksiyonu eklendi.",
+      "Komut listesi bölümü eklendi.",
+      "Blog bölümü eklendi.",
+      "Test bölümü eklendi.",
+      "Sıkça Sorulan Sorular bölümü eklendi.",
+      "Platform verilerini takip edebilmek için Google Analytics eklendi."
+    ]
+  },
+{
+    "name": "Android Uygulaması",
+    "version": "1.0.0",
+    "changes": [
+      "Temel Ağ Eğitimi eklendi.",
+      "Temel Linux Eğitimi dokümantasyon içeriği baştan sonra yenilendi.",
+      "Dokümanlar üzerinde arama yapılabilmesi için arama fonksiyonu eklendi.",
+      "Komut listesi bölümü eklendi.",
+      "Test bölümü eklendi.",
+      "Sıkça Sorulan Sorular bölümü eklendi.",
+    ]
+  },
+  {
+    "name": "Web Platformu",
+    "version": "0.7.0",
+    "changes": [
+      "Arayüz sadeleştirmesi yapıldı.",
+      "Mümkün olan bölümlerde resimler yerine yazılı komut çıktıları eklendi.",
+      "Doküman içeriğinde hata düzeltmeleri ve güncellemeler yapıldı."
+    ]
+  },
+  {
+    "name": "Web Platformu",
+    "version": "0.5.0",
+    "changes": [
+      "Arayüz güncellemesi yapıldı."
+    ]
+  },
+  {
+    "name": "Web Platformu",
+    "version": "0.2.5",
+    "changes": [
+      "Dokümantasyon içeriğinde kısmi düzenlemeler yapıldı.",
+      "Bölüm sonlarına alıştırma faaliyetleri eklendi."
+    ]
+  },
+  {
+    "name": "Web Platformu",
+    "version": "0.2.0",
+    "changes": [
+      "Masaüstü uygulaması yerine çevrimdışı olarak da çalışabilen web platformu yayına alındı."
+    ]
+  },
+  {
+    "name": "Android Uygulaması",
+    "version": "0.1.5",
+    "changes": [
+      "Android dokümantasyon uygulaması için mobil uyumlu resim optimizasyonu uygulandı.",
+      "Android dokümantasyon uygulaması kullanıcı geri bildirimlerine bağlı olarak güncellendi."
+    ]
+  },
+  {
+    "name": "Masaüstü Uygulaması",
+    "version": "0.1.1",
+    "changes": [
+      "Masaüstü uygulaması için hata düzeltmeleri ve performans iyileştirmesi uygulandı."
+    ]
+  },
+  {
+    "name": "Android Uygulaması",
+    "version": "0.1.1",
+    "changes": [
+      "Android dokümantasyon uygulaması play store üzerinde yayınlandı."
+    ]
+  },
+  {
+    "name": "Android Uygulaması",
+    "version": "0.1.0",
+    "changes": [
+      "Kapalı beta şekilde android dokümantasyon uygulaması test edilmeye başlandı."
+    ]
+  },
+  {
+    "name": "Masaüstü Uygulaması",
+    "version": "0.1.0",
+    "changes": [
+      "Windows, Linux ve MacOS işletim sistemleri için, çevrimdışı dokümantasyon uygulamaları oluşturuldu."
+    ]
+  },
+  {
+    "name": "Çevrimdışı Web",
+    "version": "0.0.7",
+    "changes": [
+      "Çevrimdışı html sayfaları verimsiz bulunduğu için kaldırıldı."
+    ]
+  },
+  {
+    "name": "Çevrimdışı Web",
+    "version": "0.0.6",
+    "changes": [
+      "İndirilebilir çevrimdışı html sayfaları mobil için uyumlu hale getirildi."
+    ]
+  },
+  {
+    "name": "Çevrimdışı Web",
+    "version": "0.0.5",
+    "changes": [
+      "Dokümantasyon içeriğine, çevrimdışı erişim için indirilebilir html sayfası sunuldu."
+    ]
+  },
+  {
+    "name": "Github Yayını",
+    "version": "0.0.4",
+    "changes": [
+      "Kısmi konu içerikleri genişletildi."
+    ]
+  },
+  {
+    "name": "Github Yayını",
+    "version": "0.0.3",
+    "changes": [
+      "Resim formatları ve boyutları stabilize edildi."
+    ]
+  },
+  {
+    "name": "Github Yayını",
+    "version": "0.0.2",
+    "changes": [
+      "Geri bildirimlere bağlı olarak, yazım yanlışları düzeltildi."
+    ]
+  },
+  {
+    "name": "Github Yayını",
+    "version": "0.0.1",
+    "changes": [
+      "Temel linux eğitimi dokümantasyon uygulaması Github üzerinden yayına açıldı."
+    ]
+  }
+]

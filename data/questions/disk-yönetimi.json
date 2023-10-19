@@ -1,0 +1,112 @@
+[
+  {
+    "question": "2TB büyük ve 15 bölümlendirmeden daha fazla bölümlendirme imkanı için hangi bölümlendirme yaklaşımı tercih edilmelidir?",
+    "options": ["MBR", "GPT", "LFS", "GRUB"],
+    "answer": "GPT"
+  },
+  {
+    "question": "Sistem başlangıcında donanım kontrolü gerçekleştirilen yapılardan hangisi daha modern bir yaklaşımdır?",
+    "options": ["GRUB", "UEFI", "BIOS", "MBR", "GRUB2"],
+    "answer": "UEFI"
+  },
+  {
+    "question": "Sistemimize bağlı bulunan disk aygıtlarını(blok aygıtları olarak da bilinir) listelemek için hangi komutu kullanabiliriz?",
+    "options": ["lsusb", "lsblk", "disks", "ls -d"],
+    "answer": "lsblk"
+  },
+  {
+    "question": "fdisk ile mevcut diskleri listelemek için hangi komut kullanılabilir?",
+    "options": ["fdisk -disk", "fdisk -units", "fdisk-b", "fdisk -l"],
+    "answer": "fdisk -l"
+  },
+  {
+    "question": "Diskte bir dosya sistemi olmasa da diske veriler yazılıp okunabilir mi?",
+    "options": ["Evet", "Hayır"],
+    "answer": "Hayır"
+  },
+  {
+    "question": "Disk bölümlemesi yapılacaksa öncelikle bölümleme tablosu belirlenmeli, daha sonra disk bölümlendirilmelidir.",
+    "options": ["Evet", "Hayır"],
+    "answer": "Evet"
+  },
+  {
+    "question": "Disk bölümlemesi yapılacaksa öncelikle dosya sistemi tanımlanmalı, daha sonra disk bölümlendirilmelidir.",
+    "options": ["Evet", "Hayır"],
+    "answer": "Hayır"
+  },
+  {
+    "question": "Bir diskte ext4 dosya sistemini tanımlamak için hangi aracı kullanabiliriz?",
+    "options": ["fsck.ext4", "fsck", "mkfs.ext4", "ext4"],
+    "answer": "mkfs.ext4"
+  },
+  {
+    "question": "Diskleri bağlamak için hangi komutu kullanabiliriz?",
+    "options": ["lsblk", "fdisk", "parted", "mount"],
+    "answer": "mount"
+  },
+  {
+    "question": "Bağlı olan diskleri çıkarmak-ayırmak için hangi aracı kullanabiliriz?",
+    "options": ["lsblk", "fdisk", "umount", "deldisk", "testdisk", "parted"],
+    "answer": "umount"
+  },
+  {
+    "question": "Disklerin sistem başlangıcında kalıcı olarak otomatik şekilde bağlanmasını sağlamak için hangi dosyayı düzenlememiz gerekir?",
+    "options": ["/etc/passwd", "/etc/parted", "/etc/fstab", "/etc/mount"],
+    "answer": "/etc/fstab"
+  },
+  {
+    "question": "Fiziksel disklerimizi, LVM için fiziksel hacime(physical volume) çevirmek üzere hangi aracı kullanabiliriz?",
+    "options": ["lvmcreate", "pvcreate", "volumecreate", "vlcreate"],
+    "answer": "pvcreate"
+  },
+  {
+    "question": "LVM üzerinde Volume Group oluşturmak için hangi komut kullanılabilir?",
+    "options": ["lvcreate disk-grubu /dev/disk-adı", "vgcreate disk-grubu /dev/disk-adı", "pvcreate disk-grubu /dev/disk-adı"],
+    "answer": "vgcreate disk-grubu /dev/disk-adı"
+  },
+  {
+    "question": "LVM üzerinde logical volume oluşturmak için hangi komut kullanılabilir?",
+    "options": ["lvcreate", "pvcreate", "mvcreate", "vgcreate"],
+    "answer": "lvcreate"
+  },
+  {
+    "question": "Sistemdeki mevcut logical volume bilgisini öğrenmek üzere hangi araç kullanılabilir?",
+    "options": ["scan", "fsck", "lvs", "logical", "pvs"],
+    "answer": "lvs"
+  },
+  {
+    "question": "Volume group'a yeni disk eklemek için hangi arac kullanılabilir?",
+    "options": ["vgadd", "vgextend", "vgreduce", "vgattend"],
+    "answer": "vgextend"
+  },
+  {
+    "question": "Volume group'dan disk çıkarmak için hangi komut kullanılabilir?",
+    "options": ["vgdel disk-grubu /dev/disk-adı", "vgreduce disk-grubu /dev/disk-adı", "vgextend disk-grubu /dev/disk-adı", "vgexit disk-grubu /dev/disk-adı", "vgrem disk-grubu /dev/disk-adı"],
+    "answer": "vgreduce disk-grubu /dev/disk-adı"
+  },
+  {
+    "question": "Mevcut Logical Volume alanını genişletmek için hangi araç kullanılabilir?",
+    "options": ["lvadd", "lvextend", "lvreduce", "vgextend", "vgreduce"],
+    "answer": "lvextend"
+  },
+  {
+    "question": "Mevcut Logical Volume alanını küçültmek için hangi araç kullanılabilir?",
+    "options": ["lvremove", "lvextend", "lvreduce", "vgextend", "vgreduce"],
+    "answer": "lvreduce"
+  },
+  {
+    "question": "Mevcut logical volume silme işlemi için hangi aracı kullanabiliriz?",
+    "options": ["vgdel", "vgremove", "lvremove", "lvdel", "lvs"],
+    "answer": "lvremove"
+  },
+  {
+    "question": "Mevcut physical volume silme işlemi için hangi aracı kullanabiliriz?",
+    "options": ["vgdel", "vgremove", "pvremove", "pvdel", "pvs"],
+    "answer": "pvremove"
+  },
+  {
+    "question": "Volume group silme işlemi için hangi aracı kullanabiliriz?",
+    "options": ["vgdel", "vgremove", "pvremove", "pvdel", "pvs"],
+    "answer": "vgremove"
+  }
+]
