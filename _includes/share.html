@@ -11,8 +11,7 @@
         // LinkedIn share button functionality
         var linkedinShareButton = document.getElementById("linkedinShareButton");
         linkedinShareButton.addEventListener("click", function() {
-        var shareUrl = "https://www.linkedin.com/sharing/share-offsite/?url={{ site.url }}{{ page.url }}&summary=";
-        window.open(postUrl, "_blank");
+          var postUrl = "https://www.linkedin.com/sharing/share-offsite/?url={{ site.url }}{{ page.url }}";
+          window.open(postUrl, "_blank");
         });
-
         </script>
