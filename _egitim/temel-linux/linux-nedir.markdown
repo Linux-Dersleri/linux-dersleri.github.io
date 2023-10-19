@@ -23,16 +23,16 @@ Tamamdır dinç ve hazırsak hadi gelin işletim sisteminin genel bir tanımın�
 
 En genel tanımla işletim sistemi, donanımlara yaptırmak istediğimiz işleri ifade edebilmemizi sağlayan aracı yazılım katmanıdır. İşletim sistemi denildiğinde yalnızca standart bilgisayarları düşünmeyin, arabalardan fabrikadaki robotlara veya akıllı televizyonlara kadar kullanıcıdan emir alan ve donanıma iş yaptıran pek çok farklı türde işletim sistemi mevcut. Yine de bizim odak noktamız standart bilgisayarlar olduğu için en genel haliyle bilgisayar donanımını ve içindeki işletim sistemini bence bu şekilde soyutlayabiliriz. Neticede biz bilgisayarı kullanırken, aslında mevcut donanımlara iş yaptıran yazılımları kullanıyoruz. Bu yazılımların sorunsuzca kullanılabilmesi için de çalışabilecekleri stabil bir ortam olması gerekiyor. İşte işletim sistemi gerekli olan bu ortamı bize sağlayan yazılımdır. 
 
-![1.webp]({{ site.url }}/egitim/temel-linux/Temel Kavramlar/1.webp){:class="responsive img-zoomable"}
+![1.webp]({{ site.url }}/egitim/temel-linux/temel/1.webp){:class="responsive img-zoomable"}
 
 
 İşletim sistemini yekpare bir yazılım gibi düşünmek doğru olmaz. İşletim sistemi, aslında pek çok farklı yazılımsal bileşenin bir araya gelip uyum içerisinde çalışabilmesine verdiğimiz bütüncül bir isim. En genel haliyle bir işletim sisteminde, kullanıcıların sistemi yönetmek için kolayca kullanabilecekleri araçları barındıran kullanıcı katmanı ve bu araçlardan gelen emirleri donanıma ifade edecek çekirdek katmanı bulunuyor. 
 
-![2.webp]({{ site.url }}/egitim/temel-linux/Temel Kavramlar/2.webp){:class="responsive img-zoomable"}
+![2.webp]({{ site.url }}/egitim/temel-linux/temel/2.webp){:class="responsive img-zoomable"}
 
 Örneğin bakın bu soyutlamada, kullanıcı katmanında sistemin yönetilebilmesini sağlayan pek çok araç olduğunu görebiliyoruz. Burada soyutlanmış olan diğer katman ise çekirdek. Buradaki çekirdek katmanı çok önemli çünkü çekirdek dediğimiz yapı kullanıcı alanındaki araçlardan gelen emirleri donanıma ifade etmekle sorumlu aracı katmandır. Çekirdek olmadan örneğin biz bir metin editörü ile düzenleme yaptığımızda, bu düzenleme işleminin bilgisayarın donanımına ifade edilmesi mümkün değil çünkü metin editörümüz bilgisayar donanımı ile nasıl iletişim kurabileceğini bilmiyor. Bu iş çekirdeğin görevi.
 
-![3.webp]({{ site.url }}/egitim/temel-linux/Temel Kavramlar/3.webp){:class="responsive img-zoomable"}
+![3.webp]({{ site.url }}/egitim/temel-linux/temel/3.webp){:class="responsive img-zoomable"}
 
 İşte buradaki diyagram en kaba haliyle standart bilgisayardaki işletim sistemini temsil eden soyutlama. Biz işimizi halletmek için kullanıcı katmanındaki bir aracı kullanıyoruz, bu araç da çekirdekle iletişime geçip ilgili işin donanıma yaptırılmasını sağlıyor.
 
@@ -48,7 +48,7 @@ Yaygın olarak bilinen haliyle "Linux" açık kaynaklı özgür bir işletim sis
 
 Dolayısıyla işletim sistemini temsil etmek için yaygın olarak kullanılan Linux ifadesi tek başına doğru değil. Bizim Linux işletim sistemi olarak bildiğimiz yapı aslında GNU/Linux işletim sistemidir. Buradaki GNU ifadesi işletim sisteminde olması gereken çeşitli araçları sağlayan projenin isminden geliyor. Dolayısıyla Linux çekirdeği ve GNU araçları bir araya geldiğinde ortaya bir işletim sistemi çıktığı için GNU/Linux işletim sistemi demek çok daha doğru bir tanımlama.
 
-![4.webp]({{ site.url }}/egitim/temel-linux/Temel Kavramlar/4.webp){:class="responsive img-zoomable"}
+![4.webp]({{ site.url }}/egitim/temel-linux/temel/4.webp){:class="responsive img-zoomable"}
 
 Biliyorum kısaca açıklamış olmama rağmen bu tanımlama şu an sizin için pek bir anlam ifade etmiyor, ancak merak etmeyin.
 
@@ -64,7 +64,7 @@ Lisanslar ve kapalı kaynak kodlu yazılımlar pek çok kişiyi olduğu gibi Ric
 
 ## GNU
 
-![gnu.webp]({{ site.url }}/egitim/temel-linux/Temel Kavramlar/gnu_logo.webp){:class="responsive img-zoomable"}
+![gnu.webp]({{ site.url }}/egitim/temel-linux/temel/gnu_logo.webp){:class="responsive img-zoomable"}
 
 **GNU** ismi, **GNU** is **N**ot **U**nix yani “GNU Unix değildir” ifadesinin kısaltmasından geliyor. Zaten biraz önce, GNU projesinin Unix sisteminin getirdiği kısıtlamalardan doğduğundan bahsettik. İşte bu doğrultuda GNU projesi, herkesin ihtiyaç duyduğu uçtan uca açık kaynaklı özgür bir işletim sistemi bütünü ortaya koyabilmek amacıyla ortaya çıkmıştır. Ve ayrıca bu amaçla geliştirilen yazılımların yasal olarak lisanslanabilmesi için de GPL(General Public License) yani GNU Genel Kamu Lisansı geliştirilmiştir. GPL lisansı, açık kaynaklı özgür yazılımların geliştirilmesi ve yasal olarak lisanslanabilmesi için çok akıllıca tasarlanmış bir lisanstır. Zaten ekosistemin büyümesindeki en önemli atılımın bu lisansın varlığı olduğunu söylemek çok da yanlış olmaz. Bu lisansın maddelerinden de ayrıca bahsedeceğiz ancak bahsetmeden önce "açık kaynak" ve "özgür yazılım" kavramlarından da kısaca bahsederek tüm kavramları netleştirelim ki ileride yanlış anlaşılmalar yaşanmasın.
 
@@ -127,7 +127,7 @@ Linus Torvalds 1991 yılında, daha sonra ismi Linux çekirdeği olarak geçecek
 
 En nihayetinde Linux çekirdeğinin GPL lisansına geçişiyle birlikte, GNU projesinin halihazırda sahip olduğu açık kaynaklı özgür yazılım araçları ve topluluk desteği, ortaya açık kaynaklı ve özgür bir işletim sistemi olan “GNU Linux” işletim sistemini çıkarmıştı. GNU'nun eksik olan çekirdeği, Linux çekirdeğinin de eksik olan işletim sistemi araçları birbirini tamamlayarak açık kaynaklı özgür bir işletim sistemi oluşturdu. 
 
-![5.webp]({{ site.url }}/egitim/temel-linux/Temel Kavramlar/5.webp){:class="responsive img-zoomable"}
+![5.webp]({{ site.url }}/egitim/temel-linux/temel/5.webp){:class="responsive img-zoomable"}
 
 Böylelikle **GNU/Linux** efsanesi doğmuş oldu. İşte **GNU/Linux** devrimi kısaca bu şekilde. Hem **GNU araçlarının** hem de **Linux çekirdeğinin** topluluğa bağlı dönütlerle geliştirilmesi doğrultusunda **herkese açık, ücretsiz ve sınırsız geliştirilme potansiyeline sahip, gerçek anlamda insana hizmet eden özgür bir işletim sistemine** nasıl sahip olduğumuzun kısa hikayesi işte bu şekilde.
 
@@ -149,17 +149,17 @@ Dolayısıyla bir yazılım açık kaynaklı diye %100 güvenli olduğu anlamın
 
 İngilizce "distribution" ifadesinin kısaltmasından gelen “**distro**” kavramı Türkçe olarak “**dağıtım**” anlamına geliyor. Dağıtım kavramını anlayabilmek için, öncelikle GNU/Linux sisteminin yapısını iyi anlamamız gerekiyor. GNU/Linux’un, içerisinde sistemin yönetilebilmesini sağlayan pek çok farklı aracı barındıran sistem bütününe verilen genel isim olduğunu öğrendik. Biz kullanıcı alanındaki araçları kullanıyoruz, bu araçlar da çekirdek ile iletişim kurup donanıma iş yaptırılmasını sağlıyorlar. 
 
-![7.webp]({{ site.url }}/egitim/temel-linux/Temel Kavramlar/7.webp){:class="responsive img-zoomable"}
+![7.webp]({{ site.url }}/egitim/temel-linux/temel/7.webp){:class="responsive img-zoomable"}
 
 Dağıtım kavramı da, ihtiyaçlar doğrultusunda sistemdeki araçların özelleştirilmesiyle ortaya çıkmıştır.
 
 Örneğin ben siber güvenlik alanında kullanmak için grafiksel arayüze sahip bir GNU/Linux dağıtımı oluşturmak istiyorsam, Linux çekirdeğiyle birlikte siber güvenlik için gerekli olan araçları eklerim. Ve bu oluşturduğum sistemi dilersem diğer insanlara paylaşabilir yani bu sistemi dağıtabilirim. Veya örneğin ben grafiksel arayüzü istemiyorsam bu sistemden grafiksel arayüzü çıkarıp belki istediğim başka araçları da ekleyip bu sistemi de kullanabilirim. Hatta dilersem bu sistemi diğer insanlara da paylaşabilirim. 
 
-![8.webp]({{ site.url }}/egitim/temel-linux/Temel Kavramlar/8.webp){:class="responsive img-zoomable"}
+![8.webp]({{ site.url }}/egitim/temel-linux/temel/8.webp){:class="responsive img-zoomable"}
 
 İşte tıpkı benim vermiş olduğum basit örnekler gibi, zaman içinde farklı ihtiyaçları karşılamak için Linux çekirdeğiyle birlikte farklı araçların bir araya getirildiği pek çok farklı GNU Linux dağıtımı oluşturulmuş. Dolayısıyla GNU Linux olarak geçen tüm dağıtımlarda çekirdek olarak Linux çekirdeğinin kullanılması dışında, hepsi kendi amaçları doğrultusunda çeşitli özgür yazılımları sisteme dahil edip kendi dağıtımlarını ortaya çıkarmışlar. 
 
-![6.webp]({{ site.url }}/egitim/temel-linux/Temel Kavramlar/6.webp){:class="responsive img-zoomable"}
+![6.webp]({{ site.url }}/egitim/temel-linux/temel/6.webp){:class="responsive img-zoomable"}
 
 Bu kadar çok dağıtım olmasının nedeni de zaten özgür yazılımın sağladığı bu özgürlük işte. Bir işi yapacak yazılım mı arıyorsunuz, muhtemelen daha önce birileri geliştirip özgür yazılım lisansı ile paylaşmıştır. Alıp sisteme dahil edip özgürce kullanabilirsiniz. 
 
@@ -221,11 +221,11 @@ Bu noktada CentOS için ek bir açıklamada bulunmamız gerekirse, CentOS özell
 
 Normalde Red Hat yeni sürümleri yayınlamadan önce değişiklikleri Fedora dağıtımı üzerinde test eder, emin olduğu geliştirmeleri de Red Hat üzerinde kararlı sürüm olarak yayınlardı. CentOS da Red Hat’in sunduğu gelişmeleri uygulayarak kararlı şekilde çalışan ücretsiz bir alternatif sunardı. 
 
-![9.webp]({{ site.url }}/egitim/temel-linux/Temel Kavramlar/9.webp){:class="responsive img-zoomable"}
+![9.webp]({{ site.url }}/egitim/temel-linux/temel/9.webp){:class="responsive img-zoomable"}
 
 Yeni dönemle birlikte büyük değişikliklerin öncelikle Fedora üzerinde test edilmesine, ara sürüm güncellemelerinin de CentOS Stream üzerinde test edilip en son kararlı olduğu düşünülen değişikliklerin Red Hat üzerinde uygulanmasına karar verildi.
 
-![10.webp]({{ site.url }}/egitim/temel-linux/Temel Kavramlar/10.webp){:class="responsive img-zoomable"}
+![10.webp]({{ site.url }}/egitim/temel-linux/temel/10.webp){:class="responsive img-zoomable"}
 
 Dolayısıyla kararlılık konusundaki endişelenen topluluk tarafından CentOS kullanımı artıp pek cazip bulunmuyor. Bu durum CentOS kullanımında büyük düşüşleri de beraberinde getirdi ve bu düşüş devam edecek gibi duruyor. Elbette topluluk, Red Hat’in bu hamlesinden sonra boş durmadı ve topluluk desteğiyle önceki CentOS’un yerini alması planlanan Rocky Linux geliştirilmeye başlandı. Ben bu eğitimi hazırladığım dönemde çok yaygın kullanıma sahip değil. Ancak, Rocky Linux her daim topluluk odaklı kalacağını yani CentOS’un kaderini paylaşarak asla satılmayacağını beyan ettiği için ileride kararlı sürümleriyle Rocky Linux'u da yaygın olarak görmeye başlayabiliriz. Ayrıca ben yalnızca Rocky Linux’tan bahsettim ancak benzeri şekilde topluluk tarafından desteklenen ve Red Hat’in ticari sürümünü takip eden alternatif çeşitli dağıtımlar da mevcut. 
 

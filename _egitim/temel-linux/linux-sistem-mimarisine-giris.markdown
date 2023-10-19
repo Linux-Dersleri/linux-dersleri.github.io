@@ -17,7 +17,7 @@ Gerekli çalışma ortamını kurduğumuza göre artık sistemi daha yakından t
 
 Linux’un ne olduğundan bahsettiğimiz bölümde bilgisayarı ve içindeki işletim sistemini bu şekilde soyutlamıştık hatırlarsanız. 
 
-![2.webp]({{ site.url }}/egitim/temel-linux/Temel Kavramlar/2.webp){:class="responsive img-zoomable"}
+![2.webp]({{ site.url }}/egitim/temel-linux/temel/2.webp){:class="responsive img-zoomable"}
 
 
 Şimdi tekrar bu şemaya dönecek olursak bakın temelde bir işletim sisteminde “kullanıcı” ve “çekirdek” olmak üzere iki temel alan bulunuyor. Biz kullanıcı alanındaki araçları kullandığımızda, buradaki araçlar çekirdek ile iletişime geçip ilgili görevin çekirdek tarafından donanıma doğru şekilde ifade edilip yaptırılmasını sağlıyorlar. Bu durumdan zaten daha önce de bahsettik. Şimdi çekirdek bölümünü bir kenara bırakıp kullanıcı alanına odaklanmak istiyorum.
@@ -36,7 +36,7 @@ Yani aslında bu örnekte bizzat gördüğümüz gibi, ben kullanıcı olarak bi
 
 İşte bizim grafiksel arayüzlü menüleri ve metin editörünü kullanırken yaptığımız şey aslında kullanıcı alanındaki araçları kullanarak sisteme emirler vermekti. Daha önce bahsetmiş olduğum kullanıcı alanı işte tam olarak burası. 
 
-![3.webp]({{ site.url }}/egitim/temel-linux/Temel Kavramlar/3.webp){:class="responsive img-zoomable"}
+![3.webp]({{ site.url }}/egitim/temel-linux/temel/3.webp){:class="responsive img-zoomable"}
 
 Yani kullanıcı alanına aslında komuta kontrol alanı da diyebiliriz. Nitekim ben metin editörünü bulup çalıştırırken ve yazı yazarken aslında grafiksel arayüze sahip kullanıcı alanında çalıştım. Ayrıca henüz bahsetmedik ancak tıpkı grafiksel arayüz ortamı gibi kullanıcıların sistemi yönetmek için kullandıkları komut satırı arayüzü de bulunuyor. Yani aslında kullanıcı alanı olarak tabir ettiğimiz soyut katmanın kendisi de "grafiksel kullanıcı arayüzü(GUI)" ve "komutu satırı arayüzü(CLI)" olmak üzere iki tür arayüz ortamını barındırıyor. 
 
