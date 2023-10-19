@@ -3,7 +3,7 @@
 ## Platform Hakkında
 Bu web platformu, [Türkçe Temel Linux Dokümantasyonu](https://github.com/taylanbildik/Linux_Dersleri) içeriğini kolay takip edilebilmesi için geliştirilmiştir. 
 
-## Platform Adresi: [https://www.linuxdersleri.net](https://www.linuxdersleri.net)
+## Platform Adresi: [linuxdersleri.net](https://www.linuxdersleri.net)
 ![](https://raw.githubusercontent.com/Linux-Dersleri/linux-dersleri.github.io/master/data/img/web-platformu.png)
 
 ## Android Uygulaması
