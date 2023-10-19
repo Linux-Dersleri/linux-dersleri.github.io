@@ -75,10 +75,7 @@ Kullanım alanı pek yaygın ve önerilmiyor olsa da karşılaşmanız halinde y
 
 İki nokta üst üste işareti "pas geçmek" amacıyla kullanıldığı için dosyaların içerisinde yer alan tüm verilerin silinmesi için `: > hedef-dosya` şeklinde bir kullanım alternatifi de vardır. Bu kullanım hedef dosya içerisindeki tüm verileri siler fakat, aslında bu işlem iki nokta üst üste işareti olmadan da aynen yapılabilir. Yani komutumuzu yalnızca `> hedef-dosya` şeklinde girerek de dosya içeriğinin silinmesini sağlayabiliriz. Burada iki nokta üst üste karakterinin kullanılmasının nedeni genellikle betik dosyasını okuyacak kişilerin bu işlemi daha net fark edebilmesi sağlamaktır. Yani iki nokta üst üste işaretinin "pas geçme" anlamında olduğunu bilen kişiler dosya içeriğinin boşaltılacağını daha rahat anlayabilir. Fakat dediğim gibi genelde pek sık karşılaşmazsınız ve çok da önerilen bir kullanım sayılmaz.
 
-<aside>
-⚠️ **Not:** Özellikle harici olarak temin ettiğiniz betik dosyalarının içerisinde art niyetli olarak bu ifadenin dosyaları silmek amacıyla kullanıldığına şahit olabilirsiniz. Genellikle doğrudan silme ifadesi yer almadığından ve kullanımı yaygın olmadığı için gözlerden kaçabiliyor. Bu gibi tuzaklara karşı mutlaka çalıştırmadan önce betik dosyası içeriğini kontrol edin. Açık kaynaklı projeler harikadır ama herkesin bu imkanı iyiye kullandığını söyleyemeyiz. Açık kaynak olması her daim güvenilir olduğu anlamına gelmez.
-
-</aside>
+<p class="sari"><strong>⚠️ Dikkat:</strong> Özellikle harici olarak temin ettiğiniz betik dosyalarının içerisinde art niyetli olarak bu ifadenin dosyaları silmek amacıyla kullanıldığına şahit olabilirsiniz. Genellikle doğrudan silme ifadesi yer almadığından ve kullanımı yaygın olmadığı için gözlerden kaçabiliyor. Bu gibi tuzaklara karşı mutlaka çalıştırmadan önce betik dosyası içeriğini kontrol edin. Açık kaynaklı projeler harikadır ama herkesin bu imkanı iyiye kullandığını söyleyemeyiz. Açık kaynak olması her daim güvenilir olduğu anlamına gelmez.</p>
 
 ### Yorum Satırı
 
