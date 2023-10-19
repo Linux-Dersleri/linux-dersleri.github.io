@@ -5,7 +5,7 @@ modified:
 author: Taylan Özgür Bildik
 tags: [regex]
 categories: blog 
-cover: linux-Regex-cover.webp
+cover: linux-regex-cover.webp
 permalink: /:title
 toc: true
 ---
@@ -49,11 +49,11 @@ Basit ile genişletilmiş Regex arasındaki farkı net biçimde görmek için ö
 
 **Basit Regex:**
 
-![1.webp]({{ site.url }}/blog/img/linux-Regex/1.webp){:class="responsive img-zoomable"}
+![1.webp]({{ site.url }}/blog/img/linux-regex/1.webp){:class="responsive img-zoomable"}
 
 Bakın gördüğünüz gibi basit Regex üzerinde artı işareti tek başına bir anlam ifade etmediği için `echo` aracının çıktısındaki artı `+` işareti ile doğrudan eşleşme sağlayabildik. Basit genişletmede artı işaretinin özel anlamını kullanmak istediğimizde bu karakterden önce ters slash `\` eklememiz gerek.
 
-![2.webp]({{ site.url }}/blog/img/linux-Regex/2.webp){:class="responsive img-zoomable"}
+![2.webp]({{ site.url }}/blog/img/linux-regex/2.webp){:class="responsive img-zoomable"}
 
 Bakın artı işaretinden önce kullandığım “a” karakterinin tekrarı olmadığı için hiç bir çıktı almadık çünkü basit Regex artı `+` işaretinin bu fonksiyonunu kullandığı için eşleşme de sağlanamadı.
 
@@ -61,13 +61,13 @@ Bakın artı işaretinden önce kullandığım “a” karakterinin tekrarı olm
 
 Şimdi genişletilmiş Regex üzerinde aynı işlemi denemek üzere `-E` seçeneğini de ekleyip komutumuzu girelim.
 
-![3.webp]({{ site.url }}/blog/img/linux-Regex/3.webp){:class="responsive img-zoomable"}
+![3.webp]({{ site.url }}/blog/img/linux-regex/3.webp){:class="responsive img-zoomable"}
 
 Bakın bu kez herhangi bir çıktı almadık, çünkü genişletilmiş genişletme kuralına göre artı işaretinden önceki karakterin tekrarı olması durumunda eşleşme sağlanacaktı. Yani “a” karakterinden hemen sonra yine “a” karakteri bulunsaydı çıktı alacaktık. 
 
 Şimdi bu genişletilmiş Regex kuralının bu özel artı `+` karakterini görmezden gelmesi için ters slash `\` karakteri ile komutumuzu tekrar girelim.
 
-![4.webp]({{ site.url }}/blog/img/linux-Regex/4.webp){:class="responsive img-zoomable"}
+![4.webp]({{ site.url }}/blog/img/linux-regex/4.webp){:class="responsive img-zoomable"}
 
 Bakın artı işareti sıradan bir karakter olarak görüldüğü için eşleşme sağlandı ve çıktımızı aldık.
 
@@ -75,11 +75,11 @@ Basit ve genişletilmiş Regex arasındaki en temel işte budur. Basit Regex ter
 
 **Basit Regex:**
 
-![5.webp]({{ site.url }}/blog/img/linux-Regex/5.webp){:class="responsive img-zoomable"}
+![5.webp]({{ site.url }}/blog/img/linux-regex/5.webp){:class="responsive img-zoomable"}
 
 **Genişletilmiş Regex:**
 
-![6.webp]({{ site.url }}/blog/img/linux-Regex/6.webp){:class="responsive img-zoomable"}
+![6.webp]({{ site.url }}/blog/img/linux-regex/6.webp){:class="responsive img-zoomable"}
 
 Artı işareti kendisinden önceki karakterin tekrar edip etmediğini kontrol ettiği için sonuçlarımız yukarıdaki gibi oldu. Basit ve genişletilmiş 
 
@@ -92,13 +92,13 @@ Artı işareti kendisinden önceki karakterin tekrar edip etmediğini kontrol et
 
 Bir önceki karakterin sıfır veya daha fazla kez tekrarlandığı desenleri temsil eder.
 
-![7.webp]({{ site.url }}/blog/img/linux-Regex/7.webp){:class="responsive img-zoomable"}
+![7.webp]({{ site.url }}/blog/img/linux-regex/7.webp){:class="responsive img-zoomable"}
 
 Bakın “a*” tanımı sayesinde “a” karakterinden sonra tekrar eden tüm “a” karakterleri desen eşleşmesine dahil oldu.
 
 Eğer tam olarak “a*” karakterini filtrelemek istersem yıldız karakterinin görmezden gelinmesi için bu karakterden önce ters slash `\` karakterini kullanabilirim.
 
-![8.webp]({{ site.url }}/blog/img/linux-Regex/8.webp){:class="responsive img-zoomable"}
+![8.webp]({{ site.url }}/blog/img/linux-regex/8.webp){:class="responsive img-zoomable"}
 
 Not: Basit genişletme üzerinde yalnızca `?` `+` `{}` ve `|` karakterleri istisnadır. Bu karakterlerin özel anlamları dahilinde genişletmeleri için öncelerinde ters slash `\` kullanmak gerekir. 
 
@@ -106,11 +106,11 @@ Not: Basit genişletme üzerinde yalnızca `?` `+` `{}` ve `|` karakterleri isti
 
 Yeni satır dahil herhangi bir karakterle eşleşir.
 
-![9.webp]({{ site.url }}/blog/img/linux-Regex/9.webp){:class="responsive img-zoomable"}
+![9.webp]({{ site.url }}/blog/img/linux-regex/9.webp){:class="responsive img-zoomable"}
 
 Eğer tam olarak “a.” karakterini filtrelemek istersem nokta karakterinin görmezden gelinmesi için bu karakterden önce ters slash `\` karakterini kullanabilirim.
 
-![10.webp]({{ site.url }}/blog/img/linux-Regex/10.webp){:class="responsive img-zoomable"}
+![10.webp]({{ site.url }}/blog/img/linux-regex/10.webp){:class="responsive img-zoomable"}
 
 ## Şapka: `^`
 
@@ -118,11 +118,11 @@ Satırın başında bulunan desen eşleşmeleri içi kullanılır.
 
 Örneğin “***/etc/passwd***” dosyasındaki satırlardan, başında “kali” ifadesi geçenleri filtrelemek için kullanabiliriz.
 
-![11.webp]({{ site.url }}/blog/img/linux-Regex/11.webp){:class="responsive img-zoomable"}
+![11.webp]({{ site.url }}/blog/img/linux-regex/11.webp){:class="responsive img-zoomable"}
 
 Gördüğünüz gibi yalnızca satırın başında bulunan “kali” ifadesi filtrelendi. Teyit etmek istersek şapka işareti olmadan tekrar girebiliriz. 
 
-![12.webp]({{ site.url }}/blog/img/linux-Regex/12.webp){:class="responsive img-zoomable"}
+![12.webp]({{ site.url }}/blog/img/linux-regex/12.webp){:class="responsive img-zoomable"}
 
 Bakın satırın başından ziyade, hangi noktada geçtiği fark etmeksizin tüm “kali” ifadeleri filtrelenmiş.
 
@@ -134,11 +134,11 @@ Satırın sonunda bulunan desen eşleşmeleri içi kullanılır.
 
 Örneğin “***~/.bashrc***” dosyasının sonunda geçen “user” ifadelerini filtrelemeyi deneyebiliriz.
 
-![13.webp]({{ site.url }}/blog/img/linux-Regex/13.webp){:class="responsive img-zoomable"}
+![13.webp]({{ site.url }}/blog/img/linux-regex/13.webp){:class="responsive img-zoomable"}
 
 Gördüğünüz gibi yalnızca satır sonunda geçen “user” ifadesi filtrelemiş olduk. Bu durumu teyit etmek için dolar işareti `$` olamadan komutumuzu tekrar girebiliriz. 
 
-![14.webp]({{ site.url }}/blog/img/linux-Regex/14.webp){:class="responsive img-zoomable"}
+![14.webp]({{ site.url }}/blog/img/linux-regex/14.webp){:class="responsive img-zoomable"}
 
 Bakın bu kez satır sonu yerine, herhangi bir konumda geçen tüm “user” ifadeleri filtrelenmiş oldu.
 
@@ -150,15 +150,15 @@ Listedeki tek bir karakter ile eşleşen desenler oluşturur.
 
 Örneğin ben “a” “b” ve “c” karakterlerinden birini barındıranları filtrelemek için `[abc]` tanımını kullanıyorum.
 
-![16.webp]({{ site.url }}/blog/img/linux-Regex/16.webp){:class="responsive img-zoomable"}
+![16.webp]({{ site.url }}/blog/img/linux-regex/16.webp){:class="responsive img-zoomable"}
 
 Bakın gördüğünüz gibi yalnızca köşeli parantez içindeki karakterden biri barındıranlar filtrelenmiş oldu. Üstelik filtreleme işini daha spesifik hale getirmek için dilersek öncesinde veya sonrasında karakterler de ekleyebiliriz. Örneğin ben “c” ile başlayan ve devamında “a b c” karakterlerinden birini barındıranları filtrelemek istediğim için `c[abc]` tanımını kullanabilirim.
 
-![17.webp]({{ site.url }}/blog/img/linux-Regex/17.webp){:class="responsive img-zoomable"}
+![17.webp]({{ site.url }}/blog/img/linux-regex/17.webp){:class="responsive img-zoomable"}
 
 Eğer liste ile belirttiğimiz karakterler haricindekilerle eşleşme yapmak istiyorsak da listenin başına şapka işareti `^` ekleyebiliriz. 
 
-![18.webp]({{ site.url }}/blog/img/linux-Regex/18.webp){:class="responsive img-zoomable"}
+![18.webp]({{ site.url }}/blog/img/linux-regex/18.webp){:class="responsive img-zoomable"}
 
 Bakın tam tersi şekilde köşeli parantez içindeki karakterin geçmediği desenler filtrelenmiş oldu.
 
@@ -172,15 +172,15 @@ a b c d e f g h i j k l m n o p q r s t u v w x y z A B C D E F G H I J K L M N 
 
 Ben yalnızca a’dan k’ye kadar olanları filtrelemek istiyorum.
 
-![26.webp]({{ site.url }}/blog/img/linux-Regex/26.webp){:class="responsive img-zoomable"}
+![26.webp]({{ site.url }}/blog/img/linux-regex/26.webp){:class="responsive img-zoomable"}
 
 Bakın tam olarak benim belirttiğim gibi küçük harfli a’dan k’ye kadar olan karakterler filtrelenmiş oldu. Büyük harfleri ve sayıları da benzer şekilde ayrı ayrı filtreleyebiliriz. 
 
-![27.webp]({{ site.url }}/blog/img/linux-Regex/27.webp){:class="responsive img-zoomable"}
+![27.webp]({{ site.url }}/blog/img/linux-regex/27.webp){:class="responsive img-zoomable"}
 
 Dilersek hepsini tek seferde kapsamamız dahi mümkün.
 
-![28.webp]({{ site.url }}/blog/img/linux-Regex/28.webp){:class="responsive img-zoomable"}
+![28.webp]({{ site.url }}/blog/img/linux-regex/28.webp){:class="responsive img-zoomable"}
 
 Bakın a’dan k’ye kadar olan küçük büyük harfli karakterleri ve 1’den 7’ye kadar olan rakamları filtrelemiş olduk.
 
@@ -192,53 +192,53 @@ Köşeli parantez içinde kullanabileceğimiz belirli sınıfları sembolik olar
 
 Yalnızca alfanümerik yani yalnızca harfler ve rakamlar dahilinde karakter desenleri için kullanılır.
 
-![29.webp]({{ site.url }}/blog/img/linux-Regex/29.webp){:class="responsive img-zoomable"}
+![29.webp]({{ site.url }}/blog/img/linux-regex/29.webp){:class="responsive img-zoomable"}
 
 Bakın yalnızca alfanümerik filtreleme yapılmış oldu.
 
 Bu tanımlama aslında `[A-Za-z0-9]` tanımlaması ile aynı. Küçük büyük harfler ve 0’dan 9’a kadar olan tüm rakamları bu şekilde de ifade etmemiz mümkün.
 
-![30.webp]({{ site.url }}/blog/img/linux-Regex/30.webp){:class="responsive img-zoomable"}
+![30.webp]({{ site.url }}/blog/img/linux-regex/30.webp){:class="responsive img-zoomable"}
 
 ### **`[:alpha:]`**
 
 Küçük büyük harfler fark etmeksizin tüm alfabetik karakterler ile eşleşme sağlar. 
 
-![31.webp]({{ site.url }}/blog/img/linux-Regex/31.webp){:class="responsive img-zoomable"}
+![31.webp]({{ site.url }}/blog/img/linux-regex/31.webp){:class="responsive img-zoomable"}
 
 Bu tanımlama `[A-Za-z]` ile aynıdır.
 
-![32.webp]({{ site.url }}/blog/img/linux-Regex/32.webp){:class="responsive img-zoomable"}
+![32.webp]({{ site.url }}/blog/img/linux-regex/32.webp){:class="responsive img-zoomable"}
 
 ### **`[:lower:]`**
 
 Yalnızca küçük harfli karakter desenleri ile eşleşme sağlar.
 
-![33.webp]({{ site.url }}/blog/img/linux-Regex/33.webp){:class="responsive img-zoomable"}
+![33.webp]({{ site.url }}/blog/img/linux-regex/33.webp){:class="responsive img-zoomable"}
 
 Bu tanımlama `[a-z]` ile aynıdır.
 
-![34.webp]({{ site.url }}/blog/img/linux-Regex/34.webp){:class="responsive img-zoomable"}
+![34.webp]({{ site.url }}/blog/img/linux-regex/34.webp){:class="responsive img-zoomable"}
 
 ### **`[:upper:]`**
 
 Yalnızca büyük harfli karakter desenleri ile eşleşme sağlar.
 
-![35.webp]({{ site.url }}/blog/img/linux-Regex/35.webp){:class="responsive img-zoomable"}
+![35.webp]({{ site.url }}/blog/img/linux-regex/35.webp){:class="responsive img-zoomable"}
 
 Bu tanımlama `[A-Z]` ile aynıdır.
 
-![36.webp]({{ site.url }}/blog/img/linux-Regex/36.webp){:class="responsive img-zoomable"}
+![36.webp]({{ site.url }}/blog/img/linux-regex/36.webp){:class="responsive img-zoomable"}
 
 ### **`[:digit:]`**
 
 Yalnızca rakam desenleri ile eşleşme sağlar.
 
-![37.webp]({{ site.url }}/blog/img/linux-Regex/37.webp){:class="responsive img-zoomable"}
+![37.webp]({{ site.url }}/blog/img/linux-regex/37.webp){:class="responsive img-zoomable"}
 
 Bu tanımlama `[0-9]` ile aynıdır.
 
-![38.webp]({{ site.url }}/blog/img/linux-Regex/38.webp){:class="responsive img-zoomable"}
+![38.webp]({{ site.url }}/blog/img/linux-regex/38.webp){:class="responsive img-zoomable"}
 
 ### **`[:blank:]`**
 
@@ -267,7 +267,7 @@ Bakın son satır getirilmedi çünkü son sarıda hiç boşluk bulunmuyordu.
 
 Çeşitli (`! " # $ % & ' ( ) * + , - . / : ; < = > ? @ [ \ ] ^ _ ` { | } ~`) noktalama işaretlerini barındıran desenler ile eşleşme sağlar.
 
-![39.webp]({{ site.url }}/blog/img/linux-Regex/39.webp){:class="responsive img-zoomable"}
+![39.webp]({{ site.url }}/blog/img/linux-regex/39.webp){:class="responsive img-zoomable"}
 
 Ben tüm hepsinden bahsetmedim, eğer tüm sınıfları öğrenmek isterseniz [buraya](https://www.gnu.org/software/sed/manual/html_node/Character-Classes-and-Bracket-Expressions.html#Character-Classes-and-Bracket-Expressions) göz atabilirsiniz. 
 
@@ -279,11 +279,11 @@ Ayrıca daha önce bahsettiğimiz gibi basit Regex üzerinde kullanmak için ter
 
 Örneğin ben “b” karakterinin bir kez veya daha fazla kez tekrar ettiği desenleri filtrelemek istiyorum.
 
-![19.webp]({{ site.url }}/blog/img/linux-Regex/19.webp){:class="responsive img-zoomable"}
+![19.webp]({{ site.url }}/blog/img/linux-regex/19.webp){:class="responsive img-zoomable"}
 
 Bakın tam olarak “b” karakterinin bir veya daha fazla gez geçtiği desenler filtrelenmiş oldu. Eğer artı işareti yerine yıldız kullanacak olsaydık, “b” karakterinin sıfır veya daha fazla kez geçtiği desenler filtrelenecekti.
 
-![20.webp]({{ site.url }}/blog/img/linux-Regex/20.webp){:class="responsive img-zoomable"}
+![20.webp]({{ site.url }}/blog/img/linux-regex/20.webp){:class="responsive img-zoomable"}
 
 Bakın “ac” ifadesinde “b” karakteri sıfır kez geçtiği için için yıldız karakteri bu ifadeyi de dahil etti. İşte artı ile yıldız karakteri arasındaki fark tam olarak bu örneklerde ele aldığımız durum.
 
@@ -293,7 +293,7 @@ Kendisinden önceki karakterin sıfır veya yalnızca 1 kez tekrar ettiği desen
 
 Denemek için “b” karakterinden sonra bu düzenli ifadeyi kullanabiliriz. 
 
-![21.webp]({{ site.url }}/blog/img/linux-Regex/21.webp){:class="responsive img-zoomable"}
+![21.webp]({{ site.url }}/blog/img/linux-regex/21.webp){:class="responsive img-zoomable"}
 
 “ac” ifadesinde sıfır, “abc” ifadesinde ise yalnızca bir adet “b” karakteri bulunduğu için yalnızca bu iki ifade filtrelenmiş oldu. “b” karakterinin birden fazla kez tekrar ettiği desenler gördüğünüz gibi dahil edilmedi.
 
@@ -303,19 +303,19 @@ Süslü parantezleri kullanarak bir karakterin üst üste tekrar sayısını bel
 
 Örneğin ben peşi sıra tam olarak 3 kez “a” karakterinin geçtiği desenleri filtrelemek istiyorum.
 
-![22.webp]({{ site.url }}/blog/img/linux-Regex/22.webp){:class="responsive img-zoomable"}
+![22.webp]({{ site.url }}/blog/img/linux-regex/22.webp){:class="responsive img-zoomable"}
 
 Bakın yalnızca tam olarak 3 kez üst üste tekrar eden “a” karakterleri filtrelenmiş oldu.
 
 Tam sayı yerine aralık da belirtebiliriz. Bunun için sayıların arasına virgül koymamız yeterli. Ben 2 ile 4 arasında kez tekrar eden yani 2, 3 veya 4 kez üst üste tekrar edenleri filtrelemek istiyorum.
 
-![23.webp]({{ site.url }}/blog/img/linux-Regex/23.webp){:class="responsive img-zoomable"}
+![23.webp]({{ site.url }}/blog/img/linux-regex/23.webp){:class="responsive img-zoomable"}
 
 Bakın hem 2 hem 3 hem de 4 kez tekrar edenler filtrelenmiş oldu.
 
 Ayrıca minimum veya daha fazla tekrar sayısını da belirtebiliriz. Bunun için minimum sayıdan sonra virgül koymamız yeterli. Ben örnek olması için minimum 3 kez tekrar edenleri filtreleyecek şekilde komutumu giriyorum. 
 
-![24.webp]({{ site.url }}/blog/img/linux-Regex/24.webp){:class="responsive img-zoomable"}
+![24.webp]({{ site.url }}/blog/img/linux-regex/24.webp){:class="responsive img-zoomable"}
 
 Bakın minimum 3 yani 3, 4 ve 5 kez tekrar eden desenler filtrelenmiş oldu.
 
@@ -323,7 +323,7 @@ Bakın minimum 3 yani 3, 4 ve 5 kez tekrar eden desenler filtrelenmiş oldu.
 
 Yada koşulu belirtmek için kullanabiliyoruz. Örneğin “a” ya da “b” ifadelerini filtrelemek için kullanabiliriz.
 
-![25.webp]({{ site.url }}/blog/img/linux-Regex/25.webp){:class="responsive img-zoomable"}
+![25.webp]({{ site.url }}/blog/img/linux-regex/25.webp){:class="responsive img-zoomable"}
 
 # Genişletilmiş Regex
 
@@ -331,13 +331,13 @@ Basit Regex ile genişletilmiş Regex arasındaki tek farkın `?` `+` `{}` ve `|
 
 Örneğin ben `grep` aracının desteğini sorgulamak için `grep —help` komutu ile yardım bilgisine göz atıyorum.
 
-![40.webp]({{ site.url }}/blog/img/linux-Regex/40.webp){:class="responsive img-zoomable"}
+![40.webp]({{ site.url }}/blog/img/linux-regex/40.webp){:class="responsive img-zoomable"}
 
 Bakın genişletilmiş Regex için `-E` seçeneğini veya `—extended-Regexp` seçeneğini özellikle kullanmamız gerektiği burada belirtiliyor. 
 
 Ben de genişletilmiş Regex’ten faydalanmak üzere grep aracıma -E seçeneğini verip komutumu öyle giriyorum.
 
-![41.webp]({{ site.url }}/blog/img/linux-Regex/41.webp){:class="responsive img-zoomable"}
+![41.webp]({{ site.url }}/blog/img/linux-regex/41.webp){:class="responsive img-zoomable"}
 
 Görebildiğiniz gibi `-E` seçeneği yokken genişletilmiş Regex kuralları tanınmıyor. İşte benzer durum sistem üzerinde kullanacağınız herhangi bir araç için de aynen geçerli. Desteğini kontrol edin ve nasıl kullanabileceğinizi öğrenip komutunuzu uygun şekilde girin.
 
