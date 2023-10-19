@@ -84,13 +84,11 @@ Kesinlikle önerilmiyor olsa da yorum satırı olarak iki nokta üst üste kulla
 Genelde yorum alanında birden fazla satıra yayılan yorumları kolayca ekleyebilmek için kullanılıyor.
 
 ```bash
-# This is a simple comment
+# Bu standart bir yorum satırı
 : <<YORUM
-
 Bu çok satırlı bir yorumdur. 
-Bazı karmaşık yorumlar için çok kullanışlıdır.
-Bakın alt alta birden fazla satır yorum ekleyebiliyoruz.
-
+Uzun yorumlar oluşturmak için kullanışlı bir yöntem.
+Ayrıca bakın alt alta birden fazla satır yorum ekleyebiliyoruz.
 YORUM
 ```
 
