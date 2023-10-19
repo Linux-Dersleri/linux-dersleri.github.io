@@ -7,7 +7,14 @@
   {% assign author = site.data.authors[page.author] %}{% else %}{% assign author = site.owner %}
 {% endif %}
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-34XLKDXXD3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-34XLKDXXD3');
+</script>
 {% if site.owner.google.verify %}<!-- Webmaster Tools verfication -->
 <meta name="google-site-verification" content="{{ site.owner.google.verify }}">{% endif %}
 {% if site.owner.bing-verify %}<meta name="msvalidate.01" content="{{ site.owner.bing-verify }}">{% endif %}
