@@ -11,8 +11,8 @@
         // LinkedIn share button functionality
         var linkedinShareButton = document.getElementById("linkedinShareButton");
         linkedinShareButton.addEventListener("click", function() {
-          var linkedinText = "{{ site.url }}{{ page.url }}&title={{ page.title }}&summary={{ page.title }} içeriğini faydalı bulduğum için paylaşmak istedim."
+          var linkedinText = "{{ site.url }}{{ page.url }}&summary={{ page.title }} içeriğini faydalı bulduğum için paylaşmak istedim."
           var postUrl = "https://www.linkedin.com/sharing/share-offsite/?mini=true&url=" + encodeURIComponent(linkedinText);
           window.open(postUrl, "_blank");
         });
-        </script>
+        </script>https://www.linkedin.com/sharing/share-offsite/?url=https://www.linuxdersleri.net/test.html&summary=%23Linux%20Dersleri%20platformundaki%20testte%20251%2F50%20skor%20yapt%C4%B1m.%20Linux%20bilginizi%20test%20etmek%20isterseniz%20g%C3%B6z%20at%C4%B1n.https%3A%2F%2Fwww.linuxdersleri.net%2Ftest
