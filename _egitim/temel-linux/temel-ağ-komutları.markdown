@@ -13,7 +13,7 @@ toc: true
 
 Bu bölüm içerisinde ağ hakkında çok temel düzeyde bilgi almamızı sağlayan bazı araçlardan bahsedeceğiz. Ancak tabii ki ağ konusu başlı başına öğrenilmesi gereken bir konu olduğu için bu bölümde ağ temellerine değinmeyeceğiz. Eğer network konusunda temel seviye bilginiz yoksa, mevcut platformda ağ temellerine giriş eğitimi mevcut. Bu bölümden önce ağ temellerini öğrenmeniz, bu bölümden alacağınız verimi kesinlikle arttıracaktır. 
 
-Ben anlatımlar sırasında ağ temelleri eğitimini bitirdiğinizi ya da halihazırda ağ temellerini bildiğinizi varsayarak açıklamalar yapıyor olacağım. Bu eğitim standart Linux kullanıcılarını da kapsadığı için zaten yalnızca herkesin işine yarayabilecek bazı ağ araçları hakkında çok kısaca bilgi ediniyor olacağız.
+Bu bölümdeki açıklamalar, mevcut platformdaki "[ağ temelleri]({{ site.url }}/temel-network){:target="_blank"}" eğitimini bitirdiğinizi ya da halihazırda ağ temellerini bildiğinizi varsayarak açıklamalar yapıyor olacağım. Bu eğitim standart Linux kullanıcılarını da kapsadığı için zaten yalnızca herkesin işine yarayabilecek bazı ağ araçları hakkında çok kısaca bilgi ediniyor olacağız.
 
 # ping
 
@@ -41,15 +41,15 @@ rtt min/avg/max/mdev = 16.638/17.020/17.450/0.330 ms
 
 Çıktılara bakacak olursak, verdiğimiz www.google.com domain adresi çözümlenip “216.58.212.4” ip adresi bulunmuş ve bu adrese küçük bir data paketi gönderilmiş. Göndermiş olduğumuz pakete karşılık olarak da www.google.com adresi 64 byte’lık yanıt paketleri göndermiş. 
 
-**icmp_seq** kısmı kaçıncı paket olduğunu belirtiyor, gördüğünüz gibi sıralı şekilde paketler ulaştığı için paket kaybı olmadığını anlayabiliyoruz. 
+**icmp_seq**(ICMP Sequence) kısmı, kaçıncı paket olduğunu belirtiyor. Çıktılardan görüldüğü gibi sıralı şekilde paketler ulaştığı için paket kaybı olmadığını anlayabiliyoruz. 
 
-**TTL**, “**t**ime **t**o **l**ive” yani “yaşam süresi” anlamına geliyor. Yanıt oluşturan sunucular pakete belirli sayıda bir TTL değeri atarlar. Bu değer, her bir yönlendirme işleminde 1 azaltılır. Bu sayede kaç yönlendirme yapıldığı bilinebilir. Ayrıca paketlerin döngüye girip sonsuza kadar yönlendirilerek ağ trafiği oluşturması da önlenmiş olur. TTL değerleri varsayılan olarak “64” “128” “255” gibi değerler tanımlanabiliyor. `ping` aracı üzerinden doğrudan sunucunun varsayılan TTL değerini bilemesek de aldığımız bu çıktıdan bu değerin 128 olduğunu tahmin edebiliyoruz. 
+**TTL**, “**t**ime **t**o **l**ive” yani “yaşam süresi” anlamına geliyor. Hat üzerinde taşınan paket, her yönlendiriciye(router) geldiğinde ilgili yönlendirici TTL değerini 1 azaltıp paketi bir sonraki yönlendiriciye aktarır. Bu değer, her bir yönlendirme işleminde 1 azaltılır. Bu sayede kaç yönlendirme yapıldığı bilinebilir. Ayrıca paketlerin döngüye girip sonsuza kadar yönlendirilerek ağ trafiği oluşturması da önlenmiş olur. Varsayılan TTL değerleri olarak “64” “128” “255” gibi değerlerle tanımlanabiliyor. Özellikle lokal ağdaki yönlendirme durumlarını teşhis etmek için bu değere bakılabilir. TTL değeri, yönlendirmeler hakkında bilgi sunuyor olsa da daha çok, paketlerin sonsuz döngüye girmesini engelleme amacı taşıyor. Zira TTL değeri hedef adrese ve aradaki yönlendiricilerin davranışlarına göre değişiklik gösterebiliyor.
 
-**time** kısmı, bu yanıtın ne kadar sürede bize ulaştığını belirtir. Bu süre paketin gönderilip, yanıtın alınması sırasında geçen sürenin toplamdır. Bu sayede sunucu ile aramızdaki gecikmeyi öğrenebiliyoruz.
+**time** kısmı, bu yanıtın ne kadar sürede bize ulaştığını belirtir. Bu süre, paketin gönderilip yanıtın alınması sırasında geçen sürenin toplamıdır. Bu sayede sunucu ile aramızdaki gecikmeyi öğrenebiliyoruz.
 
-Sondaki çıktılarda da genel istatistikler belirtilmiş. Zaten İngilizce olarak açıkça belirtildiği için 5 paketin iletildiği, 5 tanesinin hedefine ulaştığı, yüzde 0 paket kaybı olduğu ve ping işlemi sırasında geçen süreyi çıktılarda görebiliyoruz.
+Sondaki çıktılarda da genel istatistikler belirtilmiş. Zaten İngilizce olarak açıkça belirtildiği için; 5 paketin iletildiği, 5 tanesinin hedefine ulaştığı, yüzde 0 paket kaybı olduğu ve ping işlemi sırasında geçen süreyi çıktılarda görebiliyoruz.
 
-Buradaki **RTT** ifadesi (**R**ound-**T**rip **T**ime), yani veri paketlerinin gönderilip geri dönme süresini ifade ediyor. Bu satırda, çıktılarda yer alan time değerlerinin en kısası, ortalaması, en uzunu ve ortalama sapma değeri ayrıca belirtiliyor. 
+Buradaki **RTT** ifadesi (**R**ound-**T**rip **T**ime), yani veri paketlerinin gönderilip geri dönme süresini ifade ediyor. Bu satırda, çıktılarda yer alan **time** değerlerinin en kısası, ortalaması, en uzunu ve ortalama sapma değeri ayrıca belirtiliyor. 
 
 `ping` aracının en temel kullanımı bu şekilde. Diğer seçeneklerini görmek için `ping —help` komutunu kullanabilirsiniz.
 
@@ -67,11 +67,11 @@ PING www.linuxdersleri.net (185.199.109.153) 56(84) bytes of data.
 rtt min/avg/max/mdev = 15.550/15.922/16.295/0.372 ms
 ```
 
-`ping` komutu varsayılan olarak ipv4 adresleri üzerinde çalışıyor. Eğer ipv6 adreslerle çalışacaksanız `-6` seçeneği ile bunu özellikle belirtmeniz gerekiyor. Elbette ipv6 adresleri üzerinde işlem yapıyorken, internet servis sağlayıcınızın da bu adreslere destek veriyor olması gerek.
+`ping` komutu varsayılan olarak ipv4 adresleri üzerinde çalışıyor. Eğer ipv6 adresleriyle çalışacaksanız `-6` seçeneği ile bunu özellikle belirtmeniz gerekiyor. Elbette ipv6 adresleri üzerinde işlem yapıyorken, internet servis sağlayıcınızın da bu adreslere destek veriyor olması gerek.
 
 # ip Komutu
 
-`ip` komutu ağ arayüzleri hakkında bilgi almak ve yapılandırmak için kullanabildiğimiz çok kullanışlı bir araç. Aracımızın çok fazla seçeneği olduğu için öncelikle sahip olduğu seçenekleri görmek için yalnızca `ip` komutunu girelim.
+`ip` komutu, ağ arayüzleri hakkında bilgi almak ve yapılandırmak için kullanabildiğimiz çok kullanışlı bir araç. Aracımızın çok fazla seçeneği olduğu için öncelikle sahip olduğu seçenekleri görmek için yalnızca `ip` komutunu girelim.
 
 ```bash
 ┌──(taylan㉿linuxdersleri)-[~]
@@ -141,9 +141,9 @@ Eğer ağ arayüzleri tarafından gerçekleştirilen paket transferleri hakkınd
           3373      34      0       0       0       0
 ```
 
-Buradaki çıktılarda yer alan “lo” ifadesi localhost ya da local loopback olarak bilinen ağ arayüzünü temsil ediyor. Bu arayüz, sayesinde mevcut cihazın kendi kendine ağ trafiği oluşturması ve işlemesi mümkün oluyor. Bu sayede örneğin bir websitesi geliştirirken gerçek ağ trafiği olmadan uygulamanın kendi içinde nasıl çalıştığını test edebiliyoruz. Ayrıca sistem üzerindeki pek çok araç da lokal adrese benzer sebeplerle ihtiyaç duyuyor.
+Buradaki çıktılarda yer alan “lo” ifadesi localhost ya da local loopback olarak bilinen ağ arayüzünü temsil ediyor. Bu arayüz, sayesinde mevcut cihazın kendi kendine ağ trafiği oluşturması ve işlemesi mümkün oluyor. Bu sayede örneğin bir websitesi geliştirirken gerçek ağ trafiği olmadan uygulamanın nasıl çalıştığını test edebiliyoruz. Ayrıca sistem üzerindeki pek çok araç da lokal adrese benzer sebeplerle ihtiyaç duyuyor.
 
-İkinci ağ arayüzü olan “eth0” ise ethernet bağlantısını temsil eden ağ arayüzüdür. Ben modemime ethernet kartıma bağlı olan kablo ile bağlı olduğum için ağ trafiğimi ethernet arayüzü üzerinden sağlıyorum. 
+İkinci ağ arayüzü olan “eth0” ise ethernet bağlantısını temsil eden ağ arayüzüdür. Ben modemime, ethernet kartıma bağlı olan kablo ile bağlı olduğum için ağ trafiğimi "eth0" olarak temsil edilen "ethernet arayüzü" üzerinden sağlıyorum. 
 
 Eğer sistemime Wi-Fi aygıtı bağlı olsaydı “wlan0” ağ arayüzünü de bu çıktılarda görüyor olacaktım. Bu durumu teyit etmek için sistemime Wifi adaptörünü bağladıktan sonra tekrar `ip a` komutunu giriyorum. 
 
@@ -166,9 +166,9 @@ Eğer sistemime Wi-Fi aygıtı bağlı olsaydı “wlan0” ağ arayüzünü de 
     link/ether 5e:ba:fb:fb:58:23 brd ff:ff:ff:ff:ff:ff permaddr d4:6e:0e:02:0e:0d
 ```
 
-Bakın bu kez wlan0 arayüzü de eklenmiş oldu. İsimlendirme sayesinde hangi tür ağ arayüzü olduğunu ve kaçıncı ağ arayüzü olduğunu da rahatlıkla görebiliyoruz. Tahmin edebileceğiniz gibi buradaki eth ve wlan ifadeleri arayüzü tipini belirtiyorken, bitişik şekilde yazılan sayılar ise kaçıncı ağ arayüzü olduğunu belirtiyor. Örneğin benim sistemimde 3 tane ethernet ağ kartı bağlı olsaydı buradaki çıktılarda “eth0”, “eth1” ve “eth2” şeklinde sırasıyla isimlendirilmiş ethernet arayüzlerini görecektik. 
+Bakın bu kez wlan0 arayüzü de eklenmiş oldu. İsimlendirme sayesinde hangi tür ağ arayüzü olduğunu ve kaçıncı ağ arayüzü olduğunu da rahatlıkla görebiliyoruz. Buradaki "eth" ve "wlan" ifadeleri arayüz tipini belirtiyorken, bitişik şekilde yazılan sayılar ise kaçıncı ağ arayüzü olduğunu belirtiyor. Örneğin benim sistemimde 3 tane ethernet ağ kartı(network interface card) bağlı olsaydı buradaki çıktılarda “eth0”, “eth1” ve “eth2” şeklinde sırasıyla isimlendirilmiş ethernet arayüzlerini görecektik. 
 
-Ayrıca örneğin Rocky Linux üzerinde bu ağ arayüzü isimlendirmesi biraz daha farklı. Hemen görmek için `ip a` komutunu Rocky üzerinde girelim. 
+Ayrıca örneğin Red Hat tabanlı dağıtımlar üzerinde bu ağ arayüzü isimlendirmesi biraz daha farklı. Hemen görmek için `ip a` komutunu Rocky Linux üzerinde girelim. 
 
 ```bash
 [pc@linuxdersleri ~]$ ip a
@@ -255,7 +255,7 @@ Bu çıktılarda, **eth0** ağ arayüzünün **192.168.1.1** adresini **getway**
 
 Yani böylelikle 192.168.1.0/24 ağında 192.168.1.11 ip adresine sahip bir ethernet bağlantısına sahip olduğumu ve harici bir ağ ile iletişime geçmem gerektiğinde default getway olan 192.168.1.1 ip adresine sahip router ile iletişim kurulduğunu buradaki çıktılara bakarak anlayabiliyorum.
 
-Neticede `ip` aracı sayesinde ağ ve ağ arayülzeri hakkında gerekli olan pek çok bilgiye erişmemiz mümkün oluyor. Üstelik aslında `ip` aracını yalnızca bilgi almak için değil, bizzat ip ve route gibi bilgileri düzenlemek için de kullanabiliyoruz. Yani yeni ip adresleri veya yönlendirme(routing) bilgileri ekleyip kaldırmamız mümkün. **Fakat ip aracı ile gerçekleştirilecek olan bu değişiklikler sistem ya da ağ arayüzü yeniden başlatıldığında sıfırlanmış oluyor**. Bu sebeple kalıcı değişimler için alternatif araçlar tercih ediliyor. 
+Neticede `ip` aracı sayesinde ağ ve ağ arayüzleri hakkında gerekli olan pek çok bilgiye erişmemiz mümkün oluyor. Üstelik `ip` aracını yalnızca bilgi almak için değil, bizzat ip ve route gibi bilgileri düzenlemek için de kullanabiliyoruz. Yani yeni ip adresleri veya yönlendirme(routing) bilgileri ekleyip kaldırmamız mümkün. **Fakat ip aracı ile gerçekleştirilecek olan bu değişiklikler sistem ya da ağ arayüzü yeniden başlatıldığında sıfırlanmış oluyor**. Bu sebeple kalıcı değişimler için alternatif araçlar tercih ediliyor. 
 
 Temelde `ip` aracının kullanımı bu şekilde. 
 
@@ -277,7 +277,7 @@ Burada bağlı olduğum ağ arayüzü gözüküyor. Benim sistemimde şu an yaln
 
 ![nmtui-connection-add.png]({{ site.url }}/egitim/temel-linux/network/nmtui-connection-add.webp){:class="responsive img-zoomable"}
 
-Buradaki listeden, hangi türde bağlantı tanımlanacaksa onu seçip gerekli konfigürasyonları gerçekleştirmemiz mümkün. Örneğin Wi-Fi bağlantısı gerçekleştirilecekse, bu seçenek seçilip, gerekli aygıt ve ağ bilgililerinin tanımlanması mümkün. 
+Buradaki listeden, hangi türde bağlantı tanımlanacaksa onu seçip gerekli konfigürasyonları gerçekleştirmemiz mümkün. Örneğin Wi-Fi bağlantısı gerçekleştirilecekse, bu seçenek seçilip, gerekli aygıt ve ağ bilgilerinin tanımlanması mümkün. 
 
 ![nmtui-connection-add-wifi.png]({{ site.url }}/egitim/temel-linux/network/nmtui-connection-add-wifi.webp){:class="responsive img-zoomable"}
 
@@ -287,7 +287,7 @@ Yeni ağ bağlantısı tanımlamak yerine mevcut olan bağlantıyı konfigüre e
 
 ![nmtui-connection-edit.png]({{ site.url }}/egitim/temel-linux/network/nmtui-connection-edit.webp){:class="responsive img-zoomable"}
 
-Düzenleme penceresi üzerinde, ilgili bağlantının türüne göre tanımlayabileceğimiz seçenekler gözüküyor. Örneğin ben ethernet bağlantısındaki IPv4 ip adreslerinin otomatik olarak alınması yerine kendim elle girmek istersem bu seçeneği değiştirmek üzere <kbd>enter</kbd> ile seçeneğe tıklayabilirim.
+Düzenleme penceresi üzerinde, ilgili bağlantının türüne göre tanımlayabileceğimiz seçenekler gözüküyor. Örneğin ben ethernet bağlantısındaki IPv4 ip adreslerinin otomatik olarak alınması yerine kendim elle girmek istersem, bu seçeneği değiştirmek üzere <kbd>enter</kbd> ile seçeneğe tıklayabilirim.
 
 ![nmtui-connection-edit-ipv4.png]({{ site.url }}/egitim/temel-linux/network/nmtui-connection-edit-ipv4.webp){:class="responsive img-zoomable"}
 
@@ -299,7 +299,7 @@ Artık buradan istediğim ip bilgilerini girmem mümkün. Bu değişimleri onayl
 
 ![nmtui-connection-activate.png]({{ site.url }}/egitim/temel-linux/network/nmtui-connection-activate.webp){:class="responsive img-zoomable"}
 
-Buradan ilgili bağlantıya <kbd>enter</kbd> ile tıkladığınızda aktif ise pasif, pasif ise aktif forma geçecektir. Yani buradan ilgili ağ arayüzünü açıp kapatmanız mümkün.
+Buradan ilgili bağlantıya <kbd>enter</kbd> ile tıkladığınızda aktif ise pasif, pasif ise aktif forma geçecektir. Yani buradan, ilgili ağ arayüzünü açıp kapatmanız mümkün.
 
 ![nmtui-connection-activate-on-off.png]({{ site.url }}/egitim/temel-linux/network/nmtui-connection-activate-on-off.webp){:class="responsive img-zoomable"}
 
@@ -309,11 +309,11 @@ hostname bilgisini yani cihazın ağ üzerindeki ismini değiştirmek isterseniz
 
 Buradan dilediğiniz bir hostname bilgisi girip “**OK**” ile onaylayabilirsiniz. 
 
-⚠️ Dikkat: Ben menüde yer aldığı için burada hostname değişiminden bahsediyorum fakat sizin şu an hostname bilgisini değiştirmenizi kesinlikle önermiyorum. Çünkü hostname değişimi için uygulanması gereken ek konfigürasyonlar da mevcut. İleride hostname konusundan ayrıca bahsettiğimizde daha bilinçli şekilde değişim yapabiliyor olacaksınız. Ben burada yalnızca bir alternatif olduğu için bu değişimden bahsediyorum fakat şimdilik siz hostname bilgisini değiştirmeyin. Aksi halde sistem yönetimi noktasında sorun yaşamanız kaçınılmaz olur.
+<p class="sari"><strong>⚠️ Dikkat:</strong> Ben menüde yer aldığı için burada hostname değişiminden bahsediyorum fakat sizin şu an hostname bilgisini değiştirmenizi kesinlikle önermiyorum. Çünkü hostname değişimi için uygulanması gereken ek konfigürasyonlar da mevcut. İleride hostname konusundan ayrıca bahsettiğimizde daha bilinçli şekilde değişim yapabiliyor olacaksınız. Ben burada yalnızca bir alternatif olduğu için bu değişimden bahsediyorum fakat şimdilik siz hostname bilgisini değiştirmeyin. Aksi halde sistem yönetimi noktasında sorun yaşamanız kaçınılmaz olur.</p>
 
 ![nmtui-hostname-set.png]({{ site.url }}/egitim/temel-linux/network/nmtui-hostname-set.webp){:class="responsive img-zoomable"}
 
-Bu noktada sizden yetkili olduğunuzu kanıtlamanız için parola bilgisi istenebilir. Değişim için parolanızı girin. 
+Hostname değişimi sırasında, yetkili olduğunuzu kanıtlamanız için parola bilgisi istenebilir. Değişim için parolanızı girin. 
 
 ![nmtui-hostname-set-passwd.png]({{ site.url }}/egitim/temel-linux/network/nmtui-hostname-set-passwd.webp){:class="responsive img-zoomable"}
 
@@ -321,7 +321,7 @@ Son olarak tüm işlerinizi bitirdiğinizde aracı kapatmak üzere “**Quit**�
 
 ![nmtui-quit.png]({{ site.url }}/egitim/temel-linux/network/nmtui-quit.webp){:class="responsive img-zoomable"}
 
-Ağ konfigürasyonları için ihtiyaç duyabileceğiniz temel işlemler için `nmtui` son derece kullanışlı bir araç. 
+İhtiyaç duyabileceğiniz temel ağ konfigürasyonları için `nmtui` son derece kullanışlı bir araç. 
 
 Eğer benzer konfigürasyonları komut satırı üzerinden gerçekleştirmek isterseniz `nmcli` aracını da kullanabilirsiniz. Fakat temel kullanımda `nmtui` çok daha kolay olduğu için daha çok tercih ediliyor. `nmcli` aracını kullanmak istiyorsanız, temel seçenekler için yardım sayfasına göz atabilirsiniz. 
 
@@ -422,7 +422,7 @@ Aug 22 11:56:07 linuxdersleri sshd[23363]: Server listening on :: port 22.
 Aug 22 11:56:07 linuxdersleri systemd[1]: Started OpenBSD Secure Shell server.
 ```
 
-SSH servisini başlatmış olduk. Artık ssh ile bu sunucuya bağlanmamız mümkün. Ben denemek için aynı lokal ağda bulunan Windows makinesi üzerinden, Linux sunucuma bağlantı gerçekleştireceğim. Bunun için Windows powershell aracını çalıştırıp `ssh kullanıcı-adı@sunucu-ip` şeklinde komutumu girmem gerek. SSH bağlantısı için “putty” gibi çeşitli araçları kullanabiliyoruz fakat ben Windows powershell tercih ediyorum. Sunucuya bağlanabilmek için öncelikle sunucunun ip adresini biliyor olmamız gerek. Ben öğrenmek için Linux makineme `ip a` komutunu giriyorum.
+SSH servisini başlatmış olduk. Artık ssh ile bu sunucuya bağlanmamız mümkün. Ben denemek için aynı lokal ağda bulunan Windows makinesi üzerinden, Linux sunucuma bağlantı gerçekleştireceğim. Bunun için Windows powershell aracını çalıştırıp `ssh kullanıcı-adı@sunucu-ip` şeklinde komutumu girmem gerek. SSH bağlantısı için “putty” gibi çeşitli alternatif araçları da kullanabiliyoruz fakat ben Windows powershell tercih ediyorum. Sunucuya bağlanabilmek için öncelikle sunucunun ip adresini biliyor olmamız gerek. Ben öğrenmek için Linux makineme `ip a` komutunu giriyorum.
 
 ```bash
 ┌──(taylan㉿linuxdersleri)-[~]
@@ -476,7 +476,7 @@ Last login: Mon Aug 21 02:52:28 2023
 └─$
 ```
 
-Parolamı doğru yazdığım için Linux sunucusu üzerindeki taylan kullanıcı hesabında Windows powershell üzerinden oturum açmış oldum. Teyit etmek için `whoami` komutunu girebiliriz.
+Parolamı doğru yazdığım için Linux sunucusu üzerindeki taylan kullanıcı hesabında, Windows powershell üzerinden oturum açmış oldum. Teyit etmek için `whoami` komutunu girebiliriz.
 
 ```bash
 ┌──(taylan㉿linuxdersleri)-[~]
@@ -488,7 +488,7 @@ Gördüğünüz gibi “taylan” çıktısını aldım yani taylan kullanıcı 
 
 Artık böylelikle Windows üzerinden güvenli şekilde Linux makinemi kontrol edebilirim. Aramızdaki tüm bağlantı şifrelendiği için veri trafiğini izleyen hiç kimse trafiği analiz etme noktasında güvenlik riski oluşturamaz. 
 
-İşte bu yöntem sayesinde fiziksel olarak yanında olmamıza gerek kalmadan sunuculularımızı uzaktan herhangi bir cihaz ile yönetebiliyoruz. Örneğin telefonunuz üzerinden de sunucunuza SSH bağlantısı gerçekleştirebilirsiniz. 
+İşte bu yöntem sayesinde fiziksel olarak yanında olmamıza gerek kalmadan, sunuculularımızı uzaktan herhangi bir cihaz ile yönetebiliyoruz. Örneğin telefonunuz üzerinden de sunucunuza SSH bağlantısı gerçekleştirebilirsiniz. 
 
 Sunucuda işiniz bittiğinde `exit` komutu ile mevcut kabuğu kapatmak suretiyle ssh bağlantısını sonlandırabilirsiniz. 
 
@@ -499,7 +499,7 @@ logout
 Connection to 192.168.1.11 closed.
 ```
 
-SSH bağlantısının en temel kullanımı bu şekilde. SSH konusunda anahtar yönetimi ve güvenlik sıkılaştırmaları gibi ek detaylar mevcut fakat temel eğitim için ele aldığımız bilgiler yeterli. 
+SSH bağlantısının en temel kullanımı bu şekilde. SSH konusunda "anahtar yönetimi" ve "güvenlik sıkılaştırmaları" gibi ek detaylar mevcut fakat temel eğitim için ele aldığımız bilgiler yeterli. 
 
 Pek çok araç SSH sayesinde güvenli şekilde işlevlerini yerine getirebiliyor. Yani ssh kullanımı yalnızca burada ele aldığımız şekilde karşımıza çıkmıyor. Örneğin sunucular arasında güvenli şekilde dosya kopyalamak üzere ssh protokolünden yararlanan `scp` aracını kullanabiliyoruz.
 
@@ -582,7 +582,7 @@ Hedefteki kullanıcı hesabının parolasını doğru girdiğim için gördüğ�
 ben kali linux
 ```
 
-Bakın dosya güvenli şekilde hedefe taşınmış oldu. Bu yaklaşımı dilediğiniz dosya türü ve boyutunda uygulayabilirsiniz. 
+Bakın dosya güvenli şekilde hedefe taşınmış oldu. Bu yaklaşımı, dilediğiniz dosya türü ve boyutunda uygulayabilirsiniz. 
 
 Ayrıca mevcut makinden hedef makineye gönderilebileceği gibi, hedefteki makineden mevcut makineye de dosya çekilebilir.
 
@@ -613,7 +613,7 @@ Gördüğünüz gibi mevcut makineye, hedef makineden dosya çekmeyi başarmış
 
 # wget
 
-`wget`, “**w**eb **get**” ifadesinin kısaltmasından gelen, URL üzerinden dosya indirmeyi mümkün kulan bir araçtır. Ben örnek olması için Linux Dersleri dokümantasyon kaynağı olan Github reposundaki ***README*** dosyasını bilgisayarıma indirmek istiyorum. Bunun için `wget` komutundan sonra indirmek istediğim dosyayı barındıran URL adresini eklemem yeterli.
+`wget`, “**w**eb **get**” ifadesinin kısaltmasından gelen, URL üzerinden dosya indirmeyi mümkün kılan bir araçtır. Ben örnek olması için Linux Dersleri dokümantasyon kaynağı olan Github reposundaki ***README*** dosyasını bilgisayarıma indirmek istiyorum. Bunun için `wget` komutundan sonra indirmek istediğim dosyayı barındıran URL adresini eklemem yeterli.
 
 ```bash
 ┌──(taylan㉿linuxdersleri)-[~]
@@ -755,7 +755,7 @@ Name:   www.google.com
 Address: 2a00:1450:4017:80f::2004
 ```
 
-Gördüğünüz gibi www.google.com adresinin ip adresi çözümlenmiş oldu. Çıktıların başında, bu sorgunun 192.168.1.1 adresindeki DNS hizmeti sayesinde gerçekleştirilmiş olduğunu da görebiliyoruz. Yani DNS hizmetinin de aslında bizim “default getway” olarak kullanılan modemimiz tarafından sağlandığını görmüş olduk. Default getway adresinizi teyit etmek isterseniz `ip route` komutunu girebileceğinizi biliyorsunuz. 
+Gördüğünüz gibi www.google.com adresinin ip adresi çözümlenmiş oldu. Çıktıların başında, bu sorgunun 192.168.1.1 adresindeki DNS hizmeti sayesinde gerçekleştirilmiş olduğunu da görebiliyoruz. Ayrıca buradaki "#53" tanımı da, bu sorgunun gerçekleştirildiği port numarasını belirtiyor. DNS sunucuları varsayılan olarak 53 numaraları porttan sorgulama istekleri aldığı için bu çıktıyı aldık. Yani DNS hizmetinin de aslında bizim “default getway” olarak kullanılan modemimiz tarafından sağlandığını görmüş olduk. Default getway adresinizi teyit etmek isterseniz `ip route` komutunu girebileceğinizi biliyorsunuz. 
 
 ```bash
 ┌──(taylan㉿linuxdersleri)-[~]
@@ -816,7 +816,7 @@ nameserver 8.8.4.4
 
 ## hostname
 
-Ağ üzerinde ip alabilen cihazlara host denildiğini biliyorsunuzdur. “**hostname**” ifadesi de, lokal ağımızdaki cihazların birbirinden ayrıt edilebilmesini sağlayan isimlendirmedir. Bu isimler sayesine lokal ağdaki cihazların ip adresini hatırlamaya gerek kalmadan doğrudan hostname bilgisi ile, ilgili cihazla iletişime geçebiliyoruz. 
+Ağ üzerinde ip alabilen cihazlara "host" denildiğini biliyorsunuzdur. “**hostname**” ifadesi de, lokal ağımızdaki cihazların birbirinden ayrıt edilebilmesini sağlayan isimlendirmedir. Bu isimler sayesine lokal ağdaki cihazların ip adresini hatırlamaya gerek kalmadan doğrudan hostname bilgisi ile, ilgili cihazla iletişime geçebiliyoruz. 
 
 Öncelikle mevcut cihazımızın ağ üzerindeki ismini öğrenmek üzere `hostnamctl` komutunu girebiliriz. 
 
@@ -857,7 +857,7 @@ Operating System: Kali GNU/Linux Rolling
   Hardware Model: VirtualBox
 ```
 
-hostname bilgisi değişti gördüğünüz gibi fakat ek olarak ***/etc/hosts*** dosyasına da bu değişimi eklememiz gerekiyor. Çünkü ***/etc/hosts*** dosyası yerel olarak adres çözümlemesi sağlayan bir konfigürasyon dosyası. Bu dosyada, bizim kendi makinemizi temsil eden 127.0.1.1 lokal ip adresi bizim hostname adresimiz ile eşleştirilmiş durumda. Bu sayede hostname üzerinden doğrudan makinemizin ip adresi temsil edilmiş oluyor. Bu hostname bilgisini sistem üzerinde pek çok yapı kullandığı için de ***/etc/hosts*** dosyasını düzenlemeden sistemi sorunsuzca kullanmamız mümkün değil. Hemen dosya içeriğine göz atalım.
+hostname bilgisi değişti gördüğünüz gibi fakat ek olarak ***/etc/hosts*** dosyasına da bu değişimi eklememiz gerekiyor. Çünkü ***/etc/hosts*** dosyası yerel olarak adres çözümlemesi sağlayan bir konfigürasyon dosyası. Bu dosyada, bizim kendi makinemizi temsil eden 127.0.1.1 lokal ip adresi, bizim hostname adresimiz ile eşleştirilmiş durumda. Bu sayede hostname üzerinden doğrudan makinemizin ip adresi temsil edilmiş oluyor. Bu hostname bilgisini sistem üzerinde pek çok yapı kullandığı için de ***/etc/hosts*** dosyasını düzenlemeden sistemi sorunsuzca kullanmamız mümkün değil. Hemen dosya içeriğine göz atalım.
 
 ```bash
 ┌──(taylan㉿linuxdersleri)-[~]
@@ -926,7 +926,7 @@ Konsoldaki prompt alanında hala “linuxdersleri” gözüküyor fakat yeni bir
 
 Ağ üzerinde birden fazla sunucu mevcutsa bu sunucuları birbirinden ayırmak için hostname bilgisi kullanılıyor. hostname bilgisine ek olarak bu sunucuların aynı ağda olduğunun temsili için domain adresi de tanımlanabiliyor. Örneğin [linuxdersleri.net](http://linuxdersleri.net) adresi için kullanılan bir web sunucusunun hostname bilgisi “web” olabilir. Ayrıca varsa email sunucusu da “email” hostname ile tanımlanmış olabilir. Bu sayede linuxdersleri.net domain adresi altında hangi amaçla hangi sunucunun kullandığını, ip adreslerini hatırlamamıza gerek kalmadan takip edebiliriz. 
 
-hostname ve domain name bilgisinin bir arada bulunduğu bu tanımlamaya da **FQDN** (**f**ully **q**ualified **d**omain **n**ame) deniyor. Gösterimi de **hostname.domainname** şeklinde aralarındaki tek bir nokta ile ayrılmış isimlerden ibaret. 
+hostname ve domain name bilgisinin bir arada bulunduğu bu tanımlamaya da **FQDN** (**f**ully **q**ualified **d**omain **n**ame) deniyor. Gösterimi de **hostname.domainname** şeklinde, aralarındaki tek bir nokta ile ayrılmış isimlerden ibaret. 
 
 Ben daha açık bir örnek olması için mevcut “kali-makinesi” hostname adresine sahip cihazın domain adresi olarak linuxdersleri.net adresini almasını istiyorum. Bunun için öncelikle ***/etc/hosts*** dosyasında değişiklik yapmak üzere `sudo nano /etc/hosts` komutunu girip tam alan adını(**FQDN)** tanımlıyorum. Değişiklikleri `cat` komutu ile teyit edebiliriz. 
 
@@ -975,11 +975,11 @@ Böylelikle lokal ağdaki hostname “kali-makinesi” olurken, domain bilgisi d
 
 ![hostname-domainname.webp]({{ site.url }}/egitim/temel-linux/network/hostname-domainname.webp){:class="responsive img-zoomable"}
 
-Yani tıpkı bizim websitelerini ziyaret etmek için DNS yardımıyla, domain adresini ip adresine dönüştürüyor olmamız gibidir. Fakat bu işlem lokal ağdaki cihazları birbirinden ayırt etmek ve isimleri üzerinden kolayca onlara ulaşabilmek için kullanılıyor. Örneğin yukarıdaki gibi bir ağda, kali-makinem isimli host, mail hostu ile iletişime geçmek istediğinde [mail.linuxdersleri.net](http://mail.linuxdersleri.net) adresinin ip adresini ağdaki DNS sunucusuna sorar. 
+Yani tıpkı bizim websitelerini ziyaret etmek için DNS yardımıyla, domain adresini ip adresine dönüştürüyor olmamız gibidir. Fakat bu işlem lokal ağdaki cihazları birbirinden ayırt etmek ve isimleri üzerinden kolayca onlara ulaşabilmek için kullanılıyor. Örneğin yukarıdaki gibi bir ağda, "kali-makinem" isimli host, "mail" hostu ile iletişime geçmek istediğinde [mail.linuxdersleri.net](http://mail.linuxdersleri.net) adresinin ip adresini ağdaki DNS sunucusuna sorar. 
 
 ![DNS-request.webp]({{ site.url }}/egitim/temel-linux/network/DNS-request.webp){:class="responsive img-zoomable"}
 
-DNS sunucusu ise, eğer bu adres kendi tablosunda kayıtlı ile ilgili ip adresini yanıt olarak gönderir.
+DNS sunucusu ise, eğer bu adres kendi tablosunda kayıtlı ise ilgili ip adresini yanıt olarak gönderir.
 
 ![DNS-response.webp]({{ site.url }}/egitim/temel-linux/network/DNS-response.webp){:class="responsive img-zoomable"}
 
@@ -989,7 +989,7 @@ Bu yaklaşımın kullanılabilmesi için elbette lokal ağdaki cihazların ortak
 
 ![DNS-multi-network.webp]({{ site.url }}/egitim/temel-linux/network/DNS-multi-network.webp){:class="responsive img-zoomable"}
 
-İşte hostname sayesinde ağ içindeki cihazları birbirinden ayırmak mümkün iken, domain sayesinde de gerektiğinde ağları birbirinden ayırt etmemiz mümkün oluyor. Bu sayede ip adreslerini doğrudan bilmeye gerek kalmadan kısayoldan ilgili cihazı ayırt etmemiz mümkün oluyor.
+İşte hostname sayesinde ağ içindeki cihazları birbirinden ayırmak mümkün iken, domain sayesinde de gerektiğinde ağları birbirinden ayırt etmemiz mümkün oluyor. Bu sayede ip adreslerini doğrudan bilmeye gerek kalmadan kısayoldan ilgili cihaza ulaşabiliyoruz.
 
 Biz bu temel eğitimde DNS sunucusunun nasıl kurulacağını ele almayacağız. Çünkü bu eğitimin amacı herkes için temel Linux bilgisi sağlamak. Fakat merak ediyorsanız kısa bir araştırma ile öğrenebilirsiniz. Burada önemli olan hostname ve domain bilgisinin neden kullanıldığını anlayabilmek. 
 
@@ -1042,7 +1042,7 @@ rtt min/avg/max/mdev = 0.831/1.506/2.722/0.861 ms
 
 Gördüğünüz gibi ***/etc/hosts*** dosyasına eklemiş olduğum “hostname ip” eşleşmesi sayesinde, ben hostname yazdığımda bu hostname ip adresine çözümlenip ilgili ip adresi üzerinden işlem gerçekleştiriliyor. 
 
-Yani harici olarak DNS hizmetine sorulmadan önce sistem kendi içinde bu sorguyu gerçekleştirildiği için, lokal olarak dilediğim ip için dilediğim hostname veya domain bilgisi ekleyebiliyorum. 
+Yani harici olarak DNS hizmetine sorulmadan önce sistem kendi içinde bu sorguyu gerçekleştirdiği için, lokal olarak dilediğim ip için dilediğim hostname veya domain bilgisi ekleyebiliyorum. 
 
 Örneğin spesifik domain veya hostname adresini engellemek istersem bu dosya üzerinden geçersiz bir ip adresi ile tanımlayabilirim. Ben denemek için google.com adresini 127.0.0.1 adresi ile eşleştiriyorum. 
 
@@ -1056,7 +1056,7 @@ Yani harici olarak DNS hizmetine sorulmadan önce sistem kendi içinde bu sorguy
 127.0.0.1       google.com
 ```
 
-Bu sayede ben google.com domain bilgisini talep ettiğimde bana 127.0.0.1 adresi döndürüleceği için bu domainin arkasındaki gerçek ip ile iletişime geçemeyeceğim. Dolayısıyla ilgili domain adresinin çözümlenmesini de engellemiş olacağım. Bu noktada kullanıcı yalnızca doğrudan ilgili domain arkasındaki ip adresini tam olarak girerek iletişim kurabilir.
+Bu sayede ben google.com domain bilgisini talep ettiğimde bana 127.0.0.1 adresi döndürüleceği için bu domainin arkasındaki gerçek ip ile iletişime geçemeyeceğim. Dolayısıyla ilgili domain adresinin çözümlenmesini de engellemiş olacağım. Bu noktada, kullanıcı yalnızca doğrudan ilgili domain arkasındaki ip adresini tam olarak girerek iletişim kurabilir.
 
 Denemek için google.com adresine ping gönderelim.
 
@@ -1082,7 +1082,7 @@ DHCP hizmetinin, ağdaki tüm cihazlara gerekli olan “ip”, “subnet”, “
 
 ![DHCP.webp]({{ site.url }}/egitim/temel-linux/network/DHCP.webp){:class="responsive img-zoomable"}
 
-Gördüğünüz gibi **eth0** arayüzü için “**default getway**” olarak tanımlı olan “**192.168.1.1**” adresi aynı zamanda “**dhcp**” olarak kullanılıyormuş. Yani eth0 arayüzünün dhcp üzerinden dinamik(dynamic) olarak değişken ip adresleri aldığını öğrenmiş olduk.
+Gördüğünüz gibi **eth0** arayüzü için “**default getway**” olarak tanımlı olan “**192.168.1.1**” adresi aynı zamanda “**dhcp**” olarak kullanılıyormuş. Yani eth0 arayüzünün, dhcp üzerinden dinamik(dynamic) olarak değişken ip adresleri aldığını öğrenmiş olduk.
 
 Eğer ip adresinin değişken olmasını istemiyorsak, `nmtui` üzerinden “automatic” seçeneğini devredışı bırakıp manuel olarak kendimiz sabit bir ip adresi tanımlayabiliriz. Tek yapmanız gereken, statik ip adresi tanımlamak istediğiniz ağ arayüzünü seçip, dhcp yerine elle ip tanımlaması yapmak. Daha önce ele aldığımız için ben hızlıca gif resmi üzerinden adımları gösteriyorum.
 
@@ -1211,7 +1211,7 @@ Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
 192.168.1.0     0.0.0.0         255.255.255.0   U     100    0        0 eth0
 ```
 
-Bakın bu kez ilk satırda “Destination” yani hedef olarak “**0.0.0.0**” adresi yazıyor. Genmask değeri de ağın büyüklüğünün herhangi bir değer olabileceğini belirten “**0.0.0.0**” subnetmask değeri aslında. Bunun anlamı, hedefi herhangi bir ağ olan tüm istekleri getway olan “192.168.1.1” adresine yönlendirilecek olduğu. Bu sayede internet üzerindeki herhangi bir ip adresi ile iletişim kurmak istediğimizde ilgili paket, “default getway” adresindeki cihaza teslim ediliyor. Bu cihaz da router aygıtımız olduğu için bu aygıt ilgili paketin hedef ulaşabilmesi için gerekli yönlendirmenin yapılmasını sağlıyor.
+Bakın bu kez ilk satırda “Destination” yani hedef olarak “**0.0.0.0**” adresi yazıyor. Genmask değeri de ağın büyüklüğünün herhangi bir değer olabileceğini belirten “**0.0.0.0**” subnetmask değeri aslında. Bunun anlamı; hedefi herhangi bir ağ olan tüm isteklerin, default getway olan “192.168.1.1” adresine yönlendirilecek olduğu. Bu sayede internet üzerindeki herhangi bir ip adresi ile iletişim kurmak istediğimizde ilgili paket, “default getway” adresindeki cihaza teslim ediliyor. Bu cihaz da router aygıtımız olduğu için bu aygıt, ilgili paketin hedefe ulaşabilmesi için gerekli yönlendirmenin yapılmasını sağlıyor.
 
 İkinci satırda ise “Destination” yani hedef olarak “192.168.1.0” adresi yazıyor. Genmask adresi ise “255.255.255.0” yani bu bilgiler ışığında **tam olarak “192.168.1.0”** ağı içindeki ip adreslerinin hedeflendiği durumlar kapsanmış oluyor. Gateway adresindeki “**0.0.0.0**” değeri ise bu ağa erişim için bir ağ geçidi kullanılmasına gerek olmadığını belirtiyor. Dolayısıyla 192.168.1.0 ağı içindeki ip adresleri, birbiri ile iletişim kurarlarken default getway adresindeki router cihazına veri göndermeleri gerekmiyor. Bu sebeple biz lokal ağımızdaki bir hosta veri gönderirken, bu veri paketi router cihazına uğramadan-switch vasıtası ile-ilgili host cihazına teslim ediliyor.
 
@@ -1277,7 +1277,7 @@ traceroute to 8.8.8.8 (8.8.8.8), 30 hops max, 60 byte packets
 10  dns.google (8.8.8.8)  16.045 ms  16.473 ms  16.853 ms
 ```
 
-Gördüğünüz gibi adım adım yönlendirmeler hakkında bilgi sunulmuş oldu. Çıktılarda yer alan “* * *” çıktısı bu yönlendiricinin icmp paketlerine yanıt vermeyecek şekilde konfigüre edildiği veya bu yönlendiricinin hizmet vermediği anlamına geliyor olabilir. 
+Gördüğünüz gibi adım adım yönlendirmeler hakkında bilgi sunulmuş oldu. Çıktılarda yer alan “`* * *`” çıktısı bu yönlendiricinin icmp paketlerine yanıt vermeyecek şekilde konfigüre edildiği veya bu yönlendiricinin hizmet vermediği anlamına geliyor olabilir. 
 
 Çıktılara dikkat edecek olursanız ben dış ağdaki bir hedefe paket gönderdiğim için, paket ilk olarak varsayılan ağ geçidim olan 192.168.1.1 adresine uğrayıp oradan internet servis sağlayıcımın yönlendiricilerine uğrayıp hedefe doğru yönlendiriliyor. Çünkü bilgisayarımdaki routing table üzerinde dış ip adreslerine gönderilen verilerin “192.168.1.1” adresine yönlendirilmesi gerektiği belirtiliyor. 
 
@@ -1292,11 +1292,11 @@ traceroute to 192.168.1.12 (192.168.1.12), 30 hops max, 60 byte packets
  1  rocky-linux (192.168.1.12)  3.128 ms !X  2.008 ms !X  1.989 ms !X
 ```
 
-Bakın hedef ip lokal ağımdaki bir host olduğu için router ile yönlendirme ihtiyaç duymadığından default getway adresine uğramadan doğrudan ilgili hedefe yönlendirilmiş gözüküyor. 
+Bakın hedef IP, lokal ağımdaki bir host olduğu için router ile yönlendirme ihtiyaç duymadığından default getway adresine uğramadan doğrudan ilgili hedefe yönlendirilmiş gözüküyor. 
 
 Neticede böylelikle routing table kullanım amacını ve önemini bizzat teyit etmiş olduk. 
 
-`traceroute` aracını tıpkı burada olduğu şekilde kullanarak, olası ağ sorunlarını tespit etmemiz de mümkün oluyor. 
+`traceroute` aracını tıpkı burada olduğu şekilde kullanarak, olası ağ sorunlarını tespit etmemiz de mümkün olabilir. Örneğin konfigüre ettiğiniz router cihazlarının beklendiği şekilde çalışıp çalışmadığının teyit etmek için kullanabilirsiniz. Ya da birden fazla yönlendirici olduğu durumda, tam olarak hangi noktada sorun yaşandığının tespiti için de kullanışlı olabilir.
 
 # Portlar Hakkında
 
@@ -1304,11 +1304,11 @@ IP adreslerine ek olarak, sistem üzerindeki tüm araçların sorunsuz şekilde 
 
 ![transport-port.webp]({{ site.url }}/egitim/temel-linux/network/transport-port.webp){:class="responsive img-zoomable"}
 
-Dolayısıyla sistemimizdeki portlar hakkında temel düzeyde bilgi almak ve gerektiğinde portları kontrol edebilmek önemli bir yetkinlik. Bu doğrultuda öncelikle sistemimizdeki aktif portları sorgulayarak başlayabiliriz. 
+Dolayısıyla sistemimizdeki portlar hakkında temel düzeyde bilgi almak ve gerektiğinde portları kontrol edebilmek önemli bir yetkinlik. Bu doğrultuda, öncelikle sistemimizdeki aktif portları sorgulayarak başlayabiliriz. 
 
 ## ss
 
-`ss`, “**s**ocket **s**tatistic” ifadesinin kısaltmasından gelen, Linux sistemindeki soketleri hakkında bilgi sunan bir araçtır. Soketler, işlemler arasındaki haberleşme için kullanılan özel dosyalardır. Aynı cihaz üzerindeki işlemler veya ağ bağlantısı bulunan farklı hostlardaki işlemler arasındaki haberleşmede kullanılıyorlar. Soketler yardımıyla karşılıklı olarak veri iletimi mümkün oluyor.
+`ss`, “**s**ocket **s**tatistic” ifadesinin kısaltmasından gelen, Linux sistemindeki "soketler" hakkında bilgi sunan bir araçtır. Soketler, işlemler arasındaki haberleşme için kullanılan özel dosyalardır. Aynı cihaz üzerindeki işlemler veya ağ bağlantısı bulunan farklı hostlardaki işlemler arasındaki haberleşmede kullanılıyorlar. Soketler yardımıyla karşılıklı olarak veri iletimi mümkün oluyor.
 
 Öncelikle sistem üzerindeki tüm soket bilgilerin görmek üzere yalnızca `ss` komutunu girebiliriz. 
 
@@ -1416,7 +1416,7 @@ tcp              LISTEN             0                  128                      
 
 Bağlantı durumu burada ip ve port detaylarıyla birlikte açıkla gözüküyor. 
 
-Ek olarak aramızdaki bağlantı ve veri iletişimini test etmek için burada “hello” yazıp enter ile sunucuya isteğimiz iletelim.
+Ek olarak aramızdaki bağlantı ve veri iletişimini test etmek için burada “hello” yazıp enter ile sunucuya isteğimizi iletelim.
 
 ```bash
 [root@linuxdersleri ~]# nc 192.168.1.15 8080
