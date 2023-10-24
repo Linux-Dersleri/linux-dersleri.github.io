@@ -1,6 +1,6 @@
 ---
 layout: simple
-title:  "Linux Dersleri Yazarı Olmak"
+title:  "Veri Politikası | Gizlilik"
 author: taylan_ozgur_bildik
 excerpt: "Linux Dersleri platformuna yazar olarak nasıl katkıda bulunabileceğinizi ele alıyoruz."
 ---
