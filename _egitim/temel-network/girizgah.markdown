@@ -4,7 +4,7 @@ title:  "Girizgah"
 modified: 2023-05-20
 author: Taylan Özgür Bildik
 coursetitle: "Temel Ağ Eğitimi"
-excerpt: "Eğitimin yapısı ve ilerleyiş biçimi hakkında bilgi ediniyoruz."
+excerpt: "Ağ eğitiminin yapısı ve ilerleyiş biçimi hakkında bilgi ediniyoruz."
 tags: [network]
 categories: [temel-network]
 tutorial: 0
