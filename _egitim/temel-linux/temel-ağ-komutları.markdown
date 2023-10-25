@@ -816,7 +816,7 @@ nameserver 8.8.4.4
 
 ## hostname
 
-Ağ üzerinde ip alabilen cihazlara "host" denildiğini biliyorsunuzdur. “**hostname**” ifadesi de, lokal ağımızdaki cihazların birbirinden ayrıt edilebilmesini sağlayan isimlendirmedir. Bu isimler sayesine lokal ağdaki cihazların ip adresini hatırlamaya gerek kalmadan doğrudan hostname bilgisi ile, ilgili cihazla iletişime geçebiliyoruz. 
+Ağ üzerinde ip alabilen cihazlara "host" denildiğini biliyorsunuzdur. “**hostname**” ifadesi de, lokal ağımızdaki cihazların birbirinden ayırt edilebilmesini sağlayan isimlendirmedir. Bu isimler sayesine lokal ağdaki cihazların ip adresini hatırlamaya gerek kalmadan doğrudan hostname bilgisi ile, ilgili cihazla iletişime geçebiliyoruz. 
 
 Öncelikle mevcut cihazımızın ağ üzerindeki ismini öğrenmek üzere `hostnamctl` komutunu girebiliriz. 
 
