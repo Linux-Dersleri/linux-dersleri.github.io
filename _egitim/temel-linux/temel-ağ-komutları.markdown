@@ -975,7 +975,7 @@ Böylelikle lokal ağdaki hostname “kali-makinesi” olurken, domain bilgisi d
 
 ![hostname-domainname.webp]({{ site.url }}/egitim/temel-linux/network/hostname-domainname.webp){:class="responsive img-zoomable"}
 
-Yani tıpkı bizim websitelerini ziyaret etmek için DNS yardımıyla, domain adresini ip adresine dönüştürüyor olmamız gibidir. Fakat bu işlem lokal ağdaki cihazları birbirinden ayırt etmek ve isimleri üzerinden kolayca onlara ulaşabilmek için kullanılıyor. Örneğin yukarıdaki gibi bir ağda, "kali-makinem" isimli host, "mail" hostu ile iletişime geçmek istediğinde [mail.linuxdersleri.net](http://mail.linuxdersleri.net) adresinin ip adresini ağdaki DNS sunucusuna sorar. 
+Yani tıpkı bizim websitelerini ziyaret etmek için DNS yardımıyla, domain adresini ip adresine dönüştürüyor olmamız gibidir. Fakat bu işlem lokal ağdaki cihazları birbirinden ayırt etmek ve isimleri üzerinden kolayca onlara ulaşabilmek için kullanılıyor. Örneğin yukarıdaki gibi bir ağda, "kali-makinem" isimli host, "mail" hostu ile iletişime geçmek istediğinde **mail.linuxdersleri.net** adresinin ip adresini ağdaki DNS sunucusuna sorar. 
 
 ![DNS-request.webp]({{ site.url }}/egitim/temel-linux/network/DNS-request.webp){:class="responsive img-zoomable"}
 
