@@ -327,7 +327,7 @@ Yada koşulu belirtmek için kullanabiliyoruz. Örneğin “a” ya da “b” i
 
 # Genişletilmiş Regex
 
-Basit Regex ile genişletilmiş Regex arasındaki tek farkın `?` `+` `{}` ve `|` karakterlerinin kullanımları olduğuna [değinmiştik]({{ site.url }}/linux-Regex#basit-Regex-ve-geni%C5%9Fletilmi%C5%9F-Regex). Genişletilmiş Regex üzerinde bu karakterlerin özel anlamları ile ele alınması için bu karakterleri olduğu gibi yazmamız şart. Ve elbette genişletilmiş Regex kullanacağımız aracın genişletilmiş Regex’i desteklemesi gerekiyor. Kullandığınız aracın desteği olup olmadığını yardım sayfalarından veya kısa internet araştırması ile kolayca öğrenebilirsiniz.
+Basit Regex ile genişletilmiş Regex arasındaki tek farkın `?` `+` `{}` ve `|` karakterlerinin kullanımları olduğuna [değinmiştik]({{ site.url }}/linux-regex#basit-regex-ve-genişletilmiş-regex). Genişletilmiş Regex üzerinde bu karakterlerin özel anlamları ile ele alınması için bu karakterleri olduğu gibi yazmamız şart. Ve elbette genişletilmiş Regex kullanacağımız aracın genişletilmiş Regex’i desteklemesi gerekiyor. Kullandığınız aracın desteği olup olmadığını yardım sayfalarından veya kısa internet araştırması ile kolayca öğrenebilirsiniz.
 
 Örneğin ben `grep` aracının desteğini sorgulamak için `grep —help` komutu ile yardım bilgisine göz atıyorum.
 
