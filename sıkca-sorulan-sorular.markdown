@@ -2,7 +2,7 @@
 layout: simple
 title:  "Sıkça Sorulan Sorular"
 author: taylan_ozgur_bildik
-excerpt: "Linux Dersleri platformuna yazar olarak nasıl katkıda bulunabileceğinizi ele alıyoruz."
+excerpt: "Linux Dersleri platformu hakkında sıkça sorulan soruların yanıtları."
 ---
 
 
