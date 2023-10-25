@@ -2,7 +2,7 @@
 layout: simple
 title:  "Veri Politikası | Gizlilik"
 author: taylan_ozgur_bildik
-excerpt: "Linux Dersleri platformuna yazar olarak nasıl katkıda bulunabileceğinizi ele alıyoruz."
+excerpt: "Linux Dersleri platformunun gizlilik politikası."
 ---
 
 
