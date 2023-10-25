@@ -29,7 +29,7 @@ Site içeriğinin mümkün oldukça statik bir dokümantasyon gibi kalmasını t
 ---
 
 <h3 class="text-primary">Neden reklam yok ?</h3>
-Kullanıcıların okuma deneyimini olumsuz yönde etkilemesini istemediğim için standart reklam yaklaşımına gitmek istemedim. Bunun yerine yazılı şekilde sunduğum [eğitim serilerinin](/egitim.html/){:target="_blank"} udemy üzerindeki [video eğitimlerini](/kurs.html){:target="_blank"} tanıtmayı tercih ettim. Yine de ileride gelecek taleplere göre platformun geliştirilmesi veya olası giderlerinin karşılanması için hedef kitleye faydalı olabileceğini düşündüğüm promosyonları veya tanıtımları, okuma deneyimine zarar vermeyecek şekilde ekleyebilirim. Öneri ve teklifleriniz için [mail](mailto: info@linuxdersleri.net){:target="_blank"} veya [geri bildirim](/bildirim.html){:target="_blank"} kanallarını kullanabilirsiniz.
+Kullanıcıların okuma deneyimini olumsuz yönde etkilemesini istemediğim için standart reklam yaklaşımına gitmek istemedim. Bunun yerine yazılı şekilde sunduğum [eğitim serilerinin](/egitim.html){:target="_blank"} udemy üzerindeki [video eğitimlerini](/kurs.html){:target="_blank"} tanıtmayı tercih ettim. Yine de ileride gelecek taleplere göre platformun geliştirilmesi veya olası giderlerinin karşılanması için hedef kitleye faydalı olabileceğini düşündüğüm promosyonları veya tanıtımları, okuma deneyimine zarar vermeyecek şekilde ekleyebilirim. Öneri ve teklifleriniz için [mail](mailto: info@linuxdersleri.net){:target="_blank"} veya [geri bildirim](/bildirim.html){:target="_blank"} kanallarını kullanabilirsiniz.
 
 ---
 
