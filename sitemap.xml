@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://www.linuxdersleri.net/</loc>
+  <lastmod>2023-10-25T04:44:26+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://www.linuxdersleri.net/egitim.html</loc>
+  <lastmod>2023-10-25T04:44:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.linuxdersleri.net/blog/</loc>
+  <lastmod>2023-10-25T04:44:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.linuxdersleri.net/komutlar/</loc>
+  <lastmod>2023-10-25T04:44:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.linuxdersleri.net/test</loc>
+  <lastmod>2023-10-25T04:44:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.linuxdersleri.net/etiketler</loc>
+  <lastmod>2023-10-25T04:44:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.linuxdersleri.net/hakk%C4%B1nda.html</loc>
+  <lastmod>2023-10-25T04:44:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.linuxdersleri.net/bildirim.html</loc>
+  <lastmod>2023-10-25T04:44:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.linuxdersleri.net/egitim</loc>
+  <lastmod>2023-10-25T04:44:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.linuxdersleri.net/linux-regex</loc>
+  <lastmod>2023-10-25T04:44:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.linuxdersleri.net/komut/break/</loc>
+  <lastmod>2023-10-25T04:44:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.linuxdersleri.net/komut/command/</loc>
+  <lastmod>2023-10-25T04:44:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.linuxdersleri.net/komut/exit/</loc>
+  <lastmod>2023-10-25T04:44:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.linuxdersleri.net/komut/false-true/</loc>
+  <lastmod>2023-10-25T04:44:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.linuxdersleri.net/komut/iki-nokta-ust-uste/</loc>
+  <lastmod>2023-10-25T04:44:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.linuxdersleri.net/komut/nohup/</loc>
+  <lastmod>2023-10-25T04:44:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.linuxdersleri.net/komut/pwd/</loc>
+  <lastmod>2023-10-25T04:44:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.linuxdersleri.net/komut/return/</loc>
+  <lastmod>2023-10-25T04:44:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.linuxdersleri.net/komut/suspend/</loc>
+  <lastmod>2023-10-25T04:44:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.linuxdersleri.net/komut/type/</loc>
+  <lastmod>2023-10-25T04:44:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.linuxdersleri.net/komut/wait/</loc>
+  <lastmod>2023-10-25T04:44:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.linuxdersleri.net/test.html</loc>
+  <lastmod>2023-10-25T04:44:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.linuxdersleri.net/temel-linux</loc>
+  <lastmod>2023-10-25T04:44:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.linuxdersleri.net/temel-network</loc>
+  <lastmod>2023-10-25T04:44:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.linuxdersleri.net/s%C4%B1kca-sorulan-sorular.html</loc>
+  <lastmod>2023-10-25T04:44:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.linuxdersleri.net/gizlilik.html</loc>
+  <lastmod>2023-10-25T04:44:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.linuxdersleri.net/kurs</loc>
+  <lastmod>2023-10-25T04:44:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.linuxdersleri.net/temel-linux.html</loc>
+  <lastmod>2023-10-25T04:44:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.linuxdersleri.net/egitim/temel-network/temel-kavramlar/</loc>
+  <lastmod>2023-10-25T04:44:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.linuxdersleri.net/egitim/temel-linux/kabuk-nasil-calisir/</loc>
+  <lastmod>2023-10-25T04:44:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.linuxdersleri.net/egitim/temel-linux/kullan%C4%B1c%C4%B1-ve-grup-y%C3%B6netimi/</loc>
+  <lastmod>2023-10-25T04:44:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.linuxdersleri.net/egitim/temel-linux/linux-k%C4%B1sayollar%C4%B1/</loc>
+  <lastmod>2023-10-25T04:44:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.linuxdersleri.net/egitim/temel-linux/paket-y%C3%B6netimi/</loc>
+  <lastmod>2023-10-25T04:44:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.linuxdersleri.net/egitim/temel-linux/temel-a%C4%9F-komutlar%C4%B1/</loc>
+  <lastmod>2023-10-25T04:44:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.linuxdersleri.net/egitim/temel-network/ag-protokolleri/</loc>
+  <lastmod>2023-10-25T04:44:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.linuxdersleri.net/egitim/temel-linux/metinleri-filtrelemek/</loc>
+  <lastmod>2023-10-25T04:44:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.linuxdersleri.net/egitim/temel-linux/linux-nedir/</loc>
+  <lastmod>2023-10-25T04:44:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.linuxdersleri.net/egitim/temel-linux/linux-sistem-mimarisine-giris/</loc>
+  <lastmod>2023-10-25T04:44:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.linuxdersleri.net/egitim/temel-linux/i%C5%9Flem-y%C3%B6netimi/</loc>
+  <lastmod>2023-10-25T04:44:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.linuxdersleri.net/egitim/temel-linux/disk-y%C3%B6netimi/</loc>
+  <lastmod>2023-10-25T04:44:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.linuxdersleri.net/egitim/temel-network/ag-aygitlari/</loc>
+  <lastmod>2023-10-25T04:44:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.linuxdersleri.net/egitim/temel-linux/bilgi-alma-komutlar%C4%B1/</loc>
+  <lastmod>2023-10-25T04:44:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.linuxdersleri.net/egitim/temel-linux/ar%C5%9Fivleme-s%C4%B1k%C4%B1%C5%9Ft%C4%B1rma/</loc>
+  <lastmod>2023-10-25T04:44:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.linuxdersleri.net/egitim/temel-linux/metinsel-verileri-islemek/</loc>
+  <lastmod>2023-10-25T04:44:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.linuxdersleri.net/egitim/temel-linux/dizinlerde-gezinmek/</loc>
+  <lastmod>2023-10-25T04:44:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.linuxdersleri.net/egitim/temel-linux/kopyalama-ta%C5%9F%C4%B1ma-silme-i%C5%9Flemleri/</loc>
+  <lastmod>2023-10-25T04:44:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.linuxdersleri.net/egitim/temel-linux/log-kay%C4%B1tlar%C4%B1-hakk%C4%B1nda/</loc>
+  <lastmod>2023-10-25T04:44:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.linuxdersleri.net/egitim/temel-linux/yard%C4%B1m-alma-komutlar%C4%B1/</loc>
+  <lastmod>2023-10-25T04:44:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.linuxdersleri.net/egitim/temel-network/hostlar-nasil-haberlesir/</loc>
+  <lastmod>2023-10-25T04:44:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.linuxdersleri.net/egitim/temel-linux/kabuk-genisletmeleri/</loc>
+  <lastmod>2023-10-25T04:44:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.linuxdersleri.net/egitim/temel-linux/gerekli-ortam%C4%B1n-kurulmas%C4%B1/</loc>
+  <lastmod>2023-10-25T04:44:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.linuxdersleri.net/egitim/temel-linux/metin-editoru/</loc>
+  <lastmod>2023-10-25T04:44:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.linuxdersleri.net/egitim/temel-network/girizgah/</loc>
+  <lastmod>2023-10-25T04:44:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.linuxdersleri.net/egitim/temel-network/router-nasil-calisir/</loc>
+  <lastmod>2023-10-25T04:44:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.linuxdersleri.net/egitim/temel-network/switch-nasil-calisir/</loc>
+  <lastmod>2023-10-25T04:44:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.linuxdersleri.net/egitim/temel-linux/servis-y%C3%B6netimi/</loc>
+  <lastmod>2023-10-25T04:44:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.linuxdersleri.net/egitim/temel-network/osi-tcp-ip-modeli/</loc>
+  <lastmod>2023-10-25T04:44:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.linuxdersleri.net/egitim/temel-linux/e%C4%9Fitimin-sonu/</loc>
+  <lastmod>2023-10-25T04:44:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.linuxdersleri.net/egitim/temel-linux/girizgah/</loc>
+  <lastmod>2023-10-25T04:44:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.linuxdersleri.net/etiketler.html</loc>
+  <lastmod>2023-10-25T04:44:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.linuxdersleri.net/yazar/taylan-%C3%B6zg%C3%BCr-bildik/</loc>
+  <lastmod>2023-10-25T04:44:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.linuxdersleri.net/kurs.html</loc>
+  <lastmod>2023-10-25T04:44:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.linuxdersleri.net/egitim/temel-linux/metin/isimler.txt</loc>
+  <lastmod>2023-10-25T04:44:20+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://www.linuxdersleri.net/temel-network.html</loc>
+  <lastmod>2023-10-25T04:44:26+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+
+
+</urlset>
