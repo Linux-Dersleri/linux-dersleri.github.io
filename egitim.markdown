@@ -49,7 +49,7 @@ search_omit: true
     </div>
     </div>
   </div>
-	<div style="display:none;" class="col-md-6">
+	<div class="col-md-6">
       <div class="no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
       <div class="col p-4 d-flex flex-column position-static">
 			<p class="mavi text-primary">Video Eğitim</p>

@@ -13,7 +13,7 @@ toc: true
 
 Bu bölüm içerisinde ağ hakkında çok temel düzeyde bilgi almamızı sağlayan bazı araçlardan bahsedeceğiz. Ancak tabii ki ağ konusu başlı başına öğrenilmesi gereken bir konu olduğu için bu bölümde ağ temellerine değinmeyeceğiz. Eğer network konusunda temel seviye bilginiz yoksa, mevcut platformda ağ temellerine giriş eğitimi mevcut. Bu bölümden önce ağ temellerini öğrenmeniz, bu bölümden alacağınız verimi kesinlikle arttıracaktır. 
 
-Bu bölümdeki açıklamalar, mevcut platformdaki "[ağ temelleri]({{ site.url }}/temel-network){:target="_blank"}" eğitimini bitirdiğinizi ya da halihazırda ağ temellerini bildiğinizi varsayarak açıklamalar yapıyor olacağım. Bu eğitim standart Linux kullanıcılarını da kapsadığı için zaten yalnızca herkesin işine yarayabilecek bazı ağ araçları hakkında çok kısaca bilgi ediniyor olacağız.
+Bu bölümde, mevcut platformdaki "[ağ temelleri]({{ site.url }}/temel-network){:target="_blank"}" eğitimini bitirdiğinizi ya da halihazırda ağ temellerini bildiğinizi varsayarak açıklamalar yapıyor olacağım. Bu eğitim standart Linux kullanıcılarını da kapsadığı için zaten yalnızca herkesin işine yarayabilecek bazı ağ araçları hakkında çok kısaca bilgi ediniyor olacağız.
 
 # ping
 
