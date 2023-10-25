@@ -4,7 +4,7 @@ title:  "Girizgah"
 modified: 2023-05-20
 author: Taylan Özgür Bildik
 coursetitle: "Temel Linux Eğitimi"
-excerpt: "Eğitimin yapısı ve ilerleyiş biçimi hakkında bilgi ediniyoruz."
+excerpt: "Linux eğitiminin yapısı ve ilerleyiş biçimi hakkında bilgi ediniyoruz."
 tags: [temel linux,]
 categories: [temel-linux]
 tutorial: 0
