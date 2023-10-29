@@ -10,6 +10,12 @@
     "blog_paylasimlari": [
         {
           "tur": "Yeni Blog Paylaşımı",
+          "baslik": "apt ile apt-get Arasındaki Fark",
+          "link": "https://www.linuxdersleri.net/apt-ile-apt-get-fark%C4%B1",
+          "yayin_tarihi": "2023-10-29"
+        },
+        {
+          "tur": "Yeni Blog Paylaşımı",
           "baslik": "Linux Üzerinde Regex Kullanımı",
           "link": "https://www.linuxdersleri.net/linux-regex",
           "yayin_tarihi": "2023-10-19"
