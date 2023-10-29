@@ -101,7 +101,7 @@ Amaç sadeleştirmek olduğu için elbette `apt-get` aracındaki tüm seçenekle
 ## Sonuç
 
 - `apt` paket yönetimi için gerekli komutları sağlayan `apt-get` ve `apt-cache` komutlarının tek bir elde toplanmış hali, bir alt kümesidir.
-- `apt` komutunda hatırlanması gereken çok daha az parametre vardır. Dolayısıyla kolayca hatırlanabilen, oldukça az komutla çok işler başarabilen bir yapısı vardır.
+- `apt` komutunda, hatırlanması gereken çok daha az parametre vardır. Dolayısıyla kolayca hatırlanabilen, oldukça az komutla çok işler başarabilen bir yapısı vardır.
 - Sürekli gelişmeye devam edecektir, dolayısı ile zamanla çok daha yaygın kullanıma ve güçlü özelliklere sahip olacaktır.
 
 Özellikle geri dönük uyumluluk dolayısıyla `apt-get`  uzun yıllar boyu yaygın olarak kullanılmaya devam edecek. Ancak, gelecekteki paket yönetimi ve yenilikler `apt` üzerine kuruluyor olacak. Eğer sürekli `apt-get` ‘in, `apt` komutuna oranla sahip olduğu ek özelliklerine ihtiyaç duymuyorsanız `apt-get`’ e bağlı kalmak için bir neden göremiyorum. Yani zarif `apt` komutumuza bir şans verin derim 🙂
