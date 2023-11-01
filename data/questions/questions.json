@@ -483,7 +483,7 @@
     "options": [
       "echo 'Şu anda bulunduğum dizin: $(pwd)'",
       "echo 'Şu anda bulunduğum dizin: $pwd'",
-      "echo 'Şu anda bulunduğum dizin: $`pwd`' "
+      "echo 'Şu anda bulunduğum dizin: $`pwd`'"
     ],
     "answer": "echo 'Şu anda bulunduğum dizin: $`pwd`'"
   },
@@ -506,7 +506,7 @@
     "question": "Tek tırnak ile çift tırnak arasındaki fark hangi seçenekte  açıklanmıştır ?",
     "options": [
       "Çift tırnak içerisinde hiç bir genişletme uygulanmaz. Tek tırnakta ise dolar işareti ($) ve ters slash kaçış karakteri (\\) gibi bazı özel karakterle özel anlamlarına genişletilebilirler.",
-      "Tek tırnak içerisinde hiç bir genişletme uygulanmaz. Çift tırnakta ise dolar işareti ($) ve ters slash kaçış karakteri (\\) gibi bazı özel karakterle özel anlamlarına genişletilebilirler. "
+      "Tek tırnak içerisinde hiç bir genişletme uygulanmaz. Çift tırnakta ise dolar işareti ($) ve ters slash kaçış karakteri (\\) gibi bazı özel karakterle özel anlamlarına genişletilebilirler."
     ],
     "answer": "Tek tırnak içerisinde hiç bir genişletme uygulanmaz. Çift tırnakta ise dolar işareti ($) ve ters slash kaçış karakteri (\\) gibi bazı özel karakterle özel anlamlarına genişletilebilirler."
   },
