@@ -426,7 +426,7 @@
   {
     "question": "Komutları gruplamak için hangi yaklaşım doğrudur?",
     "options": ["[komut1 ; komut2 ; komut3]", "{komut1 ; komut2 ; komut3}", "(komut1 ; komut2 ; komut3)"],
-    "answer": "{komut1 ; komut2 ; komut3}"
+    "answer": "(komut1 ; komut2 ; komut3)"
   },
   {
     "question": "İşlemleri anlık olarak güncellenecek şekilde takip etmek için hangi aracı kullanabiliriz?",
