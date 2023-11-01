@@ -455,7 +455,7 @@
   },
   {
     "question": "a dan f ye kadar olan karakterleri üretmek için hangi genişletmeyi kullanmamız gerekir ?",
-    "options": ["{a..f} ", "{a-f}", "[a..f]", "[a-f]"],
+    "options": ["{a..f}", "{a-f}", "[a..f]", "[a-f]"],
     "answer": "{a..f}"
   },
   {
