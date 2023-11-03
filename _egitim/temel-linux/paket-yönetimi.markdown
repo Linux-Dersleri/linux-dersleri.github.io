@@ -1,4 +1,5 @@
 ---
+sitemap: true
 layout: tutorial
 title:  "Paket Yönetimi"
 author: Taylan Özgür Bildik

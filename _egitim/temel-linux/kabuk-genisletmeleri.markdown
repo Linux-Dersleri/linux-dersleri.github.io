@@ -1,4 +1,5 @@
 ---
+sitemap: true
 layout: tutorial
 title:  "Kabuk Genişletmeleri"
 author: Taylan Özgür Bildik

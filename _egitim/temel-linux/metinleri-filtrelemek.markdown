@@ -1,4 +1,5 @@
 ---
+sitemap: true
 layout: tutorial
 title:  "Metinleri Filtrelemek"
 modified: 2021-04-15

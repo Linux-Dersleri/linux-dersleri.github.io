@@ -1,4 +1,5 @@
 ---
+sitemap: true
 layout: tutorial
 title:  "Linux Kısayolları"
 author: Taylan Özgür Bildik

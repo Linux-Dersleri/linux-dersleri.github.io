@@ -1,4 +1,5 @@
 ---
+sitemap: true
 layout: tutorial
 title:  "Yardım Almak"
 author: Taylan Özgür Bildik

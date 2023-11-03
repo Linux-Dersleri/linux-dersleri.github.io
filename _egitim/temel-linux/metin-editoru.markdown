@@ -1,4 +1,5 @@
 ---
+sitemap: true
 layout: tutorial
 title:  "Metin Editörü Kullanımı"
 modified: 2021-04-15

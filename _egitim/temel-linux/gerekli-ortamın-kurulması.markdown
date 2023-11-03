@@ -1,4 +1,5 @@
 ---
+sitemap: true
 layout: tutorial
 title:  "Ortamın Kurulması"
 modified: 2021-04-15

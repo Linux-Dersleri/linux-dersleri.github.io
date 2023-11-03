@@ -1,4 +1,5 @@
 ---
+sitemap: true
 layout: tutorial
 title:  "Kabuk Nasıl Çalışır ?"
 author: Taylan Özgür Bildik

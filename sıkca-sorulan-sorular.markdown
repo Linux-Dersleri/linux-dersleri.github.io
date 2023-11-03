@@ -1,4 +1,5 @@
 ---
+sitemap: true
 layout: simple
 title:  "Sıkça Sorulan Sorular"
 author: taylan_ozgur_bildik

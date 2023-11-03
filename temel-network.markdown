@@ -1,4 +1,5 @@
 ---
+sitemap: true
 layout: simple
 title: Ağ Temelleri Eğitimi
 excerpt: "Ağ Temelleri Müfredatı"

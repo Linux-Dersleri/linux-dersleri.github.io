@@ -1,4 +1,5 @@
 ---
+sitemap: true
 layout: simple
 title: Video Doküman Blog Komutlar Test
 excerpt: "Linux Dersleri Ana Sayfası"

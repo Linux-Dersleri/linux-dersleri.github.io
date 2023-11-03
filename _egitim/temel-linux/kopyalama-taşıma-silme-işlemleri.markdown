@@ -1,4 +1,5 @@
 ---
+sitemap: true
 layout: tutorial
 title:  "Kopyalama Taşıma Silme"
 modified: 2021-04-15

@@ -1,4 +1,5 @@
 ---
+sitemap: true
 layout: tutorial
 title:  "Bilgi Alma Komutları"
 author: Taylan Özgür Bildik

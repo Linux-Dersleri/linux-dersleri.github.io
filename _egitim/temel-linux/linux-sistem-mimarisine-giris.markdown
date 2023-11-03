@@ -1,4 +1,5 @@
 ---
+sitemap: true
 layout: tutorial
 title:  "Sistem Mimarisine Giriş"
 modified: 2021-04-15

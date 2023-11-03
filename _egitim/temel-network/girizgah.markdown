@@ -1,4 +1,5 @@
 ---
+sitemap: true
 layout: tutorial
 title:  "Girizgah"
 modified: 2023-05-20

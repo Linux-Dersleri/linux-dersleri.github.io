@@ -1,4 +1,5 @@
 ---
+sitemap: true
 layout: simple
 title: Temel Linux Eğitimi
 excerpt: "Temel Linux Eğitimi Sıralı Müfredatı"

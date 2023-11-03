@@ -1,4 +1,5 @@
 ---
+sitemap: true
 layout: tutorial
 title:  "Servis Yönetimi"
 author: Taylan Özgür Bildik

@@ -1,4 +1,5 @@
 ---
+sitemap: true
 layout: komut
 author: Taylan Özgür Bildik
 title: "break Komutu"

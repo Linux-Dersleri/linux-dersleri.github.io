@@ -1,4 +1,5 @@
 ---
+sitemap: true
 layout: tutorial
 title:  "Eğitimin Sonu"
 author: Taylan Özgür Bildik

@@ -1,4 +1,5 @@
 ---
+sitemap: true
 layout: simple
 title: Hakkında
 excerpt: "Linux Dersleri Platformu Hakkında"

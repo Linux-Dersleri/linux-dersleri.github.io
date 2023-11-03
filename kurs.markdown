@@ -1,4 +1,5 @@
 ---
+sitemap: true
 layout: simple
 title: Linux Video Eğitim
 excerpt: "Linux öğrenmek için doküman, test ve video eğitim kaynağı."

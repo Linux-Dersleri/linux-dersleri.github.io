@@ -1,4 +1,5 @@
 ---
+sitemap: true
 layout: b-post
 title:  "Unutulan Root Parolasını Değiştirmek"
 modified: 

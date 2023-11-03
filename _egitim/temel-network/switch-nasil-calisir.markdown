@@ -1,4 +1,5 @@
 ---
+sitemap: true
 layout: tutorial
 title:  "Switch Nasıl Çalışır ?"
 modified: 2023-05-20

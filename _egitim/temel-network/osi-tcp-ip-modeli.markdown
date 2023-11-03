@@ -1,4 +1,5 @@
 ---
+sitemap: true
 layout: tutorial
 title:  "OSI TCP/IP Modeli"
 modified: 2023-05-20

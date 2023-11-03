@@ -1,4 +1,5 @@
 ---
+sitemap: true
 layout: tutorial
 title:  "İşlem Yönetimi"
 author: Taylan Özgür Bildik

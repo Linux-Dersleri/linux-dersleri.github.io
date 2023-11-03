@@ -1,4 +1,5 @@
 ---
+sitemap: true
 layout: b-post
 title:  "Linux Üzerinde Regex Kullanımı"
 modified: 

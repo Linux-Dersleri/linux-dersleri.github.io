@@ -1,4 +1,5 @@
 ---
+sitemap: true
 layout: tutorial
 title:  "Log Kayıtları"
 author: Taylan Özgür Bildik

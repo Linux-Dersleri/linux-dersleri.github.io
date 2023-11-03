@@ -1,4 +1,5 @@
 ---
+sitemap: true
 layout: tutorial
 title:  "Kullanıcı Yönetimi"
 author: Taylan Özgür Bildik

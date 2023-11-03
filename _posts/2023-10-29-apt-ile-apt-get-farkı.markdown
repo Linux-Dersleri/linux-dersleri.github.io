@@ -1,4 +1,5 @@
 ---
+sitemap: true
 layout: b-post
 title:  "apt ile apt-get Arasındaki Fark"
 modified:

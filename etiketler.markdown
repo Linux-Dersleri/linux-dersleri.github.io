@@ -1,4 +1,5 @@
 ---
+sitemap: true
 layout: simple
 title: Konu Etiketleri
 excerpt: "Tüm içeriklerin kategorize etiket listesi."

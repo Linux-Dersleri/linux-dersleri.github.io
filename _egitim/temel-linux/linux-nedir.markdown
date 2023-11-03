@@ -1,4 +1,5 @@
 ---
+sitemap: true
 layout: tutorial
 title:  "Temel Kavramlar"
 modified: 2021-04-15

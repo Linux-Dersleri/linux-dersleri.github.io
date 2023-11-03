@@ -1,4 +1,5 @@
 ---
+sitemap: true
 layout: simple
 title:  "Veri Politikası | Gizlilik"
 author: taylan_ozgur_bildik

@@ -1,4 +1,5 @@
 ---
+sitemap: true
 layout: simple
 title: Linux Eğitimleri | Video Doküman Kurs
 excerpt: "Linux için doküman, kitap, video eğitimler. LPIC RHCSA sertifika sınavlarına hazırlık. Hobi veya profesyonel çalışma yetkinliği için temel linux eğitim kaynakları."

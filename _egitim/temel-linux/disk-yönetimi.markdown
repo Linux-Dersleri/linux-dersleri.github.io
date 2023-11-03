@@ -1,4 +1,5 @@
 ---
+sitemap: true
 layout: tutorial
 title:  "Disk Yönetimi"
 author: Taylan Özgür Bildik

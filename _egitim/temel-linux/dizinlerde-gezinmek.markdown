@@ -1,4 +1,5 @@
 ---
+sitemap: true
 layout: tutorial
 title:  "Dizinlerde Gezinmek"
 author: Taylan Özgür Bildik

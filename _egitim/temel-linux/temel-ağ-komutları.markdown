@@ -1,4 +1,5 @@
 ---
+sitemap: true
 layout: tutorial
 title:  "Ağ Komutları"
 author: Taylan Özgür Bildik

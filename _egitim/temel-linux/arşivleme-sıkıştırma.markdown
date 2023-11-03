@@ -1,4 +1,5 @@
 ---
+sitemap: true
 layout: tutorial
 title:  "Arşivleme & Sıkıştırma"
 author: Taylan Özgür Bildik

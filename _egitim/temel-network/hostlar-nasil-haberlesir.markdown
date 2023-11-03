@@ -1,4 +1,5 @@
 ---
+sitemap: true
 layout: tutorial
 title:  "Host Nasıl Haberleşir ?"
 modified: 2023-05-20
