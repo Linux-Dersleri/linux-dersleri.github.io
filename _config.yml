@@ -13,7 +13,6 @@ plugins:
   - jekyll-feed
   - jekyll-toc
   - kramdown
-  - jekyll-sitemap
 
 
 jekyll_timeago:
