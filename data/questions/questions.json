@@ -1023,7 +1023,7 @@
       "Yanlış",
       "Doğru"
     ],
-    "answer": "Doğru"
+    "answer": "Yanlış"
   },
   {
     "question": "Kabukta dahili-yerleşik(builtin) olan komutları, aynı kabuğu kullandığımız sürece tüm sistemlerde ortak olarak kullanabiliriz.",
