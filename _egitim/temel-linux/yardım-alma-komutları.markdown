@@ -71,7 +71,7 @@ echo: echo [-neE] [arg ...]
 
 Bakın, `help` komutu **echo** aracı hakkında çeşitli özet bilgiler sunan yardım bilgisini anında konsola bastırdı. 
 
-![1.webp]({{ site.url }}/egitim/temel-linux/yardım/1.webp){:class="responsive img-zoomable"}
+![1.webp]({{ site.url }}/egitim/temel-linux/yardim/1.webp){:class="responsive img-zoomable"}
 
 Çıktıları inceleyecek olursak; 
 
@@ -272,7 +272,7 @@ Bir diğer yardım kaynağımız da `man` komutu ile ulaşabildiğimiz ve **man 
 
 **Manual** ifadesinin kısalmasından gelen **man** sayfaları sistem üzerindeki araçlar için temel yardım bilgileri içeren hiyerarşik düzende bulunan dosyalardır. Buradaki manual ifadesinin nereden geldiğini almak için internet üzerinde görsel arama kısmına “manuals” ya da “product manuals” şeklinde yazıp aratabilirsiniz. 
 
-![2.webp]({{ site.url }}/egitim/temel-linux/yardım/2.webp){:class="responsive img-zoomable"}
+![2.webp]({{ site.url }}/egitim/temel-linux/yardim/2.webp){:class="responsive img-zoomable"}
 
 Karşınıza çeşitli ürünlerin kullanımlarını ve özelliklerini açıklayan kılavuz sayfalarının resimleri gelecektir. Zaten bu görseller size tanıdık geliyordur. Örneğin bir telefon veya benzeri bir araç aldığınızda mutlaka kutu içeriğinden kullanma kılavuzu da çıkmıştır. İşte `man` olarak geçen yardım sayfaları da tıpkı gerçek hayattaki “kılavuz” sayfaları gibi sistemimizde yüklü bulunan araçlar hakkında bilgi sunan kılavuz sayfalarıdır. Man ismi de buradan geliyor.
 
@@ -282,7 +282,7 @@ Sistemde varsayılan olarak yüklü bulunan araçlar ve sistemin diğer çeşitl
 
 Manual sayfalarına ulaşmak için, başta söz ettiğimiz `man` komutunu yani aslında **man** aracını kullanıyoruz. Örneğin ben `chmod` hakkındaki bilgilere ulaşmak istiyorsam konsola `man chmod` şeklinde yazarak gerekli bilgilere kolayca ulaşabilirim. 
 
-![3.webp]({{ site.url }}/egitim/temel-linux/yardım/3.webp){:class="responsive img-zoomable"}
+![3.webp]({{ site.url }}/egitim/temel-linux/yardim/3.webp){:class="responsive img-zoomable"}
 
 Görebildiğiniz gibi `chmod` aracının manuel sayfası açılmış oldu. Tüm içerik elbette şu an gözüktüğü kadarla sınırlı değil.
 
@@ -290,13 +290,13 @@ Görebildiğiniz gibi `chmod` aracının manuel sayfası açılmış oldu. Tüm 
 
 Açılan bu kılavuz sayfasında yön tuşlarını kullanarak yukarı aşağı sağa sola hareket edebiliriz. Ayrıca hızlıca alt satırlara inmek istersek sayfa sayfa atlamak için <kbd>space</kbd> tuşunu da kullanabiliriz. Zaten alt çubuktan da tüm manuel sayfasının ne kadarını okuduğunuzu kolayca takip edebilirsiniz. 
 
-![4.gif]({{ site.url }}/egitim/temel-linux/yardım/4.gif){:class="responsive img-zoomable"}
+![4.gif]({{ site.url }}/egitim/temel-linux/yardim/4.gif){:class="responsive img-zoomable"}
 
 ## Yardım Bilgisi
 
 Ayrıca man sayfasının kısayollarını ve kullanımını görmek isterseniz man sayfası açıkken <kbd>h</kbd> tuşuna basarsanız sizi man kılavuzunun yardım sayfası karşılar, burada man komutunun kullanımı ile ilgili detaylı bilgi yardımı mevcut. 
 
-![5.webp]({{ site.url }}/egitim/temel-linux/yardım/5.webp){:class="responsive img-zoomable"}
+![5.webp]({{ site.url }}/egitim/temel-linux/yardim/5.webp){:class="responsive img-zoomable"}
 
 Esasen bu kılavuz sayfasında gezinmek için <kbd>space</kbd> ve yukarı aşağı yön tuşları çoğu zaman yeterli olacağı için buradaki detaylı bilgilere muhtemelen pek ihtiyacınız olmayacaktır. Fakat arama özelliği işinize yarayabilir. 
 
@@ -304,17 +304,17 @@ Esasen bu kılavuz sayfasında gezinmek için <kbd>space</kbd> ve yukarı aşağ
 
 Mevcut bulunduğunuz satırdan sonra, aradığınız kelime ile eşleşenleri bulmak için **/aranacak-ifade** şeklinde yazıp <kbd>enter</kbd> ile onaylayabilirsiniz. Ben denemek için “change” ifadesini araştırmak üzere **/change** yazıp <kbd>enter</kbd> ile onaylıyorum.
 
-![6.gif]({{ site.url }}/egitim/temel-linux/yardım/6.gif){:class="responsive img-zoomable"}
+![6.gif]({{ site.url }}/egitim/temel-linux/yardim/6.gif){:class="responsive img-zoomable"}
 
 Bakın “change” ile eşleşenler renkli şekilde aydınlatıldı. Yani aradığım ifade ile eşleşenleri görebiliyorum. Eğer eşleşmeler arası ileri geri atlamak istersek, önceki ve sonraki eşleşmelerde atlamak için <kbd>n</kbd> ve <kbd>N</kbd> tuşlarını kullanabiliyoruz. Büyük “N” karakteri için <kbd>Shift</kbd> + <kbd>n</kbd> ya da <kbd>Capslock</kbd> açıkken <kbd>n</kbd> tuşuna basmanız yeterli. Bu sayede eşleşmeler arasında ileri geri geçiş yapabilirsiniz. 
 
-![7.gif]({{ site.url }}/egitim/temel-linux/yardım/7.gif){:class="responsive img-zoomable"}
+![7.gif]({{ site.url }}/egitim/temel-linux/yardim/7.gif){:class="responsive img-zoomable"}
 
 ## Manual Sayfasından Çıkış
 
 Kılavuz sayfasını kapatmak için <kbd>q</kbd> tuşuna basmamız yeterli.
 
-![8.gif]({{ site.url }}/egitim/temel-linux/yardım/8.gif){:class="responsive img-zoomable"}
+![8.gif]({{ site.url }}/egitim/temel-linux/yardim/8.gif){:class="responsive img-zoomable"}
 
 Neticede bizzat deneyimlediğimiz gibi herhangi bir araç hakkında bilgi almak üzere manual sayfalarını kullanmak çok basit. Şimdiye kadar nasıl açılıp, sayfalardan nasıl gezinebileceğimizden bahsettik. Şimdi biraz da **man** sayfasının iç yapısına yani sayfa düzenine kısaca değinelim istiyorum. 
 
@@ -345,11 +345,11 @@ Araç veya aracın kısa işlev açıklaması ile eşleşen manual sayfalarını
 
 Manual sayfaları her ne kadar bütüncül olarak faydalı kaynaklar olsa da manuel sayfalarını yalnızca spesifik bir konu veya araç hakkında yekpare bilgi almak için kullanmanız gerekmiyor. Yani manual sayfalarını yalnızca dokümanları baştan sonra okumak için kullanmamız şart değil. Örneğin yalnızca manual sayfalarının başında yer alan, ilgili aracın isminin ve işlevinin açıklandığı bölümden de faydalanmak isteyebiliriz. Bu duruma örnek verebilmek için öncelikle `man passwd` komutu ile **passwd** aracının açıklandığı manual sayfası açalım. 
 
-![9.webp]({{ site.url }}/egitim/temel-linux/yardım/9.webp){:class="responsive img-zoomable"}
+![9.webp]({{ site.url }}/egitim/temel-linux/yardim/9.webp){:class="responsive img-zoomable"}
 
 Bakın burada isim bölümünde, daha önce de izah ettiğimiz şekilde, aracın ismi ve işlevi hakkında kısa bir açıklama bulunuyor. İşte bizler bu bölümdeki açıklamaları kullanarak, aracın isminden kısaca işlevini ya da tersi şekilde, aracın işlev açıklamasından aracın adını bulabiliriz. Örneğin **passwd** aracının işlevini yani kullanıcı parolası değiştirme işlevini hatırlıyorsunuz ancak **passwd** aracının ismi aklınıza gelmedi diyelim. İşte tam bu noktada `man` komutunun `-k` seçeneğini kullanıp, argüman olarak aracın işlevini yazıp aratabilirsiniz. Şu an çok net anlaşılmamış olabilir hemen basit bir örnek üzerinden ele alalım. Bunun için hemen yeni bir konsol açalım, ve komut satırına `man -k passwd` komutunu girelim.
 
-![10.webp]({{ site.url }}/egitim/temel-linux/yardım/10.webp){:class="responsive img-zoomable"}
+![10.webp]({{ site.url }}/egitim/temel-linux/yardim/10.webp){:class="responsive img-zoomable"}
 
 Bakın, burada yazmış olduğum komut sayesinde manuel sayfasının **NAME** yani isim bölümünde yazan araç ismi ve kısaca açıklamasında `passwd` ifadesi geçen tüm manuel sayfaları tek tek konsola bastırıldı. Kimisinin sadece adında, kimisinin de işlev açıklamasında **passwd** ifadesi geçiyor gördüğünüz gibi. Diğer çıktılar isminin bir kısmında veya açıklamasının bir bölümünde passwd yani aradığımız ifade geçen manual sayfaları. 
 
@@ -357,7 +357,7 @@ Neticede işte bizler `man -k` komutu ile araştırma yaparken aslında tüm man
 
 Ben örnek olarak **passwd** aracının ismini yazdım ancak manuel sayfalarının **NAME** başlığı altında geçen dilediğiniz bir kelimeyi veya kelime gruplarını araştırmanız mümkündür. Ben bu kez yeni bir örnek olarak "**change file**" kelimelerini araştırabiliriz. Yani bu kez, aracın işlevinden aracın ismine ulaşmayı deneyelim.
 
-![11.webp]({{ site.url }}/egitim/temel-linux/yardım/11.webp){:class="responsive img-zoomable"}
+![11.webp]({{ site.url }}/egitim/temel-linux/yardim/11.webp){:class="responsive img-zoomable"}
 
 Görebildiğiniz gibi içerisinde tam olarak "change file" ifadesi geçen tüm manuel sayfaları listelendi. Buradaki eşleşmenin, ismin yanındaki kısa açıklama bilgisi sayesinde yakalandığını da buradaki çıktılara bakarak kolayca teyit edebiliyoruz. 
 
@@ -408,7 +408,7 @@ touch (1)            - change file timestamps
 
 Bakın birebir aynı çıktıyı aldık çünkü `man -k` ile `apropos` komutu aynı işlevi gören iki farklı komut. Hatta `man —help` komutu ile man aracının yardım bilgisini listeleyip kontrol edebiliriz. 
 
-![12.webp]({{ site.url }}/egitim/temel-linux/yardım/12.webp){:class="responsive img-zoomable"}
+![12.webp]({{ site.url }}/egitim/temel-linux/yardim/12.webp){:class="responsive img-zoomable"}
 
 Bakın `-k` seçeneğinin uzun karşılığı olarak burada da **apropos** ifadesinin kullanıldığını görebiliyoruz. **apropos** aracının ismi de buradan geliyor zaten. Apropos ifadesi Türkçe olarak “uygun” ifadesine karşılık geldiği için bizler de bu aracı aradığımız kelimelere uygun olan manual sayfalarını bulmak amacıyla kullandığımızdan bence hatırlaması kolay bir komut. Sizin için hangisi daha akılda kalıcı ise onu kullanmakta özgürsünüz.
 
