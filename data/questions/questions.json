@@ -494,7 +494,7 @@
   },
   {
     "question": "Dosya ismi genişletmesinde tüm karakterleri kapsayan joker karakter hangisidir ?",
-    "options": ["Yıldız * ", "Soru İşareti ?", "Kıvırcık Parantez {}", "Köşeli Parantez []"],
+    "options": ["Yıldız *", "Soru İşareti ?", "Kıvırcık Parantez {}", "Köşeli Parantez []"],
     "answer": "Yıldız *"
   },
   {
