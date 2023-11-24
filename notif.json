@@ -1,24 +1,24 @@
 {
     "kuponlar": [
         {
-          "kupon_kodu": "GUNCEL",
-          "link": "https://www.udemy.com/course/kali-linux-ile-sifirdan-temel-linux-egitimi/?couponCode=GUNCEL",
-          "baslangic_tarihi": "2023-10-22",
-          "bitis_tarihi": "2023-11-22"
+          "kupon_kodu": "241223",
+          "link": "https://www.udemy.com/course/kali-linux-ile-sifirdan-temel-linux-egitimi/?couponCode=241223",
+          "baslangic_tarihi": "2023-11-24",
+          "bitis_tarihi": "2023-12-24"
         }
       ],
     "blog_paylasimlari": [
         {
           "tur": "Yeni Blog Paylaşımı",
-          "baslik": "apt ile apt-get Arasındaki Fark",
-          "link": "https://www.linuxdersleri.net/apt-ile-apt-get-fark%C4%B1",
-          "yayin_tarihi": "2023-10-29"
-        },
-        {
-          "tur": "Yeni Blog Paylaşımı",
           "baslik": "Linux Üzerinde Regex Kullanımı",
           "link": "https://www.linuxdersleri.net/linux-regex",
           "yayin_tarihi": "2023-10-19"
+        },
+                {
+          "tur": "Yeni Blog Paylaşımı",
+          "baslik": "Unutulan Root Parolasını Değiştirmek",
+          "link": "https://www.linuxdersleri.net/unutulan-root-parolas%C4%B1n%C4%B1-degistirmek",
+          "yayin_tarihi": "2023-11-12"
         }
       ]
 }
