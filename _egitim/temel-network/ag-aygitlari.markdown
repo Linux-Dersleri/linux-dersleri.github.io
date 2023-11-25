@@ -10,6 +10,7 @@ tags: [hub, bridge, switch, router,]
 categories: [temel-network]
 tutorial: 2
 cover: ag-aygitlaricover.webp
+related-video: _r5vQeKyDBw
 toc: true 
 ---
 

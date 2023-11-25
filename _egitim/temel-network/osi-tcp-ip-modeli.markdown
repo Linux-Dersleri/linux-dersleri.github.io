@@ -10,6 +10,7 @@ tags: [tcp, udp,]
 categories: [temel-network]
 tutorial: 3
 cover: osi-tcp-ip-modelcover.webp
+related-video: LsNTlAMUBTs
 toc: true 
 ---
 

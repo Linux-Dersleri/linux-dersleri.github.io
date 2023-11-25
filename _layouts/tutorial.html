@@ -74,7 +74,16 @@
           {% else %}
           {% include temel-linux-egitimi-card-harici.html %}
         {% endif %}
-       
+        {% if page.related-video %}
+<div class="no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+			<p align="center" class="kirmizi text-danger">İlişkili Video</p>
+      <iframe src="https://www.youtube.com/embed/{{ page.related-video }}" frameborder="0" allowfullscreen></iframe>
+      <p class="card-text mb-auto">Mevcut doküman ile ilişkili olan Youtube videosu.</p>
+        
+        </div>
+        </div>
+      {% endif %}
       </div>
 	  
     </div>

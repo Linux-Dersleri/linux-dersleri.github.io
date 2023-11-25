@@ -10,6 +10,7 @@ tags: [network]
 categories: [temel-network]
 tutorial: 0
 cover: girizgahcover.webp
+related-video: d30mdlHGvdg
 toc: true 
 ---
 

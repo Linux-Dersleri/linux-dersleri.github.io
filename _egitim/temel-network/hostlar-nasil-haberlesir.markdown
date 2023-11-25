@@ -10,6 +10,7 @@ tags: [host]
 categories: [temel-network]
 tutorial: 4
 cover: hostcover.webp
+related-video: TTz8o7zYSg8
 toc: true 
 ---
 

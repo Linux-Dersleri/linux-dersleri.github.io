@@ -10,6 +10,7 @@ tags: [switch, vlan,]
 categories: [temel-network]
 tutorial: 5
 cover: switchcover.webp
+related-video: VPPCS9Ltuq0
 toc: true 
 ---
 

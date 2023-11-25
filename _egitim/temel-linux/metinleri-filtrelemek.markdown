@@ -10,6 +10,7 @@ tags: [pipe , xargs , grep , regex , find , locate , cut , tr , sed , awk , more
 categories: [temel-linux]
 cover: metinfiltrecover.webp
 tutorial: 10
+related-video: fLKdLC9fwtQ
 toc: true 
 ---
 

@@ -10,6 +10,7 @@ tags: [network, host, client, server, IP, subnetting]
 categories: [temel-network]
 tutorial: 1
 cover: temel-kavramlarcover.webp
+related-video: 6a3mHYx9y3Q
 toc: true 
 ---
 
