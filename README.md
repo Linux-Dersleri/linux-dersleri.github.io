@@ -3,6 +3,9 @@
 ## Platform Hakkında
 Bu web platformu, [Türkçe Temel Linux Dokümantasyonu](https://github.com/taylanbildik/Linux_Dersleri) içeriğini kolay takip edilebilmesi için geliştirilmiştir. 
 
+## Tanıtım Videosu
+[https://www.youtube.com/watch?v=g00i4px9r6w](https://www.youtube.com/watch?v=g00i4px9r6w)
+
 ## Platform Adresi: [linuxdersleri.net](https://www.linuxdersleri.net)
 ![](https://raw.githubusercontent.com/Linux-Dersleri/linux-dersleri.github.io/master/data/img/web-platformu.png)
 
