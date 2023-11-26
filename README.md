@@ -1,4 +1,5 @@
 # Linux Dersleri Web Platformu
+![](https://raw.githubusercontent.com/Linux-Dersleri/linux-dersleri.github.io/master/data/img/banner-logo.png)
 
 ## Platform Hakkında
 Bu web platformu, [Türkçe Temel Linux Dokümantasyonu](https://github.com/taylanbildik/Linux_Dersleri) içeriğini kolay takip edilebilmesi için geliştirilmiştir. 
