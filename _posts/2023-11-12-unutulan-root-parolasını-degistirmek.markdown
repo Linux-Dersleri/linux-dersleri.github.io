@@ -66,4 +66,4 @@ Bu sebeple SELinux aktif sistemlerde root parolası değişimi ardından `touch 
 
 Tüm işlemlerin ardından son olarak `reboot -f` komutu ile sistemi yeniden başlatıp, tanımlamış olduğunuz root parolasını kullanabilirsiniz.
 
-`/.autorelabel` konusundaki bilgilendirmesi için için [Yasin Karabulak](https://www.linkedin.com/in/yasinkarabulak/){:target="_blank"} hocama çok teşekkür ederim.
+`/.autorelabel` konusundaki bilgilendirmesi için [Yasin Karabulak](https://www.linkedin.com/in/yasinkarabulak/){:target="_blank"} hocama çok teşekkür ederim.
