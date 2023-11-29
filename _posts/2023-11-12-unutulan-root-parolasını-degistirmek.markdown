@@ -2,7 +2,7 @@
 sitemap: true
 layout: b-post
 title:  "Unutulan Root Parolasını Değiştirmek"
-modified: 
+modified: 2023-11-29
 author: Taylan Özgür Bildik
 tags: [passwd]
 categories: blog 
@@ -52,6 +52,18 @@ Son olarak şifre belirlemek üzere `passwd` komutunu girelim.
 
 Ve işlemler bu kadar !
 
-Gördüğünüz gibi işlem başarılı bir şekilde gerçekleşti ve ”**passwd: password updated successfully”** çıktısını aldık. Yani root hesabının parolasını değiştirmiş olduk. 
+Gördüğünüz gibi işlem başarılı bir şekilde gerçekleşti  ve ”**passwd: password updated successfully”** çıktısını aldık. Yani root hesabının parolasını değiştirmiş olduk. 
 
-`reboot -f` komutu ile sistemi yeniden başlatıp, tanımlamış olduğunuz root parolasını kullanabilirsiniz.
+Fakat SELinux etkin sistemlerde(CentOS, RedHat vb..) son olarak `touch /.autorelabel` komutu ile kök dizinde “***.autorelabel***” dosyası oluşturulmalı. Çünkü güvenlik için kullanılan SELinux modülü her dosya ve işlemi, etiketleri(label) ile tanımlanır. Bu etiketler, dosyanın veya işlemin üzerinde izin verilen işlemleri belirtir. Yani SELinux, bu etiketleri kullanarak dosya ve işlemlere olan erişimi kontrol eder. 
+
+root parolası değiştiğinde sistemde meydana gelecek olan etiket değişimi dolayısıyla SELinux aktif sistemde, yetki problemi oluşmaması için bu etiketlerin güncellenmesi gerekir. İşte `touch /.autorelabel` komutu ile ana dizine “***.autorelabel***" dosyasını eklemek, SELinux'un dosya etiketlerini otomatik olarak güncellemesini sağlar. 
+
+```bash
+touch /.autorelabel
+```
+
+Bu sebeple SELinux aktif sistemlerde root parolası değişimi ardından `touch /.autorelabel` komutu kullanılmalıdır. Alternatif yaklaşımlar ve daha fazla detay için [buraya](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system_administrators_guide/ch-working_with_the_grub_2_boot_loader#sec-Changing_and_Resetting_the_Root_Password){:target="_blank"} göz atabilirsiniz.
+
+Tüm işlemlerin ardından son olarak `reboot -f` komutu ile sistemi yeniden başlatıp, tanımlamış olduğunuz root parolasını kullanabilirsiniz.
+
+`/.autorelabel` konusundaki bilgilendirmesi için için [Yasin Karabulak](https://www.linkedin.com/in/yasinkarabulak/){:target="_blank"} hocama çok teşekkür ederim.
