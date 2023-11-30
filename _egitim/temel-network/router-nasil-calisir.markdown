@@ -10,6 +10,7 @@ tags: [router,]
 categories: [temel-network]
 tutorial: 6
 cover: routercover.webp
+related-video: UnudGDHV9pI
 toc: true 
 ---
 
