@@ -11,7 +11,7 @@
     },
     {
       "question": "a dan z ye kadar olan karakterleri beşer aralıkla üretmek için hangi genişletmeyi kullanmamız gerekir ?",
-      "options": ["{5..a..z}", "{a..5..z}", "{a..z..5} ", "{a..z}5"],
+      "options": ["{5..a..z}", "{a..5..z}", "{a..z..5}", "{a..z}5"],
       "answer": "{a..z..5}"
     },
     {
