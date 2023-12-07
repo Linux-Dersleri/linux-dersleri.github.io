@@ -10,6 +10,7 @@ tags: [arp, ftp, smtp, http, tls, ssh, dns, dhcp]
 categories: [temel-network]
 tutorial: 7
 cover: protokollercover.webp
+related-video: a5sF3ZyoDY0
 toc: true 
 ---
 
