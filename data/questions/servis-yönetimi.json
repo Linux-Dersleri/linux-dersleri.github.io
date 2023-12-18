@@ -1,44 +1,44 @@
 [
   {
-    "question": "Systemd üzerinden bir servisi başlatmak için hangi komutu kullanabiliriz?",
-    "options": [
-      "system start servis",
-      "systemd start servis",
-      "systmd load servis",
-      "systemctl start servis",
-      "systemctl load servis"
+   "question": "Systemd üzerinden bir servisi başlatmak için hangi komutu kullanabiliriz?",
+   "options": [
+     "system start servis",
+     "systemd start servis",
+     "systmd load servis",
+     "systemctl start servis",
+     "systemctl load servis"
     ],
-    "answer": "systemctl start servis"
+   "answer": "systemctl start servis"
   },
   {
-    "question": "Systemd üzerinden bir servisi durdurmak için hangi komutu kullanabiliriz?",
-    "options": [
-      "system stop servis",
-      "systemd finish servis",
-      "systmd stop servis",
-      "systemctl stop servis",
-      "systemctl term servis"
+   "question": "Systemd üzerinden bir servisi durdurmak için hangi komutu kullanabiliriz?",
+   "options": [
+     "system stop servis",
+     "systemd finish servis",
+     "systmd stop servis",
+     "systemctl stop servis",
+     "systemctl term servis"
     ],
-    "answer": "systemctl stop servis"
+   "answer": "systemctl stop servis"
   },
   {
-    "question": "Servisi sistem başlangıcında otomatik olarak başlatılacak şekilde ayarlamak için hangi komutu kullanabiliriz?",
-    "options": [
-      "systemctl start servis",
-      "systemctl enable servis",
-      "systemctl auto servis",
-      "systemctl open servis"
+   "question": "Servisi sistem başlangıcında otomatik olarak başlatılacak şekilde ayarlamak için hangi komutu kullanabiliriz?",
+   "options": [
+     "systemctl start servis",
+     "systemctl enable servis",
+     "systemctl auto servis",
+     "systemctl open servis"
     ],
-    "answer": "systemctl enable servis"
+   "answer": "systemctl enable servis"
   },
   {
-    "question": "Sistem başlangıcında otomatik olarak başlatılan bir servisin, otomatik başlatılmasını önlemek için hangi komutu kullanabiliriz?",
-    "options": [
-      "systemctl stop servis",
-      "systemctl disable servis",
-      "systemctl auto servis",
-      "systemctl close servis"
+   "question": "Sistem başlangıcında otomatik olarak başlatılan bir servisin, otomatik başlatılmasını önlemek için hangi komutu kullanabiliriz?",
+   "options": [
+     "systemctl stop servis",
+     "systemctl disable servis",
+     "systemctl auto servis",
+     "systemctl close servis"
     ],
-    "answer": "systemctl disable servis"
+   "answer": "systemctl disable servis"
   }
 ]

@@ -1,77 +1,77 @@
 [
     {
-      "question": "Haftanın gün isimleriyle birlikte takvim bilgisi almak için hangi komutu kullanabiliriz?",
-      "options": ["date", "ndate", "cal", "ncal"],
-      "answer": "ncal"
+     "question": "Haftanın gün isimleriyle birlikte takvim bilgisi almak için hangi komutu kullanabiliriz?",
+     "options": ["date", "ndate", "cal", "ncal"],
+     "answer": "ncal"
     },
     {
-      "question": "Mevcut tarihi ve saati öğrenmek için hangi komutu kullanabiliriz?",
-      "options": ["cal", "ncal", "time", "date"],
-      "answer": "date"
+     "question": "Mevcut tarihi ve saati öğrenmek için hangi komutu kullanabiliriz?",
+     "options": ["cal", "ncal", "time", "date"],
+     "answer": "date"
     },
     {
-      "question": "which komutunun işlevi nedir?",
-      "options": ["komutun türü hakkında bilgi vermek", "dosya ve klasörlerin özniteliklerini bastırmak", "hangi dizinde olduğumuzu bastırmak", "argüman olarak verilen komutun dosya konumunu bastırmak"],
-      "answer": "argüman olarak verilen komutun dosya konumunu bastırmak"
+     "question": "which komutunun işlevi nedir?",
+     "options": ["komutun türü hakkında bilgi vermek", "dosya ve klasörlerin özniteliklerini bastırmak", "hangi dizinde olduğumuzu bastırmak", "argüman olarak verilen komutun dosya konumunu bastırmak"],
+     "answer": "argüman olarak verilen komutun dosya konumunu bastırmak"
     },
     {
-      "question": "Dosyaların tipi hakkında bilgi almak için hangi komutu kullanabiliriz?",
-      "options": ["type", "what", "which", "file"],
-      "answer": "file"
+     "question": "Dosyaların tipi hakkında bilgi almak için hangi komutu kullanabiliriz?",
+     "options": ["type", "what", "which", "file"],
+     "answer": "file"
     },
     {
-      "question": "Komutların türleri hakkında bilgi almak için hangi komutu kullanabiliriz?",
-      "options": ["type", "file", "which", "what"],
-      "answer": "type"
+     "question": "Komutların türleri hakkında bilgi almak için hangi komutu kullanabiliriz?",
+     "options": ["type", "file", "which", "what"],
+     "answer": "type"
     },
     {
-      "question": "Dosya ve dizinlerin öznitelikleri(metaverileri) hakkında bilgi almak için hangi komutu kullanabiliriz?",
-      "options": ["free", "what", "stat", "file"],
-      "answer": "stat"
+     "question": "Dosya ve dizinlerin öznitelikleri(metaverileri) hakkında bilgi almak için hangi komutu kullanabiliriz?",
+     "options": ["free", "what", "stat", "file"],
+     "answer": "stat"
     },
     {
-      "question": "Bellek kullanımı hakkında bilgi almak için hangi komutu kullanabiliriz?",
-      "options": ["what", "free", "stat", "file"],
-      "answer": "free"
+     "question": "Bellek kullanımı hakkında bilgi almak için hangi komutu kullanabiliriz?",
+     "options": ["what", "free", "stat", "file"],
+     "answer": "free"
     },
     {
-      "question": "lsb_release -a komutu hangi çıktıyı verir?",
-      "options": ["sistemin çalışma süresini", "sistemin donanım bilgisini", "sistemin sürümü gibi bazı standart bilgileri"],
-      "answer": "sistemin sürümü gibi bazı standart bilgileri"
+     "question": "lsb_release -a komutu hangi çıktıyı verir?",
+     "options": ["sistemin çalışma süresini", "sistemin donanım bilgisini", "sistemin sürümü gibi bazı standart bilgileri"],
+     "answer": "sistemin sürümü gibi bazı standart bilgileri"
     },
     {
-      "question": "hostname, çekirdek sürümü, donanım mimarisi gibi bilgileri öğrenmek için hangi komutu kullanabiliriz?",
-      "options": ["lsb_release -a", "what -a", "vmstat -a", "uname -a"],
-      "answer": "uname -a"
+     "question": "hostname, çekirdek sürümü, donanım mimarisi gibi bilgileri öğrenmek için hangi komutu kullanabiliriz?",
+     "options": ["lsb_release -a", "what -a", "vmstat -a", "uname -a"],
+     "answer": "uname -a"
     },
     {
-      "question": "Sistemin ne kadar süredir açık olduğunu öğrenmek için hangi komutu kullanabiliriz?",
-      "options": ["when", "uptime", "while", "time"],
-      "answer": "uptime"
+     "question": "Sistemin ne kadar süredir açık olduğunu öğrenmek için hangi komutu kullanabiliriz?",
+     "options": ["when", "uptime", "while", "time"],
+     "answer": "uptime"
     },
     {
-      "question": "Kendi ev dizinimizdeki alt dizinler de dahil tüm dosya ve klasörlerin toplam boyutunu öğrenmek için hangi komutu kullanabiliriz?",
-      "options": ["ls -la ~", "total -a ~", "du ~", "count ~"],
-      "answer": "du ~"
+     "question": "Kendi ev dizinimizdeki alt dizinler de dahil tüm dosya ve klasörlerin toplam boyutunu öğrenmek için hangi komutu kullanabiliriz?",
+     "options": ["ls -la ~", "total -a ~", "du ~", "count ~"],
+     "answer": "du ~"
     },
     {
-      "question": "lsusb komutunun işlevi nedir?",
-      "options": ["sisteme bağlı bulunan tüm aygıtları listelemek", "sisteme bağlı bulunan tüm tanımlanamayan aygıtları listelemek", "sisteme bağlı bulunan usb aygıtlarını listelemek", "sistemdeki tüm bozuk aygıt dosyalarını listelemek"],
-      "answer": "sisteme bağlı bulunan usb aygıtlarını listelemek"
+     "question": "lsusb komutunun işlevi nedir?",
+     "options": ["sisteme bağlı bulunan tüm aygıtları listelemek", "sisteme bağlı bulunan tüm tanımlanamayan aygıtları listelemek", "sisteme bağlı bulunan usb aygıtlarını listelemek", "sistemdeki tüm bozuk aygıt dosyalarını listelemek"],
+     "answer": "sisteme bağlı bulunan usb aygıtlarını listelemek"
     },
     {
-      "question": "du aracıyla büyüklük birimi bakımından daha okunaklı çıktılar almak için hangi seçeneği kullanmamız gerekir?",
-      "options": ["-a", "-s", "-S", "-h"],
-      "answer": "-h"
+     "question": "du aracıyla büyüklük birimi bakımından daha okunaklı çıktılar almak için hangi seçeneği kullanmamız gerekir?",
+     "options": ["-a", "-s", "-S", "-h"],
+     "answer": "-h"
     },
     {
-      "question": "du aracıyla tüm dosya ve dizinlerin isimlerini listelemek için hangi seçeneği kullanabiliriz?",
-      "options": ["-a", "-s", "-S", "-h"],
-      "answer": "-a"
+     "question": "du aracıyla tüm dosya ve dizinlerin isimlerini listelemek için hangi seçeneği kullanabiliriz?",
+     "options": ["-a", "-s", "-S", "-h"],
+     "answer": "-a"
     },
     {
-      "question": "Dosya ve dizin isimleri yerine yalnızca toplam boyut miktarını öğrenmek yani özet bilgi almak için du aracının hangi seçeneğini kullanabiliriz?",
-      "options": ["-a", "-s", "-S", "-h"],
-      "answer": "-s"
+     "question": "Dosya ve dizin isimleri yerine yalnızca toplam boyut miktarını öğrenmek yani özet bilgi almak için du aracının hangi seçeneğini kullanabiliriz?",
+     "options": ["-a", "-s", "-S", "-h"],
+     "answer": "-s"
     }
   ]

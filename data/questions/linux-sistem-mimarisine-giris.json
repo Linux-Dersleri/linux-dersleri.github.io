@@ -1,61 +1,61 @@
 [
     {
-      "question": "Tüm kabuklarda aynı dahili komutlar mı bulunur ?",
-      "options": [
-        "Evet dahili komutların hepsi tüm kabuklarda ortaktır.",
-        "Hayır, dahili komutlar kabuğa özgü olan komutlardır. Dolayısıyla kabuktan kabuğa göre dahili komutlar değişiklik gösterir."
+     "question": "Tüm kabuklarda aynı dahili komutlar mı bulunur ?",
+     "options": [
+       "Evet dahili komutların hepsi tüm kabuklarda ortaktır.",
+       "Hayır, dahili komutlar kabuğa özgü olan komutlardır. Dolayısıyla kabuktan kabuğa göre dahili komutlar değişiklik gösterir."
       ],
-      "answer": "Hayır, dahili komutlar kabuğa özgü olan komutlardır. Dolayısıyla kabuktan kabuğa göre dahili komutlar değişiklik gösterir."
+     "answer": "Hayır, dahili komutlar kabuğa özgü olan komutlardır. Dolayısıyla kabuktan kabuğa göre dahili komutlar değişiklik gösterir."
     },
     {
-      "question": "echo $SHELL komutu hangi bilgiyi sunar ?",
-      "options": [
-        "Oturum açmış olan mevcut kullanıcının varsayılan kabuğunu",
-        "En sık kullanılan kabuğu",
-        "Sistem hakkında çeşitli bilgileri"
+     "question": "echo $SHELL komutu hangi bilgiyi sunar ?",
+     "options": [
+       "Oturum açmış olan mevcut kullanıcının varsayılan kabuğunu",
+       "En sık kullanılan kabuğu",
+       "Sistem hakkında çeşitli bilgileri"
       ],
-      "answer": "Oturum açmış olan mevcut kullanıcının varsayılan kabuğunu"
+     "answer": "Oturum açmış olan mevcut kullanıcının varsayılan kabuğunu"
     },
     {
-      "question": "Komutlarımızı yorumlayan yapı hangisidir ?",
-      "options": [
-        "Konsol",
-        "Kabuk",
-        "Çekirdek"
+     "question": "Komutlarımızı yorumlayan yapı hangisidir ?",
+     "options": [
+       "Konsol",
+       "Kabuk",
+       "Çekirdek"
       ],
-      "answer": "Kabuk"
+     "answer": "Kabuk"
     },
     {
-      "question": "Komut satırında çalışan araçları grafiksel arayüzdeyken kullanmamız mümkün müdür ?",
-      "options": [
-        "Evet",
-        "Hayır"
+     "question": "Komut satırında çalışan araçları grafiksel arayüzdeyken kullanmamız mümkün müdür ?",
+     "options": [
+       "Evet",
+       "Hayır"
       ],
-      "answer": "Evet"
+     "answer": "Evet"
     },
     {
-      "question": "Yalnızca birer tane konsol(terminal) ve kabuk aracı vardır.",
-      "options": [
-        "Yanlış",
-        "Doğru"
+     "question": "Yalnızca birer tane konsol(terminal) ve kabuk aracı vardır.",
+     "options": [
+       "Yanlış",
+       "Doğru"
       ],
-      "answer": "Yanlış"
+     "answer": "Yanlış"
     },
     {
-      "question": "Kabukta dahili-yerleşik(builtin) olan komutları, aynı kabuğu kullandığımız sürece tüm sistemlerde ortak olarak kullanabiliriz.",
-      "options": [
-        "Hayır",
-        "Evet"
+     "question": "Kabukta dahili-yerleşik(builtin) olan komutları, aynı kabuğu kullandığımız sürece tüm sistemlerde ortak olarak kullanabiliriz.",
+     "options": [
+       "Hayır",
+       "Evet"
       ],
-      "answer": "Evet"
+     "answer": "Evet"
     },
     {
-      "question": "Grafiksel arayüzden komut satırı arayüzüne geçiş yapıp TTY konsolları üzerinde çalışmak için hangi tuşlamayı yapmamız gerekir ?",
-      "options": [
-        "Ctrl + Shift+ F1,F2,F3..F8",
-        "Ctrl + Alt + F1,F2,F3..F8",
-        "Alt+ Shift + F1,F2,F3..F8"
+     "question": "Grafiksel arayüzden komut satırı arayüzüne geçiş yapıp TTY konsolları üzerinde çalışmak için hangi tuşlamayı yapmamız gerekir ?",
+     "options": [
+       "Ctrl + Shift+ F1,F2,F3..F8",
+       "Ctrl + Alt + F1,F2,F3..F8",
+       "Alt+ Shift + F1,F2,F3..F8"
       ],
-      "answer": "Ctrl + Alt + F1,F2,F3..F8"
+     "answer": "Ctrl + Alt + F1,F2,F3..F8"
     }
 ]

@@ -1,69 +1,69 @@
 [
   {
-      "question": "2’den 12 ye kadar olan sayıların ikişer aralıklar ile konsola bastırmak için hangi seçenek doğrudur ?",
-      "options": ["[2..12..2]", "(2..12..2)", "(2..12..2) "],
-      "answer": "(2..12..2)"
+     "question": "2’den 12 ye kadar olan sayıların ikişer aralıklar ile konsola bastırmak için hangi seçenek doğrudur ?",
+     "options": ["[2..12..2]", "(2..12..2)", "(2..12..2)"],
+     "answer": "(2..12..2)"
     },
     {
-      "question": "a dan f ye kadar olan karakterleri üretmek için hangi genişletmeyi kullanmamız gerekir ?",
-      "options": ["{a..f}", "{a-f}", "[a..f]", "[a-f]"],
-      "answer": "{a..f}"
+     "question": "a dan f ye kadar olan karakterleri üretmek için hangi genişletmeyi kullanmamız gerekir ?",
+     "options": ["{a..f}", "{a-f}", "[a..f]", "[a-f]"],
+     "answer": "{a..f}"
     },
     {
-      "question": "a dan z ye kadar olan karakterleri beşer aralıkla üretmek için hangi genişletmeyi kullanmamız gerekir ?",
-      "options": ["{5..a..z}", "{a..5..z}", "{a..z..5}", "{a..z}5"],
-      "answer": "{a..z..5}"
+     "question": "a dan z ye kadar olan karakterleri beşer aralıkla üretmek için hangi genişletmeyi kullanmamız gerekir ?",
+     "options": ["{5..a..z}", "{a..5..z}", "{a..z..5}", "{a..z}5"],
+     "answer": "{a..z..5}"
     },
     {
-      "question": "test1 test3 test5 şeklinde devam eden 1 den 9 ye kadar 2 şer aralıklı argümanlar üretmek için hangi genişletmeyi kullanmamız gerekir ?",
-      "options": ["test{1..9}", "test{1..9..2} ", "test {1..9}", "test {1..9..2}"],
-      "answer": "test{1..9..2}"
+     "question": "test1 test3 test5 şeklinde devam eden 1 den 9 ye kadar 2 şer aralıklı argümanlar üretmek için hangi genişletmeyi kullanmamız gerekir ?",
+     "options": ["test{1..9}", "test{1..9..2}", "test {1..9}", "test {1..9..2}"],
+     "answer": "test{1..9..2}"
     },
     {
-      "question": "echo {1..3}{a..c}{A..C} komutu hangi çıktıyı üretir ?",
-      "options": [
-        "1 2 3 aA aB aC bA bB bC cA cB cC",
-        "1 2 3 a b c A B C",
-        "1aA 1aB 1aC 1bA 1bB 1bC 1cA 1cB 1cC 2aA 2aB 2aC 2bA 2bB 2bC 2cA 2cB 2cC 3aA 3aB 3aC 3bA 3bB 3bC 3cA 3cB 3cC ",
-        "1a 1b 1c 2a 2b 2c 3a 3b 3c A B C"
+     "question": "echo {1..3}{a..c}{A..C} komutu hangi çıktıyı üretir ?",
+     "options": [
+       "1 2 3 aA aB aC bA bB bC cA cB cC",
+       "1 2 3 a b c A B C",
+       "1aA 1aB 1aC 1bA 1bB 1bC 1cA 1cB 1cC 2aA 2aB 2aC 2bA 2bB 2bC 2cA 2cB 2cC 3aA 3aB 3aC 3bA 3bB 3bC 3cA 3cB 3cC",
+       "1a 1b 1c 2a 2b 2c 3a 3b 3c A B C"
       ],
-      "answer": "1aA 1aB 1aC 1bA 1bB 1bC 1cA 1cB 1cC 2aA 2aB 2aC 2bA 2bB 2bC 2cA 2cB 2cC 3aA 3aB 3aC 3bA 3bB 3bC 3cA 3cB 3cC"
+     "answer": "1aA 1aB 1aC 1bA 1bB 1bC 1cA 1cB 1cC 2aA 2aB 2aC 2bA 2bB 2bC 2cA 2cB 2cC 3aA 3aB 3aC 3bA 3bB 3bC 3cA 3cB 3cC"
     },
     {
-      "question": "Komut ikamesini kullanarak konsola, 'şu anda bulunduğum dizin:' yazdırıp karşısına bulunduğunuz dizinin dosya yolunu veren komutun çıktısını nasıl eklersiniz ?",
-      "options": [
-        "echo 'Şu anda bulunduğum dizin: $(pwd)'",
-        "echo 'Şu anda bulunduğum dizin: $pwd'",
-        "echo 'Şu anda bulunduğum dizin: $`pwd`'"
+     "question": "Komut ikamesini kullanarak konsola, 'şu anda bulunduğum dizin:' yazdırıp karşısına bulunduğunuz dizinin dosya yolunu veren komutun çıktısını nasıl eklersiniz ?",
+     "options": [
+       "echo 'Şu anda bulunduğum dizin: $(pwd)'",
+       "echo 'Şu anda bulunduğum dizin: $pwd'",
+       "echo 'Şu anda bulunduğum dizin: $`pwd`'"
       ],
-      "answer": "echo 'Şu anda bulunduğum dizin: $`pwd`'"
+     "answer": "echo 'Şu anda bulunduğum dizin: $`pwd`'"
     },
     {
-      "question": "Dosya ismi genişletmesinde yalnızca tek bir karakteri kapsayan joker karakter hangisidir ?",
-      "options": ["Yıldız *", "Soru İşareti ? ", "Kıvırcık Parantez {}", "Köşeli Parantez []"],
-      "answer": "Soru İşareti ?"
+     "question": "Dosya ismi genişletmesinde yalnızca tek bir karakteri kapsayan joker karakter hangisidir ?",
+     "options": ["Yıldız *", "Soru İşareti ?", "Kıvırcık Parantez {}", "Köşeli Parantez []"],
+     "answer": "Soru İşareti ?"
     },
     {
-      "question": "Dosya ismi genişletmesinde tüm karakterleri kapsayan joker karakter hangisidir ?",
-      "options": ["Yıldız *", "Soru İşareti ?", "Kıvırcık Parantez {}", "Köşeli Parantez []"],
-      "answer": "Yıldız *"
+     "question": "Dosya ismi genişletmesinde tüm karakterleri kapsayan joker karakter hangisidir ?",
+     "options": ["Yıldız *", "Soru İşareti ?", "Kıvırcık Parantez {}", "Köşeli Parantez []"],
+     "answer": "Yıldız *"
     },
     {
-      "question": "Dosya ismi genişletmesi için aralık belirtmemize olanak tanıyan joker karakter hangisidir ?",
-      "options": ["Yıldız *", "Soru İşareti ?", "Kıvırcık Parantez {}", "Köşeli Parantez [] "],
-      "answer": "Köşeli Parantez []"
+     "question": "Dosya ismi genişletmesi için aralık belirtmemize olanak tanıyan joker karakter hangisidir ?",
+     "options": ["Yıldız *", "Soru İşareti ?", "Kıvırcık Parantez {}", "Köşeli Parantez []"],
+     "answer": "Köşeli Parantez []"
     },
     {
-      "question": "Tek tırnak ile çift tırnak arasındaki fark hangi seçenekte  açıklanmıştır ?",
-      "options": [
-        "Çift tırnak içerisinde hiç bir genişletme uygulanmaz. Tek tırnakta ise dolar işareti ($) ve ters slash kaçış karakteri (\\) gibi bazı özel karakterle özel anlamlarına genişletilebilirler.",
-        "Tek tırnak içerisinde hiç bir genişletme uygulanmaz. Çift tırnakta ise dolar işareti ($) ve ters slash kaçış karakteri (\\) gibi bazı özel karakterle özel anlamlarına genişletilebilirler."
+     "question": "Tek tırnak ile çift tırnak arasındaki fark hangi seçenekte  açıklanmıştır ?",
+     "options": [
+       "Çift tırnak içerisinde hiç bir genişletme uygulanmaz. Tek tırnakta ise dolar işareti ($) ve ters slash kaçış karakteri (\\) gibi bazı özel karakterle özel anlamlarına genişletilebilirler.",
+       "Tek tırnak içerisinde hiç bir genişletme uygulanmaz. Çift tırnakta ise dolar işareti ($) ve ters slash kaçış karakteri (\\) gibi bazı özel karakterle özel anlamlarına genişletilebilirler."
       ],
-      "answer": "Tek tırnak içerisinde hiç bir genişletme uygulanmaz. Çift tırnakta ise dolar işareti ($) ve ters slash kaçış karakteri (\\) gibi bazı özel karakterle özel anlamlarına genişletilebilirler."
+     "answer": "Tek tırnak içerisinde hiç bir genişletme uygulanmaz. Çift tırnakta ise dolar işareti ($) ve ters slash kaçış karakteri (\\) gibi bazı özel karakterle özel anlamlarına genişletilebilirler."
     },
     {
-      "question": "Çift tırnak içerisinde dosya ismi genişletmesi( * ? [] ) uygulanır mı ?",
-      "options": ["Evet uygulanır.", "Hayır uygulanmaz. "],
-      "answer": "Hayır uygulanmaz."
+     "question": "Çift tırnak içerisinde dosya ismi genişletmesi( * ? [] ) uygulanır mı ?",
+     "options": ["Evet uygulanır.", "Hayır uygulanmaz."],
+     "answer": "Hayır uygulanmaz."
     }
 ]

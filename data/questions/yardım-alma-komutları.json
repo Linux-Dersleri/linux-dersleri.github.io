@@ -1,67 +1,67 @@
 [
  {
-      "question": "Neredeyse tüm araçlarda kısa yardım bilgisini görüntülemek için komutumuzu nasıl girebiliriz?",
-      "options": ["help komut", "komut help", "komut —help"],
-      "answer": "komut —help"
+     "question": "Neredeyse tüm araçlarda kısa yardım bilgisini görüntülemek için komutumuzu nasıl girebiliriz?",
+     "options": ["help komut", "komut help", "komut —help"],
+     "answer": "komut —help"
     },
     {
-      "question": "help komut komutuyla hangi tür araçlar için bilgi alabiliyoruz?",
-      "options": [
-        "tüm araçlar hakkında bilgi alabiliriz",
-        "kabuğun tüm dahili komutları hakkında bilgi alabiliriz",
-        "istisnalar hariç tüm araçlar hakkında bilgi alabiliriz",
-        "bazı istisnalar hariç kabuğun dahili komutları hakkında bilgi alabiliriz"
+     "question": "help komut komutuyla hangi tür araçlar için bilgi alabiliyoruz?",
+     "options": [
+       "tüm araçlar hakkında bilgi alabiliriz",
+       "kabuğun tüm dahili komutları hakkında bilgi alabiliriz",
+       "istisnalar hariç tüm araçlar hakkında bilgi alabiliriz",
+       "bazı istisnalar hariç kabuğun dahili komutları hakkında bilgi alabiliriz"
       ],
-      "answer": "bazı istisnalar hariç kabuğun dahili komutları hakkında bilgi alabiliriz"
+     "answer": "bazı istisnalar hariç kabuğun dahili komutları hakkında bilgi alabiliriz"
     },
     {
-      "question": "Sistem üzerindeki tüm araçların manual sayfaları vardır.",
-      "options": ["Doğru", "Yanlış"],
-      "answer": "Yanlış"
+     "question": "Sistem üzerindeki tüm araçların manual sayfaları vardır.",
+     "options": ["Doğru", "Yanlış"],
+     "answer": "Yanlış"
     },
     {
-      "question": "apropos ve man -k komutlarının işlevleri nedir?",
-      "options": [
-        "Tüm manual sayfaları içeriklerinde filtreleme yapmak",
-        "Manual sayfalarının NAME bölümünde yer alan verilere bakarak filtreleme yapmak.",
-        "Manual sayfalarını güncellemek.",
-        "Argüman olarak verilen manual sayfalarını açmak."
+     "question": "apropos ve man -k komutlarının işlevleri nedir?",
+     "options": [
+       "Tüm manual sayfaları içeriklerinde filtreleme yapmak",
+       "Manual sayfalarının NAME bölümünde yer alan verilere bakarak filtreleme yapmak.",
+       "Manual sayfalarını güncellemek.",
+       "Argüman olarak verilen manual sayfalarını açmak."
       ],
-      "answer": "Manual sayfalarının NAME bölümünde yer alan verilere bakarak filtreleme yapmak."
+     "answer": "Manual sayfalarının NAME bölümünde yer alan verilere bakarak filtreleme yapmak."
     },
     {
-      "question": "Manual sayfalarında mevcut satırdan sonraki eşleşmeleri araştırmak için hangi kısayolu kullanmamız gerekiyor?",
-      "options": ["?aranacak-kelime", ".aranacak-kelime", "!aranacak-kelime", "/aranacak-kelime"],
-      "answer": "?aranacak-kelime"
+     "question": "Manual sayfalarında mevcut satırdan sonraki eşleşmeleri araştırmak için hangi kısayolu kullanmamız gerekiyor?",
+     "options": ["?aranacak-kelime", ".aranacak-kelime", "!aranacak-kelime", "/aranacak-kelime"],
+     "answer": "?aranacak-kelime"
     },
     {
-      "question": "Manual sayfalarında mevcut satırdan önceki eşleşmeleri araştırmak için hangi kısayolu kullanmamız gerekiyor?",
-      "options": ["?aranacak-kelime", ".aranacak-kelime", "!aranacak-kelime", "/aranacak-kelime"],
-      "answer": "?aranacak-kelime"
+     "question": "Manual sayfalarında mevcut satırdan önceki eşleşmeleri araştırmak için hangi kısayolu kullanmamız gerekiyor?",
+     "options": ["?aranacak-kelime", ".aranacak-kelime", "!aranacak-kelime", "/aranacak-kelime"],
+     "answer": "?aranacak-kelime"
     },
     {
-      "question": "Manual sayfasında araştırma sonrası bulunan eşleşmelere hızlıca geçiş yapmak için hangi kısayol tuşlarını kullanabiliyoruz?",
-      "options": ["m ve shift + n", "m ve shift + m", "n ve shift + n", "j ve shift + j"],
-      "answer": "n ve shift + n"
+     "question": "Manual sayfasında araştırma sonrası bulunan eşleşmelere hızlıca geçiş yapmak için hangi kısayol tuşlarını kullanabiliyoruz?",
+     "options": ["m ve shift + n", "m ve shift + m", "n ve shift + n", "j ve shift + j"],
+     "answer": "n ve shift + n"
     },
     {
-      "question": "man aracından çıkmak için ne yapmak gerekir?",
-      "options": [
-        "e tuşuna basmak",
-        "ctrl + e tuşuna basmak",
-        "ctrl + q tuşuna basmak",
-        "q tuşuna basmak"
+     "question": "man aracından çıkmak için ne yapmak gerekir?",
+     "options": [
+       "e tuşuna basmak",
+       "ctrl + e tuşuna basmak",
+       "ctrl + q tuşuna basmak",
+       "q tuşuna basmak"
       ],
-      "answer": "q tuşuna basmak"
+     "answer": "q tuşuna basmak"
     },
     {
-      "question": "Tüm araçların yardım sayfaları ve dokümanları mevcut mudur?",
-      "options": ["Hayır", "Evet"],
-      "answer": "Hayır"
+     "question": "Tüm araçların yardım sayfaları ve dokümanları mevcut mudur?",
+     "options": ["Hayır", "Evet"],
+     "answer": "Hayır"
     },
     {
-      "question": "Manual sayfalarını güncellemek için hangi komutu girmemiz gerekiyor?",
-      "options": ["updatedb", "update man", "manupdate", "mandb"],
-      "answer": "mandb"
+     "question": "Manual sayfalarını güncellemek için hangi komutu girmemiz gerekiyor?",
+     "options": ["updatedb", "update man", "manupdate", "mandb"],
+     "answer": "mandb"
     }
 ]

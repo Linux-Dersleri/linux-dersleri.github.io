@@ -1,42 +1,42 @@
 [
   {
-    "question": "Log dosyaları genellikle hangi dizin altında tutulur?",
-    "options": ["/etc/log", "/opt/log", "/home/log", "/var/log"],
-    "answer": "/var/log"
+   "question": "Log dosyaları genellikle hangi dizin altında tutulur?",
+   "options": ["/etc/log", "/opt/log", "/home/log", "/var/log"],
+   "answer": "/var/log"
   },
   {
-    "question": "Debian tabanlı dağıtımlarda, araçların ürettiği bilgi ve hata mesajlarını kontrol etmek için hangi log dosyası kontrol edilebilir?",
-    "options": ["/var/log/messages", "/var/log/syslog", "/var/log/boot.log", "/var/log/kern.log"],
-    "answer": "/var/log/syslog"
+   "question": "Debian tabanlı dağıtımlarda, araçların ürettiği bilgi ve hata mesajlarını kontrol etmek için hangi log dosyası kontrol edilebilir?",
+   "options": ["/var/log/messages", "/var/log/syslog", "/var/log/boot.log", "/var/log/kern.log"],
+   "answer": "/var/log/syslog"
   },
   {
-    "question": "Redhat tabanlı dağıtımlarda, araçların ürettiği bilgi ve hata mesajlarını kontrol etmek için hangi log dosyası kontrol edilebilir?",
-    "options": ["/var/log/messages", "/var/log/syslog", "/var/log/boot.log", "/var/log/kern.log"],
-    "answer": "/var/log/messages"
+   "question": "Redhat tabanlı dağıtımlarda, araçların ürettiği bilgi ve hata mesajlarını kontrol etmek için hangi log dosyası kontrol edilebilir?",
+   "options": ["/var/log/messages", "/var/log/syslog", "/var/log/boot.log", "/var/log/kern.log"],
+   "answer": "/var/log/messages"
   },
   {
-    "question": "Sistem başlangıcında gerçekleştirilen 'önyükleme' yani 'boot' aşamasının kayıtlarına ulaşmak için hangi kayıt dosyasını inceleyebiliriz?",
-    "options": ["/var/log/messages", "/var/log/syslog", "/var/log/boot.log", "/var/log/kern.log"],
-    "answer": "/var/log/boot.log"
+   "question": "Sistem başlangıcında gerçekleştirilen 'önyükleme' yani 'boot' aşamasının kayıtlarına ulaşmak için hangi kayıt dosyasını inceleyebiliriz?",
+   "options": ["/var/log/messages", "/var/log/syslog", "/var/log/boot.log", "/var/log/kern.log"],
+   "answer": "/var/log/boot.log"
   },
   {
-    "question": "Başarılı oturum açma kayıtlarını incelemek için hangi araç kullanılır?",
-    "options": ["login", "wtmp", "btmp", "last", "lastb"],
-    "answer": "last"
+   "question": "Başarılı oturum açma kayıtlarını incelemek için hangi araç kullanılır?",
+   "options": ["login", "wtmp", "btmp", "last", "lastb"],
+   "answer": "last"
   },
   {
-    "question": "Başarısız oturum açma kayıtlarını incelemek için hangi komut kullanılır?",
-    "options": ["login", "logins", "last", "lastb"],
-    "answer": "lastb"
+   "question": "Başarısız oturum açma kayıtlarını incelemek için hangi komut kullanılır?",
+   "options": ["login", "logins", "last", "lastb"],
+   "answer": "lastb"
   },
   {
-    "question": "Çekirdeğin aygıtlarla ilgili ürettiği çıktıları görmek için hangi komutu kullanabiliriz?",
-    "options": ["kern", "last", "dmesg", "boot"],
-    "answer": "dmesg"
+   "question": "Çekirdeğin aygıtlarla ilgili ürettiği çıktıları görmek için hangi komutu kullanabiliriz?",
+   "options": ["kern", "last", "dmesg", "boot"],
+   "answer": "dmesg"
   },
   {
-    "question": "journald kontrolündeki kayıtlara ulaşmak için hangi aracı kullanabiliriz?",
-    "options": ["dmesg", "last", "journalctl", "lastb", "journald"],
-    "answer": "journalctl"
+   "question": "journald kontrolündeki kayıtlara ulaşmak için hangi aracı kullanabiliriz?",
+   "options": ["dmesg", "last", "journalctl", "lastb", "journald"],
+   "answer": "journalctl"
   }
 ]

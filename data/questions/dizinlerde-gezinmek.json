@@ -1,161 +1,161 @@
 [
  {
-      "question": "Linux sisteminde ana dizini temsil eden gösterim hangisidir?",
-      "options": ["/root", "root", "/", "/main"],
-      "answer": "/"
+     "question": "Linux sisteminde ana dizini temsil eden gösterim hangisidir?",
+     "options": ["/root", "root", "/", "/main"],
+     "answer": "/"
     },
     {
-      "question": "/sbin ve /bin dizinlerinin amacı nedir?",
-      "options": [
-        "Log dosyaları gibi değişken yapıdaki verileri barındırmak.",
-        "Sistemin sunduğu hizmetlere ait verileri barındırmak.",
-        "Çalıştırılabilir ikili (binary) dosyaları barındırmak.",
-        "Araçlara ait kütüphane dosyalarını barındırmak."
+     "question": "/sbin ve /bin dizinlerinin amacı nedir?",
+     "options": [
+       "Log dosyaları gibi değişken yapıdaki verileri barındırmak.",
+       "Sistemin sunduğu hizmetlere ait verileri barındırmak.",
+       "Çalıştırılabilir ikili (binary) dosyaları barındırmak.",
+       "Araçlara ait kütüphane dosyalarını barındırmak."
       ],
-      "answer": "Çalıştırılabilir ikili (binary) dosyaları barındırmak."
+     "answer": "Çalıştırılabilir ikili (binary) dosyaları barındırmak."
     },
     {
-      "question": "Aşağıdakilerden hangisi /sbin ve /bin dizinleri hakkında  bir tanımlama sayılabilir?",
-      "options": [
-        "Her ikisi de yöneticilere özel olan ikili dosyaları barındırır.",
-        "/bin dizini, sistem yöneticileri tarafından kullanılan ve sistem yönetimi ve bakımıyla ilgili önemli programları barındırır.",
-        "/sbin dizini, sistem yöneticileri tarafından kullanılan ve sistem yönetimi ve bakımıyla ilgili önemli programları barındırır.",
-        "Her ikisi de log kayıtlarının bulunduğu dizinlerdir."
+     "question": "Aşağıdakilerden hangisi /sbin ve /bin dizinleri hakkında  bir tanımlama sayılabilir?",
+     "options": [
+       "Her ikisi de yöneticilere özel olan ikili dosyaları barındırır.",
+       "/bin dizini, sistem yöneticileri tarafından kullanılan ve sistem yönetimi ve bakımıyla ilgili önemli programları barındırır.",
+       "/sbin dizini, sistem yöneticileri tarafından kullanılan ve sistem yönetimi ve bakımıyla ilgili önemli programları barındırır.",
+       "Her ikisi de log kayıtlarının bulunduğu dizinlerdir."
       ],
-      "answer": "/sbin dizini, sistem yöneticileri tarafından kullanılan ve sistem yönetimi ve bakımıyla ilgili önemli programları barındırır."
+     "answer": "/sbin dizini, sistem yöneticileri tarafından kullanılan ve sistem yönetimi ve bakımıyla ilgili önemli programları barındırır."
     },
     {
-      "question": "/boot dizini hangi tür dosyaları barındırır?",
-      "options": [
-        "Sistemin önyüklenebilmesi için gerekli olan dosyalar.",
-        "Sistemin kayıtlarını tutan dosyalar.",
-        "Sistemin ağ bağlantısını sağlayan dosyalar.",
-        "Aygıtlar hakkında bilgi sunan çeşitli dosyalar."
+     "question": "/boot dizini hangi tür dosyaları barındırır?",
+     "options": [
+       "Sistemin önyüklenebilmesi için gerekli olan dosyalar.",
+       "Sistemin kayıtlarını tutan dosyalar.",
+       "Sistemin ağ bağlantısını sağlayan dosyalar.",
+       "Aygıtlar hakkında bilgi sunan çeşitli dosyalar."
       ],
-      "answer": "Sistemin önyüklenebilmesi için gerekli olan dosyalar."
+     "answer": "Sistemin önyüklenebilmesi için gerekli olan dosyalar."
     },
     {
-      "question": "Sisteme bağlı bulunan genel donanım aygıtları hakkında bilgiler sunulan dizin hangisidir?",
-      "options": ["/boot", "/media", "/mnt", "/dev"],
-      "answer": "/dev"
+     "question": "Sisteme bağlı bulunan genel donanım aygıtları hakkında bilgiler sunulan dizin hangisidir?",
+     "options": ["/boot", "/media", "/mnt", "/dev"],
+     "answer": "/dev"
     },
     {
-      "question": "Sistem üzerinde bir konfigürasyon gerçekleştirilecekse, ilgili konfigürasyon dosyasının hangi dizin altında bulunması daha olasıdır?",
-      "options": ["/boot", "/mnt", "/etc", "/lib"],
-      "answer": "/etc"
+     "question": "Sistem üzerinde bir konfigürasyon gerçekleştirilecekse, ilgili konfigürasyon dosyasının hangi dizin altında bulunması daha olasıdır?",
+     "options": ["/boot", "/mnt", "/etc", "/lib"],
+     "answer": "/etc"
     },
     {
-      "question": "En yetkili kullanıcı olan root kullanıcısının ev dizini hangisidir?",
-      "options": ["/", "/root", "/home/root", "home/root"],
-      "answer": "/root"
+     "question": "En yetkili kullanıcı olan root kullanıcısının ev dizini hangisidir?",
+     "options": ["/", "/root", "/home/root", "home/root"],
+     "answer": "/root"
     },
     {
-      "question": "/home dizini hangi amaçla kullanılır?",
-      "options": [
-        "Kullanıcıların ev dizini olarak.",
-        "Değişken tipteki verilerin tutulduğu dosyalar için.",
-        "Tüm dosya sistemini barındırmak için."
+     "question": "/home dizini hangi amaçla kullanılır?",
+     "options": [
+       "Kullanıcıların ev dizini olarak.",
+       "Değişken tipteki verilerin tutulduğu dosyalar için.",
+       "Tüm dosya sistemini barındırmak için."
       ],
-      "answer": "Kullanıcıların ev dizini olarak."
+     "answer": "Kullanıcıların ev dizini olarak."
     },
     {
-      "question": "/lib dizini hangi amaçla kullanılır?",
-      "options": [
-        "Sistemin önyüklenebilmesi için.",
-        "Sistemin kayıtlarını tutmak için.",
-        "Programların ortak olarak kullandığı kütüphane dosyalarını barındırmak için.",
-        "Harici olarak yüklenene 3. taraf programlarının dosyalarını barındırmak için."
+     "question": "/lib dizini hangi amaçla kullanılır?",
+     "options": [
+       "Sistemin önyüklenebilmesi için.",
+       "Sistemin kayıtlarını tutmak için.",
+       "Programların ortak olarak kullandığı kütüphane dosyalarını barındırmak için.",
+       "Harici olarak yüklenene 3. taraf programlarının dosyalarını barındırmak için."
       ],
-      "answer": "Programların ortak olarak kullandığı kütüphane dosyalarını barındırmak için."
+     "answer": "Programların ortak olarak kullandığı kütüphane dosyalarını barındırmak için."
     },
     {
-      "question": "/usr dizini hangi amaçla kullanılır?",
-      "options": [
-        "Programların ortak olarak kullandığı kütüphane dosyalarını barındırmak için.",
-        "Harici olarak yüklenene 3. taraf programlarının dosyalarını barındırmak için.",
-        "Çeşitli dokümanlar ile birlikte komut ve kütüphane dosyalarını ortak bir dizin altında barındırmak için.",
-        "Sistemin kayıtlarını tutmak için."
+     "question": "/usr dizini hangi amaçla kullanılır?",
+     "options": [
+       "Programların ortak olarak kullandığı kütüphane dosyalarını barındırmak için.",
+       "Harici olarak yüklenene 3. taraf programlarının dosyalarını barındırmak için.",
+       "Çeşitli dokümanlar ile birlikte komut ve kütüphane dosyalarını ortak bir dizin altında barındırmak için.",
+       "Sistemin kayıtlarını tutmak için."
       ],
-      "answer": "Çeşitli dokümanlar ile birlikte komut ve kütüphane dosyalarını ortak bir dizin altında barındırmak için."
+     "answer": "Çeşitli dokümanlar ile birlikte komut ve kütüphane dosyalarını ortak bir dizin altında barındırmak için."
     },
     {
-      "question": "/opt dizini hangi amaçla kullanılır?",
-      "options": [
-        "Programların ortak olarak kullandığı kütüphane dosyalarını barındırmak için.",
-        "Harici olarak yüklenene 3. taraf programlarının dosyalarını barındırmak için.",
-        "Çeşitli dokümanlar ile birlikte komut ve kütüphane dosyalarını ortak bir dizin altında barındırmak için.",
-        "Sistemin kayıtlarını tutmak için."
+     "question": "/opt dizini hangi amaçla kullanılır?",
+     "options": [
+       "Programların ortak olarak kullandığı kütüphane dosyalarını barındırmak için.",
+       "Harici olarak yüklenene 3. taraf programlarının dosyalarını barındırmak için.",
+       "Çeşitli dokümanlar ile birlikte komut ve kütüphane dosyalarını ortak bir dizin altında barındırmak için.",
+       "Sistemin kayıtlarını tutmak için."
       ],
-      "answer": "Harici olarak yüklenene 3. taraf programlarının dosyalarını barındırmak için."
+     "answer": "Harici olarak yüklenene 3. taraf programlarının dosyalarını barındırmak için."
     },
     {
-      "question": "Mevcut bulunduğumuz dizinde bulunan Desktop isimli klasöre geçiş yapmak için hangi komutu kullanmamız gerekir?",
-      "options": ["cd ../Desktop", "cd /Desktop", "cd .Desktop", "cd Desktop"],
-      "answer": "cd Desktop"
+     "question": "Mevcut bulunduğumuz dizinde bulunan Desktop isimli klasöre geçiş yapmak için hangi komutu kullanmamız gerekir?",
+     "options": ["cd ../Desktop", "cd /Desktop", "cd .Desktop", "cd Desktop"],
+     "answer": "cd Desktop"
     },
     {
-      "question": "Bir üst dizine geçiş yapmak için hangi komutu kullanmalıyız?",
-      "options": ["cd", "cd ..", "cd -", "cd ~", "cd ."],
-      "answer": "cd .."
+     "question": "Bir üst dizine geçiş yapmak için hangi komutu kullanmalıyız?",
+     "options": ["cd", "cd ..", "cd -", "cd ~", "cd ."],
+     "answer": "cd .."
     },
     {
-      "question": "cd ~ komutu yani cd aracına argüman olarak verdiğimiz tilde(~) işareti nasıl bir etki gösterir?",
-      "options": ["kök dizine(/) dönmemizi sağlar.", "bir önceki dizine geçiş yapmamızı sağlar.", "mevcut kullanıcının ev dizinine geçişi sağlar.", "hiçbir etkisi olmaz."],
-      "answer": "mevcut kullanıcının ev dizinine geçişi sağlar."
+     "question": "cd ~ komutu yani cd aracına argüman olarak verdiğimiz tilde(~) işareti nasıl bir etki gösterir?",
+     "options": ["kök dizine(/) dönmemizi sağlar.", "bir önceki dizine geçiş yapmamızı sağlar.", "mevcut kullanıcının ev dizinine geçişi sağlar.", "hiçbir etkisi olmaz."],
+     "answer": "mevcut kullanıcının ev dizinine geçişi sağlar."
     },
     {
-      "question": "Geçiş yapmak istediğimiz klasör isminde boşluk karakteri bulunuyorsa komutumuzu nasıl girebiliriz?",
-      "options": ["cd yeni klasor", "cd yeni$klasor", "cd 'yeni klasor'"],
-      "answer": "cd 'yeni klasor'"
+     "question": "Geçiş yapmak istediğimiz klasör isminde boşluk karakteri bulunuyorsa komutumuzu nasıl girebiliriz?",
+     "options": ["cd yeni klasor", "cd yeni$klasor", "cd 'yeni klasor'"],
+     "answer": "cd 'yeni klasor'"
     },
     {
-      "question": "cd komutu ile CD komutu aynı işlevi mi sağlar?",
-      "options": ["Evet cd ve CD komutu aynıdır.", "Hayır cd ve CD komutu aynı işlevde değildir."],
-      "answer": "Hayır cd ve CD komutu aynı işlevde değildir."
+     "question": "cd komutu ile CD komutu aynı işlevi mi sağlar?",
+     "options": ["Evet cd ve CD komutu aynıdır.", "Hayır cd ve CD komutu aynı işlevde değildir."],
+     "answer": "Hayır cd ve CD komutu aynı işlevde değildir."
     },
     {
-      "question": "Mevcut dizinimizdeki içerikleri eskiden yeniye  listelemek için hangi komutu kullanabiliriz?",
-      "options": ["ls", "ls -a", "ls -l", "ls -t"],
-      "answer": "ls -t"
+     "question": "Mevcut dizinimizdeki içerikleri eskiden yeniye  listelemek için hangi komutu kullanabiliriz?",
+     "options": ["ls", "ls -a", "ls -l", "ls -t"],
+     "answer": "ls -t"
     },
     {
-      "question": "ls komutunun çıktılarını büyükten küçüğe  daha okunaklı boyut bilgileri ile bastırmak için komutumuzu nasıl girebiliriz?",
-      "options": ["ls -Sl", "ls -sa", "ls -sh", "ls -Sh"],
-      "answer": "ls -Sh"
+     "question": "ls komutunun çıktılarını büyükten küçüğe  daha okunaklı boyut bilgileri ile bastırmak için komutumuzu nasıl girebiliriz?",
+     "options": ["ls -Sl", "ls -sa", "ls -sh", "ls -Sh"],
+     "answer": "ls -Sh"
     },
     {
-      "question": "ls komutunun çıktılarını alfabetik olarak ters bastırmak için hangi seçeneği kullanmamız gerekiyor?",
-      "options": ["r", "R", "t", "T"],
-      "answer": "r"
+     "question": "ls komutunun çıktılarını alfabetik olarak ters bastırmak için hangi seçeneği kullanmamız gerekiyor?",
+     "options": ["r", "R", "t", "T"],
+     "answer": "r"
     },
     {
-      "question": "Spesifik bir dizin içerisindeki tüm alt dizinler de dahil bütün (gizliler de dahil) içeriği özyinelemeli olarak bastırmak için komutumuzu nasıl girebiliriz?",
-      "options": ["ls -la dizin/", "ls -Isa dizin/", "ls -ra dizin/", "ls -Ra dizin/"],
-      "answer": "ls -Ra dizin/"
+     "question": "Spesifik bir dizin içerisindeki tüm alt dizinler de dahil bütün (gizliler de dahil) içeriği özyinelemeli olarak bastırmak için komutumuzu nasıl girebiliriz?",
+     "options": ["ls -la dizin/", "ls -Isa dizin/", "ls -ra dizin/", "ls -Ra dizin/"],
+     "answer": "ls -Ra dizin/"
     },
     {
-      "question": "Mevcut dizinimizdeki içerikleri alfabetik olarak ters sıralamak için hangi komutu kullanabiliriz?",
-      "options": ["ls -s", "ls -r", "ls -t", "ls -R"],
-      "answer": "ls -r"
+     "question": "Mevcut dizinimizdeki içerikleri alfabetik olarak ters sıralamak için hangi komutu kullanabiliriz?",
+     "options": ["ls -s", "ls -r", "ls -t", "ls -R"],
+     "answer": "ls -r"
     },
     {
-      "question": "Yeni bir dizin (klasör) oluşturmak için hangi aracı kullanabiliriz?",
-      "options": ["rmdir", "touch", "echo", "mkfolder", "mkdir"],
-      "answer": "mkdir"
+     "question": "Yeni bir dizin (klasör) oluşturmak için hangi aracı kullanabiliriz?",
+     "options": ["rmdir", "touch", "echo", "mkfolder", "mkdir"],
+     "answer": "mkdir"
     },
     {
-      "question": "mkdir aracı ile iç içe yeni dizinler oluşturmak için komutumuzu nasıl girebiliriz?",
-      "options": ["mkdir ilk/orta/son", "mkdir -d ilk/orta/son", "mkdir -p ilk/orta/son"],
-      "answer": "mkdir -p ilk/orta/son"
+     "question": "mkdir aracı ile iç içe yeni dizinler oluşturmak için komutumuzu nasıl girebiliriz?",
+     "options": ["mkdir ilk/orta/son", "mkdir -d ilk/orta/son", "mkdir -p ilk/orta/son"],
+     "answer": "mkdir -p ilk/orta/son"
     },
     {
-      "question": "Alt dizinleri de dahil tamamı boş olan klasörleri nasıl silebiliriz?",
-      "options": ["rmdir -r dizinl/dizin2/dizin3", "rmdir dizinl/dizin2/dizin3", "rmdir -R dizinl/dizin2/dizin3", "rmdir -p dizinl/dizin2/dizin3"],
-      "answer": "rmdir -p dizinl/dizin2/dizin3"
+     "question": "Alt dizinleri de dahil tamamı boş olan klasörleri nasıl silebiliriz?",
+     "options": ["rmdir -r dizinl/dizin2/dizin3", "rmdir dizinl/dizin2/dizin3", "rmdir -R dizinl/dizin2/dizin3", "rmdir -p dizinl/dizin2/dizin3"],
+     "answer": "rmdir -p dizinl/dizin2/dizin3"
     },
     {
-      "question": "İçerisinde dosyalar bulunan bir klasörü nasıl silebiliriz?",
-      "options": ["rmdir klasör", "rmdir -r klasör", "rmdir -p klasör"],
-      "answer": "rmdir -r klasör"
+     "question": "İçerisinde dosyalar bulunan bir klasörü nasıl silebiliriz?",
+     "options": ["rmdir klasör", "rmdir -r klasör", "rmdir -p klasör"],
+     "answer": "rmdir -r klasör"
     }
 ]

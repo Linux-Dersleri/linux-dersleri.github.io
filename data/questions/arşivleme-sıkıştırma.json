@@ -1,32 +1,32 @@
 [
     {
-      "question": "Aşağıdaki komutlardan hangisi 'arşivleme' için kullanılır ?",
-      "options": ["zip", "rar", "tar", "gzip", "bzip2"],
-      "answer": "tar"
+     "question": "Aşağıdaki komutlardan hangisi 'arşivleme' için kullanılır ?",
+     "options": ["zip", "rar", "tar", "gzip", "bzip2"],
+     "answer": "tar"
     },
     {
-      "question": "Arşiv dosyalarını dışarı çıkarmak için hangi komut kullanılabilir ?",
-      "options": ["tar -xf", "tar -f", "tar -R", "tar -x"],
-      "answer": "tar -xf"
+     "question": "Arşiv dosyalarını dışarı çıkarmak için hangi komut kullanılabilir ?",
+     "options": ["tar -xf", "tar -f", "tar -R", "tar -x"],
+     "answer": "tar -xf"
     },
     {
-      "question": "Arşive yeni dosya eklemek için hangi komut kullanılır ?",
-      "options": ["tar --add -f arsiv.tar eklenecek-dosya", "tar --put -f arsiv.tar eklenecek-dosya", "tar --append -f arsiv.tar eklenecek-dosya"],
-      "answer": "tar --append -f arsiv.tar eklenecek-dosya"
+     "question": "Arşive yeni dosya eklemek için hangi komut kullanılır ?",
+     "options": ["tar --add -f arsiv.tar eklenecek-dosya", "tar --put -f arsiv.tar eklenecek-dosya", "tar --append -f arsiv.tar eklenecek-dosya"],
+     "answer": "tar --append -f arsiv.tar eklenecek-dosya"
     },
     {
-      "question": "Arşivden dosya silmek için hangi komut kullanılır ?",
-      "options": ["tar -f arsiv.tar —remove silinecek-dosya", "tar -f arsiv.tar —delete silinecek-dosya", "tar arsiv.tar —remove silinecek-dosya", "tar arsiv.tar —delete silinecek-dosya"],
-      "answer": "tar -f arsiv.tar —delete silinecek-dosya"
+     "question": "Arşivden dosya silmek için hangi komut kullanılır ?",
+     "options": ["tar -f arsiv.tar —remove silinecek-dosya", "tar -f arsiv.tar —delete silinecek-dosya", "tar arsiv.tar —remove silinecek-dosya", "tar arsiv.tar —delete silinecek-dosya"],
+     "answer": "tar -f arsiv.tar —delete silinecek-dosya"
     },
     {
-      "question": "gzip veya bzip2 ile sıkıştırılmış dosyaları açarken hangi seçeneği kullanıyoruz ?",
-      "options": ["-a", "-o", "-e", "-d"],
-      "answer": "-d"
+     "question": "gzip veya bzip2 ile sıkıştırılmış dosyaları açarken hangi seçeneği kullanıyoruz ?",
+     "options": ["-a", "-o", "-e", "-d"],
+     "answer": "-d"
     },
     {
-      "question": "gzip ile sıkıştırılmış bir dosya içeriğini konsola bastırmak için hangi komutu kullanabiliriz ?",
-      "options": ["bzcat", "zcat", "cat"],
-      "answer": "zcat"
+     "question": "gzip ile sıkıştırılmış bir dosya içeriğini konsola bastırmak için hangi komutu kullanabiliriz ?",
+     "options": ["bzcat", "zcat", "cat"],
+     "answer": "zcat"
     }
   ]
