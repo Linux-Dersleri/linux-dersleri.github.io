@@ -903,6 +903,6 @@ ln: linkler/: hard link not allowed for directory
 
 Bakın dizinler için hard link yani katı linkler kabul edilmiyormuş.
 
-Umarım sembolik ve katı linklerin farkları ve kullanım biçimleri net bir biçimde anlaşılmıştır. Biraz pratik yaparsanız ve gerekiyorsa bu dersi baştan dikkatlice tekrar dinlerseniz aslında ne kadar kolay olduğunu zaten göreceksiniz.
+Umarım sembolik ve katı linklerin farkları ve kullanım biçimleri net bir biçimde anlaşılmıştır. Biraz pratik yaparsanız ve gerekiyorsa bu dersi baştan dikkatlice tekrar okursanız aslında ne kadar kolay olduğunu zaten göreceksiniz.
 
 Ve artık böylelikle dosya işlemleri için bilmemiz gereken temel araçları tanıdığımıza göre bu bölümü sonlandırabiliriz.
