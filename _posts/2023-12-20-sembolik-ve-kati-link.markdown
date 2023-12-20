@@ -11,8 +11,6 @@ permalink: /:title
 toc: true
 ---
 
-# Sembolik ve Katı Link | Soft Link & Hard Link
-
 Anlatımın devamında çok kısaca sembolik ve katı linklerden de bahsetmek istiyorum.
 
 Fakat sembolik ve katı linklerden bahsetmeden önce, link yapısını yani aslında buradaki link ifadesinden kastımızı anlamak için öncelikle "inode" kavramı üzerinde durmamız gerekiyor. Merak etmeyin çok ayrıntıya girmeyeceğiz.
