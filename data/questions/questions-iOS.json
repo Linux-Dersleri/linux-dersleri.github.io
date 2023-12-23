@@ -1,0 +1,1012 @@
+{
+   "response_code": 0,
+   "results": [
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "Aşağıdaki komutlardan hangisi 'arşivleme' için kullanılır ?",
+         "correct_answer": "tar",
+         "incorrect_answers": [
+            "zip",
+            "rar",
+            "gzip",
+            "bzip2"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "Arşiv dosyalarını dışarı çıkarmak için hangi komut kullanılabilir ?",
+         "correct_answer": "tar -xf",
+         "incorrect_answers": [
+            "tar -f",
+            "tar -R",
+            "tar -x"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "Arşive yeni dosya eklemek için hangi komut kullanılır ?",
+         "correct_answer": "tar --append -f arsiv.tar eklenecek-dosya",
+         "incorrect_answers": [
+            "tar --add -f arsiv.tar eklenecek-dosya",
+            "tar --put -f arsiv.tar eklenecek-dosya"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "Arşivden dosya silmek için hangi komut kullanılır ?",
+         "correct_answer": "tar -f arsiv.tar —delete silinecek-dosya",
+         "incorrect_answers": [
+            "tar -f arsiv.tar —remove silinecek-dosya",
+            "tar arsiv.tar —remove silinecek-dosya",
+            "tar arsiv.tar —delete silinecek-dosya"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "gzip veya bzip2 ile sıkıştırılmış dosyaları açarken hangi seçeneği kullanıyoruz ?",
+         "correct_answer": "-d",
+         "incorrect_answers": [
+            "-a",
+            "-o",
+            "-e"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "gzip ile sıkıştırılmış bir dosya içeriğini konsola bastırmak için hangi komutu kullanabiliriz ?",
+         "correct_answer": "zcat",
+         "incorrect_answers": [
+            "bzcat",
+            "cat"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "Haftanın gün isimleriyle birlikte takvim bilgisi almak için hangi komutu kullanabiliriz?",
+         "correct_answer": "ncal",
+         "incorrect_answers": [
+            "date",
+            "ndate",
+            "cal"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "Mevcut tarihi ve saati öğrenmek için hangi komutu kullanabiliriz?",
+         "correct_answer": "date",
+         "incorrect_answers": [
+            "cal",
+            "ncal",
+            "time"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "which komutunun işlevi nedir?",
+         "correct_answer": "argüman olarak verilen komutun dosya konumunu bastırmak",
+         "incorrect_answers": [
+            "komutun türü hakkında bilgi vermek",
+            "dosya ve klasörlerin özniteliklerini bastırmak",
+            "hangi dizinde olduğumuzu bastırmak"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "Dosyaların tipi hakkında bilgi almak için hangi komutu kullanabiliriz?",
+         "correct_answer": "file",
+         "incorrect_answers": [
+            "type",
+            "what",
+            "which"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "Komutların türleri hakkında bilgi almak için hangi komutu kullanabiliriz?",
+         "correct_answer": "type",
+         "incorrect_answers": [
+            "file",
+            "which",
+            "what"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "Dosya ve dizinlerin öznitelikleri(metaverileri) hakkında bilgi almak için hangi komutu kullanabiliriz?",
+         "correct_answer": "stat",
+         "incorrect_answers": [
+            "free",
+            "what",
+            "file"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "Bellek kullanımı hakkında bilgi almak için hangi komutu kullanabiliriz?",
+         "correct_answer": "free",
+         "incorrect_answers": [
+            "what",
+            "stat",
+            "file"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "lsb_release -a komutu hangi çıktıyı verir?",
+         "correct_answer": "sistemin sürümü gibi bazı standart bilgileri",
+         "incorrect_answers": [
+            "sistemin çalışma süresini",
+            "sistemin donanım bilgisini"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "hostname, çekirdek sürümü, donanım mimarisi gibi bilgileri öğrenmek için hangi komutu kullanabiliriz?",
+         "correct_answer": "uname -a",
+         "incorrect_answers": [
+            "lsb_release -a",
+            "what -a",
+            "vmstat -a"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "Sistemin ne kadar süredir açık olduğunu öğrenmek için hangi komutu kullanabiliriz?",
+         "correct_answer": "uptime",
+         "incorrect_answers": [
+            "when",
+            "while",
+            "time"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "Kendi ev dizinimizdeki alt dizinler de dahil tüm dosya ve klasörlerin toplam boyutunu öğrenmek için hangi komutu kullanabiliriz?",
+         "correct_answer": "du ~",
+         "incorrect_answers": [
+            "ls -la ~",
+            "total -a ~",
+            "count ~"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "lsusb komutunun işlevi nedir?",
+         "correct_answer": "sisteme bağlı bulunan usb aygıtlarını listelemek",
+         "incorrect_answers": [
+            "sisteme bağlı bulunan tüm aygıtları listelemek",
+            "sisteme bağlı bulunan tüm tanımlanamayan aygıtları listelemek",
+            "sistemdeki tüm bozuk aygıt dosyalarını listelemek"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "du aracıyla büyüklük birimi bakımından daha okunaklı çıktılar almak için hangi seçeneği kullanmamız gerekir?",
+         "correct_answer": "-h",
+         "incorrect_answers": [
+            "-a",
+            "-s",
+            "-S"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "du aracıyla tüm dosya ve dizinlerin isimlerini listelemek için hangi seçeneği kullanabiliriz?",
+         "correct_answer": "-a",
+         "incorrect_answers": [
+            "-s",
+            "-S",
+            "-h"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "Dosya ve dizin isimleri yerine yalnızca toplam boyut miktarını öğrenmek yani özet bilgi almak için du aracının hangi seçeneğini kullanabiliriz?",
+         "correct_answer": "-s",
+         "incorrect_answers": [
+            "-a",
+            "-S",
+            "-h"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "2TB büyük ve 15 bölümlendirmeden daha fazla bölümlendirme imkanı için hangi bölümlendirme yaklaşımı tercih edilmelidir?",
+         "correct_answer": "GPT",
+         "incorrect_answers": [
+            "MBR",
+            "LFS",
+            "GRUB"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "Sistem başlangıcında donanım kontrolü gerçekleştirilen yapılardan hangisi daha modern bir yaklaşımdır?",
+         "correct_answer": "UEFI",
+         "incorrect_answers": [
+            "GRUB",
+            "BIOS",
+            "MBR",
+            "GRUB2"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "Sistemimize bağlı bulunan disk aygıtlarını(blok aygıtları olarak da bilinir) listelemek için hangi komutu kullanabiliriz?",
+         "correct_answer": "lsblk",
+         "incorrect_answers": [
+            "lsusb",
+            "disks",
+            "ls -d"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "fdisk ile mevcut diskleri listelemek için hangi komut kullanılabilir?",
+         "correct_answer": "fdisk -l",
+         "incorrect_answers": [
+            "fdisk -disk",
+            "fdisk -units",
+            "fdisk-b"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "Diskte bir dosya sistemi olmasa da diske veriler yazılıp okunabilir mi?",
+         "correct_answer": "Hayır",
+         "incorrect_answers": [
+            "Evet"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "Disk bölümlemesi yapılacaksa öncelikle bölümleme tablosu belirlenmeli, daha sonra disk bölümlendirilmelidir.",
+         "correct_answer": "Evet",
+         "incorrect_answers": [
+            "Hayır"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "Disk bölümlemesi yapılacaksa öncelikle dosya sistemi tanımlanmalı, daha sonra disk bölümlendirilmelidir.",
+         "correct_answer": "Hayır",
+         "incorrect_answers": [
+            "Evet"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "Bir diskte ext4 dosya sistemini tanımlamak için hangi aracı kullanabiliriz?",
+         "correct_answer": "mkfs.ext4",
+         "incorrect_answers": [
+            "fsck.ext4",
+            "fsck",
+            "ext4"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "Diskleri bağlamak için hangi komutu kullanabiliriz?",
+         "correct_answer": "mount",
+         "incorrect_answers": [
+            "lsblk",
+            "fdisk",
+            "parted"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "Bağlı olan diskleri çıkarmak-ayırmak için hangi aracı kullanabiliriz?",
+         "correct_answer": "umount",
+         "incorrect_answers": [
+            "lsblk",
+            "fdisk",
+            "deldisk",
+            "testdisk",
+            "parted"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "Disklerin sistem başlangıcında kalıcı olarak otomatik şekilde bağlanmasını sağlamak için hangi dosyayı düzenlememiz gerekir?",
+         "correct_answer": "/etc/fstab",
+         "incorrect_answers": [
+            "/etc/passwd",
+            "/etc/parted",
+            "/etc/mount"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "Fiziksel disklerimizi, LVM için fiziksel hacime(physical volume) çevirmek üzere hangi aracı kullanabiliriz?",
+         "correct_answer": "pvcreate",
+         "incorrect_answers": [
+            "lvmcreate",
+            "volumecreate",
+            "vlcreate"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "LVM üzerinde Volume Group oluşturmak için hangi komut kullanılabilir?",
+         "correct_answer": "vgcreate disk-grubu /dev/disk-adı",
+         "incorrect_answers": [
+            "lvcreate disk-grubu /dev/disk-adı",
+            "pvcreate disk-grubu /dev/disk-adı"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "LVM üzerinde logical volume oluşturmak için hangi komut kullanılabilir?",
+         "correct_answer": "lvcreate",
+         "incorrect_answers": [
+            "pvcreate",
+            "mvcreate",
+            "vgcreate"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "Sistemdeki mevcut logical volume bilgisini öğrenmek üzere hangi araç kullanılabilir?",
+         "correct_answer": "lvs",
+         "incorrect_answers": [
+            "scan",
+            "fsck",
+            "logical",
+            "pvs"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "Volume group'a yeni disk eklemek için hangi arac kullanılabilir?",
+         "correct_answer": "vgextend",
+         "incorrect_answers": [
+            "vgadd",
+            "vgreduce",
+            "vgattend"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "Volume group'dan disk çıkarmak için hangi komut kullanılabilir?",
+         "correct_answer": "vgreduce disk-grubu /dev/disk-adı",
+         "incorrect_answers": [
+            "vgdel disk-grubu /dev/disk-adı",
+            "vgextend disk-grubu /dev/disk-adı",
+            "vgexit disk-grubu /dev/disk-adı",
+            "vgrem disk-grubu /dev/disk-adı"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "Mevcut Logical Volume alanını genişletmek için hangi araç kullanılabilir?",
+         "correct_answer": "lvextend",
+         "incorrect_answers": [
+            "lvadd",
+            "lvreduce",
+            "vgextend",
+            "vgreduce"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "Mevcut Logical Volume alanını küçültmek için hangi araç kullanılabilir?",
+         "correct_answer": "lvreduce",
+         "incorrect_answers": [
+            "lvremove",
+            "lvextend",
+            "vgextend",
+            "vgreduce"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "Mevcut logical volume silme işlemi için hangi aracı kullanabiliriz?",
+         "correct_answer": "lvremove",
+         "incorrect_answers": [
+            "vgdel",
+            "vgremove",
+            "lvdel",
+            "lvs"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "Mevcut physical volume silme işlemi için hangi aracı kullanabiliriz?",
+         "correct_answer": "pvremove",
+         "incorrect_answers": [
+            "vgdel",
+            "vgremove",
+            "pvdel",
+            "pvs"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "Volume group silme işlemi için hangi aracı kullanabiliriz?",
+         "correct_answer": "vgremove",
+         "incorrect_answers": [
+            "vgdel",
+            "pvremove",
+            "pvdel",
+            "pvs"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "Linux sisteminde ana dizini temsil eden gösterim hangisidir?",
+         "correct_answer": "/",
+         "incorrect_answers": [
+            "/root",
+            "root",
+            "/main"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "/sbin ve /bin dizinlerinin amacı nedir?",
+         "correct_answer": "Çalıştırılabilir ikili (binary) dosyaları barındırmak.",
+         "incorrect_answers": [
+            "Log dosyaları gibi değişken yapıdaki verileri barındırmak.",
+            "Sistemin sunduğu hizmetlere ait verileri barındırmak.",
+            "Araçlara ait kütüphane dosyalarını barındırmak."
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "Aşağıdakilerden hangisi /sbin ve /bin dizinleri hakkında  bir tanımlama sayılabilir?",
+         "correct_answer": "/sbin dizini, sistem yöneticileri tarafından kullanılan ve sistem yönetimi ve bakımıyla ilgili önemli programları barındırır.",
+         "incorrect_answers": [
+            "Her ikisi de yöneticilere özel olan ikili dosyaları barındırır.",
+            "/bin dizini, sistem yöneticileri tarafından kullanılan ve sistem yönetimi ve bakımıyla ilgili önemli programları barındırır.",
+            "Her ikisi de log kayıtlarının bulunduğu dizinlerdir."
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "/boot dizini hangi tür dosyaları barındırır?",
+         "correct_answer": "Sistemin önyüklenebilmesi için gerekli olan dosyalar.",
+         "incorrect_answers": [
+            "Sistemin kayıtlarını tutan dosyalar.",
+            "Sistemin ağ bağlantısını sağlayan dosyalar.",
+            "Aygıtlar hakkında bilgi sunan çeşitli dosyalar."
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "Sisteme bağlı bulunan genel donanım aygıtları hakkında bilgiler sunulan dizin hangisidir?",
+         "correct_answer": "/dev",
+         "incorrect_answers": [
+            "/boot",
+            "/media",
+            "/mnt"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "Sistem üzerinde bir konfigürasyon gerçekleştirilecekse, ilgili konfigürasyon dosyasının hangi dizin altında bulunması daha olasıdır?",
+         "correct_answer": "/etc",
+         "incorrect_answers": [
+            "/boot",
+            "/mnt",
+            "/lib"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "En yetkili kullanıcı olan root kullanıcısının ev dizini hangisidir?",
+         "correct_answer": "/root",
+         "incorrect_answers": [
+            "/",
+            "/home/root",
+            "home/root"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "/home dizini hangi amaçla kullanılır?",
+         "correct_answer": "Kullanıcıların ev dizini olarak.",
+         "incorrect_answers": [
+            "Değişken tipteki verilerin tutulduğu dosyalar için.",
+            "Tüm dosya sistemini barındırmak için."
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "/lib dizini hangi amaçla kullanılır?",
+         "correct_answer": "Programların ortak olarak kullandığı kütüphane dosyalarını barındırmak için.",
+         "incorrect_answers": [
+            "Sistemin önyüklenebilmesi için.",
+            "Sistemin kayıtlarını tutmak için.",
+            "Harici olarak yüklenene 3. taraf programlarının dosyalarını barındırmak için."
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "/usr dizini hangi amaçla kullanılır?",
+         "correct_answer": "Çeşitli dokümanlar ile birlikte komut ve kütüphane dosyalarını ortak bir dizin altında barındırmak için.",
+         "incorrect_answers": [
+            "Programların ortak olarak kullandığı kütüphane dosyalarını barındırmak için.",
+            "Harici olarak yüklenene 3. taraf programlarının dosyalarını barındırmak için.",
+            "Sistemin kayıtlarını tutmak için."
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "/opt dizini hangi amaçla kullanılır?",
+         "correct_answer": "Harici olarak yüklenene 3. taraf programlarının dosyalarını barındırmak için.",
+         "incorrect_answers": [
+            "Programların ortak olarak kullandığı kütüphane dosyalarını barındırmak için.",
+            "Çeşitli dokümanlar ile birlikte komut ve kütüphane dosyalarını ortak bir dizin altında barındırmak için.",
+            "Sistemin kayıtlarını tutmak için."
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "Mevcut bulunduğumuz dizinde bulunan Desktop isimli klasöre geçiş yapmak için hangi komutu kullanmamız gerekir?",
+         "correct_answer": "cd Desktop",
+         "incorrect_answers": [
+            "cd ../Desktop",
+            "cd /Desktop",
+            "cd .Desktop"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "Bir üst dizine geçiş yapmak için hangi komutu kullanmalıyız?",
+         "correct_answer": "cd ..",
+         "incorrect_answers": [
+            "cd",
+            "cd -",
+            "cd ~",
+            "cd ."
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "cd ~ komutu yani cd aracına argüman olarak verdiğimiz tilde(~) işareti nasıl bir etki gösterir?",
+         "correct_answer": "mevcut kullanıcının ev dizinine geçişi sağlar.",
+         "incorrect_answers": [
+            "kök dizine(/) dönmemizi sağlar.",
+            "bir önceki dizine geçiş yapmamızı sağlar.",
+            "hiçbir etkisi olmaz."
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "Geçiş yapmak istediğimiz klasör isminde boşluk karakteri bulunuyorsa komutumuzu nasıl girebiliriz?",
+         "correct_answer": "cd 'yeni klasor'",
+         "incorrect_answers": [
+            "cd yeni klasor",
+            "cd yeni$klasor"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "cd komutu ile CD komutu aynı işlevi mi sağlar?",
+         "correct_answer": "Hayır cd ve CD komutu aynı işlevde değildir.",
+         "incorrect_answers": [
+            "Evet cd ve CD komutu aynıdır."
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "Mevcut dizinimizdeki içerikleri eskiden yeniye  listelemek için hangi komutu kullanabiliriz?",
+         "correct_answer": "ls -t",
+         "incorrect_answers": [
+            "ls",
+            "ls -a",
+            "ls -l"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "ls komutunun çıktılarını büyükten küçüğe  daha okunaklı boyut bilgileri ile bastırmak için komutumuzu nasıl girebiliriz?",
+         "correct_answer": "ls -Sh",
+         "incorrect_answers": [
+            "ls -Sl",
+            "ls -sa",
+            "ls -sh"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "ls komutunun çıktılarını alfabetik olarak ters bastırmak için hangi seçeneği kullanmamız gerekiyor?",
+         "correct_answer": "r",
+         "incorrect_answers": [
+            "R",
+            "t",
+            "T"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "Spesifik bir dizin içerisindeki tüm alt dizinler de dahil bütün (gizliler de dahil) içeriği özyinelemeli olarak bastırmak için komutumuzu nasıl girebiliriz?",
+         "correct_answer": "ls -Ra dizin/",
+         "incorrect_answers": [
+            "ls -la dizin/",
+            "ls -Isa dizin/",
+            "ls -ra dizin/"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "Mevcut dizinimizdeki içerikleri alfabetik olarak ters sıralamak için hangi komutu kullanabiliriz?",
+         "correct_answer": "ls -r",
+         "incorrect_answers": [
+            "ls -s",
+            "ls -t",
+            "ls -R"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "Yeni bir dizin (klasör) oluşturmak için hangi aracı kullanabiliriz?",
+         "correct_answer": "mkdir",
+         "incorrect_answers": [
+            "rmdir",
+            "touch",
+            "echo",
+            "mkfolder"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "mkdir aracı ile iç içe yeni dizinler oluşturmak için komutumuzu nasıl girebiliriz?",
+         "correct_answer": "mkdir -p ilk/orta/son",
+         "incorrect_answers": [
+            "mkdir ilk/orta/son",
+            "mkdir -d ilk/orta/son"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "Alt dizinleri de dahil tamamı boş olan klasörleri nasıl silebiliriz?",
+         "correct_answer": "rmdir -p dizinl/dizin2/dizin3",
+         "incorrect_answers": [
+            "rmdir -r dizinl/dizin2/dizin3",
+            "rmdir dizinl/dizin2/dizin3",
+            "rmdir -R dizinl/dizin2/dizin3"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "İçerisinde dosyalar bulunan bir klasörü nasıl silebiliriz?",
+         "correct_answer": "rmdir -r klasör",
+         "incorrect_answers": [
+            "rmdir klasör",
+            "rmdir -p klasör"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "Bash kabuğunda bir işlemi arka planda başlatmak için hangi komut doğrudur?",
+         "correct_answer": "komut &",
+         "incorrect_answers": [
+            "komut ?",
+            "komut %",
+            "komut |",
+            "komut #"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "Bash kabuğundaki arkaplandaki işlemi, ön plana almak için hangi komut girilebilir?",
+         "correct_answer": "fg işlem-numarası",
+         "incorrect_answers": [
+            "bg işlem-numarası",
+            "jobs işlem-numarası",
+            "disown işlem-numarası"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "Bash kabuğunda ön planda çalışan bir işlemi duraklatmak için hangi kısayolu kullanabiliriz?",
+         "correct_answer": "Ctrl + Z",
+         "incorrect_answers": [
+            "Ctrl + C",
+            "Ctrl + D",
+            "Ctrl + R",
+            "Ctrl + S"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "Bash kabuğunda ön planda çalışan bir işlemi kesintiye uğratmak-durdurmak için hangi kısayolu kullanabiliriz?",
+         "correct_answer": "Ctrl + C",
+         "incorrect_answers": [
+            "Ctrl + D",
+            "Ctrl + R",
+            "Ctrl + S",
+            "Ctrl + Z"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "Bash kabuğunda durdurumuş bir işlemi arka plana almak için hangi komutu kullanabiliriz?",
+         "correct_answer": "bg işlem-numarası",
+         "incorrect_answers": [
+            "fg işlem-numarası",
+            "jobs işlem-numarası",
+            "disown işlem-numarası"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "Mevcut bash kabuğunun yönettiği işleri listelemek için hangi komut kullanılır?",
+         "correct_answer": "jobs",
+         "incorrect_answers": [
+            "ps",
+            "ps aux",
+            "top"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "Kabuğun başlattığı bir işlemi, kabuğun kontrolünden çıkarmak için hangi komutu kullanabiliriz?",
+         "correct_answer": "disown",
+         "incorrect_answers": [
+            "jobs",
+            "fg",
+            "bg"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "Herhangi bir koşula bağlı olmadan birden fazla komutu sırasıyla çalıştırmak için hangi karakteri kullanabiliriz?",
+         "correct_answer": ";",
+         "incorrect_answers": [
+            "&",
+            "%",
+            "&&",
+            "||"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "İlk komut başarılı ise ikinci komutu çalıştıracak komut bütünü hangisidir?",
+         "correct_answer": "komut1 && komut2",
+         "incorrect_answers": [
+            "komut1 & komut2",
+            "komut1 ; komut2",
+            "komut || komut2"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "İlk komut başarısız ise ikinci komutu çalıştıracak komut bütünü hangisidir?",
+         "correct_answer": "komut || komut2",
+         "incorrect_answers": [
+            "komut1 & komut2",
+            "komut1 ; komut2",
+            "komut1 && komut2"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "Komutları gruplamak için hangi yaklaşım doğrudur?",
+         "correct_answer": "(komut1 ; komut2 ; komut3)",
+         "incorrect_answers": [
+            "[komut1 ; komut2 ; komut3]",
+            "{komut1 ; komut2 ; komut3}"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "İşlemleri anlık olarak güncellenecek şekilde takip etmek için hangi aracı kullanabiliriz?",
+         "correct_answer": "top",
+         "incorrect_answers": [
+            "ps",
+            "ps aux",
+            "jobs"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "İşlemlere sinyaller göndermek için hangi aracı kullanabiliyoruz?",
+         "correct_answer": "kill",
+         "incorrect_answers": [
+            "signal",
+            "jobs",
+            "pgrep"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "İşlem isimleri üzerinden işlem numaralarını kolayca bulmak için hangi araç kullanılabilir?",
+         "correct_answer": "pgrep",
+         "incorrect_answers": [
+            "grep",
+            "egrep",
+            "fgrep"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "İşlem veya komut ismi ile eşleşen tüm işlemlerin sonlandırılması için hangi komut kullanılabilir?",
+         "correct_answer": "killall işlem-adı",
+         "incorrect_answers": [
+            "kill işlem-adı",
+            "pgrep işlem-adı",
+            "jobs işlem-adı"
+         ]
+      },
+      {
+         "type": "multiple",
+         "difficulty": "easy",
+         "category": "Linux Commands",
+         "question": "2’den 12 ye kadar olan sayıların ikişer aralıklar ile konsola bastırmak için hangi seçenek doğrudur ?",
+         "correct_answer": "(2..12..2)",
+         "incorrect_answers": [
+            "[2..12..2]",
+            "(2..12..2)"
+         ]
+      }
+   ]
+}
