@@ -1,0 +1,51 @@
+{% for announcement in site.data.announcements %}
+    {% assign current_date = site.time | date: "%Y-%m-%d" %}
+    {% assign start_date = announcement.start_date %}
+    {% assign end_date = announcement.end_date %}
+    
+    {% if current_date >= start_date and current_date <= end_date %}
+        {% if announcement.limited %}
+            <p class="yesil text-center text-success">{{ announcement.content }} <br> <a id="countdown_{{ forloop.index }}"></a>
+                <a href="{{ announcement.link }}" class="stretched-link"></a>
+            </p>
+
+            <script>
+                // İndirim bitiş tarihi (YYYY-MM-DD HH:mm:ss)
+                var countDownDate{{ forloop.index }} = new Date("{{ announcement.end_date }}").getTime();
+
+                // Her bir saniyede bir geri sayımı güncelle
+                var x{{ forloop.index }} = setInterval(function() {
+                    
+                    // Şu anki tarih ve saat
+                    var now = new Date().getTime();
+                    
+                    // Geri sayım için kalan zaman
+                    var distance = countDownDate{{ forloop.index }} - now;
+                    
+                    // Gün, saat, dakika ve saniye hesaplamaları
+                    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                    
+                    // Günü kontrol et
+                    var dayText = days > 1 ? days + " gün " : "";
+                    
+                    // HTML içeriğini güncelle
+                    document.getElementById("countdown_{{ forloop.index }}").innerHTML = "<strong>Kalan süre:</strong> " +
+                        dayText + hours + " saat " + minutes + " dakika " + seconds + " saniye kaldı.";
+                    
+                    // Eğer geri sayım tamamlandıysa
+                    if (distance < 0) {
+                        clearInterval(x{{ forloop.index }});
+                        document.getElementById("countdown_{{ forloop.index }}").innerHTML = "<strong>İndirim Sona Erdi!</strong>";
+                    }
+                }, 1000);
+            </script>
+        {% else %}
+            <p class="yesil text-center text-success">{{ announcement.content }}
+                <a href="{{ announcement.link }}" class="stretched-link"></a>
+            </p>
+        {% endif %}
+    {% endif %}
+{% endfor %}
