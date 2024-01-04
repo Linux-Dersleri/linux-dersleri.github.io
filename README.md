@@ -19,9 +19,13 @@ Mevcut web platformunun mobil uyumlu olmasına ek olarak, doğrudan çevrimdış
 [<img src="https://raw.githubusercontent.com/Linux-Dersleri/linux-dersleri.github.io/master/data/img/7.png" height="400">](https://play.google.com/store/apps/details?id=com.bildik.linuxdersleri)
 
 
+## License
+
+[CC BY-SA 4.0 or any later](by-sa.markdown) ile ruhsatlanmıştır.
 
 
 ## :postbox: Geri Bildirimde Bulunun
 Fark etmiş olduğunuz hata, eksiklik ve yazım yanlışlarını bildirebilirsiniz.
 
 :email: [info.trdokuman@gmail.com](mailto:info.trdokuman@gmail.com)
+
