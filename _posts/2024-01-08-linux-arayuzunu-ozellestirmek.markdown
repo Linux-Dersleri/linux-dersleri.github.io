@@ -29,7 +29,7 @@ Ancak örnek vermeden önce grafiksel arayüzü değiştirme hakkında öğrenme
 **Masaüstü ortamı** dediğimiz şey, grafiksel arayüzün tamamını kapsayan arayüz paketi bütününe deniyor. Burada kast edilen arayüz bütünü; sistemde yer alan simgeleri, araç çubuklarını, duvar kağıtlarını, pencere yöneticisini ve sürükle bırak gibi kolaylaştırıcı imkanları kapsayan kısımlardır. Yani masaüstü ortamı dediğimiz şey bizlere kapsamlı grafiksel arayüz sunar.
 
 Diğer bir seçeneğimiz olan **pencere yöneticisi** ise bizlere yalnızca pencereler üzerinden çalışma imkanı sunar. Yani pencere yöneticisi içerisinde, masaüstü ortamında olduğu gibi  araç çubukları, animasyonlu menüleri ve bunun gibi kapsamlı grafiksel arayüz ögelerini barındırmaz. Böylelikle kullanıcının sistemi daha performanslı kullanabilmesi için yalnızca pencereler üzerinden sistemin yönetilebilmesini sağlar. Örnek olması açısından yalnızca pencere yöneticisini kullandığınızda sistemin nasıl gözükeceğini, aşağıdaki ***openbox*** pencere yöneticisi ekran görüntüsüne bakarak görebilirsiniz.
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/openbox.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/openbox.png){:class="responsive img-zoomable"}
 
 Şimdi hangi seçeneği hangi durumda seçmemiz gerektiği konusuna değinecek olursak;
 Masaüstü ortamı, içerisinde tüm grafiksel arayüz araçlarını barındıracağı için eğer sistemi kullanırken çok fazla grafiksel öge olduğunu ve bunların da sisteminizi yavaşlattığını düşünüyorsanız masaüstü ortamını kaldırarak sistemi yalnızca pencereler ile de yönetebilirsiniz.
@@ -49,21 +49,21 @@ Fakat yine de **Gnome 3** masaüstü ortamını kullanmaya devam edecek olan ark
 
 **Gnome 3** masaüstü arayüzünü kullanıyorken genel tema değişimlerini **ince ayarlar(tweaks)** menüsü üzerinden gerçekleştiriyoruz. Bu nedenle öncelikle ince ayarlar menümüzden ne gibi değişiklikler yapabileceğimizi öğrenmek için ince ayarlar menüsünü açalım.
 İnce ayarlar menüsü açıldıktan sonra "**Görünüm**" sekmesine gelelim.
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/tweaks.gif)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/tweaks.gif){:class="responsive img-zoomable"}
 Burada yer alan seçenekler sistem arayüzünde yapabileceğimiz temasal değişiklikleri gösteriyor. Görünüm sekmesinde yer alan seçenekleri sırasıyla ele alacak olursak;
 
 **Uygulamalar;** Sistemdeki pencerelerin görünümünü değiştiriyor. Herhangi bir uygulama çalıştığında uygulamayı çevreleyen çerçevelere pencere deniyor. Örnek için aşağıdaki "***Uygulamalar***" kısmı değiştirilmiş görsele bakabilirsiniz.
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/1.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/1.png){:class="responsive img-zoomable"}
 
 **İmleç;** İmlecin görünümünü sağlayan kısım. Aşağıdaki görselde değiştirilmiş hali verilmiştir.
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/2.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/2.png){:class="responsive img-zoomable"}
 
 **Simgeler;** Sistemde yer alan simgelerin görünümünden sorumlu kısım. Aşağıda değiştirilmiş halleri verilmiştir.
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/3.png)
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/4.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/3.png){:class="responsive img-zoomable"}
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/4.png){:class="responsive img-zoomable"}
 
 **Kabuk;** Sistem genelindeki panelleri kapsayan kısımı ifade ediyor. Aşağıdaki görselde panelleri değiştirilmiş görüntü verilmiştir. 
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/5.jpg)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/5.jpg){:class="responsive img-zoomable"}
 
 **Ses;** Sistem seslerini kapsayan kısımdır, değiştirilmesi önerilmez.
 
@@ -75,21 +75,21 @@ Bunun için https://www.gnome-look.org/ adresine girelim. Bu site Gnome ile ilgi
 
 ***Uygulamalar Kısmını Değiştirmek***
 
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/6.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/6.png){:class="responsive img-zoomable"}
 Tema değişimi için ***GTK3 Themes*** yazan sekmeye tıklayalım.
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/7.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/7.png){:class="responsive img-zoomable"}
 Buradan gözünüze hitap eden bir tema belirleyebilirsiniz ben şimdi örnek olması açısından ilk temayı seçiyorum. Açılan tema sayfasından tema ile ilgili detaylı bilgi alabilir ve ekran görüntüleri ile tema hakkında fikir sahibi olabilirsiniz. 
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/8.gif)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/8.gif){:class="responsive img-zoomable"}
 Temayı indirmek için **Download** butonuna basalım ve buradan istediğimiz içeriği indirelim. Gördüğünüz gibi bu temanın bir çok farklı varyasyonu bulunuyormuş, ben herhangi birini seçiyorum.  Ve ***Save File*** diyerek dosyanın inmesini sağlıyorum. 
 
 Bu arada ben burada sizlere yol göstermek amacıyla örnekler verdiğim için çok fazla tema içeriğini karıştırmıyorum ancak sizler elbette deneye deneye hoşunuza gidecek temayı bulabilirsiniz. Zaten kurulum işlemi de oldukça basit olduğundan çok çabucak bir sürü tema deneyebilirsiniz. 
 
 Şimdi dosyamızı sistemin görebilmesi için ***/usr/share/themes/*** klasörüne çıkarmamız gerekiyor. 
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/9.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/9.png){:class="responsive img-zoomable"}
 
 Dosyayı ilgili konuma çıkardım. Artık böylelikle sistem yeni eklediğimiz tema içeriğini görebilecek. 
 Hemen yeni temayı kurmak için ince ayarları açalım. İnce ayar menüsüne arama çubuğuna ***"tweaks"*** yazarak da ulaşabilirsiniz. 
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/10.gif)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/10.gif){:class="responsive img-zoomable"}
 Evet ince ayar menüsünü açtık, buradan görünüm sekmesine tıklayalım. Ve buradan ***Uygulamalar *** kısmından indirdiğimiz temayı seçerek kurulması sağlayalım. İşte yeni bir tema kurulum işlemi bu kadar kolay. Diğer temasal değişim işlemleri de aynı şekilde gerçekleşiyor. Hemen kısaca diğer değişimleri de yapalım.
 
 ***İmleç Kısmını Değiştirmek***
@@ -114,27 +114,27 @@ Benim **Gnome 3** ile ilgili göstereceğim temasal değişiklikler bu kadar, di
 Baştan belirtmek isterim ki buradaki anlatımlar kendi deneyimlerim ve genel gözlemlerimdir yani tam anlamıyla sizi yönlendirmeyebilir. Ben burada sizlerin kurulum yapmadan önce daha iyi fikir sahibi olabilmeniz için Kali Linux dağıtımında kullanılabilen masaüstü ortamlarının başlıca özeliklerini kısaca açıklamaya çalıştım. Ancak burada belirttiğim özellikler bir çok faktöre göre değişmektedir, yani siz buradan fikir sahibi olun ancak kesinlikle bizzat deneyerek hangisinin sizin için en ideali olduğuna kendiniz karar verin.
 
 ## **XFCE Masaüstü Ortamı**
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/xfce.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/xfce.png){:class="responsive img-zoomable"}
 Görsel olarak oldukça yalındır, gereksiz görsel arayüz ögesi kullanmaz. Önceliği sistemin maksimum verimde çalışmasıdır, minimal bir sistemdir. Çok hafif olduğundan sistemi yormadan oldukça hızlı şekilde çalışır. Sistem performansı görsellikten önce geliyorsa tercih edebilirsiniz.
 
 ## **KDE Masaüstü Ortamı**
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/kde.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/kde.png){:class="responsive img-zoomable"}
 Daha çok Windows'u andırır, asıl hedefi grafiksel arayüz kullanıcılarıdır. Yani konsoldan ziyade kullanıcının her işi grafiksel arayüzde yapabilmesi üzerine dizayn edilmiştir. İlk defa Linux kullanmaya başlayacak kullanıcılar için geçiş evresinde sıklıkla tercih edilen bir temadır. Ancak ben yine de kullanıcıyı konsoldan uzaklaştırdığı ve bu sebeple Linux' un gerçek gücünü ortaya koyamadığı için pek de önermiyorum. Bu söylediklerimden bu ortam kötüdür anlamı çıkmasın, sadece konsol üzerine yoğunlaşacak arkadaşlara öneri olarak belirtiyorum. Geçiş evresinde kullanılabilir ancak aman ha bağımlılık yapmasın yoksa konsol hakimliği, sisteme hükmetmek falan yalan olur söyleyeyim :)
 
 ## **LXDE Masaüstü Ortamı**
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/lxde.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/lxde.png){:class="responsive img-zoomable"}
 Az bir donanım gücü ile çok iyi işler çıkarabileceğiniz, oldukça yalın masaüstü ortamıdır. Dolayısı ile grafiksel arayüz kısmında pek bir şey beklememek lazım. Amacınız sistemi verimli şekilde kullanmaksa ve elinizde güçlü bir donanım yoksa tercih edebilirsiniz. 
 
 ## **Cinnamon Masaüstü Ortamı**
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/cinnamon.jpg)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/cinnamon.jpg){:class="responsive img-zoomable"}
 Cinnamon, Gnome baz alınarak alınarak geliştirildiği için en çok tercih edilen masaüstü ortamıdır. Hatta son zamanlarda bir çok kullanıcıya göre kötüye giden Gnome3 için harika bir alternatiftir. Grafiksel arayüzünün kullanıcı dostu olması ve sistemi de çok fazla yormaması Cinnamon'u normal kullanıcılar arasında popüler yapmıştır. Hatta en çok kullanılan Linux dağıtımı olan Linux Mint' de varsayılan olarak Cinnamon kullanmaktadır.
 
 ## **Mate Masaüstü Ortamı**
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/mate.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/mate.png){:class="responsive img-zoomable"}
 Mate masaüstü ortamı da Gnome3'ün hantallığından bunalan kullanıcılar için harika bir alternatiftir. Bir zamanlar bir çok kullanıcı tarafından oldukça sevilen [Gnome2'nin çatallamasıdır](https://mate-desktop.org/tr/), ve özlem duyulan Gnome2'nin temsilcisidir. Sistem çok fazla kaynak tüketmez ayrıca sizleri grafiksel olarak da yormaz. Günlük rutin işlerinizi de çok rahat şekilde yerine getirebilirsiniz.
 
 ## **e17 Masaüstü Ortamı**
-![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/e17.png)
+![enter image description here](https://raw.githubusercontent.com/taylanbildik/Linux_Dersleri/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/e17.png){:class="responsive img-zoomable"}
 Güçlüdür, aynı zamanda gayet de şıktır. Hani olağanüstü görsel bir arayüz sunmaz ama sunduğu performansın yanında içinizi daraltacak bir görünüme de sahip değildir. Birçok cihazda oldukça verimli şekilde çalışmaktadır.
 
 # Kali Linux için Masaüstü Ortamları Kurma-Kaldırma İşlemleri
