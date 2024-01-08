@@ -260,8 +260,8 @@ apt-get install i3-wm
 ```bash
 apt-get remove i3-wm
 ```
+Temel Kullanım Kılavuzu İçin [Bu Kaynağa](https://i3wm.org/docs/userguide.html) Bakabilirsiniz:
 
->**i3 Pencere Yöneticisi Temel Kullanım Kılavuzu İçin [Bu Kaynağa](https://i3wm.org/docs/userguide.html) Bakabilirsiniz:**
 
 ## **awesome WM Pencere Yöneticisi**
 ![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/awesome.png?raw=true){:class="responsive img-zoomable"} 
