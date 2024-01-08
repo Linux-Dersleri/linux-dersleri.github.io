@@ -311,7 +311,8 @@ apt-get install dwm
 ```bash
 apt-get remove dwm
 ```
->**dwm Pencere Yöneticisi Temel Kullanım Kılavuzu İçin [Bu Kaynağa](https://dwm.suckless.org/tutorial/) Bakabilirsiniz:**
+>**dwm Pencere Yöneticisi**
+Temel Kullanım Kılavuzu İçin [Bu Kaynağa](https://dwm.suckless.org/tutorial/) Bakabilirsiniz:
 ---
 Başlıca pencere yöneticilerinin kurulumlarını ele aldık. Ancak bu anlattıklarım dışındaki pencere yöneticileri için de [bu adreste](https://www.slant.co/topics/390/~best-window-managers-for-linux) yer alan listeye bakıp, listede yer alan pencere yöneticisinin kali depolarında yer alıp almadığını [bu adresten](http://pkg.kali.org/) teyit ederek kurulumunu yapabilirsiniz.
 Ben örnek olması açısından listede yer alan ***fluxbox*** isimli pencere yöneticisini sorgulayıp, eğer depolarda mevcutsa kurulumunu yapmak istiyorum. İşlemleri aşağıdaki gif resiminden takip edebilirsiniz.
