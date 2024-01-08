@@ -38,7 +38,7 @@ Buradaki açıklama sizi tam olarak yönlendirmemiş olabilir ancak ileri ki kı
 ## Masaüstü ortamını nasıl değiştirebiliriz ?
 
 Masaüstü ortamı dediğimiz şeyin grafiksel arayüz içerisindeki ögelerin tamamına yakınını kapsadığını daha önceki kısımda belirtmiştik. Yani  arkaplan, menü çubuğu, araç çubuğu, gösterge paneli ve bunlar gibi her şey masaüstü ortamını kapsıyor. 
-![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/desktop-env.png?raw=true)
+![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/desktop-env.png?raw=true){:class="responsive img-zoomable"}
 Yani biz yeni bir masaüstü ortamı kurduğumuzda tüm bu ögeler de yeni masaüstü ortamı ile birlikte değişiyor. Eğer şu anda kullanmakta olduğunuz mevcut masaüstü ortamını değiştirmek isterseniz birbirinden farklı bir çok masaüstü ortamı seçeneğiniz bulunuyor. Ben başlıca masaüstü ortamlarının genel özelliklerinden bahsedeceğim ancak ondan önce mevcut masaüstü ortamımızı nasıl kendimize göre düzenleyip özelleştirebiliriz onu öğrenelim.
 
 ### Gnome3 Masaüstü Ortamını Özelleştirmek
@@ -95,17 +95,17 @@ Evet ince ayar menüsünü açtık, buradan görünüm sekmesine tıklayalım. V
 ***İmleç Kısmını Değiştirmek***
 
 İmleci değiştirmek için öncelikle yeni bir imleç paketi indirmemiz gerekiyor. Paketi indirdikten sonra imleç dosyasını ***/usr/share/icons/*** konumuna atmamız gerekiyor. Böylelikle sistem yeni imlecimizi tanıyabilecek. İndirdiğimiz imleç dosyasını ilgili konuma attıktan sonra yine ince ayar menüsünden ***Görünüm*** sekmesine gerek buradan **imleç** değişimi yapılabilir. Tüm işlemi aşağıdaki gif resmine bakarak takip edebilirsiniz.
-![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/imlec.gif?raw=true)
+![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/imlec.gif?raw=true){:class="responsive img-zoomable"}
 
 ***Simgeler Kısmını Değiştirmek***
 
 Simgeler kısmını değiştirmek için tıpkı imleç değiştirirken yaptığımız gibi, indirdiğimiz simge dosyalarını ***/usr/share/icons/*** konumuna taşımamız gerekiyor. Hem imlecin hem de simgelerin aynı konumda bulunması kafanızı karıştırmasın. Zaten dosya yapıları farklı olduğundan sistem kolayca ayırt edebiliyor. Siz sadece beğendiğiniz simge paketini ***/usr/share/icons/*** konumuna atın ve ince ayar menüsünden ***Görünüm*** sekmesine gelerek **simgeler** kısmından indirdiğiniz simgeyi bularak seçin. Tüm işlemi aşağıdaki gif resmine bakarak takip edebilirsiniz.
-![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/simgeler.gif?raw=true)
+![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/simgeler.gif?raw=true){:class="responsive img-zoomable"}
 
 ***Kabuk Kısmını Değiştirmek***
 
 Kabuk diye bahsedilen kısmın sistemdeki genel arayüz içerisinde bulunan panelleri karşıladığını daha önce söylemiştik. Şimdi değişimi için yeni bir arayüz paketi indirelim ve bu paketi ***/usr/share/themes/*** konumuna çıkaralım. Ve daha sonra ince ayar menüsünden ***Görünüm*** sekmesine gelerek **kabuk** kısmından indirdiğiniz kabuk temasını bularak seçelim. Ve işlem bu kadar ! Tüm işlemi aşağıdaki gif resmine bakarak takip edebilirsiniz.
-![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/kabuk.gif?raw=true)
+![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/kabuk.gif?raw=true){:class="responsive img-zoomable"}
 
 Benim **Gnome 3** ile ilgili göstereceğim temasal değişiklikler bu kadar, dileyen arkadaşlar çok daha fazla kurcalayarak çok daha fazla seçeneğe ulaşabilir. Şimdi **Gnome 3** masaüstü ortamını bir kenara bırakarak yeni masaüstü ortamlarını tanıyalım.
 
@@ -146,77 +146,92 @@ Güçlüdür, aynı zamanda gayet de şıktır. Hani olağanüstü görsel bir a
 ## **XFCE Masaüstü Ortamı**
 
 **XFCE Masaüstü Ortamını Kali Linux'a Kurmak İçin:**
-
-	apt-get install kali-defaults kali-root-login desktop-base xfce4 xfce4-places-plugin xfce4-goodies
+```bash
+apt-get install kali-defaults kali-root-login desktop-base xfce4xfce4-places-plugin xfce4-goodies
+```
 
 **Kurulu Olan XFCE Masaüstü Ortamını Kali Linux'tan Kaldırmak İçin**
-
-	apt-get remove xfce4 xfce4-places-plugin xfce4-goodies
-
+```bash
+apt-get remove xfce4 xfce4-places-plugin xfce4-goodies
+```
 ## **KDE Masaüstü Ortamı**
  
 **Debian için Standart KDE Masaüstü Ortamını Kali Linux'a Kurmak İçin:**
 
-	apt-get install kali-defaults kali-root-login desktop-base kde-standard
+```bash
+apt-get install kali-defaults kali-root-login desktop-base kde-standard
+```
+
 **KDE Full Masaüstü Ortamını Kali Linux'a Kurmak İçin:**
 
-	apt-get install kali-defaults kali-root-login desktop-base kde-full
+```bash
+apt-get install kali-defaults kali-root-login desktop-base kde-full
+```
 
 **Kurulu Olan KDE Masaüstü Ortamını Kali Linux'tan Kaldırmak İçin**
-
-	apt-get remove kde-plasma-desktop kde-plasma-netbook kde-standard
+```bash
+apt-get remove kde-plasma-desktop kde-plasma-netbook kde-standard
+```
 
 ## **LXDE Masaüstü Ortamı**
  
 **LXDE Masaüstü Ortamını Kali Linux'a Kurmak İçin:**
-
-	apt-get install lxde-core lxde kali-defaults kali-root-login desktop-base
+```bash
+apt-get install lxde-core lxde kali-defaults kali-root-login desktop-base
+```
 
 **Kurulu Olan LXDE Masaüstü Ortamını Kali Linux'tan Kaldırmak İçin**
-
-	apt-get remove lxde-core lxde
+```bash
+apt-get remove lxde-core lxde
+```
 
 ## **Cinnamon Masaüstü Ortamı**
  
 **Cinnamon Masaüstü Ortamını Kali Linux'a Kurmak İçin:**
-
-	apt-get install kali-defaults kali-root-login desktop-base cinnamon
+```bash
+apt-get install kali-defaults kali-root-login desktop-base cinnamon
+```
 
 **Kurulu Olan Cinnamon Masaüstü Ortamını Kali Linux'tan Kaldırmak İçin**
-
-	apt-get remove cinnamon
+```bash
+apt-get remove cinnamon
+```
 
 ## **Mate Masaüstü Ortamı**
  
 **Mate Masaüstü Ortamını Kali Linux'a Kurmak İçin:**
-
-	apt-get install kali-defaults kali-root-login desktop-base mate-desktop-environment-extra
+```bash
+apt-get install kali-defaults kali-root-login desktop-base mate-desktop-environment-extra
+```
 
 **Kurulu Olan Mate Masaüstü Ortamını Kali Linux'tan Kaldırmak İçin**
+```bash
+apt-get remove mate-core
+```
 
-	apt-get remove mate-core
-	
 ## **e17(Enlightenment) Masaüstü Ortamı**
  
 **e17 Masaüstü Ortamını Kali Linux'a Kurmak İçin:**
-
-	apt-get install e17
+```bash
+apt-get install e17
+```
 
 **Kurulu Olan e17 Masaüstü Ortamını Kali Linux'tan Kaldırmak İçin**
-
-	apt-get remove e17
+```bash
+apt-get remove e17
+```
 
 # Masaüstü Ortamını Aktif Hale Getirmek
 İlgili masaüstü ortamını kurduktan sonra kullanabilmeniz için ilgili ortamı seçip aktif hale getirmemiz gerekiyor. Öncelikle kurduğumuz masaüstü ortamının sistem tarafından tanınması için **kurulum işlemi bittikten sonra bilgisayarımızı yeniden başlatıyoruz**. Sistem yeniden başlatıldıktan sonra karşımıza aşağıdaki gibi giriş(login) ekranı geliyor. Bu ekrana kullanıcı adımızı giriyoruz. Ve daha sonra dişli-çark simgesine tıklayarak buradan dilediğimiz masaüstü ortamını seçiyoruz. Ve parolamızı girerek sistemi açıyoruz. 
-![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/ortm_1.gif?raw=true)
+![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/ortm_1.gif?raw=true){:class="responsive img-zoomable"}
 İşte bu kadar yeni masaüstü ortamı karşımızda! 
 
 **Eğer herhangi bir zaman masaüstü ortamını değiştirmek isterseniz de sadece oturumu kapatın(logout) ve yine kullanıcı adınızı girdikten sonra dişli-çark simgesinden kullanmak istediğiniz masaüstü ortamını seçin.** Bu şekilde dilediğiniz zaman masaüstü ortamları arasında geçiş yapabilirsiniz. Geçiş işlemi gif resmi ile aşağıda açıklanmıştır.
-![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/ortm_2.gif?raw=true)
+![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/ortm_2.gif?raw=true){:class="responsive img-zoomable"}
 
 Bir önceki yöntem ile ortamı değiştirmek mümkün olsa da aslında daha kullanışlı olan yöntem konsola `sudo update-alternatives --config x-session-manager` komutunu girip karşımıza gelen ortamlardan seçim yapmaktır.
 
-![](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/update-min.png?raw=true)
+![](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/update-min.png?raw=true){:class="responsive img-zoomable"}
 
 Ortam seçimi için tek yapmanız gereken, listelenmiş olan ortam numarasını girip işlemi onaylamaktır. Bu işlemin ardından bilgisayarınızı yeniden başlattığınızda sistem seçmiş olduğunuz ortam ile başlatılacaktır.
 
@@ -235,63 +250,72 @@ Sistemi yalnızca pencere yöneticisi ile yönetmek performans açısından oldu
 Pencere yöneticisi konusunda kullanabileceğiniz çok fazla alternatif bulunuyor. Bu sebepten burada hepsine değinmemiz mümkün değil. O yüzden biz de bu kısımda [buradaki listede](https://www.slant.co/topics/390/~best-window-managers-for-linux) yer alan başlıca 5 pencere yöneticisi kurulumunu ele alacağız.  Benim bu listedeki favorim **openbox** ancak siz kendiniz deneyimleyerek kendiniz için ideal olana karar verebilirsiniz.
 
 ## **i3 Pencere Yöneticisi**
- ![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/i3.png?raw=true)
+ ![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/i3.png?raw=true){:class="responsive img-zoomable"}
 **i3 Pencere Yöneticisini Kali Linux'a Kurmak İçin:**
-
-	apt-get install i3-wm
+```bash
+apt-get install i3-wm
+```
 
 **Kurulu Olan i3 Pencere Yöneticisini Kali Linux'tan Kaldırmak İçin**
+```bash
+apt-get remove i3-wm
+```
 
-	apt-get remove i3-wm
-	
 >**i3 Pencere Yöneticisi Temel Kullanım Kılavuzu İçin [Bu Kaynağa](https://i3wm.org/docs/userguide.html) Bakabilirsiniz:**
 
 ## **awesome WM Pencere Yöneticisi**
-![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/awesome.png?raw=true) 
+![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/awesome.png?raw=true){:class="responsive img-zoomable"} 
 **awesome WM  Pencere Yöneticisini Kali Linux'a Kurmak İçin:**
-
-	apt-get install awesome
+```bash
+apt-get install awesome
+```
 
 **Kurulu Olan awesome WM  Pencere Yöneticisini Kali Linux'tan Kaldırmak İçin**
+```bash
+apt-get remove awesome
+```
 
-	apt-get remove awesome
 >**awesome WM Pencere Yöneticisi Temel Kullanım Kılavuzu İçin [Bu Kaynağa](https://awesomewm.org/doc/manpages/awesome.1.html) Bakabilirsiniz:**
-	
-## **Xmonad Pencere Yöneticisi**
- ![](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/xmonad.png?raw=true)
-**Xmonad Pencere Yöneticisini Kali Linux'a Kurmak İçin:**
 
-	apt-get install xmonad
+## **Xmonad Pencere Yöneticisi**
+ ![](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/xmonad.png?raw=true){:class="responsive img-zoomable"}
+**Xmonad Pencere Yöneticisini Kali Linux'a Kurmak İçin:**
+```bash
+apt-get install xmonad
+```
 
 **Kurulu Olan Xmonad Pencere Yöneticisini Kali Linux'tan Kaldırmak İçin**
+```bash
+apt-get remove xmonad
+```
 
-	apt-get remove xmonad
 >**Xmonad Pencere Yöneticisi Temel Kullanım Kılavuzu İçin [Bu Kaynağa](https://xmonad.org/manpage.html) Bakabilirsiniz:**
 
 ## **Openbox Pencere Yöneticisi**
- ![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/openbox-1.png?raw=true)
+ ![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/openbox-1.png?raw=true){:class="responsive img-zoomable"}
 **Openbox Pencere Yöneticisini Kali Linux'a Kurmak İçin:**
-
-	apt-get install openbox
-
+```bash
+apt-get install openbox
+```
 **Kurulu Olan Openbox Pencere Yöneticisini Kali Linux'tan Kaldırmak İçin**
-
-	apt-get remove openbox
-	
+```bash
+apt-get remove openbox
+```
 ## **dwm Pencere Yöneticisi**
- ![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/dwm.png?raw=true)
+ ![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/dwm.png?raw=true){:class="responsive img-zoomable"}
 **dwm Pencere Yöneticisini Kali Linux'a Kurmak İçin:**
-
-	apt-get install dwm
-
+```bash
+apt-get install dwm
+```
 **Kurulu Olan dwm Pencere Yöneticisini Kali Linux'tan Kaldırmak İçin**
-
-	apt-get remove dwm
+```bash
+apt-get remove dwm
+```
 >**dwm Pencere Yöneticisi Temel Kullanım Kılavuzu İçin [Bu Kaynağa](https://dwm.suckless.org/tutorial/) Bakabilirsiniz:**
 ---
 Başlıca pencere yöneticilerinin kurulumlarını ele aldık. Ancak bu anlattıklarım dışındaki pencere yöneticileri için de [bu adreste](https://www.slant.co/topics/390/~best-window-managers-for-linux) yer alan listeye bakıp, listede yer alan pencere yöneticisinin kali depolarında yer alıp almadığını [bu adresten](http://pkg.kali.org/) teyit ederek kurulumunu yapabilirsiniz.
 Ben örnek olması açısından listede yer alan ***fluxbox*** isimli pencere yöneticisini sorgulayıp, eğer depolarda mevcutsa kurulumunu yapmak istiyorum. İşlemleri aşağıdaki gif resiminden takip edebilirsiniz.
-![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/fluxbox.gif?raw=true)
+![enter image description here](https://github.com/taylanbildik/Linux_Dersleri/blob/master/img/21-Sistem%20G%C3%B6r%C3%BCn%C3%BCm%C3%BCn%C3%BC%20%C3%96zelle%C5%9Ftirme/fluxbox.gif?raw=true){:class="responsive img-zoomable"}
 Tekrar belirteyim verdiğim adreste yer alan linkteki her pencere yöneticisi Kali Linux için uygun olmayabilir, o yüzden mutlaka depolarda olup olmadığını teyit edin.
 
 **Son olarak;** pencere yöneticisinin temasını nasıl değiştirebiliriz diyecek olursanız, bu indireceğiniz pencere yöneticisine göre değişir dolayısıyla bu tema değişimini bireysel olarak internetten araştırarak ve sistemi kurcalayarak bulmanız gerekiyor. Üstelik bu araştırma süreci içerisinde pencere yöneticisini daha yakında tanıyıp, size uygunluğunu anlayabilirsiniz. Eğer bu işlem bile sizlere zor geliyorsa, muhtemelen pencere yöneticisi kullanmak sizi mutlu etmeyecektir. Tek başınıza tema değiştirme olayını sakın gözünüzde büyütmeyin bu işlem oldukça kolay, tıpkı masaüstü ortamını değiştirmek gibi. Sadece araştırın ve deneyin.
