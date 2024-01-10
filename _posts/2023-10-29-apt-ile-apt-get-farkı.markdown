@@ -80,7 +80,7 @@ Paket yöneticisini etkili şekilde kullanmak için de bir çok komut bulunmakta
   </tr>
 </table>
 
-Amaç sadeleştirmek olduğu için elbette `apt-get` aracındaki tüm seçenekler `apt` aracına aynen aktarılmış. Bunun yerine `apt`’nin de paket yönetimine yeni eklediği kendine özgü komutları mevcut.
+Amaç sadeleştirmek olduğu için elbette `apt-get` aracındaki tüm seçenekler `apt` aracına aynen aktarılmamış. Bunun yerine `apt`’nin de paket yönetimine yeni eklediği kendine özgü komutları mevcut.
 
 <table class="table table-dark table-striped">
 <tr>
@@ -105,4 +105,4 @@ Amaç sadeleştirmek olduğu için elbette `apt-get` aracındaki tüm seçenekle
 - `apt` komutunda, hatırlanması gereken çok daha az parametre vardır. Dolayısıyla kolayca hatırlanabilen, oldukça az komutla çok işler başarabilen bir yapısı vardır.
 - Sürekli gelişmeye devam edecektir, dolayısı ile zamanla çok daha yaygın kullanıma ve güçlü özelliklere sahip olacaktır.
 
-Özellikle geri dönük uyumluluk dolayısıyla `apt-get`  uzun yıllar boyu yaygın olarak kullanılmaya devam edecek. Ancak, gelecekteki paket yönetimi ve yenilikler `apt` üzerine kuruluyor olacak. Eğer sürekli `apt-get` ‘in, `apt` komutuna oranla sahip olduğu ek özelliklerine ihtiyaç duymuyorsanız `apt-get`’ e bağlı kalmak için bir neden göremiyorum. Yani zarif `apt` komutumuza bir şans verin derim 🙂
+Özellikle geri dönük uyumluluk dolayısıyla `apt-get`  uzun yıllar boyu yaygın olarak(özellikle script dosyalarında) kullanılmaya devam edecek. Ancak, gelecekteki paket yönetimi ve yenilikler `apt` üzerine kuruluyor olacak. Eğer sürekli `apt-get` ‘in, `apt` komutuna oranla sahip olduğu ek özelliklerine ihtiyaç duymuyorsanız `apt-get`’ e bağlı kalmak için bir neden göremiyorum. Geri dönük uyumluluğu bulunan bir script yazıyorsanız `apt-get`, fakat etkileşimli kabuk kullanımında rahat etmek istiyorsanız `apt` aracını tercih edebilirsiniz. Yani zarif `apt` komutumuza bir şans verin derim 🙂
