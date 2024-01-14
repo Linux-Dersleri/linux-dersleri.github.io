@@ -1,0 +1,87 @@
+---
+sitemap: true
+layout: b-post
+title:  "Daha Verimli Bir Konsol: tmux"
+modified:
+author: Taylan Özgür Bildik
+tags: [terminal]
+categories: blog 
+cover: 
+permalink: /:title
+toc: true
+---
+
+
+Söz konusu konsol araçları olduğunda pek çok alternatife sahibiz. Fakat standart bir konsol yerine `tmux` aracını tercih etmek konsol üzerindeki verimliliğimizi artırabilir. 
+
+`tmux` sayesinde tek bir konsol oturumunu birden fazla parçaya bölüp kullanabiliyoruz. Zaten aracımızın ismi de **t**erminal **mu**ltiple**x**er ifadesinden geliyor. 
+
+## tmux Kurulumu
+
+Bu araç varsayılan olarak yüklü gelmediği için `sudo apt install tmux` ya da `sudo dnf install tmux` komutu ile kurabilirsiniz.
+
+```bash
+┌──(taylan㉿linuxdersleri)-[~]
+└─$ sudo apt install tmux
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following NEW packages will be installed:
+  tmux
+0 upgraded, 1 newly installed, 0 to remove and 1827 not upgraded.
+Need to get 455 kB of archives.
+After this operation, 1,137 kB of additional disk space will be used.
+Get:1 http://kali.download/kali kali-rolling/main amd64 tmux amd64 3.3a-4 [455 kB]
+Fetched 455 kB in 14s (32.1 kB/s)
+Selecting previously unselected package tmux.
+(Reading database ... 291994 files and directories currently installed.)
+Preparing to unpack .../archives/tmux_3.3a-4_amd64.deb ...
+Unpacking tmux (3.3a-4) ...
+Setting up tmux (3.3a-4) ...
+Processing triggers for man-db (2.9.4-4) ...
+Processing triggers for kali-menu (2021.4.2) ...
+```
+
+Aracımız kurulduktan sonra `tmux` komutu ile başlatabiliyoruz.
+
+![tmux.webp]({{ site.url }}/egitim/temel-linux/network/tmux.webp){:class="responsive img-zoomable"}
+
+`tmux` komutunu girdikten sonra, **tmux** oturumunda bash kabuğu çalıştırılıyor. Bu araç üzerinden komutlarımızı girebiliyoruz. Dilersek dikey ve yatay olarak yeni konsol oturumları eklememiz mümkün. `tmux` kısayollarını kullanabilmek için öncelikle <kbd>Ctrl</kbd> + <kbd>B</kbd> tuşuna basıyoruz. Daha sonra dikey olarak yeni konsol ekleyeceksek yüzde işareti <kbd>%</kbd> tuşuna basıyoruz.
+
+![tmux-vertical.webp]({{ site.url }}/egitim/temel-linux/network/tmux-vertical.webp){:class="responsive img-zoomable"}
+
+Eğer yatay olarak bölüp yeni konsol oturumu eklenecekse <kbd>Ctrl</kbd> + <kbd>B</kbd> tuşuna bastıktan sonra tırnak işaretini <kbd>“</kbd> oluşturan tuşa basıyoruz.
+
+![tmux-horizontal.webp]({{ site.url }}/egitim/temel-linux/network/tmux-horizontal.webp){:class="responsive img-zoomable"}
+
+Bu konsollar arasında geçiş yapmak için <kbd>Ctrl</kbd> + <kbd>B</kbd> tuşuna bastıktan sonra klavyemizdeki sağ sol yön tuşları ile ilgili konsol oturumuna geçiş yapabiliyoruz. Zaten hangi konsolda olduğunuzu, pencereleri birbirinden ayıran renkli çizgi sayesinde takip edebilirsiniz. 
+
+![tmux-new-sessions.gif]({{ site.url }}/egitim/temel-linux/network/tmux-new-sessions.gif){:class="responsive img-zoomable"}
+
+Eğer bir oturumu sonlandırmak istiyorsanız üzerinde bulunduğunuz `tmux` oturumunu `exit` komutunu girerek kapatabilirsiniz. 
+
+![tmux-exit.gif]({{ site.url }}/egitim/temel-linux/network/tmux-exit.gif){:class="responsive img-zoomable"}
+
+Konsol oturumunu sonlandırmak yerine, ilgili konsolun arkaplanda çalışmaya devam etmesini sağlayıp, bu konsol oturumundan geçici süreliğine ayrılmanız da mümkün. Örneğin ben denemek için `tmux` komutunu girip yeni bir konsol oturumu başlatıyorum. Ve bu oturumda `top` komutunu çalıştırıyorum. Normalde eğer konsol kapanacak olursa bu `top` aracı da kapanacağı için çalışmayı sürdürmeyecek. Fakat ben oturumu tamamen kapatmak yerine oturumdan ayrılmak için <kbd>Ctrl</kbd> + <kbd>B</kbd> tuşlamasını yapıp <kbd>D</kbd> tuşuna basıyorum. Buradaki <kbd>D</kbd> tuşu “**detach**” yani “**ayırmak**” ifadesinden gelen bir kısaltma. Bu sayede konsoldaki hiç bir işlem sonlandırılmadan biz konsoldan ayrılmış oluyoruz. Ayrıldığımız oturumları görmek için de `tmux list-sessions` komutunu kullanıyoruz.
+
+![tmux-detach.gif]({{ site.url }}/egitim/temel-linux/network/tmux-detach.gif){:class="responsive img-zoomable"}
+
+Ayrıldığımız oturumlara geri dönmek için `tmux attach` komutunu kullanabiliyoruz. 
+
+![tmux-attach.gif]({{ site.url }}/egitim/temel-linux/network/tmux-attach.gif){:class="responsive img-zoomable"}
+
+Eğer ayrıldığımız birden fazla oturum varsa geçiş yapmak istediğimiz oturumu `tmux attach -t oturum-sayısı` komutuyla özel olarak belirtmemiz gerekiyor.
+
+![tmux-multi-sessions.gif]({{ site.url }}/egitim/temel-linux/network/tmux-multi-sessions.gif){:class="responsive img-zoomable"}
+
+Bu yaklaşım sayesinde oturumlarda gerçekleştirilen işlemler sonlandırılmadan, başka konsol oturumlarında çalışabiliyoruz. Örneğin bir konsolda ssh ile bağlantı sağlayıp işlemler gerçekleştiriyorken, bu şekilde konsoldan ayrıldığımızda ssh bağlantısı ve tabii ilgili işlemler arkaplanda devam edecek. Biz de dilediğimiz zaman bu konsol oturumuna dönebileceğiz. 
+
+Bu esnek kullanım özelliğine ek olarak, konsol üzerinde kopyalama ve yapıştırma gibi işlemleri gerçekleştirmemiz de mümkün. Bu özellik, komut satırı arayüzünde çalışan tty konsolları üzerinde çalışmamız gerektiğinde, fare kullanamadığımızda işimizi inanılmaz kolaylaştırıyor. 
+
+Kopyalamak için <kbd>Ctrl</kbd> + <kbd>B</kbd> tuşlamasından sonra <kbd>[</kbd> sembolünü temsil eden tuşlamayı yapıyoruz. Bu noktadan itibaren imlecimizi mevcut konsol yazıları üzerinde yön tuşları ile rahatça hareket ettirebiliyoruz. Kopyalamak istediğimiz bölümün başına yön tuşları ile geldikten sonra seçme işlemi için <kbd>Ctrl</kbd> + <kbd>Space</kbd> tuşuna bastıktan sonra yine yön tuşları ile ilgili yazı seçiyoruz. Seçme işlemi bittikten sonra <kbd>Ctrl</kbd> + <kbd>W</kbd> tuşu ile seçili metni kopyalıyoruz. 
+
+Kopyalanmış olan metni yapıştırmak için de <kbd>Ctrl</kbd> + <kbd>B</kbd> tuşlamasından sonra <kbd>]</kbd> sembolünü temsil eden tuşlamayı yapmamız yeterli oluyor. 
+
+![tmux-copy-paste.gif]({{ site.url }}/egitim/temel-linux/network/tmux-copy-paste.gif){:class="responsive img-zoomable"}
+
+`tmux` aracının en temel kullanımı bu şekilde. Tabii ki aracın kullanımı ve konfigürasyonuna dair pek çok ek ayrıntı mevcut fakat temel kullanım amacı için burada bahsetmiş olduğumuz kadarlık bilgi yeterli. Daha fazlası için ek araştırma yapmakta özgürsünüz.
