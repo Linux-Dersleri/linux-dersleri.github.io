@@ -1253,9 +1253,9 @@
     "difficulty": "easy",
     "category": "Linux Commands",
     "question": "Linux üzerinde isminin başında - (kısa çizgi) işareti bulunan dosya ve klasörler gizli statüsünde sayılır.",
-    "correct_answer": "Doğru",
+    "correct_answer": "Yanlış",
     "incorrect_answers": [
-      "Yanlış"
+      "Doğru"
     ]
   },
   {
