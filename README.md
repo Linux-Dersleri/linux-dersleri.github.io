@@ -29,7 +29,7 @@ Linuxdersleri.net adresinde bulunan Temel Linux eğitimi içerisindeki anlatıml
 
 ## License
 
-[CC BY-SA 4.0 or any later](by-sa.markdown) ile ruhsatlanmıştır.
+[CC BY-SA 4.0 or any later](LICENSE) ile ruhsatlanmıştır.
 
 
 ## :postbox: Geri Bildirimde Bulunun
