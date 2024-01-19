@@ -15,7 +15,7 @@ author: Taylan Özgür Bildik
   </div>
   <div class="col-md-9 order-md-1">
     <h1>Bash Kabuk Programlama Temelleri</h1>
-    <p>Bash kabuğunu kullanarak işlerimizi otomatize hale getirmek için bash scripting anlatımlarında bulunuyor olacağız. Bu eğitim DevOps, Siber Güvenlik, Veri Bilimi ve benzeri alanlar da dahil herkes için giriş seviye temel bash kabup programlama hakkında bilgi sunmak amacıyla hazırlanmıştır. </p>
+    <p>Bash kabuğunu kullanarak işlerimizi otomatize hale getirmek için "bash scripting" anlatımlarında bulunuyor olacağız. Bu eğitim DevOps, Siber Güvenlik, Veri Bilimi ve benzeri alanlar da dahil, herkes için giriş seviye temel bash kabuk programlama hakkında bilgi sunmak amacıyla hazırlanmıştır. </p>
   </div>
 </div>
 
