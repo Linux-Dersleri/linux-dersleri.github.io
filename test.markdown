@@ -26,11 +26,24 @@ search_omit: true
   <div id="result" style="display: none;">
   <p class="text-primary">Testi tamamlama sabrını gösterdiğiniz için tebrikler🥳 </p>
     <h2>Sonuç</h2>
-    <p id="stats"></p>
+        <p id="stats"></p>
     <h3>Hatalar ve Doğru Yanıtları</h3>
 	<p>Test içerisinde sorulan tüm sorular, mevcut platformda bulunan bilgiler dahilinde hazırlanmıştır. Dolayısıyla eksik olduğunuz konular varsa platform üzerinden bilgi edinebilirsiniz.</p>
-  <p>Hatalı yanıtladığınız sorular:</p>
-    <ul id="feedback"></ul>
+    <p>Doğru ve yanlış yanıtları görmek için ilgili butona tıklamanız yeterli.</p>
+    <div class="tabs">
+  <button class="btn btn-outline-success tablinks" onclick="openTab(event, 'correctTab')">Doğrular</button>
+  <button class="btn btn-outline-danger tablinks" onclick="openTab(event, 'incorrectTab')">Yanlışlar</button>
+</div>
+
+<div id="correctTab" class="tabcontent">
+  <h3 class="text-success">Doğru Yanıtladıklarınız</h3>
+  <ul id="correctAnswersList"></ul>
+</div>
+
+<div id="incorrectTab" class="tabcontent">
+  <h3 class="text-danger">Yanlış Yanıtladıklarınız</h3>
+  <ul id="incorrectAnswersList"></ul>
+</div>
 	<p class="mavi">ℹ️ Testin kendisinde hatalar varsa <a href="{{ site.url }}/bildirim.html">geri bildirim</a> sayfasından iletmekten çekinmeyin lütfen.</p>
 
   <h3>Skorunu paylaşmaya ne dersin ?</h3>
@@ -161,25 +174,33 @@ fetch("{{ site.url }}/data/questions/questions.json")// Replace "abc.json" with 
   }
 
   function showResult() {
-  var statsElement = document.getElementById("stats");
-  var feedbackElement = document.getElementById("feedback");
-
-  var percentageCorrect = ((trueCount / questions.length) * 100).toFixed(2) + "%";
+    var statsElement = document.getElementById("stats");
+    var percentageCorrect = ((trueCount / questions.length) * 100).toFixed(2) + "%";
   statsElement.innerHTML = " " + percentageCorrect + " (doğru oranı: " + trueCount + " / " + questions.length + ") ";
+   var resultSection = document.getElementById("result");
+  resultSection.style.display = "block";
 
-  feedbackElement.innerHTML = ''; // Clear previous feedback
+  // Populate correct and incorrect answers
+  var correctAnswersList = document.getElementById("correctAnswersList");
+  var incorrectAnswersList = document.getElementById("incorrectAnswersList");
 
-  questions.forEach(function(question, index) {
-    if (userAnswers[index] !== question.answer) {
-      var listItem = document.createElement("li");
-      var questionSpan = document.createElement("span");
-      var userAnswerSpan = document.createElement("span");
-      var correctAnswerSpan = document.createElement("span");
+  questions.forEach(function (question, index) {
+    var listItem = document.createElement("li");
+    var questionSpan = document.createElement("span");
+    var userAnswerSpan = document.createElement("span");
+    var correctAnswerSpan = document.createElement("span");
 
-      questionSpan.textContent = question.question;
-      userAnswerSpan.textContent = "Sizin yanıtınız: " + userAnswers[index];
-      correctAnswerSpan.textContent = "Doğru yanıt: " + question.answer;
+    questionSpan.textContent = question.question;
+    userAnswerSpan.textContent = "Sizin yanıtınız: " + userAnswers[index];
+    correctAnswerSpan.textContent = "Doğru yanıt: " + question.answer;
 
+    if (userAnswers[index] === question.answer) {
+      userAnswerSpan.style.color = "green";
+      listItem.appendChild(questionSpan);
+      listItem.appendChild(document.createElement("br"));
+      listItem.appendChild(userAnswerSpan);
+      correctAnswersList.appendChild(listItem);
+    } else {
       userAnswerSpan.style.color = "red";
       correctAnswerSpan.style.color = "green";
 
@@ -188,11 +209,11 @@ fetch("{{ site.url }}/data/questions/questions.json")// Replace "abc.json" with 
       listItem.appendChild(userAnswerSpan);
       listItem.appendChild(document.createElement("br"));
       listItem.appendChild(correctAnswerSpan);
-      feedbackElement.appendChild(listItem);
+      incorrectAnswersList.appendChild(listItem);
     }
   });
-
-
+  
+  // Hide the quiz and info-text sections
   document.getElementById("quiz").style.display = "none";
   document.getElementById("info-text").style.display = "none";
 
@@ -203,6 +224,24 @@ fetch("{{ site.url }}/data/questions/questions.json")// Replace "abc.json" with 
 
 
 }
+
+function openTab(evt, tabName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Open the Correct Answers tab by default
+document.querySelector(".tablinks:first-child").click();
+
 // Twitter share button functionality
       var twitterShareButton = document.getElementById("twitterShareButton");
       twitterShareButton.addEventListener("click", function() {

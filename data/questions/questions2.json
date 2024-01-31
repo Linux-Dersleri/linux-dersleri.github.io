@@ -1,0 +1,17 @@
+[
+  {
+   "question": "Aşağıdaki komutlardan hangisi 'arşivleme' için kullanılır ?",
+   "options": ["zip", "rar", "tar", "gzip", "bzip2"],
+   "answer": "tar"
+  },
+  {
+   "question": "Arşiv dosyalarını dışarı çıkarmak için hangi komut kullanılabilir ?",
+   "options": ["tar -xf", "tar -f", "tar -R", "tar -x"],
+   "answer": "tar -xf"
+  },
+  {
+   "question": "Arşive yeni dosya eklemek için hangi komut kullanılır ?",
+   "options": ["tar --add -f arsiv.tar eklenecek-dosya", "tar --put -f arsiv.tar eklenecek-dosya", "tar --append -f arsiv.tar eklenecek-dosya"],
+   "answer": "tar --append -f arsiv.tar eklenecek-dosya"
+  }
+]
