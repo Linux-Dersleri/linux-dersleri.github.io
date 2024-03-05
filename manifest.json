@@ -11,8 +11,10 @@
   "theme_color": "#ffffff",
   "icons": [
     {
-      "src": "/data/img/logo.webp",
-      "type": "image/svg+xml"
+      "src": "/data/img/pwa-logo.png",
+      "sizes": "512x512",
+      "purpose": "any",
+      "type": "image/png"
     }
   ],
   "id": "linuxdersleri.net",

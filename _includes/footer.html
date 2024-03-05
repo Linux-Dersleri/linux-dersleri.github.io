@@ -36,4 +36,11 @@
       </ul>
     </div>
   </div>
+  <script>
+    if('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('{{ site.url }}/assets/js/sw.js')
+      })
+    }
+  </script>
 </footer>
