@@ -1,0 +1,22 @@
+{
+  "background_color": "#ffffff",
+  "description": "Linux Dersleri",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "Linux Dersleri",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "linuxdersleri",
+  "start_url": "/",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "/data/img/logo.webp",
+      "type": "image/svg+xml"
+    }
+  ],
+  "id": "linuxdersleri.net",
+  "categories": [
+    "education"
+  ]
+}
