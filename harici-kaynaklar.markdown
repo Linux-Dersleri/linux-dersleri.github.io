@@ -22,6 +22,7 @@ Genellikle Linux özelinde faydalı olabilecek bazı kaynakları bu paylaşım a
 - [kerteriz.net](https://kerteriz.net/){:target="_blank"}
 - [isleyen.net](https://www.isleyen.net/){:target="_blank"}
 - [alisezisli.com.tr](https://alisezisli.com.tr/){:target="_blank"}
+- [topluluk.linuxevi.org](https://topluluk.linuxevi.org/){:target="_blank"}
 
 ## İngilizce
 
