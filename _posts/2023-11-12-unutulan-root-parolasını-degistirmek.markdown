@@ -54,7 +54,7 @@ Ve işlemler bu kadar !
 
 Gördüğünüz gibi işlem başarılı bir şekilde gerçekleşti  ve ”**passwd: password updated successfully”** çıktısını aldık. Yani root hesabının parolasını değiştirmiş olduk. 
 
-Fakat SELinux etkin sistemlerde(CentOS, RedHat vb..) son olarak `touch /.autorelabel` komutu ile kök dizinde “***.autorelabel***” dosyası oluşturulmalı. Çünkü güvenlik için kullanılan SELinux modülü her dosya ve işlemi, etiketleri(label) ile tanımlanır. Bu etiketler, dosyanın veya işlemin üzerinde izin verilen işlemleri belirtir. Yani SELinux, bu etiketleri kullanarak dosya ve işlemlere olan erişimi kontrol eder. 
+Fakat SELinux etkin sistemlerde(CentOS, RedHat vb..) son olarak `touch /.autorelabel` komutu ile kök dizinde “***.autorelabel***” dosyası oluşturulmalı. Çünkü güvenlik için kullanılan SELinux modülünde her dosya ve işlem, etiketleri(label) ile tanımlanır. Bu etiketler, dosyanın veya işlemin üzerinde izin verilen işlemleri belirtir. Yani SELinux, bu etiketleri kullanarak dosya ve işlemlere olan erişimi kontrol eder. 
 
 root parolası değiştiğinde sistemde meydana gelecek olan etiket değişimi dolayısıyla SELinux aktif sistemde, yetki problemi oluşmaması için bu etiketlerin güncellenmesi gerekir. İşte `touch /.autorelabel` komutu ile ana dizine “***.autorelabel***" dosyasını eklemek, SELinux'un dosya etiketlerini otomatik olarak güncellemesini sağlar. 
 

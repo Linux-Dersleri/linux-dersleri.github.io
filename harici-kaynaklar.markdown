@@ -11,7 +11,7 @@ author: Taylan Özgür Bildik
 
 # 💖 Faydalı Olabilecek Kaynaklar
 
-Genellikle Linux özelinde faydalı olabilecek bazı kaynakları bu paylaşım altında paylaşma gayretindeyim. Liste henüz primitif seviyede. Faydalı olduğunu düşündüğünüz kaynakları benimle [geribildirim]({{ site.url }}/bildirim){:target="_blank"} sayfasından paylaşırsanız, buraya eklemekten memnuniyet duyarım. 
+Genellikle Linux özelinde faydalı olabilecek kaynakları paylaşma gayretindeyim. Liste henüz primitif seviyede. Faydalı olduğunu düşündüğünüz kaynakları benimle [geribildirim]({{ site.url }}/bildirim){:target="_blank"} sayfasından paylaşırsanız, buraya eklemekten memnuniyet duyarım. 
 
 <p class="kirmizi"><strong>Not:</strong> Liste sıralaması önem derecesi belirtmez !</p>
 
