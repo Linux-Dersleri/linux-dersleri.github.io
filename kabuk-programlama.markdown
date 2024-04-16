@@ -1,7 +1,7 @@
 ---
 sitemap: true
 layout: simple
-title: Temel Linux Eğitimi
+title: Bash Kabuk Programlama Temelleri[Henüz tamamlanmadı!]
 excerpt: "Temel Linux Eğitimi Sıralı Müfredatı"
 categories: [kabuk-programlama]
 type: [egitim-serisi]
