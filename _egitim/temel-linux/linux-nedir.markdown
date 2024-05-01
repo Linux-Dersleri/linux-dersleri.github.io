@@ -238,7 +238,7 @@ Tüm bahsettiklerimizden yola çıkarak, öğrenmesi ve kullanması kolay olduğ
 
 Ayrıca Debian tabanlı dağıtımların Red Hat tabanlı dağıtımlar ile paket yöneticileri haricinde temel sistem yönetimi için bariz bir farkı da bulunmadığını belirtmiş olayım. Zaten Red Hat tabanlı dağıtımlar üzerinde kullanılan paket yöneticisinden de yeri geldiğinde kısaca bahsedeceğiz. Kısacası ben bu eğitimi Kali Linux üzerinden ele alacağım ancak sizler bu eğitimden öğrendiğiniz temel sistem yönetim bilgilerini daha sonra Debian tabanlı olan dağıtımlarda ve Red Hat tabanlı dağıtımlar üzerinden de kullanabiliyor olacaksınız. Zaten bu eğitimin amacı Linux sisteminin genel yapısı ve işleyişinden bahsedip bash kabuğunu üzerinden temel sistem yönetimi araçlarını nasıl etkili şekilde kullanabileceğimize değinmek olduğu için pek çok dağıtım üzerinden anlatımları takip edebilirsiniz. 
 
-Zaten bu eğitimde grafiksel arayüzün kullanımına değinmeyeceğiz. Çünkü grafiksel arayüzü kendi kendinize de rahatlıkla keşfedebilirsiniz. Bu eğitimde sistemi komutlar yardımıyla yönetebilmemize olan tanıyan komut satırına odaklanacağız. Bu sayede grafiksel arayüzü farklı olsa da diğer dağıtımları da rahatlıkla kullanabiliyor olacaksınız.
+Zaten bu eğitimde grafiksel arayüzün kullanımına değinmeyeceğiz. Çünkü grafiksel arayüzü kendi kendinize de rahatlıkla keşfedebilirsiniz. Bu eğitimde sistemi komutlar yardımıyla yönetebilmemize olanak tanıyan komut satırına odaklanacağız. Bu sayede grafiksel arayüzü farklı olsa da diğer dağıtımları da rahatlıkla kullanabiliyor olacaksınız.
 
 Ancak yine de baştan belirteyim özellikle yeni öğrenmeye başlayan kişilerin farklı dağıtımlar üzerinden bu eğitimi takip etmeye çalışmaları öğrenme sürecini zorlaştırabilir.
 
