@@ -6,7 +6,7 @@ modified:
 author: Taylan Özgür Bildik
 tags: [terminal]
 categories: blog 
-cover: 
+cover: x-forwarded-host-usage-example.png
 permalink: /:title
 toc: true
 ---
