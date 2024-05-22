@@ -12,7 +12,7 @@ toc: true
 ---
 
 
-Cihazlarımızın “local” ve “public” olmak üzere temelde 2 tür ip adresi bulunur. Lokal ip adresimiz, lokal ağımızdaki iletişim için kullanılırken, public ip adresimiz “internet” yani genel ağ üzerinde geçerli olan benzersiz bir ip adresidir. Bu konu hakkında daha fazla detay için [buraya](https://www.linuxdersleri.net/egitim/temel-network/temel-kavramlar/index.html#genel-ve-%C3%B6zel-ip-adresleri-hakk%C4%B1nda) göz atabilirsiniz. Ayrıca temel network bilgisi için [tüm seriyi](https://www.linuxdersleri.net/temel-network) tamamlamanızı da tasviye edebilirim.
+Cihazlarımızın “local” ve “public” olmak üzere temelde 2 tür ip adresi bulunur. Lokal ip adresimiz, lokal ağımızdaki iletişim için kullanılırken, public ip adresimiz “internet” yani genel ağ üzerinde geçerli olan benzersiz bir ip adresidir. Bu konu hakkında daha fazla detay için [buraya](https://www.linuxdersleri.net/egitim/temel-network/temel-kavramlar/index.html#genel-ve-%C3%B6zel-ip-adresleri-hakk%C4%B1nda) göz atabilirsiniz. Ayrıca temel network bilgisi için [tüm seriyi](https://www.linuxdersleri.net/temel-network) tamamlamanızı da tavsiye edebilirim.
 
 ![local-public-ip]({{ site.url }}/egitim/temel-network/temel-kavramlar/LAN-to-WAN.webp){:class="responsive img-zoomable"}
 
