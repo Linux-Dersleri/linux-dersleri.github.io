@@ -121,7 +121,7 @@ Güvenilir bir load balancer'ın arkasında olduğu için uygulama, saldırgan `
 
 Ayrıca `XFF` yerine isteğin IP kaynağını belirtmek için   `Forwarded`, `X-Real-IP` gibi başlıklar da kullanılabilir. 
 
-# **Cache poisoning DoS**
+# Cache poisoning DoS
 
 Eğer önbellek sunucusu, kendisine iletilen hop-by-hop başlığına dokunmadan bunu bir sonraki proxy’e yönlendirirse ve bu proxy de bu başlığı işleyip kaldırırsa ve bu durum 400 veya 501 gibi bir hataya sebep olursa: bu, uygulamanın önündeki web önbelleğinin, bu istenmeyen yanıtı diğer kullanıcılara hizmet verecek kopya olarak kabul etmeyi seçmesine neden olabilir ve bu nedenle, önbellek zehirlenmesi DoS ile karşı karşıya kalırız.
 
