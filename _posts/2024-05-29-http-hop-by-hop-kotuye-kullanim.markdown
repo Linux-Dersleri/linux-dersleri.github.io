@@ -109,17 +109,17 @@ Temel kavramlar ve tespiti için gereken yaklaşımdan bahsettiğimize göre bu 
 
 # X-Forwarded-For'u Gizleyerek Kaynak IP Adresini Maskeleme
 
-Bir frontend proxy'si bir kullanıcı isteğini kabul ettiğinde, bu kullanıcının IP adresini `X-Forwarded-For` (XFF) başlığına ekleyebilir, böylece backend’deki altyapı ve uygulamalar istekte bulunan kullanıcının IP adresini bilebilir. Ancak proxy'lere bu başlığın hop-by-hop olduğu talimatını vererek, bu başlığı istekten kaldırabiliriz. Bu sayede backend uygulaması orijinal ip adresini bilemez.
+Bir frontend proxy'si bir kullanıcı isteğini kabul ettiğinde, bu kullanıcının IP adresini `X-Forwarded-For` (`XFF`) başlığına ekleyebilir, böylece backend’deki altyapı ve uygulamalar istekte bulunan kullanıcının IP adresini bilebilir. Ancak proxy'lere bu başlığın hop-by-hop olduğu talimatını vererek, bu başlığı istekten kaldırabiliriz. Bu sayede backend uygulaması orijinal IP adresini bilemez.
 
-İstekte zaten mevcut değilse, isteği gerçekleştiren IP adresini XFF başlığı ile uygulama sunucusuna aktaran bir load balancer proxy’nin bulunduğu durumda:
+İstekte zaten mevcut değilse, isteği gerçekleştiren IP adresini `XFF` başlığı ile uygulama sunucusuna aktaran bir load balancer proxy’nin bulunduğu durumda:
 
 Örnek olarak, CDN > load balancer > app server durumundaki yapıyı düşünelim. Bu uygulama CDN arkasındaki load balancer’a güvendiği için doğrudan bu load balancer’dan gelen yerel bir IP aralığından (örneğin 10.1.2.3/24 gibi) gelen bir istekle karşılaşıldığında isteklere özel /admin adresine admin yetkisi tanıyor olsun. 
 
-Güvenilir bir load balancer'ın arkasında olduğu için uygulama, saldırgan `X-Forwarded-For` sahteciliği yapmaya çalışsa bile, CDN’in gerçek kaynak IP'yi başlığa ekleyeceğine güvenebilir. Gerçek ip adresinin nasıl eklenebileceği, kullanılan proxy çözümüne bağlı olarak değişebilir lakin buradaki [XFF]({{ site.url }}/x-forwared-for) yazısı yardımcı olabilir. En nihayetinde istek X-Forwarded-For:<saldırgan sahte ip>, <gerçek saldırgan ip> gibi görünür, böylece uygulama sahtecilik girişimlerini güvenle halledebilir. Ancak, XFF başlığı uygulamaya ulaşmadan önce çıkarılıyorsa, ki bu bir saldırganın XFF'yi hop-by-hop başlığı olarak eklemesi durumunda söz konusu olabilir, o zaman bir load balancer proxy  X-Forwarded-For'un yokluğuna, kendisinden önceki yük dengeleyicinin IP adresini talep eden IP (örn. 10.1.2.3) olarak alarak tepki verecek ve uygulamaya ulaşan son `X-Forwarded-For` değeri, başka hiçbir şey eklenmeden 10.1.2.3 olacaktır. Böyle bir uygulamada, bu istek /admin adresine erişim izni verecektir çünkü bu yerel bir adrestir.
+Güvenilir bir load balancer'ın arkasında olduğu için uygulama, saldırgan `X-Forwarded-For` sahteciliği yapmaya çalışsa bile, CDN’in gerçek kaynak IP'yi başlığa ekleyeceğine güvenebilir. Gerçek IP adresinin nasıl eklenebileceği, kullanılan proxy çözümüne bağlı olarak değişebilir lakin buradaki [XFF]({{ site.url }}/x-forwared-for) yazısı yardımcı olabilir. En nihayetinde istek `X-Forwarded-For:<saldırgan sahte ip>, <gerçek saldırgan ip>` gibi görünür, böylece uygulama sahtecilik girişimlerini güvenle halledebilir. Ancak, `XFF` başlığı uygulamaya ulaşmadan önce çıkarılıyorsa, ki bu bir saldırganın `XFF`'yi hop-by-hop başlığı olarak eklemesi durumunda söz konusu olabilir, o zaman bir load balancer proxy  `X-Forwarded-For`'un yokluğuna, kendisinden önceki yük dengeleyicinin IP adresini talep eden IP (örn. 10.1.2.3) olarak alarak tepki verecek ve uygulamaya ulaşan son `X-Forwarded-For` değeri, başka hiçbir şey eklenmeden 10.1.2.3 olacaktır. Böyle bir uygulamada, bu istek **/admin** adresine erişim izni verecektir çünkü bu yerel bir adrestir.
 
 ![abuse-hop-by-hop-hide-ip]({{ site.url }}/blog/img/http-hop-by-hop-kotuye-kullanim/abuse-hop-by-hop-hide-ip.png){:class="responsive img-zoomable"}
 
-Ayrıca XFF yerine isteğin IP kaynağını belirtmek için   `Forwarded`, `X-Real-IP` gibi başlıklar da kullanılabilir. 
+Ayrıca `XFF` yerine isteğin IP kaynağını belirtmek için   `Forwarded`, `X-Real-IP` gibi başlıklar da kullanılabilir. 
 
 # **Cache poisoning DoS**
 
@@ -129,7 +129,7 @@ Eğer önbellek sunucusu, kendisine iletilen hop-by-hop başlığına dokunmadan
 
 # Rate Limit Bypass
 
-Ayrıca kimi durumlarda `X-Forwarded-For` başlığı sayesinde istemcinin ip adresine bakarak rate limit uygulayan yapıları sahte `X-Forwarded-For` başlığı ile bypass etmek mümkün olabilir. Her istekte sahte bir ip adresi ile neredeyse sınırsız sayıda istek göndermek mümkün olabilir.
+Ayrıca kimi durumlarda `X-Forwarded-For` başlığı sayesinde istemcinin IP adresine bakarak rate limit uygulayan yapıları sahte `X-Forwarded-For` başlığı ile bypass etmek mümkün olabilir. Her istekte sahte bir IP adresi ile neredeyse sınırsız sayıda istek göndermek mümkün olabilir.
 
 Kaynakça:
 
