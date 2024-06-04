@@ -6,7 +6,8 @@ modified:
 author: Taylan Özgür Bildik
 tags: [terminal]
 categories: blog 
-cover: 
+cover: xterm-cover.png
+related-video: QH28fOQaJdo
 permalink: /:title
 toc: true
 ---
