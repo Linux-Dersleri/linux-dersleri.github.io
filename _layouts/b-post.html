@@ -33,16 +33,31 @@
   </div>
   
   <div class="col-md-3">
-  <p></p>
-  <div class="no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-  <h3 align="center" class="mavi">Sayfa İçeriği</h3>
-	  <div data-pagefind-subpage class="row no-gutters">
+    <p></p>
+    <div class="no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+      <h3 align="center" class="mavi">Sayfa İçeriği</h3>
+      <div data-pagefind-subpage>
         {% include toc.html html=content %}
-    </div>
-        
       </div>
-  {% include temel-linux-egitimi-card-harici.html %}</div>
-  
+    </div>
+    {% if page.categories contains "temel-linux" %}
+      {% include temel-linux-egitimi-card.html %}
+      {% else %}
+      {% include temel-linux-egitimi-card-harici.html %}
+    {% endif %}
+    {% if page.related-video %}
+<div class="no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+    <div class="col p-4 d-flex flex-column position-static">
+  <p align="center" class="kirmizi text-danger">İlişkili Video</p>
+  <iframe src="https://www.youtube.com/embed/{{ page.related-video }}" frameborder="0" allowfullscreen></iframe>
+  <p class="card-text mb-auto">Mevcut doküman ile ilişkili olan Youtube videosu.</p>
+    
+    </div>
+    </div>
+  {% endif %}
+  </div>
+
+</div>
 </div>
 		
 {% include related.html %}		
