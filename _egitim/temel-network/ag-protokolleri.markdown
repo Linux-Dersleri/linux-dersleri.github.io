@@ -185,7 +185,7 @@ Subnet mask değeri, hostun hangi ağda olduğunu ve ağın büyüklüğünün b
 
 Yani IP ve subnet mask değerine sahip olan tüm hostlar lokal ağda iletişim kurabilirler. Fakat bir host harici bir ağdaki hostla iletişim kurmak istiyorsa, verileri harici hosta yönlendirecek router cihazının IP adresini de bilmesi gerekiyor. Örneğin bizim internet ağına bağlanmamızı sağlayan evimizdeki router görevini gören “modem” cihazıdır. Biz modeme bağlanırız bu modem de bizi internete bağlar. Bizi dış ağa bağlayan router cihazı da “ağ geçidi” yani “gateway” olarak ifade ediliyor. Zaten yukarıdaki görsele bakacak olursanız router cihazının bizi dış ağa bağlandığını kendiniz de görebilirsiniz. Bu sebeple bir hostun harici ağlar ile iletişim kurmak için, varsayılan ağ geçicinin(default gateway) IP adresini de bilinmesi gerekiyor. 
 
-![default-gateway.webp]({{ site.url }}/egitim/temel-network/protokoller/default-gateway.webp){:class="responsive img-zoomable"}
+![default-getway.webp]({{ site.url }}/egitim/temel-network/protokoller/default-getway.webp){:class="responsive img-zoomable"}
 
 Bu bilgiler internet ağına bağlanıp IP adresleri üzerinden diğer hostlar ile iletişim kurmamızı sağlar. 
 
