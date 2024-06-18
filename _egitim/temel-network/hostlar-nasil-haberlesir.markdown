@@ -67,7 +67,7 @@ Elbette bu bilgi yeterli değil çünkü hedef cihazın MAC adresinin de bilinme
 
 ![router-ip-table.webp]({{ site.url }}/egitim/temel-network/hostlar/router-ip-table.webp){:class="responsive img-zoomable"}
 
-Daha önce routerların ağlar arasındaki “gatw” olduğundan bahsetmiştik. Bu sebeple her host bağlı olduğu gateway adresini yani routerın bu ağdaki IP adresini biliyor. Bu sebeple eğer iletişime geçeceği IP adresi kendi ağında değilse bu paketi gateway olarak bilinen routera teslim ediyor. Fakat teslim etme işlemi için de elbette ilk olarak bu routerın MAC adresini bilmesi gerek. Çünkü sizin de bildiğiniz gibi yalnızca IP adresi ile veri iletilemez. 
+Daha önce routerların ağlar arasındaki “gateway” olduğundan bahsetmiştik. Bu sebeple her host bağlı olduğu gateway adresini yani routerın bu ağdaki IP adresini biliyor. Bu sebeple eğer iletişime geçeceği IP adresi kendi ağında değilse bu paketi gateway olarak bilinen routera teslim ediyor. Fakat teslim etme işlemi için de elbette ilk olarak bu routerın MAC adresini bilmesi gerek. Çünkü sizin de bildiğiniz gibi yalnızca IP adresi ile veri iletilemez. 
 
 Host, Router aygıtının MAC adresini öğrenmek üzere ARP ile bu IP adresinin MAC adresini broadcast şeklinde kendi ağındaki herkese soruyor. 
 
