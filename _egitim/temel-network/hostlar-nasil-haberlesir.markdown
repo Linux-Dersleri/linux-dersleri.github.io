@@ -67,7 +67,7 @@ Elbette bu bilgi yeterli değil çünkü hedef cihazın MAC adresinin de bilinme
 
 ![router-ip-table.webp]({{ site.url }}/egitim/temel-network/hostlar/router-ip-table.webp){:class="responsive img-zoomable"}
 
-Daha önce routerların ağlar arasındaki “getway” olduğundan bahsetmiştik. Bu sebeple her host bağlı olduğu getway adresini yani routerın bu ağdaki IP adresini biliyor. Bu sebeple eğer iletişime geçeceği IP adresi kendi ağında değilse bu paketi getway olarak bilinen routera teslim ediyor. Fakat teslim etme işlemi için de elbette ilk olarak bu routerın MAC adresini bilmesi gerek. Çünkü sizin de bildiğiniz gibi yalnızca IP adresi ile veri iletilemez. 
+Daha önce routerların ağlar arasındaki “gateway” olduğundan bahsetmiştik. Bu sebeple her host bağlı olduğu gateway adresini yani routerın bu ağdaki IP adresini biliyor. Bu sebeple eğer iletişime geçeceği IP adresi kendi ağında değilse bu paketi gateway olarak bilinen routera teslim ediyor. Fakat teslim etme işlemi için de elbette ilk olarak bu routerın MAC adresini bilmesi gerek. Çünkü sizin de bildiğiniz gibi yalnızca IP adresi ile veri iletilemez. 
 
 Host, Router aygıtının MAC adresini öğrenmek üzere ARP ile bu IP adresinin MAC adresini broadcast şeklinde kendi ağındaki herkese soruyor. 
 
@@ -81,7 +81,7 @@ Bu ARP sorgusuna yalnızca hedef IP adresine sahip olan router cevap veriyor. Bu
 
 ![ARP8.webp]({{ site.url }}/egitim/temel-network/hostlar/ARP8.webp){:class="responsive img-zoomable"}
 
-Artık böylelikle lokal ağ dışındaki bir hosta veri göndermek için bu verileri routera teslim etmemiz gerekiyor. Yani hedef IP olarak harici ağdaki hostun IP adresini belirtiyorken, MAC adresi olarak default getway olan router aygıtının MAC adresini belirtiyoruz.
+Artık böylelikle lokal ağ dışındaki bir hosta veri göndermek için bu verileri routera teslim etmemiz gerekiyor. Yani hedef IP olarak harici ağdaki hostun IP adresini belirtiyorken, MAC adresi olarak default gateway olan router aygıtının MAC adresini belirtiyoruz.
 
 ![ARP9.webp]({{ site.url }}/egitim/temel-network/hostlar/ARP9.webp){:class="responsive img-zoomable"}
 
@@ -97,6 +97,6 @@ Router bağlı olduğu ağlardaki cihazların IP ve MAC bilgilerini de ARP ile �
 
 ![router-ip-arp-table.webp]({{ site.url }}/egitim/temel-network/hostlar/router-ip-arp-table.webp){:class="responsive img-zoomable"}
 
-Örneğin geniş ağ olan internet üzerinde başka bir IP adresine paket iletmek istediğinizde, yine kendi ağınızdaki default getway olarak kullanılan routera bu paketi teslim ediyorsunuz. Default getway da internet servis sağlayıcınıza bağlı olduğu için ilgili paketin hedefe ulaştırılması bu noktadan sonra onların yönlendirmesine bağlı oluyor. Zaten servis sağlayıcınız da internet ağına bağlı olduğu için ilgili paket internet ağı üzerinden hedefe ulaştırılmış oluyor. 
+Örneğin geniş ağ olan internet üzerinde başka bir IP adresine paket iletmek istediğinizde, yine kendi ağınızdaki default gateway olarak kullanılan routera bu paketi teslim ediyorsunuz. Default gateway da internet servis sağlayıcınıza bağlı olduğu için ilgili paketin hedefe ulaştırılması bu noktadan sonra onların yönlendirmesine bağlı oluyor. Zaten servis sağlayıcınız da internet ağına bağlı olduğu için ilgili paket internet ağı üzerinden hedefe ulaştırılmış oluyor. 
 
 İleride switch ve router cihazları üzerinde biraz daha durduğumuzda buradaki anlatımlar pekişmiş olacak.

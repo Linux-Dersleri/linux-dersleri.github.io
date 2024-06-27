@@ -135,13 +135,13 @@ Yukarıdaki diyagramda **192.168.1.X** ağında bağlı cihazlar routerın IP ad
 
 **192.168.2.X** ağına bağlı cihazlar ise aynı routerın IP adresini **192.168.2.254** olarak görüyor. Yani routerlar bağlı bulundukları ağlara dahil olmak üzere bağımsız IP adresleri alabiliyorlar.
 
-Bu sayede ağlara dahil olup ağlar arasında “**getway**” olarak isimlendirilen “geçit” görevi görebiliyorlar. Örneğin **192.168.1.**0 ağındaki **30** numaralı hostun “default getway” adresi aşağıdaki gibidir. 
+Bu sayede ağlara dahil olup ağlar arasında “**gateway**” olarak isimlendirilen “geçit” görevi görebiliyorlar. Örneğin **192.168.1.**0 ağındaki **30** numaralı hostun “default gateway” adresi aşağıdaki gibidir. 
 
 ![default-getway.webp]({{ site.url }}/egitim/temel-network/ag-aygitlari/default-getway.webp){:class="responsive img-zoomable"}
 
-Hostlar kendi ağlarının dışındaki bir host ile iletişime geçmek istediklerinde, diğer ağlara veri paketlerini yönlendiren yapı “default getway”’dir. 
+Hostlar kendi ağlarının dışındaki bir host ile iletişime geçmek istediklerinde, diğer ağlara veri paketlerini yönlendiren yapı “default gateway”’dir. 
 
-Örneğin aynı router’a bağlı olan **192.168.2.X** ağındaki bir host için **default getway** adresi de **192.168.2.254**’dür.
+Örneğin aynı router’a bağlı olan **192.168.2.X** ağındaki bir host için **default gateway** adresi de **192.168.2.254**’dür.
 
 ![default-getway2.webp]({{ site.url }}/egitim/temel-network/ag-aygitlari/default-getway2.webp){:class="responsive img-zoomable"}
 
@@ -151,17 +151,17 @@ Modem olarak bildiğiniz cihaz da aslında kendi içinde switch ve router barın
 
 ![LAN-to-WAN-with-router.webp]({{ site.url }}/egitim/temel-network/ag-aygitlari/LAN-to-WAN-with-router.webp){:class="responsive img-zoomable"}
 
-Gerçek dünya örneği olması açısından modeminiz yani routerınızın IP adresinin bu ağa bağlı olan hostların default getway adresi olduğunu kendi ağınız üzerinden teyit edebilirsiniz. Bunun için daha önce lokal IP adresinizi öğrenmek üzere konsola girmiş olduğunuz `ifconfig` veya `ip addr` komutlarını tekrar girip çıktılara göz atabilirsiniz.
+Gerçek dünya örneği olması açısından modeminiz yani routerınızın IP adresinin bu ağa bağlı olan hostların default gateway adresi olduğunu kendi ağınız üzerinden teyit edebilirsiniz. Bunun için daha önce lokal IP adresinizi öğrenmek üzere konsola girmiş olduğunuz `ifconfig` veya `ip addr` komutlarını tekrar girip çıktılara göz atabilirsiniz.
 
 ![ipconfig.webp]({{ site.url }}/egitim/temel-network/temel-kavramlar/ipconfig.webp){:class="responsive img-zoomable"}
 
-Bakın burada, benim Windows hostum **Default Getway** adresi olarak **192.168.1.1** değerini almış. Eğer bu IP adresini tarayıcıma yazıp onaylayacak olursam, modemimin konfigürasyon penceresi açılacak.
+Bakın burada, benim Windows hostum **Default Gateway** adresi olarak **192.168.1.1** değerini almış. Eğer bu IP adresini tarayıcıma yazıp onaylayacak olursam, modemimin konfigürasyon penceresi açılacak.
 
 ![default-getway-login.webp]({{ site.url }}/egitim/temel-network/ag-aygitlari/default-getway-login.webp){:class="responsive img-zoomable"}
 
-Bu pencere açıldı çünkü benim bilgisayarımda default getway olarak bu modem(router) kullanılıyor. Yani ben lokal ağımdan geniş ağ olan internete bu geçit(getway) görevi gören modem(router) üzerinden çıkış yapıyorum. Dolayısıyla bu IP adresini girdiğimde modemimi konfigüre edebileceğim pencere açılıyor.
+Bu pencere açıldı çünkü benim bilgisayarımda default gateway olarak bu modem(router) kullanılıyor. Yani ben lokal ağımdan geniş ağ olan internete bu geçit(gateway) görevi gören modem(router) üzerinden çıkış yapıyorum. Dolayısıyla bu IP adresini girdiğimde modemimi konfigüre edebileceğim pencere açılıyor.
 
-Burada modem, lokal IP adreslerini internet servis sağlayıcısının bana tahsis etmiş olduğu genel(public) IP ile **NAT**(**N**etwork **A**ddress **T**ranslation) sayesinde dönüştürüp benim internet ağına çıkmamı sağlayan bir geçittir(getway). 
+Burada modem, lokal IP adreslerini internet servis sağlayıcısının bana tahsis etmiş olduğu genel(public) IP ile **NAT**(**N**etwork **A**ddress **T**ranslation) sayesinde dönüştürüp benim internet ağına çıkmamı sağlayan bir geçittir(gateway). 
 
 ![NAT.webp]({{ site.url }}/egitim/temel-network/ag-aygitlari/NAT.webp){:class="responsive img-zoomable"}
 

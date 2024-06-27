@@ -170,7 +170,7 @@ Esasen DNS konusu çok daha fazla detayı barındırıyor olmasına karşın en 
 
 - IP adresi
 - Subnet Mask değeri
-- Default Getway bilgisi
+- Default gateway bilgisi
 - DNS Server IP adresi
 
 Şimdi sırasıyla neden bu 4 bilgiye ihtiyaç olduğunu kısaca izah edelim.
@@ -183,7 +183,7 @@ Subnet mask değeri, hostun hangi ağda olduğunu ve ağın büyüklüğünün b
 
 ![Subnet-mask.webp]({{ site.url }}/egitim/temel-network/protokoller/Subnet-mask.webp){:class="responsive img-zoomable"}
 
-Yani IP ve subnet mask değerine sahip olan tüm hostlar lokal ağda iletişim kurabilirler. Fakat bir host harici bir ağdaki hostla iletişim kurmak istiyorsa, verileri harici hosta yönlendirecek router cihazının IP adresini de bilmesi gerekiyor. Örneğin bizim internet ağına bağlanmamızı sağlayan evimizdeki router görevini gören “modem” cihazıdır. Biz modeme bağlanırız bu modem de bizi internete bağlar. Bizi dış ağa bağlayan router cihazı da “ağ geçidi” yani “getway” olarak ifade ediliyor. Zaten yukarıdaki görsele bakacak olursanız router cihazının bizi dış ağa bağlandığını kendiniz de görebilirsiniz. Bu sebeple bir hostun harici ağlar ile iletişim kurmak için, varsayılan ağ geçicinin(default getway) IP adresini de bilinmesi gerekiyor. 
+Yani IP ve subnet mask değerine sahip olan tüm hostlar lokal ağda iletişim kurabilirler. Fakat bir host harici bir ağdaki hostla iletişim kurmak istiyorsa, verileri harici hosta yönlendirecek router cihazının IP adresini de bilmesi gerekiyor. Örneğin bizim internet ağına bağlanmamızı sağlayan evimizdeki router görevini gören “modem” cihazıdır. Biz modeme bağlanırız bu modem de bizi internete bağlar. Bizi dış ağa bağlayan router cihazı da “ağ geçidi” yani “gateway” olarak ifade ediliyor. Zaten yukarıdaki görsele bakacak olursanız router cihazının bizi dış ağa bağlandığını kendiniz de görebilirsiniz. Bu sebeple bir hostun harici ağlar ile iletişim kurmak için, varsayılan ağ geçicinin(default gateway) IP adresini de bilinmesi gerekiyor. 
 
 ![default-getway.webp]({{ site.url }}/egitim/temel-network/protokoller/default-getway.webp){:class="responsive img-zoomable"}
 
@@ -193,7 +193,7 @@ Eğer alan adı yani “domain” ismi üzerinden bir adresi ziyaret etmek istiy
 
 ![DNS-network.webp]({{ site.url }}/egitim/temel-network/protokoller/DNS-network.webp){:class="responsive img-zoomable"}
 
-İşte tüm bu sebeplerle bir hostun internet üzerinde gezinebilmek için “IP, Subnet Mask, Default Getway, DNS” bilgilerine sahip olması gerekiyor. Bu hostun ne tür bir cihaz olduğu önemsiz. Burada bahsi geçen host; laptop, telefon, yazıcı veya internete bağlanabilen herhangi bir cihaz olabilir. Hepsinin bu 4 bilgiye ihtiyacı var.
+İşte tüm bu sebeplerle bir hostun internet üzerinde gezinebilmek için “IP, Subnet Mask, Default gateway, DNS” bilgilerine sahip olması gerekiyor. Bu hostun ne tür bir cihaz olduğu önemsiz. Burada bahsi geçen host; laptop, telefon, yazıcı veya internete bağlanabilen herhangi bir cihaz olabilir. Hepsinin bu 4 bilgiye ihtiyacı var.
 
 Fakat muhtemelen ben özellikle ele alana kadar internet gezintisi için bu 4 bilgiye ihtiyacınız olduğunun bile farkında değildiniz. Bu durumun sebebi bu bilgilerin **DHCP** isimli protokol tarafından hostlara otomatik olarak tanımlanıyor olmasıdır. 
 
