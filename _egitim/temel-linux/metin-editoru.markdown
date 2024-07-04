@@ -361,6 +361,8 @@ Eğer değişiklikleri kaydetmeden çıkmak isterseniz <kbd>:q!</kbd> yazıp <kb
 
 Vi editöründen çıkmak son derece kolay ancak bilmeyenler için kesinlikle bir eziyete dönüşüyor. Biraz araştırırsanız, insanların “**vi**” veya “**vim**” hakkında en çok sorduğu sorunun, editörden nasıl çıkılacağı olduğunu görebilirsiniz. Dolayısıyla vi editörünü temel düzeyde bilmenin, hiç değilse çıkış yapabilmenin bir itibar meselesi olduğunu düşünüyorum :)
 
+![vim--exit]({{ site.url }}/egitim/temel-linux/metin-editoru/vim.png){:class="responsive img-zoomable"}
+
 İşin şakası bir yana, eğer “vi” editörüne gereken fırsatı tanır ve özveriyi gösterirseniz ne kadar işlevsel olabileceğine kendiniz de şaşıracaksınız.
 
 Benim vi editörü hakkında bahsetmek istediklerim bu kadar. Ancak elbette vi editörü benim anlattıklarımla kesinlikle sınırlı değil. Biraz araştırırsanız ne kadar çok özelliği olduğunu bizzat görebilirsiniz.
