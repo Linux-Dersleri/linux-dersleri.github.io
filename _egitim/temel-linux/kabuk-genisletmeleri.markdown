@@ -450,6 +450,27 @@ adduser.conf adjtime alsa alternatives apache2 apparmor apparmor.d apt avahi bas
 
 Bakın bu kez tersi şekilde başlangıç harfinde z karakteri bulunan veya başlangıç harfi büyük olan hiç bir içerik bastırılmadı çünkü bunları genişletme kapsamına dahil etmedik. Bu iki çıktıyı kıyaslarsanız, ünlem işaretinin hariç tutma görevinde olduğunu net biçimde görebilirsiniz.
 
+<p class="mavi"><strong>ℹ️ Not:</strong> Bu hariç tutma özelliği her zaman beklendiği şekilde sonuç vermeyebilir. Daha kesin yaklaşım için <code class="language-plaintext highlighter-rouge">find</code> aracının hariç tutma özelliği olan ünlem işaretini kullanmanız özellikle karmaşık filtrelemelerde daha sağlıklı olabilir.</p> 
+
+```bash
+┌──(taylan㉿linuxdersleri)-[/etc]
+└─$ find -maxdepth 1 ! -name "[a-y]*"                                                                                                                                 
+.
+./.java
+./ModemManager
+./NetworkManager
+./ImageMagick-6
+./OpenCL
+./UPower
+./.pwd.lock
+./zsh
+./ODBCDataSources
+./X11
+./zsh_command_not_found
+```
+
+`find` aracının yalnızca mevcut dizinde sorgulama yapması yani alt dizinlere bakmaması için ayrıca `-maxdepth 1` seçeneğini de ekledim. Ben genellikle daha kesin sonuçlar için bu yaklaşımı tercih ediyorum. 
+
 Ben anlatımlar sırasında mümkün oldukça temel işleyişi anlamamıza yetecek kadar örnek verdim ama yapısı gereği joker karakterleri kullanarak sınırsız sayıda örüntü oluşturabiliriz. Yani temelde nasıl çalıştığını bildiğiniz zaman ihtiyaçlarınıza göre istediğiniz kalıbı oluşturabilirsiniz. Zaten bu karakterlerin amacı da dosya isimleri ile eşleşecek desenler oluşturabilmek. Burada ele aldıklarımız joker karakterleri etkili kullanmanın tek yolu da bolca pratik yapmanızdır. Pratik yaptıkça tam mantığını kavrayıp aslında ne kadar işlevsel ve kolay kullanılabilir olduğunu bizzat deneyimlemiş olacaksınız.
 
 Ayrıca ben anlatımlar sırasında hep `echo` komutunu kullandım ancak sizler dilediğiniz bir araca argüman vermek için dosya ismi genişletmesini kullanabilirsiniz. Örneğin sonu “**.txt**” ile biten tüm dosyaları silmek istediğinizde `rm *.txt` komutunu kullanmanız yeterli olacaktır. Denemek için öncelikle kıvırcık parantez genişletmesinden de faydalanarak `sudo touch {1..9}.txt` komutu ile 1’den 9’a kadar isimlendirilmiş sonu “**.txt**” ile biten dosyalarımızı oluşturalım. `sudo` komutunu kullanıyorum çünkü ***etc*** dizini atlında çalıştığımız için dosya oluşturma ve silme gibi işlemler için yetki gerekiyor. İleride bu konuya ayıraca değineceğiz. 
@@ -777,37 +798,33 @@ Bu dizine, aşağıdaki betik dosyasını `cat > betik.sh` komutunun ardından <
 └─$ cat > betik.sh
 #!/bin/bash
 
-# Dosya isimlerini oluşturmak için kullanılacak karakterler
-characters=("a" "b" "c" "x" "y" "t" "1" "2" "3" "4" "5" "6" "7" "8" "9")
+# Rastgele uzantılar
+extensions=("txt" "csv" "docx" "pdf" "jpg" "png")
 
-# Dosya isimlerinin uzantıları
-extensions=("txt" "pdf" "docx" "jpg" "csv")
+# Maksimum dosya sayısı
+max_files=75
 
-# Oluşturulacak dosya sayısı
-count=25
+# Karakter kümesi
+chars="a-zA-Z0-9"
 
-# Tur sayısı
-rounds=3
+# Dosya sayacı
+file_count=0
 
-# Dosya isimlerini oluştur
-for ((r=0; r<$rounds; r++))
-do
-    for ((i=0; i<$count; i++))
-    do
-        # Rastgele karakterleri seç
-        random_character1=${characters[$((RANDOM % ${#characters[@]}))]}
-        random_character2=${characters[$((RANDOM % ${#characters[@]}))]}
-        random_character3=${characters[$((RANDOM % ${#characters[@]}))]}
-
-        # Rastgele uzantıyı seç
-        random_extension=${extensions[$((RANDOM % ${#extensions[@]}))]}
-
-        # Dosya ismini oluştur
-        filename="$random_character1$random_character2$random_character3.$random_extension"
-
-        # Dosya oluştur
-        touch "$filename"
-    done
+while [ $file_count -lt $max_files ]; do
+  # Rastgele dosya ismi oluşturma
+  random_filename=$(tr -dc "$chars" < /dev/urandom | head -c 5)
+  
+  # Rastgele uzantı seçimi
+  random_extension=$(shuf -n 1 -e "${extensions[@]}")
+  
+  # Tam dosya ismi
+  filename="${random_filename}.${random_extension}"
+  
+  # Dosya oluşturma
+  touch "$filename"
+  
+  # Dosya sayacını artırma
+  ((file_count++))
 done
 
 ls # Üretilen mevcut dizindeki dosyaları yazdırmak için
@@ -818,7 +835,7 @@ ls # Üretilen mevcut dizindeki dosyaları yazdırmak için
 
 Bu betik mevcut bulunduğunuz dizine 75 rastgele dosya oluşturacaktır. Bu sayede bu dizinde her türlü genişletme alıştırması yapmak için yeterli örneğe sahip olabilirsiniz. Gerekli çalışma ortamını kurduktan sonra aşağıdaki alıştırmaları pratiğe dökmeyi deneyebilirsiniz.
 
-<p class="mavi"><strong>ℹ️ Not:</strong> Buradaki betik dosyası her seferinde rastgele veriler ürettiği için aşağıdaki alıştırmalarda yer alan örüntülere tamamen uyacak dosya isimleri oluşturulmamış olabilir. Bu durumda soruya uygun olan dosya veya klasör isimlerini kendiniz oluşturup genişletme kurallarını test edebilirsiniz.</p> 
+<p class="mavi"><strong>ℹ️ Not:</strong> <strong>Buradaki betik dosyası her seferinde rastgele veriler ürettiği için aşağıdaki alıştırmalarda yer alan örüntülere tamamen uyacak dosya isimleri oluşturulmamış olabilir.</strong> Bu durumda soruya uygun olan dosya veya klasör isimlerini kendiniz oluşturup genişletme kurallarını test edebilirsiniz.</p> 
 
 ## Sorular
 
@@ -854,36 +871,38 @@ Bu betik mevcut bulunduğunuz dizine 75 rastgele dosya oluşturacaktır. Bu saye
 
 16. İlk karakteri "**x**" veya "**y**" olan ve son karakteri "**x**" olan dosya ismi genişletmelerini nasıl tanımlarsınız?
 
-17. İsminin içinde "**abc**" geçmeyen dosya ismi genişletmelerini nasıl tanımlarsınız?
+17. İsminin içinde "**abc**" geçmeyen dosya ismi genişletmelerini nasıl tanımlarsınız? (`find` aracının hariç tutma özelliği olan `!` işaretini kullanabilirsiniz.)
 
 18. İlk karakteri bir büyük harf olan ve içinde en az iki sayı geçen dosya ismi genişletmelerini nasıl tanımlarsınız?
 
 19. İlk iki karakteri bir harf olan ve son karakteri "**.txt**" olan dosya ismi genişletmelerini nasıl tanımlarsınız?
 
-20. İlk karakteri bir sayı olan ve içinde en az üç harf bulunan dosya ismi genişletmelerini nasıl tanımlarsınız?
+20. İlk karakteri bir sayı olan ve içinde en az üç harf bulunan(dosya uzantıları fark etmeksizin) dosya ismi genişletmelerini nasıl tanımlarsınız?
 
 
 ## Yanıtlar
 
-1. `echo ?[xyt]*`
-2. `echo a*.{txt,pdf,jpg}`
-3. `echo a*g`
-4. `echo ?x*`
-5. `echo *[!.txt]`
-6. `echo [1-13]???????`
-7. `echo [145]*[!abtg]`
-8. `echo [xyt]*[^xyt]` veya `echo [xyt]*[!xyt]`
-9. `echo [mno]*[abt]`
-10. `echo [ab]*[xy]*`
-11. `echo [0-5]*[a-z]`
-12. `echo [pq]*xyz*`
-13. `echo *linux*`
-14. `echo ab*123*`
-15. `echo a????*`
-16. `echo [xy]*x`
-17. `echo *[!abc]*`
-18. `echo [A-Z]*[0-9]*[0-9]*`
-19. `echo [a-z][a-z]*.txt`
-20. `echo [0-9][a-z][a-z][a-z]*`
+1. `ls ?[xyt]*`
+2. `ls a*.{txt,pdf,jpg}`
+3. `ls a*g`
+4. `ls ?x*`
+5. `ls *[!.txt]`
+6. `ls [1-13]???????`
+7. `ls [145]*[!abtg]`
+8. `ls [xyt]*[^xyt]` veya `ls [xyt]*[!xyt]`
+9. `ls [mno]*[abt]`
+10. `ls [ab]*[xy]*`
+11. `ls [0-5]*[a-z]`
+12. `ls [pq]*xyz*`
+13. `ls *linux*`
+14. `ls ab*123*`
+15. `ls a????*`
+16. `ls [xy]*x`
+17. `find . ! -name "*[abc]*"`
+18. `ls [A-Z]*[0-9]*[0-9]*`
+19. `ls [a-z][a-z]*.txt`
+20. `ls [0-9][a-z][a-z][a-z]*`
+
+<p class="sari"><strong>ℹ️ Hatırlatma:</strong> Betik dosyasının, buradaki sorulara uyacak örüntülerde dosya isimleri üretmeyebileceğini ve dolayısıyla doğru genişletmeyi kullansanız bile sonuç alamayabileceğinizi unutmayın lütfen. En kesin yol, ilgili örüntüye uyacak birkaç dosyayı elle oluşturup genişletmeyi tekrar kontrol etmektir.</p>
 
 Örnek alıştırmalar burada son buldu fakat elbette benzer şekilde daha fazlası için kendi kendinize olası filtreleme problemleri tasarlayabilirsiniz.
