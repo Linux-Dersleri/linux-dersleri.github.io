@@ -3,7 +3,7 @@ sitemap: true
 layout: simple
 title:  "İstatistikler"
 author: taylan_ozgur_bildik
-excerpt: "Linux Dersleri platformu hakkında sıkça sorulan soruların yanıtları."
+excerpt: "Linux Dersleri platformu hakkında istatistikler."
 ---
 
 
