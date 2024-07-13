@@ -45,6 +45,8 @@ En yalın haliyle işletim sisteminin ne olduğundan haberdar olduğumuza göre 
 
 # Linux Nedir ?
 
+![linux-kernel-meme]({{ site.url }}/egitim/temel-linux/temel/linux-cekirdek-meme.png){:class="responsive img-zoomable"}
+
 Yaygın olarak bilinen haliyle "Linux" açık kaynaklı özgür bir işletim sistemidir. Linux için bir işletim sistemidir dedim ancak aslında bu yaygın kullanıma sahip tanımlama tam olarak doğru değil. Çünkü Linux esasen bir çekirdektir. Bir önceki derste çekirdeğin, sistem üzerindeki araçlardan gelen emirleri donanıma ifade etmekle sorumlu olduğundan bahsettik. Yani çekirdek tek başına işletim sisteminin bütünü temsil etmiyor. Çekirdek yalnızca işletim sisteminin önemli bir parçası. Çekirdeğe ek olarak kullanıcıların işlerini görebilecekleri araçlara da ihtiyaçları var. Bu araçlar ve çekirdek bir araya geldiğinde bir işletim sistemi ortaya çıkıyor.
 
 Dolayısıyla işletim sistemini temsil etmek için yaygın olarak kullanılan Linux ifadesi tek başına doğru değil. Bizim Linux işletim sistemi olarak bildiğimiz yapı aslında GNU/Linux işletim sistemidir. Buradaki GNU ifadesi işletim sisteminde olması gereken çeşitli araçları sağlayan projenin isminden geliyor. Dolayısıyla Linux çekirdeği ve GNU araçları bir araya geldiğinde ortaya bir işletim sistemi çıktığı için GNU/Linux işletim sistemi demek çok daha doğru bir tanımlama.
