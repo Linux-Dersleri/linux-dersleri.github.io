@@ -11,9 +11,9 @@ permalink: /:title
 toc: true
 ---
 
-# Girizgah
+# Girizgah | Nedir - Neden Oluşur ?
 
-Günümüzde pek çok websitesi verimlilik için bazı statik dosyaların önbellekte(CDN, load balance veya reverse proxy vb..) bulunmasını sağlıyor. 
+Günümüzde pek çok websitesi verimlilik için bazı statik dosyaların önbellekte(CDN, load balancer veya reverse proxy vb..) bulunmasını sağlıyor. 
 
 Örneğin [linuxdersleri.net](http://linuxdersleri.net) adresinin reverse proxy sayesinde önbellek tuttuğunu düşünelim. Kullanıcılar [linuxdersleri.net/hesap](http://linuxdersleri.net/hesap) sayfasını ziyaret ettiklerinde, mevcut kullanıcıya ait hesap bilgilerinin dinamik web sunucusu tarafında üretilip kullanıcıya sunuluyor olsun. Bu durumda tabii ki bu içerik dinamik olarak her kullanıcıya özel olacağı için önbellekte tutulmayacaktır. 
 
@@ -27,55 +27,57 @@ Yani örneğin [linuxdersleri.net/tasarım.css](http://linuxdersleri.net/tasarı
 
 Örneğin ben [linuxdersleri.net/hesap/olmayan.css](http://linuxdersleri.net/hesap/olmayan.css) adresine gittiğimde, [linuxdersleri.net/he](http://linuxdersleri.net/heasp)sap adresindeki içerik sunulacaktır. Aynı zamanda bu adres .css uzantısı ile bittiği için bu döndürülen içerik tam olarak bu adreste önbelleğe alınacaktır. Çünkü;
 
-1- Kullanıcı tarayıcı üzerinden [linuxdersleri.net/hesap/olmayan.css](http://linuxdersleri.net/hesap/olmayan.css) adresini ziyaret eder.
+**1-** Kullanıcı tarayıcı üzerinden [linuxdersleri.net/hesap/olmayan.css](http://linuxdersleri.net/hesap/olmayan.css) adresini ziyaret eder.
 
-2- Web sunucusu böyle bir adres olmadığı için [linuxdersleri.net/hesap](http://linuxdersleri.net/hesap/olmayan.css) adresinin içeriğini döndürür. Ayrıca bu aşamada bu sayfanın aslında önbelleğe alınmaması talimatını veren HTTP başlıkları da sunucu tarafından HTTP yanıtında iletilir.
+**2-** Web sunucusu böyle bir adres olmadığı için [linuxdersleri.net/hesap](http://linuxdersleri.net/hesap/olmayan.css) adresinin içeriğini döndürür. Ayrıca bu aşamada bu sayfanın aslında önbelleğe alınmaması talimatını veren HTTP başlıkları(örneğin:`cache-control: no-cache`) da sunucu tarafından HTTP yanıtında iletilir.
 
-3- Reverse proxy kullanıldığı için bu yanıt öncelikle proxy’e iletilir.
+**3-** Reverse proxy kullanıldığı için bu yanıt öncelikle proxy’e iletilir.
 
-4- Proxy adresin sonunda .css uzantısı olduğu için kendi konfigürasyonları gereği bu adresin önbelleğe alınması gerektiğine karar verir.  Bu aşamada HTTP yanıtında yer alan önbelleğe alınmaması belirtilen başlıklar görmezden gelinir.
+**4-** Proxy adresin sonunda "***.css***" uzantısı olduğu için kendi konfigürasyonları gereği bu adresin önbelleğe alınması gerektiğine karar verir.  Bu aşamada HTTP yanıtında yer alan önbelleğe alınmaması belirtilen başlıklar görmezden gelinir.
 
-5- Böylelikle aslında [linuxdersleri.net/hesap](http://linuxdersleri.net/hesap) adresinde kullanıcıya özel dinamik olarak üretilmiş olan veriler, [linuxdersleri.net/hesap/olmayan.css](http://linuxdersleri.net/hesap/olmayan.css) adresinde önbellek olarak saklanmış olur.
+**5-** Böylelikle aslında [linuxdersleri.net/hesap](http://linuxdersleri.net/hesap) adresinde kullanıcıya özel dinamik olarak üretilmiş olan veriler, [linuxdersleri.net/hesap/olmayan.css](http://linuxdersleri.net/hesap/olmayan.css) adresinde önbellek olarak saklanmış olur.
 
 ![web-cache-deception]({{ site.url }}/blog/img/web-cache-deception/web_cache_deception.png){:class="responsive img-zoomable"}
 
 Tabii ki bu durumun yaşanması için aşağıdaki koşulların sağlanması gerekir.
 
-1- Önbelleğe alan mekanizma üzerinde, yanıtta bulunan HTTP önbellek başlıklarını(`Cache-Control`, `expires`, `etag`, `Last-Modified` vb..) dikkate almıyor olması gerekir. 
+**1-** Önbelleğe alan mekanizmanın, yanıtta bulunan HTTP önbellek başlıklarını(`Cache-Control`, `expires`, `etag`, `Last-Modified` vb..) dikkate almıyor olması gerekir. 
 
-2- Önbelleğe alınan verinin türüne bakılmaksızın önbelleğe alınmalı.
+**2-** Önbelleğe alınan verinin türüne bakılmaksızın önbelleğe alınmalı.
 
-3- Web sunucusunun hatalı bağlantılara yanıt olarak geçerli ve kritik bilgi(csrf token veya kişisel veri vb..) barındıran sayfaların içeriğini döndürmesi gerekir.
+**3-** Web sunucusunun hatalı bağlantılara yanıt olarak geçerli ve kritik bilgi(csrf token, api key veya kişisel veri vb..) barındıran sayfaların içeriğini döndürmesi gerekir.
 
 Bu durumu çözmek için de:
 
-1- Önbellekleme yapan mekanizma üzerinde; yalnızca URL uzantısında yer alan .css vb eklere değil, sunucu tarafından gelen HTTP yanıtında yer alan cache header yani önbellek başlıklarını dikkate alacak şekilde konfigürasyon yapılmalı.
+**1-** Önbellekleme yapan mekanizma üzerinde; yalnızca URL uzantısında yer alan ***.css*** vb eklere değil, sunucu tarafından gelen HTTP yanıtında yer alan cache header(`Cache-Control`, `expires`, `etag`, `Last-Modified` vb..) yani önbellek başlıklarını dikkate alacak şekilde konfigürasyon yapılmalı.
 
-2- Önbelleğe alınan veri içeriğinin gerçekten css veya örneğin png dosyası olup olmadığı kontrol edilebilir. 
+**2-** Önbelleğe alınan veri içeriğinin gerçekten ***.css*** veya örneğin ***.png*** dosyası olup olmadığı kontrol edilebilir. 
 
-3- Web sunucusunun [linuxdersleri.net/hesap/olmayan.css](http://linuxdersleri.net/hesap/olmayan.css) gibi sayfalar için bir önceki adres olan /hesap içeriğini döndürmeyecek şekilde yapılandırın. Bu gibi durumlarda 404 veya 302 ile standart zararsız yanıtların gönderilmesi gerekir.
+**3-** Web sunucusunun [linuxdersleri.net/hesap/olmayan.css](http://linuxdersleri.net/hesap/olmayan.css) gibi sayfalar için bir önceki adres olan **/hesap** içeriğini döndürmeyecek şekilde yapılandırın. Bu gibi durumlarda 404 veya 302 ile standart zararsız yanıtların gönderilmesi gerekir.
 
 Ortaya çıkması için gereken birden fazla hatalı konfigürasyonun olması gerektiği için, bu tür bir zafiyetin yaygın olduğunu söylemek doğru olmayabilir. Yine de anlatılanları pekiştirmek üzere somut bir örnek üzerinden gitmek için [buradaki](https://nokline.github.io/bugbounty/2024/02/04/ChatGPT-ATO.html){:target="_blank"} writeup’ı kısaca ele alabiliriz. 
 
-# PoC | ChatGPT Account Takeover
+# ChatGPT Account Takeover
 
 Araştırmacı ChatGPT üzerinde bulunan “paylaşım” özelliği sayesinde mevcut mesajların URL üzerinden herkese açık şekilde paylaşılabildiğini ve bu URL adresinin önbelleğe kaydedildiğini(`Cf-Cache-Status: HIT` başlığı sayesinde) fark etmiş. 
 
-Aşağıdaki URL statik bir içerik uzantısına(.css .png .js vb..) sahip olmamasına rağmen önbelleğe alındığını sunucu yanıtındaki CF-Cache-Status: HIT başlığından teyit etmiş.
+Aşağıdaki URL statik bir içerik uzantısına(.css .png .js vb..) sahip olmamasına rağmen önbelleğe alındığını, sunucu yanıtındaki `CF-Cache-Status: HIT` başlığından teyit etmiş.
 
 ```jsx
 https://chat.openai.com/share/CHAT-UUID
 ```
 
-Bu, muhtemelen dosyanın uzantısına değil, URL'nin yolundaki konumuna bağlı olan bir önbellek kuralının bulunduğu anlamına geliyor. Bu varsayımı test etmek için https://chat.openai.com/share/random-path-that-does-not-exist'i adresini kontrol etmiş ve beklendiği gibi bu adresin de önbelleğe alındığını görmüş.
+Bu, muhtemelen dosyanın uzantısına değil, URL'nin yolundaki konumuna bağlı olan bir önbellek kuralının bulunduğu anlamına geliyor. Bu varsayımı test etmek için ***https://chat.openai.com/share/random-path-that-does-not-exist*** adresini kontrol etmiş ve beklendiği gibi bu adresin de önbelleğe alındığını görmüş.
 
-Dolayısıyla önbelleğe alma kuralının **/share/*** gibi bir kurala bağlı olduğunu teyit etmiş. 
+Dolayısıyla önbelleğe alma kuralının **/share/*** gibi bir URL yolu kuralına bağlı olduğunu teyit etmiş. Bu dizin altında riskli bir veri barındıran nokta olmadığı için, bu dizin adresini manipüle ederek risk teşkil edecek dizinlerin önbelleğe alınmasını sağlamak üzere "path traversal" kullanmış.
 
 ## Path Traversal Confusion
 
-Önbellek mekanizmasını kullan websiteleri bu iş için genellikle CDN hizmetlerinden faydalanır. ChatGPT örneğinde de Cloudflare kullanıldığını HTTP yanıt mesajındaki `Cf-Cache-Status` başlığından öğrenebiliyoruz. Bu durumda girilen URL adresinin hem CDN hem de web sunucusu tarafında işleniyor. Dolayısıyla URL ayrıştırıcısı karışıklığına sebep olmak mümkün olabilir.
+Önbellek mekanizmasını kullan websiteleri, önbellekleme işi için genellikle CDN hizmetlerinden faydalanır. 
 
-Mevcut ChatGPT örneğinde de URL encode edilmiş `/` karakteri yani `%2F` karakteri CDN tarafında decode edilmezken web sunucusu tarafında decode edilmiş. Dolayısıyla kritik öneme sahip api anahtarına giden yolun url encode şekilde sunucuya iletilerek önbelleğe alınmasını sağlamak mümkün olabilir.
+ChatGPT'nin de CDN olarak Cloudflare kullanıldığını HTTP yanıt mesajındaki `Cf-Cache-Status` başlığı sayesinde zaten biliyoruz. Bu durumda girilen URL adresi hem CDN hem de web sunucusu tarafında işleniyor. Dolayısıyla URL ayrıştırılması noktasında karışıklığa sebep olmak mümkün olabilir.
+
+Test sırasında URL encode edilmiş `/` karakteri yani `%2F` karakterinin CDN tarafında decode edilmezken web sunucusu tarafında decode edildiğini fark etmiş araştırmacı. Dolayısıyla kritik öneme sahip api anahtarına giden yolun url encode şekilde sunucuya iletilerek önbelleğe alınmasını sağlamak mümkün olmuş. Çünkü CDN bu URL adresini aldığında path traversal gereği ilgili dizine geçiş yapmak yerine doğrudan bu URL adresini olduğu şekilde önbelleğe alarak muhafaze etmiş ve ChatGPT web sunucusuna aktarmış. Sunucu da bu URL adresini çözümleyip path traversal gereği ilgili api noktasındaki bilgileri getirip CDN önbelleğine bu yanıtın kaydedilmesini sağlamış.
 
  Örneğin aşağıdaki url adresinde / karakteri URL encode şekilde yazıldığında:
 
@@ -83,11 +85,11 @@ Mevcut ChatGPT örneğinde de URL encode edilmiş `/` karakteri yani `%2F` karak
 https://chat.openai.com/share/%2F..%2Fapi/auth/session?cachebuster=123
 ```
 
-- CDN /share/ dizini altındaki her şeyi önbelleğe aldığını biliyoruz
-- CDN’in `%2F..%2F` karakterlerini decode etmediğini dolayısıyla bu şekilde önbelleğe alınacağını biliyoruz.
+- CDN **/share/** dizini altındaki her şeyi önbelleğe aldığını biliyoruz
+- CDN’in `%2F..%2F` karakterlerini decode etmediğini dolayısıyla URL adresi değiştirilmeden bu şekilde önbelleğe alınacağını biliyoruz. Eğer URL decode CDN tarafında yapılıyor olsa bu URL adresi `/api/auth/session?cachebuster=123` halini alacağı için zaten hiç önbelleğe de alınmayacaktı.
 - Web sunucusuna CDN tarafından iletilen bu `/share/%2F..%2Fapi/auth/session?cachebuster=123` adresi decode edilip, `/auth/session?cachebuster=123` olarak ele alınacak.
 
-Dolayısıyla https://chat.openai.com/share/%2F..%2Fapi/auth/session?cachebuster=123 adresini ziyaret eden kullanıcının api bilgisi önbelleğe kaydedilecek. Daha sonra aynı URL adresini ziyaret eden saldırgan bu önbellek yanıtı sayesinde api bilgisini elde etmiş olacak.
+Dolayısıyla ***https://chat.openai.com/share/%2F..%2Fapi/auth/session?cachebuster=123*** adresini ziyaret eden kullanıcının api bilgisi önbelleğe kaydedilecek. Daha sonra aynı URL adresini ziyaret eden saldırgan bu önbellek yanıtı sayesinde CDN üzerinden döndürülen yanıtla api bilgisini elde etmiş olacak.
 
 ![Chat-GPT-Attack]({{ site.url }}/blog/img/web-cache-deception/ChatGPT_Attack.svg){:class="responsive img-zoomable"}
 [Resim kaynağı](https://nokline.github.io/bugbounty/2024/02/04/ChatGPT-ATO.html){:target="_blank"}
