@@ -4,7 +4,7 @@ layout: b-post
 title:  "HTTP hop-by-hop Başlıklarının Kötüye Kullanımı"
 modified:
 author: Taylan Özgür Bildik
-tags: [network, http]
+tags: [network, http, web, güvenlik]
 categories: blog 
 cover: http-hop-by-hop-kotuye-kullanim-cover.png
 permalink: /:title

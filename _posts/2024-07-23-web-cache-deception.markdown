@@ -29,17 +29,19 @@ Yani örneğin [linuxdersleri.net/tasarım.css](http://linuxdersleri.net/tasarı
 
 **1-** Kullanıcı tarayıcı üzerinden [linuxdersleri.net/hesap/olmayan.css](http://linuxdersleri.net/hesap/olmayan.css) adresini ziyaret eder.
 
-**2-** Web sunucusu böyle bir adres olmadığı için [linuxdersleri.net/hesap](http://linuxdersleri.net/hesap/olmayan.css) adresinin içeriğini döndürür. Ayrıca bu aşamada bu sayfanın aslında önbelleğe alınmaması talimatını veren HTTP başlıkları(örneğin:`cache-control: no-cache`) da sunucu tarafından HTTP yanıtında iletilir.
+**2-** Client ile server arasında CDN proxy bulunduğu için bu GET isteği öncelikle proxy'e iletilir. Proxy, tanımlanmış olan cache konfigürasyonları doslayısıyla ***.css*** uzantılı bağlantıları önbellekte tutacağı için, sunucunun yanıtını önbellekte tutmak üzere bekler.
 
-**3-** Reverse proxy kullanıldığı için bu yanıt öncelikle proxy’e iletilir.
+**3-** Web sunucusu böyle bir adres olmadığı için [linuxdersleri.net/hesap](http://linuxdersleri.net/hesap/olmayan.css) adresinin içeriğini döndürür. Ayrıca bu aşamada bu sayfanın aslında önbelleğe **alınmaması** talimatını veren HTTP başlıkları(örneğin:`cache-control: no-cache`) da sunucu tarafından HTTP yanıtında iletilir.
 
-**4-** Proxy adresin sonunda "***.css***" uzantısı olduğu için kendi konfigürasyonları gereği bu adresin önbelleğe alınması gerektiğine karar verir.  Bu aşamada HTTP yanıtında yer alan önbelleğe alınmaması belirtilen başlıklar görmezden gelinir.
+**4-** Sunucunun yanıtı öncelikle aradaki proxy'e iletilir.
 
-**5-** Böylelikle aslında [linuxdersleri.net/hesap](http://linuxdersleri.net/hesap) adresinde kullanıcıya özel dinamik olarak üretilmiş olan veriler, [linuxdersleri.net/hesap/olmayan.css](http://linuxdersleri.net/hesap/olmayan.css) adresinde önbellek olarak saklanmış olur.
+**5-** Proxy, adresin sonunda "***.css***" uzantısı olduğu için kendi konfigürasyonları gereği bu yanıtın önbelleğe alınmasını sağlar. Bu aşamada HTTP yanıtında yer alan önbelleğe alınmaması belirtilen başlıklar görmezden gelinir.(Her zaman öyle olur demiyorum, yalnızca bu hatalı konfigürasyonda böyler olur)
+
+**6-** Böylelikle aslında [linuxdersleri.net/hesap](http://linuxdersleri.net/hesap) adresinde kullanıcıya özel olarak üretilmiş olan veriler, [linuxdersleri.net/hesap/olmayan.css](http://linuxdersleri.net/hesap/olmayan.css) adresi adresinde önbellek olarak saklanmış olur. Bu adresi ziyaret eden herkes önbelleğe alınan kullanıcı hesap bilgilerine erişebilir.
 
 ![web-cache-deception]({{ site.url }}/blog/img/web-cache-deception/web_cache_deception.png){:class="responsive img-zoomable"}
 
-Tabii ki bu durumun yaşanması için aşağıdaki koşulların sağlanması gerekir.
+Tabii ki bu zafiyetin yaşanması için aşağıdaki koşulların sağlanması gerekir.
 
 **1-** Önbelleğe alan mekanizmanın, yanıtta bulunan HTTP önbellek başlıklarını(`Cache-Control`, `expires`, `etag`, `Last-Modified` vb..) dikkate almıyor olması gerekir. 
 

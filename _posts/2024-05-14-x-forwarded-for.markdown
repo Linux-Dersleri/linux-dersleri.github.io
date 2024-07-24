@@ -4,7 +4,7 @@ layout: b-post
 title:  "X-Forwarded-For Nedir ve Ona Ne Zaman Güvenebiliriz ?"
 modified:
 author: Taylan Özgür Bildik
-tags: [http]
+tags: [http, web, güvenlik]
 categories: blog 
 cover: x-forwarded-host-usage-example.png
 permalink: /:title
