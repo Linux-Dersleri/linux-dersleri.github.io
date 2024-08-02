@@ -12,7 +12,7 @@ toc: true
 ---
 
 
-HTTP istekleri çoğu durumda, nihai hedefine ulaşmadan önce birden fazla altyapı katmanından geçer. Bu sebeple isteği gerçekleştirilen asıl “istemci” bilgisinin nihai hedefteki sunucuya ulaştırılabilmesi için `X-Forwarded-For` başlığı kullanılabilir. Hemen basit bir örnek üzerinden açıklayalım.
+HTTP istekleri çoğu durumda, nihai hedefine ulaşmadan önce birden fazla altyapı katmanından geçer. Bu sebeple, isteği gerçekleştiren asıl “istemci” bilgisinin nihai hedefteki sunucuya ulaştırılabilmesi için `X-Forwarded-For` başlığı kullanılabilir. Hemen basit bir örnek üzerinden açıklayalım.
 
 ![standart-http-request]({{ site.url }}\blog\img\x-forwarded-for\standart-http-request.png){:class="responsive img-zoomable"}
 
@@ -42,7 +42,7 @@ Yukarıdaki gibi bir durumda, client 1.1.1.1 değerine sahip `XFF` başlığın�
 
 `X-Forwarded-For` başlığı üzerinde bir miktar kontrol kazanmanın bir yolu, güvenilir bir reverse proxy dahil etmek ve bu proxy dışında backend sunucusuna ve diğer proxy'lere/sunuculara/load balancer’lara ağ düzeyinde doğrudan erişimi devre dışı bırakmaktır. API geliştiricileri için bu genellikle bir API Getway tarafından gerçekleştirilir, ancak Fastly, Squid Proxy, Cloudflare vb. gibi bir CDN de olabilir. İstek güvenilir bir proxy aracılığıyla geliyorsa ve bu reverse proxy'nin kendisi saldırıya uğramamışsa, muhtemelen gördüğünüz IP zincirinin en azından bir kısmına inanma konusunda sorun yaşamazsınız. Ama bu ip zincirinin hangi kısmına güvenebiliriz ?
 
-Temelde, güvenilir ve kontrol edilebilir proxy’den önceki tüm ip adreslerine şüpheyle yaklaşılmalı. Bunu sağlamak için, reverse proxy seviyesinde başlıkların(header) nasıl oluşturulduğunu değiştiren kararlar alabilirsiniz. Örneğin, nginx, `X-Forwarded-For` başlığını tamamen geçersiz kılabilir, istemcinin sağladığı her şeyi görmezden gelebilir ve onu gördüğü gerçek IP adresiyle değiştirebilir. Tüm istekler nginx üzerinden gelirse, bu, altyapınızın etrafına etkili bir şekilde bir çizgi çizer ve dışarıdan alınan tüm güvenilmeyen değerleri bırakarak altyapınızdaki diğer tüm hizmetlerin bu başlığa güvenmesine olanak tanır. Bunun için nginix’te aşağıdaki konfigürasyon tanımlanabilir 
+Temelde, güvenilir ve kontrol edilebilir proxy’den önceki tüm ip adreslerine şüpheyle yaklaşılmalı. Bunu sağlamak için, reverse proxy seviyesinde başlıkların(header) nasıl oluşturulduğunu değiştiren kararlar alabilirsiniz. Örneğin, nginx, `X-Forwarded-For` başlığını tamamen geçersiz kılabilir, istemcinin sağladığı her şeyi görmezden gelebilir ve onu gördüğü gerçek IP adresiyle değiştirebilir. Tüm istekler nginx üzerinden gelirse, bu, altyapınızın etrafına etkili bir şekilde bir çizgi çizer ve dışarıdan alınan tüm güvenilmeyen değerleri bırakarak altyapınızdaki diğer tüm hizmetlerin bu başlığa güvenmesine olanak tanır. Bunun için nginx’te aşağıdaki konfigürasyon tanımlanabilir 
 
 ```jsx
 proxy_set_header X-Forwarded-For $remote_addr;
