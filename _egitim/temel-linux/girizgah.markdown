@@ -13,6 +13,7 @@ cover: girizgah.webp
 toc: true 
 ---
 
+### Linux nasıl öğrenilir nereden başlanır ?
 
 Eğitim serisi boyunca GNU/Linux işletim sistemini temel düzeyde tanıyıp yönetme yolculuğunda birlikte ilerliyor olacağız. Eğer eğitimi tekrar etmek için burada değilsen, bu bölümü atlamanı kesinlikle önermiyorum. Çünkü bu bölüm, eğitimden ne beklemen gerektiği ve nasıl maksimum verimi alabileceğini izah ettiğim önemli bir bölüm. Ancak her şeyden önce bu eğitimden alabileceğin verimin senin çabalarınla doğru orantılı olduğunun da farkında ol lütfen.
 
