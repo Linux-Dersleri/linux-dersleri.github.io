@@ -1,0 +1,49 @@
+---
+sitemap: true
+layout: b-post
+title:  "C ve Sistem Programlama Eğitim Duyurusu 📢"
+modified:
+author: Taylan Özgür Bildik
+tags: [eğitim, duyuru]
+categories: blog 
+cover: 
+permalink: /:title
+toc: true
+---
+
+[Mert Gör](https://www.linkedin.com/in/hwpplayer1){:target="_blank"}'ün C ve Sistem Programcıları Derneği C, Sistem Programlama ve Linux kursları notlarını temel alarak ele alacağı ücretsiz eğitimin detayları:
+
+### Eğitimin Hedef ve Amacı
+
+En kısa sürede temel bilgilerden başlayıp sistem programlamayı ve Linux çekirdek programlamayı öğretmek.
+
+### Eğitimin Verileceği Ortam
+
+Eğitim meet.jit.si üzerinden verilip eğitim videoları Youtube üzerinde yayınlanacak.
+[youtube.com/@masscollaborationlabs](https://www.youtube.com/@masscollaborationlabs){:target="_blank"}
+
+Eğitimin 1 yıl içinde( tüm kurslar) tamamlanması planlanıyor. İlk olarak Git ortamında yazılı kaynaklar üzerinden ilerlenip, ileride videolar üzerinden devam edilecektir. 
+
+
+### Eğitimde Referans Alınan Dokümanlar
+
+- [GitHub](https://github.com/hwpplayer1/c-course){:target="_blank"}
+- [GitLab](https://gitlab.com/hwpplayer1/c-course){:target="_blank"}
+- [SourceHut](https://git.sr.ht/~mertgor/c-course){:target="_blank"}
+- [Vern](https://git.vern.cc/hwpplayer1/c-course){:target="_blank"}
+- [Disroot](https://git.disroot.org/hwpplayer1/c-course){:target="_blank"}
+- [Codeberg](https://codeberg.org/hwpplayer1/c-course){:target="_blank"}
+- [Truvalinux](https://git.truvalinux.org.tr/hwpplayer1/c-course){:target="_blank"}
+
+
+### İletişim Adresi
+
+Dazla bilgi almak veya sorularınızı iletmek için aşağıdaki kanalları kullanabilirsiniz:
+
+**E-Posta:** mertgor[at]procyberian.xyz
+
+**GPG Key:** 0xD5A31B8B1A6F02BC
+
+**Telegram Guruba Katılmak İçin:** [t.me/masscollabs](https://t.me/masscollabs)
+
+[masscollabs](https://labs.masscollabs.xyz/blog/2024/08/10/our-c-programming-language-training/){:target="_blank"}
