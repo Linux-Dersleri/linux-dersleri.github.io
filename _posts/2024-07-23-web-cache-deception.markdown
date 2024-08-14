@@ -100,6 +100,5 @@ Neticede kısaca ele aldığımız gibi "Web Cache Deception" eğer şartlar mü
 
 # İleri Okuma
 
-[web-cache-deception-attack](https://omergil.blogspot.com/2017/02/web-cache-deception-attack.html){:target="_blank"}
-
-[ChatGPT-ATO](https://nokline.github.io/bugbounty/2024/02/04/ChatGPT-ATO.html){:target="_blank"}
+- [web-cache-deception-attack](https://omergil.blogspot.com/2017/02/web-cache-deception-attack.html){:target="_blank"}
+- [ChatGPT-ATO](https://nokline.github.io/bugbounty/2024/02/04/ChatGPT-ATO.html){:target="_blank"}
