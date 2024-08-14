@@ -25,11 +25,11 @@ aif, aiff, au, avi, bin, bmp, cab, carb, cct, cdf, class, css, doc, dcr, dtd, gc
 
 Yani örneğin [linuxdersleri.net/tasarım.css](http://linuxdersleri.net/tasarım.css) adresindeki .css dosyası statik içeriğe sahip olduğu için önbelleğe alınabilir. Ayrıca var olmayan bir dizin adresine gidildiğinde otomatik olarak var olan bir üst dizindeki adresin içeriğini getiriyor olsun.
 
-Örneğin ben [linuxdersleri.net/hesap/olmayan.css](http://linuxdersleri.net/hesap/olmayan.css) adresine gittiğimde, [linuxdersleri.net/he](http://linuxdersleri.net/heasp)sap adresindeki içerik sunulacaktır. Aynı zamanda bu adres .css uzantısı ile bittiği için bu döndürülen içerik tam olarak bu adreste önbelleğe alınacaktır. Çünkü;
+Örneğin ben [linuxdersleri.net/hesap/olmayan.css](http://linuxdersleri.net/hesap/olmayan.css) adresine gittiğimde, [linuxdersleri.net/hesap](http://linuxdersleri.net/heasp) adresindeki içerik sunulacaktır. Aynı zamanda bu adres .css uzantısı ile bittiği için bu döndürülen içerik tam olarak bu adreste önbelleğe alınacaktır. Çünkü;
 
 **1-** Kullanıcı tarayıcı üzerinden [linuxdersleri.net/hesap/olmayan.css](http://linuxdersleri.net/hesap/olmayan.css) adresini ziyaret eder.
 
-**2-** Client ile server arasında CDN proxy bulunduğu için bu GET isteği öncelikle proxy'e iletilir. Proxy, tanımlanmış olan cache konfigürasyonları doslayısıyla ***.css*** uzantılı bağlantıları önbellekte tutacağı için, sunucunun yanıtını önbellekte tutmak üzere bekler.
+**2-** Client ile server arasında CDN proxy bulunduğu için bu `GET` isteği öncelikle proxy'e iletilir. Proxy, tanımlanmış olan cache konfigürasyonları dolayısıyla ***.css*** uzantılı bağlantıları önbellekte tutacağı için, sunucunun yanıtını önbellekte tutmak üzere bekler.
 
 **3-** Web sunucusu böyle bir adres olmadığı için [linuxdersleri.net/hesap](http://linuxdersleri.net/hesap/olmayan.css) adresinin içeriğini döndürür. Ayrıca bu aşamada bu sayfanın aslında önbelleğe **alınmaması** talimatını veren HTTP başlıkları(örneğin:`cache-control: no-cache`) da sunucu tarafından HTTP yanıtında iletilir.
 
@@ -55,7 +55,7 @@ Bu durumu çözmek için de:
 
 **2-** Önbelleğe alınan veri içeriğinin gerçekten ***.css*** veya örneğin ***.png*** dosyası olup olmadığı kontrol edilebilir. 
 
-**3-** Web sunucusunun [linuxdersleri.net/hesap/olmayan.css](http://linuxdersleri.net/hesap/olmayan.css) gibi sayfalar için bir önceki adres olan **/hesap** içeriğini döndürmeyecek şekilde yapılandırın. Bu gibi durumlarda 404 veya 302 ile standart zararsız yanıtların gönderilmesi gerekir.
+**3-** Web sunucusunun [linuxdersleri.net/hesap/olmayan.css](http://linuxdersleri.net/hesap/olmayan.css) gibi sayfalar için bir önceki adres olan **/hesap** içeriğini döndürmeyecek şekilde yapılandırılabilir. Bu gibi durumlarda 404 veya 302 ile standart zararsız yanıtların gönderilmesi gerekir.
 
 Ortaya çıkması için gereken birden fazla hatalı konfigürasyonun olması gerektiği için, bu tür bir zafiyetin yaygın olduğunu söylemek doğru olmayabilir. Yine de anlatılanları pekiştirmek üzere somut bir örnek üzerinden gitmek için [buradaki](https://nokline.github.io/bugbounty/2024/02/04/ChatGPT-ATO.html){:target="_blank"} writeup’ı kısaca ele alabiliriz. 
 
@@ -81,7 +81,7 @@ ChatGPT'nin de CDN olarak Cloudflare kullanıldığını HTTP yanıt mesajındak
 
 Test sırasında URL encode edilmiş `/` karakteri yani `%2F` karakterinin CDN tarafında decode edilmezken web sunucusu tarafında decode edildiğini fark etmiş araştırmacı. Dolayısıyla kritik öneme sahip api anahtarına giden yolun url encode şekilde sunucuya iletilerek önbelleğe alınmasını sağlamak mümkün olmuş. Çünkü CDN bu URL adresini aldığında path traversal gereği ilgili dizine geçiş yapmak yerine doğrudan bu URL adresini olduğu şekilde önbelleğe alarak muhafaze etmiş ve ChatGPT web sunucusuna aktarmış. Sunucu da bu URL adresini çözümleyip path traversal gereği ilgili api noktasındaki bilgileri getirip CDN önbelleğine bu yanıtın kaydedilmesini sağlamış.
 
- Örneğin aşağıdaki url adresinde / karakteri URL encode şekilde yazıldığında:
+ Örneğin aşağıdaki url adresinde `/` karakteri URL encode şekilde yazıldığında:
 
 ```jsx
 https://chat.openai.com/share/%2F..%2Fapi/auth/session?cachebuster=123
@@ -96,10 +96,9 @@ Dolayısıyla ***https://chat.openai.com/share/%2F..%2Fapi/auth/session?cachebus
 ![Chat-GPT-Attack]({{ site.url }}/blog/img/web-cache-deception/ChatGPT_Attack.svg){:class="responsive img-zoomable"}
 [Resim kaynağı](https://nokline.github.io/bugbounty/2024/02/04/ChatGPT-ATO.html){:target="_blank"}
 
-Neticede kısaca ele aldığımız gibi Web Cache Deception eğer şartlar müsaitse fevkalade tehlikeli bir zafiyet. 
+Neticede kısaca ele aldığımız gibi "Web Cache Deception" eğer şartlar müsaitse fevkalade tehlikeli bir zafiyet. 
 
 # İleri Okuma
 
-[https://omergil.blogspot.com/2017/02/web-cache-deception-attack.html](https://omergil.blogspot.com/2017/02/web-cache-deception-attack.html){:target="_blank"}
-
-[https://nokline.github.io/bugbounty/2024/02/04/ChatGPT-ATO.html](https://nokline.github.io/bugbounty/2024/02/04/ChatGPT-ATO.html){:target="_blank"}
+- [web-cache-deception-attack](https://omergil.blogspot.com/2017/02/web-cache-deception-attack.html){:target="_blank"}
+- [ChatGPT-ATO](https://nokline.github.io/bugbounty/2024/02/04/ChatGPT-ATO.html){:target="_blank"}
