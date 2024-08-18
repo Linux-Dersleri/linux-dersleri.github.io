@@ -53,7 +53,7 @@ layout: simple
       messageElement.textContent = "Bu sayfa taşınmış, doğru sayfaya yönlendiriliyorsunuz...";
       // Görüntü dosyasını değiştir
       wizardImage.src = "{{ site.url }}/data/img/wizard-redirect.png";
-      // Yönlendirmeyi belirli bir süre sonra gerçekleştirmek için setTimeout kullanabilirsiniz
+      // Yönlendirmeyi belirli bir süre sonra gerçekleştirmek için
       setTimeout(() => {
           window.location.href = redirects[currentPath];
       }, 3000); // 3 saniye bekleme süresi
