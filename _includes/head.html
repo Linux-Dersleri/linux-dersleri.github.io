@@ -1,6 +1,6 @@
 <meta charset="utf-8">
 <link rel="icon" href="/data/img/logo.webp" type="image/svg+xml" />
-<title>{% if page.title %}{{ page.title }} | {% endif %}{{ page.coursetitle }} | Linux Dersleri</title>
+<title>{% if page.title %}{{ page.title }} {% endif %}{{ page.coursetitle }} | Linux Dersleri</title>
 {% if page.excerpt %}<meta name="description" content="{{ page.excerpt | strip_html }}">{% endif %}
 {% if page.tags %}<meta name="keywords" content="{{ page.tags | join: ', ' }}">{% endif %}
 {% if page.author %}
