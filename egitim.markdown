@@ -80,40 +80,6 @@ search_omit: true
 	
 </div>
 
-<div style="display:none;">
-<h2 align="center">Linux Sistem Yöneticiliğine Giriş Eğitimi</h2>
-<p>Profesyonel anlamda Linux sistem yöneticiliğine giriş için bu eğitim iyi bir başlangıç olabilir. Doğrudan herhangi bir sertifika programı kapsamında hazırlanmış olmasada, Linux+ CompTIA LPI LFCS RHCSA gibi sertifika sınavlarına hazırlanırken kısmi olarak yararlanabileceğiniz bir kaynak olarak kullanabilirsiniz. Eğitim müfredatı şahsi kanaatime göre temelde bilinmesi gereken konuların kapsamı dahilinde hazırlandığı için size herhangi bir sertifika veya nihai sonuç için garanti veremem. Ancak yine de en azından Türkçe kaynak olarak Linux için bir başlangıç noktası olarak görülebilir. </p>
-  <div align="center" class="row mb-2">
-    
-		<div class="col-md-6">
-      <div class="no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-        <div class="col p-4 d-flex flex-column position-static">
- 	<p class="kirmizi text-danger">Kitap</p>
-		<img src="{{ site.url }}/kitap.webp"/>
-          <p class="card-text mb-auto">Linux Sistem Yönetimi için giriş seviyesi kitap arıyorsanız göz atabilirsiniz. Kitabın ismi "Linux: Sistem Yönetimine Giriş"dir. İçeriğini inceleme için tıklayın.</p>
-          <a href="{{ site.url }}/linux-sistem-yonetimine-giris-egitimi" class=" stretched-link"></a>
-        </div>
-        
-      </div>
-    </div>
-    
-		<div class="col-md-6">
-      <div class="no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-        <div class="col p-4 d-flex flex-column position-static">
-
- 	<p class="yesil text-success">Video + Doküman + Canlı Eğitim</p>
-			<img src="{{ site.url }}/sistem-yonetim.webp"/>
-          <p class="card-text mb-auto">Linux sistem yönetimi için giriş seviyesi eğitim arıyorsanız, 96 saatlik canlı ders, 50 saat video eğitim, kitap, kurs içi diagram kaynakları için bu eğitime kaydolabilirsiniz. </p>
-		  <h3 class="mb-0">Boş Kontenjan:
-			<span class="badge badge-warning badge-pill"><i class="fa fa-user" aria-hidden="true"></i>Tükendi!</span>
-		  </h3>
-          <a href="{{ site.url }}/linux-sistem-yonetimine-giris-egitimi" class=" stretched-link"></a>
-        </div>
-        
-      </div>
-    </div>
-    
-		</div>
     
 
 

@@ -8,6 +8,7 @@ excerpt: "systemd üzerinden servislerin yönetimini ele alıyoruz."
 tags: [systemd, systemctl]
 categories: [temel-linux]
 cover: servisyonetimicover.webp
+related-video: kBptk8ozSzk
 tutorial: 19
 toc: true  
 ---
