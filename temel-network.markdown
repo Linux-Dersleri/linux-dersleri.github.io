@@ -1,8 +1,8 @@
 ---
 sitemap: true
 layout: simple
-title: Ağ Temelleri Eğitimi
-excerpt: "Ağ Temelleri Müfredatı"
+title: Ağ (Network) Temelleri Eğitimi
+excerpt: "Ağ (Network) Temelleri Müfredatı"
 categories: [temel-network]
 type: [egitim-serisi]
 search_omit: true
@@ -14,7 +14,7 @@ author: Taylan Özgür Bildik
     <img class="card-img" src="{{ site.url }}/data/img/temel-network.webp">
   </div>
   <div class="col-md-9 order-md-1">
-    <h1>Ağ Temelleri Eğitimi</h1>
+    <h1>Ağ (Network) Temelleri Eğitimi</h1>
     <p>Ağ temelleri hakkında giriş seviyesi teorik bilgi için bu eğitim serisini takip edebilirsiniz. Bu eğitimde pratik uygulamalar bulunmuyor, yalnızca giriş düzeyi teorik anlatımlar mevcut. </p>
   </div>
 </div>
