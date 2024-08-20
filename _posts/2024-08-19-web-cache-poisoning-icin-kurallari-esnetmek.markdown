@@ -12,7 +12,7 @@ toc: true
 ---
 
 
-Buradaki yazıyı ele alarak açıklama gayretinde olacağım. Fakat mevcut yazı içerisinde çoğu durumda Türkçe yerine pek çok kavramın İngilizce şekilde kullanıldığını belirtmem gerek. İleri okumalarda ve genel araştırmalarda kavramlar her daim İngilizce olacağı için bu yaklaşımı tercih ediyorum. 
+Cache Poisoning saldırıları için mevcut kuralları nasıl esnetebileceğimizi ele almak [buradaki](https://portswigger.net/research/gotta-cache-em-all){:target="_blank"} yazıyı açıklama gayretinde olacağım. Fakat mevcut yazı içerisinde çoğu durumda Türkçe yerine pek çok kavramın İngilizce şekilde kullanıldığını belirtmem gerek. İleri okumalarda ve genel araştırmalarda kavramlar her daim İngilizce olacağı için bu yaklaşımı tercih ediyorum. 
 
 # URL Tutarsızlıkları
 
@@ -549,4 +549,4 @@ Herhangi bir statik uzantılı dizini zehirlememize gerek kalmadan benzer metot 
 
 # Kaynakça ve İleri Okuma
 
-- [Gotta cache 'em all: bending the rules of web cache exploitation](https://portswigger.net/research/gotta-cache-em-all#extensions)
+- [Gotta cache 'em all: bending the rules of web cache exploitation](https://portswigger.net/research/gotta-cache-em-all){:target="_blank"}
