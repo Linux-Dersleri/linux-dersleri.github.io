@@ -133,4 +133,4 @@ Ayrıca kimi durumlarda `X-Forwarded-For` başlığı sayesinde istemcinin IP ad
 
 Kaynakça:
 
-- [Abusing HTTP hop-by-hop request headers](https://nathandavison.com/blog/abusing-http-hop-by-hop-request-headers)
+- [Abusing HTTP hop-by-hop request headers](https://nathandavison.com/blog/abusing-http-hop-by-hop-request-headers){:target="_blank"}
