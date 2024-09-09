@@ -108,7 +108,7 @@ Eğer bu istek ilk istek ile aynı ise, girdiğiniz delimiter karakteri önbelle
 
 **URL:**  <span class="mavi">/anasayfa<span class="kirmizi">$deneme$metni</span></span>  → **Path:** <span class="mavi">/anasayfa</span> 
 
-## Normalization
+# Normalization
 
 URL ayrıştırma işlemi hem sunucu hem de cache tarafında çeşitli nedenlerle(hedef endpoint tespiti, cache key üretimi veya doğrulanması vb.) uygulanıyor. Öncelikle, pathname yani yol adının başlangıcını ve sonunu bulmak için path delimiters(yol sınırlayıcılar) tanımlanır. Path adresi elde edildikten sonra varsa karakter kodları(URL encode gibi) çözülür(örn: **%61** → **a**) ve noktalar(`../../` gibi) kaldırılır. Sonuçta normalleştirme işlemiyle bu girdi normalize edilmiş olur. Şimdi bu normalleştirme adımları üzerinde biraz daha duralım:
 
