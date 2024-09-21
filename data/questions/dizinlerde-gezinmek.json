@@ -155,7 +155,7 @@
     },
     {
      "question": "İçerisinde dosyalar bulunan bir klasörü nasıl silebiliriz?",
-     "options": ["rmdir klasör", "rmdir -r klasör", "rmdir -p klasör"],
-     "answer": "rmdir -r klasör"
+     "options": ["rm -dr klasör", "rm -r klasör", "rmdir -p klasör", "rmdir -d klasör"],
+     "answer": "rm -dr klasör"
     }
 ]
