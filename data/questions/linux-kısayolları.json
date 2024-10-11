@@ -7,7 +7,7 @@
     {
      "question": "Tüm dağıtımlarda ctrl + alt + t tuşlaması, yeni bir konsol ekranı açar.",
      "options": ["Evet", "Hayır"],
-     "answer": "Evet"
+     "answer": "Hayır"
     },
     {
      "question": "İmlecin bulunduğu konumdan, satırın en başına atlamak için hangi kısayolu kullanmanız gerekiyor?",
