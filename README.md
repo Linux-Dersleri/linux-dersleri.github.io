@@ -33,7 +33,7 @@ Linuxdersleri.net adresinde bulunan Temel Linux eğitimi içerisindeki anlatıml
 
 
 ## :postbox: Geri Bildirimde Bulunun
-Fark etmiş olduğunuz hata, eksiklik ve yazım yanlışlarını bildirebilirsiniz.
+Fark etmiş olduğunuz hataları, eksiklikleri ve yazım yanlışlarını bildirebilirsiniz.
 
 :email: [info.trdokuman@gmail.com](mailto:info.trdokuman@gmail.com)
 
