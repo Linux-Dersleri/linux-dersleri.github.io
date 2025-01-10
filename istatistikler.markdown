@@ -11,8 +11,8 @@ excerpt: "Linux Dersleri platformu hakkında istatistikler."
 Google analytics üzerinden elde edilen kullanıcı ve görüntüleme istatistkleri.
 
 
-<h4 class="text-primary"> 01.10.23 - 09.10.24 tarihi arasındaki istatistik:</h4>
+<h4 class="text-primary"> 01.10.23 - 06.01.25 tarihi arasındaki istatistik:</h4>
 
-<p class="mavi"> 🐧Kullanıcı: <strong class="text-primary">22K</strong> 👁️Görüntüleme: <strong class="text-primary">124K</strong> </p>
+<p class="mavi"> 🐧Kullanıcı: <strong class="text-primary">28K</strong> 👁️Görüntüleme: <strong class="text-primary">150K</strong> </p>
 
 
