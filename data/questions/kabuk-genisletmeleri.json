@@ -1,7 +1,7 @@
 [
   {
      "question": "2’den 12 ye kadar olan sayıların ikişer aralıklar ile konsola bastırmak için hangi seçenek doğrudur ?",
-     "options": ["[2..12..2]", "(2..12..2)", "(2..12..2), "{2..12..2}"],
+     "options": ["[2..12..2]", "(2..12..2)", "(2..12..2)", "{2..12..2}"],
      "answer": "{2..12..2}"
     },
     {
