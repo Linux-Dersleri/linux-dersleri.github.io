@@ -32,7 +32,7 @@
     {
      "question": "Manual sayfalarında mevcut satırdan sonraki eşleşmeleri araştırmak için hangi kısayolu kullanmamız gerekiyor?",
      "options": ["?aranacak-kelime", ".aranacak-kelime", "!aranacak-kelime", "/aranacak-kelime"],
-     "answer": "?aranacak-kelime"
+     "answer": "/aranacak-kelime"
     },
     {
      "question": "Manual sayfalarında mevcut satırdan önceki eşleşmeleri araştırmak için hangi kısayolu kullanmamız gerekiyor?",
