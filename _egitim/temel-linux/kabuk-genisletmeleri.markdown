@@ -886,7 +886,7 @@ Bu betik mevcut bulunduğunuz dizine 75 rastgele dosya oluşturacaktır. Bu saye
 2. `ls a*.{txt,pdf,jpg}`
 3. `ls a*g`
 4. `ls ?x*`
-5. `ls *[!.txt]`
+5. `find . ! -name "*.txt"`
 6. `ls [1-13]???????`
 7. `ls [145]*[!abtg]`
 8. `ls [xyt]*[^xyt]` veya `ls [xyt]*[!xyt]`
