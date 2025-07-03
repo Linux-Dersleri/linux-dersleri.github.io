@@ -198,6 +198,7 @@
 body{
 	background-color:var(--background);
 	color:var(--font-color);
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .container{
