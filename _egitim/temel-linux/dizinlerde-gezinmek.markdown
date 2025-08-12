@@ -152,7 +152,7 @@ Geçmişte bu dizinler kendi başına ana dizin(***/***) altında bulunduğu iç
 
 ## <span class="text-danger">/</span><span class="text-primary">tmp</span>
 
-***tmp*** dizini "**tem**porary" yani "geçici" ifadesinden kısaltmasından geliyor. Geçici olarak tutulması gereken dosya ve klasörler için kullanılan bir dizin adresidir. Hem kullanıcılar hem de programlar, geçici içerikler için bu dizini kullanabiliyor. Bu dosyalar geçici olarak RAM üzerinde tutulduğu için bu dizin altındaki veriler sistem yeniden başlatıldığında silinmiş oluyor. 
+***tmp*** dizini "**tem**porary" yani "geçici" ifadesinden kısaltmasından geliyor. Geçici olarak tutulması gereken dosya ve klasörler için kullanılan bir dizin adresidir. Hem kullanıcılar hem de programlar, geçici içerikler için bu dizini kullanabiliyor. Modern Linux dağıtımlarının çoğu, /tmp'yi varsayılan olarak RAM üzerinde (tmpfs dosya sistemi ile) tutar, dolayısıyla bu dizin altındaki veriler sistem yeniden başlatıldığında silinir. Ancak RAM üzerinde tutma durumu özelliştirilip disk üzerinde kalıcı şekilde tutulması da sağlanabilir. Bu yaklaşım kullanılan dağıtımın ve sistem yöneticisinin ihtiyaçları doğrultusunda belirlenir.
 
 ## <span class="text-danger">/</span><span class="text-warning">root</span>
 
