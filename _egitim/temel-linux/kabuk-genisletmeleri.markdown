@@ -877,7 +877,7 @@ Bu betik mevcut bulunduğunuz dizine 75 rastgele dosya oluşturacaktır. Bu saye
 
 19. İlk iki karakteri bir harf olan ve son karakteri "**.txt**" olan dosya ismi genişletmelerini nasıl tanımlarsınız?
 
-20. İlk karakteri bir sayı olan ve içinde en az üç harf bulunan(dosya uzantıları fark etmeksizin) dosya ismi genişletmelerini nasıl tanımlarsınız?
+20. İlk karakteri bir sayı olan ve içinde en az üç harf bulunan(küçük veya büyük harf, dosya uzantıları fark etmeksizin) dosya ismi genişletmelerini nasıl tanımlarsınız?
 
 
 ## Yanıtlar
@@ -901,7 +901,7 @@ Bu betik mevcut bulunduğunuz dizine 75 rastgele dosya oluşturacaktır. Bu saye
 17. `find . ! -name "*[abc]*"`
 18. `ls [A-Z]*[0-9]*[0-9]*`
 19. `ls [a-z][a-z]*.txt`
-20. `ls [0-9][a-z][a-z][a-z]*`
+20. `ls [0-9]*[a-zA-Z]*[a-zA-Z]*[a-zA-Z]*`
 
 <p class="sari"><strong>ℹ️ Hatırlatma:</strong> Betik dosyasının, buradaki sorulara uyacak örüntülerde dosya isimleri üretmeyebileceğini ve dolayısıyla doğru genişletmeyi kullansanız bile sonuç alamayabileceğinizi unutmayın lütfen. En kesin yol, ilgili örüntüye uyacak birkaç dosyayı elle oluşturup genişletmeyi tekrar kontrol etmektir.</p>
 
