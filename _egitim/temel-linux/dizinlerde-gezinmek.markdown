@@ -1514,7 +1514,7 @@ Tamamdır bence `mkdir` aracından yeterince bahsettik. Şimdi var olan dizinler
 
 ## Dizin Silme | `rmdir` Komutu
 
-Söz konusu komut satırı üzerinden klasörleri silmek olduğunda da `rmdir` ve `rm` olmak üzere ihtiyacımıza göre kullanabileceğimiz iki alternatif aracımız var. Ben bu bölümde yalnızca `rmdir` aracına odaklanacağım. Ancak merak etmeyin daha sonra eğitim içerinde `rm` aracından da ayrıca bahsedeceğiz zaten.
+Söz konusu komut satırı üzerinden klasörleri silmek olduğunda da `rmdir` ve `rm` olmak üzere ihtiyacımıza göre kullanabileceğimiz iki alternatif aracımız var. Ben bu bölümde yalnızca `rmdir` aracına odaklanacağım. Ancak merak etmeyin daha sonra eğitim içerisinde `rm` aracından da ayrıca bahsedeceğiz zaten.
 
 Biliyorsunuz klasörler yani dizin yapısı, içerisindeki dosya ve klasörleri organize şekilde bir arada tutmak için tasarlanmış olan harika bir çözüm. Yeterince alana sahip olduğumuz sürece bir klasör içerisine istediğimiz kadar dosyayı barındırabiliyoruz. Bu durum da tıpkı gerçek hayatta kullandığımız klasörleme yapısı gibi, işletim sistemleri üzerinde de bize hiyerarşik bir düzen sağlıyor. Klasörlerin içerisinde dosya barındırabilmesi her ne kadar işlevsel olsa da, bu durum aynı zamanda klasörleri riskli getiriyor. Eğer yanlışlıkla içerisinde kritik dosyaların bulunan bir klasörü silersek, tek seferde içerisindeki tüm alt dosya ve klasörler de silineceği için tek bir hatanın faturası çok ağır olabilir. Bu sebeple klasör silme işlemi Linux üzerinde ciddiye alınıyor. Zaten son derece dikkatle yapılması da gerekiyor. Klasörü silmek tek bir dosyayı silmeye benzemez. Tek seferde büyük bir yıkıma sebep olabiliriz. Zaten bu tehlike göz önünde bulundurularak klasör silmek için spesifik olarak güvenli bir araç olan `rmdir` aracı geliştirilmiştir.
 
@@ -1579,7 +1579,7 @@ rmdir: removing directory, 'x'
 
 Bakın ayrıntılı çıktılardan da takip edebildiğimiz gibi içe içe olan boş klasörleri `p` seçeneği sayesinde silmeyi başardık.
 
-Lütfen unutmayın, biz burada **iç içe olan boş klasörleri** sildik. Eğer herhangi bir klasörün içerinde dosya bulunuyor olsaydı bu işlem tabii ki başarısız olacaktı. 
+Lütfen unutmayın, biz burada **iç içe olan boş klasörleri** sildik. Eğer herhangi bir klasörün içerisinde dosya bulunuyor olsaydı bu işlem tabii ki başarısız olacaktı. 
 
 Denemek için `mkdir -p a/b/c/` komutu ile iç içe yeni klasörler oluşturalım. 
 
