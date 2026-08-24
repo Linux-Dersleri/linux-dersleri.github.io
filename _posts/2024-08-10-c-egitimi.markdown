@@ -30,7 +30,6 @@ Eğitimin 1 yıl içinde( tüm kurslar) tamamlanması planlanıyor. İlk olarak 
 - [GitHub](https://github.com/hwpplayer1/c-course){:target="_blank"}
 - [GitLab](https://gitlab.com/hwpplayer1/c-course){:target="_blank"}
 - [SourceHut](https://git.sr.ht/~mertgor/c-course){:target="_blank"}
-- [Vern](https://git.vern.cc/hwpplayer1/c-course){:target="_blank"}
 - [Disroot](https://git.disroot.org/hwpplayer1/c-course){:target="_blank"}
 - [Codeberg](https://codeberg.org/hwpplayer1/c-course){:target="_blank"}
 - [Truvalinux](https://git.truvalinux.org.tr/hwpplayer1/c-course){:target="_blank"}
