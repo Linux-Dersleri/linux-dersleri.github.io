@@ -1,10 +1,10 @@
 ---
-sitemap: true
 layout: simple
 title: Bash Kabuk Programlama Temelleri[Henüz tamamlanmadı!]
 excerpt: "Temel Linux Eğitimi Sıralı Müfredatı"
 categories: [kabuk-programlama]
 type: [egitim-serisi]
+robots: noindex, follow
 search_omit: true
 author: Taylan Özgür Bildik
 ---

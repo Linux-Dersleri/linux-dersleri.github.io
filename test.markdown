@@ -1,8 +1,8 @@
 ---
-sitemap: true
 layout: simple
 title: Linux Testi - Linux Bilginizi Test Edin
 excerpt: "Temel Linux Testi | 200 Soru"
+robots: noindex, follow
 search_omit: true
 ---
 

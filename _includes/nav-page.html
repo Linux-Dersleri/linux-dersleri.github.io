@@ -3,7 +3,7 @@
 	
   <div class="collapse navbar-collapse">
     <a class="navbar-brand active" href="{{ site.url }}/">
-      <img src="{{ site.url }}/data/img/logo.webp" width="30" height="auto" class="align-top" alt="">
+      <img src="{{ site.url }}/data/img/logo.webp" width="30" height="30" class="align-top" alt="Linux Dersleri">
       Linux Dersleri
     </a>
     <ul class="navbar-nav">
@@ -14,16 +14,16 @@
         <a class="nav-link" href="{{ site.url }}/blog/">Blog</a>
       </li>
 	  <li class="nav-item active">
-        <a class="nav-link" href="{{ site.url }}/komutlar">Komut Listesi</a>
+        <a class="nav-link" href="{{ site.url }}/komutlar/">Komut Listesi</a>
       </li>
 	  <li class="nav-item active">
-        <a class="nav-link" href="{{ site.url }}/test">Test</a>
+        <a class="nav-link" href="{{ site.url }}/test.html">Test</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="{{ site.url }}/etiketler">Etiketler</a>
+        <a class="nav-link" href="{{ site.url }}/etiketler.html">Etiketler</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="{{ site.url }}/harici-kaynaklar">💖Kaynaklar</a>
+        <a class="nav-link" href="{{ site.url }}/harici-kaynaklar.html">💖Kaynaklar</a>
       </li>
 	 <li class="nav-item active">
         <a class="nav-link" href="{{ site.url }}/hakkında.html">Hakkında</a>
@@ -32,46 +32,46 @@
 	
   </div>
  
-<a class="btn" data-toggle="modal" data-target="#searchModal"><i class="fa fa-search" style="width:16px;height:16px"></i></a>
+<a class="btn" data-toggle="modal" data-target="#searchModal"><i class="fa fa-search nav-icon-sm" aria-hidden="true"></i></a>
 	<a onclick="tema()" class="btn" ><i class="fa fa-adjust fa-lg"></i></a> 
 	<a href="{{ site.url }}/bildirim.html" class="btn" ><i class="fa fa-paper-plane"></i></a> 
 </nav>	
 <nav class="navbar y-navbar sticky-top navbar-expand-lg navbar-light bg-light border-bottom">
 <button class="btn"  data-toggle="canvas" data-target="#bs-canvas-left" aria-expanded="false" aria-controls="bs-canvas-left"><i class="fa fa-align-justify fa-lg"></i></button>
 		<a href="{{ site.url }}/" class="btn"  ><i class="fa fa-home fa-lg"></i></a>     
-	<a class="btn" data-toggle="modal" data-target="#searchModal"><i class="fa fa-search" style="width:16px;height:16px"></i></a>
+	<a class="btn" data-toggle="modal" data-target="#searchModal"><i class="fa fa-search nav-icon-sm" aria-hidden="true"></i></a>
 		
 		<a onclick="tema()" class="btn" ><i class="fa fa-adjust fa-lg"></i></a> 
 		<a href="{{ site.url }}/bildirim.html" class="btn" ><i class="fa fa-paper-plane"></i></a> 
 		
 </nav>
 
-<div style="background-color: var(--background);" id="bs-canvas-left" class="bs-canvas bs-canvas-anim bs-canvas-left position-fixed h-100" >
+<div id="bs-canvas-left" class="bs-canvas bs-canvas-anim bs-canvas-left position-fixed h-100" >
    <div class="container">
     
       <a class="btn bs-canvas-close close" aria-label="Close">
         <span aria-hidden="true">&times;</span>
       </a>
       <a class="navbar-brand" href="{{ site.url }}/">
-        <img src="{{ site.url }}/data/img/logo.webp" width="30" height="auto" class="align-top" alt="">
+        <img src="{{ site.url }}/data/img/logo.webp" width="30" height="30" class="align-top" alt="Linux Dersleri">
         Linux Dersleri
       </a>
   
     
     
    <hr>
-  <a href="{{ site.url }}/egitim" class="btn">🎓 Eğitimler</a>
-  <a href="{{ site.url }}/blog" class="btn">🗃️ Blog</a>
-  <a href="{{ site.url }}/komutlar" class="btn">📜 Komut Listesi</a>
-  <a href="{{ site.url }}/test" class="btn">🎯 Test</a>
-  <a href="{{ site.url }}/etiketler" class="btn">🏷️ Etiketler</a>
+  <a href="{{ site.url }}/egitim.html" class="btn">🎓 Eğitimler</a>
+  <a href="{{ site.url }}/blog/" class="btn">🗃️ Blog</a>
+  <a href="{{ site.url }}/komutlar/" class="btn">📜 Komut Listesi</a>
+  <a href="{{ site.url }}/test.html" class="btn">🎯 Test</a>
+  <a href="{{ site.url }}/etiketler.html" class="btn">🏷️ Etiketler</a>
   <a href="{{ site.url }}/harici-kaynaklar.html" class="btn">💖 Faydalı Kaynaklar</a>
   <a href="{{ site.url }}/hakkında.html" class="btn">🐧 Hakkında</a>
   <a href="{{ site.url }}/bildirim.html" class="btn">📮 Geri Bildirim</a>
   <hr>
   
   <div align="center">
- <h5><a href="/">Linux Dersleri</a> | <a target="_blank" href="https://github.com/Linux-Dersleri/linux-dersleri.github.io"><i class="fa fa-github fa-lg"></i></a></h5>
+ <p class="h6"><a href="{{ site.url }}/">Linux Dersleri</a> | <a target="_blank" href="https://github.com/Linux-Dersleri/linux-dersleri.github.io"><i class="fa fa-github fa-lg"></i></a></p>
  <p class="small">GNU/Linux için Türkçe içerik sağlamak üzere kurulmuş bir platformdur.</p>
 
 	  </div>
@@ -110,5 +110,3 @@
     </div>
   </div>
 </div>
-
-<script src="{{ site.url }}/assets/js/jquery-3.3.1.slim.min.js" type="text/javascript"></script>

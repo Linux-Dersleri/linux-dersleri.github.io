@@ -1,0 +1,103 @@
+{% capture canonical %}{{ site.url }}{{ page.url | remove: 'index.html' }}{% endcapture %}
+{% if canonical == site.url %}{% assign canonical = site.url | append: '/' %}{% endif %}
+
+{% if page.description %}
+  {% assign schema_description = page.description | strip_html | strip %}
+{% elsif page.excerpt %}
+  {% assign schema_description = page.excerpt | strip_html | strip %}
+{% else %}
+  {% assign schema_description = site.description %}
+{% endif %}
+
+{% if page.layout == 'tutorial' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LearningResource",
+  "name": {{ page.title | jsonify }},
+  "description": {{ schema_description | truncate: 300 | jsonify }},
+  "url": {{ canonical | jsonify }},
+  "inLanguage": "tr",
+  "isPartOf": {
+    "@type": "Course",
+    "name": {{ page.coursetitle | jsonify }},
+    "provider": {
+      "@type": "Organization",
+      "name": "Linux Dersleri",
+      "url": {{ site.url | jsonify }}
+    }
+  },
+  "author": {
+    "@type": "Person",
+    "name": {{ page.author | default: "Taylan Özgür Bildik" | jsonify }}
+  }
+}
+</script>
+{% elsif page.layout == 'b-post' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ page.title | jsonify }},
+  "description": {{ schema_description | truncate: 300 | jsonify }},
+  "url": {{ canonical | jsonify }},
+  "datePublished": "{{ page.date | date: '%Y-%m-%d' }}"{% if page.modified %},
+  "dateModified": "{{ page.modified | date: '%Y-%m-%d' }}"{% endif %},
+  "inLanguage": "tr",
+  "author": {
+    "@type": "Person",
+    "name": {{ page.author | default: "Taylan Özgür Bildik" | jsonify }}
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Linux Dersleri",
+    "url": {{ site.url | jsonify }}
+  }
+}
+</script>
+{% elsif page.layout == 'komut' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": {{ page.title | jsonify }},
+  "description": {{ schema_description | truncate: 300 | jsonify }},
+  "url": {{ canonical | jsonify }},
+  "inLanguage": "tr",
+  "author": {
+    "@type": "Person",
+    "name": {{ page.author | default: "Taylan Özgür Bildik" | jsonify }}
+  }
+}
+</script>
+{% elsif page.url == '/' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Linux Dersleri",
+  "url": {{ site.url | jsonify }},
+  "description": {{ site.description | jsonify }},
+  "inLanguage": "tr",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Linux Dersleri",
+    "url": {{ site.url | jsonify }}
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Linux Dersleri",
+  "url": {{ site.url | jsonify }},
+  "email": "info@linuxdersleri.net",
+  "founder": {
+    "@type": "Person",
+    "name": "Taylan Özgür Bildik",
+    "url": "https://www.linkedin.com/in/taylanbildik/"
+  }
+}
+</script>
+{% endif %}

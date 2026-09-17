@@ -1,0 +1,69 @@
+{% comment %} SEO meta tags, Open Graph, Twitter Cards {% endcomment %}
+
+{% if page.layout == 'tutorial' %}
+  {% capture seo_title %}{{ page.title }} | {{ page.coursetitle }} | Linux Dersleri{% endcapture %}
+{% elsif page.layout == 'b-post' %}
+  {% capture seo_title %}{{ page.title }} | Linux Dersleri Blog{% endcapture %}
+{% elsif page.layout == 'komut' %}
+  {% capture seo_title %}{{ page.title }} | Linux Komutları | Linux Dersleri{% endcapture %}
+{% elsif page.url == '/' %}
+  {% capture seo_title %}Linux Dersleri | Türkçe GNU/Linux Eğitim ve Komut Rehberi{% endcapture %}
+{% else %}
+  {% capture seo_title %}{{ page.title }} | Linux Dersleri{% endcapture %}
+{% endif %}
+
+{% if page.description %}
+  {% assign seo_description = page.description | strip_html | strip %}
+{% elsif page.excerpt and page.excerpt != '' %}
+  {% assign seo_description = page.excerpt | strip_html | strip %}
+{% else %}
+  {% assign seo_description = site.description %}
+{% endif %}
+{% assign seo_description = seo_description | truncate: 160, '' %}
+
+{% capture canonical %}{{ site.url }}{{ page.url | remove: 'index.html' }}{% endcapture %}
+{% if canonical == site.url %}{% assign canonical = site.url | append: '/' %}{% endif %}
+
+{% if page.cover %}
+  {% if page.layout == 'b-post' %}
+    {% assign og_image = site.url | append: '/blog/img/' | append: page.cover %}
+  {% elsif page.categories.first %}
+    {% assign og_image = site.url | append: '/egitim/' | append: page.categories.first | append: '/' | append: page.cover %}
+  {% else %}
+    {% assign og_image = site.url | append: '/data/img/logo.webp' %}
+  {% endif %}
+{% else %}
+  {% assign og_image = site.url | append: '/data/img/logo.webp' %}
+{% endif %}
+
+{% if page.layout == 'b-post' %}
+  {% assign og_type = 'article' %}
+{% elsif page.layout == 'tutorial' or page.layout == 'komut' %}
+  {% assign og_type = 'article' %}
+{% else %}
+  {% assign og_type = 'website' %}
+{% endif %}
+
+<title>{{ seo_title | strip }}</title>
+<meta name="description" content="{{ seo_description }}">
+<link rel="canonical" href="{{ canonical }}">
+<link rel="alternate" type="application/atom+xml" title="Linux Dersleri" href="{{ site.url }}/feed.xml">
+
+{% if page.robots %}
+<meta name="robots" content="{{ page.robots }}">
+{% elsif page.url == '/404.html' %}
+<meta name="robots" content="noindex, follow">
+{% endif %}
+
+<meta property="og:type" content="{{ og_type }}">
+<meta property="og:title" content="{{ seo_title | strip }}">
+<meta property="og:description" content="{{ seo_description }}">
+<meta property="og:url" content="{{ canonical }}">
+<meta property="og:image" content="{{ og_image }}">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:site_name" content="Linux Dersleri">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ seo_title | strip }}">
+<meta name="twitter:description" content="{{ seo_description }}">
+<meta name="twitter:image" content="{{ og_image }}">

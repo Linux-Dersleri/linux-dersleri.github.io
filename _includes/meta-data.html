@@ -3,7 +3,7 @@
           {% for tag in page.tags %}<a href="{{ site.url }}/etiketler.html#{{ tag }}" class="btn btn-outline-primary btn-sm mb-2" title="{{ tag }} Etiketli Tüm İçerikler">{{ tag }}</a> {% endfor %}  
 		 <p></p> 
 		  <div align="center" class="col-sm-3">
-		<img class="responsive" src="{{ site.url }}/egitim/{{ page.categories }}/{{ page.cover }}" alt="">
+		<img class="responsive" src="{{ site.url }}/egitim/{{ page.categories }}/{{ page.cover }}" alt="{{ page.title }} kapak görseli">
 		  </div>	</div>	  
 		  <h6 class="mavi" align="right" id="meta-da">
 			<i class="fa fa-graduation-cap" aria-hidden="true"></i> {{ page.coursetitle }}		  

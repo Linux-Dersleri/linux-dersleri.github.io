@@ -301,4 +301,54 @@ background-color: rgba(99, 107, 140, 0.21);
 border-radius: 4px;
 }
 
+.nav-icon-sm {
+  width: 16px;
+  height: 16px;
+}
+
+.site-breadcrumb {
+  margin-top: 1.25rem;
+  padding-top: 0.25rem;
+}
+
+.site-breadcrumb .breadcrumb {
+  background-color: transparent;
+  font-size: 0.95rem;
+}
+
+.site-breadcrumb .breadcrumb-item a {
+  color: var(--color-accent-fg);
+}
+
+.site-breadcrumb .breadcrumb-item a:hover {
+  color: var(--color-accent-emphasis);
+  text-decoration: none;
+}
+
+.site-breadcrumb .breadcrumb-item.active {
+  color: var(--font-color);
+}
+
+.site-breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+  color: var(--borderground);
+}
+
+.relatedPosts .col-md-6 h5 {
+  margin-bottom: 0;
+}
+
+.egitim-promo-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.changelog-body {
+  padding: 1rem 1.25rem;
+}
+
+.changelog-list {
+  padding-left: 1.5rem;
+}
+
 

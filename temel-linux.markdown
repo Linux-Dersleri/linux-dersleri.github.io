@@ -26,7 +26,7 @@ author: Taylan Özgür Bildik
     <div class="no-gutters border rounded overflow-hidden mb-4 shadow-sm h-md-250 position-relative">
       <div class="row">
         <div class="col-sm-3 d-flex align-self-center justify-content-center ">
-          <img class="responsive ml-3" src="{{ site.url }}/egitim/{{ page.categories }}/{{ post.cover }}" alt="">
+          <img class="responsive ml-3" src="{{ site.url }}/egitim/{{ page.categories }}/{{ post.cover }}" alt="{{ post.title }} kapak görseli" loading="lazy">
         </div>
         <div class="col-sm-9 p-4">
           <div class="d-flex align-self-center justify-content-between">

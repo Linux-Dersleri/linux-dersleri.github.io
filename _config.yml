@@ -12,8 +12,6 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jekyll-toc
-  - kramdown
-  - jekyll-sitemap
 
 
 jekyll_timeago:
@@ -67,21 +65,21 @@ defaults:
     type: kaynaklar
   values:
     permalink: "/kaynaklar/:title/"
-    layout: title
+    layout: simple
     twitter:
 - scope:
     path: ''
     type: egitim
   values:
     permalink: "/egitim/:categories/:title/"
-    layout: title
+    layout: tutorial
     twitter:
 - scope:
     path: ''
     type: komut
   values:
     permalink: "/komut/:title/"
-    layout: title
+    layout: komut
     twitter:       
 
 # Turkish Month

@@ -2,6 +2,7 @@
 layout: simple
 title: Blog Paylaşımları
 excerpt: "Blog üzerinde paylaşılan tüm içeriklerin listesi."
+robots: noindex, follow
 search_omit: true
 ---
 

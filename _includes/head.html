@@ -1,34 +1,29 @@
 <meta charset="utf-8">
 <meta name="bizverify" content="verify=a906f9c49c161cbb11dbbf57a3fae1af">
 <link rel="icon" href="/data/img/logo.webp" type="image/svg+xml" />
-<!-- _includes/head.html veya _layouts/default.html -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
 
-<title>{% if page.title %}{{ page.title }} {% endif %}{{ page.coursetitle }} | Linux Dersleri</title>
-{% if page.excerpt %}<meta name="description" content="{{ page.excerpt | strip_html }}">{% endif %}
-{% if page.tags %}<meta name="keywords" content="{{ page.tags | join: ', ' }}">{% endif %}
-{% if page.author %}
-  {% assign author = site.data.authors[page.author] %}{% else %}{% assign author = site.owner %}
-{% endif %}
+{% include seo.html %}
+{% include structured-data.html %}
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-34XLKDXXD3"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-34XLKDXXD3');
 </script>
-{% if site.owner.google.verify %}<!-- Webmaster Tools verfication -->
-<meta name="google-site-verification" content="{{ site.owner.google.verify }}">{% endif %}
-{% if site.owner.bing-verify %}<meta name="msvalidate.01" content="{{ site.owner.bing-verify }}">{% endif %}
+{% if site.owner.google.verify %}
+<meta name="google-site-verification" content="{{ site.owner.google.verify }}">
+{% endif %}
+{% if site.owner.bing-verify %}
+<meta name="msvalidate.01" content="{{ site.owner.bing-verify }}">
+{% endif %}
 
-{% capture canonical %}{{ site.url }}{% if site.permalink contains '.html' %}{{ page.url }}{% else %}{{ page.url | remove:'index.html' | strip_slash }}{% endif %}{% endcapture %}
-
-<link rel="canonical" href="{{ canonical }}">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- For all browsers -->
 <link rel="stylesheet" href="{{ site.url }}/assets/css/font-awesome.min.css">
 <link rel="stylesheet" href="{{ site.url }}/assets/css/bootstrap.min.css">
 <link rel="stylesheet" href="{{ site.url }}/assets/css/style.css">

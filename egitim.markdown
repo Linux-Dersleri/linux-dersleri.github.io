@@ -19,7 +19,7 @@ search_omit: true
 	  <img src="{{ site.url }}/data/img/linux-doc.webp"/>
           <p class="card-text mb-auto">Temel Linux kullanımı için sıralı dokümanlar.</p>
 		  <p></p>
-          <a href="{{ site.url }}/temel-linux" class=" stretched-link"></a>
+          <a href="{{ site.url }}/temel-linux.html" class=" stretched-link"></a>
     </div>
     </div>
   </div>
@@ -46,7 +46,7 @@ search_omit: true
 	  <img src="{{ site.url }}/data/img/network-doc.webp"/>
           <p class="card-text mb-auto">Ağ temellerinin açıklandığı sıralı dokümanlar.</p>
 		  <p></p>
-          <a href="{{ site.url }}/temel-network" class=" stretched-link"></a>
+          <a href="{{ site.url }}/temel-network.html" class=" stretched-link"></a>
     </div>
     </div>
   </div>
@@ -73,7 +73,7 @@ search_omit: true
 	  <img src="{{ site.url }}/data/img/bash-script.png"/>
           <p class="card-text mb-auto">Kabuk programlama için sıralı dokümanlar.</p>
 		  <p></p>
-          <a href="{{ site.url }}/temel-network" class=" stretched-link"></a>
+          <a href="{{ site.url }}/temel-network.html" class=" stretched-link"></a>
     </div>
     </div>
   </div>

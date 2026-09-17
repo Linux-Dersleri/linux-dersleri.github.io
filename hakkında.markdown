@@ -3,7 +3,6 @@ sitemap: true
 layout: simple
 title: Hakkında
 excerpt: "Linux Dersleri Platformu Hakkında"
-search_omit: true
 ---
 
 
@@ -79,10 +78,12 @@ Linux Dersleri, <a href="https://www.linkedin.com/in/taylanbildik/">Taylan Özg�
       {% endif %}
     </a>
     <div class="collapse" id="collapse{{ forloop.index }}">
-      <div class="card card-body">
+      <div class="card card-body changelog-body">
+        <ul class="changelog-list mb-0">
         {% for change in entry.changes %}
           <li>{{ change }}</li>
         {% endfor %}
+        </ul>
       </div>
     </div>
   {% endfor %}

@@ -1,0 +1,24 @@
+{% unless page.url == '/' %}
+<nav aria-label="breadcrumb" class="site-breadcrumb mb-3">
+  <ol class="breadcrumb bg-transparent p-0 mb-0">
+    <li class="breadcrumb-item"><a href="{{ site.url }}/">Ana Sayfa</a></li>
+    {% if page.layout == 'tutorial' %}
+      <li class="breadcrumb-item"><a href="{{ site.url }}/egitim.html">Eğitimler</a></li>
+      {% if page.categories.first == 'temel-linux' %}
+        <li class="breadcrumb-item"><a href="{{ site.url }}/temel-linux.html">Temel Linux</a></li>
+      {% elsif page.categories.first == 'temel-network' %}
+        <li class="breadcrumb-item"><a href="{{ site.url }}/temel-network.html">Temel Network</a></li>
+      {% elsif page.categories.first == 'kabuk-programlama' %}
+        <li class="breadcrumb-item"><a href="{{ site.url }}/kabuk-programlama.html">Kabuk Programlama</a></li>
+      {% endif %}
+      <li class="breadcrumb-item active" aria-current="page">{{ page.title }}</li>
+    {% elsif page.layout == 'b-post' %}
+      <li class="breadcrumb-item"><a href="{{ site.url }}/blog/">Blog</a></li>
+      <li class="breadcrumb-item active" aria-current="page">{{ page.title }}</li>
+    {% elsif page.layout == 'komut' %}
+      <li class="breadcrumb-item"><a href="{{ site.url }}/komutlar/">Komutlar</a></li>
+      <li class="breadcrumb-item active" aria-current="page">{{ page.title }}</li>
+    {% endif %}
+  </ol>
+</nav>
+{% endunless %}

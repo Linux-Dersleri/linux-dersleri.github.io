@@ -5,65 +5,62 @@
 <div class="row mb-2">
   {% assign maxRelated = 4 %}
   {% assign minCommonTags = 2 %}
-  {% assign maxRelatedCounter = 0 %}
-  {% assign randomPosts = site.categories.blog | sample: maxRelated %}
-  {% assign suggestedPosts = '' %}
+  {% assign shownUrls = '|' %}
+  {% assign relatedCount = 0 %}
 
   {% for post in site.categories.blog %}
-    {% assign sameTagCount = 0 %}
-    {% assign commonTags = '' %}
+    {% if relatedCount >= maxRelated %}{% break %}{% endif %}
+    {% if post.url == page.url %}{% continue %}{% endif %}
 
+    {% assign url_marker = post.url | append: '|' %}
+    {% if shownUrls contains url_marker %}{% continue %}{% endif %}
+
+    {% assign sameTagCount = 0 %}
     {% for tag in post.tags %}
-      {% if post.url != page.url %}
-        {% if page.tags contains tag %}
-          {% assign sameTagCount = sameTagCount | plus: 1 %}
-          {% capture tagmarkup %}### <span class="label label-default">{{ tag }}</span>{% endcapture %}
-          {% assign commonTags = commonTags | append: tagmarkup %}
-        {% endif %}
+      {% if page.tags contains tag %}
+        {% assign sameTagCount = sameTagCount | plus: 1 %}
       {% endif %}
     {% endfor %}
 
     {% if sameTagCount >= minCommonTags %}
-      {% capture suggestedPost %}<h5><a href="{{ site.baseurl }}{{ post.url }}{:class=" stretched-link"}">{{ post.title }}</a></h5>{% endcapture %}
-      {% assign suggestedPosts = suggestedPosts | append: suggestedPost %}
-      {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
-      {% if maxRelatedCounter >= maxRelated %}
-        {% break %}
-      {% endif %}
+      <div class="col-md-6">
+        <div class="no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <h5>
+              <a href="{{ site.baseurl }}{{ post.url }}" class="stretched-link">{{ post.title }}</a>
+            </h5>
+          </div>
+        </div>
+      </div>
+      {% assign shownUrls = shownUrls | append: url_marker %}
+      {% assign relatedCount = relatedCount | plus: 1 %}
     {% endif %}
   {% endfor %}
 
-  {% if suggestedPosts != '' %}
-  <div class="col-md-6">
-    <div class="no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-      <div class="col p-4 d-flex flex-column position-static">
-        <a href="{{ site.baseurl }}{{ post.url }}" class="stretched-link">
-          {{ suggestedPosts }}
-        </a>
-      </div>
-    </div>
-  </div>
-{% endif %}
+  {% if relatedCount < maxRelated %}
+    {% assign remaining = maxRelated | minus: relatedCount %}
+    {% assign randomAdded = 0 %}
+    {% assign randomCandidates = site.categories.blog | where_exp: "item", "item.url != page.url" | sample: 30 %}
 
-{% assign remainingRelated = maxRelated - maxRelatedCounter %}
+    {% for post in randomCandidates %}
+      {% if randomAdded >= remaining %}{% break %}{% endif %}
 
-{% if remainingRelated > 0 %}
-  {% assign randomPosts = randomPosts | where_exp: "post", "post.url != page.url" %}
-  {% assign randomPosts = randomPosts | sample: remainingRelated %}
+      {% assign url_marker = post.url | append: '|' %}
+      {% if shownUrls contains url_marker %}{% continue %}{% endif %}
 
-  {% for post in randomPosts %}
-    <div class="col-md-6">
-      <div class="no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-        <div class="col p-4 d-flex flex-column position-static">
-          <h5>
-            <a href="{{ site.baseurl }}{{ post.url }}" class="stretched-link">{{ post.title }}</a>
-          </h5>
+      <div class="col-md-6">
+        <div class="no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <h5>
+              <a href="{{ site.baseurl }}{{ post.url }}" class="stretched-link">{{ post.title }}</a>
+            </h5>
+          </div>
         </div>
       </div>
-    </div>
-  {% endfor %}
-{% endif %}
-
+      {% assign shownUrls = shownUrls | append: url_marker %}
+      {% assign randomAdded = randomAdded | plus: 1 %}
+    {% endfor %}
+  {% endif %}
 </div>
 
 </div>

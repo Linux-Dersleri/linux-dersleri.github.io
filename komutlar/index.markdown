@@ -2,6 +2,7 @@
 layout: simple
 title: Linux Komutları Listesi
 excerpt: "Linux üzerinde sık kullanılan komutların listesi ve açıklama sayfaları."
+robots: noindex, follow
 search_omit: true
 ---
 

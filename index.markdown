@@ -1,28 +1,32 @@
 ---
 sitemap: true
 layout: simple
-title: Video Doküman Blog Komutlar Test
-excerpt: "Linux Dersleri Ana Sayfası"
+title: Linux Dersleri
+description: "GNU/Linux için Türkçe eğitim, blog, komut listesi ve bilgi testleri. Temel Linux, ağ ve kabuk programlama içerikleriyle sıfırdan öğrenin."
+excerpt: "GNU/Linux için Türkçe eğitim, blog, komut listesi ve bilgi testleri. Temel Linux, ağ ve kabuk programlama içerikleriyle sıfırdan öğrenin."
 search_omit: true
 ---
 
+<h1 class="text-primary">Linux Dersleri</h1>
+<p>GNU/Linux için Türkçe doküman, blog yazıları, komut listesi ve bilgi testleri sunan bir platformdur. Temel Linux kullanımından ağ temellerine kadar sıralı eğitim içerikleriyle sıfırdan öğrenmeye başlayabilirsiniz.</p>
+
 <div class="row mb-2">
 <div class="col-md-6">
-	<h1 class="text-primary">Eğitimler</h1>
+	<h2 class="text-primary">Eğitimler</h2>
 
-      <div class="no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+      <div class="no-gutters border rounded overflow-hidden mb-4 shadow-sm position-relative">
         <div class="col p-4 d-flex flex-column position-static">
-		<img src="{{ site.url }}/data/img/video-egitim.webp"/>
+		<img src="{{ site.url }}/data/img/video-egitim.webp" alt="Linux video eğitim kapak görseli" width="1546" height="690" class="img-fluid egitim-promo-img" loading="lazy"/>
     <p></p>
           <p class="card-text mb-auto">Temel Linux kullanımı için eğitim içerikleri.</p>
-          <a href="{{ site.url }}/egitim" class=" stretched-link"></a>
+          <a href="{{ site.url }}/egitim.html" class=" stretched-link"></a>
         </div>
         </div>
 <p></p>
     </div>
 	<div class="col-md-6">
 
-	<h1 class="text-primary">Blog</h1>
+	<h2 class="text-primary">Blog</h2>
   <p></p>
   <div id="post-list">
   {% for post in site.categories.blog limit:2 %}
@@ -70,7 +74,7 @@ search_omit: true
     </div>
 <div class="row">
     <div class="col-md-6">
-    <h1 class="text-primary">Komut Listesi</h1>
+    <h2 class="text-primary">Komut Listesi</h2>
       <div>
 	  
         {% include komut-listesi.html %}
@@ -80,7 +84,7 @@ search_omit: true
     </div>
   
   <div class="col-md-6">
-  <h1 class="text-primary">Bilgi Testi</h1>
+  <h2 class="text-primary">Bilgi Testi</h2>
       <div>
 	  
          {% include random-question.html %}
@@ -90,4 +94,3 @@ search_omit: true
     </div>
   
     </div>
-  

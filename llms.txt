@@ -1,0 +1,18 @@
+# Linux Dersleri
+
+> GNU/Linux için Türkçe eğitim, blog ve komut rehberi.
+
+## Ana Bölümler
+
+- Ana sayfa: https://www.linuxdersleri.net/
+- Eğitimler: https://www.linuxdersleri.net/egitim.html
+- Temel Linux eğitimi: https://www.linuxdersleri.net/temel-linux.html
+- Temel Network eğitimi: https://www.linuxdersleri.net/temel-network.html
+- Blog: https://www.linuxdersleri.net/blog/
+- Komut listesi: https://www.linuxdersleri.net/komutlar/
+- S.S.S.: https://www.linuxdersleri.net/sıkca-sorulan-sorular.html
+
+## İletişim
+
+- E-posta: info@linuxdersleri.net
+- Geri bildirim: https://www.linuxdersleri.net/bildirim.html
