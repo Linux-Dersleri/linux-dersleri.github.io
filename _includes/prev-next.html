@@ -30,7 +30,7 @@
               <p class="card-text">{{ previous_post.title }}</p>
             </div>
           </div>
-          <a href="{{ site.url }}{{ previous_post.url }}" title="{{ previous_post.title }}" class="stretched-link"></a>
+          <a href="{{ site.url }}{{ previous_post.url }}" class="stretched-link"><span class="sr-only">Önceki: {{ previous_post.title }}</span></a>
         </div>
       </div>
     </div>
@@ -53,7 +53,7 @@
               </svg>
             </div>
           </div>
-          <a href="{{ site.url }}{{ next_post.url }}" title="{{ next_post.title }}" class="stretched-link"></a>
+          <a href="{{ site.url }}{{ next_post.url }}" class="stretched-link"><span class="sr-only">Sonraki: {{ next_post.title }}</span></a>
         </div>
       </div>
     </div>

@@ -19,7 +19,7 @@ search_omit: true
 	  <img src="{{ site.url }}/data/img/linux-doc.webp"/>
           <p class="card-text mb-auto">Temel Linux kullanımı için sıralı dokümanlar.</p>
 		  <p></p>
-          <a href="{{ site.url }}/temel-linux.html" class=" stretched-link"></a>
+          <a href="{{ site.url }}/temel-linux.html" class="stretched-link"><span class="sr-only">Temel Linux sıralı dokümanlar</span></a>
     </div>
     </div>
   </div>
@@ -29,7 +29,7 @@ search_omit: true
 			<p class="mavi text-primary">Video Eğitim</p>
 		<img src="{{ site.url }}/data/img/video-egitim.webp"/>
           <p class="card-text mb-auto">Temel Linux kullanımı için video, doküman ve testleri barından Udemy eğitimi.</p>
-          <a href="{{ site.url }}/kurs" class=" stretched-link"></a>
+          <a href="{{ site.url }}/kurs" class="stretched-link"><span class="sr-only">Temel Linux video eğitimi</span></a>
       </div>
       </div>
   </div>
@@ -46,7 +46,7 @@ search_omit: true
 	  <img src="{{ site.url }}/data/img/network-doc.webp"/>
           <p class="card-text mb-auto">Ağ temellerinin açıklandığı sıralı dokümanlar.</p>
 		  <p></p>
-          <a href="{{ site.url }}/temel-network.html" class=" stretched-link"></a>
+          <a href="{{ site.url }}/temel-network.html" class="stretched-link"><span class="sr-only">Ağ temelleri sıralı dokümanlar</span></a>
     </div>
     </div>
   </div>
@@ -56,7 +56,7 @@ search_omit: true
 			<p class="mavi text-primary">Video Eğitim</p>
 		<img src="{{ site.url }}/data/img/network-video.webp"/>
           <p class="card-text mb-auto">Ağ temellerinin ele alındığı video eğitim.</p>
-          <a href="https://www.youtube.com/playlist?list=PLe-saRM3WlvNJFG4DfwYzTL9P20M6DPHj" target="_blank" class="stretched-link"></a>
+          <a href="https://www.youtube.com/playlist?list=PLe-saRM3WlvNJFG4DfwYzTL9P20M6DPHj" target="_blank" class="stretched-link"><span class="sr-only">Ağ temelleri video eğitimi</span></a>
       </div>
       </div>
   </div>
@@ -73,7 +73,7 @@ search_omit: true
 	  <img src="{{ site.url }}/data/img/bash-script.png"/>
           <p class="card-text mb-auto">Kabuk programlama için sıralı dokümanlar.</p>
 		  <p></p>
-          <a href="{{ site.url }}/temel-network.html" class=" stretched-link"></a>
+          <a href="{{ site.url }}/temel-network.html" class="stretched-link"><span class="sr-only">Kabuk programlama sıralı dokümanlar</span></a>
     </div>
     </div>
   </div>

@@ -45,7 +45,7 @@ author: Taylan Özgür Bildik
       <div class="progress">
             <div class="progress-bar" role="progressbar"></div> <!-- Progress bar element -->
           </div>
-          <a href="{{ site.url }}{{ post.url }}" class="stretched-link"></a>
+          <a href="{{ site.url }}{{ post.url }}" class="stretched-link"><span class="sr-only">{{ post.title }}</span></a>
     </div>
   </div>
 {% endfor %}

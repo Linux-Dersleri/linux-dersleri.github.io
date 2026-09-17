@@ -19,7 +19,7 @@ search_omit: true
 		<img src="/data/img/video-egitim-980.webp" srcset="/data/img/video-egitim-490.webp 490w, /data/img/video-egitim-980.webp 980w" sizes="(max-width: 768px) 100vw, 50vw" alt="Linux video eğitim kapak görseli" width="980" height="437" class="img-fluid egitim-promo-img" fetchpriority="high"/>
     <p></p>
           <p class="card-text mb-auto">Temel Linux kullanımı için eğitim içerikleri.</p>
-          <a href="{{ site.url }}/egitim.html" class=" stretched-link"></a>
+          <a href="{{ site.url }}/egitim.html" class="stretched-link"><span class="sr-only">Eğitimler: Temel Linux kullanımı için eğitim içerikleri</span></a>
         </div>
         </div>
 <p></p>

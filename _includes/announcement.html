@@ -6,7 +6,7 @@
     {% if current_date >= start_date and current_date <= end_date %}
         {% if announcement.limited %}
             <p class="yesil text-center text-success">{{ announcement.content }} <br> <a id="countdown_{{ forloop.index }}"></a>
-                <a href="{{ announcement.link }}" class="stretched-link"></a>
+                <a href="{{ announcement.link }}" class="stretched-link"><span class="sr-only">{{ announcement.content | strip_html }}</span></a>
             </p>
 
             <script>
@@ -44,7 +44,7 @@
             </script>
         {% else %}
             <p class="yesil text-center text-success">{{ announcement.content }}
-                <a href="{{ announcement.link }}" class="stretched-link"></a>
+                <a href="{{ announcement.link }}" class="stretched-link"><span class="sr-only">{{ announcement.content | strip_html }}</span></a>
             </p>
         {% endif %}
     {% endif %}

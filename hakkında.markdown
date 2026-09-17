@@ -33,7 +33,7 @@ Linux Dersleri, <a href="https://www.linkedin.com/in/taylanbildik/">Taylan Özg�
 </svg>
 </div>
 		  <p>Github Kaynağı</p>
-          <a target="_blank" href="https://github.com/Linux-Dersleri/linux-dersleri.github.io" class="stretched-link"></a>
+          <a target="_blank" href="https://github.com/Linux-Dersleri/linux-dersleri.github.io" class="stretched-link"><span class="sr-only">Github Kaynağı</span></a>
 			
         </div>
         
@@ -48,7 +48,7 @@ Linux Dersleri, <a href="https://www.linkedin.com/in/taylanbildik/">Taylan Özg�
 </svg>
             
             </div><p>Android Uygulaması</p>
-          <a target="_blank" href="https://play.google.com/store/apps/details?id=com.bildik.linuxdersleri" class="stretched-link"></a>
+          <a target="_blank" href="https://play.google.com/store/apps/details?id=com.bildik.linuxdersleri" class="stretched-link"><span class="sr-only">Android Uygulaması</span></a>
 			
         </div>
         
