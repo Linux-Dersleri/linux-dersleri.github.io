@@ -62,12 +62,6 @@ search_omit: true
   <script>
   var questions = []; // Initialize an empty array for questions
 
-fetch("{{ site.url }}/data/questions/questions.json")// Replace "abc.json" with the actual path to your JSON file
-  .then(response => response.json()) // Parse the JSON response
-  .then(data => {
-    // Store the loaded questions in the 'questions' variable
-    questions = data;
-  })
   var currentQuestion = 0;
   var trueCount = 0;
   var falseCount = 0;
@@ -76,7 +70,19 @@ fetch("{{ site.url }}/data/questions/questions.json")// Replace "abc.json" with 
 
   var cachedState = localStorage.getItem("quizState");
 
+ function loadQuestions() {
+    return fetch("{{ site.url }}/data/questions/questions.json")
+      .then(response => response.json())
+      .then(data => {
+        questions = data;
+      });
+  }
+
  function startQuiz() {
+  if (questions.length === 0) {
+    loadQuestions().then(startQuiz);
+    return;
+  }
   if (cachedState) {
     // Show the "Continue from where you left off" message
     document.getElementById("info-text").innerHTML =
@@ -115,7 +121,8 @@ fetch("{{ site.url }}/data/questions/questions.json")// Replace "abc.json" with 
   optionsElement.innerHTML = '';
 
   currentQuestionObj.options.forEach(function(option) {
-    var listItem = document.createElement("a");
+    var listItem = document.createElement("button");
+    listItem.type = "button";
     listItem.textContent = option;
     listItem.className = "list-group-item list-group-item-action";
     listItem.addEventListener("click", function() {

@@ -3,7 +3,7 @@
 	
   <div class="collapse navbar-collapse">
     <a class="navbar-brand active" href="{{ site.url }}/">
-      <img src="{{ site.url }}/data/img/logo.webp" width="30" height="30" class="align-top" alt="Linux Dersleri">
+      <img src="/data/img/logo-64.webp" width="28" height="30" class="align-top" alt="">
       Linux Dersleri
     </a>
     <ul class="navbar-nav">
@@ -32,28 +32,26 @@
 	
   </div>
  
-<a class="btn" data-toggle="modal" data-target="#searchModal"><i class="fa fa-search nav-icon-sm" aria-hidden="true"></i></a>
-	<a onclick="tema()" class="btn" ><i class="fa fa-adjust fa-lg"></i></a> 
-	<a href="{{ site.url }}/bildirim.html" class="btn" ><i class="fa fa-paper-plane"></i></a> 
+<button type="button" class="btn" data-toggle="modal" data-target="#searchModal" aria-label="Ara"><i class="fa fa-search nav-icon-sm" aria-hidden="true"></i></button>
+	<button type="button" class="btn" onclick="tema()" aria-label="Tema değiştir"><i class="fa fa-adjust fa-lg" aria-hidden="true"></i></button>
+	<a href="{{ site.url }}/bildirim.html" class="btn" aria-label="Geri bildirim"><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
 </nav>	
 <nav class="navbar y-navbar sticky-top navbar-expand-lg navbar-light bg-light border-bottom">
-<button class="btn"  data-toggle="canvas" data-target="#bs-canvas-left" aria-expanded="false" aria-controls="bs-canvas-left"><i class="fa fa-align-justify fa-lg"></i></button>
-		<a href="{{ site.url }}/" class="btn"  ><i class="fa fa-home fa-lg"></i></a>     
-	<a class="btn" data-toggle="modal" data-target="#searchModal"><i class="fa fa-search nav-icon-sm" aria-hidden="true"></i></a>
-		
-		<a onclick="tema()" class="btn" ><i class="fa fa-adjust fa-lg"></i></a> 
-		<a href="{{ site.url }}/bildirim.html" class="btn" ><i class="fa fa-paper-plane"></i></a> 
-		
+<button type="button" class="btn" data-toggle="canvas" data-target="#bs-canvas-left" aria-expanded="false" aria-controls="bs-canvas-left" aria-label="Menü"><i class="fa fa-align-justify fa-lg" aria-hidden="true"></i></button>
+		<a href="{{ site.url }}/" class="btn" aria-label="Ana sayfa"><i class="fa fa-home fa-lg" aria-hidden="true"></i></a>
+	<button type="button" class="btn" data-toggle="modal" data-target="#searchModal" aria-label="Ara"><i class="fa fa-search nav-icon-sm" aria-hidden="true"></i></button>
+		<button type="button" class="btn" onclick="tema()" aria-label="Tema değiştir"><i class="fa fa-adjust fa-lg" aria-hidden="true"></i></button>
+		<a href="{{ site.url }}/bildirim.html" class="btn" aria-label="Geri bildirim"><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
 </nav>
 
 <div id="bs-canvas-left" class="bs-canvas bs-canvas-anim bs-canvas-left position-fixed h-100" >
    <div class="container">
     
-      <a class="btn bs-canvas-close close" aria-label="Close">
+      <button type="button" class="btn bs-canvas-close close" aria-label="Menüyü kapat">
         <span aria-hidden="true">&times;</span>
-      </a>
+      </button>
       <a class="navbar-brand" href="{{ site.url }}/">
-        <img src="{{ site.url }}/data/img/logo.webp" width="30" height="30" class="align-top" alt="Linux Dersleri">
+        <img src="/data/img/logo-64.webp" width="28" height="30" class="align-top" alt="">
         Linux Dersleri
       </a>
   
@@ -71,7 +69,7 @@
   <hr>
   
   <div align="center">
- <p class="h6"><a href="{{ site.url }}/">Linux Dersleri</a> | <a target="_blank" href="https://github.com/Linux-Dersleri/linux-dersleri.github.io"><i class="fa fa-github fa-lg"></i></a></p>
+ <p class="h6"><a href="{{ site.url }}/">Linux Dersleri</a> | <a target="_blank" href="https://github.com/Linux-Dersleri/linux-dersleri.github.io" aria-label="GitHub"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a></p>
  <p class="small">GNU/Linux için Türkçe içerik sağlamak üzere kurulmuş bir platformdur.</p>
 
 	  </div>

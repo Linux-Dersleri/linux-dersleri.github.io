@@ -15,8 +15,7 @@
             <p></p>
             <ul id="myUL" class="list-unstyled ">
                 {% for post in site.komut | sort: 'title'%}
-                    <li ><a href="{{ site.url }}{{ post.url }}"><span class="mavi text-primary small "> {{ post.title }}</span></a></li>
-                    <p></p>
+                    <li><a href="{{ site.url }}{{ post.url }}"><span class="mavi text-primary small "> {{ post.title }}</span></a></li>
                 {% endfor %}
             </ul>
             <button class="btn btn-outline-primary mavi" id="showMoreButton" onclick="showMore()">Tümünü listele..</button>

@@ -16,7 +16,7 @@ search_omit: true
 
       <div class="no-gutters border rounded overflow-hidden mb-4 shadow-sm position-relative">
         <div class="col p-4 d-flex flex-column position-static">
-		<img src="{{ site.url }}/data/img/video-egitim.webp" alt="Linux video eğitim kapak görseli" width="1546" height="690" class="img-fluid egitim-promo-img" loading="lazy"/>
+		<img src="/data/img/video-egitim-980.webp" srcset="/data/img/video-egitim-490.webp 490w, /data/img/video-egitim-980.webp 980w" sizes="(max-width: 768px) 100vw, 50vw" alt="Linux video eğitim kapak görseli" width="980" height="437" class="img-fluid egitim-promo-img" fetchpriority="high"/>
     <p></p>
           <p class="card-text mb-auto">Temel Linux kullanımı için eğitim içerikleri.</p>
           <a href="{{ site.url }}/egitim.html" class=" stretched-link"></a>
@@ -31,9 +31,9 @@ search_omit: true
   <div id="post-list">
   {% for post in site.categories.blog limit:2 %}
   <div class="post-preview">
-    <h4>
+    <h3>
       <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
-    </h4>
+    </h3>
     <div class="post-content">
       <p>
       {% assign _content = post.content %}

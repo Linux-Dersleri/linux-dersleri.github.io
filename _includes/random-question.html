@@ -29,18 +29,24 @@
 
 
   <script>
-  var questions = []; // Initialize an empty array for questions
+  var questions = [];
 
-  fetch("{{ site.url }}/data/questions/questions.json")/// Replace "abc.json" with the actual path to your JSON file
-  .then(response => response.json()) // Parse the JSON response
-  .then(data => {
-    // Shuffle the array of questions
-    var shuffledQuestions = shuffle(data);
-    // Select the first 5 questions
-    questions = shuffledQuestions.slice(0, 5);
-    startQuiz(); // Call the function to start the quiz once the questions are loaded
-  })
-  .catch(error => console.error(error));
+  function loadQuestions() {
+    fetch("{{ site.url }}/data/questions/questions.json")
+    .then(response => response.json())
+    .then(data => {
+      var shuffledQuestions = shuffle(data);
+      questions = shuffledQuestions.slice(0, 5);
+      startQuiz();
+    })
+    .catch(error => console.error(error));
+  }
+
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(loadQuestions, { timeout: 3000 });
+  } else {
+    window.addEventListener('load', loadQuestions);
+  }
 
 // Function to shuffle an array using the Fisher-Yates algorithm
 function shuffle(array) {
@@ -88,7 +94,8 @@ function showQuestion() {
   optionsElement.innerHTML = '';
 
   currentQuestionObj.options.forEach(function(option) {
-    var listItem = document.createElement("a");
+    var listItem = document.createElement("button");
+    listItem.type = "button";
     listItem.textContent = option;
     listItem.className = "list-group-item list-group-item-action";
     listItem.addEventListener("click", function() {

@@ -99,7 +99,8 @@ function showQuestion() {
   optionsElement.innerHTML = '';
 
   currentQuestionObj.options.forEach(function(option) {
-    var listItem = document.createElement("a");
+    var listItem = document.createElement("button");
+    listItem.type = "button";
     listItem.textContent = option;
     listItem.className = "list-group-item list-group-item-action";
     listItem.addEventListener("click", function() {

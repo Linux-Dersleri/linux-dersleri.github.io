@@ -1,18 +1,18 @@
 # Linux Dersleri
 
-> GNU/Linux için Türkçe eğitim, blog ve komut rehberi.
+> GNU/Linux için Türkçe eğitim, blog, komut rehberi ve bilgi testleri sunan bir platform.
 
 ## Ana Bölümler
 
-- Ana sayfa: https://www.linuxdersleri.net/
-- Eğitimler: https://www.linuxdersleri.net/egitim.html
-- Temel Linux eğitimi: https://www.linuxdersleri.net/temel-linux.html
-- Temel Network eğitimi: https://www.linuxdersleri.net/temel-network.html
-- Blog: https://www.linuxdersleri.net/blog/
-- Komut listesi: https://www.linuxdersleri.net/komutlar/
-- S.S.S.: https://www.linuxdersleri.net/sıkca-sorulan-sorular.html
+- [Ana sayfa](https://www.linuxdersleri.net/): Platform girişi ve öne çıkan içerikler
+- [Eğitimler](https://www.linuxdersleri.net/egitim.html): Video ve yazılı eğitim serileri
+- [Temel Linux eğitimi](https://www.linuxdersleri.net/temel-linux.html): Sıfırdan Linux kullanımı
+- [Temel Network eğitimi](https://www.linuxdersleri.net/temel-network.html): Ağ temelleri
+- [Blog](https://www.linuxdersleri.net/blog/): GNU/Linux ve güvenlik yazıları
+- [Komut listesi](https://www.linuxdersleri.net/komutlar/): Komut açıklamaları ve örnekleri
+- [S.S.S.](https://www.linuxdersleri.net/sıkca-sorulan-sorular.html): Sıkça sorulan sorular
 
 ## İletişim
 
 - E-posta: info@linuxdersleri.net
-- Geri bildirim: https://www.linuxdersleri.net/bildirim.html
+- [Geri bildirim](https://www.linuxdersleri.net/bildirim.html): Hata bildirimi ve öneriler
