@@ -642,7 +642,7 @@ Bakın eşleşmiş olan satırlar hangi dosyada bulundukları da belirtilerek fi
 
 ## Özyinelemeli Araştırma
 
-Örnek olarak “***/etc/***” dizini içinde, içinde “bashrc” ifadesi geçen tüm dosyaları filtrelemeyi deneyebiliriz. Bunun için `grep -r “bashrc” /etc/ 2> /dev/null` şeklinde komutumu giriyorum. Buradaki `-r` seçeneği benim hedef gösterdiğim bu dizinden başlayıp tüm alt dizinler de dahil olmak üzere tüm dosyalarda “test” ifadesinin geçtiği yerleri filtreleyip bana sunacak. Ayrıca yetki gibi nedenlerle oluşacak olan hatalı çıktıları yok etmek için `2> /dev/null` komutunu da ekledim.
+Örnek olarak “***/etc/***” dizini içinde, içinde “bashrc” ifadesi geçen tüm dosyaları filtrelemeyi deneyebiliriz. Bunun için `grep -r “bashrc” /etc/ 2> /dev/null` şeklinde komutumu giriyorum. Buradaki `-r` seçeneği benim hedef gösterdiğim bu dizinden başlayıp tüm alt dizinler de dahil olmak üzere tüm dosyalarda “bashrc” ifadesinin geçtiği yerleri filtreleyip bana sunacak. Ayrıca yetki gibi nedenlerle oluşacak olan hatalı çıktıları yok etmek için `2> /dev/null` komutunu da ekledim.
 
 ```bash
 ┌──(taylan@linuxdersleri)-[~]
@@ -812,6 +812,8 @@ Dilersek verileri aşamalı olarak filtreleyip istediğimiz nihai verilere ulaş
 Örneğin ben /var/log/user.log dosyasında "kali" ve “error” ifadelerinin geçtiği satırları filtrelemek istiyorum. Eğer komutumu `cat /var/log/user.log | grep “kali”` şeklinde girecek olursam yalnızca “kali” ifadesinin geçtiği satırlar getirilecek. 
 
 ![25.webp]({{ site.url }}/egitim/temel-linux/metin/25.webp){:class="responsive img-zoomable"}
+
+**Not:** Eğer `grep:(standard input): binary file matches` hatası veriyorsa dosya içeriğindeki bozulma veya `\0` gibi karakterler dolayısıyla bunları binary dosya olarak ele almaya çalıştığı için olabilir. Bu durumda sorunsuz okuma için `grep -a "aranacak-ifade"` şeklinde kullanım ile binary kontrolünü devredışı bırakabilirsiniz. 
 
 Ama ben hem “kali” hem de küçük büyük harf fark etmeksizin “error” ifadesinin geçtiği satırları filtrelemek istiyorum. Bunun için bir önceki komutumuza bir `grep` filtresi daha ekleyebiliriz.
 
