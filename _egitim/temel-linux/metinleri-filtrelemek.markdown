@@ -1583,7 +1583,7 @@ Eğer buradaki “`*.webp`” ifadesi wildcards olarak ele alınmıyor olsaydı 
 
 ```bash
 ┌──(taylan@linuxdersleri)-[~]
-└─$ find -name "*.webp" 
+└─$ find -regex "*.webp" 
 
 ┌──(taylan@linuxdersleri)-[~]
 └─$
