@@ -24,7 +24,7 @@ Bir grup dosya veya klasörü tek bir arşiv dosyası içerisinde toparlamaya "a
 Komut satırı üzerinden arşivler üzerinde çalışmak için kullandığımız `tar` aracının ismi "**T**ape **AR**chive" ifadesinden geliyor. İsmi şu an size garip gelmiş olabilir ancak bu araç manyetik bantlar için arşiv oluşturmak üzere geliştirildiği için bu isim verilmiş. Bu ifadeyi arama motorunun görseller bölümünde arattığınızda manyetik bantların depolandığı pek çok arşiv odası resmi karşınıza çıkacaktır. 
 
 ![tape archive]({{ site.url }}/egitim/temel-linux/arsiv/tape_archive.webp){:class="responsive img-zoomable"}
-[Resim Kaynağı](https://commons.wikimedia.org/wiki/File:Video_tape_archive_%286498650083%29.webp){:target="_blank"}
+[Resim Kaynağı](https://commons.wikimedia.org/wiki/File:Video_tape_archive_%286498650083%29.jpg){:target="_blank"}
 
 Zaten aracımızın ismi de buradan geliyor. Akılda kalıcı olması için isminden bahsetmek istedim ancak isminin nerden geldiği çok da önemli değil. Neticede `tar` aracını kullanarak arşivler oluşturabiliyoruz.
 
@@ -82,7 +82,7 @@ linux-dersleri  linux-dersleri.tar
 
 Belki burada arşiv dosyasının isminin sonuna eklediğim “**.tar**” uzantısının şart olup olmadığı kafanıza takılmıştır. Dosya isminin sonuna eklemiş olduğum “**.tar**” uzantısı, `tar` aracının standart arşiv uzantısı. Bu uzantıyı kullanmak zorunda değilsiniz ancak sistem üzerinde arşiv dosyalarınızı ayırt edici kılmak için mutlaka bu dosya uzantısını da ismine eklemenizi tavsiye ederim. Dosya uzantısını eklemesiniz de arşiv dosyası olarak kullanabilirsiniz ancak daha sonra dosyaları listelediğinizde “**.tar**” uzantısı sayesinde arşiv dosyasını ayırt etmeniz daha kolay olur. Zaten benzeri durumdan, kabuk genişletmeleri bölümünde bahsetmiştik. Düzenli sistem yönetimi için bu tip detaylar önemli. Örneğin sonu “**.tar**” ile biten dosyaları listele diyerek, tüm `tar` arşivlerini bir çırpıda listeleyebileceğinizi düşünün. Tamamdır bence girdiğimiz komutu yeterince açıkladık. 
 
-Şimdi orijinal klasör ile bu arşivin boyutunu kıyaslayabilmek adına `du -hs linux-dersler*` şeklinde komutumuzu girelim. 
+Şimdi orijinal klasör ile bu arşivin boyutunu kıyaslayabilmek adına `du -hs linux-dersleri*` şeklinde komutumuzu girelim. 
 
 ```bash
 ┌──(taylan㉿linuxdersleri)-[~/Downloads]
@@ -182,7 +182,7 @@ Aldığımız çıktıların en başına gelecek olursak, en başta arşivlemek 
 
 ## Arşiv İçeriğini Görüntülemek
 
-Arşiv dosyasının içeriğini, arşiv dosyasını dışarı çıkarmadan görüntülemek için `tar` komutunun `t` seçeneğini kullanabiliriz. Arşiv dosyasının ismini yazacağımız için ayrıca `f` seçeneğini de kullanmamız gerekiyor yoksa komut başarısız olacak. Hemen denemek için ilk oluşturduğum “***linux-dersler.tar**”* arşiv dosyasını okumak üzere `tar -t linux-dersleri.tar` şeklinde komutumu giriyorum.
+Arşiv dosyasının içeriğini, arşiv dosyasını dışarı çıkarmadan görüntülemek için `tar` komutunun `t` seçeneğini kullanabiliriz. Arşiv dosyasının ismini yazacağımız için ayrıca `f` seçeneğini de kullanmamız gerekiyor yoksa komut başarısız olacak. Hemen denemek için ilk oluşturduğum “***linux-dersleri.tar***” arşiv dosyasını okumak üzere `tar -t linux-dersleri.tar` şeklinde komutumu giriyorum.
 
 ```bash
 ┌──(taylan㉿linuxdersleri)-[~/Downloads]
@@ -368,7 +368,7 @@ Fakat örneğimizden önce, karıştırmamak için “linux-dersleri” isimli k
 
 Hangi dosyaları çıkarmak istediğinize karar vermek için öncelikle `t` seçeneği ile arşiv dosyasının içeriğini listeleyebilirsiniz. Ben örnek olması için yalnızca “***index.markdown***” dosyasını, “***css***” dizini altındaki “***style.css***” dosyasını ve “***js***” klasörünün tamamını dışarı çıkarmak istiyorum. Bunun için bu dosyaların arşiv dosyası içerisindeki tam konumunu belirtmem yeterli. Yani örneğin “***index.markdown***” dosyasını çıkarmak için “***linux-dersleri***” klasörünü de belirtmem gerekiyor çünkü dışarı çıkarmak istediğim bu dosya, arşiv içinde tam olarak bu dizin atlında tutuluyor. Benzer şekilde diğer tüm dosyalar da benim arşivimde alt klasörlerde tutuluyorlar.
 
-Örneğin tam dizin adresi belirtmeden `tar -xf linux-dersler.tar index.markdown /js /css/style.css` şeklinde komut girersek başarısız olacağız. Emin olmak için hemen deneyelim. 
+Örneğin tam dizin adresi belirtmeden `tar -xf linux-dersleri.tar index.markdown /js /css/style.css` şeklinde komut girersek başarısız olacağız. Emin olmak için hemen deneyelim. 
 
 ```bash
 ┌──(taylan㉿linuxdersleri)-[~/Downloads]
@@ -803,7 +803,7 @@ sys     0m0.962s
 
 Son olarak da **gzip** algoritması için en yüksek sıkıştırmayı uygulayan ama yavaş olan -9 seviyeyi deneyelim.  
 
-`time gzip -9 -c linux-dersleri.tar.gz > en-cok.tar.gz`
+`time gzip -9 -c linux-dersleri.tar > en-cok.tar.gz`
 
 ```bash
 ┌──(taylan㉿linuxdersleri)-[/tmp]
