@@ -93,7 +93,7 @@ Routing table sayesinde routerlar ağların adreslerini biliyorken, ARP tablosu 
 
 Özetle routerların her birinin kaydını tuttuğu, Routing ve ARP tabloları sayesinde ağlar arasında veri yönlendirilmesi mümkün oluyor. 
 
-En nihayetinde bizim basit örnekler üzerinden ele aldığımız bu yaklaşımı elbette istediğiniz ölçüde genişletip aynı şekilde veri aktarımı yapabilirsiniz. Örneğin internet dediğimiz geniş ağ(WAN) da aslında bir çok routerın birleşiminden başka bir yapı değil. Yani internet geneli için de benzer yaklaşım söz konusu.
+En nihayetinde bizim basit örnekler üzerinden ele aldığımız bu yaklaşımı elbette istediğiniz ölçüde genişletip aynı şekilde veri aktarımı yapabilirsiniz. Örneğin internet dediğimiz geniş ağ(WAN) da aslında birçok routerın birleşiminden başka bir yapı değil. Yani internet geneli için de benzer yaklaşım söz konusu.
 
 ![INTERNET.webp]({{ site.url }}/egitim/temel-network/router/INTERNET.webp){:class="responsive img-zoomable"}
 

@@ -94,7 +94,7 @@ yeni değer
 
 Ve gördüğünüz gibi değişken başarılı şekilde tanımlanmış bulunuyor.
 
-Tekrar belirtmiş olalım, hatalı bir kullanıma yol açmamak adına değişken tanımlarken **alt tire işareti haricinde hiç bir sembol kullanmayın**. Yani **yeni+yeni**..**yeni#yeni**..**yeni@yeni** vb tüm kullanımlar hatalıdır.
+Tekrar belirtmiş olalım, hatalı bir kullanıma yol açmamak adına değişken tanımlarken **alt tire işareti haricinde hiçbir sembol kullanmayın**. Yani **yeni+yeni**..**yeni#yeni**..**yeni@yeni** vb tüm kullanımlar hatalıdır.
 
 ```bash
 ┌──(taylan㉿linuxdersleri)-[~]
