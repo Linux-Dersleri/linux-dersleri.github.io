@@ -24,7 +24,7 @@ Bir grup dosya veya klasörü tek bir arşiv dosyası içerisinde toparlamaya "a
 Komut satırı üzerinden arşivler üzerinde çalışmak için kullandığımız `tar` aracının ismi "**T**ape **AR**chive" ifadesinden geliyor. İsmi şu an size garip gelmiş olabilir ancak bu araç manyetik bantlar için arşiv oluşturmak üzere geliştirildiği için bu isim verilmiş. Bu ifadeyi arama motorunun görseller bölümünde arattığınızda manyetik bantların depolandığı pek çok arşiv odası resmi karşınıza çıkacaktır. 
 
 ![tape archive]({{ site.url }}/egitim/temel-linux/arsiv/tape_archive.webp){:class="responsive img-zoomable"}
-[Resim Kaynağı](https://commons.wikimedia.org/wiki/File:Video_tape_archive_%286498650083%29.webp){:target="_blank"}
+[Resim Kaynağı](https://commons.wikimedia.org/wiki/File:Video_tape_archive_%286498650083%29.jpg){:target="_blank"}
 
 Zaten aracımızın ismi de buradan geliyor. Akılda kalıcı olması için isminden bahsetmek istedim ancak isminin nerden geldiği çok da önemli değil. Neticede `tar` aracını kullanarak arşivler oluşturabiliyoruz.
 
