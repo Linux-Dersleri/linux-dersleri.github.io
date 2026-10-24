@@ -16,7 +16,7 @@ toc: true
 
 Konsol üzerinden dosya içeriklerini görüntüleyebileceğimiz ve farklı biçimlerde manipüle edebileceğimiz pek çok araçtan söz ettik. Şimdi de konsol üzerinden kullanabileceğimiz metin editörlerinden söz edelim.
 
-Grafiksel arayüzde çalışırken kullanabileceğimiz bir çok metin editörü bulunuyor. Zaten hepsinin kullanımı da hemen hemen benzer. Neticede bunlar grafiksel arayüzlü araçlar, yani üzerine ekstra konuşmamızı gerektirecek bir durum yok. Kullanmakta olduğunuz sistemde hangisi varsa, ya da siz özellikle hangisini tercih ediyorsanız onu kullanabilirsiniz.
+Grafiksel arayüzde çalışırken kullanabileceğimiz birçok metin editörü bulunuyor. Zaten hepsinin kullanımı da hemen hemen benzer. Neticede bunlar grafiksel arayüzlü araçlar, yani üzerine ekstra konuşmamızı gerektirecek bir durum yok. Kullanmakta olduğunuz sistemde hangisi varsa, ya da siz özellikle hangisini tercih ediyorsanız onu kullanabilirsiniz.
 
 Bizim asıl ihtiyacımız olan, grafiksel arayüzün bulunmadığı komut satırı arayüzündeyken de metinlerimizi görüntüleyip gerektiğinde düzenleyebileceğimiz bir araç. Aslında komut satırı arayüzü için de pek çok alternatif araç bulunuyor ama bizler en yaygın kullanıma sahip iki araçtan bahsedeceğiz. Bu sayede farklı sistemlerde de bu metin editörleri kuvvetle muhtemel yüklü olacağı için işlerinizi aksamadan yerine getirme yetkinliğine sahip olacaksınız. Bu durumu, tıpkı pek çok kabuk içinden bash kabuğunu tercih etmemiz gibi düşünebilirsiniz. Yaygın kullanıma sahip olması ilgili aracı öğrenmek için geçerli bir sebep.
 
