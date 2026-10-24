@@ -1148,6 +1148,6 @@ Bu bilgiler ışığında eğer PATH değişkenine yeni değer tanımlayarak, PA
 export PATH="$PATH:/yeni/dizin/adresi"
 ```
 
-PATH yoluna yeni dizin eklemek ve PATH yolu hakkında daha fazla detay için [buraya](http://localhost:4000/egitim/temel-linux/kabuk-nasil-calisir/index.html#path-yolu) göz atın.
+PATH yoluna yeni dizin eklemek ve PATH yolu hakkında daha fazla detay için [buraya]({{ site.url }}/egitim/temel-linux/kabuk-nasil-calisir/index.html#path-yolu) göz atın.
 
 Ayrıca değişiklikleri geri almak isterseniz eklediğiniz ifadeyi ilgili dosyadan silin ve sistemi `source ilgili_dosya_adı` şeklindeki komut bütünü ile yeniden konfigüre edin, böylelikle bütün değişiklikler sıfırlanmış olacaktır.
