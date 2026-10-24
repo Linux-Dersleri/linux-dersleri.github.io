@@ -66,7 +66,7 @@ Sonuç olarak, e-posta iletimi için SMTP kullanılırken, e-postaların alınma
 
 POP3 protokolü kullanıldığında, sunucudaki mesajlar istemci tarafından alındıktan sonra genellikle sunucudan bu mesajlar silinir. Yani artık bu mesaj istemcide tutulur. 
 
-IMAP protokolü kullanıldığında ise, sunucu ile senkronizasyon sağlanarak her defasında bu mesajın sunucundan talep edilmesi sağlanır. Dolayısıyla mesaj içeriği istemcide değil, sunucuda barındırılır.
+IMAP protokolü kullanıldığında ise, sunucu ile senkronizasyon sağlanarak her defasında bu mesajın sunucudan talep edilmesi sağlanır. Dolayısıyla mesaj içeriği istemcide değil, sunucuda barındırılır.
 
 Bu protokollerin detayları temel ağ eğitiminin kapsamı dışında, ancak merak ediyorsanız çok kısaca araştırabilirsiniz.
 
@@ -142,7 +142,7 @@ Fakat IP adreslerini akılda tutması kolay değil. Örneğin **linuxdersleri.ne
 
 Zaten bizler de bu sebeple domain olarak geçen alan isimlerini kullanıyoruz. Örneğin linuxdersleri.net websitesini ziyaret etmek için yalnızca bu ismi tarayıcımıza yazıp onaylamamız yeterli oluyor. Bu domain ismi arka planda, IP adresine dönüştürülerek bizim doğru sunucu ile iletişim kurmamız da mümkün oluyor. 
 
-Hostlar arasında iletişim kurmak için IP adreslerinin bilinmesi gerektiğinden, bir sunucu ile iletişim kurmak istediğimizde bu sunucun IP adresini bilmek zorundayız. İşte burada dönüşümü gerçekleştiren yapı da **DNS** olarak geçen protokoldür. 
+Hostlar arasında iletişim kurmak için IP adreslerinin bilinmesi gerektiğinden, bir sunucu ile iletişim kurmak istediğimizde bu sunucunun IP adresini bilmek zorundayız. İşte burada dönüşümü gerçekleştiren yapı da **DNS** olarak geçen protokoldür. 
 
 IP ve domain bilgileri DNS server üzerinde tutuluyor. Biz de domain adresi üzerinden gerekli olan IP bilgisini almak için bu DNS sunucusuna başvuruyoruz. 
 

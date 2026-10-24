@@ -75,7 +75,7 @@ Bu duruma çözüm olarak da “Dynamic Routers” yaklaşımı kullanılabiliyo
 
 # Dynamic Routes
 
-Bu yaklaşımda routerlar birbiri ile iletişim kurup ağ bilgilerini birbirileri ile paylaşıyorlar. Yani statik olarak elle eklenen adresler, bu dinamik yaklaşım kullanıldığında otomatik olarak ekleniyor. 
+Bu yaklaşımda routerlar birbiri ile iletişim kurup ağ bilgilerini birbirleri ile paylaşıyorlar. Yani statik olarak elle eklenen adresler, bu dinamik yaklaşım kullanıldığında otomatik olarak ekleniyor. 
 
 ![Dynamic.webp]({{ site.url }}/egitim/temel-network/router/Dynamic.webp){:class="responsive img-zoomable"}
 
