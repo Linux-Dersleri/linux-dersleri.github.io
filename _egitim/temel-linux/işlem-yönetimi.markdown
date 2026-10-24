@@ -166,7 +166,7 @@ Bash kabuğunun kontrolünde olan işlemler, bash için birer “**iş**” yani
 
 ### İşi Ön Plana Almak
 
-Arka plandaki işlemi ön plana almak için “**f**ore**g**round” ifadesinin kısaltmasından gelen `fg` aracınıı, `fg iş-numarası` şeklinde kullanabiliyoruz. Arka planda çalışmakta olan **firefox** işleminin, benim kabuğumdaki iş numarası **1** olduğu için ben `fg 1` şeklinde komutumu giriyorum.
+Arka plandaki işlemi ön plana almak için “**f**ore**g**round” ifadesinin kısaltmasından gelen `fg` aracını, `fg iş-numarası` şeklinde kullanabiliyoruz. Arka planda çalışmakta olan **firefox** işleminin, benim kabuğumdaki iş numarası **1** olduğu için ben `fg 1` şeklinde komutumu giriyorum.
 
 ```bash
 ┌──(taylan㉿linuxdersleri)-[~]
@@ -428,7 +428,7 @@ xyzt: command not found
 
 Şimdi de yalnızca ilk komut(`echo test`) başarılı olduğu için veya `||`  operatörünün yapısı gereği ikinci komut(`echo bir`) başarılı da olsa çalıştırılmadı ama ondan sonrakiler noktalı virgül sayesinde yine sırasıyla çalıştırıldı. Peki ama neden böyle oldu ? 
 
-Aslında bunun sebebi tüm komutun parça parça işleniyor olması. Yani kabuk ilk olarak ilk koşula baktı ve ilk komut doğru olduğu için “`||`” operatörü sebebiyle ikinci komutu çalıştırmadı. Ama bu ikinci komuttan sonra başka bir “ya da” operatörü olmadığı için de diğer komutları sırasıyla çalıştırdı. Eğer buradaki komutların hepsini tek bir koşula bağlı kılmak isteseydik yani örneğin ilk komut başarısız olursa diğerlerini çalıştır eğer ilk komut başarılı ise diğer hiç bir komutu çalıştırma demek isteseydik **komut gruplama** özelliğini kullanabilirdik. 
+Aslında bunun sebebi tüm komutun parça parça işleniyor olması. Yani kabuk ilk olarak ilk koşula baktı ve ilk komut doğru olduğu için “`||`” operatörü sebebiyle ikinci komutu çalıştırmadı. Ama bu ikinci komuttan sonra başka bir “ya da” operatörü olmadığı için de diğer komutları sırasıyla çalıştırdı. Eğer buradaki komutların hepsini tek bir koşula bağlı kılmak isteseydik yani örneğin ilk komut başarısız olursa diğerlerini çalıştır eğer ilk komut başarılı ise diğer hiçbir komutu çalıştırma demek isteseydik **komut gruplama** özelliğini kullanabilirdik. 
 
 ## Komut Gruplama
 
@@ -1038,7 +1038,7 @@ Eğer bir oturumu sonlandırmak istiyorsanız üzerinde bulunduğunuz `tmux` otu
 
 ![tmux-exit.gif]({{ site.url }}/egitim/temel-linux/network/tmux-exit.gif){:class="responsive img-zoomable"}
 
-Konsol oturumunu sonlandırmak yerine, ilgili konsolun arkaplanda çalışmaya devam etmesini sağlayıp, bu konsol oturumundan geçici süreliğine ayrılmanız da mümkün. Örneğin ben denemek için `tmux` komutunu girip yeni bir konsol oturumu başlatıyorum. Ve bu oturumda `top` komutunu çalıştırıyorum. Normalde eğer konsol kapanacak olursa bu `top` aracı da kapanacağı için çalışmayı sürdürmeyecek. Fakat ben oturumu tamamen kapatmak yerine oturumdan ayrılmak için <kbd>Ctrl</kbd> + <kbd>B</kbd> tuşlamasını yapıp <kbd>D</kbd> tuşuna basıyorum. Buradaki <kbd>D</kbd> tuşu “**detach**” yani “**ayırmak**” ifadesinden gelen bir kısaltma. Bu sayede konsoldaki hiç bir işlem sonlandırılmadan biz konsoldan ayrılmış oluyoruz. Ayrıldığımız oturumları görmek için de `tmux list-sessions` komutunu kullanıyoruz.
+Konsol oturumunu sonlandırmak yerine, ilgili konsolun arkaplanda çalışmaya devam etmesini sağlayıp, bu konsol oturumundan geçici süreliğine ayrılmanız da mümkün. Örneğin ben denemek için `tmux` komutunu girip yeni bir konsol oturumu başlatıyorum. Ve bu oturumda `top` komutunu çalıştırıyorum. Normalde eğer konsol kapanacak olursa bu `top` aracı da kapanacağı için çalışmayı sürdürmeyecek. Fakat ben oturumu tamamen kapatmak yerine oturumdan ayrılmak için <kbd>Ctrl</kbd> + <kbd>B</kbd> tuşlamasını yapıp <kbd>D</kbd> tuşuna basıyorum. Buradaki <kbd>D</kbd> tuşu “**detach**” yani “**ayırmak**” ifadesinden gelen bir kısaltma. Bu sayede konsoldaki hiçbir işlem sonlandırılmadan biz konsoldan ayrılmış oluyoruz. Ayrıldığımız oturumları görmek için de `tmux list-sessions` komutunu kullanıyoruz.
 
 ![tmux-detach.gif]({{ site.url }}/egitim/temel-linux/network/tmux-detach.gif){:class="responsive img-zoomable"}
 

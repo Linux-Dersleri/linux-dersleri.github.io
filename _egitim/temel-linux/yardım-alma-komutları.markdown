@@ -17,7 +17,7 @@ Söz konusu komut satırı üzerinden bir işletim sistemini yönetmek olduğund
 
 Yani özetle, bu bölümde kelimenin tam anlamıyla öğrenmeyi öğreneceğiz.
 
-Grafiksel arayüzlü araçları kullanırken sezgisel olarak özellikleri keşfetmek ve hatırlamak komut satırı araçlarına oranla daha kolaydır. Çünkü grafiksel arayüzde menüleri kurcalayabilir ve çeşitli butonlara tıklayarak etkilerini gözlemleyebilirsiniz. Ancak komut satırı üzerinden kullanılan araçlarda grafiksel arayüzdeki gibi sezgisel olarak keşif için gerekli ortam yoktur. Çünkü komut satırı arayüzündeki araçları kullanırken istisnalar hariç, yerine getirilmesini istediğimiz görevleri spesifik olarak yazılı komutlarınızla belirtmemiz gerekiyor. İlgili komutu veya komutun özelliğini temsil eden seçeneği bilmiyorsak gereken işlemi yapamayız. Tabii ki tüm araçların tüm seçeneklerini bilme ihtimalimiz olmadığı için, komut satırı arayüzü ile çalışan araçlar, tüm özelliklerini iyi biçimde açıklayan yardım dokümantasyonlarına sahipler. 
+Grafiksel arayüzlü araçları kullanırken sezgisel olarak özellikleri keşfetmek ve hatırlamak komut satırı araçlarına oranla daha kolaydır. Çünkü grafiksel arayüzde menüleri kurcalayabilir ve çeşitli butonlara tıklayarak etkilerini gözlemleyebilirsiniz. Ancak komut satırı üzerinden kullanılan araçlarda grafiksel arayüzdeki gibi sezgisel olarak keşif için gerekli ortam yoktur. Çünkü komut satırı arayüzündeki araçları kullanırken istisnalar hariç, yerine getirilmesini istediğimiz görevleri spesifik olarak yazılı komutlarımızla belirtmemiz gerekiyor. İlgili komutu veya komutun özelliğini temsil eden seçeneği bilmiyorsak gereken işlemi yapamayız. Tabii ki tüm araçların tüm seçeneklerini bilme ihtimalimiz olmadığı için, komut satırı arayüzü ile çalışan araçlar, tüm özelliklerini iyi biçimde açıklayan yardım dokümantasyonlarına sahipler. 
 
 Linux sistemlerinin temel doküman-bilgi kaynaklarını 4 türe ayırabiliriz:
 
@@ -335,7 +335,7 @@ Artık, ihtiyaç duyduğumuzda kılavuz sayfalarından nasıl bilgi edinebilece�
 
 Ben sistemimi İngilizce kullandığım için manual sayfaları da İngilizce açıklamalar içeriyor. Eğer siz Türkçe olarak kullanıyorsanız hepsi olmasa da bazı manual sayfalarının Türkçeleştirildiğini görebilirsiniz. 
 
-Manuel sayfalarının farklı dillere çevrilmesi kimi kullanıcılar için kolaylık sağlasa da manuel sayfalarının yerelleştirilmesi çoğunlukla eksik kaldığından en doyurucu bilgiye standart olan İngilizce dili üzerinden ulaşabiliyoruz. Bu sebeple ben sizlere ingilizce haricindeki manuel sayfalarını kullanmanızı önermiyorum. En ulaşılabilir ve en detaylı olanı ingilizcede bulunuyor. Eğer kendi dilinizde kullanmak isterseniz kısa bir araştırma ile nasıl yapabileceğinizi öğrenebilirsiniz.
+Manuel sayfalarının farklı dillere çevrilmesi kimi kullanıcılar için kolaylık sağlasa da manuel sayfalarının yerelleştirilmesi çoğunlukla eksik kaldığından en doyurucu bilgiye standart olan İngilizce dili üzerinden ulaşabiliyoruz. Bu sebeple ben sizlere İngilizce haricindeki manuel sayfalarını kullanmanızı önermiyorum. En ulaşılabilir ve en detaylı olanı İngilizcede bulunuyor. Eğer kendi dilinizde kullanmak isterseniz kısa bir araştırma ile nasıl yapabileceğinizi öğrenebilirsiniz.
 
 Manual sayfaları hakkındaki anlatımları bitirmeden önce aradığımız yardım bilgisine daha kolay erişebileceğimiz bir kullanım biçiminden daha bahsetmek istiyorum.
 
@@ -436,7 +436,7 @@ Bakın görebildiğiniz gibi işlem son derece kısa sürdü ve güncelleme işl
 
 # `info` Komutu
 
-Türkçe kılavuz olarak geçen **man** yani **manual**'e ek olarak 90'ların başında, GNU projesi "**man**" dokümantasyon sisteminin güncelliğini yitirdiğine karar verdi ve onun yerini alması için **info** aracı geliştirildi. Ancak ne yazık ki **info**, dönemine göre nispeten daha kolay okunur olsa da hiç bir zaman man kadar popüler olamadı. Nitekim günümüzde de **man** kılavuz sayfaları halen **info** ya oranla daha sık tercih ediliyor. Man sayfalarını kullanamaya benzer olması ve bilmenin elzem olmaması sebebiyle info aracını özellikle ele alarak vakit kaybetmek istemiyorum. Bilseniz fena olmaz, ama şart da sayılmaz. Kısa bir araştırma ile tıpkı **man** gibi kullanılabildiğini kendiniz de bizzat görebilirsiniz. 
+Türkçe kılavuz olarak geçen **man** yani **manual**'e ek olarak 90'ların başında, GNU projesi "**man**" dokümantasyon sisteminin güncelliğini yitirdiğine karar verdi ve onun yerini alması için **info** aracı geliştirildi. Ancak ne yazık ki **info**, dönemine göre nispeten daha kolay okunur olsa da hiçbir zaman man kadar popüler olamadı. Nitekim günümüzde de **man** kılavuz sayfaları halen **info** ya oranla daha sık tercih ediliyor. Man sayfalarını kullanamaya benzer olması ve bilmenin elzem olmaması sebebiyle info aracını özellikle ele alarak vakit kaybetmek istemiyorum. Bilseniz fena olmaz, ama şart da sayılmaz. Kısa bir araştırma ile tıpkı **man** gibi kullanılabildiğini kendiniz de bizzat görebilirsiniz. 
 
 # Dokümantasyonlar
 

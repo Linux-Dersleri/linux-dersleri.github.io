@@ -89,7 +89,7 @@ Ben yalnızca birer karakter ekledim ancak kıvırcık parantez içerisine isted
 abbba adda ala atttta
 ```
 
-Bakın her koşulda parantez içinde virgülle ayırarak verdiğimiz tüm karakterler, peşi sıra kaç karakter kullanıldığına bakılmaksızın kabuk tarafından genişletiliyor. Çıktıyı incelediğimizde virgülle ayırmış olduğumuz karakterlerin tıpkı tanımlandıkları sıralamaya yani soldan sağa doğru genişletildiğini teyit edebiliyoruz. Siz de elde etmek istediğiniz argümanlar için bu sıraya dikkat ederek şablonunuzu tanımayabilirsiniz. Yalnız, bu şekilde şablon tanımı üzerinden örüntüler oluştururken boşluk karakterini kaçış karakteriyle birlikte kullanmanız gerektiğine de dikkat edin lütfen. Aksi halde kabuk genişletme uygulanamaz. 
+Bakın her koşulda parantez içinde virgülle ayırarak verdiğimiz tüm karakterler, peşi sıra kaç karakter kullanıldığına bakılmaksızın kabuk tarafından genişletiliyor. Çıktıyı incelediğimizde virgülle ayırmış olduğumuz karakterlerin tıpkı tanımlandıkları sıralamaya yani soldan sağa doğru genişletildiğini teyit edebiliyoruz. Siz de elde etmek istediğiniz argümanlar için bu sıraya dikkat ederek şablonunuzu tanımlayabilirsiniz. Yalnız, bu şekilde şablon tanımı üzerinden örüntüler oluştururken boşluk karakterini kaçış karakteriyle birlikte kullanmanız gerektiğine de dikkat edin lütfen. Aksi halde kabuk genişletme uygulanamaz. 
 
 Boşluk karakterinin genişletmeye engel olduğunu kanıtlamak için aynı komutumuzu bu kez içinde boşluk karakteri ile tekrar girebiliriz. 
 
@@ -195,7 +195,7 @@ Bakın boşluk bırakınca, genişletmeler birbirinden bağımsız olduğu için
 
 Neticede kıvırcık parantez genişletmeleri sayesinde çok çeşitli argüman örüntüleri oluşturabileceğimizi `echo` komutu üzerinden ele aldık. `echo` komutu üretilen argümanları gözlemleyebilmemiz için harika olsa da ben basit bir gerçek dünya örneği de vermek istiyorum.
 
-Örneğin diyelim ki kendi ev dizininiz içindeki ***Desktop*** klasörü altında birbirinden farklı isimlerde yeni 5 tane klasör oluşturmak istiyorsunuz. Bunun için ne yapabilirsiniz ? Örneğin komutunuzu `mkdir ~/Desktop/bir ~/Desktop/iki ~/Desktop/uc` ve benzeri şeklinde uzun uzadıya girebilirsiniz. Ama buna gerek yok çünkü artık siz genişletmeden yararlanıp örüntü oluşturmayı biliyorsunuz. Yani tüm komutu tekrar tekrar yazmak yerine isterseniz kıvırcık parantez genişletmesi ile `mkdir ~/Desktop/{bir,iki,uc,dort,bes}` şeklinde tek seferde istediğiniz isimlerde klasörlerin oluşturmasın da sağlayabilirsiniz. 
+Örneğin diyelim ki kendi ev dizininiz içindeki ***Desktop*** klasörü altında birbirinden farklı isimlerde yeni 5 tane klasör oluşturmak istiyorsunuz. Bunun için ne yapabilirsiniz ? Örneğin komutunuzu `mkdir ~/Desktop/bir ~/Desktop/iki ~/Desktop/uc` ve benzeri şeklinde uzun uzadıya girebilirsiniz. Ama buna gerek yok çünkü artık siz genişletmeden yararlanıp örüntü oluşturmayı biliyorsunuz. Yani tüm komutu tekrar tekrar yazmak yerine isterseniz kıvırcık parantez genişletmesi ile `mkdir ~/Desktop/{bir,iki,uc,dort,bes}` şeklinde tek seferde istediğiniz isimlerde klasörlerin oluşturulmasını da sağlayabilirsiniz. 
 
 ```bash
 └─$ mkdir ~/Desktop/{bir,iki,uc,dort,bes}                    
@@ -251,7 +251,7 @@ Belirttiğim gibi yıldız işareti tüm dosyaları ve klasörleri kapsıyor ols
 
 Ben bu girmiş olduğum komutta; yıldız karakterinden önce nokta işaretini koyduğum için başlangıcı nokta olan ve devamında herhangi bir karakter olan tüm dosya ve dizinlerin kapsanması sağlanıyor. Benim çalıştığım ***etc*** dizini altında da bu biçimde olan yani gizli olan içerikler bunlarmış.
 
-Ayrıca bu aldığımız çıktılarda yer alan tek nokta `.` mevcut dizini temsil ediyorken, iki nokta `..` da bir üst dizini temsil eden klasörler. Örneğin biz `cd ..` şeklinde komut girip bir üst dizine dönerken, aslında üst dizini temsil eden bu iki nokta klasörüne geçiş yaptığımız için bir üst dizine dönebiliyorduk. Veya daha önce betik dosyalarımızı çalıştırırken de gördüğümüz gibi bir dosyaya çalıştırırken `./dosya-ismi` şeklinde komut girdiğimizde de mevcut dizini temsil eden bu dizin sayesinde bu dosya kabuk tarafından çalıştırılabiliyordu. Nokta işareti kabuğa bu dizinin tam adresini verdiği için mevcut dizin içinde olan dosyanın tam konumunu kolayca belirtebiliyorduk. 
+Ayrıca bu aldığımız çıktılarda yer alan tek nokta `.` mevcut dizini temsil ediyorken, iki nokta `..` da bir üst dizini temsil eden klasörler. Örneğin biz `cd ..` şeklinde komut girip bir üst dizine dönerken, aslında üst dizini temsil eden bu iki nokta klasörüne geçiş yaptığımız için bir üst dizine dönebiliyorduk. Veya daha önce betik dosyalarımızı çalıştırırken de gördüğümüz gibi bir dosyayı çalıştırırken `./dosya-ismi` şeklinde komut girdiğimizde de mevcut dizini temsil eden bu dizin sayesinde bu dosya kabuk tarafından çalıştırılabiliyordu. Nokta işareti kabuğa bu dizinin tam adresini verdiği için mevcut dizin içinde olan dosyanın tam konumunu kolayca belirtebiliyorduk. 
 
 Her neyse bakın başında nokta bulunan dosya ve klasör isimlerini kapsayabilmek için nokta ve yıldız karakterlerini bir arada kullandık. Bu kullandığımız karakterler de mevcut bulunduğumuz dizinde yer alan bu dosya ve klasörlerin isimlerine genişletilip `echo` aracına argüman olarak verildi, dolayısıyla konsolumuza bu çıktıları bastırabildik.
 
@@ -259,7 +259,7 @@ Normalde yıldız işaretinin gizli içerikleri kapsamıyor olmasının nedeni f
 
 Tamamdır, temel olgulardan da bahsettiğimize göre şimdi yıldız joker karakterini ihtiyacımıza göre nasıl kullanabileceğimize dair birkaç farklı örnek uygulama yapabiliriz.
 
-Gizli içerikleri görmek için başı nokta ile başlayanları listeledik. Nokra yerine dilediğimiz herhangi bir karakteri de belirtebilirdik. Hatta dilersek tersi şekilde sonu belirli bir karakter veya karakterler ile bitenleri de listeleyebiliriz. Örneğin ben sonu “**i”** ile biten her şeyi bastırmak istersem `echo *i` şeklinde komutumu kullanabilirim. 
+Gizli içerikleri görmek için başı nokta ile başlayanları listeledik. Nokta yerine dilediğimiz herhangi bir karakteri de belirtebilirdik. Hatta dilersek tersi şekilde sonu belirli bir karakter veya karakterler ile bitenleri de listeleyebiliriz. Örneğin ben sonu “**i”** ile biten her şeyi bastırmak istersem `echo *i` şeklinde komutumu kullanabilirim. 
 
 ```bash
 ┌──(taylan@linuxdersleri)-[/etc]
@@ -448,7 +448,7 @@ ImageMagick-6 ModemManager NetworkManager ODBCDataSources OpenCL UPower X11 zsh 
 adduser.conf adjtime alsa alternatives apache2 apparmor apparmor.d apt avahi bash.bashrc bash.bashrc.save bash.bashrc.save.1 bash_completion bash_completion.d bindresvport.blacklist binfmt.d bluetooth ca-certificates ca-certificates.conf chatscripts cifs-utils cloud console-setup cron.d cron.daily cron.hourly cron.monthly crontab cron.weekly cryptsetup-initramfs cryptsetup-nuke-password crypttab dbus-1 dconf debconf.conf debian_version debtags default deluser.conf dhcp dictionaries-common dns2tcpd.conf dpkg e2scrub.conf emacs environment environment.d ethertypes ettercap firebird firefox-esr fonts freetds fstab fuse.conf gai.conf geoclue ghostscript glvnd gprofng.rc groff group group- grub.d gshadow gshadow- gss gtk-2.0 gtk-3.0 guymager hdparm.conf host.conf hostname hosts hosts.allow hosts.deny idmapd.conf ifplugd inetsim init.d initramfs-tools inputrc insserv.conf.d ipp-usb iproute2 ipsec.conf ipsec.d ipsec.secrets issue issue.net java-11-openjdk john kernel kernel-img.conf king-phisher kismet ld.so.cache ld.so.conf ld.so.conf.d libao.conf libaudit.conf libblockdev libnl-3 libpaper.d lightdm lighttpd locale.alias locale.gen localtime logcheck login.defs logrotate.conf logrotate.d macchanger machine-id magic magic.mime mailcap mailcap.order manpath.config matplotlibrc mime.types minicom miredo miredo.conf mke2fs.conf modprobe.d modules modules-load.d motd mtab mysql nanorc netconfig netsniff-ng network networks nftables.conf nginx nikto.conf nsswitch.conf odbc.ini odbcinst.ini openal openfortivpn openni2 openvpn opt os-release pam.conf pam.d papersize passwd passwd- perl php plymouth polkit-1 postgresql postgresql-common powershell-empire ppp profile profile.d protocols proxychains4.conf pulse python2.7 python3 python3.10 python3.9 rarfiles.lst rc0.d rc1.d rc2.d rc3.d rc4.d rc5.d rc6.d rcS.d rearj.cfg redsocks.conf request-key.conf request-key.d resolv.conf responder rmt rpc rsyslog.conf rsyslog.d runit samba sane.d scalpel screenrc sddm.conf.d searchsploit_rc security selinux sensors3.conf sensors.d services shadow shadow- shells skel smartd.conf smartmontools smi.conf snmp speech-dispatcher sqlmap ssh ssl sslsplit strongswan.conf strongswan.d stunnel subgid subgid- subuid subuid- subversion sudo.conf sudoers sudoers.d sudoers.save sudo_logsrvd.conf sv sysctl.conf sysctl.d sysstat systemd terminfo theHarvester tightvncserver.conf timezone timidity tmpfiles.d ucf.conf udev udisks2 ufw updatedb.conf update-motd.d vdpau_wrapper.cfg vim vpnc vulkan wgetrc wireshark wpa_supplicant xattr.conf xdg xfce4 xl2tpd
 ```
 
-Bakın bu kez tersi şekilde başlangıç harfinde z karakteri bulunan veya başlangıç harfi büyük olan hiç bir içerik bastırılmadı çünkü bunları genişletme kapsamına dahil etmedik. Bu iki çıktıyı kıyaslarsanız, ünlem işaretinin hariç tutma görevinde olduğunu net biçimde görebilirsiniz.
+Bakın bu kez tersi şekilde başlangıç harfinde z karakteri bulunan veya başlangıç harfi büyük olan hiçbir içerik bastırılmadı çünkü bunları genişletme kapsamına dahil etmedik. Bu iki çıktıyı kıyaslarsanız, ünlem işaretinin hariç tutma görevinde olduğunu net biçimde görebilirsiniz.
 
 <p class="mavi"><strong>ℹ️ Not:</strong> Bu hariç tutma özelliği her zaman beklendiği şekilde sonuç vermeyebilir. Daha kesin yaklaşım için <code class="language-plaintext highlighter-rouge">find</code> aracının hariç tutma özelliği olan ünlem işaretini kullanmanız özellikle karmaşık filtrelemelerde daha sağlıklı olabilir.</p> 
 
@@ -601,7 +601,7 @@ Bakın bu kez tırnak içinde yazdığımız için buradaki boşluk karakteri kl
 
 Söz konusu alıntılama olduğunda tek ve çift tırnak kullanabileceğimiz iki alternatif yöntem bulunuyor. 
 
-Bash kabuğu için tek tırnak en katı alıntılama biçimi. Bu sebeple tek tırnak içindeki hiç bir karakter kabuk tarafından özel anlamaları dahilinde ele alınmıyor. 
+Bash kabuğu için tek tırnak en katı alıntılama biçimi. Bu sebeple tek tırnak içindeki hiçbir karakter kabuk tarafından özel anlamları dahilinde ele alınmıyor. 
 
 Hemen denemek için şu ana kadar ele aldığımız genişletme karakterlerini tek tırnak içinde yazıp `echo` aracı ile konsola bastırmayı deneyelim. 
 
@@ -611,7 +611,7 @@ Hemen denemek için şu ana kadar ele aldığımız genişletme karakterlerini t
 {1..5} [a-z]* ~ $SHELL
 ```
 
-Bakın tek tırnak içinde yazmış olduğum hiç bir genişletme karakteri kabuk tarafından genişletilmedi. Nasıl yazdıysam aynen `echo` aracına standart karakterler olarak iletilip konsola bastırılması sağlandı. 
+Bakın tek tırnak içinde yazmış olduğum hiçbir genişletme karakteri kabuk tarafından genişletilmedi. Nasıl yazdıysam aynen `echo` aracına standart karakterler olarak iletilip konsola bastırılması sağlandı. 
 
 Şimdi aynı örneği çift tırnak içinde tekrar deneyebiliriz. 
 
@@ -696,7 +696,7 @@ Ben şimdi son olarak çok kısaca komut ikamesi genişletmesinden de bahsedip g
 
 Esasen temel eğitimde bu genişletmeden bahsetmeyi düşünmüyordum fakat, sık karşılaşabileceğiniz ve gerektiğinde işinize yarayabileceği için çok kısaca ele almak istiyorum.
 
-Komut ikamesi kavramı, ikame kelimesinin de yardımıyla çıkarım yapabileceğimiz gibi, komutların ürettiği sonuçların bu genişletmenin kullanıldığı tanımlamanın yeri almasından ibaret. Biliyorum ilk kez duyduğunuz bu tanımlama hiç bir şey ifade etmiyor. Hemen daha anlamlı hale getirmek için örnekler üzerinden ele almaya çalışalım.
+Komut ikamesi kavramı, ikame kelimesinin de yardımıyla çıkarım yapabileceğimiz gibi, komutların ürettiği sonuçların bu genişletmenin kullanıldığı tanımlamanın yeri almasından ibaret. Biliyorum ilk kez duyduğunuz bu tanımlama hiçbir şey ifade etmiyor. Hemen daha anlamlı hale getirmek için örnekler üzerinden ele almaya çalışalım.
 
 Normalde komut ikamesi daha çok kabuk programlamada kullanılıyor o yüzden size şimdi çok mantıklı gelmese de birkaç örnek vermek istiyorum. Ancak merak etmeyin eğitimin devamında biraz daha fazla detay öğrendikten sonra daha makul bir kullanım örneğini ele alırız mutlaka. Siz şimdi yalnızca komut ikamesi genişletmesinin nasıl çalıştığına odaklanın lütfen.
 

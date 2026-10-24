@@ -13,7 +13,7 @@ toc: true
 ---
 
 
-Bu bölümde dosya arşivleme, sıkıştırma ve sıkıştırılmış olan dosya arşivlerini açma gibi işlemleri ele alacağız. Zaten bu kavramlar sizlere yabancı gelmemeli zira daha önce hangi işletim sistemini kullanmış olursanız olun öyle ya da böyle mutlaka arşiv dosyaları karşınıza çıkmıştır. Genellikle yüksek boyutlu dosyaların sıkıştırılmasında veya veri kaybı olmadan güvenli transfer yapabilmek için ve bunlar gibi pek çok avantaj dolayasıyla arşiv dosyaları ile sıklıkla karşılaşıyoruz, karşılaşmaya da devam edeceğiz. Bu sebeple biz de bu bölüm içerisinde öncelikle dosyaları nasıl arşivleyebileceğimizden daha sonra ise sıkıştırma işlemlerinin nasıl gerçekleştirildiğinden bahsedeceğiz. 
+Bu bölümde dosya arşivleme, sıkıştırma ve sıkıştırılmış olan dosya arşivlerini açma gibi işlemleri ele alacağız. Zaten bu kavramlar sizlere yabancı gelmemeli zira daha önce hangi işletim sistemini kullanmış olursanız olun öyle ya da böyle mutlaka arşiv dosyaları karşınıza çıkmıştır. Genellikle yüksek boyutlu dosyaların sıkıştırılmasında veya veri kaybı olmadan güvenli transfer yapabilmek için ve bunlar gibi pek çok avantaj dolayısıyla arşiv dosyaları ile sıklıkla karşılaşıyoruz, karşılaşmaya da devam edeceğiz. Bu sebeple biz de bu bölüm içerisinde öncelikle dosyaları nasıl arşivleyebileceğimizden daha sonra ise sıkıştırma işlemlerinin nasıl gerçekleştirildiğinden bahsedeceğiz. 
 
 # Arşivlemek
 
@@ -80,7 +80,7 @@ Ekranda herhangi bir çıktı belirmese de bu dizindeki tüm dosyalar arkaplanda
 linux-dersleri  linux-dersleri.tar
 ```
 
-Belki burada arşiv dosyasının isminin sonuna eklediğim “**.tar**” uzantısının şart olup olmadığı kafanıza takılmıştır. Dosya isminin sonuna eklemiş olduğum “**.tar**” uzantısı, `tar` aracının standart arşiv uzantısı. Bu uzantıyı kullanmak zorunda değilsiniz ancak sistem üzerinde arşiv dosyalarınızı ayırt edici kılmak için mutlaka bu dosya uzantısını da ismine eklemenizi tavsiye ederim. Dosya uzantısını eklemesiniz de arşiv dosyası olarak kullanabilirsiniz ancak daha sonra dosyaları listelediğinizde “**.tar**” uzantısı sayesinde arşiv dosyasını ayırt etmeniz daha kolay olur. Zaten benzeri durumdan, kabuk genişletmeleri bölümünde bahsetmiştik. Düzenli sistem yönetimi için bu tip detaylar önemli. Örneğin sonu “**.tar**” ile biten dosyaları listele diyerek, tüm `tar` arşivlerini bir çırpıda listeleyebileceğinizi düşünün. Tamamdır bence girdiğimiz komutu yeterince açıkladık. 
+Belki burada arşiv dosyasının isminin sonuna eklediğim “**.tar**” uzantısının şart olup olmadığı kafanıza takılmıştır. Dosya isminin sonuna eklemiş olduğum “**.tar**” uzantısı, `tar` aracının standart arşiv uzantısı. Bu uzantıyı kullanmak zorunda değilsiniz ancak sistem üzerinde arşiv dosyalarınızı ayırt edici kılmak için mutlaka bu dosya uzantısını da ismine eklemenizi tavsiye ederim. Dosya uzantısını eklemeseniz de arşiv dosyası olarak kullanabilirsiniz ancak daha sonra dosyaları listelediğinizde “**.tar**” uzantısı sayesinde arşiv dosyasını ayırt etmeniz daha kolay olur. Zaten benzeri durumdan, kabuk genişletmeleri bölümünde bahsetmiştik. Düzenli sistem yönetimi için bu tip detaylar önemli. Örneğin sonu “**.tar**” ile biten dosyaları listele diyerek, tüm `tar` arşivlerini bir çırpıda listeleyebileceğinizi düşünün. Tamamdır bence girdiğimiz komutu yeterince açıkladık. 
 
 Şimdi orijinal klasör ile bu arşivin boyutunu kıyaslayabilmek adına `du -hs linux-dersler*` şeklinde komutumuzu girelim. 
 
@@ -266,7 +266,7 @@ Arşivden çıkarma yaparken temelde iki farklı seçeneğe sahibiz. Birincisi a
 
 ### Tüm Dosya İçeriğini Çıkarmak
 
-Çıkarma işlemi için çıkarmak-ayıklamak anlamına gelen “e**x**tract” seçeneğinin kısalması olan `x` seçeneğini kullanıyoruz. Eğer çıkarma işlemi için `tar` aracına yalnızca bu seçeneği verirsek, arşiv dosyasının içeriği mevcut bulunduğumuz dizine çıkarılır. Bu sebeple ben öncelikle arşivi çıkaracağım “***linux***” isminde yeni bir klasör oluşturmak istiyorum. 
+Çıkarma işlemi için çıkarmak-ayıklamak anlamına gelen “e**x**tract” seçeneğinin kısaltması olan `x` seçeneğini kullanıyoruz. Eğer çıkarma işlemi için `tar` aracına yalnızca bu seçeneği verirsek, arşiv dosyasının içeriği mevcut bulunduğumuz dizine çıkarılır. Bu sebeple ben öncelikle arşivi çıkaracağım “***linux***” isminde yeni bir klasör oluşturmak istiyorum. 
 
 ```bash
 ┌──(taylan㉿linuxdersleri)-[~/Downloads]
@@ -564,7 +564,7 @@ Ayrıca ben örnekleri hep tek bir dosya üzerinden gösterdim ancak sizler ayn�
 
 ## Sıkıştırılmış gzip Dosyaların Açılması
 
-Sıkıştırmış olduğumuz dosyaları orijinal boyutuna geri çevirmek için de tek yapmamız gereken “**d**ecompress” ifadesinin kısalması olan `-d` seçeneğini kullanmak. 
+Sıkıştırmış olduğumuz dosyaları orijinal boyutuna geri çevirmek için de tek yapmamız gereken “**d**ecompress” ifadesinin kısaltması olan `-d` seçeneğini kullanmak. 
 
 Örnek olması için ben daha önce sıkıştırmış olduğum arşiv dosyasını eski haline getirmek istiyorum. 
 
@@ -597,7 +597,7 @@ total 281M
 
 Bakın sıkıştırmış olduğum arşiv dosyası orijinal boyutuna geri dönmüş ve gördüğünüz gibi **gzip** algoritması ile sıkıştırıldığını temsil eden **.gz** uzantısı da kaldırılmış. Yani aslında sıkıştırmış olduğumuz dosyayı `-d` seçeneği sayesinde sorunsuzca eski haline getirmiş olduk.
 
-Ben örneklerimde kullanmadım ancak `gzip` aracını kullanırken tüm işlemler sırsında işlemlerin detaylarını takip etmek için isterseniz **verbose** seçeneğinin kısalması olan `v` seçeneğini de komutunuza ekleyebilirsiniz. Bir sonraki örneğimizde verbose seçeneğini de kullanabiliriz.
+Ben örneklerimde kullanmadım ancak `gzip` aracını kullanırken tüm işlemler sırasında işlemlerin detaylarını takip etmek için isterseniz **verbose** seçeneğinin kısaltması olan `v` seçeneğini de komutunuza ekleyebilirsiniz. Bir sonraki örneğimizde verbose seçeneğini de kullanabiliriz.
 
 Bir sonraki örneğimizi de özyinele özelliğinden bahsetmek için uygulayabiliriz mesela. Fakat özyineleme yaklaşımından önce sıkıştırma işlemlerinin her bir dosyada ayrı ayrı uygulandığına vurgu yapmamız gerekiyor. Biz `gzip` aracına sıkıştırması için aynı anda birden fazla dosyayı argüman olarak verdiğimizde her bir dosya ayrı ayrı sıkıştırılıyor.
 
@@ -906,7 +906,7 @@ Bakın dosyanın isminin sonuna **.bz** uzantısı eklenmiş ve dosya sıkışt�
 
 ## Sıkıştırılmış bzip2 Dosyaların Açılması
 
-Şimdi sıkıştırılmış olan dosyayı eski haline getirelim. Bunun için “decompress” ifadesinin kısalmasından gelen `d` seçeneğini kullanabiliriz. `bzip2 -d linux-dersleri.tar.bz2` şeklinde komutu giriyorum.
+Şimdi sıkıştırılmış olan dosyayı eski haline getirelim. Bunun için “decompress” ifadesinin kısaltmasından gelen `d` seçeneğini kullanabiliriz. `bzip2 -d linux-dersleri.tar.bz2` şeklinde komutu giriyorum.
 
 ```bash
 ┌──(taylan㉿linuxdersleri)-[/tmp]
@@ -920,7 +920,7 @@ total 562M
 
 Bakın dosyam eski haline geri döndü.
 
-Eğer orijinal dosya korunsun harici olarak sıkıştırılmış versiyonu oluşturulsun istiyorsak **gzip** aracında da kullandığımız “**k**eep” seçeneğinin kısalması olan `k` seçeneğini kullanabiliriz. 
+Eğer orijinal dosya korunsun harici olarak sıkıştırılmış versiyonu oluşturulsun istiyorsak **gzip** aracında da kullandığımız “**k**eep” seçeneğinin kısaltması olan `k` seçeneğini kullanabiliriz. 
 
 Ben test etmek için bu kez komutumu `bzip2 -k linux-dersleri.tar` şeklinde yazıyorum. Hatta istersek, verbose seçeneğini ekleyip işlem hakkında ayrıntılı bilginin konsola bastırılmasını sağlayabiliriz. 
 

@@ -24,7 +24,7 @@ Eğer daha önce kaynak koddan kurulum yapmadıysanız yeni başlayan kullanıc�
 
 Elbette bu durum geliştiriciler tarafından fark edilmiş ve kaynak koddan derleme yerine herkes için işleri kolaylaştırmak adına paket yaklaşımı geliştirilmiştir.
 
-Paket dediğimiz yapı, ilgili aracın kurulacağı sisteme tam olarak uyumlu şekilde önceden hazırlanmış dosyalarının paket haline getirilip kullanıcılara sunulmasıdır. Bu paket içinde aracın çalıştırılabilir dosyaları, kütüphane dosyaları veya dokümantasyon dosyaları gibi ilgili aracın tüm dosyaları önceden derlenmiş yani hazırlanmış şekilde geliyor. Dolayısıyla bizlerin kaynak koddan derlemeyle uğraşmamız gerekmiyor. Derlenmiş yani çalıştırılabilir hale getirilmiş dosyalar zaten paketin içinde bulunuyor. Tek yapmamız gereken bu paketi temin edip, paketi kurabilecek aracı kullanmaktır. Paketlerin herkes tarafından güvenli şekilde temin edilebilmesi için de bu paketler sunucular üzerinden herkesin erişimine açık şekilde paylaşılıyor. Geliştiricilerin kendi yazılım paketlerini sunduğu kendilerine ait sunucuları olmakla birlikte bir de dağıtımların çeşitli paketleri bir araya toparlayıp tek bir sunucu üzerinden sunduğu “repository” yani “repo” yaklaşımı da bulunuyor. Zaten buradaki “repository” ifadesi "depo" ya da "ambar" anlamına geliyor ve kısaca “repo” olarak ifade ediliyor. Bir çok farklı paket tek bir sunucuda tutulduğu için bu sunucu depo görevi görüyor buna da İngilizce olarak repo deniyor. Örneğin ben Kali dağıtımını kullandığım için kali’nin resmi repo adresi üzerinden Kali tarafından denetlenip sunucuya eklenmiş olan stabil yazılım paketlerine kolayca ulaşıp bunları indirebilirim. Zaten bir aracın kurulabilmesi için gereken ek bağımlılıklar dağıtım geliştiricileri tarafından bilindiği için bu bağımlılıkların paketleri de mutlaka repoda bulunuyor. Yani bir yazılımın kurulması için gereken tüm ek bileşenler de repolar üzerinde paketler halinde kullanıcılara sunuluyor. Dağıtımların en önemli sorumluluklarından biri de kullanıcılarına yazılımların tüm bağımlılıklarıyla birlikte güvenilir ve güncel paketlerin bulunduğu bir repo sunmaktır. Bu sayede bizler ekstra çaba sarf etmeden istediğimiz yazılımı mevcut sistemimize güvenli şekilde kurabiliyoruz. 
+Paket dediğimiz yapı, ilgili aracın kurulacağı sisteme tam olarak uyumlu şekilde önceden hazırlanmış dosyalarının paket haline getirilip kullanıcılara sunulmasıdır. Bu paket içinde aracın çalıştırılabilir dosyaları, kütüphane dosyaları veya dokümantasyon dosyaları gibi ilgili aracın tüm dosyaları önceden derlenmiş yani hazırlanmış şekilde geliyor. Dolayısıyla bizlerin kaynak koddan derlemeyle uğraşmamız gerekmiyor. Derlenmiş yani çalıştırılabilir hale getirilmiş dosyalar zaten paketin içinde bulunuyor. Tek yapmamız gereken bu paketi temin edip, paketi kurabilecek aracı kullanmaktır. Paketlerin herkes tarafından güvenli şekilde temin edilebilmesi için de bu paketler sunucular üzerinden herkesin erişimine açık şekilde paylaşılıyor. Geliştiricilerin kendi yazılım paketlerini sunduğu kendilerine ait sunucuları olmakla birlikte bir de dağıtımların çeşitli paketleri bir araya toparlayıp tek bir sunucu üzerinden sunduğu “repository” yani “repo” yaklaşımı da bulunuyor. Zaten buradaki “repository” ifadesi "depo" ya da "ambar" anlamına geliyor ve kısaca “repo” olarak ifade ediliyor. Birçok farklı paket tek bir sunucuda tutulduğu için bu sunucu depo görevi görüyor buna da İngilizce olarak repo deniyor. Örneğin ben Kali dağıtımını kullandığım için kali’nin resmi repo adresi üzerinden Kali tarafından denetlenip sunucuya eklenmiş olan stabil yazılım paketlerine kolayca ulaşıp bunları indirebilirim. Zaten bir aracın kurulabilmesi için gereken ek bağımlılıklar dağıtım geliştiricileri tarafından bilindiği için bu bağımlılıkların paketleri de mutlaka repoda bulunuyor. Yani bir yazılımın kurulması için gereken tüm ek bileşenler de repolar üzerinde paketler halinde kullanıcılara sunuluyor. Dağıtımların en önemli sorumluluklarından biri de kullanıcılarına yazılımların tüm bağımlılıklarıyla birlikte güvenilir ve güncel paketlerin bulunduğu bir repo sunmaktır. Bu sayede bizler ekstra çaba sarf etmeden istediğimiz yazılımı mevcut sistemimize güvenli şekilde kurabiliyoruz. 
 
 Yani uzun lafın kısası, Linux'a yeni bir program yüklemek ilk günlerine oranla şimdilerde inanılmaz derecede kolay. 
 
@@ -233,7 +233,7 @@ Henüz paketi kurmadan önce paketin içeriği hakkında bilgi almak istersek �
   By installing this app, you agree to our Terms of Service (https://zoom.us/terms) and Privacy Statement (https://zoom.us/privacy).
 ```
 
-Bakın adlığım çıktıda paketin ismi, sürümü, üreticisi kurulu boyutu ve bağımlılıkları gibi pek çok bilgiyi görebiliyorum. Ayrıca bu paketin işleviyle ve amacıyla ilgili açıklamalar da bulunuyor. İşte bu bilgi alma seçeneğini bir paketin özellikleri hakkında bilgi almak ve paketi tanımak için kullanabiliyoruz. Zaten bilgi alma seçeneği yani "`I`" “**i**nfo” ifadesinin kısaltmasından geldiği için kolay akılda kalan bir seçenek.
+Bakın aldığım çıktıda paketin ismi, sürümü, üreticisi kurulu boyutu ve bağımlılıkları gibi pek çok bilgiyi görebiliyorum. Ayrıca bu paketin işleviyle ve amacıyla ilgili açıklamalar da bulunuyor. İşte bu bilgi alma seçeneğini bir paketin özellikleri hakkında bilgi almak ve paketi tanımak için kullanabiliyoruz. Zaten bilgi alma seçeneği yani "`I`" “**i**nfo” ifadesinin kısaltmasından geldiği için kolay akılda kalan bir seçenek.
 
 Ayrıca tek bir paket yerine istersek sistemde kurulu olan tüm paketler hakkında da bilgi alabiliriz. Yani mevcut sistemdeki paketleri listeleyebiliriz. 
 
@@ -391,7 +391,7 @@ Ben hep `apt` aracı olarak ifade ettim ancak `apt` tek bir komuttan ibaret değ
 
 Ayrıca sık kullanılan `apt-get` ve `apt-cache` araçlarını tek bir araçta birleştiren `apt` adlı kullanıcı dostu bir yardımcı araç da bulunuyor. Yani `apt-get` ve `apt-cache` komutları ile uzun uzadıya komut girmek yerine yalnızca `apt` komutu ile aynı işlevleri de yerine getirebiliyoruz.
 
-Ben `apt` aracını çok daha kolay ve kullanışlı bulduğum için sıklıkla kullanıyorum. Ancak bazı eski sistemlerde `apt` aracıyla karşılaşmayabilirsiniz. Bu sebeple en azından bahsetmiş olduğum üç temel yardımcı araçtan haberdar olmanız kesinlikle yararınıza olacaktır. Ayrıca zaten geçmişten beri çok uzun süredir `apt-get` ve `apt-cache` araçları kullanıldığı için araştırma yaptığınızda bu komutların yer aldığı bir çok kaynakla karşılamanız da kaçınılmaz olacak. Yani aktif olarak kullanmak istemeseniz bile bilmeniz gerekiyor.
+Ben `apt` aracını çok daha kolay ve kullanışlı bulduğum için sıklıkla kullanıyorum. Ancak bazı eski sistemlerde `apt` aracıyla karşılaşmayabilirsiniz. Bu sebeple en azından bahsetmiş olduğum üç temel yardımcı araçtan haberdar olmanız kesinlikle yararınıza olacaktır. Ayrıca zaten geçmişten beri çok uzun süredir `apt-get` ve `apt-cache` araçları kullanıldığı için araştırma yaptığınızda bu komutların yer aldığı birçok kaynakla karşılaşmanız da kaçınılmaz olacak. Yani aktif olarak kullanmak istemeseniz bile bilmeniz gerekiyor.
 
 Tamamdır **apt** ile ilgili bilmemiz gereken temel kavramlardan bahsettiğimize göre gelin anlatımlara paket indekslerini güncelleme ile başlayalım.
 
@@ -591,7 +591,7 @@ Neticede `apt` aracı ile kurmuş olduğumuz `leafpad` aracının kaldırma işl
 bash: /usr/bin/leafpad: No such file or directory
 ```
 
-Bakın leafpad aracının çalıştırılabilir dosyası “***/usr/bin/leafpad***“ konumundaymış ama silindiği için “böyle bir dosya veya dizin yok” şeklinde hata aldık. Yani aracımızın kaldırıldığınız bizzat teyit ettik. Fakat burada dikkatimizi çekene detay, araç kaldırılmış olmasına rağmen araçla ilgili konfigürasyonların hala duruyor olması. Aksi halde buradaki bu çıktıyı almamız gerekirdi. Bu durumda araçlardan geriye kalan tüm konfigürasyonları temizlememiz gerek.
+Bakın leafpad aracının çalıştırılabilir dosyası “***/usr/bin/leafpad***“ konumundaymış ama silindiği için “böyle bir dosya veya dizin yok” şeklinde hata aldık. Yani aracımızın kaldırıldığını bizzat teyit ettik. Fakat burada dikkatimizi çeken detay, araç kaldırılmış olmasına rağmen araçla ilgili konfigürasyonların hâlâ duruyor olması. Aksi halde buradaki bu çıktıyı almamız gerekirdi. Bu durumda araçlardan geriye kalan tüm konfigürasyonları temizlememiz gerek.
 
 ## Konfigürasyonların Temizlenmesi
 
@@ -625,7 +625,7 @@ Kaldırma işlemiyle ilgili son bir detaydan bahsetmek istiyorum.
 
 Ben kurduğum aracı, `apt autoremove` komutu ile sildikten sonra `apt autopurge` seçeneğini kullandım ancak `autopurge` seçeneği tek başına kullanıldığında paketler de dahil tüm dosyaları silebiliyor. Yani önce `remove` ya da `autoremove` sonra `autopurge` seçeneğini kullanmak zorunda değilsiniz. Her şeyi silmek istiyorsanız `apt autopurge` seçeneğini kullanabilirsiniz.
 
-Ben yalnızca daha önce silmiş olduğunu ama hala konfigürasyonları dosyaları bulunanları nasıl temizleyeceğinizi göstermek için ayrı ayrı ele aldım.
+Ben yalnızca daha önce silmiş olduğum ama hâlâ konfigürasyon dosyaları bulunanları nasıl temizleyeceğinizi göstermek için ayrı ayrı ele aldım.
 
 Kaldırma işlemini de netleştirdiğimize göre şimdi bir diğer önemli konu olan paket bağımlılıkların düzeltilmesinden bahsederek devam edelim.
 
@@ -633,7 +633,7 @@ Kaldırma işlemini de netleştirdiğimize göre şimdi bir diğer önemli konu 
 
 Bağımlılık kavramını defalarca dile getirdik. Bir aracın çalışması için çoğunlukla birden fazla ek pakete ihtiyacı vardır. Yani araçların bağımlılıkları vardır. Ve bu bağımlılıklar hatalı işlemler sonucu bozulabilir. 
 
-Hatalı işlemeler sonucu sistem üzerindeki araçların bağımlılıklarının olduğu paketleri sildiysek veya zarar verdiysek bu bağımlılık sorunlarını çözülmesi gerekiyor. `apt` aracı da bu durum için bizlere “**f**ix” yani “düzeltme” ifadesinin kısalmasından gelen `f` seçeneğini sunuyor. 
+Hatalı işlemler sonucu sistem üzerindeki araçların bağımlılıklarının olduğu paketleri sildiysek veya zarar verdiysek bu bağımlılık sorunlarını çözülmesi gerekiyor. `apt` aracı da bu durum için bizlere “**f**ix” yani “düzeltme” ifadesinin kısalmasından gelen `f` seçeneğini sunuyor. 
 
 Örneğin benim sistemimde vim aracı kurulu. Ve bu aracın çalışabilmesi için de vim-runtime isimli bir pakete ihtiyacı var, yani vim aracının bağımlılığı. Dolayısıyla ben `vim` aracıyla birlikte yüklenmiş olan `vim-runtime` paketini yani `vim` aracının bağımlılığı olan bir paketi silersem `vim` aracı düzgün çalışmayabilir. 
 
@@ -1148,7 +1148,7 @@ Ben Red Hat tabanlı bir dağıtım üzerinden bu dersleri takip ettiğinizi var
 
 # RPM
 
-`rpm`, Red Hat tabanlı dağıtımlardaki paketleri yönetmek için geliştirilmiş olan temel bir araçtır. Debian dağıtımlarındaki `dpkg` aracının Red Hat dağıtımlarındaki karşılığı olduğundan zaten bahsettik. Şimdi lafı daha fazla uzatmandan paket kurulumlarının nasıl yapılabileceğiyle başlayabiliriz.
+`rpm`, Red Hat tabanlı dağıtımlardaki paketleri yönetmek için geliştirilmiş olan temel bir araçtır. Debian dağıtımlarındaki `dpkg` aracının Red Hat dağıtımlarındaki karşılığı olduğundan zaten bahsettik. Şimdi lafı daha fazla uzatmadan paket kurulumlarının nasıl yapılabileceğiyle başlayabiliriz.
 
 ## `rpm` ile Paket Kurulumu
 

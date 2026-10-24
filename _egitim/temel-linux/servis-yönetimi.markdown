@@ -487,7 +487,7 @@ Executing: /lib/systemd/systemd-sysv-install enable apache2
 </code></pre></div></div>
 
 
-<p class="mavi">Bakın multi-user.target birimi altına bu servis sembolik olan bağlanmış oldu. Bu sayede sistem multi-user.target birimi ile başlatılırken bu servis de otomatik olarak başlatılıyor olacak.</p>
+<p class="mavi">Bakın multi-user.target birimi altına bu servis sembolik olarak bağlanmış oldu. Bu sayede sistem multi-user.target birimi ile başlatılırken bu servis de otomatik olarak başlatılıyor olacak.</p>
 
 Eğer bu birimi devredışı bırakırsak da bu sembolik link silinecek. Hemen deneyelim.
 
@@ -498,7 +498,7 @@ Executing: /lib/systemd/systemd-sysv-install disable apache2
 <span class="kirmizi">Removed /etc/systemd/system/multi-user.target.wants/apache2.service.</span>
 </code></pre></div></div>
 
-<p class="kirmizi">İlgili sembolik linkin silinmesiyle bu servis de pasif konumuna geçerek, mult-user.target birimi ile ilişkisi kesilmiş oldu. Bu sebeple sistem başlangıcında bu servis birimi otomatik olarak başlatılmayacak.</p>
+<p class="kirmizi">İlgili sembolik linkin silinmesiyle bu servis de pasif konumuna geçerek, multi-user.target birimi ile ilişkisi kesilmiş oldu. Bu sebeple sistem başlangıcında bu servis birimi otomatik olarak başlatılmayacak.</p>
 
 Ayrıca ben örnek olarak **graphical.target** yerine **multi-user.target** birimini varsayılan target birimi olarak ayarladım ama aslında **graphical.target** birimi de arkaplanda **multi-user.target** birimini kullanıyor. Tek fark grafiksel kullanıcı arayüzü için gerekli olan ek birimleri de dahil etmiş olması. Bu durumu teyit etmek için `cat /lib/systemd/system/graphical.target` komutu ile **graphical.target** birim dosyasını inceleyebiliriz.
 
@@ -528,7 +528,7 @@ AllowIsolate=yes
 
 **`Requires=multi-user.target`**: Bu satır, **kesin bağımlılığı** belirtiyor. Yani, mevcut birim çalıştırılmadan önce **multi-user.target** birimi de çalıştırılmalıdır. Eğer **multi-user.target** çalıştırılamazsa, bu birim yani **graphical.target** birimi de çalıştırılmayacaktır.
 
-**`Wants=display-manager.service`**: Bu satır, birim dosyanın **display-manager.service** birimini bağımlılık olarak **istediğini** belirtir. **`Requires`**'dan farklı olarak, **`Wants`** bağımlılığı zorunlu kılmaz. Eğer display-manager.service mevcut değilse, bu birim hala çalıştırılabilir. Ancak eğer varsa, display-manager.service ile birlikte çalışacaktır.
+**`Wants=display-manager.service`**: Bu satır, birim dosyanın **display-manager.service** birimini bağımlılık olarak **istediğini** belirtir. **`Requires`**'dan farklı olarak, **`Wants`** bağımlılığı zorunlu kılmaz. Eğer display-manager.service mevcut değilse, bu birim hâlâ çalıştırılabilir. Ancak eğer varsa, display-manager.service ile birlikte çalışacaktır.
 
 **`Conflicts=rescue.service rescue.target`**: Bu satır, birim dosyanın **rescue.service** veya **rescue.target** ile **çakışmaması** gerektiğini belirtir. Yani, eğer rescue.service veya rescue.target çalışıyorsa, bu birim çalıştırılmaz.
 

@@ -23,9 +23,9 @@ Burada bahsi geçen “**protokol**” kelimesi aslında “**ortak iletişim y�
 
 Söz konusu “ağ” olduğunda da, benzer şekilde cihazların birbiri ile iletişim kurabilmesi için takip etmesi gereken kurallar yani çeşitli protokoller vardır. Bunlar da “**OSI Model**” olarak tek bir çatı altında toplanıp standart kabul edilmiş kurallardır. Bu kuralları kabul eden ve uygulayan tüm cihazları birbiri ile haberleştirmek mümkün. Yani örneğin Windows sistemi ile Linux sistemi birbiri ile haberleşebilir ya da X marka bir ağ kartı Y marka bir ağ kartıyla veri alışverişinde bulunabilir. Çünkü OSI modeline uyan tüm cihazlar iletişim için gereken kuralları bilir ve protokole uygun hareket ederler. 
 
-OSI modelinde 7 katman bulunuyor. Bu katmanların her biri veri iletişimi sürecindeki belirli görevleri ve kuralları tanımlıyor. Biz sırasıyla her katmadan kısaca bahsedeceğiz. 
+OSI modelinde 7 katman bulunuyor. Bu katmanların her biri veri iletişimi sürecindeki belirli görevleri ve kuralları tanımlıyor. Biz sırasıyla her katmandan kısaca bahsedeceğiz. 
 
-Anlatımlara geçmeden önce buradaki anlatımların amacının OSI modelini ezberlemek olmadığının belirtmek istiyorum. Tek amacımız ileride tekrar tekrar göreceğimiz bu modellin var oluş amacını kavrayabilmek. Yani bu modelin, ağ dediğimiz yapıdaki rollerini farkında olmamız yeterli.
+Anlatımlara geçmeden önce buradaki anlatımların amacının OSI modelini ezberlemek olmadığını belirtmek istiyorum. Tek amacımız ileride tekrar tekrar göreceğimiz bu modelin var oluş amacını kavrayabilmek. Yani bu modelin, ağ dediğimiz yapıdaki rollerini farkında olmamız yeterli.
 
 # Layer 1 - Physical
 
@@ -53,7 +53,7 @@ Fiziksel katmandan gelen verilerin doğru hedeflere iletilebilmesi için de MAC 
 <p class="mavi"><strong>ℹ️ Not:</strong> Görselleştirmeler sırasında MAC adresleri kısaltılarak, sembolik olarak eklenmiştir. </p>
 
 
-Genellikle lokal ağımız dışında diğer ağlardaki cihazlar ile iletişime geçmek istediğimizde, karşılıklı iletişimi birden fazla router aygıtı üzerinden geçerek gerçekleştiriyoruz. Genellikle bu aradaki cihazlar da router aygıtları oluyor. Zaten Router ayıtlarının birden fazla ağı birbirine bağladığından daha önce bahsettik. Router aygıtları da ağlara bağlanırken NIC yani ağ kartları kullandığı ve her bir ağ kartının da benzersiz bir MAC adresi olduğu için aslında aşağıdaki gibi, veriler fiziksel kanaldan MAC adresleri yardımıyla bir ağ kartından bir diğerine adım adım aktarılıyor.
+Genellikle lokal ağımız dışında diğer ağlardaki cihazlar ile iletişime geçmek istediğimizde, karşılıklı iletişimi birden fazla router aygıtı üzerinden geçerek gerçekleştiriyoruz. Genellikle bu aradaki cihazlar da router aygıtları oluyor. Zaten Router aygıtlarının birden fazla ağı birbirine bağladığından daha önce bahsettik. Router aygıtları da ağlara bağlanırken NIC yani ağ kartları kullandığı ve her bir ağ kartının da benzersiz bir MAC adresi olduğu için aslında aşağıdaki gibi, veriler fiziksel kanaldan MAC adresleri yardımıyla bir ağ kartından bir diğerine adım adım aktarılıyor.
 
 ![hop-to-hop.webp]({{ site.url }}/egitim/temel-network/osi-modeli/hop-to-hop.webp){:class="responsive img-zoomable"}
 Eğer açıklamalar şimdilik biraz karmaşık geldiyse hiç merak etmeyin. İleride MAC adresinin kullanımına örnekler üzerinden değindiğimizde bu durum çok daha anlaşılır olacak.

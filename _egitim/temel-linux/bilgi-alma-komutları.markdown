@@ -56,7 +56,7 @@ sudo apt install ncal
 Do you want to install it? (N/y)
 ```
 
-Bakın böyle bir komut olmadığı, eğer istersek bu araçla ilişkili olan `ncal` paketinin kurulabileceği belirtiliyor. Buradaki komutu “y” ile onaylayarak ya da kendimiz de buradaki `sudo apt install ncal` komutunu girerek kurulumu yapabiliriz. Eğer size bu şekilde sorulmadıysa ve sisteminizde yüklü değilse, debian tabanlı dağıtımınıza kurmak için siz de buradaki komutu kullanabilirsiniz. Ben “y” ile aracın kurulumunu onaylıyorum ve kullanıcı hesabımın parolasını girip kurulumu başlatılıyorum.
+Bakın böyle bir komut olmadığı, eğer istersek bu araçla ilişkili olan `ncal` paketinin kurulabileceği belirtiliyor. Buradaki komutu “y” ile onaylayarak ya da kendimiz de buradaki `sudo apt install ncal` komutunu girerek kurulumu yapabiliriz. Eğer size bu şekilde sorulmadıysa ve sisteminizde yüklü değilse, debian tabanlı dağıtımınıza kurmak için siz de buradaki komutu kullanabilirsiniz. Ben “y” ile aracın kurulumunu onaylıyorum ve kullanıcı hesabımın parolasını girip kurulumu başlatıyorum.
 
 ```bash
 └─$ cal
@@ -416,7 +416,7 @@ Release:        2022.1
 Codename:       kali-rolling
 ```
 
-Bakın çıktılarda, dağıtıcı kimliği, kullandığım dağıtım, sürümü, kodadı gibi detaylar bastırıldı. Bu bilgiler mevcut dağıtım hakkında standart düzende bilgiler sunuyor. Buradaki bilgiler sayesinde mevcut dağıtımın tam olarak hangi sürüm olduğunu anlayabiliyorum.
+Bakın çıktılarda, dağıtıcı kimliği, kullandığım dağıtım, sürümü, kod adı gibi detaylar bastırıldı. Bu bilgiler mevcut dağıtım hakkında standart düzende bilgiler sunuyor. Buradaki bilgiler sayesinde mevcut dağıtımın tam olarak hangi sürüm olduğunu anlayabiliyorum.
 
 Aldığımız çıktının başındaki “lsb modülü bulunamadı” hatasına takılmayın. Bu hata `lsb_release` aracının kurulu olduğu ama çekirdek modülünün kurulu olmadığını söylüyor. Şart değil ama dilerseniz lsb çekirdek modülünü nasıl kurabileceğinizi araştırıp kolayca kurulum yapabilirsiniz.
 
@@ -462,7 +462,7 @@ ve son 1, 5 ve 15 dakikanın sistem yük ortalamalarını veriyor.
 
 Buradaki yük ortalaması, sistemin 1 5 ve 15 dakikalık son periyottaki meşguliyetini ifade ediyor. Bu çıktılarda sizin sisteminizde yakın zamanda yani son 15 dakikadan son 1 dakikaya doğru yük miktarın arttığı görülüyorsa sistem yükünün artmakta olduğunu düşünebilirsiniz. 
 
-Şu anda benim sistemin yük altında olmadığı için yani çoğunlukla bekleme modunda olduğu için buradaki değerler sıfıra yakın gözüküyor. Örneğin yük durumunu gözlemlemek `echo {1..999999}` şeklinde komutumuzu girip sistemi suni olarak biraz daha yük altında bırakabiliriz. 
+Şu anda benim sistemin yük altında olmadığı için yani çoğunlukla bekleme modunda olduğu için buradaki değerler sıfıra yakın gözüküyor. Örneğin yük durumunu gözlemlemek için `echo {1..999999}` şeklinde komutumuzu girip sistemi suni olarak biraz daha yük altında bırakabiliriz. 
 
 ```bash
 └─$ echo {1..9999999}
@@ -480,7 +480,7 @@ Burada dikkat etmeniz gereken detay Linux'ta yük ortalamaları yalnızca CPU'la
 
 Özetleyecek olursak, eğer sizdeki çıktılarda sistem yükü benim ilk aldığım çıktıda olduğu gibi düşük veya 0 olarak gözüküyorsa, bu durum sisteminizin bu kısa periyotta genellikle beklemede olduğunun bilgisini veriyordur. Eğer yakın zaman aralığında artış görülüyorsa da bu sisteminizin gittikçe daha fazla yük altında kaldığına işaret ediyordur. 
 
-Eğer `uptime` komutundaki bu gibi detayları görmek istemezsek yani bu çıktı yerine yalnızca sistemin ne kadar süredir açık olduğunu daha okunaklı şekilde görmek istersek “**p**retty” ifadesinin kısalması olan `p` seçeneğini de kullanabiliriz. 
+Eğer `uptime` komutundaki bu gibi detayları görmek istemezsek yani bu çıktı yerine yalnızca sistemin ne kadar süredir açık olduğunu daha okunaklı şekilde görmek istersek “**p**retty” ifadesinin kısaltması olan `p` seçeneğini de kullanabiliriz. 
 
 ```bash
 └─$ uptime -p                                                    
@@ -551,7 +551,7 @@ Swap:         998396           0      998396
 ^C
 ```
 
-Gördüğünüz gibi ben durduruncaya kadar 3 saniyede bir ilgili bilgileri konsona bastırmış oldu. 
+Gördüğünüz gibi ben durduruncaya kadar 3 saniyede bir ilgili bilgileri konsola bastırmış oldu. 
 
 Eğer istersek buradaki gibi yalnızca saniye aralığı belirtmek yerine basılma sayısını da tam olarak belirtebiliriz. Yani biz durdurana kadar değil bizim önceden belirttiğimiz sayı kadar çıktı basılır. Bunun için “**c**ount” yani “sayma” anlamındaki ifadenin kısaltmasından gelen `c` seçeneği kullanabiliriz. Ben `free -s 2 -c 4` komutu ile 2 saniye aralıkla 4 kez çıktıların bastırılmasını istiyorum.
 
@@ -578,7 +578,7 @@ Swap:         998396           0      998396
 
 Bu seçenekler dışında `free` komutunun yardım sayfasında yer alan seçenekler de zaten standart kullanımdaki çıktıları sınırlamak veya genişletmek için kullanılan ek özelliklerdir. Dilerseniz buradaki seçenekler ile çıktıları istediğiniz formda bastırabilirsiniz.
 
-Ayrıca aldığımıza çıktılarda yer alan “shared” sütunu eskiye dönük uyumluluk için mevcut olan ve günümüzde geçerli kullanımı olmayan bir sütun. Buffer ve cache kavramlarının ne ifade ettiğini bilmiyorsanız ayrıca araştırıp öğrenebilirsiniz. En özet haliyle, tekrar kullanılacak verilerin bellekte tutularak hızlı erişimi mümkün kılan bir mekanizma. Buradaki buff/cache bilgisi de bu amaçla bellekte tutulan veri miktarını belirtiyor. Daha fazla detayı öğrenmek isterseniz ek araştırma yapabilirsiniz zira, tam anlaşılmaları bu bölümde açıklanamayacak kadar uzun sürebilir. Eğer profesyonel anlamda sistem yönetimiyle ilgili değilseniz bu detay sizin için zaten önemli değil. Diğer sütunlardaki veriler de oldukça açık şekilde “toplam”, “kullanılan” ve “boştaki” bellek miktarları hakkında bilgi sunuyor.
+Ayrıca aldığımız çıktılarda yer alan “shared” sütunu eskiye dönük uyumluluk için mevcut olan ve günümüzde geçerli kullanımı olmayan bir sütun. Buffer ve cache kavramlarının ne ifade ettiğini bilmiyorsanız ayrıca araştırıp öğrenebilirsiniz. En özet haliyle, tekrar kullanılacak verilerin bellekte tutularak hızlı erişimi mümkün kılan bir mekanizma. Buradaki buff/cache bilgisi de bu amaçla bellekte tutulan veri miktarını belirtiyor. Daha fazla detayı öğrenmek isterseniz ek araştırma yapabilirsiniz zira, tam anlaşılmaları bu bölümde açıklanamayacak kadar uzun sürebilir. Eğer profesyonel anlamda sistem yönetimiyle ilgili değilseniz bu detay sizin için zaten önemli değil. Diğer sütunlardaki veriler de oldukça açık şekilde “toplam”, “kullanılan” ve “boştaki” bellek miktarları hakkında bilgi sunuyor.
 
 ## `du` Komutu
 
@@ -625,7 +625,7 @@ Ayrıca aldığımıza çıktılarda yer alan “shared” sütunu eskiye dönü
 389344  .
 ```
 
-Çıktılar çok uzun olduğu için buraya kısaltarak ekledim fakat alt dizinler de dahil tüm dizinlerdeki klasörlerin bastırıldığı ve en altta toplam disk boyutunun verdiğini görebiliyoruz.
+Çıktılar çok uzun olduğu için buraya kısaltarak ekledim fakat alt dizinler de dahil tüm dizinlerdeki klasörlerin bastırıldığı ve en altta toplam disk boyutunun verildiğini görebiliyoruz.
 
 Fark ettiyseniz klasörler içerisinde yer alan dosyaların isimleri bastırılmadı ama tabii ki bu dosyaların boyutları bulundukları klasörler aracılığıyla burada belirtiliyor. Bu sayede çıktılar çok uzamadan mevcut dizin altındaki tüm klasörlerin büyüklüklerini listeleyebiliyoruz.
 
@@ -647,7 +647,7 @@ Bakın dosyanın kaç kilobayt disk alanı kapladığı bastırıldı. Dilersek 
 58M     /home/taylan/Downloads/linux.zip
 ```
 
-Bakın dosyanın tam dizin adresini belirttiğimiz sürece sorunsuzca istediğimiz dosyaların boyutlarını öğrenebiliyoruz. Dosya üzerinde kullanımı gayet basit ve yalın. Birde klasörler üzerinde gözlemleyelim. Ben gözlemleyebilmek için içerisinde web sitesinin dosyalarını ve iç içe klasörler barındıran Downloads dizini atlındaki “linux-dersleri” klasörünün disk üzerinde kapladığı alanı `du -h ~/Downloads/linux-dersleri` komutu ile sorguluyorum.
+Bakın dosyanın tam dizin adresini belirttiğimiz sürece sorunsuzca istediğimiz dosyaların boyutlarını öğrenebiliyoruz. Dosya üzerinde kullanımı gayet basit ve yalın. Bir de klasörler üzerinde gözlemleyelim. Ben gözlemleyebilmek için içerisinde web sitesinin dosyalarını ve iç içe klasörler barındıran Downloads dizini atlındaki “linux-dersleri” klasörünün disk üzerinde kapladığı alanı `du -h ~/Downloads/linux-dersleri` komutu ile sorguluyorum.
 
 ```bash
 └─$ du -h ~/Downloads/linux-dersleri                             
@@ -703,7 +703,7 @@ Eğer klasörler ile birlikte dosyaların da bastırılmasını istersek `a` se�
 63M     /home/taylan/Downloads/linux-dersleri
 ```
 
-Çıtılar uzun olduğu için ben kısaltarak buraya ekledim fakat gördüğünüz gibi `a` seçeneği sayesinde klasörün içindeki tüm dosya ve dizinlerin disk üzerinde kapladıkları alanın bilgisini kolayca bu çıktıdan öğrenebiliyoruz.
+Çıktılar uzun olduğu için ben kısaltarak buraya ekledim fakat gördüğünüz gibi `a` seçeneği sayesinde klasörün içindeki tüm dosya ve dizinlerin disk üzerinde kapladıkları alanın bilgisini kolayca bu çıktıdan öğrenebiliyoruz.
 
 İlgili dizindeki tüm içeriği bastırmak dışında ayrıca dilersek yalnızca belirttiğimiz klasörün boyutunu öğrenmek için “**s**ummarize” yani “özetlemek” ifadesinin kısalmasından gelen `s` seçeneğini de kullanabiliriz. Ben yine “***linux-dersleri***” klasörü üzerinde denemek istiyorum. Bakın yalnızca bu klasörün toplam boyutunu bastırdım.
 
@@ -747,7 +747,7 @@ Bus 001 Device 002: ID 80ee:0021 VirtualBox USB Tablet
 Bus 001 Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub
 ```
 
-Bakın benim sisteminde şu anda bu aygıtlar USB ile bağlı gözüküyor. Ben sanal makine üzerinden çalıştığım için çok aygıt listelenmedi ancak normalde USB ile bağlı olan aygıtlar burada listeleniyor. Örneğin USB üzerinden harici bir wifi kartı taktığınızda aygıt hakkında buradan bilgi alabilirsiniz. USB wifi aygıtınız sistem tarafından tanınmıyorsa, aygıtınızı takıp `lsusb` komutu ile bu liste üzerinden aygıtın buradaki ID sine bakabilirsiniz. Bu id üzerinden internette araştırma yaparak uygun aygıt sürücüsü olup olmadığını sorgulayabilirsiniz. Kullanmakta olduğunu dağıtıma kurmak için forumlarda mutlaka daha önce pek çok kişi soru sorup yanıt almıştır. Eğer sorulmadıysa siz de sorabilirsiniz. Ayrıca github gibi harici kaynaklardan da aygıt sürücülerini araştırabilirsiniz.
+Bakın benim sisteminde şu anda bu aygıtlar USB ile bağlı gözüküyor. Ben sanal makine üzerinden çalıştığım için çok aygıt listelenmedi ancak normalde USB ile bağlı olan aygıtlar burada listeleniyor. Örneğin USB üzerinden harici bir wifi kartı taktığınızda aygıt hakkında buradan bilgi alabilirsiniz. USB wifi aygıtınız sistem tarafından tanınmıyorsa, aygıtınızı takıp `lsusb` komutu ile bu liste üzerinden aygıtın buradaki ID sine bakabilirsiniz. Bu id üzerinden internette araştırma yaparak uygun aygıt sürücüsü olup olmadığını sorgulayabilirsiniz. Kullanmakta olduğunuz dağıtıma kurmak için forumlarda mutlaka daha önce pek çok kişi soru sorup yanıt almıştır. Eğer sorulmadıysa siz de sorabilirsiniz. Ayrıca github gibi harici kaynaklardan da aygıt sürücülerini araştırabilirsiniz.
 
 Neticede `lsusb` komutu sayesinde gerektiğinde sistemimize bağlı olan USB aygıtları hakkında bilgi almamız mümkün oluyor.
 
@@ -776,7 +776,7 @@ Eğer sisteme bağlı bulunan bütün aygıtları listelemek istersek de `lshw` 
 bash: /usr/bin/lshw: No such file or directory
 ```
 
-Benim sistemimde bu araç yüklü değişmiş. Kurmak için `sudo apt install lshw -y` komutunu girelim.
+Benim sistemimde bu araç yüklü değilmiş. Kurmak için `sudo apt install lshw -y` komutunu girelim.
 
 ```bash
 └─$ sudo apt install lshw
@@ -875,6 +875,6 @@ Ayrıca benim kısaltmış olmam dışında eğer sizin aldığınız çıktıla
 
 En nihayetinde bence komut satırı üzerinden mevcut sistemin aygıtları hakkında bilgi almak için bu bahsetmiş olduğumuz komutlar çoğu durumda yeterli. 
 
-Ben özellikler değinmeyeceğim ama hem bu bahsetmiş olduğumuz komutların ek seçenekleri hem de ayrıca bir çok aygıt hakkında bilgi sunan ek komutlar da mevcut. Merak ediyorsanız biraz araştırma ile diğer komutları ve seçeneklere kolayca ulaşabilirsiniz. Örneğin bizim bahsetmiş olduğumuz komutların yardım sayfalarına bakarak diğer seçenekler hakkında bilgi sahibi olup, sonuçlarını bizzat test ederek gözlemleyebilirsiniz. 
+Ben özelliklere değinmeyeceğim ama hem bu bahsetmiş olduğumuz komutların ek seçenekleri hem de ayrıca birçok aygıt hakkında bilgi sunan ek komutlar da mevcut. Merak ediyorsanız biraz araştırma ile diğer komutları ve seçeneklere kolayca ulaşabilirsiniz. Örneğin bizim bahsetmiş olduğumuz komutların yardım sayfalarına bakarak diğer seçenekler hakkında bilgi sahibi olup, sonuçlarını bizzat test ederek gözlemleyebilirsiniz. 
 
 Bu bölümde ele aldığımız komutlar genel bilgi alma komutları olduğu için çok fazla üzerine düşüp uzun açıklamalar yapmak istemedim çünkü pek çok farklı türde bilgi sunan komutları ele aldığımız için detaylıca bahsetmeye kalksaydık bu bölüm çok uzun sürebilirdi. Üstelik çoğu ek araç temel sistem yönetimi için bilmenizin şart olmadığı ek bilgi araçları. Ben sadece en temel bilgi alma komutlarının en temel işlevlerini odaklandım. Bu sayede daha fazlası için gerektiğinde yardım sayfaları ve internet araştırması ile tüm sorularınıza yanıt bulabilirsiniz.

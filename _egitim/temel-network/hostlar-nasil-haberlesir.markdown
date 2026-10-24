@@ -37,7 +37,7 @@ Aşağıdaki gibi iki LAN ağının birbirine router ile bağlı olduğunu varsa
 
 ![LAN-to-LAN.webp]({{ site.url }}/egitim/temel-network/hostlar/LAN-to-LAN.webp){:class="responsive img-zoomable"}
 
-192.168.1.20 IP numaralı host, 192.168.1.10 IP adresli hosta veri göndermek isterse öncelikle bu hostun MAC adresini öğrenmesi gerek. Bunun için ARP broadcast yayını ile herkese bu IP adresinin MAC adresini sorabilir. Bu ARP paketinde da kendi IP ve MAC adresi ve hedef IP adresi yer alır.
+192.168.1.20 IP numaralı host, 192.168.1.10 IP adresli hosta veri göndermek isterse öncelikle bu hostun MAC adresini öğrenmesi gerek. Bunun için ARP broadcast yayını ile herkese bu IP adresinin MAC adresini sorabilir. Bu ARP paketinde de kendi IP ve MAC adresi ve hedef IP adresi yer alır.
 
 ![ARP-1.webp]({{ site.url }}/egitim/temel-network/hostlar/ARP-1.webp){:class="responsive img-zoomable"}
 
@@ -75,7 +75,7 @@ Host, Router aygıtının MAC adresini öğrenmek üzere ARP ile bu IP adresinin
 
 ![ARP6.webp]({{ site.url }}/egitim/temel-network/hostlar/ARP6.webp){:class="responsive img-zoomable"}
 
-Bu ARP sorgusuna yalnızca hedef IP adresine sahip olan router cevap veriyor. Bu sayede hem router hem de sorgu yapan host birbirilerinin IP ve MAC bilgilerini kendi tablolarına kaydediyorlar. 
+Bu ARP sorgusuna yalnızca hedef IP adresine sahip olan router cevap veriyor. Bu sayede hem router hem de sorgu yapan host birbirlerinin IP ve MAC bilgilerini kendi tablolarına kaydediyorlar. 
 
 ![ARP7.webp]({{ site.url }}/egitim/temel-network/hostlar/ARP7.webp){:class="responsive img-zoomable"}
 

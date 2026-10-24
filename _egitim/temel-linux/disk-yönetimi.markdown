@@ -158,7 +158,7 @@ Bakın dosyanın boyutu 4096 byte'ı sadece biraz geçmiş olmasına rağmen 16 
 
 İşletim sistemi çekirdeğinin kontrolündeki dosya sistemine göre en küçük birim blok olduğu için bir bloğun kısmi bir bölümünü kullanamayız. Çünkü dosya sistemi bloktan daha küçük bir alana adresleme yapamaz. Yani ilk örneğimizde olduğu gibi 1 baytlık dosya için 4096 baytlık blok kullanılmak zorunda. Eğer bu dosyaya yeni veri eklenmezse başka bir dosyayla ilişkili olan herhangi bir veri bu bloğa yazılamaz. Çünkü dosya sistemi bloğun bir kısmına adresleme yapamaz. Yalnızca bloğun bütününe adresleme yapabilir. Zaten inode kavramını ele alırken bu durumdan da bahsetmiştik hatırlarsanız. Yani örneğin bir bloğun bir kısmında X dosyasının verileri bir kısmında da Y dosyasının verileri barındırılamaz. Çünkü barındırılsa bile dosya sistemi, bloktan daha küçük birimleri kontrol edemediği için X ve Y dosyası gibi bir ayrım gözetmeden yalnızca tüm bloğu işaret edebilir. Zaten hatırlarsanız inode değeri de dosyanın içindeki verilerin hangi bloklarda olduğunu söylüyordu. İlgili verilerin, bloğun tam olarak neresinde olduğuna bakılmıyor, komple bloğun kendisi ele alınıyor. Yani özetle veriler dosya sistemi tarafından blok blok ele alınıyor. Bu nedenle bir dosya aslında tüm bloğu tüketmese bile yani tüm bloğu doldurmasa bile, disk üzerindeki bloğa ayrılmış olan sektörlerin bir kısmı boş kalabilir. Dolayısıyla sistemde barındırılacak dosyaların genel boyutlarına göre blok boyutlarının belirlenmesi önemlidir. Eğer çoğunlukla büyük boyutlu dosyalar barındırılacaksa blok boyutları büyük olabilir. Ya da küçük boyutlu dosyalar bulunacaksa da blok boyutları küçük şekilde konfigüre edilebilir.
 
-Ne kadar çok blok olursa, ilgili verilere ulaşması o kadar zaman alırken, disk alanı daha tasarruflu kullanılmış olur. Tersi şekilde blok sayısı az olduğunda da verileri ulaşım hızlıyken, alan tasarrufu mümkün olmayabilir. Bu sebeple aksini gerektiren özel bir durum olmadığı sürece kullanılan dosya sisteminin varsayılan blok boyutu tercih edilmedir. Bu varsayılan değer, ilgili dosya sistemi üzerindeki optimum değer olduğu için çoğunlukla en doğru tercihtir. 
+Ne kadar çok blok olursa, ilgili verilere ulaşması o kadar zaman alırken, disk alanı daha tasarruflu kullanılmış olur. Tersi şekilde blok sayısı az olduğunda da verileri ulaşım hızlıyken, alan tasarrufu mümkün olmayabilir. Bu sebeple aksini gerektiren özel bir durum olmadığı sürece kullanılan dosya sisteminin varsayılan blok boyutu tercih edilmelidir. Bu varsayılan değer, ilgili dosya sistemi üzerindeki optimum değer olduğu için çoğunlukla en doğru tercihtir. 
 
 Şimdilik daha fazla detaya gerek yok. Temel büyüklük ve blok gibi kavramları ele aldığımıza göre artık disk bölümleri hakkında da konuşabiliriz.
 
@@ -168,7 +168,7 @@ Fiziksel diskimizi yazılımsal olarak bölümlere ayırıp farklı amaçlar iç
 
 ## MBR
 
-MBR, artık eskimiş olan ancak hala çok sık karşılaştığımız ve karşılaşmaya devam edeceğimiz disk bölümleme tablosudur. MBR disk bölümleme tablosu maksimum 2 TB'a kadar olan disk boyutlarını destekliyor. Ve MBR disk bölümleme tablosu kullanılarak disk yalnızca 4 birincil bölüme ayrılabiliyor. Yine de birincil bölüm sınırlamasını aşmak için, birincil bölümlerden birini mantıksal bölümlere ayrılan genişletilmiş bölüm olarak da kullanabiliyoruz. Yani MBR bölümleme tablosunda maksimum 3 birincil ve 1 genişletilmiş bölüm üzerinden 12 mantıksal olmak üzere toplam 15 tane bölüm oluşturabiliyoruz. 
+MBR, artık eskimiş olan ancak hâlâ çok sık karşılaştığımız ve karşılaşmaya devam edeceğimiz disk bölümleme tablosudur. MBR disk bölümleme tablosu maksimum 2 TB'a kadar olan disk boyutlarını destekliyor. Ve MBR disk bölümleme tablosu kullanılarak disk yalnızca 4 birincil bölüme ayrılabiliyor. Yine de birincil bölüm sınırlamasını aşmak için, birincil bölümlerden birini mantıksal bölümlere ayrılan genişletilmiş bölüm olarak da kullanabiliyoruz. Yani MBR bölümleme tablosunda maksimum 3 birincil ve 1 genişletilmiş bölüm üzerinden 12 mantıksal olmak üzere toplam 15 tane bölüm oluşturabiliyoruz. 
 
 ![mbr-max.webp]({{ site.url }}/egitim/temel-linux/disk/mbr-max.webp){:class="responsive img-zoomable"}
 
@@ -419,7 +419,7 @@ nvme0n2
 
 Kurulum aşamasında oluşturulan diskler **ext4** ve **swap** dosya sistemlerine sahipler, bu bilgiyi **FSTYPE** sütununa bakarak teyit edebiliyoruz. Buradaki **LABEL** sütunu da bu disk bölümlerine tanımlanan **etiketlerin** gözüktüğü bölüm. Ben herhangi bir etiket tanımlamadığım için şu an boş gözüküyor. **UUID** ise ilgili disk aygıtının **benzersiz kimlik** numarasıdır. Ayrıca dosya sistemlerinin sahip olduğu toplam boyut ve ne kadarının kullanıldığı da buradaki sütunlarda belirtiliyor. Ve elbette ilgili dosya sisteminin hangi dizine bağlı olduğu da “**MOUNTPOINTS**” sütunu altında tam dizin adresi olacak şekilde yazıyor. 
 
-Şimdi burada benim dikkatimi çeken detay, yeni eklediğimiz disklerle ilgili hiç bir çıktının bastırılmamış olması. Aslında bu çok normal çünkü bu diskler üzerinde hiç bir ayarlama yapmadık tamamen tanımsız haldeler. `lsblk` komutunun `f` seçeneği yalnızca blok aygıtlarının dosya sistemleri hakkında bilgi almak için kullanılıyor. Bu yeni disk aygıtlarında da henüz dosya sistemi tanımlı olmadığı için doğal olarak hiç bir çıktı bastırılamadı. Anlatımın devamında disklerimize dosya sistemi eklediğimizde burada görebiliyor olacağız. Diskler üzerinde yönetim gerçekleştirmeye, öncelikle diskleri nasıl bölümleyebileceğimizden bahsederek başlayabiliriz. 
+Şimdi burada benim dikkatimi çeken detay, yeni eklediğimiz disklerle ilgili hiçbir çıktının bastırılmamış olması. Aslında bu çok normal çünkü bu diskler üzerinde hiçbir ayarlama yapmadık tamamen tanımsız haldeler. `lsblk` komutunun `f` seçeneği yalnızca blok aygıtlarının dosya sistemleri hakkında bilgi almak için kullanılıyor. Bu yeni disk aygıtlarında da henüz dosya sistemi tanımlı olmadığı için doğal olarak hiçbir çıktı bastırılamadı. Anlatımın devamında disklerimize dosya sistemi eklediğimizde burada görebiliyor olacağız. Diskler üzerinde yönetim gerçekleştirmeye, öncelikle diskleri nasıl bölümleyebileceğimizden bahsederek başlayabiliriz. 
 
 Bölümleme işlemine geçmeden önce komut satırı üzerinden gerçekleştireceğimiz işlemleri aslında grafiksel arayüzlü çeşitli yazılımlar ile yerine getirebileceğimizi de belirtmek istiyorum. Yine de her zaman grafiksel arayüze erişimimiz olmayabileceği veya kabuk programlama gibi otomatik çözümler için komut satırı araçlarını kullanmamız gerekeceği için öncelikle temel disk yönetim işlerimizi komut satırı üzerinden nasıl gerçekleştirebileceğimizi öğrenmemiz önemli. Zaten temel kavramları komut satırı üzerinden öğrendikten sonra grafiksel arayüze sahip araçları ekstra bir eğitime ihtiyaç duymadan kendi başınıza öğrenip rahatlıkla kullanabilirsiniz.
 
@@ -714,7 +714,7 @@ Command (m for help):
 
 ## Değişiklikleri Kaydetmek
 
-Şu ana kadar `fdisk` aracını kullanarak, yalnızca yapılması gereken değişiklikleri belirtmiş olduk. Eğer şimdiye kadar gerçekleştirmiş olduğumuz değişikliklerin disk üzerinde uygulanmasını istiyorsak `w` karakterini girip <kbd>enter</kbd> ile işlemi onaylamamız gerekiyor. Tersi şekilde, eğer değişiklikleri kaydetmek istemezsek `q` karakterini girip <kbd>enter</kbd> ile onaylayarak diskte hiç bir değişim olmadan `fdisk` aracından çıkabiliriz. Yani şimdiye kadar yaptığımız hiç bir işlem aslında disk üzerinde henüz uygulanmadı. Eğer yaptığınız işlemlerden vazgeçtiyseniz `q` yazıp <kbd>enter</kbd> ile `fdisk` aracını kapatabilirsiniz. 
+Şu ana kadar `fdisk` aracını kullanarak, yalnızca yapılması gereken değişiklikleri belirtmiş olduk. Eğer şimdiye kadar gerçekleştirmiş olduğumuz değişikliklerin disk üzerinde uygulanmasını istiyorsak `w` karakterini girip <kbd>enter</kbd> ile işlemi onaylamamız gerekiyor. Tersi şekilde, eğer değişiklikleri kaydetmek istemezsek `q` karakterini girip <kbd>enter</kbd> ile onaylayarak diskte hiçbir değişim olmadan `fdisk` aracından çıkabiliriz. Yani şimdiye kadar yaptığımız hiçbir işlem aslında disk üzerinde henüz uygulanmadı. Eğer yaptığınız işlemlerden vazgeçtiyseniz `q` yazıp <kbd>enter</kbd> ile `fdisk` aracını kapatabilirsiniz. 
 
 Tersi şekilde yaptığınız değişiklikleri onaylamak isterseniz de `w` yazıp <kbd>enter</kbd> ile onaylayabilirsiniz.
 
@@ -1274,7 +1274,7 @@ Tamamdır, ben diskim için gereken tüm ayarlamayı yaptım. Şimdi dosyayı ka
 └─$ reboot
 ```
 
-Evet sistemim yeninden başlatıldı. Şimdi kontrol etmek için konsolu açıp `lsblk` komutu ile diskleri listeleyelim. 
+Evet sistemim yeniden başlatıldı. Şimdi kontrol etmek için konsolu açıp `lsblk` komutu ile diskleri listeleyelim. 
 
 ```bash
 ┌──(taylan㉿linuxdersleri)-[~]
@@ -1332,7 +1332,7 @@ Neyse, lafı daha fazla uzatmadan bağlı disklerin sistemden çıkarılmasını
 
 # Bağlı Diski Sistemden Çıkarmak | `umount`
 
-Tıpkı USB Flash disklerimizi çıkarmadan önce yaptığımız gibi disk bölümlerini de bağlı oldukları bölümlerden `umount` komutu ile çıkabiliyoruz. Bu sayede disk veya disk bölümü fiziksel olarak bilgisayara bağlı olsa da işletim sistemi katmanında hiç bir kullanıcı bu disk bölümüne ulaşamıyor. Örneğin USB diskinizi sistemden güvenli şekilde çıkarmak isterseniz USB diskin bağlı olduğu konumun tam dizin adresini `umount` komutuna argüman olarak girip, USB diskinizi güvenle sistemden ayırabilirsiniz. Ben denemek için sistem başlangıcında otomatik olarak bağlanmasını sağladığım yeni disk bölümünü çıkarmak istiyorum. Bunun için `sudo umount ~/Desktop/disk` şeklinde komutumu giriyorum. 
+Tıpkı USB Flash disklerimizi çıkarmadan önce yaptığımız gibi disk bölümlerini de bağlı oldukları bölümlerden `umount` komutu ile çıkabiliyoruz. Bu sayede disk veya disk bölümü fiziksel olarak bilgisayara bağlı olsa da işletim sistemi katmanında hiçbir kullanıcı bu disk bölümüne ulaşamıyor. Örneğin USB diskinizi sistemden güvenli şekilde çıkarmak isterseniz USB diskin bağlı olduğu konumun tam dizin adresini `umount` komutuna argüman olarak girip, USB diskinizi güvenle sistemden ayırabilirsiniz. Ben denemek için sistem başlangıcında otomatik olarak bağlanmasını sağladığım yeni disk bölümünü çıkarmak istiyorum. Bunun için `sudo umount ~/Desktop/disk` şeklinde komutumu giriyorum. 
 
 ```bash
 ┌──(taylan㉿linuxdersleri)-[~]

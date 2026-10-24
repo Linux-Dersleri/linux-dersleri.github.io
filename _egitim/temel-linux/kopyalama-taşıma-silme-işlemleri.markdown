@@ -346,7 +346,7 @@ a  b  belgeler  c  d  metinler  metin.txt
 
 Ayrıca ben üzerinde özellikle durmadım ama fark ettiyseniz toplu şekilde dosya silerken bizden ekstra bir onay alınmadan tek seferde tüm dosyalar silinmişti. Bu durum kimi zaman istenmeyen sonuçlara yol açabilir. Önlem olarak eğer istersek silmeden önce her dosya için bizden onay istenmesini sağlayabiliriz. Bu sayede toplu silme işlemlerinde yanlış dosyaları silme riskinden kaçınabiliriz. Örnek senaryomuzda, bir dizin içinde tüm dosyaları silmek üzere konsola `rm *` komutunu girdiğimizi farz edelim. Bu durumda kabuk yıldız işareti sayesinde bulunduğumuz dizindeki tüm dosyaları kapsayacağı için tüm dosyaların silinmesi emrini vermiş oluyoruz.
 
-Örneğin ben şu an içinde bulunduğum “***yeni***” klasörü içerisindeki yer şeyi silmek üzere `rm *` komutunu girebilirim. Fakat ben tüm dosyaları silmek istemiyorum, bazılarını eleyip geri kalanları silmek istiyorum. Bunun için `cp` ve `mv` komutlarında da olduğu gibi `-i` seçeneğini kullanabiliriz. Denemek için komutumuza `-i` seçeneğini de ekleyip bu şekilde girelim.
+Örneğin ben şu an içinde bulunduğum “***yeni***” klasörü içerisindeki her şeyi silmek üzere `rm *` komutunu girebilirim. Fakat ben tüm dosyaları silmek istemiyorum, bazılarını eleyip geri kalanları silmek istiyorum. Bunun için `cp` ve `mv` komutlarında da olduğu gibi `-i` seçeneğini kullanabiliriz. Denemek için komutumuza `-i` seçeneğini de ekleyip bu şekilde girelim.
 
 ```bash
 └─$ ls                                                           
@@ -420,7 +420,7 @@ Gördüğünüz gibi `i` seçeneği sayesinde benden onay alınan klasörler sil
 
 ## İçerisi Dolu Olan Klasörlerin Silinmesi
 
-Şu ana kadar klasörleri silerken hiç bir problem yaşamadık, çünkü klasör içerikleri boştu. Eğer klasörlerin içinde başka dosyalar ve klasörler bulunuyorsa, `rm -d` komutu ile silmemiz mümkün değil. 
+Şu ana kadar klasörleri silerken hiçbir problem yaşamadık, çünkü klasör içerikleri boştu. Eğer klasörlerin içinde başka dosyalar ve klasörler bulunuyorsa, `rm -d` komutu ile silmemiz mümkün değil. 
 
 Mesela teyit etmek için daha önceden oluşturduğum ***Documents*** dizini altındaki klasörümü silmeyi deneyebilirim. 
 
@@ -491,7 +491,7 @@ Eğer herhangi bir dosyayı sildiğinizde o dosyanın tamamen yok olduğunu dü�
 
 ![shred-1.webp]({{ site.url }}/egitim/temel-linux/metin/shred-1.webp){:class="responsive img-zoomable"}
 
-Yani aslında dosya hala disk üzerinde mevcut olmasına rağmen, sadece dosyaya giden bağlantı siliniyor. Bu yöntemin kullanılma nedeni dosyayı gerçekten silmeye oranla çok daha hızlı sonuç vermesidir. Peki ama gerçek silme işleminden kastımız tam olarak ne ?
+Yani aslında dosya hâlâ disk üzerinde mevcut olmasına rağmen, sadece dosyaya giden bağlantı siliniyor. Bu yöntemin kullanılma nedeni dosyayı gerçekten silmeye oranla çok daha hızlı sonuç vermesidir. Peki ama gerçek silme işleminden kastımız tam olarak ne ?
 
 Gerçek silme işlemi dediğimiz kavram; disk üzerinde yer kaplayan her türlü verinin ancak üzerine yeni veriler yazılması ile ortadan kaldırılabilecek olmasını ifade ediyor. 
 
@@ -626,7 +626,7 @@ Ben "**sembolik link**" diyor olacağım ancak farklı kaynaklarda “**soft lin
 
 Daha anlaşılır olması için gerçek bir örnek üzerinden devam edebilmek adına öncelikle nasıl sembolik link oluşturabileceğimizi öğrenelim.
 
-Link oluşturmak için “**l**i**n**k” ifadesinin kısaltmasından gelen `ln` komutunu kullanıyoruz. Sembolik link oluşturmak için de “**s**ymbolic” ifadesinin kısalması olan `s` seçeneğini kullanmamız gerekiyor.
+Link oluşturmak için “**l**i**n**k” ifadesinin kısaltmasından gelen `ln` komutunu kullanıyoruz. Sembolik link oluşturmak için de “**s**ymbolic” ifadesinin kısaltması olan `s` seçeneğini kullanmamız gerekiyor.
 
 Ben test ortamı hazırlamak için öncelikle kendi ev dizinimde `mkdir linkler` komutuyla “***linkler***” isimli bir klasör oluşturup, `echo “deneme” > ~/linkler/metin` komutuyla, bu dizin altında “***metin***” isimli dosyaya “deneme” ifadesini ekliyorum. 
 
@@ -876,11 +876,11 @@ yeni veri
 orijinal ekleme
 ```
 
-Gördüğünüz gibi orijinal dosya silinmiş olmasına rağmen hala disk üzerindeki aynı verilere erişmeye devam edebiliyorum. Çünkü işleyiş aslında aşağıdaki şemadaki gibi.
+Gördüğünüz gibi orijinal dosya silinmiş olmasına rağmen hâlâ disk üzerindeki aynı verilere erişmeye devam edebiliyorum. Çünkü işleyiş aslında aşağıdaki şemadaki gibi.
 
 ![hard-link3.webp]({{ site.url }}/egitim/temel-linux/metin/hard-link3.webp){:class="responsive img-zoomable"}
 
-En nihayetinde gördüğünüz gibi aslında sistemiz üzerindeki standart dosya ve klasörler disk üzerindeki veri bloklarına inode üzerinden yönlendirme yapan bağlantı adresleri. Biz bu bağlantı adresleri yani linkler sayesinde kolay okunabilir isimlerle diskteki verilerimizi düzenle tutup tekrar tekrar erişebiliyoruz.
+En nihayetinde gördüğünüz gibi aslında sistemiz üzerindeki standart dosya ve klasörler disk üzerindeki veri bloklarına inode üzerinden yönlendirme yapan bağlantı adresleri. Biz bu bağlantı adresleri yani linkler sayesinde kolay okunabilir isimlerle diskteki verilerimizi düzenli tutup tekrar tekrar erişebiliyoruz.
 
 Yani katı link oluşturma yaklaşımı sayesinde disk üzerinde tekrar aynı veriler için fazladan depolama alanı harcanmasına gerek kalmadan, dosyaların yedeklerinin alınması mümkün oluyor. Daha önce de silme işleminin aslında verilere ulaşmamızı sağlayan bağlantıların silinmesinden ibaret olduğunu söylemiştik. Eğer verilere ulaşmamızı sağlayan birden fazla katı link olursa, bir katı link silinse bile diskimiz üzerindeki verilere ulaşmaya devam edebiliyoruz. Katı link yaklaşımı tam olarak bu amaçla kullanılıyor. Ve disk üzerinde fazladan depolama alını işgal etmeden yedeklemek için harika bir çözüm.
 

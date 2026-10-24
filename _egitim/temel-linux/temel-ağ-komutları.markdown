@@ -872,7 +872,7 @@ ff02::1 ip6-allnodes
 ff02::2 ip6-allrouters
 ```
 
-Gördüğünüz gibi eski hostname bilgisi hala makinenin kendisini temsil eden 127.0.1.1 adresine yönlendiriliyor. Bu adresi düzeltmek için `sudo nano /etc/hosts` komutu ile dosyamızı açıp, yeni hostname bilgimizi buraya ekleyelim.
+Gördüğünüz gibi eski hostname bilgisi hâlâ makinenin kendisini temsil eden 127.0.1.1 adresine yönlendiriliyor. Bu adresi düzeltmek için `sudo nano /etc/hosts` komutu ile dosyamızı açıp, yeni hostname bilgimizi buraya ekleyelim.
 
 ```bash
 ┌──(taylan㉿linuxdersleri)-[~]
@@ -921,7 +921,7 @@ Operating System: Kali GNU/Linux Rolling
   Hardware Model: VirtualBox
 ```
 
-Konsoldaki prompt alanında hala “linuxdersleri” gözüküyor fakat yeni bir konsol ya da kabuk başlattığınızda bu da değişmiş olacak. 
+Konsoldaki prompt alanında hâlâ “linuxdersleri” gözüküyor fakat yeni bir konsol ya da kabuk başlattığınızda bu da değişmiş olacak. 
 
 ## domainname
 
@@ -1415,7 +1415,7 @@ tcp              ESTAB              0                  0                        
 tcp              LISTEN             0                  128                                     [::]:22                                   [::]:*
 ```
 
-Bağlantı durumu burada ip ve port detaylarıyla birlikte açıkla gözüküyor. 
+Bağlantı durumu burada ip ve port detaylarıyla birlikte açıkça gözüküyor. 
 
 Ek olarak aramızdaki bağlantı ve veri iletişimini test etmek için burada “hello” yazıp enter ile sunucuya isteğimizi iletelim.
 
@@ -1481,4 +1481,4 @@ IP ve portlar için kural tanımlamamıza olanak sağlayan **iptables** ve **fir
 
 Sisteme gelen ve sistemden çıkan tüm paketlerin istenilen koşullara göre filtrelenebilmesi için iptables ve firewalld çözümleri kullanılabiliyor. Dolayısıyla sistem güvenliği konusunda ek araştırma yapmak istiyorsanız bu kavramları araştırarak başlayabilirsiniz. 
 
-Tıpkı iptables ve firewalld gibi elbette bu bölüm içerisinde değinmediğimiz pek çok farklı ağ aracı bulunmasına karşın, temel düzeyde ağ ile ilgili işlerimizi halletmek için yeteri kadar araçtan bahsetmiş olduk. Bizim değinmediğimiz diğer araçlar ve detaylar, ağ üzerinde gerçekleştirmek istediğiniz işlemler özelinde kullanmanız gereken spesifik çözümlerdir. Bu eğitim herkese yönelik temel Linux eğitimi sunmayı amaçladığı için profesyonel Linux sistem yönetimi detay seviyesinde bilgilere değinmedik. Ama bahsetmiş olduğumuz temel bilgiler, hangi yöne doğru gitmek isterseniz kullanabileceğiniz temellerdir. Örneğin ileride sistem yöneticiliği özelinde bir eğitim serisi hazırlayacak olursam, buradaki temelleri bildiğinizi varsayarak bu temeller üzerinden yeni detaylara değiniyor olurum. Dolayısıyla gereken temele sahip olduğunuz için bundan sonrası ihtiyaçlarına göre kendi araştırmanıza kalıyor. 
+Tıpkı iptables ve firewalld gibi elbette bu bölüm içerisinde değinmediğimiz pek çok farklı ağ aracı bulunmasına karşın, temel düzeyde ağ ile ilgili işlerimizi halletmek için yeteri kadar araçtan bahsetmiş olduk. Bizim değinmediğimiz diğer araçlar ve detaylar, ağ üzerinde gerçekleştirmek istediğiniz işlemler özelinde kullanmanız gereken spesifik çözümlerdir. Bu eğitim herkese yönelik temel Linux eğitimi sunmayı amaçladığı için profesyonel Linux sistem yönetimi detay seviyesinde bilgilere değinmedik. Ama bahsetmiş olduğumuz temel bilgiler, hangi yöne doğru gitmek isterseniz kullanabileceğiniz temellerdir. Örneğin ileride sistem yöneticiliği özelinde bir eğitim serisi hazırlayacak olursam, buradaki temelleri bildiğinizi varsayarak bu temeller üzerinden yeni detaylara değiniyor olurum. Dolayısıyla gereken temele sahip olduğunuz için bundan sonrası ihtiyaçlarınıza göre kendi araştırmanıza kalıyor. 

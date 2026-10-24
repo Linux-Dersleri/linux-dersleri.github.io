@@ -94,7 +94,7 @@ yeni değer
 
 Ve gördüğünüz gibi değişken başarılı şekilde tanımlanmış bulunuyor.
 
-Tekrar belirtmiş olalım, hatalı bir kullanıma yol açmamak adına değişken tanımlarken **alt tire işareti haricinde hiç bir sembol kullanmayın**. Yani **yeni+yeni**..**yeni#yeni**..**yeni@yeni** vb tüm kullanımlar hatalıdır.
+Tekrar belirtmiş olalım, hatalı bir kullanıma yol açmamak adına değişken tanımlarken **alt tire işareti haricinde hiçbir sembol kullanmayın**. Yani **yeni+yeni**..**yeni#yeni**..**yeni@yeni** vb tüm kullanımlar hatalıdır.
 
 ```bash
 ┌──(taylan㉿linuxdersleri)-[~]
@@ -1118,7 +1118,7 @@ Sıra geldi değişikliklerin sistem tarafından tanınmasına. Yapılan değiş
 taylan@linuxdersleri:~$
 ```
 
-Ardından değişikliklerin geçerli olup olmadığını denemek için birden fazla kullanıcı hesabında **lokason** değişkenini bastırmayı deneyelim.
+Ardından değişikliklerin geçerli olup olmadığını denemek için birden fazla kullanıcı hesabında **lokasyon** değişkenini bastırmayı deneyelim.
 
 ```bash
 taylan@linuxdersleri:~$ whoami
@@ -1138,7 +1138,7 @@ ali
 istanbul
 ```
 
-Çıkıtları dikkatlice inceleyecek olursanız, tüm kullanıcıların ortak olarak **lokasyon** değişkenin değeri olan “istanbul” verisine ulaşabildiğini görebilirsiniz. Dolayısıyla sistem genelindeki bash kabuklarında geçerli olacak bir tanımlamayı nasıl gerçekleştirebileceğimizi de teyit etmiş olduk.
+Çıktıları dikkatlice inceleyecek olursanız, tüm kullanıcıların ortak olarak **lokasyon** değişkenin değeri olan “istanbul” verisine ulaşabildiğini görebilirsiniz. Dolayısıyla sistem genelindeki bash kabuklarında geçerli olacak bir tanımlamayı nasıl gerçekleştirebileceğimizi de teyit etmiş olduk.
 
 Bu bilgiler ışığında eğer PATH değişkenine yeni değer tanımlayarak, PATH yoluna istediğimiz bir dizin adresini eklemek istersek tek yapmamız gereken uygun konfigürasyon dosyasında tekrar tanımlama yapmak. 
 

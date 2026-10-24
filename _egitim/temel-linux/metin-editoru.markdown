@@ -16,7 +16,7 @@ toc: true
 
 Konsol üzerinden dosya içeriklerini görüntüleyebileceğimiz ve farklı biçimlerde manipüle edebileceğimiz pek çok araçtan söz ettik. Şimdi de konsol üzerinden kullanabileceğimiz metin editörlerinden söz edelim.
 
-Grafiksel arayüzde çalışırken kullanabileceğimiz bir çok metin editörü bulunuyor. Zaten hepsinin kullanımı da hemen hemen benzer. Neticede bunlar grafiksel arayüzlü araçlar, yani üzerine ekstra konuşmamızı gerektirecek bir durum yok. Kullanmakta olduğunuz sistemde hangisi varsa, ya da siz özellikle hangisini tercih ediyorsanız onu kullanabilirsiniz.
+Grafiksel arayüzde çalışırken kullanabileceğimiz birçok metin editörü bulunuyor. Zaten hepsinin kullanımı da hemen hemen benzer. Neticede bunlar grafiksel arayüzlü araçlar, yani üzerine ekstra konuşmamızı gerektirecek bir durum yok. Kullanmakta olduğunuz sistemde hangisi varsa, ya da siz özellikle hangisini tercih ediyorsanız onu kullanabilirsiniz.
 
 Bizim asıl ihtiyacımız olan, grafiksel arayüzün bulunmadığı komut satırı arayüzündeyken de metinlerimizi görüntüleyip gerektiğinde düzenleyebileceğimiz bir araç. Aslında komut satırı arayüzü için de pek çok alternatif araç bulunuyor ama bizler en yaygın kullanıma sahip iki araçtan bahsedeceğiz. Bu sayede farklı sistemlerde de bu metin editörleri kuvvetle muhtemel yüklü olacağı için işlerinizi aksamadan yerine getirme yetkinliğine sahip olacaksınız. Bu durumu, tıpkı pek çok kabuk içinden bash kabuğunu tercih etmemiz gibi düşünebilirsiniz. Yaygın kullanıma sahip olması ilgili aracı öğrenmek için geçerli bir sebep.
 
@@ -65,7 +65,7 @@ Hepsini olmasa da en temel kısayollarından bahsederek devam edecek olursak. Bu
 
 ## Nano Aracını Kapatmak
 
-Metin editöründen çıkıp komut satırına dönmek istersek burada da belirtildiği şekilde <kbd>Ctrl</kbd> + <kbd>X</kbd> kısayolunu uygulayabiliriz. Zaten dosya içerisine herhangi bir ekleme yapmadığım için editörü kapatırken bana dosyayı kaydetmekle ilgili hiç bir soru sorulmadan `nano` aracı kapanacaktır.
+Metin editöründen çıkıp komut satırına dönmek istersek burada da belirtildiği şekilde <kbd>Ctrl</kbd> + <kbd>X</kbd> kısayolunu uygulayabiliriz. Zaten dosya içerisine herhangi bir ekleme yapmadığım için editörü kapatırken bana dosyayı kaydetmekle ilgili hiçbir soru sorulmadan `nano` aracı kapanacaktır.
 
 ![ ]({{ site.url }}/egitim/temel-linux/metin-editoru/nano-close.gif){:class="responsive img-zoomable"}
 
@@ -128,7 +128,7 @@ Alt çubuğa bakacak olursanız gezinme işlemi sırasında da bu iş için kull
 
 ![ ]({{ site.url }}/egitim/temel-linux/metin-editoru/save-different2.webp){:class="responsive img-zoomable"}
 
-Eğer “y” tuşuna basarsam şu an bu dosyada yazıklarım bu dizindeki bu dosyanın içeriğini silip üzerine yazılacak. Eğer istemezseniz <kbd>Ctrl</kbd> + <kbd>C</kbd> ile işlemi iptal edebilirsiniz.
+Eğer “y” tuşuna basarsam şu an bu dosyada yazdıklarım bu dizindeki bu dosyanın içeriğini silip üzerine yazılacak. Eğer istemezseniz <kbd>Ctrl</kbd> + <kbd>C</kbd> ile işlemi iptal edebilirsiniz.
 
 Neticede dosya oluşturma, mevcut dosya içeriğini düzenleyip başka bir dosya olarak kaydetme ve `nano` üzerinden dizinlerde gezinme ve gerektiğinde var olan dosyaların üzerine yazma gibi ihtiyaç duyabileceğimiz temel kısayollardan bahsettik. Zaten bu alt çubuğa baktığınız sürece tüm işlemleri rahatlıkla yerine getirebilirsiniz. Çünkü tüm adımlarda burada temel işlemlerin kısayolları açıkça belirtiliyor. Şimdi editörün kullanımıyla ilgili diğer kısayollardan bahsederek devam edebiliriz.
 

@@ -19,7 +19,7 @@ toc: true
 
 Switch aygıtlarının aynı ağdaki cihazların haberleşmesi için kullanıldığından bahsettik. Switch aygıtının genel çalışma prensibini anlamak için hemen basit bir örnekle başlayabiliriz.
 
-Örneğin aşağıdaki ağda, A hostu’nun C hostu ile iletişime geçmek istediğiniz varsayalım.
+Örneğin aşağıdaki ağda, A hostu’nun C hostu ile iletişime geçmek istediğini varsayalım.
 
 ![network.webp]({{ site.url }}/egitim/temel-network/switch/network.webp){:class="responsive img-zoomable"}
 İletişim için hem IP hem de MAC adresinin gerektiğini biliyoruz. Eğer MAC adresi bilinmiyorsa ARP ile öğrenilebilir. A hostu, öğrenmek üzere kendi IP ve MAC bilgisini de ekleyip switch vasıtası ile tüm bağlı hostlara ARP sorgusu gönderir.
@@ -122,6 +122,6 @@ Yani bizzat adım adım ele aldığımız gibi iki farklı switch aygıtı kendi
 Ayrıca switch cihazlarına birden fazla host bağlanabildiği için aslında aynı port birden fazla MAC adresine işaret ediyor olabilir. Örneğin B hostu da D hostu ile iletişime geçmek istersek switchlerin MAC tabloları aşağıdaki gibi olacaktır.
 
 ![send11.webp]({{ site.url }}/egitim/temel-network/switch/send11.webp){:class="responsive img-zoomable"}
-İşlem akışını oklar yardımıyla adım adım takip edip, hangi MAC adresinin hangi porta bağlı olarak görüldüğünü kendiniz de teyit edebilirsiniz. Amaç diğer switchden gelen iletiyi kendi ağına yönlendirmek olduğu olduğu için switch üzerinde aynı portta birden fazla MAC tanımlı olabilir. Önemli olan kendi ağı içerisinde bu iletinin doğru cihaza ulaştırılmasını sağlamak. Bu yapı da buna müsait.
+İşlem akışını oklar yardımıyla adım adım takip edip, hangi MAC adresinin hangi porta bağlı olarak görüldüğünü kendiniz de teyit edebilirsiniz. Amaç diğer switchden gelen iletiyi kendi ağına yönlendirmek olduğu için switch üzerinde aynı portta birden fazla MAC tanımlı olabilir. Önemli olan kendi ağı içerisinde bu iletinin doğru cihaza ulaştırılmasını sağlamak. Bu yapı da buna müsait.
 
 İşte switch aygıtlarının en temel çalışma yapısı bu şekilde.
