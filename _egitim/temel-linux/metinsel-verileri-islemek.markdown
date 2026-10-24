@@ -2051,7 +2051,7 @@ Ayrıca tüm seçenekleri tek tek kullanabileceğimiz gibi elbette aynı anda da
  25  50 liste
 ```
 
-Şimdi birde seçeneklerin sıralamasını değiştirip tekrar girmeyi deneyelim.
+Şimdi bir de seçeneklerin sıralamasını değiştirip tekrar girmeyi deneyelim.
 
 ```bash
 ┌──(taylan@linuxdersleri)-[~]

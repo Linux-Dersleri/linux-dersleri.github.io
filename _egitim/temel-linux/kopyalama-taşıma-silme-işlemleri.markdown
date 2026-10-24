@@ -626,7 +626,7 @@ Ben "**sembolik link**" diyor olacağım ancak farklı kaynaklarda “**soft lin
 
 Daha anlaşılır olması için gerçek bir örnek üzerinden devam edebilmek adına öncelikle nasıl sembolik link oluşturabileceğimizi öğrenelim.
 
-Link oluşturmak için “**l**i**n**k” ifadesinin kısaltmasından gelen `ln` komutunu kullanıyoruz. Sembolik link oluşturmak için de “**s**ymbolic” ifadesinin kısalması olan `s` seçeneğini kullanmamız gerekiyor.
+Link oluşturmak için “**l**i**n**k” ifadesinin kısaltmasından gelen `ln` komutunu kullanıyoruz. Sembolik link oluşturmak için de “**s**ymbolic” ifadesinin kısaltması olan `s` seçeneğini kullanmamız gerekiyor.
 
 Ben test ortamı hazırlamak için öncelikle kendi ev dizinimde `mkdir linkler` komutuyla “***linkler***” isimli bir klasör oluşturup, `echo “deneme” > ~/linkler/metin` komutuyla, bu dizin altında “***metin***” isimli dosyaya “deneme” ifadesini ekliyorum. 
 

@@ -638,7 +638,7 @@ Ben yalnızca tek bir dosya üzerinde filtreleme yaptım ancak istersek birden f
 
 ![17.webp]({{ site.url }}/egitim/temel-linux/metin/17.webp){:class="responsive img-zoomable"}
 
-Bakın eşleşmiş olan satırlar hangi dosyada bulundukları da belirtilerek filtrelenmiş oldu. Yani gördüğünüz gibi istersek aynı anda çoklu şekilde dosyalar üzerinde de çalışabiliyoruz. Çoklu dosyalarla çalışmanın yanında dilersek alt dizinlerdekiler de dahil bir dizin içindeki tüm içeriklerin `grep` aracı tarafından filtrelenmesini sağlayabiliriz. Bunun için özyineleme yani “**r**ecursive” seçeneğinin kısalması olan `r` seçeneğini kullanabiliyoruz.
+Bakın eşleşmiş olan satırlar hangi dosyada bulundukları da belirtilerek filtrelenmiş oldu. Yani gördüğünüz gibi istersek aynı anda çoklu şekilde dosyalar üzerinde de çalışabiliyoruz. Çoklu dosyalarla çalışmanın yanında dilersek alt dizinlerdekiler de dahil bir dizin içindeki tüm içeriklerin `grep` aracı tarafından filtrelenmesini sağlayabiliriz. Bunun için özyineleme yani “**r**ecursive” seçeneğinin kısaltması olan `r` seçeneğini kullanabiliyoruz.
 
 ## Özyinelemeli Araştırma
 
@@ -1806,7 +1806,7 @@ satir8sutun1 satir8sutun2 satir8sutun3 satir8sutun4 satir8sutun5
 
 Şimdi `cut` aracının kullanımına geçecek olursak, örneğin ben bu dosyadaki tüm sütunları değil de yalnızca 1 ila 3. sütunları istiyorsam `cut` komutuna bu durumu izah edebilirim. Bu işlem için `cut` komutuna bu verileri neye bakarak ayıracağını bildirmemiz gerekiyor. Tıpkı kabuğun komutları yorumlaması gibi `cut` aracı da elindeki verilerin hangi parçalardan oluştuğunu anlamak için bir “delimiter” yani “sınırlayıcı” karakter belirtmemizi istiyor. Bunun için `cut` komutundan sonra `-d` seçeneğinin hemen ardından sınırlayıcı karakteri yazmamız gerek.
 
-Örneğin benim dosyamda boşluk karakteri sütunları birbirinden ayırdığı için ben tırnak için `“ “` boşluk karakterinin sınırlayıcı olduğunu belirteceğim. Şimdi son olarak hangi sütunların, yani aslında hangi bölümlerin kalmasını istiyorsak, bunu “fields” yani “alanlar-bölümler” seçeneğinin kısalması olan `-f` seçeneğinin hemen ardından belirtebiliyoruz. Ben 1 ila 3. bölümleri almak istediğim için `1-3` şeklinde yazıyorum ve işlenecek verilerin bulunduğu dosyanın ismini de ekleyip komutumu onaylıyorum.
+Örneğin benim dosyamda boşluk karakteri sütunları birbirinden ayırdığı için ben tırnak için `“ “` boşluk karakterinin sınırlayıcı olduğunu belirteceğim. Şimdi son olarak hangi sütunların, yani aslında hangi bölümlerin kalmasını istiyorsak, bunu “fields” yani “alanlar-bölümler” seçeneğinin kısaltması olan `-f` seçeneğinin hemen ardından belirtebiliyoruz. Ben 1 ila 3. bölümleri almak istediğim için `1-3` şeklinde yazıyorum ve işlenecek verilerin bulunduğu dosyanın ismini de ekleyip komutumu onaylıyorum.
 
 ```bash
 ┌──(taylan@linuxdersleri)-[~]

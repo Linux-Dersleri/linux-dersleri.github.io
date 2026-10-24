@@ -266,7 +266,7 @@ Arşivden çıkarma yaparken temelde iki farklı seçeneğe sahibiz. Birincisi a
 
 ### Tüm Dosya İçeriğini Çıkarmak
 
-Çıkarma işlemi için çıkarmak-ayıklamak anlamına gelen “e**x**tract” seçeneğinin kısalması olan `x` seçeneğini kullanıyoruz. Eğer çıkarma işlemi için `tar` aracına yalnızca bu seçeneği verirsek, arşiv dosyasının içeriği mevcut bulunduğumuz dizine çıkarılır. Bu sebeple ben öncelikle arşivi çıkaracağım “***linux***” isminde yeni bir klasör oluşturmak istiyorum. 
+Çıkarma işlemi için çıkarmak-ayıklamak anlamına gelen “e**x**tract” seçeneğinin kısaltması olan `x` seçeneğini kullanıyoruz. Eğer çıkarma işlemi için `tar` aracına yalnızca bu seçeneği verirsek, arşiv dosyasının içeriği mevcut bulunduğumuz dizine çıkarılır. Bu sebeple ben öncelikle arşivi çıkaracağım “***linux***” isminde yeni bir klasör oluşturmak istiyorum. 
 
 ```bash
 ┌──(taylan㉿linuxdersleri)-[~/Downloads]
@@ -564,7 +564,7 @@ Ayrıca ben örnekleri hep tek bir dosya üzerinden gösterdim ancak sizler ayn�
 
 ## Sıkıştırılmış gzip Dosyaların Açılması
 
-Sıkıştırmış olduğumuz dosyaları orijinal boyutuna geri çevirmek için de tek yapmamız gereken “**d**ecompress” ifadesinin kısalması olan `-d` seçeneğini kullanmak. 
+Sıkıştırmış olduğumuz dosyaları orijinal boyutuna geri çevirmek için de tek yapmamız gereken “**d**ecompress” ifadesinin kısaltması olan `-d` seçeneğini kullanmak. 
 
 Örnek olması için ben daha önce sıkıştırmış olduğum arşiv dosyasını eski haline getirmek istiyorum. 
 
@@ -597,7 +597,7 @@ total 281M
 
 Bakın sıkıştırmış olduğum arşiv dosyası orijinal boyutuna geri dönmüş ve gördüğünüz gibi **gzip** algoritması ile sıkıştırıldığını temsil eden **.gz** uzantısı da kaldırılmış. Yani aslında sıkıştırmış olduğumuz dosyayı `-d` seçeneği sayesinde sorunsuzca eski haline getirmiş olduk.
 
-Ben örneklerimde kullanmadım ancak `gzip` aracını kullanırken tüm işlemler sırsında işlemlerin detaylarını takip etmek için isterseniz **verbose** seçeneğinin kısalması olan `v` seçeneğini de komutunuza ekleyebilirsiniz. Bir sonraki örneğimizde verbose seçeneğini de kullanabiliriz.
+Ben örneklerimde kullanmadım ancak `gzip` aracını kullanırken tüm işlemler sırsında işlemlerin detaylarını takip etmek için isterseniz **verbose** seçeneğinin kısaltması olan `v` seçeneğini de komutunuza ekleyebilirsiniz. Bir sonraki örneğimizde verbose seçeneğini de kullanabiliriz.
 
 Bir sonraki örneğimizi de özyinele özelliğinden bahsetmek için uygulayabiliriz mesela. Fakat özyineleme yaklaşımından önce sıkıştırma işlemlerinin her bir dosyada ayrı ayrı uygulandığına vurgu yapmamız gerekiyor. Biz `gzip` aracına sıkıştırması için aynı anda birden fazla dosyayı argüman olarak verdiğimizde her bir dosya ayrı ayrı sıkıştırılıyor.
 
@@ -920,7 +920,7 @@ total 562M
 
 Bakın dosyam eski haline geri döndü.
 
-Eğer orijinal dosya korunsun harici olarak sıkıştırılmış versiyonu oluşturulsun istiyorsak **gzip** aracında da kullandığımız “**k**eep” seçeneğinin kısalması olan `k` seçeneğini kullanabiliriz. 
+Eğer orijinal dosya korunsun harici olarak sıkıştırılmış versiyonu oluşturulsun istiyorsak **gzip** aracında da kullandığımız “**k**eep” seçeneğinin kısaltması olan `k` seçeneğini kullanabiliriz. 
 
 Ben test etmek için bu kez komutumu `bzip2 -k linux-dersleri.tar` şeklinde yazıyorum. Hatta istersek, verbose seçeneğini ekleyip işlem hakkında ayrıntılı bilginin konsola bastırılmasını sağlayabiliriz. 
 

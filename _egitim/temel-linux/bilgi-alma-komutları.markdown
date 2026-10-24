@@ -416,7 +416,7 @@ Release:        2022.1
 Codename:       kali-rolling
 ```
 
-Bakın çıktılarda, dağıtıcı kimliği, kullandığım dağıtım, sürümü, kodadı gibi detaylar bastırıldı. Bu bilgiler mevcut dağıtım hakkında standart düzende bilgiler sunuyor. Buradaki bilgiler sayesinde mevcut dağıtımın tam olarak hangi sürüm olduğunu anlayabiliyorum.
+Bakın çıktılarda, dağıtıcı kimliği, kullandığım dağıtım, sürümü, kod adı gibi detaylar bastırıldı. Bu bilgiler mevcut dağıtım hakkında standart düzende bilgiler sunuyor. Buradaki bilgiler sayesinde mevcut dağıtımın tam olarak hangi sürüm olduğunu anlayabiliyorum.
 
 Aldığımız çıktının başındaki “lsb modülü bulunamadı” hatasına takılmayın. Bu hata `lsb_release` aracının kurulu olduğu ama çekirdek modülünün kurulu olmadığını söylüyor. Şart değil ama dilerseniz lsb çekirdek modülünü nasıl kurabileceğinizi araştırıp kolayca kurulum yapabilirsiniz.
 
@@ -480,7 +480,7 @@ Burada dikkat etmeniz gereken detay Linux'ta yük ortalamaları yalnızca CPU'la
 
 Özetleyecek olursak, eğer sizdeki çıktılarda sistem yükü benim ilk aldığım çıktıda olduğu gibi düşük veya 0 olarak gözüküyorsa, bu durum sisteminizin bu kısa periyotta genellikle beklemede olduğunun bilgisini veriyordur. Eğer yakın zaman aralığında artış görülüyorsa da bu sisteminizin gittikçe daha fazla yük altında kaldığına işaret ediyordur. 
 
-Eğer `uptime` komutundaki bu gibi detayları görmek istemezsek yani bu çıktı yerine yalnızca sistemin ne kadar süredir açık olduğunu daha okunaklı şekilde görmek istersek “**p**retty” ifadesinin kısalması olan `p` seçeneğini de kullanabiliriz. 
+Eğer `uptime` komutundaki bu gibi detayları görmek istemezsek yani bu çıktı yerine yalnızca sistemin ne kadar süredir açık olduğunu daha okunaklı şekilde görmek istersek “**p**retty” ifadesinin kısaltması olan `p` seçeneğini de kullanabiliriz. 
 
 ```bash
 └─$ uptime -p                                                    
@@ -647,7 +647,7 @@ Bakın dosyanın kaç kilobayt disk alanı kapladığı bastırıldı. Dilersek 
 58M     /home/taylan/Downloads/linux.zip
 ```
 
-Bakın dosyanın tam dizin adresini belirttiğimiz sürece sorunsuzca istediğimiz dosyaların boyutlarını öğrenebiliyoruz. Dosya üzerinde kullanımı gayet basit ve yalın. Birde klasörler üzerinde gözlemleyelim. Ben gözlemleyebilmek için içerisinde web sitesinin dosyalarını ve iç içe klasörler barındıran Downloads dizini atlındaki “linux-dersleri” klasörünün disk üzerinde kapladığı alanı `du -h ~/Downloads/linux-dersleri` komutu ile sorguluyorum.
+Bakın dosyanın tam dizin adresini belirttiğimiz sürece sorunsuzca istediğimiz dosyaların boyutlarını öğrenebiliyoruz. Dosya üzerinde kullanımı gayet basit ve yalın. Bir de klasörler üzerinde gözlemleyelim. Ben gözlemleyebilmek için içerisinde web sitesinin dosyalarını ve iç içe klasörler barındıran Downloads dizini atlındaki “linux-dersleri” klasörünün disk üzerinde kapladığı alanı `du -h ~/Downloads/linux-dersleri` komutu ile sorguluyorum.
 
 ```bash
 └─$ du -h ~/Downloads/linux-dersleri                             

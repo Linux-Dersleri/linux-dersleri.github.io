@@ -148,7 +148,7 @@ modinfo.sh
 
 Gördüğünüz gibi “**.sh**” uzantısı sayesinde kalabalıktan uzak, aradığım dosya türünü listelemiş oldum.
 
-Ayrıca dosyalara uzantı eklemek, dosyayı çalıştırabilecek olan programların dosyaları kolay algılayabilmesini de sağlar. Örneğin kullanmakta olduğunuz editör destekliyorsa, bash programlamaya özel renklendirme ve programlamayı kolaylaştıran bir takım araçlar "**sh"** uzantısı sayesinde bu program üzerinde aktif olur.
+Ayrıca dosyalara uzantı eklemek, dosyayı çalıştırabilecek olan programların dosyaları kolay algılayabilmesini de sağlar. Örneğin kullanmakta olduğunuz editör destekliyorsa, bash programlamaya özel renklendirme ve programlamayı kolaylaştıran birtakım araçlar "**sh"** uzantısı sayesinde bu program üzerinde aktif olur.
 
 Basit bir örnek olması açısından sonu "**sh"** ile biten ve bitmeyen iki dosyayı editör üzerinde açarak karşılaştırma yapabilirsiniz. Test etmek için nano editörünü kullanabilirsiniz. Bu duruma ek olarak dosya uzantıları, özellikle grafiksel arayüz kullanımında, dosyanın üzerine tıklandığında çalıştırılabilir olan araç ile doğrudan açılması gibi kolaylıklar da sağlar.
 
