@@ -491,7 +491,7 @@ Eğer herhangi bir dosyayı sildiğinizde o dosyanın tamamen yok olduğunu dü�
 
 ![shred-1.webp]({{ site.url }}/egitim/temel-linux/metin/shred-1.webp){:class="responsive img-zoomable"}
 
-Yani aslında dosya hala disk üzerinde mevcut olmasına rağmen, sadece dosyaya giden bağlantı siliniyor. Bu yöntemin kullanılma nedeni dosyayı gerçekten silmeye oranla çok daha hızlı sonuç vermesidir. Peki ama gerçek silme işleminden kastımız tam olarak ne ?
+Yani aslında dosya hâlâ disk üzerinde mevcut olmasına rağmen, sadece dosyaya giden bağlantı siliniyor. Bu yöntemin kullanılma nedeni dosyayı gerçekten silmeye oranla çok daha hızlı sonuç vermesidir. Peki ama gerçek silme işleminden kastımız tam olarak ne ?
 
 Gerçek silme işlemi dediğimiz kavram; disk üzerinde yer kaplayan her türlü verinin ancak üzerine yeni veriler yazılması ile ortadan kaldırılabilecek olmasını ifade ediyor. 
 
@@ -876,7 +876,7 @@ yeni veri
 orijinal ekleme
 ```
 
-Gördüğünüz gibi orijinal dosya silinmiş olmasına rağmen hala disk üzerindeki aynı verilere erişmeye devam edebiliyorum. Çünkü işleyiş aslında aşağıdaki şemadaki gibi.
+Gördüğünüz gibi orijinal dosya silinmiş olmasına rağmen hâlâ disk üzerindeki aynı verilere erişmeye devam edebiliyorum. Çünkü işleyiş aslında aşağıdaki şemadaki gibi.
 
 ![hard-link3.webp]({{ site.url }}/egitim/temel-linux/metin/hard-link3.webp){:class="responsive img-zoomable"}
 

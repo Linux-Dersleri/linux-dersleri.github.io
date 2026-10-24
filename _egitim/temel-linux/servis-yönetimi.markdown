@@ -528,7 +528,7 @@ AllowIsolate=yes
 
 **`Requires=multi-user.target`**: Bu satır, **kesin bağımlılığı** belirtiyor. Yani, mevcut birim çalıştırılmadan önce **multi-user.target** birimi de çalıştırılmalıdır. Eğer **multi-user.target** çalıştırılamazsa, bu birim yani **graphical.target** birimi de çalıştırılmayacaktır.
 
-**`Wants=display-manager.service`**: Bu satır, birim dosyanın **display-manager.service** birimini bağımlılık olarak **istediğini** belirtir. **`Requires`**'dan farklı olarak, **`Wants`** bağımlılığı zorunlu kılmaz. Eğer display-manager.service mevcut değilse, bu birim hala çalıştırılabilir. Ancak eğer varsa, display-manager.service ile birlikte çalışacaktır.
+**`Wants=display-manager.service`**: Bu satır, birim dosyanın **display-manager.service** birimini bağımlılık olarak **istediğini** belirtir. **`Requires`**'dan farklı olarak, **`Wants`** bağımlılığı zorunlu kılmaz. Eğer display-manager.service mevcut değilse, bu birim hâlâ çalıştırılabilir. Ancak eğer varsa, display-manager.service ile birlikte çalışacaktır.
 
 **`Conflicts=rescue.service rescue.target`**: Bu satır, birim dosyanın **rescue.service** veya **rescue.target** ile **çakışmaması** gerektiğini belirtir. Yani, eğer rescue.service veya rescue.target çalışıyorsa, bu birim çalıştırılmaz.
 

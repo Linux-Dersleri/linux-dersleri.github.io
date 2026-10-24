@@ -33,7 +33,7 @@ Söz konusu dosya içeriklerini yönetmek olduğunda da her şey en temelde bayt
 
 Linux üzerinde baytları bir kaynaktan diğerine iletmek için yönlendirme mekanizmasından faydalanabiliyoruz. 
 
-Yönlendirme işlemi için Linux üzerinde standart şekilde her bir dosyanın, girdileri okuduğu ve çıktılarını ilettiği uç noktaları mevcuttur. Bu uç noktalara da “dosya tanımlayıcıları” deniyor. Ve temelde 3 tür dosya tanımlayıcı bulunuyor. Normalde biz aksini belirtmediğimiz sürece bu uçlar konsol aracına bağlı oluyor. Bu sebeple veri girişini konsoldan yapıp, hatalı ve hatasız olan çıktıları yine konsol üzerinde görüyoruz. Söylediklerim hala size anlamlı gelmiyorsa lütfen biraz daha sabırlı olun çünkü aslında son derece basit bir yapı.
+Yönlendirme işlemi için Linux üzerinde standart şekilde her bir dosyanın, girdileri okuduğu ve çıktılarını ilettiği uç noktaları mevcuttur. Bu uç noktalara da “dosya tanımlayıcıları” deniyor. Ve temelde 3 tür dosya tanımlayıcı bulunuyor. Normalde biz aksini belirtmediğimiz sürece bu uçlar konsol aracına bağlı oluyor. Bu sebeple veri girişini konsoldan yapıp, hatalı ve hatasız olan çıktıları yine konsol üzerinde görüyoruz. Söylediklerim hâlâ size anlamlı gelmiyorsa lütfen biraz daha sabırlı olun çünkü aslında son derece basit bir yapı.
 
 Bir dosyaya **veri girişi** yapmak istiyorsak o dosyanın standart girdisi olarak temsil edilen **0** numaralı dosya tanımlayıcısına verileri yönlendirmemiz gerekiyor.
 

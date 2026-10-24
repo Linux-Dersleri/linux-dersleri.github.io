@@ -872,7 +872,7 @@ ff02::1 ip6-allnodes
 ff02::2 ip6-allrouters
 ```
 
-Gördüğünüz gibi eski hostname bilgisi hala makinenin kendisini temsil eden 127.0.1.1 adresine yönlendiriliyor. Bu adresi düzeltmek için `sudo nano /etc/hosts` komutu ile dosyamızı açıp, yeni hostname bilgimizi buraya ekleyelim.
+Gördüğünüz gibi eski hostname bilgisi hâlâ makinenin kendisini temsil eden 127.0.1.1 adresine yönlendiriliyor. Bu adresi düzeltmek için `sudo nano /etc/hosts` komutu ile dosyamızı açıp, yeni hostname bilgimizi buraya ekleyelim.
 
 ```bash
 ┌──(taylan㉿linuxdersleri)-[~]
@@ -921,7 +921,7 @@ Operating System: Kali GNU/Linux Rolling
   Hardware Model: VirtualBox
 ```
 
-Konsoldaki prompt alanında hala “linuxdersleri” gözüküyor fakat yeni bir konsol ya da kabuk başlattığınızda bu da değişmiş olacak. 
+Konsoldaki prompt alanında hâlâ “linuxdersleri” gözüküyor fakat yeni bir konsol ya da kabuk başlattığınızda bu da değişmiş olacak. 
 
 ## domainname
 

@@ -2360,11 +2360,11 @@ taylan kullanıcısının kabuğunda tanımlı olan değişken burada da geçerl
 /home/taylan
 ```
 
-Bakın, hala taylan kullanıcısının ev dizinde(***/home/taylan***) çalışıyorum.
+Bakın, hâlâ taylan kullanıcısının ev dizinde(***/home/taylan***) çalışıyorum.
 
 ## `su` ile `su -` Arasındaki Fark
 
-Burada hala aynı dizinde çalışma ve diğer kullanıcının kabuğunda tanımlanmış global değişkene ulaşabiliyor olma nedenim `su` komutunda sonra doğrudan yalnızca kullanıcı ismi girmiş olmam. Bu şekilde komut girdiğimizde `su` aracı, ilgili kullanıcı hesabına geçiş yaparken mevcut kabuğun çalışma ortamındaki mevcut dizinini ve ortam değişkenleri gibi çeşitli özellikleri koruyarak geçiş yapılan kullanıcının kabuğunu alt kabukta başlatıyor. Yani aslında sıfırdan temiz bir kabuk ortamı başlatılmıyor.
+Burada hâlâ aynı dizinde çalışma ve diğer kullanıcının kabuğunda tanımlanmış global değişkene ulaşabiliyor olma nedenim `su` komutunda sonra doğrudan yalnızca kullanıcı ismi girmiş olmam. Bu şekilde komut girdiğimizde `su` aracı, ilgili kullanıcı hesabına geçiş yaparken mevcut kabuğun çalışma ortamındaki mevcut dizinini ve ortam değişkenleri gibi çeşitli özellikleri koruyarak geçiş yapılan kullanıcının kabuğunu alt kabukta başlatıyor. Yani aslında sıfırdan temiz bir kabuk ortamı başlatılmıyor.
 
 Eğer biz mevcut kabuktan etkilenmeyecek temiz bir kabuk başlatılsın istersek komutumuz `su - kullanıcı-adı` şeklinde girebiliriz. Ben denemek için mevcut root oturumunu kapatmak üzere `exit` komutunu giriyorum. 
 
@@ -2434,7 +2434,7 @@ Parolamızı girip onaylayalım.
 userdel: user ali is currently used by process 13099
 ```
 
-Bende olduğu şekilde eğer sizin de silmek istediğiniz kullanıcının oturumu hala aktifse ve çalışmakta olan işlemler dolayısıyla silme işlemi başarısız olur. Bu durumda bu işlemleri sonlandırıp silme işlemini tekrar deneyebiliriz. İleride işlemleri nasıl sonlandırabileceğimizden bahsedeceğimiz için şimdi bunun yerine ben bu silme işlemini zorlayarak yapmak istiyorum. Bunun için `force` yani zorlama seçeneğini kullanabiliriz. Bu seçenek sayesinde, silmek istediğimiz kullanıcıya ait aktif işlemler olsa bile silme işlemi gerçekleştiriliyor. 
+Bende olduğu şekilde eğer sizin de silmek istediğiniz kullanıcının oturumu hâlâ aktifse ve çalışmakta olan işlemler dolayısıyla silme işlemi başarısız olur. Bu durumda bu işlemleri sonlandırıp silme işlemini tekrar deneyebiliriz. İleride işlemleri nasıl sonlandırabileceğimizden bahsedeceğimiz için şimdi bunun yerine ben bu silme işlemini zorlayarak yapmak istiyorum. Bunun için `force` yani zorlama seçeneğini kullanabiliriz. Bu seçenek sayesinde, silmek istediğimiz kullanıcıya ait aktif işlemler olsa bile silme işlemi gerçekleştiriliyor. 
 
 Ben komutumu bu kez `sudo userdel -rf ali` şeklinde giriyorum. 
 

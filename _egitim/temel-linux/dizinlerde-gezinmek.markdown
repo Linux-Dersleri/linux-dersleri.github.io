@@ -133,9 +133,9 @@ Sistemdeki araçların ortak olarak kullandığı kütüphane(library) dosyalar�
 Bu durumu gözlemlemek için `ls -ld /*` komutunu girebiliriz.
 
 ![usr.webp]({{ site.url }}/egitim/temel-linux/dizin/usr.webp){:class="responsive img-zoomable"}
-Burada benim kırmızı kutucuklar içine alarak özellikle belirttiğim gibi, ***lib bin sbin*** dizinleri aslında ***/usr*** dizini altında bulunuyor. Ana dizin altında hala bu dizinlerin sembolik bağlantılarını görüyor olma nedenimiz geriye dönük uyumluluktur. 
+Burada benim kırmızı kutucuklar içine alarak özellikle belirttiğim gibi, ***lib bin sbin*** dizinleri aslında ***/usr*** dizini altında bulunuyor. Ana dizin altında hâlâ bu dizinlerin sembolik bağlantılarını görüyor olma nedenimiz geriye dönük uyumluluktur. 
 
-Geçmişte bu dizinler kendi başına ana dizin(***/***) altında bulunduğu için geçmişten beri aynı konfigürasyonlar ile çalışan araç ve yapıların çalışmaya devam edebilmesi için yani geriye dönük uyumluluk için sembolik olarak hala ana dizin altında gözüküyorlar. Örneğin bir araç binary dosyaya erişmek üzere ***/bin*** dizinini kontrol ediyorsa, otomatik olarak ***/usr/bin*** dizinine yönlendirilerek sorunsuzca aracın çalışmaya devam etmesi sağlanmış oluyor.
+Geçmişte bu dizinler kendi başına ana dizin(***/***) altında bulunduğu için geçmişten beri aynı konfigürasyonlar ile çalışan araç ve yapıların çalışmaya devam edebilmesi için yani geriye dönük uyumluluk için sembolik olarak hâlâ ana dizin altında gözüküyorlar. Örneğin bir araç binary dosyaya erişmek üzere ***/bin*** dizinini kontrol ediyorsa, otomatik olarak ***/usr/bin*** dizinine yönlendirilerek sorunsuzca aracın çalışmaya devam etmesi sağlanmış oluyor.
 
 
 ## <span class="text-danger">/</span><span class="text-primary">opt</span>
@@ -1555,7 +1555,7 @@ Bakın klasörün içi boş olmadığı için silme işlemi anında reddedildi. 
 rmdir: removing directory, 'x/y/z/'
 ```
 
-Komut neticesinde en son klasör olan ***z*** klasörünün silindiğini öğrendik. Çünkü ***z*** klasörünün içeriği tamamen boştu ve biz ***z*** klasörünün tam dizin adresini `rmdir` aracına iletmiş olduk. Dolayısıyla yalnızca ***z*** klasörü içeriği boş olduğu için, `rmdir` aracı tarafından kolayca silindi. Bu durumda ***x*** ve ***y*** klasörlerinin hala silinmediğini teyit etmek için `ls -R x/` komutu ile dizin içeriğini listeleyebiliriz. 
+Komut neticesinde en son klasör olan ***z*** klasörünün silindiğini öğrendik. Çünkü ***z*** klasörünün içeriği tamamen boştu ve biz ***z*** klasörünün tam dizin adresini `rmdir` aracına iletmiş olduk. Dolayısıyla yalnızca ***z*** klasörü içeriği boş olduğu için, `rmdir` aracı tarafından kolayca silindi. Bu durumda ***x*** ve ***y*** klasörlerinin hâlâ silinmediğini teyit etmek için `ls -R x/` komutu ile dizin içeriğini listeleyebiliriz. 
 
 ```bash
 ┌──(taylan@linuxdersleri)-[~/yeni]
@@ -1566,7 +1566,7 @@ y
 x/y:
 ```
 
-Bakın gördüğünüz gibi ***x/y*** dizini hala mevcut.
+Bakın gördüğünüz gibi ***x/y*** dizini hâlâ mevcut.
 
 Eğer tek seferde içerisi boş olan tüm iç içe dizinleri silmek istersek tıpkı dizinleri oluştururken kullandığımız gibi silerken de `p` seçeneğini kullanabiliriz. Daha önce `mkdir` aracı ile iç içe dizin oluşturmak için kullandığımız `p` seçeneğini, iç içe olan dizinleri tek seferde silmek için de kullanabiliyoruz. Ben işlem ayrıntılarını da takip edebilmek için `rmdir -vp x/y` şeklinde komutumu giriyorum. 
 

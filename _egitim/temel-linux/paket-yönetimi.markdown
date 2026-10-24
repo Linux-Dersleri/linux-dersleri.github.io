@@ -591,7 +591,7 @@ Neticede `apt` aracı ile kurmuş olduğumuz `leafpad` aracının kaldırma işl
 bash: /usr/bin/leafpad: No such file or directory
 ```
 
-Bakın leafpad aracının çalıştırılabilir dosyası “***/usr/bin/leafpad***“ konumundaymış ama silindiği için “böyle bir dosya veya dizin yok” şeklinde hata aldık. Yani aracımızın kaldırıldığınız bizzat teyit ettik. Fakat burada dikkatimizi çekene detay, araç kaldırılmış olmasına rağmen araçla ilgili konfigürasyonların hala duruyor olması. Aksi halde buradaki bu çıktıyı almamız gerekirdi. Bu durumda araçlardan geriye kalan tüm konfigürasyonları temizlememiz gerek.
+Bakın leafpad aracının çalıştırılabilir dosyası “***/usr/bin/leafpad***“ konumundaymış ama silindiği için “böyle bir dosya veya dizin yok” şeklinde hata aldık. Yani aracımızın kaldırıldığınız bizzat teyit ettik. Fakat burada dikkatimizi çekene detay, araç kaldırılmış olmasına rağmen araçla ilgili konfigürasyonların hâlâ duruyor olması. Aksi halde buradaki bu çıktıyı almamız gerekirdi. Bu durumda araçlardan geriye kalan tüm konfigürasyonları temizlememiz gerek.
 
 ## Konfigürasyonların Temizlenmesi
 
@@ -625,7 +625,7 @@ Kaldırma işlemiyle ilgili son bir detaydan bahsetmek istiyorum.
 
 Ben kurduğum aracı, `apt autoremove` komutu ile sildikten sonra `apt autopurge` seçeneğini kullandım ancak `autopurge` seçeneği tek başına kullanıldığında paketler de dahil tüm dosyaları silebiliyor. Yani önce `remove` ya da `autoremove` sonra `autopurge` seçeneğini kullanmak zorunda değilsiniz. Her şeyi silmek istiyorsanız `apt autopurge` seçeneğini kullanabilirsiniz.
 
-Ben yalnızca daha önce silmiş olduğunu ama hala konfigürasyonları dosyaları bulunanları nasıl temizleyeceğinizi göstermek için ayrı ayrı ele aldım.
+Ben yalnızca daha önce silmiş olduğunu ama hâlâ konfigürasyonları dosyaları bulunanları nasıl temizleyeceğinizi göstermek için ayrı ayrı ele aldım.
 
 Kaldırma işlemini de netleştirdiğimize göre şimdi bir diğer önemli konu olan paket bağımlılıkların düzeltilmesinden bahsederek devam edelim.
 
