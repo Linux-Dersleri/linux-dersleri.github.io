@@ -161,7 +161,7 @@ Bash kabuğunda etkileşimli kabuk kullanımını kolaylaştırmak için "otomat
 
 ![16.gif]({{ site.url }}/egitim/temel-linux/kisayol/16.gif){:class="responsive img-zoomable"}
 
-Eğer konsola girdiğim ifade başka hiç bir komutla eşleşmiyorsa otomatik olarak komutun geri kalanı kabuk tarafından tamamlanır. Örneğin benim sistemimde “**ec**” ile başlayan başka bir komut veya dosya ismi olmadığı için sadece **ec** şeklinde yazıp <kbd>tab</kbd> tuşuna bastığımda otomatik olarak `echo` komutuna tamamlanıyor. 
+Eğer konsola girdiğim ifade başka hiçbir komutla eşleşmiyorsa otomatik olarak komutun geri kalanı kabuk tarafından tamamlanır. Örneğin benim sistemimde “**ec**” ile başlayan başka bir komut veya dosya ismi olmadığı için sadece **ec** şeklinde yazıp <kbd>tab</kbd> tuşuna bastığımda otomatik olarak `echo` komutuna tamamlanıyor. 
 
 ![17.gif]({{ site.url }}/egitim/temel-linux/kisayol/17.gif){:class="responsive img-zoomable"}
 
@@ -420,7 +420,7 @@ alias ls='ls --color=auto'
 └─$
 ```
 
-Bakın mevcut kabukta kullanılabilir olan takma isimler listelendi. Burada listelenmiş olan takma isimler sizlerin kullanmakta olduğu dağıtıma göre farklılık gösterebilir hatta belki varsayılan olarak hiç bir takma isim tanımlanmamış da olabilir. Ancak bu hiç önemli değil. Zira istediğiniz takma isimi kendiniz de nasıl tanımlayabileceğinizi zaten biliyorsunuz.
+Bakın mevcut kabukta kullanılabilir olan takma isimler listelendi. Burada listelenmiş olan takma isimler sizlerin kullanmakta olduğu dağıtıma göre farklılık gösterebilir hatta belki varsayılan olarak hiçbir takma isim tanımlanmamış da olabilir. Ancak bu hiç önemli değil. Zira istediğiniz takma isimi kendiniz de nasıl tanımlayabileceğinizi zaten biliyorsunuz.
 
 Ayrıca yeni takma isim tanımlamak yerine dilersek mevcut takma isimleri geçersiz kılma olanağımız da var aslında.
 

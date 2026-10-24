@@ -136,7 +136,7 @@ Bakın hatalı çıktıları bu dosyaya yönlendirdiğimiz için bu kez da konso
 
 İşte bu örneklerde ele aldığımız gibi ihtiyacımıza göre hatasız ve hatalı olan çıktıları istediğimiz bir dosyaya yönlendirebiliyoruz. 
 
-Örneğin bir aracın ürettiği hatalı çıktıları görmek istemezseniz , yalnızca hatalı çıktıları yok etmek için bunları ***/dev/null*** dosyasına yönlendirebilirsiniz. ***/dev/*** dizini altındaki ***null*** dosyası, kendisine gönderilen tüm verileri yutmak için çekirdek tarafından sağlanan sanal bir dosya. Biz buraya çıktı yönlendirdiğimizde ilgili çıktı hiç bir yere kaydolmuyor, yani aslında çıktıları boşluğa yönlendirmiş oluyoruz. Bu sayede araçların ürettiği hatalı çıktılardan kolayca kurtulmamız da mümkün oluyor.
+Örneğin bir aracın ürettiği hatalı çıktıları görmek istemezseniz , yalnızca hatalı çıktıları yok etmek için bunları ***/dev/null*** dosyasına yönlendirebilirsiniz. ***/dev/*** dizini altındaki ***null*** dosyası, kendisine gönderilen tüm verileri yutmak için çekirdek tarafından sağlanan sanal bir dosya. Biz buraya çıktı yönlendirdiğimizde ilgili çıktı hiçbir yere kaydolmuyor, yani aslında çıktıları boşluğa yönlendirmiş oluyoruz. Bu sayede araçların ürettiği hatalı çıktılardan kolayca kurtulmamız da mümkün oluyor.
 
 Denemek için `./test.sh 2> /dev/null` şeklinde komutumuzu girebiliriz. 
 
@@ -159,7 +159,7 @@ Bakın konsola yalnızca hatasız olan çıktı bastırıldı çünkü hatalı o
 └─$
 ```
 
-Bakın herhangi bir çıktı almadık çünkü aslında bu dosya verileri boşluğa göndermek için kullanılan sanal bir dosya. Biz yönlendirsek de içerisinde hiç bir veri tutmuyor çünkü bu dosya bizim bildiğimiz standart dosyalardan değil. Daha önce Linux üzerinde her şeyin bir dosya gibi ele alından bahsetmiştik. İşte bu dosya da bu yaklaşımın bir sonucu. Siz de istemediğiniz tüm verileri ***/dev/null*** dosyasına yönlendirip onlardan kurtulabilirsiniz. Üstelik bu dosya disk üzerinde yer alan gerçek bir dosya olmadığı için disk üzerinde okuma yazma yükü oluşturmuyor. Bu ve benzeri dosyalar çekirdek tarafından sanal olarak oluşturulan ve bellek yani geçici hafıza üzerinden çalıştırılan sözde dosyalardır. Bu yaklaşım sayesinde disk üzerinde yük oluşturma durumundan da endişe etmemize gerek kalmıyor. 
+Bakın herhangi bir çıktı almadık çünkü aslında bu dosya verileri boşluğa göndermek için kullanılan sanal bir dosya. Biz yönlendirsek de içerisinde hiçbir veri tutmuyor çünkü bu dosya bizim bildiğimiz standart dosyalardan değil. Daha önce Linux üzerinde her şeyin bir dosya gibi ele alından bahsetmiştik. İşte bu dosya da bu yaklaşımın bir sonucu. Siz de istemediğiniz tüm verileri ***/dev/null*** dosyasına yönlendirip onlardan kurtulabilirsiniz. Üstelik bu dosya disk üzerinde yer alan gerçek bir dosya olmadığı için disk üzerinde okuma yazma yükü oluşturmuyor. Bu ve benzeri dosyalar çekirdek tarafından sanal olarak oluşturulan ve bellek yani geçici hafıza üzerinden çalıştırılan sözde dosyalardır. Bu yaklaşım sayesinde disk üzerinde yük oluşturma durumundan da endişe etmemize gerek kalmıyor. 
 
 Şema üzerinden bakacak olursak, girdiğimiz komuttaki yönlendirme aşağıdaki gibi temsil edebilir. 
 
@@ -306,9 +306,9 @@ Buradaki “küçüktür” `<` yönlendirme operatörü `cat` aracına bu dosya
 
 ![6.webp]({{ site.url }}/egitim/temel-linux/metin/6.webp){:class="responsive img-zoomable"}
 
-Normalde doğrudan `cat sonuc` komutu ile de okuyabileceğimiz için belki bu örneğimiz size çok mantıklı gelmemiş olabilir ancak merak etmeyin ileride farklı araçlar üzerinde kullanırken daha anlamlı hale gelecek. Fakat biraz önce de belirttiğim gibi bir araca bu şekilde yönlendirme operatörü ile veri iletmek için **o aracın standart girdiden veri kabul ediyor olması gerekiyor**. Eğer o araç standart girdiye bakmıyorsa yani buradan veri kabul etmiyorsa yönlendirmiş olduğunuz hiç bir veri bu araç tarafından işlenmez.
+Normalde doğrudan `cat sonuc` komutu ile de okuyabileceğimiz için belki bu örneğimiz size çok mantıklı gelmemiş olabilir ancak merak etmeyin ileride farklı araçlar üzerinde kullanırken daha anlamlı hale gelecek. Fakat biraz önce de belirttiğim gibi bir araca bu şekilde yönlendirme operatörü ile veri iletmek için **o aracın standart girdiden veri kabul ediyor olması gerekiyor**. Eğer o araç standart girdiye bakmıyorsa yani buradan veri kabul etmiyorsa yönlendirmiş olduğunuz hiçbir veri bu araç tarafından işlenmez.
 
-Bu duruma örnek olarak `echo` aracını ele alabiliriz mesela. `echo` aracının tek görevi kendisinde sonra yazılmış olan argümanları bastırmaktır. Yani `echo` aracı standart girdiden veri kabul etmiyor, yalnızca kendisinden sonra yazılmış olan argümanları alıp konsola bastırıyor. Dolayısıyla eğer biz `echo` aracının standart girdisine veri gönderirsek `echo` aracı hiç bir tepki vermeyecek. Bizzat denemek için “***sonuc***” isimli dosyanın içeriğini `echo` aracına yönlendirmek üzere komutumuzu `echo < sonuc` şeklinde girebiliriz. 
+Bu duruma örnek olarak `echo` aracını ele alabiliriz mesela. `echo` aracının tek görevi kendisinde sonra yazılmış olan argümanları bastırmaktır. Yani `echo` aracı standart girdiden veri kabul etmiyor, yalnızca kendisinden sonra yazılmış olan argümanları alıp konsola bastırıyor. Dolayısıyla eğer biz `echo` aracının standart girdisine veri gönderirsek `echo` aracı hiçbir tepki vermeyecek. Bizzat denemek için “***sonuc***” isimli dosyanın içeriğini `echo` aracına yönlendirmek üzere komutumuzu `echo < sonuc` şeklinde girebiliriz. 
 
 ```bash
 ┌──(taylan@linuxdersleri)-[~]
@@ -318,7 +318,7 @@ Bu duruma örnek olarak `echo` aracını ele alabiliriz mesela. `echo` aracını
 └─$
 ```
 
-Bakın herhangi bir çıktı almadık çünkü `echo` aracı standart girdiden veri okumuyor. Dolayısıyla bizim veri yönlendirmiş olmamız `echo` için hiç bir anlam ifade etmiyor. Yani aşağıdakine benzer bir işleyiş söz konusu.
+Bakın herhangi bir çıktı almadık çünkü `echo` aracı standart girdiden veri okumuyor. Dolayısıyla bizim veri yönlendirmiş olmamız `echo` için hiçbir anlam ifade etmiyor. Yani aşağıdakine benzer bir işleyiş söz konusu.
 
 ![7.webp]({{ site.url }}/egitim/temel-linux/metin/7.webp){:class="responsive img-zoomable"}
 
@@ -334,7 +334,7 @@ Try 'mkdir --help' for more information.
 └─$
 ```
 
-Bakın komutumuz hata verdi çünkü `mkdir` aracı standart girdiye bakmıyor. Yani ben `mkdir < sonuc` şeklinde yazdım ama `mkdir` aracına oluşturması gereken klasör için hiç bir argüman iletilmedi. 
+Bakın komutumuz hata verdi çünkü `mkdir` aracı standart girdiye bakmıyor. Yani ben `mkdir < sonuc` şeklinde yazdım ama `mkdir` aracına oluşturması gereken klasör için hiçbir argüman iletilmedi. 
 
 İşte bizzat örnekler üzerinden de teyit ettiğimiz gibi standart girdiden veri okumayan araçların standart girdilerine veri yönlendirmesi yapmamız anlamsız çünkü standart girdilerini okumuyorlar. Örnekler sırasında ele aldığımız araçlar gibi yalnızca argümanlarla çalışabilen araçlara dosyalardan veri yönlendirmesi yapmak için alternatif çözüm var fakat bu çözümden daha sonra ayrıca bahsediyor olacağız. 
 
@@ -513,7 +513,7 @@ Bakın “***liste***” dosyasının içeriği kopyalanarak “***liste3***” 
 
 Burada gerçekleşen işlemi temel olarak açıklamamız gerekirse; Girmiş olduğumuz komut sayesinde `cat` aracı kopyalanacak dosyanın içeriğini okuyor ve buradaki büyüktür `>` işareti sayesinde bu içeriği standart çıktıya yönlendiriyor. Normalde biz özellikle belirtmediğimiz sürece standart çıktı bizim konsolumuza bağlı olduğu için biz `cat` aracının çıktılarını konsolda görüyoruz. Ama ben burada standart çıktıyı büyüktür operatörü ile “***liste3***” isimli dosyaya yönlendirdiğim için çıktılar bu dosyaya aktarılıyor. Bu sayede “***liste***” dosyasının içeriğiyle aynı içeriğe sahip “***liste3***” isimli dosya oluşturuluyor. Yani bir nevi “***liste***” dosyasını kopyalamış oluyoruz.
 
-Elbette benim ele aldığım temel kullanımı dışında `cat` komutunun daha birçok seçeneği mevcut. Bu seçeneklere göz atmak için `cat —help` komutunu kullanabilirsiniz. Buradaki `help` çıktısındaki açıklamalar yeterince açık gelmezse, internet üzerindeki rehber anlatımlara da kolaylıkla ulaşabilirsiniz. Zaten tüm eğitim boyunca tekrar ettiğim ve edeceğim gibi, bu eğitimdeki amacım temel kavramlardan bahsedip daha fazlasını nasıl öğrenebileceğimiz üzerinde durmak. Dolayısıyla tüm konulardan, tüm araçlardan veya araçların tüm seçeneklerinden bahsetmemi bekliyorsanız, üzgünüm bu gerçekleşmeyecek. Nitekim anlatıcı tarafında olmama karşın benim de henüz bilmediğim, hiç kullanmadığım için unuttuğum veya hiç karşılaşmadığım pek çok konu, kavram, araç ve seçenek bulunuyor. Bildiğimi sandıklarım, bilmediklerimin yanında bir hiç sayılır. Ancak temel kavramların farkında olduğumuzda ve yeni bilgileri nasıl araştırıp bulabileceğimizi bildikten sonra zaten zaman içinde bilmemiz gereken kadarlık bilgi birikimini adım adım inşa edebiliyoruz. Yani özetle önemli olan iyi bir temel ve bu temele dayandırılan araştırma yetkinliği kazanabilmek. Zira öğrenmek sürecimiz hiç bir zaman bitmeyecek. 
+Elbette benim ele aldığım temel kullanımı dışında `cat` komutunun daha birçok seçeneği mevcut. Bu seçeneklere göz atmak için `cat —help` komutunu kullanabilirsiniz. Buradaki `help` çıktısındaki açıklamalar yeterince açık gelmezse, internet üzerindeki rehber anlatımlara da kolaylıkla ulaşabilirsiniz. Zaten tüm eğitim boyunca tekrar ettiğim ve edeceğim gibi, bu eğitimdeki amacım temel kavramlardan bahsedip daha fazlasını nasıl öğrenebileceğimiz üzerinde durmak. Dolayısıyla tüm konulardan, tüm araçlardan veya araçların tüm seçeneklerinden bahsetmemi bekliyorsanız, üzgünüm bu gerçekleşmeyecek. Nitekim anlatıcı tarafında olmama karşın benim de henüz bilmediğim, hiç kullanmadığım için unuttuğum veya hiç karşılaşmadığım pek çok konu, kavram, araç ve seçenek bulunuyor. Bildiğimi sandıklarım, bilmediklerimin yanında bir hiç sayılır. Ancak temel kavramların farkında olduğumuzda ve yeni bilgileri nasıl araştırıp bulabileceğimizi bildikten sonra zaten zaman içinde bilmemiz gereken kadarlık bilgi birikimini adım adım inşa edebiliyoruz. Yani özetle önemli olan iyi bir temel ve bu temele dayandırılan araştırma yetkinliği kazanabilmek. Zira öğrenmek sürecimiz hiçbir zaman bitmeyecek. 
 
 Anlatımlarımıza gelin `cat` komutunu tersi şekilde çıktılar sunabilen `tac` aracından bahsederek devam edelim.
 
@@ -1046,7 +1046,7 @@ Gördüğünüz gibi `>` yönlendirme operatörü sayesinde `echo` komutuna bird
 └─$
 ```
 
-Bakın, gördüğünüz gibi konsola herhangi bir çıktı basılmadı. Çünkü `echo` komutu standart girdiden veri okumuyor. Biz göndersek de `echo` komutu standart girdiden veri kabul etmediği için `echo` komutuna aslında yankılayabileceği hiç bir argüman vermiş olmuyoruz. Dolayısıyla konsola hiç bir veri bastırılamıyor. `echo` komutu çalışma yapısı gereği yalnızca kendisine argüman olarak verilmiş olan ifadeleri konsola yankılıyor yani bastırıyor. 
+Bakın, gördüğünüz gibi konsola herhangi bir çıktı basılmadı. Çünkü `echo` komutu standart girdiden veri okumuyor. Biz göndersek de `echo` komutu standart girdiden veri kabul etmediği için `echo` komutuna aslında yankılayabileceği hiçbir argüman vermiş olmuyoruz. Dolayısıyla konsola hiçbir veri bastırılamıyor. `echo` komutu çalışma yapısı gereği yalnızca kendisine argüman olarak verilmiş olan ifadeleri konsola yankılıyor yani bastırıyor. 
 
 Zaten `help echo` komutu ile yardım sayfasına göz atacak olursanız, yardım bilgisinin en üstünde `echo` komutunun argümanları standart çıktıya yazdırdığı açıkça yazıyor. 
 
@@ -1286,7 +1286,7 @@ e|antayla-5|antayla-e|5
 f|Kocaeli-6|Kocaeli-f|6
 ```
 
-Bakın, gördüğünüz gibi sırasıyla hem dikey çizgi hem de kısa çizgi karakterleri sütunlar arasındaki sınırlayıcı olarak kullanılmış. İşte sizler de bu şekilde sütunları istediğiniz sınırlayıcı karakterle birbirinden ayırabilirsiniz. Birden fazla sınırlayıcı belirttiğimizde tıpkı burada aldığımız çıktıda da olduğu gibi bu karakterler sırasıyla soldan sağa doğru tekrar eden bir örüntü gibi kullanılıyor olacak. İhtiyacınız doğrultusunda tek ve birden fazla sınırlayıcı karakter belirtebilirsiniz. Hatta sınırlayıcı olarak tırnak içinde hiç bir karakter belirtmezseniz doğrudan boşluk olmadan dosyaların birbirine yapıştırılmasını da sağlayabilirsiniz. 
+Bakın, gördüğünüz gibi sırasıyla hem dikey çizgi hem de kısa çizgi karakterleri sütunlar arasındaki sınırlayıcı olarak kullanılmış. İşte sizler de bu şekilde sütunları istediğiniz sınırlayıcı karakterle birbirinden ayırabilirsiniz. Birden fazla sınırlayıcı belirttiğimizde tıpkı burada aldığımız çıktıda da olduğu gibi bu karakterler sırasıyla soldan sağa doğru tekrar eden bir örüntü gibi kullanılıyor olacak. İhtiyacınız doğrultusunda tek ve birden fazla sınırlayıcı karakter belirtebilirsiniz. Hatta sınırlayıcı olarak tırnak içinde hiçbir karakter belirtmezseniz doğrudan boşluk olmadan dosyaların birbirine yapıştırılmasını da sağlayabilirsiniz. 
 
 ```bash
 ┌──(taylan@linuxdersleri)-[~]
@@ -1801,7 +1801,7 @@ Bakın dosyanın içeriğinde herhangi bir değişiklik olmamış. Çünkü dedi
 10      1
 ```
 
-Bakın kaynak dosyada hiç bir değişiklik yok ve yönlendirme operatörü sayesinde standart çıktıyı yönlendirdiğimiz “***karisik.txt***” dosyasının içeriği de istediğimiz gibi karışık satırlardan oluşuyor.
+Bakın kaynak dosyada hiçbir değişiklik yok ve yönlendirme operatörü sayesinde standart çıktıyı yönlendirdiğimiz “***karisik.txt***” dosyasının içeriği de istediğimiz gibi karışık satırlardan oluşuyor.
 
 Bu basit kullanım dışında eğer isterseniz tüm satırlar yerine belirli sayıda satırların bastırılmasını da sağlayabilirsiniz. Örneğin ben 10 satırdan oluşan bu listenin karıştırılıp, yalnızca 3 satırın bana çıktı olarak verilmesini istiyorum. Bunun için “`n`” seçeneğinin ardından istediğim satır sayısını yazmam yeterli. Yani komutumuzu `shuf -n 3 liste1` şeklinde girebiliriz. 
 

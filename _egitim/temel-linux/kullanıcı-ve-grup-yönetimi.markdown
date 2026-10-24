@@ -141,7 +141,7 @@ Kullanıcının ev dizinin de oluşturulması için özellikle komutumuzu `usera
 └─$
 ```
 
-Hiç bir çıktı almadık, bize ne şifre sordu ne de başka bir bilgi yalnızca kullanıcı sisteme eklendi. Eklendiğini de ***/home*** dizinini listeleyerek teyit edebiliriz. 
+Hiçbir çıktı almadık, bize ne şifre sordu ne de başka bir bilgi yalnızca kullanıcı sisteme eklendi. Eklendiğini de ***/home*** dizinini listeleyerek teyit edebiliriz. 
 
 ```bash
 ┌──(taylan㉿linuxdersleri)-[~]
@@ -1682,7 +1682,7 @@ Tüm yetkileri verdim. Şimdi bu gruba dahil olan ali kullanıcı hesabı üzeri
 chmod: changing permissions of 'testfile.sh': Operation not permitted
 ```
 
-Yetki hatası aldık çünkü ali kullanıcısının okuma yazma ve çalıştırma yetkisi olsa da bu dosyanın izinlerini değiştirme yetkisi yok. Dosya ve dizinlerin yetkilerini yalnızca sahipler değiştirebiliyor. Zaten böyle olmasaydı erişim yetkilerinin hiç bir anlamı kalmazdı. Çünkü örneğin dosyanın sahibi dışındaki herhangi bir kullanıcıya dosyayı okuması çalıştırması ve yeni veriler yazması için yetki verdiğimizde bu kullanıcı diğer herkesin yetkilerini düşürüp dosyanın tüm yetkilerini devralabilirdi. 
+Yetki hatası aldık çünkü ali kullanıcısının okuma yazma ve çalıştırma yetkisi olsa da bu dosyanın izinlerini değiştirme yetkisi yok. Dosya ve dizinlerin yetkilerini yalnızca sahipler değiştirebiliyor. Zaten böyle olmasaydı erişim yetkilerinin hiçbir anlamı kalmazdı. Çünkü örneğin dosyanın sahibi dışındaki herhangi bir kullanıcıya dosyayı okuması çalıştırması ve yeni veriler yazması için yetki verdiğimizde bu kullanıcı diğer herkesin yetkilerini düşürüp dosyanın tüm yetkilerini devralabilirdi. 
 
 Bu sebeple dosya ve dizinlerin yetkilerini yalnızca sahiplerinin değiştirebileceğini unutmayın. Tabii ki sistem üzerindeki en yetkili olan root kullanıcısı da değiştirebilir fakat bu bir istisna ve root kullanıcısı zaten süper yetkilere sahip.
 
@@ -2018,7 +2018,7 @@ taylan : taylan adm dialout cdrom floppy sudo audio dip video plugdev netdev wir
 
 Dolayısıyla örneğin tıpkı taylan kullanıcısında olduğu gibi aynı yetkilere sahip olmasını istediğimiz kullanıcılar olursa onları da **sudo** grubuna ekleyip bu yetkiler dahilinde hareket etmelerini sağlayabiliriz. Ya da yeni bir grup oluşturup, burada bu gruba özel olarak izin tanımlaması da yapabiliriz. 
 
-Ayrıca bu noktada dikkatinizi çekmek istediğim bir husus var. Sizin kullandığınız dağıtımdaki ***sudoers*** dosyasında buradaki gibi **sudo** isimli bir grup varsayılan olarak tanımlı olmayabilir. Farklı isimde örneğin “**admin**” veya “**wheel**” isimlerinde gruplar da tanımlı olabilir. Hatta hiç bir grup tanımlanmamış da olabilir. Burada asıl mesele, istersek tek bir kullanıcı için veya daha fazla kişiyi etkilemesi için bir gruba özel yetki tanımlaması yapabiliyor olmamız. Bu tanımlamalar varsayılan olarak bu dosyada bulunmasa bile biz ihtiyaçlarımıza göre kendimiz ekleyebiliriz. 
+Ayrıca bu noktada dikkatinizi çekmek istediğim bir husus var. Sizin kullandığınız dağıtımdaki ***sudoers*** dosyasında buradaki gibi **sudo** isimli bir grup varsayılan olarak tanımlı olmayabilir. Farklı isimde örneğin “**admin**” veya “**wheel**” isimlerinde gruplar da tanımlı olabilir. Hatta hiçbir grup tanımlanmamış da olabilir. Burada asıl mesele, istersek tek bir kullanıcı için veya daha fazla kişiyi etkilemesi için bir gruba özel yetki tanımlaması yapabiliyor olmamız. Bu tanımlamalar varsayılan olarak bu dosyada bulunmasa bile biz ihtiyaçlarımıza göre kendimiz ekleyebiliriz. 
 
 Gruplar dışında burada **@includedir** tanımının ardından bir dizin adresi belirtilmiş. 
 
@@ -2275,7 +2275,7 @@ Ayrıca root dışında, diğer kullanıcı hesapları üzerinden çalıştırma
 └─$ sudo -u nil whoami
 Sorry, user ali is not allowed to execute '/usr/bin/whoami' as nil on linuxdersleri.net.
 ```
-Bakın ben "nil" kullanıcı yetkileri ile çalıştırmayı denedim ama konfigürasyonlarda bunu belirtmediğim için çalıştıramadım. Ben konfigürasyonlarda hiç bir kullanıcı veya grubu belirtmediğim için yalnızca "root" yetkileri ile çalıştırmam mümkün oldu. O da yalnızca izin verdiğim araçları çalıştırabildim. Yani ali kullanıcısı için tanımladığımız konfigürasyonun geçerli olduğunu bizzat teyit etmiş olduk.
+Bakın ben "nil" kullanıcı yetkileri ile çalıştırmayı denedim ama konfigürasyonlarda bunu belirtmediğim için çalıştıramadım. Ben konfigürasyonlarda hiçbir kullanıcı veya grubu belirtmediğim için yalnızca "root" yetkileri ile çalıştırmam mümkün oldu. O da yalnızca izin verdiğim araçları çalıştırabildim. Yani ali kullanıcısı için tanımladığımız konfigürasyonun geçerli olduğunu bizzat teyit etmiş olduk.
 
 Esasen benzer şekilde spesifik olarak izin verip, kısıtlayabileceğimiz ve başka parametreler ile kapsamını değiştirebileceğimiz pek çok tanımlama mevcut. Fakat temel işleyişten haberiniz olduğu için manual sayfaları üzerinden bu tanımlara bakmanız çok daha etkili olacaktır. Zira aksi takdirde manual sayfalarının tekrarı gibi biraz uzun ve kendini tekrar eden tanımlama açıklamaları yapmam kaçınılmaz olacak. Ben de ihtiyaç duyduğumda manual sayfalarına bakıp tanımlama kurallarını hatırlıyorum.
 

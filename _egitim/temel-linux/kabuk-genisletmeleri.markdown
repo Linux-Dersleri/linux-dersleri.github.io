@@ -448,7 +448,7 @@ ImageMagick-6 ModemManager NetworkManager ODBCDataSources OpenCL UPower X11 zsh 
 adduser.conf adjtime alsa alternatives apache2 apparmor apparmor.d apt avahi bash.bashrc bash.bashrc.save bash.bashrc.save.1 bash_completion bash_completion.d bindresvport.blacklist binfmt.d bluetooth ca-certificates ca-certificates.conf chatscripts cifs-utils cloud console-setup cron.d cron.daily cron.hourly cron.monthly crontab cron.weekly cryptsetup-initramfs cryptsetup-nuke-password crypttab dbus-1 dconf debconf.conf debian_version debtags default deluser.conf dhcp dictionaries-common dns2tcpd.conf dpkg e2scrub.conf emacs environment environment.d ethertypes ettercap firebird firefox-esr fonts freetds fstab fuse.conf gai.conf geoclue ghostscript glvnd gprofng.rc groff group group- grub.d gshadow gshadow- gss gtk-2.0 gtk-3.0 guymager hdparm.conf host.conf hostname hosts hosts.allow hosts.deny idmapd.conf ifplugd inetsim init.d initramfs-tools inputrc insserv.conf.d ipp-usb iproute2 ipsec.conf ipsec.d ipsec.secrets issue issue.net java-11-openjdk john kernel kernel-img.conf king-phisher kismet ld.so.cache ld.so.conf ld.so.conf.d libao.conf libaudit.conf libblockdev libnl-3 libpaper.d lightdm lighttpd locale.alias locale.gen localtime logcheck login.defs logrotate.conf logrotate.d macchanger machine-id magic magic.mime mailcap mailcap.order manpath.config matplotlibrc mime.types minicom miredo miredo.conf mke2fs.conf modprobe.d modules modules-load.d motd mtab mysql nanorc netconfig netsniff-ng network networks nftables.conf nginx nikto.conf nsswitch.conf odbc.ini odbcinst.ini openal openfortivpn openni2 openvpn opt os-release pam.conf pam.d papersize passwd passwd- perl php plymouth polkit-1 postgresql postgresql-common powershell-empire ppp profile profile.d protocols proxychains4.conf pulse python2.7 python3 python3.10 python3.9 rarfiles.lst rc0.d rc1.d rc2.d rc3.d rc4.d rc5.d rc6.d rcS.d rearj.cfg redsocks.conf request-key.conf request-key.d resolv.conf responder rmt rpc rsyslog.conf rsyslog.d runit samba sane.d scalpel screenrc sddm.conf.d searchsploit_rc security selinux sensors3.conf sensors.d services shadow shadow- shells skel smartd.conf smartmontools smi.conf snmp speech-dispatcher sqlmap ssh ssl sslsplit strongswan.conf strongswan.d stunnel subgid subgid- subuid subuid- subversion sudo.conf sudoers sudoers.d sudoers.save sudo_logsrvd.conf sv sysctl.conf sysctl.d sysstat systemd terminfo theHarvester tightvncserver.conf timezone timidity tmpfiles.d ucf.conf udev udisks2 ufw updatedb.conf update-motd.d vdpau_wrapper.cfg vim vpnc vulkan wgetrc wireshark wpa_supplicant xattr.conf xdg xfce4 xl2tpd
 ```
 
-Bakın bu kez tersi şekilde başlangıç harfinde z karakteri bulunan veya başlangıç harfi büyük olan hiç bir içerik bastırılmadı çünkü bunları genişletme kapsamına dahil etmedik. Bu iki çıktıyı kıyaslarsanız, ünlem işaretinin hariç tutma görevinde olduğunu net biçimde görebilirsiniz.
+Bakın bu kez tersi şekilde başlangıç harfinde z karakteri bulunan veya başlangıç harfi büyük olan hiçbir içerik bastırılmadı çünkü bunları genişletme kapsamına dahil etmedik. Bu iki çıktıyı kıyaslarsanız, ünlem işaretinin hariç tutma görevinde olduğunu net biçimde görebilirsiniz.
 
 <p class="mavi"><strong>ℹ️ Not:</strong> Bu hariç tutma özelliği her zaman beklendiği şekilde sonuç vermeyebilir. Daha kesin yaklaşım için <code class="language-plaintext highlighter-rouge">find</code> aracının hariç tutma özelliği olan ünlem işaretini kullanmanız özellikle karmaşık filtrelemelerde daha sağlıklı olabilir.</p> 
 
@@ -601,7 +601,7 @@ Bakın bu kez tırnak içinde yazdığımız için buradaki boşluk karakteri kl
 
 Söz konusu alıntılama olduğunda tek ve çift tırnak kullanabileceğimiz iki alternatif yöntem bulunuyor. 
 
-Bash kabuğu için tek tırnak en katı alıntılama biçimi. Bu sebeple tek tırnak içindeki hiç bir karakter kabuk tarafından özel anlamaları dahilinde ele alınmıyor. 
+Bash kabuğu için tek tırnak en katı alıntılama biçimi. Bu sebeple tek tırnak içindeki hiçbir karakter kabuk tarafından özel anlamaları dahilinde ele alınmıyor. 
 
 Hemen denemek için şu ana kadar ele aldığımız genişletme karakterlerini tek tırnak içinde yazıp `echo` aracı ile konsola bastırmayı deneyelim. 
 
@@ -611,7 +611,7 @@ Hemen denemek için şu ana kadar ele aldığımız genişletme karakterlerini t
 {1..5} [a-z]* ~ $SHELL
 ```
 
-Bakın tek tırnak içinde yazmış olduğum hiç bir genişletme karakteri kabuk tarafından genişletilmedi. Nasıl yazdıysam aynen `echo` aracına standart karakterler olarak iletilip konsola bastırılması sağlandı. 
+Bakın tek tırnak içinde yazmış olduğum hiçbir genişletme karakteri kabuk tarafından genişletilmedi. Nasıl yazdıysam aynen `echo` aracına standart karakterler olarak iletilip konsola bastırılması sağlandı. 
 
 Şimdi aynı örneği çift tırnak içinde tekrar deneyebiliriz. 
 
@@ -696,7 +696,7 @@ Ben şimdi son olarak çok kısaca komut ikamesi genişletmesinden de bahsedip g
 
 Esasen temel eğitimde bu genişletmeden bahsetmeyi düşünmüyordum fakat, sık karşılaşabileceğiniz ve gerektiğinde işinize yarayabileceği için çok kısaca ele almak istiyorum.
 
-Komut ikamesi kavramı, ikame kelimesinin de yardımıyla çıkarım yapabileceğimiz gibi, komutların ürettiği sonuçların bu genişletmenin kullanıldığı tanımlamanın yeri almasından ibaret. Biliyorum ilk kez duyduğunuz bu tanımlama hiç bir şey ifade etmiyor. Hemen daha anlamlı hale getirmek için örnekler üzerinden ele almaya çalışalım.
+Komut ikamesi kavramı, ikame kelimesinin de yardımıyla çıkarım yapabileceğimiz gibi, komutların ürettiği sonuçların bu genişletmenin kullanıldığı tanımlamanın yeri almasından ibaret. Biliyorum ilk kez duyduğunuz bu tanımlama hiçbir şey ifade etmiyor. Hemen daha anlamlı hale getirmek için örnekler üzerinden ele almaya çalışalım.
 
 Normalde komut ikamesi daha çok kabuk programlamada kullanılıyor o yüzden size şimdi çok mantıklı gelmese de birkaç örnek vermek istiyorum. Ancak merak etmeyin eğitimin devamında biraz daha fazla detay öğrendikten sonra daha makul bir kullanım örneğini ele alırız mutlaka. Siz şimdi yalnızca komut ikamesi genişletmesinin nasıl çalıştığına odaklanın lütfen.
 

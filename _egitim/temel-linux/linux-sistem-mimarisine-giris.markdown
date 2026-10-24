@@ -83,7 +83,7 @@ Burada grafiksel arayüze gerek kalmadan klasör oluşturmamızı sağlayan ara�
 
 İki örnek üzerinden de görebildiğimiz gibi en nihayetinde bizim işletim sistemine derdimizi anlatmak için bir iletişim yöntemine ihtiyacımız var. Bu iletişim yöntemi de ele aldığımız şekilde grafiksel arayüzlü araçları kullanmak ya da kabuğa komutlar vermek olabilir. Hangi yöntemi ne zaman tercih edeceğimiz de tamamen o anlık ihtiyaçlarımızla ilgili. 
 
-Grafiksel ve komut satırı arayüzlerini açıkladığımıza göre bence artık sistemin genel çalışma yapısı hakkında iyi bir temel atmış olduk. Yine de özellikle komut satırı arayüzü konusunda hiç bir soru işareti kalmaması adına anlatımlarımıza temel kavramları netleştirerek devam edelim.
+Grafiksel ve komut satırı arayüzlerini açıkladığımıza göre bence artık sistemin genel çalışma yapısı hakkında iyi bir temel atmış olduk. Yine de özellikle komut satırı arayüzü konusunda hiçbir soru işareti kalmaması adına anlatımlarımıza temel kavramları netleştirerek devam edelim.
 
 ## Konsol | Terminal | Komut Satırı
 
@@ -109,7 +109,7 @@ Bu araçlar sayesinde grafiksel arayüz ortamındayken, komut satırı arayüzü
 
 Özetle grafiksel arayüzde çalışırken dahi, konsol yada terminal olarak da bilinen bu araçlar sayesinde kabuk ile etkileşim kurmak için iletişim kanalımız her zaman açık. Zaten bu sayede yalnızca grafiksel arayüze sahip araçlarla sınırlı kalmadan, istediğimiz an komut satırında çalışan araçlar da dahil sistemdeki tüm araçları kolayca yönetebiliyoruz.
 
-Benim daha önce atıfta bulunduğum “komut satırı arayüzü” ise grafiksel arayüze dair hiç bir bileşenin olmadığı ikinci kullanıcı alanıdır. Grafiksel arayüzün bulunmadığı bu komut satırı arayüzünde de yalnızca “**tty”** olarak geçen sanal konsollar bulunuyor. Bizler de bu tty konsolları üzerinden kabuk ile iletişim kurup komut satırında çalışan her aracı buradan yönetebiliyoruz. Bu ortamda grafiksel arayüzü sağlayabilecek bileşenler bulunmadığı için grafiksel arayüze sahip olan araçları burada kullanamıyoruz. 
+Benim daha önce atıfta bulunduğum “komut satırı arayüzü” ise grafiksel arayüze dair hiçbir bileşenin olmadığı ikinci kullanıcı alanıdır. Grafiksel arayüzün bulunmadığı bu komut satırı arayüzünde de yalnızca “**tty”** olarak geçen sanal konsollar bulunuyor. Bizler de bu tty konsolları üzerinden kabuk ile iletişim kurup komut satırında çalışan her aracı buradan yönetebiliyoruz. Bu ortamda grafiksel arayüzü sağlayabilecek bileşenler bulunmadığı için grafiksel arayüze sahip olan araçları burada kullanamıyoruz. 
 
 Bu ortamın nasıl olduğunu daha iyi anlamak için bizzat komut satırı arayüzüne geçiş yapalım.
 
@@ -224,7 +224,7 @@ Varsayılan kabuk programını öğrenmek için konsola `echo $SHELL` komutunu g
 
 Bakın ben çıktı olarak **/usr/bin/zsh** ifadesini aldım. Aldığım bu çıktı benim mevcut kullanıcı hesabımdaki kabuğun **zsh** kabuğu olduğunu açıkça belirtiyor. Normalde pek çok köklü dağıtım varsayılan olarak bash kabuğunu kullanıyor olsa da benim şu an kullanmakta olduğum Kali Linux dağıtımı varsayılan olarak zsh kabuğunu kullanıyor. Fakat ben zsh kabuğunu üzerinden ilerlemek istemiyorum çünkü bash kabuğu hem bireysel hem de profesyonel anlamda çok daha yaygın kullanıma sahip olduğu için bash kabuğunu öğrenmek çok daha mantıklı bir yaklaşım. 
 
-Siz de `echo $SHELL` çıktısında hangi kabuğun ismini aldıysanız, şu anda o kabuğa komutlar veriyorsunuz. Eğer sizin hesabınızdaki varsayılan kabuk benimki gibi zsh veya farklı bir kabuksa hiç bir problem yok. Çünkü eğer isterseniz varsayılan kabuğunuzu bash olarak değiştirmeniz mümkün. Nitekim ben de zsh kabuğunu bash ile değiştireceğim. Sizin kabuğunuz da bash değilse, mevcut eğitimi sorunsuzca takip etmek için sizin de değiştirmeniz gerekiyor. Çünkü biz bu eğitimde bash kabuğunu kullanıyor olacağız.
+Siz de `echo $SHELL` çıktısında hangi kabuğun ismini aldıysanız, şu anda o kabuğa komutlar veriyorsunuz. Eğer sizin hesabınızdaki varsayılan kabuk benimki gibi zsh veya farklı bir kabuksa hiçbir problem yok. Çünkü eğer isterseniz varsayılan kabuğunuzu bash olarak değiştirmeniz mümkün. Nitekim ben de zsh kabuğunu bash ile değiştireceğim. Sizin kabuğunuz da bash değilse, mevcut eğitimi sorunsuzca takip etmek için sizin de değiştirmeniz gerekiyor. Çünkü biz bu eğitimde bash kabuğunu kullanıyor olacağız.
 
 Zaten Bash kabuk yazılımı yaygın kullanımı sebebiyle istisnai durumlar hariç hemen her dağıtımda  yüklü şekilde geliyor, ancak varsayılan kabuk olarak tanımlanmamış olabiliyor. Gerekliğinde bash kabuğunu kullanmak için tek yapmanız gereken sizin kullanıcı hesabınız için varsayılan olarak tanımlamaktır. 
 
@@ -382,4 +382,4 @@ Lafı daha fazla uzatmak istemiyorum ancak lütfen bu eğitimin bash kabuğu üz
 
 Bir sonraki bölümde de çok kısaca kabuğun bizim girdiğimiz komutları nasıl algılayıp değerlendirdiğinden bahsederek devam edebiliriz.
 
-<p class="mavi"><strong>ℹ️ Not: </strong>Eğer buradaki anlatımlar size sıkıcı veya gereksiz gibi geldiyse lütfen biraz daha sabırlı olun. Çünkü bu bölüm ve bir sonraki bölüm aslında tüm eğitim boyunca bahsedeceğimiz tüm konu ve kavramların temelini oluşturuyor. Temeli sağlam atamazsak üzerine inşa edeceğimiz her şey dayanaksız olur. O yüzden lütfen sabırlı olun ve yalnızca tamamlamış olmak için bu bölümleri geçmeyin. Bunun size hiç bir faydası olmaz. Gerekiyorsa bölümü baştan sonra tekrar edin veya ara verip başka zaman devam edin ancak lütfen buradaki temel bilgileri anlayarak eğitime devam edin.</p>
+<p class="mavi"><strong>ℹ️ Not: </strong>Eğer buradaki anlatımlar size sıkıcı veya gereksiz gibi geldiyse lütfen biraz daha sabırlı olun. Çünkü bu bölüm ve bir sonraki bölüm aslında tüm eğitim boyunca bahsedeceğimiz tüm konu ve kavramların temelini oluşturuyor. Temeli sağlam atamazsak üzerine inşa edeceğimiz her şey dayanaksız olur. O yüzden lütfen sabırlı olun ve yalnızca tamamlamış olmak için bu bölümleri geçmeyin. Bunun size hiçbir faydası olmaz. Gerekiyorsa bölümü baştan sonra tekrar edin veya ara verip başka zaman devam edin ancak lütfen buradaki temel bilgileri anlayarak eğitime devam edin.</p>

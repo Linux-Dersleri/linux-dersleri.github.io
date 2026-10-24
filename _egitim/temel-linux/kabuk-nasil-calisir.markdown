@@ -19,7 +19,7 @@ Ben bu eğitimde kabuğun çalışma yapısının bazı detaylarını atlıyor o
 
 Anlatımlarımıza öncelikle kabuğun bizim girdiğimiz komutları nasıl algıladığından bahsederek başlayabiliriz. Bu konuyla başlıyoruz çünkü kabuğun bizi nasıl anladığını bilmek, kabuğa anlayacağı türden komutlar girebilmemiz için çok önemli. 
 
-Örnek olması için sistem üzerinde dosyaları ve klasörleri bulma konusunda bize yardımcı olan `find` aracını kullanarak bash kabuğunun bizim girdiğimiz komutları nasıl ele aldığından çok kısaca bahsetmek istiyorum. Biliyorum henüz hiç bir komutu ele almadık ve tabii ki `find` komutunu da bilmiyoruz fakat siz benim örnek için kullandığım bu komutun ne olduğuna şimdilik takılmayın. Ben burada bash kabuğuna girdiğimiz komutların nasıl çalıştırıldıklarından bahsetmek istiyorum.
+Örnek olması için sistem üzerinde dosyaları ve klasörleri bulma konusunda bize yardımcı olan `find` aracını kullanarak bash kabuğunun bizim girdiğimiz komutları nasıl ele aldığından çok kısaca bahsetmek istiyorum. Biliyorum henüz hiçbir komutu ele almadık ve tabii ki `find` komutunu da bilmiyoruz fakat siz benim örnek için kullandığım bu komutun ne olduğuna şimdilik takılmayın. Ben burada bash kabuğuna girdiğimiz komutların nasıl çalıştırıldıklarından bahsetmek istiyorum.
 
 Bulunmasını istediğimiz dosyaları kendimiz oluşturabiliriz. Bunun için grafiksel arayüzü de kullanabiliriz fakat ben komut satırından kolayca oluşturmak için `touch ~/test.txt ~/Desktop/test.txt` komutunu giriyorum. Bu komut sayesinde kendi ev dizinimde ve ev dizimin altındaki Desktop klasörü içinde “test.txt” isimli birer dosya oluşturulmuş olacak. Komutu anlamasanız bile şimdilik dosyaları oluşturmak için kopyala yapıştır şekilde kullanabilirsiniz.
 
@@ -292,7 +292,7 @@ Denemek için yeni bir konsol penceresi açıp `echo $ad` komutu ile değişkeni
 
 ![4.webp]({{ site.url }}/egitim/temel-linux/kabuk/4.webp){:class="responsive img-zoomable"}
 
-Yeni açtığımız konsolda hiç bir çıktı alamadık. Şimdi bir de bu konsol üzerinden **PATH** değişkenini bastırmayı deneyelim.
+Yeni açtığımız konsolda hiçbir çıktı alamadık. Şimdi bir de bu konsol üzerinden **PATH** değişkenini bastırmayı deneyelim.
 
 ![5.webp]({{ site.url }}/egitim/temel-linux/kabuk/5.webp){:class="responsive img-zoomable"}
 
@@ -515,7 +515,7 @@ Videos
 
 İşte tıpkı burada ele aldığımız `ls` komutu gibi, komut girerken gizli içerikleri de dahil etmek için komutlarımızın uygun seçeneklerini kullanmamız gerekiyor.
 
-Tabii ki gizlilik özelliği çoğunlukla önemli dosya ve klasörleri korumak adına kullanılan bir özellik. Örneğin .bashrc dosyası önemli bir konfigürasyon dosyası olduğu için bu dosyayı gizleyerek yanlışlıkla silinmesi veya üzerinde işlem yapılması gibi olası hatalar da önlemiş oluyor. Zaten bu sebeple istisnalar hariç neredeyse hiç bir araç `ls` komutunda olduğu gibi biz özellikle belirtmediğimiz sürece gizli olan dosya ve klasörleri işleme dahil etmezler. Bu sayede gizli içeriklerin bilinçsizce zarar görmesi de engellenmiş oluyor.
+Tabii ki gizlilik özelliği çoğunlukla önemli dosya ve klasörleri korumak adına kullanılan bir özellik. Örneğin .bashrc dosyası önemli bir konfigürasyon dosyası olduğu için bu dosyayı gizleyerek yanlışlıkla silinmesi veya üzerinde işlem yapılması gibi olası hatalar da önlemiş oluyor. Zaten bu sebeple istisnalar hariç neredeyse hiçbir araç `ls` komutunda olduğu gibi biz özellikle belirtmediğimiz sürece gizli olan dosya ve klasörleri işleme dahil etmezler. Bu sayede gizli içeriklerin bilinçsizce zarar görmesi de engellenmiş oluyor.
 
 Tekrar ana konumuza dönecek olursak size son olarak konfigürasyon dosyalarında değişiklik yaparken dikkatli olmanız gerektiğini söylemek istiyorum. Eğer değişiklik yapmanız gerekiyorsa, konfigürasyon dosyalarınızın var olan yapısını bozmadan neler eklediğinizin de farkında olarak değişiklik yapın. **Ve değişiklik yapmadan önce mutlaka mevcut dosyanın yedeğini alın.** Bu sayede hatalı konfigürasyonlardan kolayca eskisine dönüş yapabilirsiniz. Özellikle zamanla içerisine pek çok ekstra konfigürasyon tanımlaması eklenmiş dosyaların yeni eklemelerden önce mutlaka yedeklerinin alınması gerekiyor. Aksi halde kabuğun doğru şekilde çalışmamasına ve sistem güvenliğinin ihlaline sebep olabilirsiniz. 
 

@@ -65,7 +65,7 @@ Hepsini olmasa da en temel kısayollarından bahsederek devam edecek olursak. Bu
 
 ## Nano Aracını Kapatmak
 
-Metin editöründen çıkıp komut satırına dönmek istersek burada da belirtildiği şekilde <kbd>Ctrl</kbd> + <kbd>X</kbd> kısayolunu uygulayabiliriz. Zaten dosya içerisine herhangi bir ekleme yapmadığım için editörü kapatırken bana dosyayı kaydetmekle ilgili hiç bir soru sorulmadan `nano` aracı kapanacaktır.
+Metin editöründen çıkıp komut satırına dönmek istersek burada da belirtildiği şekilde <kbd>Ctrl</kbd> + <kbd>X</kbd> kısayolunu uygulayabiliriz. Zaten dosya içerisine herhangi bir ekleme yapmadığım için editörü kapatırken bana dosyayı kaydetmekle ilgili hiçbir soru sorulmadan `nano` aracı kapanacaktır.
 
 ![ ]({{ site.url }}/egitim/temel-linux/metin-editoru/nano-close.gif){:class="responsive img-zoomable"}
 

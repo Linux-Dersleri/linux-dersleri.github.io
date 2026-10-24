@@ -436,7 +436,7 @@ Bakın görebildiğiniz gibi işlem son derece kısa sürdü ve güncelleme işl
 
 # `info` Komutu
 
-Türkçe kılavuz olarak geçen **man** yani **manual**'e ek olarak 90'ların başında, GNU projesi "**man**" dokümantasyon sisteminin güncelliğini yitirdiğine karar verdi ve onun yerini alması için **info** aracı geliştirildi. Ancak ne yazık ki **info**, dönemine göre nispeten daha kolay okunur olsa da hiç bir zaman man kadar popüler olamadı. Nitekim günümüzde de **man** kılavuz sayfaları halen **info** ya oranla daha sık tercih ediliyor. Man sayfalarını kullanamaya benzer olması ve bilmenin elzem olmaması sebebiyle info aracını özellikle ele alarak vakit kaybetmek istemiyorum. Bilseniz fena olmaz, ama şart da sayılmaz. Kısa bir araştırma ile tıpkı **man** gibi kullanılabildiğini kendiniz de bizzat görebilirsiniz. 
+Türkçe kılavuz olarak geçen **man** yani **manual**'e ek olarak 90'ların başında, GNU projesi "**man**" dokümantasyon sisteminin güncelliğini yitirdiğine karar verdi ve onun yerini alması için **info** aracı geliştirildi. Ancak ne yazık ki **info**, dönemine göre nispeten daha kolay okunur olsa da hiçbir zaman man kadar popüler olamadı. Nitekim günümüzde de **man** kılavuz sayfaları halen **info** ya oranla daha sık tercih ediliyor. Man sayfalarını kullanamaya benzer olması ve bilmenin elzem olmaması sebebiyle info aracını özellikle ele alarak vakit kaybetmek istemiyorum. Bilseniz fena olmaz, ama şart da sayılmaz. Kısa bir araştırma ile tıpkı **man** gibi kullanılabildiğini kendiniz de bizzat görebilirsiniz. 
 
 # Dokümantasyonlar
 

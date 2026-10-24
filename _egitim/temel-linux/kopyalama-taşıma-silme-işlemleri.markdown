@@ -420,7 +420,7 @@ Gördüğünüz gibi `i` seçeneği sayesinde benden onay alınan klasörler sil
 
 ## İçerisi Dolu Olan Klasörlerin Silinmesi
 
-Şu ana kadar klasörleri silerken hiç bir problem yaşamadık, çünkü klasör içerikleri boştu. Eğer klasörlerin içinde başka dosyalar ve klasörler bulunuyorsa, `rm -d` komutu ile silmemiz mümkün değil. 
+Şu ana kadar klasörleri silerken hiçbir problem yaşamadık, çünkü klasör içerikleri boştu. Eğer klasörlerin içinde başka dosyalar ve klasörler bulunuyorsa, `rm -d` komutu ile silmemiz mümkün değil. 
 
 Mesela teyit etmek için daha önceden oluşturduğum ***Documents*** dizini altındaki klasörümü silmeyi deneyebilirim. 
 
