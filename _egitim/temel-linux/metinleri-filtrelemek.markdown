@@ -505,7 +505,7 @@ Yani örneğin `sudo echo "eklenecek veri" >> /etc/apt/sources.list` şeklinde k
 bash: /etc/apt/sources.list: Permission denied
 ```
 
-Ancak gördüğünüz gibi yetki hatası aldık. Halbuki ileri de ayrıca ele alacağımız `sudo` komutu bizim yetkili şekilde bu dosyaya veri ekleyebilmemizi sağlamalıydı.
+Ancak gördüğünüz gibi yetki hatası aldık. Halbuki ileride ayrıca ele alacağımız `sudo` komutu bizim yetkili şekilde bu dosyaya veri ekleyebilmemizi sağlamalıydı.
 
 Burada `sudo` komutu işe yaramadı çünkü **yönlendirmeler üzerinde `sudo` komutunun etkisi bulunmuyor**. Yani yönlendirmeyi yine mevcut yetkisiz kullanıcımız yapmış oluyor. Dolayısıyla `sudo` komutunu kullansak dahi yönlendirme operatörü ile, ilgili dosyaya veri yazma yetkisi kazanamayız. Fakat bunun yerine `tee` komutunu `sudo` ile yetkili şekilde çalıştırabiliriz. Hadi hemen deneyelim. Ben `echo "####" | sudo tee -a /etc/apt/sources.list` şeklinde komutumu yazıyorum. **Buradaki `a` seçeneğini unutmayın aksi halde bu çok önemli dosyasının tüm içeriğinin silinmesine neden olabilirsiniz.**
 
@@ -910,7 +910,7 @@ Bakın “**ay**” ifadesi ve devamında küçük büyük olması fark etmeksiz
 
 ![19.webp]({{ site.url }}/egitim/temel-linux/metin/19.webp){:class="responsive img-zoomable"}
 
-Bakın tam olarak beklediğimiz gibi “ay” ile başlayan ve devamında herhangi iki karakteri barındıran tüm satırılar filtrelendi.
+Bakın tam olarak beklediğimiz gibi “ay” ile başlayan ve devamında herhangi iki karakteri barındıran tüm satırlar filtrelendi.
 
 ### Köşeli Parantez `[]`
 
@@ -1001,7 +1001,7 @@ Benim şimdilik regex ve `grep` aracı hakkında bahsetmek istediklerim bu kadar
 
 # `find` Komutu
 
-`find` aracı, açıkça isminden de anlaşılabileceği gibi sistem üzerindeki dosya ve klasörleri arayıp, konumlarını bulmamıza yardımcı olan bir araç. En yalın kullanımı `find` komutundan sonra hangi dizinde araştırıma yapılacağını belirtip daha sonra `-name` seçeneğinin ardından araştırılacak olan dosya ya da klasör isminin girilmesi şeklinde.
+`find` aracı, açıkça isminden de anlaşılabileceği gibi sistem üzerindeki dosya ve klasörleri arayıp, konumlarını bulmamıza yardımcı olan bir araç. En yalın kullanımı `find` komutundan sonra hangi dizinde araştırma yapılacağını belirtip daha sonra `-name` seçeneğinin ardından araştırılacak olan dosya ya da klasör isminin girilmesi şeklinde.
 
 Ben aranacak dosya ve klasörleri kendim oluşturmak için `touch ~/Documents/bulbeni` ve `mkdir ~/Pictures/bulbeni` komutlarını giriyorum.
 
@@ -1055,7 +1055,7 @@ Bakın bu çıktı da klasörün konumuna işaret ediyor.
 
 Yani bakın bizzat teyit ettiğimiz gibi `find` ile araştırma yapılırken bu şekilde dosya ve klasör olma durumuna göre yani tipine göre filtreleme yapabiliyoruz.
 
-Mesela ben yalnızca mevcut bulunduğum dizinde araştırma yaptım ama aslında istediğim bir dizin altında araştırma yapılmasını sağlayabilirim. Denemek için bu kez “***/etc/***” dizini atlında sonu “**.conf**” ile biten tüm içerikleri bastırmak istiyorum. Bunun için `find /etc/ -name “*.conf”` komutunu girebiliriz. 
+Mesela ben yalnızca mevcut bulunduğum dizinde araştırma yaptım ama aslında istediğim bir dizin altında araştırma yapılmasını sağlayabilirim. Denemek için bu kez “***/etc/***” dizini altında sonu “**.conf**” ile biten tüm içerikleri bastırmak istiyorum. Bunun için `find /etc/ -name “*.conf”` komutunu girebiliriz. 
 
 ```bash
 ┌──(taylan@linuxdersleri)-[~]
@@ -1074,7 +1074,7 @@ Mesela ben yalnızca mevcut bulunduğum dizinde araştırma yaptım ama aslında
 
 <p class="mavi"><strong>ℹ️ Not:</strong> Çıktı çok uzun olduğu için kısaltarak ekledim.</p>
 
-Bakın “***/etc/***” dizini atlında isminin sonu “.conf” ile biten tüm dosya ve dizinler filtrelenmiş oldu. Eğer yalnızca “***/etc/***” dizini altında değil de tüm sistem genelinde araştırma yapmak istersek araştırılacak dizin olarak yalnızca slash `/` karakterini yazmamız da yeterli. 
+Bakın “***/etc/***” dizini altında isminin sonu “.conf” ile biten tüm dosya ve dizinler filtrelenmiş oldu. Eğer yalnızca “***/etc/***” dizini altında değil de tüm sistem genelinde araştırma yapmak istersek araştırılacak dizin olarak yalnızca slash `/` karakterini yazmamız da yeterli. 
 
 ```bash
 ┌──(taylan@linuxdersleri)-[~]
@@ -1348,7 +1348,7 @@ Ayrıca tüm bu bahsettiklerimiz dışında eğer `man find` şeklinde yazarsan�
 
 Henüz daha öğrenmediğimiz için yetkilere ve sahipliğe göre filtrelemeden bahsetmek istemiyorum. Ama zaten aynı şekilde `find` aracının yardım bilgilerinde belirtilen tüm seçenekleri ihtiyacınıza göre kullanabilirsiniz. Örneğin içerikleri yetkilerine göre filtrelemek için `perm` seçeneğini kullanıyorken, sahipliğine göre filtrelemek için de `user` seçeneğini kullanabiliyoruz. Ve bunlar gibi yardım sayfasında görebileceğiniz çeşitli filtreleme seçenekleri mevcut. İhtiyaç duyduğunuzda açıp yardım bilgisinden hangi seçeneği kullanmanız  gerektiğini öğrenebilirsiniz.
 
-Ben dediğim gibi yetki ve sahip kavramlarından henüz bahsetmediğimiz için kafanızın karşımasını istemiyorum, zaten aynı şekilde tek yaptığımız bu özelliklere göre filtreleme yapmak. Bu konuları öğrendiğinizde dönüp `find` ile bu kriterlere göre filtreleme yapmakta özgürsünüz.
+Ben dediğim gibi yetki ve sahip kavramlarından henüz bahsetmediğimiz için kafanızın karışmasını istemiyorum, zaten aynı şekilde tek yaptığımız bu özelliklere göre filtreleme yapmak. Bu konuları öğrendiğinizde dönüp `find` ile bu kriterlere göre filtreleme yapmakta özgürsünüz.
 
 ## Olumsuzlama Seçeneği | `-not`
 
@@ -1661,7 +1661,7 @@ Bakın herhangi bir çıktı almadık. Biz bu dosya ve klasörü yeni oluşturdu
 
 ## `locate` Veritabanını Güncellemek | `updatedb`
 
-`locate` veritabanını güncellemek için `sudo updatedb` şeklinde komutumuzu girebiliriz. İşlemi yetkili olarak gerçekleştirdiğimiz için parolamızı girip anlayamamız gerek.  Ayrıca yeni dizinlerin eklenmesini de bir süre beklememiz gerek. 
+`locate` veritabanını güncellemek için `sudo updatedb` şeklinde komutumuzu girebiliriz. İşlemi yetkili olarak gerçekleştirdiğimiz için parolamızı girip onaylamamız gerek.  Ayrıca yeni dizinlerin eklenmesini de bir süre beklememiz gerek. 
 
 ```bash
 ┌──(taylan@linuxdersleri)-[~]
@@ -1728,7 +1728,7 @@ Kaç eşleşme olduğun saymak istersek “**c**ount” yani “saymak” ifades
 17
 ```
 
-Gördüğünüz gibi harf duyarlılığı olamadan arma yaptığımızda 142 eşleşme olurken, harf duyarlılığı varken yalnızca 17 eşleşme bulunmuş. 
+Gördüğünüz gibi harf duyarlılığı olmadan arama yaptığımızda 142 eşleşme olurken, harf duyarlılığı varken yalnızca 17 eşleşme bulunmuş. 
 
 ## `locate` Üzerinde Regex Kullanımı
 
@@ -2638,7 +2638,7 @@ Ben örnek olması için ***/etc*** dizinin içeriğini listeleyip, tüm listeye
 
 ![without-more.webp]({{ site.url }}/egitim/temel-linux/metin/without-more.webp){:class="responsive img-zoomable"}
 
-Bu sorunu çözmek içim bu çıktıları pipe ile `more` aracına yönlendirip çıktılara parça parça bakabiliriz. 
+Bu sorunu çözmek için bu çıktıları pipe ile `more` aracına yönlendirip çıktılara parça parça bakabiliriz. 
 
 ![more.gif]({{ site.url }}/egitim/temel-linux/metin/more.gif){:class="responsive img-zoomable"}
 
@@ -2892,4 +2892,4 @@ Bakın ne kadar yeni veri girersem, `tail -f` komutu o kadar veriyi bastırıyor
 
 Böylelikle temel olarak `tail` aracının işlevinden ve kullanımından da haberdar olduk. Tabii diğer seçenekleri için yardım sayfalarına göz atabilirsiniz.
 
-Ayrıca ben özellikle ele almadım ancak pipe mekanizmasının da yardımıyla ihtiyacınıza yönelik olarak bu bölümde öğrenmiş olduğunu uygun yapıdaki tüm araçları birbirine bağlayarak çalıştırabileceğinizi zaten biliyorsunuz. Ben yalnızca araçların temel kullanımlardan bahsettiğim için özellikle birden fazla aracın birlikte kullanıldığı farklı durumlara örnekler verme fırsatım olmadı ama siz kendiniz pratikler yaparak deneyimleyebilirsiniz.
+Ayrıca ben özellikle ele almadım ancak pipe mekanizmasının da yardımıyla ihtiyacınıza yönelik olarak bu bölümde öğrenmiş olduğunuz uygun yapıdaki tüm araçları birbirine bağlayarak çalıştırabileceğinizi zaten biliyorsunuz. Ben yalnızca araçların temel kullanımlardan bahsettiğim için özellikle birden fazla aracın birlikte kullanıldığı farklı durumlara örnekler verme fırsatım olmadı ama siz kendiniz pratikler yaparak deneyimleyebilirsiniz.

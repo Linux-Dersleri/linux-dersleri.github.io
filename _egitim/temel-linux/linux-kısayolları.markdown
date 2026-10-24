@@ -36,7 +36,7 @@ Bash kabuğundaki tüm kısayollar esasen metin bazlı düzenleme için yani asl
 
 ![1.webp]({{ site.url }}/egitim/temel-linux/kisayol/1.webp){:class="responsive img-zoomable"}{:class="responsive img-zoomable"}
 
-İmlecin temel işlevi satırda nerede bulunduğumuzu göstermek. Bu sayede komut girerken satırın hangi noktasında kaldığımızı takip edip imlecin bunduğu konumdan komutlarımızı girmeye devam edebiliyoruz. İmleç neredeyse, bizim girdiğimiz yeni komutlar da imleçten sonra konsola aktarılıyor. Dolayısıyla özellikle uzun olan komutları kullanırken, imleci kısayollar ile esnek şekilde hızlıca hareket ettirebilmek gerçekten bize çok hız kazandırıyor. Normalde sizlerin de bildiği gibi sol sağ yön tuşları ile tüm karakterler arasında tek tek geçiş yapabiliyoruz fakat bu komutun da uzunluğuna bağlı olarak epey vakit alabiliyor. Örneğin "bu uzun uzun yazılmış bir deneme komutudur" ifadesini yazıp satırın başından sonuna ve sonundan başına sağ sol yön tuşları ile geçiş yapmayı deneyebiliriz.
+İmlecin temel işlevi satırda nerede bulunduğumuzu göstermek. Bu sayede komut girerken satırın hangi noktasında kaldığımızı takip edip imlecin bulunduğu konumdan komutlarımızı girmeye devam edebiliyoruz. İmleç neredeyse, bizim girdiğimiz yeni komutlar da imleçten sonra konsola aktarılıyor. Dolayısıyla özellikle uzun olan komutları kullanırken, imleci kısayollar ile esnek şekilde hızlıca hareket ettirebilmek gerçekten bize çok hız kazandırıyor. Normalde sizlerin de bildiği gibi sol sağ yön tuşları ile tüm karakterler arasında tek tek geçiş yapabiliyoruz fakat bu komutun da uzunluğuna bağlı olarak epey vakit alabiliyor. Örneğin "bu uzun uzun yazılmış bir deneme komutudur" ifadesini yazıp satırın başından sonuna ve sonundan başına sağ sol yön tuşları ile geçiş yapmayı deneyebiliriz.
 
 ![2.gif]({{ site.url }}/egitim/temel-linux/kisayol/2.gif){:class="responsive img-zoomable"}
 
@@ -87,7 +87,7 @@ Bir kelime geri atlamak için kullanabilirsiniz.
 
 ![8.gif]({{ site.url }}/egitim/temel-linux/kisayol/8.gif){:class="responsive img-zoomable"}
 
-Kelimler arasında atlamak için <kbd>Alt</kbd> tuşuna bastıktan sonra İngilizce “**f**orward” yani “ileri” ifadesini temsilen <kbd>f</kbd> tuşuna bastığımızda bir kelime ileri, “**b**ackward” yani “geriye” ifadesine temsilen de <kbd>b</kbd> tuşuna bastığımızda ise bir kelime geriye atlarız. 
+Kelimeler arasında atlamak için <kbd>Alt</kbd> tuşuna bastıktan sonra İngilizce “**f**orward” yani “ileri” ifadesini temsilen <kbd>f</kbd> tuşuna bastığımızda bir kelime ileri, “**b**ackward” yani “geriye” ifadesini temsilen de <kbd>b</kbd> tuşuna bastığımızda ise bir kelime geriye atlarız. 
 
 Yani özetle dikkat ettiyseniz kelimeler arasında gezmek için <kbd>Alt</kbd> kısayolunu kullanırken, karakter arasında gezmek için de <kbd>Ctrl</kbd> tuşlamasını kullanıyoruz. Bunun dışında ileri ve geri hareket için kullandığımız ikincil kısayol tuşu aynı zaten. 
 
@@ -333,7 +333,7 @@ Eğer ilk eşleşen komut aradığımız komut değilse, aradığımız komuta d
 
 ![22.gif]({{ site.url }}/egitim/temel-linux/kisayol/22.gif){:class="responsive img-zoomable"}
 
-<aside class="mavi"><strong>ℹ️ Not:</strong> Girilen kelimeye göre sunulan komut önerisinin daha hedef odaklı olduğunu belirmek için çıktıları renklendirdim.</aside>
+<aside class="mavi"><strong>ℹ️ Not:</strong> Girilen kelimeye göre sunulan komut önerisinin daha hedef odaklı olduğunu belirtmek için çıktıları renklendirdim.</aside>
 
 Biz şimdiye kadar bulduğumuz komutu doğrudan çalıştırmak için <kbd>enter</kbd> ile komutu onayladık. Eğer bulduğunuz komutu doğrudan çalıştırmak yerine düzenlemek isterseniz enter tuşu yerine sağ veya sol yön tuşları ile komutu düzenlemeye geçebilirsiniz. 
 

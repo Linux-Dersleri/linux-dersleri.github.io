@@ -78,7 +78,7 @@ Esasen söz konusu sanallaştırma olduğunda çeşitli alternatif yazılımlar 
 
 Normalde standart şekilde bilgisayarımızdaki sabit diskte tekil olarak Linux kurup kullanabiliriz. Ancak bu her kullanıcı için uygun olmayabilir. Bazı durumlarda tek bir bilgisayarda birden fazla işletim sistemini kullanmamız gerekebilir. Bunun için diskinizde yeteri kadar alan varsa diskinizi bölümlendirerek mevcut işletim sistemini bozmadan yeni işletim sistemleri yükleyebilirsiniz. Örneğin Windows kurulu bir bilgisayara ikincil işletim sistemi olarak Linux kurabilirsiniz.
 
-Özetle bu yöntem**;** mevcut işletim sisteminin kurulu olduğu diskte yeni bölüm oluşturup, bu bolüme ikincil sistem olarak Linux işletim sistemini kurmaktır. Bu kurulumun ardından sistem, başlangıçta hangi işletim sistemini kullanmak istediğinizi sorar ve seçiminize göre ilgili sistemi başlatır. Bu sebeple zaten bu yöntem dualboot olarak da biliniyor. Bu yöntemin avantajlarından bahsedecek olursak;
+Özetle bu yöntem**;** mevcut işletim sisteminin kurulu olduğu diskte yeni bölüm oluşturup, bu bölüme ikincil sistem olarak Linux işletim sistemini kurmaktır. Bu kurulumun ardından sistem, başlangıçta hangi işletim sistemini kullanmak istediğinizi sorar ve seçiminize göre ilgili sistemi başlatır. Bu sebeple zaten bu yöntem dualboot olarak da biliniyor. Bu yöntemin avantajlarından bahsedecek olursak;
 
 ### <span class="yesil small text-success">Avantajları</span>
 

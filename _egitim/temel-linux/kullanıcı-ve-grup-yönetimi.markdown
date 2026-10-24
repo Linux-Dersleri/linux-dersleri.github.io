@@ -21,7 +21,7 @@ Sistem kaynaklarına erişimi olan ve sistemini yetkileri dahilinde yönetenlere
 
 <strong class="text-primary">Sistem Kullanıcısı:</strong> Yazılım veya uygulamalar tarafından oluşturulan ve yönetilen kullanıcılara da “sistem kullanıcısı” deniyor. Örneğin sistemimizde saatin senkronize edilmesini sağlayan “**ntp**” isimli bir araç yüklüyse bu aracın görevini yerine getirmek için kendisine ait bir sistem kullanıcı hesabı bulunuyordur. Bu sayede gerektiğinde bu kullanıcı hesabı üzerinden görevlerini yerine getirebilir. Tabii ki tüm araçların kendilerine ait kullanıcı hesapları olmasa da işte tıpkı “**ntp**” aracında olduğu gibi sistemdeki çeşitli yazılımların, işlerini görmek için kendi kullanıcı hesapları olması gerekebiliyor. Bu hesaplar insanların değil yazılımların, sistemdeki çeşitli görevleri yerine getirebilmek için kullandığı türden hesaplardır. Bu sebeple bu tür hesaplara “sistem kullanıcı” hesabı deniyor. Bu kullanıcıların yetkileri, yalnızca görevlerini yerine getirebilecekleri düzeyde olduğu için yetkileri olmayan işler yapamazlar.
 
-<strong class="text-success">Normal Kullanıcı:</strong> Normal olarak geçen kullanıcı hesapları, kök kullanıcısının oluşturduğu standart kullanıcı hesaplarıdır. Standart kullanıcıların temel görevleri yerine getirebilmeleri için oluşturulan hesaplardır. Bu tür hesapları standart insanlar kullanacağı için normal kullanıcılar kendi ev dizinlere sahiptir. Yani genellikle ***/home*** dizini altında kullanıcı isimleriyle oluşturulmuş olan bir klasörde, kişisel dosyalarını barındırmaları için bir ev dizinleri vardır. Ev dizini, insanların kişisel dosyalarını düzenli şekilde tutabilmeleri ve kendi kullanıcı hesaplarına yönelik kişiselleştirilmiş çalışma ortamına sahip olabilmeleri için önemli bir yaklaşım. Ev dizini kavramının ne olduğunu biliyorsunuz zaten. Ev dizinleri dışında tabii ki normal kullanıcılar da sahip oldukları yetkiler dahilinde sistemdeki araçları kullanabilirler. Yetkilerinin düşük veya yüksek olmasına göre sistem üzerinde yetkileri dahilinde hareket edebilirler. 
+<strong class="text-success">Normal Kullanıcı:</strong> Normal olarak geçen kullanıcı hesapları, kök kullanıcısının oluşturduğu standart kullanıcı hesaplarıdır. Standart kullanıcıların temel görevleri yerine getirebilmeleri için oluşturulan hesaplardır. Bu tür hesapları standart insanlar kullanacağı için normal kullanıcılar kendi ev dizinlerine sahiptir. Yani genellikle ***/home*** dizini altında kullanıcı isimleriyle oluşturulmuş olan bir klasörde, kişisel dosyalarını barındırmaları için bir ev dizinleri vardır. Ev dizini, insanların kişisel dosyalarını düzenli şekilde tutabilmeleri ve kendi kullanıcı hesaplarına yönelik kişiselleştirilmiş çalışma ortamına sahip olabilmeleri için önemli bir yaklaşım. Ev dizini kavramının ne olduğunu biliyorsunuz zaten. Ev dizinleri dışında tabii ki normal kullanıcılar da sahip oldukları yetkiler dahilinde sistemdeki araçları kullanabilirler. Yetkilerinin düşük veya yüksek olmasına göre sistem üzerinde yetkileri dahilinde hareket edebilirler. 
 
 # `sudo` Komutunu Anlamak
 
@@ -52,7 +52,7 @@ anaconda-ks.cfg  Desktop  Documents  Downloads	Music  Pictures  Public  Template
 [taylan@linuxdersleri ~]$
 ```
 
-Parolamı doğru yazdığım için yetkili şekilde ***/root*** dizinin içeriğini görüntüleyebildim. İşte `sudo` komutunun en temel kullanımı bu şekilde. Bu bölüme gelinceye kadar, yetki gerektiren işlemiz için defalarca `sudo` komutunu kullandığımız için zaten bu duruma aşina olduğunuzu düşünüyorum. Şimdilik bu kadarlık bilgi de yeterli. Temel kavramları netleştirmek için öncelikle nasıl yeni bir kullanıcı hesabı oluşturabileceğimizden bahsederek başlayalım.
+Parolamı doğru yazdığım için yetkili şekilde ***/root*** dizininin içeriğini görüntüleyebildim. İşte `sudo` komutunun en temel kullanımı bu şekilde. Bu bölüme gelinceye kadar, yetki gerektiren işlemiz için defalarca `sudo` komutunu kullandığımız için zaten bu duruma aşina olduğunuzu düşünüyorum. Şimdilik bu kadarlık bilgi de yeterli. Temel kavramları netleştirmek için öncelikle nasıl yeni bir kullanıcı hesabı oluşturabileceğimizden bahsederek başlayalım.
 
 # Kullanıcı Hesabı Oluşturmak
 
@@ -88,11 +88,11 @@ New password:
 
 - “**nil**” kullanıcısının bu gruba eklendiği,
 
-- **nil**’in ev dizinin ***/home/nil*** dizininde oluşturulduğu, 
+- **nil**’in ev dizininin ***/home/nil*** dizininde oluşturulduğu, 
 
 - ev dizinine ***/etc/skel*** dizinindeki dosyaların kopyalandığı belirtilmiş. 
 
-Bu ***/etc/skel*** klasörü standart kullanıcılar için gerekli olan temel dosyaları barındıran bir klasör. Zaten ev dizinin temel iskeletini oluşturmaya atıfta bulunmak için "**skel**" klasör ismi de İngilizce “**iskelet**” ifadesinden geliyor. 
+Bu ***/etc/skel*** klasörü standart kullanıcılar için gerekli olan temel dosyaları barındıran bir klasör. Zaten ev dizininin temel iskeletini oluşturmaya atıfta bulunmak için "**skel**" klasör ismi de İngilizce “**iskelet**” ifadesinden geliyor. 
 
 Kullanıcı hesabına ait temel işlemler gerçekleştirildikten sonra, bizden bu kullanıcının parolasını tanımlamamız bekleniyor. 
 
@@ -117,7 +117,7 @@ Enter the new value, or press ENTER for the default
 Is the information correct? [Y/n]
 ```
 
-Son olarak bilgileri de "**y**" ile onaylayıp işlemi tamamlıyorum. Böylelikle “**nil**” kullanıcı hesabı oluşturulmuş oldu. Teyit etmek için `ls /home/` komutuyla ev dizinin içeriğini sorgulayalım. 
+Son olarak bilgileri de "**y**" ile onaylayıp işlemi tamamlıyorum. Böylelikle “**nil**” kullanıcı hesabı oluşturulmuş oldu. Teyit etmek için `ls /home/` komutuyla ev dizininin içeriğini sorgulayalım. 
 
 ```bash
 ┌──(taylan㉿linuxdersleri)-[~]
@@ -131,7 +131,7 @@ kali  nil  taylan
 
 Normalde `useradd` komutunu kullandığımızda, biz özellikle belirtmezsek, `adduser` komutunda olduğu gibi kullanıcının ev dizini oluşturulmuyor. 
 
-Kullanıcının ev dizinin de oluşturulması için özellikle komutumuzu `useradd -m kullanıcı-adı` şeklinde girmemiz gerekiyor. Ben “**ali**” isimli bir kullanıcı hesabı oluşturmak istiyorum. Bunun için `useradd -m ali` şeklinde komutumu giriyorum. 
+Kullanıcının ev dizininin de oluşturulması için özellikle komutumuzu `useradd -m kullanıcı-adı` şeklinde girmemiz gerekiyor. Ben “**ali**” isimli bir kullanıcı hesabı oluşturmak istiyorum. Bunun için `useradd -m ali` şeklinde komutumu giriyorum. 
 
 ```bash
 ┌──(taylan㉿linuxdersleri)-[~]
@@ -569,7 +569,7 @@ yeni-grup:x:1005:ali
 ali : ali yeni-grup
 ```
 
-Çıktılardan teyit edebildiğimiz üzere, **yeni-grub**’un sonuna **ali** kullanıcısı da eklenmiş. Yani gruba ekleme işlemi başarılı.
+Çıktılardan teyit edebildiğimiz üzere, **yeni-grup**’un sonuna **ali** kullanıcısı da eklenmiş. Yani gruba ekleme işlemi başarılı.
 
 ## Gruptan Kullanıcı Silmek
 
@@ -1889,9 +1889,9 @@ Konfigürasyon dosyasını açmak için `sudo visudo` komutuyla dosyamızı yetk
 
 ![visudo.webp]({{ site.url }}/egitim/temel-linux/kullanici/visudo.webp){:class="responsive img-zoomable"}
 
-Dosyam şu anda template(***sudoers.tmp***) şablon halinde olduğu için burada ***.tmp*** uzantısı var. Eğer değişiklik yapıp kaydedecek olursak asıl dosya olan ***/etc*** dizini atlındaki ***sudoers*** dosyasına kaydolmuş olacak. 
+Dosyam şu anda template(***sudoers.tmp***) şablon halinde olduğu için burada ***.tmp*** uzantısı var. Eğer değişiklik yapıp kaydedecek olursak asıl dosya olan ***/etc*** dizini altındaki ***sudoers*** dosyasına kaydolmuş olacak. 
 
-Şimdi dosya içeriğine bakacak olursak. Dosyanın en başında bulunan bu tanımlar güvenlik amaçlı. Ayrıntılar için ***suoders*** dosyasının manual sayfalarına bakabilirsiniz. Ben detaylar üzerinde durmayacağım ama örneğin ilk satır tanımlanmış olabilecek zararlı değişkenleri sıfırlıyor. Üçüncü satır ise zararlı dosyaları içerebilecek ek PATH yollarının tanımlanmış olma ihtimaline karşı standart olan PATH yolunu tekrar tanımlıyor. Dediğim gibi bunlar güvenlik önlemi bunlara müdahale etmeden devam edeceğiz. Daha fazla bilgi almak için manual sayfasına göz atabilirsiniz.
+Şimdi dosya içeriğine bakacak olursak. Dosyanın en başında bulunan bu tanımlar güvenlik amaçlı. Ayrıntılar için ***sudoers*** dosyasının manual sayfalarına bakabilirsiniz. Ben detaylar üzerinde durmayacağım ama örneğin ilk satır tanımlanmış olabilecek zararlı değişkenleri sıfırlıyor. Üçüncü satır ise zararlı dosyaları içerebilecek ek PATH yollarının tanımlanmış olma ihtimaline karşı standart olan PATH yolunu tekrar tanımlıyor. Dediğim gibi bunlar güvenlik önlemi bunlara müdahale etmeden devam edeceğiz. Daha fazla bilgi almak için manual sayfasına göz atabilirsiniz.
 
 Diyez `#` sembolü olan satırlar da zaten yorum satırları. Bunlar işleme alınmıyor. Gördüğünüz gibi tanımlı seçenekler hakkında kısa açıklamalar yazmak için kullanılıyor. Ayrıca sayfayı inceleyecek olursanız bazı tanımlamaların başında diyez işareti olduğu için pasif durumda olduklarını görebilirsiniz. Ben şimdi en temel işlem olan yetki tanımlamalarından bahsetmek için dosyanın alt satırlarına geliyorum.
 
@@ -2306,7 +2306,7 @@ bu bir testtir
 bu bir testtir
 ```
 
-Tanımadığım değere şu an ulaşabiliyorum. Son olarak bir de mevcut bulunduğumuz dizini `pwd` komutu ile öğrenelim. 
+Tanımladığım değere şu an ulaşabiliyorum. Son olarak bir de mevcut bulunduğumuz dizini `pwd` komutu ile öğrenelim. 
 
 ```bash
 ┌──(taylan㉿linuxdersleri)-[~]
@@ -2324,7 +2324,7 @@ Gördüğünüz gibi ben şu anda bu kabukta taylan kullanıcısının ev dizini
 Password:
 ```
 
-Ben daha önce root hesabı için parola tanımladığım için burada tanımadığım parolayı giriyorum. Tabii siz root hesabını aktifleştirmediyseniz örnek için farklı bir kullanıcıya da geçiş yapmayı deneyebilirsiniz. 
+Ben daha önce root hesabı için parola tanımladığım için burada tanımladığım parolayı giriyorum. Tabii siz root hesabını aktifleştirmediyseniz örnek için farklı bir kullanıcıya da geçiş yapmayı deneyebilirsiniz. 
 
 ```bash
 ┌──(taylan㉿linuxdersleri)-[~]
@@ -2376,7 +2376,7 @@ Eğer biz mevcut kabuktan etkilenmeyecek temiz bir kabuk başlatılsın istersek
 └─$
 ```
 
-Tamamdır. Şimdi oturum açtığımız kullanıcın, temiz bir kabuğunu başlatmak için `su - root` şeklinde komutumuzu girelim.
+Tamamdır. Şimdi oturum açtığımız kullanıcının, temiz bir kabuğunu başlatmak için `su - root` şeklinde komutumuzu girelim.
 
 ```bash
 ┌──(taylan㉿linuxdersleri)-[~]
@@ -2453,7 +2453,7 @@ Kullanıcının silindiğini teyit etmek için `su ali` komutu ile geçiş yapma
 su: user ali does not exist or the user entry does not contain all the required fields
 ```
 
-Böyle bir kullanıcının var olmadığına dair uyarı aldık. Bunun dışında dilerseniz `ls /home` komutuyla ev dizinin silindiğini de teyit edebilirsiniz. 
+Böyle bir kullanıcının var olmadığına dair uyarı aldık. Bunun dışında dilerseniz `ls /home` komutuyla ev dizininin silindiğini de teyit edebilirsiniz. 
 
 ```bash
 ┌──(taylan㉿linuxdersleri)-[~]
@@ -2463,6 +2463,6 @@ kali  nil  taylan
 
 Gördüğünüz gibi **ali** için bir ev dizini artık mevcut değil.
 
-Tabii ki biz buradaki işlemle kullanıcının ev dizinini ve kullanıcı kaydını sildik. Eğer sistemin farklı konumlarında bu kullanıcıya ait bu kullanıcın oluşturduğu dosya ve dizinler varsa onlar silinmedi. Eğer ne yaptığınızdan eminseniz ve gerçekten bu kullanıcının oluşturduğu dosyaları silmek istiyorsanız `find` aracından yararlanabilirsiniz. Geçmişte `find` **pipe** ve `xargs` araçlarından bahsettiğimiz için nasıl yapabileceğinizi kısa bir araştırma ile keşfedebileceğinizi düşünüyorum. **Yine de kullanıcıların oluşturdukları dosyaları kontrolsüzce silmek, sistemin işleyişine beklenmedik şekilde zarar verebilir.** Bu sebeple uygulamaya geçmeden önce ne yaptığınızın farkında olun lütfen.
+Tabii ki biz buradaki işlemle kullanıcının ev dizinini ve kullanıcı kaydını sildik. Eğer sistemin farklı konumlarında bu kullanıcıya ait bu kullanıcının oluşturduğu dosya ve dizinler varsa onlar silinmedi. Eğer ne yaptığınızdan eminseniz ve gerçekten bu kullanıcının oluşturduğu dosyaları silmek istiyorsanız `find` aracından yararlanabilirsiniz. Geçmişte `find` **pipe** ve `xargs` araçlarından bahsettiğimiz için nasıl yapabileceğinizi kısa bir araştırma ile keşfedebileceğinizi düşünüyorum. **Yine de kullanıcıların oluşturdukları dosyaları kontrolsüzce silmek, sistemin işleyişine beklenmedik şekilde zarar verebilir.** Bu sebeple uygulamaya geçmeden önce ne yaptığınızın farkında olun lütfen.
 
 Benim temel seviye kullanıcı ve grup yönetimi için söylemek istediklerim bu kadardı. Bir sonraki bölümde disk yönetiminden bahsederek devam edeceğiz.

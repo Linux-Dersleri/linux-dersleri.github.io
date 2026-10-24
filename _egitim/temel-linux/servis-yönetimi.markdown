@@ -487,7 +487,7 @@ Executing: /lib/systemd/systemd-sysv-install enable apache2
 </code></pre></div></div>
 
 
-<p class="mavi">Bakın multi-user.target birimi altına bu servis sembolik olan bağlanmış oldu. Bu sayede sistem multi-user.target birimi ile başlatılırken bu servis de otomatik olarak başlatılıyor olacak.</p>
+<p class="mavi">Bakın multi-user.target birimi altına bu servis sembolik olarak bağlanmış oldu. Bu sayede sistem multi-user.target birimi ile başlatılırken bu servis de otomatik olarak başlatılıyor olacak.</p>
 
 Eğer bu birimi devredışı bırakırsak da bu sembolik link silinecek. Hemen deneyelim.
 
@@ -498,7 +498,7 @@ Executing: /lib/systemd/systemd-sysv-install disable apache2
 <span class="kirmizi">Removed /etc/systemd/system/multi-user.target.wants/apache2.service.</span>
 </code></pre></div></div>
 
-<p class="kirmizi">İlgili sembolik linkin silinmesiyle bu servis de pasif konumuna geçerek, mult-user.target birimi ile ilişkisi kesilmiş oldu. Bu sebeple sistem başlangıcında bu servis birimi otomatik olarak başlatılmayacak.</p>
+<p class="kirmizi">İlgili sembolik linkin silinmesiyle bu servis de pasif konumuna geçerek, multi-user.target birimi ile ilişkisi kesilmiş oldu. Bu sebeple sistem başlangıcında bu servis birimi otomatik olarak başlatılmayacak.</p>
 
 Ayrıca ben örnek olarak **graphical.target** yerine **multi-user.target** birimini varsayılan target birimi olarak ayarladım ama aslında **graphical.target** birimi de arkaplanda **multi-user.target** birimini kullanıyor. Tek fark grafiksel kullanıcı arayüzü için gerekli olan ek birimleri de dahil etmiş olması. Bu durumu teyit etmek için `cat /lib/systemd/system/graphical.target` komutu ile **graphical.target** birim dosyasını inceleyebiliriz.
 

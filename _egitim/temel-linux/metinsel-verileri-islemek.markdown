@@ -230,7 +230,7 @@ Bu hatasız bir çıktı
 Bu hatasız bir çıktı
 ```
 
-Bakın dosyanın sonuna yani aynı hatasız çıktıların eklendiğini görebiliyoruz çünkü çift büyüktür işareti sayesinde ekleme yapılması gerektiğini belirtmiş olduk. Testi devam ettirmek içinin ben `./test.sh 2>> sonuc` komutu ile **yalnızca hatalı** olan çıktıların da dosyanın sonuna eklenmesini istiyorum. 
+Bakın dosyanın sonuna yani aynı hatasız çıktıların eklendiğini görebiliyoruz çünkü çift büyüktür işareti sayesinde ekleme yapılması gerektiğini belirtmiş olduk. Testi devam ettirmek için ben `./test.sh 2>> sonuc` komutu ile **yalnızca hatalı** olan çıktıların da dosyanın sonuna eklenmesini istiyorum. 
 
 ```bash
 ┌──(taylan@linuxdersleri)-[~]
@@ -602,9 +602,9 @@ total 104K
 
 Bakın tam olarak beklediğimiz gibi tüm çıktılar tam tersi şekilde oldu. Yani tüm satırları ters sıralama ile küçükten büyüye olacak şekilde görüntüleyebildik. İşte `tac` komutu tam olarak bu amaçla kullanılıyor. Satırları sondan başa doğru bastırmak istediğimizde `tac` aracını kullanabiliyoruz.
 
-Belki bu örnekte kullandığımız `ls` komutunun zaten kendine ait terse çevirme işlevi yani `-r` seçeneği olduğu için, `tac` komutunun kullanımı size çok gerekli gibi gelmemiş olabilir ancak lütfen buradaki `ls` komutuna takılmayın. `ls` sadece kolay gözlemlenebilir dosya içeriği oluşturmak için kullandığımız basit bir örnek. Komut satırını kullanırken, sürekli metinsel veriler üzerinde çalıştığımız için, herhangi bir dosyadaki verilerin tersten sıralamasına ihtiyaç duyacağımız durumlar ile karşılaşmamız kaçınılmaz. Komut satırında çalışırken temelde her şeyi bayt akışından ibaret olduğunu unutmayın lütfen. Dosya içeriklerinden veya çeşitli araçlardan gelen verileri yani üzerinde çalıştığımız baytları istediğimiz doğrultuda manipüle edebildiğimiz sürece komut satırının gücünden faydalanabiliriz. Verileri manipüle etmenin önemini ileride daha iyi anlayacaksınız. Çünkü eğitimin devamında, **pipe** mekanizmasını kullanarak bir aracın ürettiği çıktıları başka bir araca yönlendirerek kompleks sorunlara basit çözümler sağlamış olacağız. Araçların bir arada çalışabilmesi için de gerektiğine akış halindeki verilerin bir sonraki araca uygun şekilde değiştirilerek aktarılması gerekecek. Özetle, verileri istediğimiz şekilde değiştirebiliyor olmanın önemini ileride daha net anlayacaksınız. 
+Belki bu örnekte kullandığımız `ls` komutunun zaten kendine ait terse çevirme işlevi yani `-r` seçeneği olduğu için, `tac` komutunun kullanımı size çok gerekli gibi gelmemiş olabilir ancak lütfen buradaki `ls` komutuna takılmayın. `ls` sadece kolay gözlemlenebilir dosya içeriği oluşturmak için kullandığımız basit bir örnek. Komut satırını kullanırken, sürekli metinsel veriler üzerinde çalıştığımız için, herhangi bir dosyadaki verilerin tersten sıralamasına ihtiyaç duyacağımız durumlar ile karşılaşmamız kaçınılmaz. Komut satırında çalışırken temelde her şeyi bayt akışından ibaret olduğunu unutmayın lütfen. Dosya içeriklerinden veya çeşitli araçlardan gelen verileri yani üzerinde çalıştığımız baytları istediğimiz doğrultuda manipüle edebildiğimiz sürece komut satırının gücünden faydalanabiliriz. Verileri manipüle etmenin önemini ileride daha iyi anlayacaksınız. Çünkü eğitimin devamında, **pipe** mekanizmasını kullanarak bir aracın ürettiği çıktıları başka bir araca yönlendirerek kompleks sorunlara basit çözümler sağlamış olacağız. Araçların bir arada çalışabilmesi için de gerektiğinde akış halindeki verilerin bir sonraki araca uygun şekilde değiştirilerek aktarılması gerekecek. Özetle, verileri istediğimiz şekilde değiştirebiliyor olmanın önemini ileride daha net anlayacaksınız. 
 
-Ayrıca ben tek bir dosya ile örnek yaptım ama `cat` komutunda olduğu gibi `tac` komutuyla da birden fazla dosyayı aynı anda ters sıralama ile okuyabiliriz. Ben örnek olarak sırala harfler ve sayılar içeren iki dosya oluşturmak istiyorum. Kolayca oluşturmak için daha önce öğrendiğimiz süslü parantez genişletmesini kullanabiliriz. a’dan z’ye kadar olan karakterleri `echo -e "\n"{a..z} > harf.txt` komutu ile “***harf.txt***” dosyasına kaydedebiliriz. 
+Ayrıca ben tek bir dosya ile örnek yaptım ama `cat` komutunda olduğu gibi `tac` komutuyla da birden fazla dosyayı aynı anda ters sıralama ile okuyabiliriz. Ben örnek olarak sıralı harfler ve sayılar içeren iki dosya oluşturmak istiyorum. Kolayca oluşturmak için daha önce öğrendiğimiz süslü parantez genişletmesini kullanabiliriz. a’dan z’ye kadar olan karakterleri `echo -e "\n"{a..z} > harf.txt` komutu ile “***harf.txt***” dosyasına kaydedebiliriz. 
 
 ```bash
 ┌──(taylan@linuxdersleri)-[~]
@@ -686,7 +686,7 @@ z
 30
 ```
 
-Bakın, verdiğim dosya sırlamasına uygun şekilde tek seferde dosya içerikleri sıralı şekilde bastırıldı. Aynı dosyaları `tac` komutu ile de bastırabiliriz. 
+Bakın, verdiğim dosya sıralamasına uygun şekilde tek seferde dosya içerikleri sıralı şekilde bastırıldı. Aynı dosyaları `tac` komutu ile de bastırabiliriz. 
 
 ```bash
 ┌──(taylan@linuxdersleri)-[~]
@@ -750,7 +750,7 @@ a
 1
 ```
 
-Bakın yine verdiğim dosya sırlamasına uygun ancak bu kez dosya içerikleri tersten sıralanmış şekilde bastırıldı. 
+Bakın yine verdiğim dosya sıralamasına uygun ancak bu kez dosya içerikleri tersten sıralanmış şekilde bastırıldı. 
 
 `tac` komutu `cat` komutu kadar kolay hatırlanabilir basit bir komut. `cat` komutunun tersten yazılmış hali olması zaten işlevi hakkında unutulmaz bir hatırlatıcı.
 
@@ -862,7 +862,7 @@ Bakın dosyayı taşıyarak ismini değiştirdiğimiz için yalnızca değişme(
 
 Temel tarih bilgileri ve bunların değişme koşulları bizzat burada örnekler üzerinden teyit ettiğimiz şekilde çalışıyor. Ayrıca çıktılara dikkat edecek olursanız burada dosyanın oluşturulma tarihi de mevcut. Bu bilgi tüm dosya sistemlerinde desteklenmediği için tüm sistemlerde göremeyebilirsiniz. Yine de güncel mimariye sahip bir sistemde çalışıyorsanız yeni dosya sistemleri dolayısıyla dosyanın oluşturulma tarihi de tutuluyordur mutlaka. 
 
-Neticede bakın benim sürekli öznitelik olarak bahsetmiş olduğum bu meta veriler üzerinden dosya hakkında çeşitli tarih bilgilerini öğrenebiliyoruz. Sistem yönetimi sırasında özellikle sırlama ve denetleme gibi işlevleri yerine getirirken bu bilgilerden faydalanabiliyoruz.
+Neticede bakın benim sürekli öznitelik olarak bahsetmiş olduğum bu meta veriler üzerinden dosya hakkında çeşitli tarih bilgilerini öğrenebiliyoruz. Sistem yönetimi sırasında özellikle sıralama ve denetleme gibi işlevleri yerine getirirken bu bilgilerden faydalanabiliyoruz.
 
 `touch` komutu da erişim ve düzenleme tarihlerinin doğrudan değiştirilmesi konusunda bize yardımcı oluyor. 
 
@@ -1704,7 +1704,7 @@ Zeynep Aksoy
 
 Bakın isimler kısmı aynı olmasına rağmen satırlar basıldı. Fakat birebir aynı olan satırlar yani isim ve soy isimin aynı olduğu satırlardan yalnızca bir tanesi basıldı. Gördüğünüz gibi bu şekilde birebir tekrar eden satırları `u` seçeneği ile tek bir satır basılacak şekilde sıralayabiliyoruz.
 
-`sort` komutunun tüm seçenekleri benim bahsettiklerimle sınırlı da değil. Burada ele aldıklarımız dışında `sort` komutunun birkaç özelliği daha bulunuyor. Ancak ben geri kalan özelliklerden, başka araçları kullanarak da faydalanabileceğimizi bildiğim için `sort` komutunu için bu kadarlık bilginin yeterli olduğunu düşünüyorum. Merak ediyorsanız `sort —help` komutunun çıktılarına göz atabilirsiniz.
+`sort` komutunun tüm seçenekleri benim bahsettiklerimle sınırlı da değil. Burada ele aldıklarımız dışında `sort` komutunun birkaç özelliği daha bulunuyor. Ancak ben geri kalan özelliklerden, başka araçları kullanarak da faydalanabileceğimizi bildiğim için `sort` komutu için bu kadarlık bilginin yeterli olduğunu düşünüyorum. Merak ediyorsanız `sort —help` komutunun çıktılarına göz atabilirsiniz.
 
 # `shuf` Komutu
 
@@ -2059,11 +2059,11 @@ Ayrıca tüm seçenekleri tek tek kullanabileceğimiz gibi elbette aynı anda da
  25  50 liste
 ```
 
-Bakın iki çıktıdaki sayıların sıralaması da aynı. Yani bizim verdiğimiz seçenek sıralamasının `wc` komutu için bir önemi yok. Her koşulda, çıktılar kendi standartlarında, varsa satır daha sonra kelime sayısı ve son olarak karakter sayısını verecek şekilde oluyor oluyor. 
+Bakın iki çıktıdaki sayıların sıralaması da aynı. Yani bizim verdiğimiz seçenek sıralamasının `wc` komutu için bir önemi yok. Her koşulda, çıktılar kendi standartlarında, varsa satır daha sonra kelime sayısı ve son olarak karakter sayısını verecek şekilde oluyor. 
 
  Bu çıktı sıralamasını aklınızda tutamıyorsanız sorun yok. Çünkü `man wc` komutunu kullanıp, komut açıklamasındaki sıralama tanımına bakabilirsiniz. Ayrıca ben şimdiye kadar hep karakter uzunluğu dedim ama aslında kast ettiğim karakterlerin bayt uzunluğuydu. Zaten manual sayfalarında da bu sebeple “byte” şeklinde yazıyor.  İyi ki yardım sayfaları var, haksız mıyım ?
 
-Ayrıca ben şimdiye kadar hep tekil dosyalar üzerinden örnek verim fakat istersek birden fazla dosya ismi de belirtebiliriz. 
+Ayrıca ben şimdiye kadar hep tekil dosyalar üzerinden örnek verdim fakat istersek birden fazla dosya ismi de belirtebiliriz. 
 
 ```bash
 ┌──(taylan@linuxdersleri)-[~]

@@ -489,7 +489,7 @@ Bakın ben bu örnekte, önceki kayıtları görmek için ***/var/log/btmp.1*** 
 
 ## cron
 
-Eğer **cron-crontab** ile zamanlanmış görevler tanımlıysa, bu görevlerin çalışma kayıtlarına ***/var/log/cron*** dosyası üzerinden ulaşabiliyoruz. Benim kullandığım Debian dağıtımında log kayıtlarını tutan rsyslog aracının konfigürasyon dosyasında cron için kayıt tutma devedışı olduğu için ***/var/log/*** dizini altında `cron` için bir kayıt bulunmuyor. 
+Eğer **cron-crontab** ile zamanlanmış görevler tanımlıysa, bu görevlerin çalışma kayıtlarına ***/var/log/cron*** dosyası üzerinden ulaşabiliyoruz. Benim kullandığım Debian dağıtımında log kayıtlarını tutan rsyslog aracının konfigürasyon dosyasında cron için kayıt tutma devre dışı olduğu için ***/var/log/*** dizini altında `cron` için bir kayıt bulunmuyor. 
 
 ```bash
 ┌──(taylan㉿linuxdersleri)-[~]
@@ -515,7 +515,7 @@ user.*                          -/var/log/user.log
 
 Değişikliklerin geçerli olabilmesi için `sudo systemctl restart rsyslog.service` komutu ile **rsyslog** servisini yeninden başlatalım. 
 
-Test etmek için yeni bir **crontab** görevi tanımlayabiliriz. Bunun için `crontab -e` komutunun ardından açılan konfigürasyon dosyasında, istdiğimiz görevi istediğimiz sıklıkta çalışacak şekilde tanımlayalım.
+Test etmek için yeni bir **crontab** görevi tanımlayabiliriz. Bunun için `crontab -e` komutunun ardından açılan konfigürasyon dosyasında, istediğimiz görevi istediğimiz sıklıkta çalışacak şekilde tanımlayalım.
 
 Örnek olarak, her dakika `echo "bu bir zamanlanmıs gorev"` komutunu çalıştıracak çok basit bir görev tanımlıyorum.
 

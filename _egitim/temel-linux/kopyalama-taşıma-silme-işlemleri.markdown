@@ -346,7 +346,7 @@ a  b  belgeler  c  d  metinler  metin.txt
 
 Ayrıca ben üzerinde özellikle durmadım ama fark ettiyseniz toplu şekilde dosya silerken bizden ekstra bir onay alınmadan tek seferde tüm dosyalar silinmişti. Bu durum kimi zaman istenmeyen sonuçlara yol açabilir. Önlem olarak eğer istersek silmeden önce her dosya için bizden onay istenmesini sağlayabiliriz. Bu sayede toplu silme işlemlerinde yanlış dosyaları silme riskinden kaçınabiliriz. Örnek senaryomuzda, bir dizin içinde tüm dosyaları silmek üzere konsola `rm *` komutunu girdiğimizi farz edelim. Bu durumda kabuk yıldız işareti sayesinde bulunduğumuz dizindeki tüm dosyaları kapsayacağı için tüm dosyaların silinmesi emrini vermiş oluyoruz.
 
-Örneğin ben şu an içinde bulunduğum “***yeni***” klasörü içerisindeki yer şeyi silmek üzere `rm *` komutunu girebilirim. Fakat ben tüm dosyaları silmek istemiyorum, bazılarını eleyip geri kalanları silmek istiyorum. Bunun için `cp` ve `mv` komutlarında da olduğu gibi `-i` seçeneğini kullanabiliriz. Denemek için komutumuza `-i` seçeneğini de ekleyip bu şekilde girelim.
+Örneğin ben şu an içinde bulunduğum “***yeni***” klasörü içerisindeki her şeyi silmek üzere `rm *` komutunu girebilirim. Fakat ben tüm dosyaları silmek istemiyorum, bazılarını eleyip geri kalanları silmek istiyorum. Bunun için `cp` ve `mv` komutlarında da olduğu gibi `-i` seçeneğini kullanabiliriz. Denemek için komutumuza `-i` seçeneğini de ekleyip bu şekilde girelim.
 
 ```bash
 └─$ ls                                                           
@@ -880,7 +880,7 @@ Gördüğünüz gibi orijinal dosya silinmiş olmasına rağmen hâlâ disk üze
 
 ![hard-link3.webp]({{ site.url }}/egitim/temel-linux/metin/hard-link3.webp){:class="responsive img-zoomable"}
 
-En nihayetinde gördüğünüz gibi aslında sistemiz üzerindeki standart dosya ve klasörler disk üzerindeki veri bloklarına inode üzerinden yönlendirme yapan bağlantı adresleri. Biz bu bağlantı adresleri yani linkler sayesinde kolay okunabilir isimlerle diskteki verilerimizi düzenle tutup tekrar tekrar erişebiliyoruz.
+En nihayetinde gördüğünüz gibi aslında sistemiz üzerindeki standart dosya ve klasörler disk üzerindeki veri bloklarına inode üzerinden yönlendirme yapan bağlantı adresleri. Biz bu bağlantı adresleri yani linkler sayesinde kolay okunabilir isimlerle diskteki verilerimizi düzenli tutup tekrar tekrar erişebiliyoruz.
 
 Yani katı link oluşturma yaklaşımı sayesinde disk üzerinde tekrar aynı veriler için fazladan depolama alanı harcanmasına gerek kalmadan, dosyaların yedeklerinin alınması mümkün oluyor. Daha önce de silme işleminin aslında verilere ulaşmamızı sağlayan bağlantıların silinmesinden ibaret olduğunu söylemiştik. Eğer verilere ulaşmamızı sağlayan birden fazla katı link olursa, bir katı link silinse bile diskimiz üzerindeki verilere ulaşmaya devam edebiliyoruz. Katı link yaklaşımı tam olarak bu amaçla kullanılıyor. Ve disk üzerinde fazladan depolama alını işgal etmeden yedeklemek için harika bir çözüm.
 

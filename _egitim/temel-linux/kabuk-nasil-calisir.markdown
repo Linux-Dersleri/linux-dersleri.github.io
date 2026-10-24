@@ -21,7 +21,7 @@ Anlatımlarımıza öncelikle kabuğun bizim girdiğimiz komutları nasıl algı
 
 Örnek olması için sistem üzerinde dosyaları ve klasörleri bulma konusunda bize yardımcı olan `find` aracını kullanarak bash kabuğunun bizim girdiğimiz komutları nasıl ele aldığından çok kısaca bahsetmek istiyorum. Biliyorum henüz hiçbir komutu ele almadık ve tabii ki `find` komutunu da bilmiyoruz fakat siz benim örnek için kullandığım bu komutun ne olduğuna şimdilik takılmayın. Ben burada bash kabuğuna girdiğimiz komutların nasıl çalıştırıldıklarından bahsetmek istiyorum.
 
-Bulunmasını istediğimiz dosyaları kendimiz oluşturabiliriz. Bunun için grafiksel arayüzü de kullanabiliriz fakat ben komut satırından kolayca oluşturmak için `touch ~/test.txt ~/Desktop/test.txt` komutunu giriyorum. Bu komut sayesinde kendi ev dizinimde ve ev dizimin altındaki Desktop klasörü içinde “test.txt” isimli birer dosya oluşturulmuş olacak. Komutu anlamasanız bile şimdilik dosyaları oluşturmak için kopyala yapıştır şekilde kullanabilirsiniz.
+Bulunmasını istediğimiz dosyaları kendimiz oluşturabiliriz. Bunun için grafiksel arayüzü de kullanabiliriz fakat ben komut satırından kolayca oluşturmak için `touch ~/test.txt ~/Desktop/test.txt` komutunu giriyorum. Bu komut sayesinde kendi ev dizinimde ve ev dizinimin altındaki Desktop klasörü içinde “test.txt” isimli birer dosya oluşturulmuş olacak. Komutu anlamasanız bile şimdilik dosyaları oluşturmak için kopyala yapıştır şekilde kullanabilirsiniz.
 
 Şimdi find aracını kullanarak bu dosyaların nasıl bulunabileceğinden bahsederken, bash kabuğunun çalışma yapısını ele almaya çalışalım.
 
@@ -42,7 +42,7 @@ Kabuğa `find /home/ -name test.txt` komutunu girdik. Kabuk öncelikle arasında
 
 ![1.webp]({{ site.url }}/egitim/temel-linux/kabuk/1.webp){:class="responsive img-zoomable"}
 
-İlk girilen komut yani ilk argüman **find** olduğu için kabuk "find" ifadesini çalıştırılacak araç olarak kabul ediliyor. Ve bu aracı çalıştırmak için de tabii ki önce bu aracı bulması gerekiyor. Bunun için de ilk olarak bu isimle ile eşleşen dahili bir araç var mı diye bakıyor. Hatırlıyorsanız eğitimin başında kabukların dahili araçları bulunduğundan bahsetmiştik. İşte kabuk bir aracı çalıştırmadan önce kendisine verilmiş olan komuttaki ilk argümanın, dahili bir aracın ismi olup olmadığını kontrol ediyor. find aracı bash kabuğunda dahili bir araç olmadığı için elbette herhangi bir eşleşme olmuyor. find komutu dahili bir komut olmadığı için kabuk bu kez PATH olarak geçen birtakım dizinlerin içinde find ismiyle eşleşen çalıştırabilir bir dosya var mı diye bakıyor. Ve neticede bu dizinlerin birinde find aracının dosyası bulunduğu için bu dosya kabuk tarafından çalıştırıyor. 
+İlk girilen komut yani ilk argüman **find** olduğu için kabuk "find" ifadesini çalıştırılacak araç olarak kabul ediliyor. Ve bu aracı çalıştırmak için de tabii ki önce bu aracı bulması gerekiyor. Bunun için de ilk olarak bu isimle ile eşleşen dahili bir araç var mı diye bakıyor. Hatırlıyorsanız eğitimin başında kabukların dahili araçları bulunduğundan bahsetmiştik. İşte kabuk bir aracı çalıştırmadan önce kendisine verilmiş olan komuttaki ilk argümanın, dahili bir aracın ismi olup olmadığını kontrol ediyor. find aracı bash kabuğunda dahili bir araç olmadığı için elbette herhangi bir eşleşme olmuyor. find komutu dahili bir komut olmadığı için kabuk bu kez PATH olarak geçen birtakım dizinlerin içinde find ismiyle eşleşen çalıştırabilir bir dosya var mı diye bakıyor. Ve neticede bu dizinlerin birinde find aracının dosyası bulunduğu için bu dosya kabuk tarafından çalıştırılıyor. 
 
 ![2.webp]({{ site.url }}/egitim/temel-linux/kabuk/2.webp){:class="responsive img-zoomable"}
 
@@ -427,7 +427,7 @@ bu bir test programıdır
 taylan@linuxdersleri.net:~$
 ```
 
-Bakın dosyanın konumunu belirtmeden yalnızca dosya ismiyle çalıştırabildim çünkü “yeni-dizin” isimli klasör, kabuğun komutları çalıştırmadan önce baktığı **PATH** yoluna ekli ve bu betik dosyası da bu dizin içinde. Tabii ki bu pek güvenli bir yöntem olmadığı için varsayılan **PATH** yoluna yeni bir dizine eklemenizi eğer ne yaptığınızdan emin değilseniz kesinle önermiyorum. 
+Bakın dosyanın konumunu belirtmeden yalnızca dosya ismiyle çalıştırabildim çünkü “yeni-dizin” isimli klasör, kabuğun komutları çalıştırmadan önce baktığı **PATH** yoluna ekli ve bu betik dosyası da bu dizin içinde. Tabii ki bu pek güvenli bir yöntem olmadığı için varsayılan **PATH** yoluna yeni bir dizin eklemenizi eğer ne yaptığınızdan emin değilseniz kesinlikle önermiyorum. 
 
 Yine de anlatımları dikkatli biçimde takip ettiyseniz **PATH** yoluna yeni dizin eklemenin ne kadar kolay olduğunu sizler de fark etmişsinizdir. 
 

@@ -19,11 +19,11 @@ Linux işletim sisteminde bütün programlar, aygıtlar, dosyalar ve genel olara
 
 Grafiksel arayüze benzer şekilde söz konusu komut satırı üzerinden sistemi yönetmek olduğunda da tabii ki işlerimizi tek bir dizin altında yürütmeyeceğimiz için komut satırındayken de dizinler arasında rahatlıkla gezinebiliyor olmamız gerekiyor. İşte bu bölümde, dizinlerde rahatlıkla gezinme ve görüntüleme için gerekli komutlara tek tek değiniyor olacağız. Yani bölümün sonunda, komut satırı üzerinden tüm sistemdeki dizin hiyerarşisi içinde rahatlıkla gezinebiliyor olacaksınız. 
 
-Fakat dizinlerde gezinmeden önce tabii ki üzerinde gezineceğimiz bu dizin yapısını tanımamız gerekiyor. Çünkü üzerinde gezineceğimiz Linux dosya sistemi hiyerarşisi, pek çoğumuzun alışık olduğu Windows’tan biraz farklı. Dizin yapısını bilmediğimizde körlemesine gezinmek zorunda kalırız bu da dizinlerde gezinti gibi son derece basit olan işlevi bile zar zor yerine getirmemize neden olur. Zaten yeni başlayan kullanıcıların dizinlerde gezinirken yaşadıkların sorunların neredeyse tamamı Linux sisteminin dizin yapısını temel düzeyde bilmiyor olmalarından kaynaklanıyor. 
+Fakat dizinlerde gezinmeden önce tabii ki üzerinde gezineceğimiz bu dizin yapısını tanımamız gerekiyor. Çünkü üzerinde gezineceğimiz Linux dosya sistemi hiyerarşisi, pek çoğumuzun alışık olduğu Windows’tan biraz farklı. Dizin yapısını bilmediğimizde körlemesine gezinmek zorunda kalırız bu da dizinlerde gezinti gibi son derece basit olan işlevi bile zar zor yerine getirmemize neden olur. Zaten yeni başlayan kullanıcıların dizinlerde gezinirken yaşadıkları sorunların neredeyse tamamı Linux sisteminin dizin yapısını temel düzeyde bilmiyor olmalarından kaynaklanıyor. 
 
 # Linux Dosya Sistemi Hiyerarşisi
 
-Söz konusu Linux olduğunda pek çok farklı dağıtım olduğunu biliyoruz. Bu sebeple temel dosya hiyerarşisi dışında dağıtıma özel olan farklı dizinler de mevcut olabiliyor. Fakat bu durumum bizim için sorun değil çünkü temel dosya sistemi hiyerarşisi tüm dağıtımlarda ortak olmak durumunda. Biz de burada temel yapıdan bahsediyor olacağız. 
+Söz konusu Linux olduğunda pek çok farklı dağıtım olduğunu biliyoruz. Bu sebeple temel dosya hiyerarşisi dışında dağıtıma özel olan farklı dizinler de mevcut olabiliyor. Fakat bu durum bizim için sorun değil çünkü temel dosya sistemi hiyerarşisi tüm dağıtımlarda ortak olmak durumunda. Biz de burada temel yapıdan bahsediyor olacağız. 
 
 Linux’ta tüm dosya ve dizinler “**root**” olarak ifade edilen “**kök”** dizini altında hiyerarşik şekilde tutuluyor. Kök dizin de slash `/` işareti ile temsil ediliyor. Ben anlaşılır olması için temel dizinleri aşağıdaki diyagramda belirttim.
 
@@ -50,7 +50,7 @@ Dosya sistemi hiyerarşisinin en tepe noktasını yani başlangıcını temsil e
 
 ## <span class="text-danger">/</span><span class="text-primary">bin</span> <span class="text-secondary">ve</span> <span class="text-danger">/</span><span class="text-primary">sbin</span>
 
-***/bin*** ve ***/sbin*** dizinlerinin ismi, “**bin**ary” yani “ikili” ifadesinin kısaltmasından geliyor. Bu dizinlerde; sistemin başlatılması, yönetimi ve gerektiğinde onarımı için kullanılan araçların çalıştırılabilir "**binary**" dosyalarını barındırılıyor. Örneğin konsola girdiğimiz komutların **PATH** yolu üzerinde arandığını biliyoruz. PATH yoluda bu ***/bin*** ve ***/sbin*** dizinleri de bulunuyor. Bu sayede çalıştırılabilir olan ikili dosyalar bulunup çalıştırılabiliyor. 
+***/bin*** ve ***/sbin*** dizinlerinin ismi, “**bin**ary” yani “ikili” ifadesinin kısaltmasından geliyor. Bu dizinlerde; sistemin başlatılması, yönetimi ve gerektiğinde onarımı için kullanılan araçların çalıştırılabilir "**binary**" dosyalarını barındırılıyor. Örneğin konsola girdiğimiz komutların **PATH** yolu üzerinde arandığını biliyoruz. PATH yolunda bu ***/bin*** ve ***/sbin*** dizinleri de bulunuyor. Bu sayede çalıştırılabilir olan ikili dosyalar bulunup çalıştırılabiliyor. 
 
 ***/bin*** (**Bin**aries): Bu dizin, tüm kullanıcıların erişebileceği temel işlevleri gerçekleştirmek için kullanılan programları içeriyor.
 
@@ -112,7 +112,7 @@ Documents  Pictures  Videos
 Downloads  Public    yeni-klasor
 ```
 
-Bakın burada “Desktop” “Documents” “Downloads” “Pictures” ve benzeri dizinlerin yanında benim kendi oluşturduğumu dizinler ve dosyalar da bulunuyor. Eğer hatırlıyorsanız kendi kullanıcı hesabım için kabuğun konfigürasyonlarını kendi ev dizinimdeki ***.bashrc*** dosyasını değiştirerek düzenlemiştim. Diğer kullanıcıların da kendi ev dizinlerinde kendilerine ait olan ve o kullanıcı hesabını etkileyen dosyalar vardır. Bu sebeple her bir kullanıcının kendine ait dosyaları barındırabileceği ev dizinleri ***/home*** klasörü a    ltında tutuluyor. 
+Bakın burada “Desktop” “Documents” “Downloads” “Pictures” ve benzeri dizinlerin yanında benim kendi oluşturduğumu dizinler ve dosyalar da bulunuyor. Eğer hatırlıyorsanız kendi kullanıcı hesabım için kabuğun konfigürasyonlarını kendi ev dizinimdeki ***.bashrc*** dosyasını değiştirerek düzenlemiştim. Diğer kullanıcıların da kendi ev dizinlerinde kendilerine ait olan ve o kullanıcı hesabını etkileyen dosyalar vardır. Bu sebeple her bir kullanıcının kendine ait dosyaları barındırabileceği ev dizinleri ***/home*** klasörü altında tutuluyor. 
 
 ## <span class="text-danger">/</span><span class="text-primary">lib</span>
 
@@ -168,7 +168,7 @@ Geçmişte bu dizinler kendi başına ana dizin(***/***) altında bulunduğu iç
 
 ## <span class="text-danger">/</span><span class="text-primary">srv</span>
 
-***/srv*** dizini "**s**e**rv**ice" yani "servis" ifadesinin kısaltması olarak isimlendirilmmiş bir dizindir. Sistemin sunduğu hizmetlere ait veri ve yapılandırma dosyalarını barındıran. Örneğin dosya paylaşımı için kullanılan FTP hizmeti dosyaları burada tutulabilir. Ya da örneğin Nginx ile bir websitesi sunuyorsanız, dosyaları /srv/www/ dizini altında tutuluyor olabilir. Özetle sunucunun sunduğu hizmetlerin çeşitli dosyalarını barından bir dizindir.
+***/srv*** dizini "**s**e**rv**ice" yani "servis" ifadesinin kısaltması olarak isimlendirilmiş bir dizindir. Sistemin sunduğu hizmetlere ait veri ve yapılandırma dosyalarını barındıran. Örneğin dosya paylaşımı için kullanılan FTP hizmeti dosyaları burada tutulabilir. Ya da örneğin Nginx ile bir websitesi sunuyorsanız, dosyaları /srv/www/ dizini altında tutuluyor olabilir. Özetle sunucunun sunduğu hizmetlerin çeşitli dosyalarını barındıran bir dizindir.
 
 ## <span class="text-danger">/</span><span class="text-primary">run</span>
 
@@ -188,7 +188,7 @@ Hani bir yeri ziyaret ettiğimizde karşımıza çıkan haritalarda şu an burad
 
 Bu komut sayesinde mevcut bulunduğumuz dizinin tam adresini öğrenebiliyoruz. `pwd` komutu, İngilizce "**p**rint **w**orking **d**irectory" yani "çalışma dizini yazdır" ifadesinin kısaltmasından geliyor. Özellikle komutun açılımından ve İngilizce karşılığından da bahsettim çünkü komutların açılımlarını ve İngilizce karşılıklarını bilirsek, daha sonra ilgili komutları çok daha kolay hatırlayabiliyoruz. Zaten genellikle komutların açılımları da görevleri ile ilişkili oluyor. 
 
-Komutumuzu test etmek için komut satırımızı açalım. istisnalar hariç komut satırı ilk açıldığına kabuk varsayılan olarak bizim mevcut kullanıcı hesabımızın ev dizinimizde çalışmaya başlar. Bu durumu teyit edebilmek için hemen `pwd` komutunu girelim.
+Komutumuzu test etmek için komut satırımızı açalım. istisnalar hariç komut satırı ilk açıldığında kabuk varsayılan olarak bizim mevcut kullanıcı hesabımızın ev dizinimizde çalışmaya başlar. Bu durumu teyit edebilmek için hemen `pwd` komutunu girelim.
 
 ```jsx
 ┌──(taylan@linuxdersleri)-[~]
@@ -307,7 +307,7 @@ Prompta bakarak ve pwd komutu ile dizini değiştirdiğimizi de teyit etmiş old
 
 Göreli yol bulunduğumuz dizinden itibaren geçerli olan adresin tarif edilmesiyken, kesin yol ilgili adresin dosya sistemi hiyerarşisinin en tepe noktasından başlanarak eksiksizce tarif edilmesiyle oluyor. 
 
-Dizinler arasında gezinirken en çok dikkat etmeniz gereken detay bu göreli ve kesin yol kavramları. Zaten anlaşılması sön derece kolay. Hadi emin olmak için benzer örneği yanlış şekilde tekrar ele alalım. Daha önce ben kendi ev dizinimde olduğum için yalnızca `cd Desktop` komutunu girerek kendi masaüstü klasörüme geçiş yapmıştım. Şimdi aynı komutu ***apt*** dizini içindeyken girip yine masaüstüme geçiş yapmayı deneyebilirim. 
+Dizinler arasında gezinirken en çok dikkat etmeniz gereken detay bu göreli ve kesin yol kavramları. Zaten anlaşılması son derece kolay. Hadi emin olmak için benzer örneği yanlış şekilde tekrar ele alalım. Daha önce ben kendi ev dizinimde olduğum için yalnızca `cd Desktop` komutunu girerek kendi masaüstü klasörüme geçiş yapmıştım. Şimdi aynı komutu ***apt*** dizini içindeyken girip yine masaüstüme geçiş yapmayı deneyebilirim. 
 
 ```bash
 ┌──(taylan@linuxdersleri)-[/etc/apt]
@@ -325,7 +325,7 @@ auth.conf.d    sources.list~
 preferences.d  sources.list.d
 ```
 
-Ben bu ***etc*** dizini atlındaki ***apt*** klasöründeyken göreli şekilde yani `cd Desktop` şeklinde komutumu girdiğimde, kabuk mevcut dizindeki ***Desktop*** isimli klasöre geçiş yapmak istediğimi düşünüyor ancak bu dizinde bu isimde bir klasör bulunmadığı için doğal olarak hata veriyor. 
+Ben bu ***etc*** dizini altındaki ***apt*** klasöründeyken göreli şekilde yani `cd Desktop` şeklinde komutumu girdiğimde, kabuk mevcut dizindeki ***Desktop*** isimli klasöre geçiş yapmak istediğimi düşünüyor ancak bu dizinde bu isimde bir klasör bulunmadığı için doğal olarak hata veriyor. 
 
 Şimdi aynı komutu bu kez kendi ev dizinimdeki ***Desktop*** klasörünün tam dizin adresini belirtecek şekilde yani kesin yolunu belirtecek şekilde de girmeyi deneyebilirim. 
 
@@ -613,7 +613,7 @@ Yani örneğin ***home*** dizini içindeyken bir üst dizine dönmek için `cd .
 
 İşte zaten kök dizinden başlayan kesin bir yol rotası belirtmeden girdiğimiz komutların hepsi mevcut bulunduğumuz dizine göre, gitmek istediğimiz dizinin nerede olduğuyla ilgili. Bu sebeple bu yola göreli yol diyoruz.
 
-Ayrıca alt dizin ve üst dizine geçişler dışında yani göreli yol dışında, dosya sistemi üzerinde o anda hangi dizinde olduğumuz fark etmeksizin kök dizini kullanarak kesin dizin yolunu belirtip çok farklı konumlardaki dizinlere ulaşmamız da mümkün. Örneğin ben ali kullanıcısının ev dizinindeyken ***etc*** dizini atlındaki ***apt*** klasörüne geçiş yapmak istersem `cd /etc/apt` komutu ile kesin yolunu belirterek, öncelikle kök dizine gidilmesi oradan ***etc*** dizinine geçilmesi ve son olarak da ***apt*** klasörüne geçilmesi gerektiğini kolayca ifade edebilirim. 
+Ayrıca alt dizin ve üst dizine geçişler dışında yani göreli yol dışında, dosya sistemi üzerinde o anda hangi dizinde olduğumuz fark etmeksizin kök dizini kullanarak kesin dizin yolunu belirtip çok farklı konumlardaki dizinlere ulaşmamız da mümkün. Örneğin ben ali kullanıcısının ev dizinindeyken ***etc*** dizini altındaki ***apt*** klasörüne geçiş yapmak istersem `cd /etc/apt` komutu ile kesin yolunu belirterek, öncelikle kök dizine gidilmesi oradan ***etc*** dizinine geçilmesi ve son olarak da ***apt*** klasörüne geçilmesi gerektiğini kolayca ifade edebilirim. 
 
 ```bash
 ┌──(taylan@linuxdersleri)-[~]
@@ -676,7 +676,7 @@ Bakın “***yeni klasor***” isimli klasör oluşturulmuş. Eğer komutumuzu `
 
 Tırnak kullanmadığımız için aradaki boşluk karakteri dolayısıyla iki ayrı argüman olarak algılanan “yeni” ve “klasor” isimli iki ayrı klasör oluşturuldu.
 
-İşte bizzat klasör oluşturma aşamasında gözlemediğimiz bu durum, aslında dizinlerde gezinirken de bizzat geçerli. Eğer geçiş yapmak istediğimiz klasör isminde boşluk veya özel bir karakter varsa, bu klasör ismini mutlaka tırnak içinde özel olarak belirtmemiz gerekiyor. Burada dikkat etmeniz gereken detay tek tırnak kullanmanızdır. Aslında bu örnek için çift tırnak kullansak da sorun yaşamazdık ancak size önerim içerisinde boşluk veya özel karakter barından komutlarınızda bu komutların özel anlamının tamamen görmezden gelinmesi için tek tırnak içinde yazmanızdır. Neden tek tırnak kullanmamız gerektiğini “kabuk genişletmeleri” bölümünde ayrıca ele alacağız.
+İşte bizzat klasör oluşturma aşamasında gözlemlediğimiz bu durum, aslında dizinlerde gezinirken de bizzat geçerli. Eğer geçiş yapmak istediğimiz klasör isminde boşluk veya özel bir karakter varsa, bu klasör ismini mutlaka tırnak içinde özel olarak belirtmemiz gerekiyor. Burada dikkat etmeniz gereken detay tek tırnak kullanmanızdır. Aslında bu örnek için çift tırnak kullansak da sorun yaşamazdık ancak size önerim içerisinde boşluk veya özel karakter barından komutlarınızda bu komutların özel anlamının tamamen görmezden gelinmesi için tek tırnak içinde yazmanızdır. Neden tek tırnak kullanmamız gerektiğini “kabuk genişletmeleri” bölümünde ayrıca ele alacağız.
 
 Örneğimize dönecek olursak neticede isminde boşluk karakteri bulunan klasör çalışmakta olduğum dizinde oluşturuldu. Bu dizine geçiş yapmak için `cd yeni klasor` şeklinde komut girmeyi deneyebiliriz. 
 
@@ -743,7 +743,7 @@ Ancak gördüğünüz gibi çift tırnak işe yaramadı. Çünkü kabuk, çift t
 
 Bakın klasöre sorunsuzca geçiş yapabildik. Çünkü tek tırnak işareti sayesinde kabuk, dolar işaretinin özel anlamını görmezden gelerek dolar işaretini yalnızca klasörün isminde geçen standart bir karakter olarak gördü. Dolayısıyla kabuk buradaki argümana herhangi bir müdahalede bulunmadan olduğu gibi `cd` komutuna aktardı. `cd` aracı da aldığı argüman doğrultusunda bu dizine geçiş yapabilmemizi sağladı.
 
-Bizzat birkaç kez teyit ettiğimiz gibi tek tırnak işareti bizim sorumuzu gayet iyi çözüyor ancak belki tek tırnak kullanımı size o kadar da konforlu gelmemiş olabilir. Bu durumda tüm ifadeyi tırnak içinde yazmak yerine kabuk için özel olan herhangi bir karakterin kabuk tarafından görmezden gelinmesi için ilgili özel karakterden hemen önce ters slash `\` işaretini de kullanabiliriz. Ters slash işareti, bash için **kaçış karakteri** anlamına geliyor ve dolayısıyla bash kabuğu bu karakteri gördüğünde bu karakterden sonraki karakterin özel anlamını görmezden geliyor. Yani örneğin ben `cd ~/yeni\ klasor` şeklinde komutumu girersem, kabuk ters slash işaretinden sonraki boşluk karakterini görmezden geliyor. 
+Bizzat birkaç kez teyit ettiğimiz gibi tek tırnak işareti bizim sorunumuzu gayet iyi çözüyor ancak belki tek tırnak kullanımı size o kadar da konforlu gelmemiş olabilir. Bu durumda tüm ifadeyi tırnak içinde yazmak yerine kabuk için özel olan herhangi bir karakterin kabuk tarafından görmezden gelinmesi için ilgili özel karakterden hemen önce ters slash `\` işaretini de kullanabiliriz. Ters slash işareti, bash için **kaçış karakteri** anlamına geliyor ve dolayısıyla bash kabuğu bu karakteri gördüğünde bu karakterden sonraki karakterin özel anlamını görmezden geliyor. Yani örneğin ben `cd ~/yeni\ klasor` şeklinde komutumu girersem, kabuk ters slash işaretinden sonraki boşluk karakterini görmezden geliyor. 
 
 ```bash
 ┌──(taylan@linuxdersleri)-[~/yeni klasor/ben$klasor]
@@ -1143,7 +1143,7 @@ Bakın büyük karakterli size seçeneği yani `S` seçeneği, `ls` komutunun ç
 
 ## Değiştirilme Tarihlerine Göre Sıralama
 
-Normalde `ls` komutunun `-l` seçeneği ile aldığımız ayrıntılı listede dosyaların oluşturulma tarihleri veya değiştirildilerse, değiştirilme tarihleri belirtiliyor. Dosya ve klasörleri **değiştirilme tarihlerine göre en yeniden eskiye doğru** sıralamak istersek `t` seçeneğini kullanabiliyoruz. Buradaki “`t`” seçeneği İngilizce "**t**ime" yani "zaman" ifadesinin kısaltmasından geliyor. Ben örnek olarak bulunduğum dizindeki dosya ve klasörleri `ls -lt` komutu ile listeliyorum.
+Normalde `ls` komutunun `-l` seçeneği ile aldığımız ayrıntılı listede dosyaların oluşturulma tarihleri veya değiştirildiyse, değiştirilme tarihleri belirtiliyor. Dosya ve klasörleri **değiştirilme tarihlerine göre en yeniden eskiye doğru** sıralamak istersek `t` seçeneğini kullanabiliyoruz. Buradaki “`t`” seçeneği İngilizce "**t**ime" yani "zaman" ifadesinin kısaltmasından geliyor. Ben örnek olarak bulunduğum dizindeki dosya ve klasörleri `ls -lt` komutu ile listeliyorum.
 
 ```bash
 ┌──(taylan@linuxdersleri)-[/boot]
@@ -1325,7 +1325,7 @@ drwxr-xr-x 7 root root 4096 Feb 11  2022 /etc/apt/
 drwxrwxrwt 7 root root 4096 Jun  4 06:09 /var/tmp/
 ```
 
-Bakın iki farklı konumdaki klasörlerin tam dizin adreslerini yazıp, özelliklerini kolayca listeleyebildim. Benzer şekilde elbette listelemek istediğiniz dosya veya klasörlerin da tam adını belirttiğiniz sürece sistemdeki farklı dizinlerde bulunan dosya ve dizinleri tek seferde bastırabilirsiniz. Örneğin ben komutun sonuna ***~/.bashrc*** dosyasını da listelemek için ekliyorum. 
+Bakın iki farklı konumdaki klasörlerin tam dizin adreslerini yazıp, özelliklerini kolayca listeleyebildim. Benzer şekilde elbette listelemek istediğiniz dosya veya klasörlerin de tam adını belirttiğiniz sürece sistemdeki farklı dizinlerde bulunan dosya ve dizinleri tek seferde bastırabilirsiniz. Örneğin ben komutun sonuna ***~/.bashrc*** dosyasını da listelemek için ekliyorum. 
 
 ```bash
 ┌──(taylan@linuxdersleri)-[/boot]
@@ -1454,7 +1454,7 @@ Her bir klasörün oluşturulmasına dair adım adım bilgi edinmiş olduk. `mkd
 
 Şimdiye kadar hep derinliği olmayan yani alt klasörleri bulunmayan tekil klasörler oluşturduk. Normalde bildiğiniz gibi klasörlerin içinde ve üstünde dizinler yer alabiliyor. Yani iç içe bir yapı söz konusu. İşte kimi zaman tekil bir klasör oluşturmamız gerekiyorken kimi zaman da tek seferde iç içe birden fazla klasör oluşturmamız da gerekebiliyor.
 
-Eğer tek seferde iç içe birden fazla klasörü oluşturmak istersek `mkdir` komutunun `p` seçeneğini kullanabiliyoruz. Buradaki `p` seçeneği İngilizcedeki "**p**arrent" yani "ebeveyn" ifadesinin kısalmasından geliyor. Aslında bu ifade üst dizin alt dizin kavramıyla ilişkili. Örneğin ben bir klasörün içine yeni bir klasör oluşturursam, bir üst klasör alttaki klasörün **parrent**'ı yani **ebeveyni** olarak kabul ediliyor. Bu seçenek de buradan aklınızda kalabilir. 
+Eğer tek seferde iç içe birden fazla klasörü oluşturmak istersek `mkdir` komutunun `p` seçeneğini kullanabiliyoruz. Buradaki `p` seçeneği İngilizcedeki "**p**arent" yani "ebeveyn" ifadesinin kısalmasından geliyor. Aslında bu ifade üst dizin alt dizin kavramıyla ilişkili. Örneğin ben bir klasörün içine yeni bir klasör oluşturursam, bir üst klasör alttaki klasörün **parent**'ı yani **ebeveyni** olarak kabul ediliyor. Bu seçenek de buradan aklınızda kalabilir. 
 
 Hemen uygulamalı olarak -p seçeneğinin etkisini gözlemleyelim. Ben `mkdir -p buyukanne/anne/cocuk` şeklinde komutumu girmek istiyorum.  
 

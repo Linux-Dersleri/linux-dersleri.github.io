@@ -158,7 +158,7 @@ Bakın dosyanın boyutu 4096 byte'ı sadece biraz geçmiş olmasına rağmen 16 
 
 İşletim sistemi çekirdeğinin kontrolündeki dosya sistemine göre en küçük birim blok olduğu için bir bloğun kısmi bir bölümünü kullanamayız. Çünkü dosya sistemi bloktan daha küçük bir alana adresleme yapamaz. Yani ilk örneğimizde olduğu gibi 1 baytlık dosya için 4096 baytlık blok kullanılmak zorunda. Eğer bu dosyaya yeni veri eklenmezse başka bir dosyayla ilişkili olan herhangi bir veri bu bloğa yazılamaz. Çünkü dosya sistemi bloğun bir kısmına adresleme yapamaz. Yalnızca bloğun bütününe adresleme yapabilir. Zaten inode kavramını ele alırken bu durumdan da bahsetmiştik hatırlarsanız. Yani örneğin bir bloğun bir kısmında X dosyasının verileri bir kısmında da Y dosyasının verileri barındırılamaz. Çünkü barındırılsa bile dosya sistemi, bloktan daha küçük birimleri kontrol edemediği için X ve Y dosyası gibi bir ayrım gözetmeden yalnızca tüm bloğu işaret edebilir. Zaten hatırlarsanız inode değeri de dosyanın içindeki verilerin hangi bloklarda olduğunu söylüyordu. İlgili verilerin, bloğun tam olarak neresinde olduğuna bakılmıyor, komple bloğun kendisi ele alınıyor. Yani özetle veriler dosya sistemi tarafından blok blok ele alınıyor. Bu nedenle bir dosya aslında tüm bloğu tüketmese bile yani tüm bloğu doldurmasa bile, disk üzerindeki bloğa ayrılmış olan sektörlerin bir kısmı boş kalabilir. Dolayısıyla sistemde barındırılacak dosyaların genel boyutlarına göre blok boyutlarının belirlenmesi önemlidir. Eğer çoğunlukla büyük boyutlu dosyalar barındırılacaksa blok boyutları büyük olabilir. Ya da küçük boyutlu dosyalar bulunacaksa da blok boyutları küçük şekilde konfigüre edilebilir.
 
-Ne kadar çok blok olursa, ilgili verilere ulaşması o kadar zaman alırken, disk alanı daha tasarruflu kullanılmış olur. Tersi şekilde blok sayısı az olduğunda da verileri ulaşım hızlıyken, alan tasarrufu mümkün olmayabilir. Bu sebeple aksini gerektiren özel bir durum olmadığı sürece kullanılan dosya sisteminin varsayılan blok boyutu tercih edilmedir. Bu varsayılan değer, ilgili dosya sistemi üzerindeki optimum değer olduğu için çoğunlukla en doğru tercihtir. 
+Ne kadar çok blok olursa, ilgili verilere ulaşması o kadar zaman alırken, disk alanı daha tasarruflu kullanılmış olur. Tersi şekilde blok sayısı az olduğunda da verileri ulaşım hızlıyken, alan tasarrufu mümkün olmayabilir. Bu sebeple aksini gerektiren özel bir durum olmadığı sürece kullanılan dosya sisteminin varsayılan blok boyutu tercih edilmelidir. Bu varsayılan değer, ilgili dosya sistemi üzerindeki optimum değer olduğu için çoğunlukla en doğru tercihtir. 
 
 Şimdilik daha fazla detaya gerek yok. Temel büyüklük ve blok gibi kavramları ele aldığımıza göre artık disk bölümleri hakkında da konuşabiliriz.
 
@@ -1274,7 +1274,7 @@ Tamamdır, ben diskim için gereken tüm ayarlamayı yaptım. Şimdi dosyayı ka
 └─$ reboot
 ```
 
-Evet sistemim yeninden başlatıldı. Şimdi kontrol etmek için konsolu açıp `lsblk` komutu ile diskleri listeleyelim. 
+Evet sistemim yeniden başlatıldı. Şimdi kontrol etmek için konsolu açıp `lsblk` komutu ile diskleri listeleyelim. 
 
 ```bash
 ┌──(taylan㉿linuxdersleri)-[~]

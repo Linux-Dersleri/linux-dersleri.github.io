@@ -166,7 +166,7 @@ Bash kabuğunun kontrolünde olan işlemler, bash için birer “**iş**” yani
 
 ### İşi Ön Plana Almak
 
-Arka plandaki işlemi ön plana almak için “**f**ore**g**round” ifadesinin kısaltmasından gelen `fg` aracınıı, `fg iş-numarası` şeklinde kullanabiliyoruz. Arka planda çalışmakta olan **firefox** işleminin, benim kabuğumdaki iş numarası **1** olduğu için ben `fg 1` şeklinde komutumu giriyorum.
+Arka plandaki işlemi ön plana almak için “**f**ore**g**round” ifadesinin kısaltmasından gelen `fg` aracını, `fg iş-numarası` şeklinde kullanabiliyoruz. Arka planda çalışmakta olan **firefox** işleminin, benim kabuğumdaki iş numarası **1** olduğu için ben `fg 1` şeklinde komutumu giriyorum.
 
 ```bash
 ┌──(taylan㉿linuxdersleri)-[~]

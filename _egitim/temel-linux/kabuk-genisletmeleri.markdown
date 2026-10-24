@@ -89,7 +89,7 @@ Ben yalnızca birer karakter ekledim ancak kıvırcık parantez içerisine isted
 abbba adda ala atttta
 ```
 
-Bakın her koşulda parantez içinde virgülle ayırarak verdiğimiz tüm karakterler, peşi sıra kaç karakter kullanıldığına bakılmaksızın kabuk tarafından genişletiliyor. Çıktıyı incelediğimizde virgülle ayırmış olduğumuz karakterlerin tıpkı tanımlandıkları sıralamaya yani soldan sağa doğru genişletildiğini teyit edebiliyoruz. Siz de elde etmek istediğiniz argümanlar için bu sıraya dikkat ederek şablonunuzu tanımayabilirsiniz. Yalnız, bu şekilde şablon tanımı üzerinden örüntüler oluştururken boşluk karakterini kaçış karakteriyle birlikte kullanmanız gerektiğine de dikkat edin lütfen. Aksi halde kabuk genişletme uygulanamaz. 
+Bakın her koşulda parantez içinde virgülle ayırarak verdiğimiz tüm karakterler, peşi sıra kaç karakter kullanıldığına bakılmaksızın kabuk tarafından genişletiliyor. Çıktıyı incelediğimizde virgülle ayırmış olduğumuz karakterlerin tıpkı tanımlandıkları sıralamaya yani soldan sağa doğru genişletildiğini teyit edebiliyoruz. Siz de elde etmek istediğiniz argümanlar için bu sıraya dikkat ederek şablonunuzu tanımlayabilirsiniz. Yalnız, bu şekilde şablon tanımı üzerinden örüntüler oluştururken boşluk karakterini kaçış karakteriyle birlikte kullanmanız gerektiğine de dikkat edin lütfen. Aksi halde kabuk genişletme uygulanamaz. 
 
 Boşluk karakterinin genişletmeye engel olduğunu kanıtlamak için aynı komutumuzu bu kez içinde boşluk karakteri ile tekrar girebiliriz. 
 
@@ -195,7 +195,7 @@ Bakın boşluk bırakınca, genişletmeler birbirinden bağımsız olduğu için
 
 Neticede kıvırcık parantez genişletmeleri sayesinde çok çeşitli argüman örüntüleri oluşturabileceğimizi `echo` komutu üzerinden ele aldık. `echo` komutu üretilen argümanları gözlemleyebilmemiz için harika olsa da ben basit bir gerçek dünya örneği de vermek istiyorum.
 
-Örneğin diyelim ki kendi ev dizininiz içindeki ***Desktop*** klasörü altında birbirinden farklı isimlerde yeni 5 tane klasör oluşturmak istiyorsunuz. Bunun için ne yapabilirsiniz ? Örneğin komutunuzu `mkdir ~/Desktop/bir ~/Desktop/iki ~/Desktop/uc` ve benzeri şeklinde uzun uzadıya girebilirsiniz. Ama buna gerek yok çünkü artık siz genişletmeden yararlanıp örüntü oluşturmayı biliyorsunuz. Yani tüm komutu tekrar tekrar yazmak yerine isterseniz kıvırcık parantez genişletmesi ile `mkdir ~/Desktop/{bir,iki,uc,dort,bes}` şeklinde tek seferde istediğiniz isimlerde klasörlerin oluşturmasın da sağlayabilirsiniz. 
+Örneğin diyelim ki kendi ev dizininiz içindeki ***Desktop*** klasörü altında birbirinden farklı isimlerde yeni 5 tane klasör oluşturmak istiyorsunuz. Bunun için ne yapabilirsiniz ? Örneğin komutunuzu `mkdir ~/Desktop/bir ~/Desktop/iki ~/Desktop/uc` ve benzeri şeklinde uzun uzadıya girebilirsiniz. Ama buna gerek yok çünkü artık siz genişletmeden yararlanıp örüntü oluşturmayı biliyorsunuz. Yani tüm komutu tekrar tekrar yazmak yerine isterseniz kıvırcık parantez genişletmesi ile `mkdir ~/Desktop/{bir,iki,uc,dort,bes}` şeklinde tek seferde istediğiniz isimlerde klasörlerin oluşturulmasını da sağlayabilirsiniz. 
 
 ```bash
 └─$ mkdir ~/Desktop/{bir,iki,uc,dort,bes}                    
@@ -251,7 +251,7 @@ Belirttiğim gibi yıldız işareti tüm dosyaları ve klasörleri kapsıyor ols
 
 Ben bu girmiş olduğum komutta; yıldız karakterinden önce nokta işaretini koyduğum için başlangıcı nokta olan ve devamında herhangi bir karakter olan tüm dosya ve dizinlerin kapsanması sağlanıyor. Benim çalıştığım ***etc*** dizini altında da bu biçimde olan yani gizli olan içerikler bunlarmış.
 
-Ayrıca bu aldığımız çıktılarda yer alan tek nokta `.` mevcut dizini temsil ediyorken, iki nokta `..` da bir üst dizini temsil eden klasörler. Örneğin biz `cd ..` şeklinde komut girip bir üst dizine dönerken, aslında üst dizini temsil eden bu iki nokta klasörüne geçiş yaptığımız için bir üst dizine dönebiliyorduk. Veya daha önce betik dosyalarımızı çalıştırırken de gördüğümüz gibi bir dosyaya çalıştırırken `./dosya-ismi` şeklinde komut girdiğimizde de mevcut dizini temsil eden bu dizin sayesinde bu dosya kabuk tarafından çalıştırılabiliyordu. Nokta işareti kabuğa bu dizinin tam adresini verdiği için mevcut dizin içinde olan dosyanın tam konumunu kolayca belirtebiliyorduk. 
+Ayrıca bu aldığımız çıktılarda yer alan tek nokta `.` mevcut dizini temsil ediyorken, iki nokta `..` da bir üst dizini temsil eden klasörler. Örneğin biz `cd ..` şeklinde komut girip bir üst dizine dönerken, aslında üst dizini temsil eden bu iki nokta klasörüne geçiş yaptığımız için bir üst dizine dönebiliyorduk. Veya daha önce betik dosyalarımızı çalıştırırken de gördüğümüz gibi bir dosyayı çalıştırırken `./dosya-ismi` şeklinde komut girdiğimizde de mevcut dizini temsil eden bu dizin sayesinde bu dosya kabuk tarafından çalıştırılabiliyordu. Nokta işareti kabuğa bu dizinin tam adresini verdiği için mevcut dizin içinde olan dosyanın tam konumunu kolayca belirtebiliyorduk. 
 
 Her neyse bakın başında nokta bulunan dosya ve klasör isimlerini kapsayabilmek için nokta ve yıldız karakterlerini bir arada kullandık. Bu kullandığımız karakterler de mevcut bulunduğumuz dizinde yer alan bu dosya ve klasörlerin isimlerine genişletilip `echo` aracına argüman olarak verildi, dolayısıyla konsolumuza bu çıktıları bastırabildik.
 
@@ -259,7 +259,7 @@ Normalde yıldız işaretinin gizli içerikleri kapsamıyor olmasının nedeni f
 
 Tamamdır, temel olgulardan da bahsettiğimize göre şimdi yıldız joker karakterini ihtiyacımıza göre nasıl kullanabileceğimize dair birkaç farklı örnek uygulama yapabiliriz.
 
-Gizli içerikleri görmek için başı nokta ile başlayanları listeledik. Nokra yerine dilediğimiz herhangi bir karakteri de belirtebilirdik. Hatta dilersek tersi şekilde sonu belirli bir karakter veya karakterler ile bitenleri de listeleyebiliriz. Örneğin ben sonu “**i”** ile biten her şeyi bastırmak istersem `echo *i` şeklinde komutumu kullanabilirim. 
+Gizli içerikleri görmek için başı nokta ile başlayanları listeledik. Nokta yerine dilediğimiz herhangi bir karakteri de belirtebilirdik. Hatta dilersek tersi şekilde sonu belirli bir karakter veya karakterler ile bitenleri de listeleyebiliriz. Örneğin ben sonu “**i”** ile biten her şeyi bastırmak istersem `echo *i` şeklinde komutumu kullanabilirim. 
 
 ```bash
 ┌──(taylan@linuxdersleri)-[/etc]

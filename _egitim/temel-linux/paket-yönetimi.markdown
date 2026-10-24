@@ -233,7 +233,7 @@ Henüz paketi kurmadan önce paketin içeriği hakkında bilgi almak istersek �
   By installing this app, you agree to our Terms of Service (https://zoom.us/terms) and Privacy Statement (https://zoom.us/privacy).
 ```
 
-Bakın adlığım çıktıda paketin ismi, sürümü, üreticisi kurulu boyutu ve bağımlılıkları gibi pek çok bilgiyi görebiliyorum. Ayrıca bu paketin işleviyle ve amacıyla ilgili açıklamalar da bulunuyor. İşte bu bilgi alma seçeneğini bir paketin özellikleri hakkında bilgi almak ve paketi tanımak için kullanabiliyoruz. Zaten bilgi alma seçeneği yani "`I`" “**i**nfo” ifadesinin kısaltmasından geldiği için kolay akılda kalan bir seçenek.
+Bakın aldığım çıktıda paketin ismi, sürümü, üreticisi kurulu boyutu ve bağımlılıkları gibi pek çok bilgiyi görebiliyorum. Ayrıca bu paketin işleviyle ve amacıyla ilgili açıklamalar da bulunuyor. İşte bu bilgi alma seçeneğini bir paketin özellikleri hakkında bilgi almak ve paketi tanımak için kullanabiliyoruz. Zaten bilgi alma seçeneği yani "`I`" “**i**nfo” ifadesinin kısaltmasından geldiği için kolay akılda kalan bir seçenek.
 
 Ayrıca tek bir paket yerine istersek sistemde kurulu olan tüm paketler hakkında da bilgi alabiliriz. Yani mevcut sistemdeki paketleri listeleyebiliriz. 
 
@@ -591,7 +591,7 @@ Neticede `apt` aracı ile kurmuş olduğumuz `leafpad` aracının kaldırma işl
 bash: /usr/bin/leafpad: No such file or directory
 ```
 
-Bakın leafpad aracının çalıştırılabilir dosyası “***/usr/bin/leafpad***“ konumundaymış ama silindiği için “böyle bir dosya veya dizin yok” şeklinde hata aldık. Yani aracımızın kaldırıldığınız bizzat teyit ettik. Fakat burada dikkatimizi çekene detay, araç kaldırılmış olmasına rağmen araçla ilgili konfigürasyonların hâlâ duruyor olması. Aksi halde buradaki bu çıktıyı almamız gerekirdi. Bu durumda araçlardan geriye kalan tüm konfigürasyonları temizlememiz gerek.
+Bakın leafpad aracının çalıştırılabilir dosyası “***/usr/bin/leafpad***“ konumundaymış ama silindiği için “böyle bir dosya veya dizin yok” şeklinde hata aldık. Yani aracımızın kaldırıldığını bizzat teyit ettik. Fakat burada dikkatimizi çeken detay, araç kaldırılmış olmasına rağmen araçla ilgili konfigürasyonların hâlâ duruyor olması. Aksi halde buradaki bu çıktıyı almamız gerekirdi. Bu durumda araçlardan geriye kalan tüm konfigürasyonları temizlememiz gerek.
 
 ## Konfigürasyonların Temizlenmesi
 
@@ -625,7 +625,7 @@ Kaldırma işlemiyle ilgili son bir detaydan bahsetmek istiyorum.
 
 Ben kurduğum aracı, `apt autoremove` komutu ile sildikten sonra `apt autopurge` seçeneğini kullandım ancak `autopurge` seçeneği tek başına kullanıldığında paketler de dahil tüm dosyaları silebiliyor. Yani önce `remove` ya da `autoremove` sonra `autopurge` seçeneğini kullanmak zorunda değilsiniz. Her şeyi silmek istiyorsanız `apt autopurge` seçeneğini kullanabilirsiniz.
 
-Ben yalnızca daha önce silmiş olduğunu ama hâlâ konfigürasyonları dosyaları bulunanları nasıl temizleyeceğinizi göstermek için ayrı ayrı ele aldım.
+Ben yalnızca daha önce silmiş olduğum ama hâlâ konfigürasyon dosyaları bulunanları nasıl temizleyeceğinizi göstermek için ayrı ayrı ele aldım.
 
 Kaldırma işlemini de netleştirdiğimize göre şimdi bir diğer önemli konu olan paket bağımlılıkların düzeltilmesinden bahsederek devam edelim.
 
@@ -633,7 +633,7 @@ Kaldırma işlemini de netleştirdiğimize göre şimdi bir diğer önemli konu 
 
 Bağımlılık kavramını defalarca dile getirdik. Bir aracın çalışması için çoğunlukla birden fazla ek pakete ihtiyacı vardır. Yani araçların bağımlılıkları vardır. Ve bu bağımlılıklar hatalı işlemler sonucu bozulabilir. 
 
-Hatalı işlemeler sonucu sistem üzerindeki araçların bağımlılıklarının olduğu paketleri sildiysek veya zarar verdiysek bu bağımlılık sorunlarını çözülmesi gerekiyor. `apt` aracı da bu durum için bizlere “**f**ix” yani “düzeltme” ifadesinin kısalmasından gelen `f` seçeneğini sunuyor. 
+Hatalı işlemler sonucu sistem üzerindeki araçların bağımlılıklarının olduğu paketleri sildiysek veya zarar verdiysek bu bağımlılık sorunlarını çözülmesi gerekiyor. `apt` aracı da bu durum için bizlere “**f**ix” yani “düzeltme” ifadesinin kısalmasından gelen `f` seçeneğini sunuyor. 
 
 Örneğin benim sistemimde vim aracı kurulu. Ve bu aracın çalışabilmesi için de vim-runtime isimli bir pakete ihtiyacı var, yani vim aracının bağımlılığı. Dolayısıyla ben `vim` aracıyla birlikte yüklenmiş olan `vim-runtime` paketini yani `vim` aracının bağımlılığı olan bir paketi silersem `vim` aracı düzgün çalışmayabilir. 
 
@@ -1148,7 +1148,7 @@ Ben Red Hat tabanlı bir dağıtım üzerinden bu dersleri takip ettiğinizi var
 
 # RPM
 
-`rpm`, Red Hat tabanlı dağıtımlardaki paketleri yönetmek için geliştirilmiş olan temel bir araçtır. Debian dağıtımlarındaki `dpkg` aracının Red Hat dağıtımlarındaki karşılığı olduğundan zaten bahsettik. Şimdi lafı daha fazla uzatmandan paket kurulumlarının nasıl yapılabileceğiyle başlayabiliriz.
+`rpm`, Red Hat tabanlı dağıtımlardaki paketleri yönetmek için geliştirilmiş olan temel bir araçtır. Debian dağıtımlarındaki `dpkg` aracının Red Hat dağıtımlarındaki karşılığı olduğundan zaten bahsettik. Şimdi lafı daha fazla uzatmadan paket kurulumlarının nasıl yapılabileceğiyle başlayabiliriz.
 
 ## `rpm` ile Paket Kurulumu
 
