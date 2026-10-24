@@ -219,7 +219,7 @@ Sistem başlangıcında gerçekleştirilen "önyükleme" yani "boot" aşamasın�
 [  OK  ] Listening on Load/Save RF Kill Switch Status /dev/rfkill Watch.
 ```
 
-Dosyadaki kayıtlar belirli bir doluluk oranına ulaştığı için son önyüklemenin tamamını bu son ***boot.log*** dosyasında göremedim. Eğer geri kalanına bakmak istersem önceki kayıt olan ***boot.log.1*** dosyasına gözatabilirim.
+Dosyadaki kayıtlar belirli bir doluluk oranına ulaştığı için son önyüklemenin tamamını bu son ***boot.log*** dosyasında göremedim. Eğer geri kalanına bakmak istersem önceki kayıt olan ***boot.log.1*** dosyasına göz atabilirim.
 
 ```bash
 ┌──(taylan㉿linuxdersleri)-[~]

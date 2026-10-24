@@ -391,7 +391,7 @@ Ben hep `apt` aracı olarak ifade ettim ancak `apt` tek bir komuttan ibaret değ
 
 Ayrıca sık kullanılan `apt-get` ve `apt-cache` araçlarını tek bir araçta birleştiren `apt` adlı kullanıcı dostu bir yardımcı araç da bulunuyor. Yani `apt-get` ve `apt-cache` komutları ile uzun uzadıya komut girmek yerine yalnızca `apt` komutu ile aynı işlevleri de yerine getirebiliyoruz.
 
-Ben `apt` aracını çok daha kolay ve kullanışlı bulduğum için sıklıkla kullanıyorum. Ancak bazı eski sistemlerde `apt` aracıyla karşılaşmayabilirsiniz. Bu sebeple en azından bahsetmiş olduğum üç temel yardımcı araçtan haberdar olmanız kesinlikle yararınıza olacaktır. Ayrıca zaten geçmişten beri çok uzun süredir `apt-get` ve `apt-cache` araçları kullanıldığı için araştırma yaptığınızda bu komutların yer aldığı birçok kaynakla karşılamanız da kaçınılmaz olacak. Yani aktif olarak kullanmak istemeseniz bile bilmeniz gerekiyor.
+Ben `apt` aracını çok daha kolay ve kullanışlı bulduğum için sıklıkla kullanıyorum. Ancak bazı eski sistemlerde `apt` aracıyla karşılaşmayabilirsiniz. Bu sebeple en azından bahsetmiş olduğum üç temel yardımcı araçtan haberdar olmanız kesinlikle yararınıza olacaktır. Ayrıca zaten geçmişten beri çok uzun süredir `apt-get` ve `apt-cache` araçları kullanıldığı için araştırma yaptığınızda bu komutların yer aldığı birçok kaynakla karşılaşmanız da kaçınılmaz olacak. Yani aktif olarak kullanmak istemeseniz bile bilmeniz gerekiyor.
 
 Tamamdır **apt** ile ilgili bilmemiz gereken temel kavramlardan bahsettiğimize göre gelin anlatımlara paket indekslerini güncelleme ile başlayalım.
 

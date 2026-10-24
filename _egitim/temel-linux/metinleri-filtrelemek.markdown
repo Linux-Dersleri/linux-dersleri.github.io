@@ -2423,7 +2423,7 @@ naz
 
 Bakın `awk` aracı her bir satırı ayrı ayrı ele aldığı ve `$1` parametresi de ilk alanı temsil ettiği için ilk sütunlardaki tüm verileri `print` ile bastırmış olduk. Burada tek tırnak kullanmamız önemli, çünkü süslü parantezin kabuk tarafından yorumlanmasını istemiyoruz. 
 
-Örneğin ben son yani 3. sütundakileri filtrelemek istersem `$3` yada sonda olduğu için `$NF` değişkenini kullanabilirim.
+Örneğin ben son yani 3. sütundakileri filtrelemek istersem `$3` ya da sonda olduğu için `$NF` değişkenini kullanabilirim.
 
 ```bash
 ┌──(taylan㉿linuxdersleri)-[~]

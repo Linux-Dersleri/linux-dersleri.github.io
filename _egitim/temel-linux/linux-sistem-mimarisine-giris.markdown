@@ -107,7 +107,7 @@ Grafiksel arayüzde çalışan konsol araçlarına; "xterm", "gnome-terminal", "
 
 Bu araçlar sayesinde grafiksel arayüz ortamındayken, komut satırı arayüzüne sahip olan araçları da kullanabiliyoruz. Örneğin ben yalnızca komut satırı arayüzünde çalışabilen `mkdir` aracını kullanmak için bu konsol aracını kullandım. Grafiksel arayüzdeki bu konsol aracı olmasaydı, komut satırında çalışan `mkdir` aracını kullanamazdım. 
 
-Özetle grafiksel arayüzde çalışırken dahi, konsol yada terminal olarak da bilinen bu araçlar sayesinde kabuk ile etkileşim kurmak için iletişim kanalımız her zaman açık. Zaten bu sayede yalnızca grafiksel arayüze sahip araçlarla sınırlı kalmadan, istediğimiz an komut satırında çalışan araçlar da dahil sistemdeki tüm araçları kolayca yönetebiliyoruz.
+Özetle grafiksel arayüzde çalışırken dahi, konsol ya da terminal olarak da bilinen bu araçlar sayesinde kabuk ile etkileşim kurmak için iletişim kanalımız her zaman açık. Zaten bu sayede yalnızca grafiksel arayüze sahip araçlarla sınırlı kalmadan, istediğimiz an komut satırında çalışan araçlar da dahil sistemdeki tüm araçları kolayca yönetebiliyoruz.
 
 Benim daha önce atıfta bulunduğum “komut satırı arayüzü” ise grafiksel arayüze dair hiçbir bileşenin olmadığı ikinci kullanıcı alanıdır. Grafiksel arayüzün bulunmadığı bu komut satırı arayüzünde de yalnızca “**tty”** olarak geçen sanal konsollar bulunuyor. Bizler de bu tty konsolları üzerinden kabuk ile iletişim kurup komut satırında çalışan her aracı buradan yönetebiliyoruz. Bu ortamda grafiksel arayüzü sağlayabilecek bileşenler bulunmadığı için grafiksel arayüze sahip olan araçları burada kullanamıyoruz. 
 

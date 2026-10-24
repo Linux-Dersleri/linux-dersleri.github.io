@@ -335,7 +335,7 @@ Artık, ihtiyaç duyduğumuzda kılavuz sayfalarından nasıl bilgi edinebilece�
 
 Ben sistemimi İngilizce kullandığım için manual sayfaları da İngilizce açıklamalar içeriyor. Eğer siz Türkçe olarak kullanıyorsanız hepsi olmasa da bazı manual sayfalarının Türkçeleştirildiğini görebilirsiniz. 
 
-Manuel sayfalarının farklı dillere çevrilmesi kimi kullanıcılar için kolaylık sağlasa da manuel sayfalarının yerelleştirilmesi çoğunlukla eksik kaldığından en doyurucu bilgiye standart olan İngilizce dili üzerinden ulaşabiliyoruz. Bu sebeple ben sizlere ingilizce haricindeki manuel sayfalarını kullanmanızı önermiyorum. En ulaşılabilir ve en detaylı olanı ingilizcede bulunuyor. Eğer kendi dilinizde kullanmak isterseniz kısa bir araştırma ile nasıl yapabileceğinizi öğrenebilirsiniz.
+Manuel sayfalarının farklı dillere çevrilmesi kimi kullanıcılar için kolaylık sağlasa da manuel sayfalarının yerelleştirilmesi çoğunlukla eksik kaldığından en doyurucu bilgiye standart olan İngilizce dili üzerinden ulaşabiliyoruz. Bu sebeple ben sizlere İngilizce haricindeki manuel sayfalarını kullanmanızı önermiyorum. En ulaşılabilir ve en detaylı olanı İngilizcede bulunuyor. Eğer kendi dilinizde kullanmak isterseniz kısa bir araştırma ile nasıl yapabileceğinizi öğrenebilirsiniz.
 
 Manual sayfaları hakkındaki anlatımları bitirmeden önce aradığımız yardım bilgisine daha kolay erişebileceğimiz bir kullanım biçiminden daha bahsetmek istiyorum.
 

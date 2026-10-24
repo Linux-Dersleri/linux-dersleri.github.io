@@ -128,7 +128,7 @@ Alt çubuğa bakacak olursanız gezinme işlemi sırasında da bu iş için kull
 
 ![ ]({{ site.url }}/egitim/temel-linux/metin-editoru/save-different2.webp){:class="responsive img-zoomable"}
 
-Eğer “y” tuşuna basarsam şu an bu dosyada yazıklarım bu dizindeki bu dosyanın içeriğini silip üzerine yazılacak. Eğer istemezseniz <kbd>Ctrl</kbd> + <kbd>C</kbd> ile işlemi iptal edebilirsiniz.
+Eğer “y” tuşuna basarsam şu an bu dosyada yazdıklarım bu dizindeki bu dosyanın içeriğini silip üzerine yazılacak. Eğer istemezseniz <kbd>Ctrl</kbd> + <kbd>C</kbd> ile işlemi iptal edebilirsiniz.
 
 Neticede dosya oluşturma, mevcut dosya içeriğini düzenleyip başka bir dosya olarak kaydetme ve `nano` üzerinden dizinlerde gezinme ve gerektiğinde var olan dosyaların üzerine yazma gibi ihtiyaç duyabileceğimiz temel kısayollardan bahsettik. Zaten bu alt çubuğa baktığınız sürece tüm işlemleri rahatlıkla yerine getirebilirsiniz. Çünkü tüm adımlarda burada temel işlemlerin kısayolları açıkça belirtiliyor. Şimdi editörün kullanımıyla ilgili diğer kısayollardan bahsederek devam edebiliriz.
 

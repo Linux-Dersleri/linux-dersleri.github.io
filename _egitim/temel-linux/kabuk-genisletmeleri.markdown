@@ -601,7 +601,7 @@ Bakın bu kez tırnak içinde yazdığımız için buradaki boşluk karakteri kl
 
 Söz konusu alıntılama olduğunda tek ve çift tırnak kullanabileceğimiz iki alternatif yöntem bulunuyor. 
 
-Bash kabuğu için tek tırnak en katı alıntılama biçimi. Bu sebeple tek tırnak içindeki hiçbir karakter kabuk tarafından özel anlamaları dahilinde ele alınmıyor. 
+Bash kabuğu için tek tırnak en katı alıntılama biçimi. Bu sebeple tek tırnak içindeki hiçbir karakter kabuk tarafından özel anlamları dahilinde ele alınmıyor. 
 
 Hemen denemek için şu ana kadar ele aldığımız genişletme karakterlerini tek tırnak içinde yazıp `echo` aracı ile konsola bastırmayı deneyelim. 
 

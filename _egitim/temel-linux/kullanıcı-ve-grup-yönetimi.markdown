@@ -2360,7 +2360,7 @@ taylan kullanıcısının kabuğunda tanımlı olan değişken burada da geçerl
 /home/taylan
 ```
 
-Bakın, hâlâ taylan kullanıcısının ev dizinde(***/home/taylan***) çalışıyorum.
+Bakın, hâlâ taylan kullanıcısının ev dizininde(***/home/taylan***) çalışıyorum.
 
 ## `su` ile `su -` Arasındaki Fark
 
